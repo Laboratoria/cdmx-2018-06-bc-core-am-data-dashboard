@@ -191,23 +191,25 @@ Como mínimo, tu implementación debe:
 
 La interfaz debe permitir al usuario:
 
-* Listar/seleccionar sedes
+* Listar y poder seleccionar sedes
 * Dentro de cada sede:
-  - Listar/seleccionar generaciones
-  - Para cada generación:
-    -Listar/seleccionar estudiantes mostrando porcentaje general de completitud de c/estudiante
-    -Seleccionar estudiantes mostrando reporte de progreso:
-        -Mostrar porcentaje de completitud de todos los temas
-        -Calcular porcentaje de tiempo completado de cada tema
-        -Listar subtemas de cada tema
-          -Poder filtrar subtemas completados y no-completados de cada tema
-          -Poder filtrar subtemas por tipos (ejercicios, lecturas y quizzes)
-   -En la vista de cada generación mostrar reporte de:
-    -Promedio de la generación
-    -Generar status para identificar estudiantes debajo del 60 en su porcentaje de completitud
-    -Generar status para identificar estudiantes con 90 o más en su porcentaje de completitud
-    -Poder filtrar estudiantes por estos dos status
-    -Filtrar/buscar estudiantes por nombre
+  * Listar y poder seleccionar generaciones
+  * Para cada generación:
+    * Listar y poder seleccionar estudiantes mostrando porcentaje general de completitud de c/estudiante
+    * Seleccionar estudiantes mostrando reporte de progreso:
+        * Mostrar porcentaje de completitud de todos los temas
+        * Calcular porcentaje de tiempo completado de cada tema
+        * Listar subtemas de cada tema
+        * Poder filtrar subtemas completados y no-completados de cada tema
+        * Poder filtrar subtemas por tipos (ejercicios, lecturas y quizzes)
+  * En la vista de cada generación mostrar reporte de:
+    * Promedio de la generación
+    * Generar status para identificar estudiantes debajo del 60 en su porcentaje de completitud
+    * Generar status para identificar estudiantes con 90 o más en su porcentaje de completitud
+    * Poder filtrar estudiantes por estos dos status
+    * Filtrar y poder buscar estudiantes por nombre
+    * Poder ordenar de manera ascendente y descendente a las estudiantes según
+    porcentaje de completitud 
 * Utiliza la interfaz sin problemas desde distintos tamaños de pantallas:
   móviles, tablets, desktops
 * Realizar pruebas unitarias
