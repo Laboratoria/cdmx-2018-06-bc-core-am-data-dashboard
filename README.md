@@ -188,20 +188,29 @@ diseñaste. Tendrás un tiempo limitado para hackear, así es que deberás prior
 
 Como mínimo, tu implementación debe:
 
-1. Permitir al usuario seleccionar un cohort de una lista de cohorts.
-2. Al seleccionar un cohort:
-   - Listar las estudiantes de ese cohort
-   - Para cada estudiante:
-     + Calcular porcentaje de completitud de todos los _cursos_.
-     + Calcular grado de completitud de _lecturas_, _ejercicios autocorregidos_,
-       y _quizzes_.
-   - Ordenar estudiantes por completitud _general_ (porcentaje consumido/completado
-     de todos los cursos del cohort en cuestión), de _lecturas_, _ejercicios
-     autocorregidos_ y _quizzes_.
-   - Filtrar/buscar estudiantes por nombre.
-3. Visualizarse sin problemas desde distintos tamaños de pantallas: móviles,
-   tablets y desktops.
-4. Incluir pruebas unitarias.
+
+La interfaz debe permitir al usuario:
+
+* Listar/seleccionar sedes
+* Dentro de cada sede:
+  - Listar/seleccionar generaciones
+  - Para cada generación:
+    -Listar estudiantes mostrando porcentaje general de completitud de c/estudiante
+      -Poder seleccionar cada estudiante mostrando reporte de progreso:
+        -Mostrar porcentaje de completitud de todos los temas
+        -Calcular porcentaje de tiempo completado de cada tema
+        -Listar subtemas de cada tema
+          -Poder filtrar subtemas completados y no-completados de cada tema
+          -Poder filtrar subtemas por tipos (ejercicios, lecturas y quizzes)
+   -En la vista de cada generación mostrar reporte de:
+    -Promedio de la generación
+    -Generar status para identificar estudiantes debajo del 60 en su porcentaje de completitud
+    -Generar status para identificar estudiantes con 90 o más en su porcentaje de completitud
+    -Poder filtrar estudiantes por estos dos status
+    -Filtrar/buscar estudiantes por nombre
+* Utiliza la interfaz sin problemas desde distintos tamaños de pantallas:
+  móviles, tablets, desktops
+* Realizar pruebas unitarias
 
 Es importante que tu interfaz, a pesar de ser una versión mínima de tu ideal,
 igual debe seguir los fundamentos de visual design, como: contraste,
