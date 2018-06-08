@@ -195,8 +195,8 @@ La interfaz debe permitir al usuario:
 * Dentro de cada sede:
   - Listar/seleccionar generaciones
   - Para cada generación:
-    -Listar estudiantes mostrando porcentaje general de completitud de c/estudiante
-      -Poder seleccionar cada estudiante mostrando reporte de progreso:
+    -Listar/seleccionar estudiantes mostrando porcentaje general de completitud de c/estudiante
+    -Seleccionar estudiantes mostrando reporte de progreso:
         -Mostrar porcentaje de completitud de todos los temas
         -Calcular porcentaje de tiempo completado de cada tema
         -Listar subtemas de cada tema
