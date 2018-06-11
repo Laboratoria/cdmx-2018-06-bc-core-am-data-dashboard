@@ -115,12 +115,8 @@ como toda la configuración de dependencias y tests de ejemplo:
 ├── .eslintrc
 ├── .gitignore
 ├── README.md
-├── data
-│   ├── cohorts
-│   │   └── lim-2018-03-pre-core-pw
-│   │       ├── progress.json
-│   │       └── users.json
-│   └── cohorts.json
+├── data 
+│   └── users.json
 ├── package.json
 ├── src
 │   ├── data.js
@@ -135,7 +131,16 @@ como toda la configuración de dependencias y tests de ejemplo:
 ```
 
 La carpeta `data/` dentro del _boilerplate_ incluye un extracto de la data que
-podemos usar tanto en los tests como en la interfaz en sí.
+podemos usar tanto en los tests como en la interfaz en sí. Todos los datos
+usados son ficticios, y su uso no afecta ni perjudica a ninguna persona o
+individuo moral. Además que en este proyecto encontrarás toda la data en
+español, esto pensando en que puedas entender y familiarizarte más rápido con
+esta. Antes de poder visualizar o manipular la data es necesario
+poder leerla, entenderla y así hacer la mejor interpretación posible de la
+misma.  En los siguientes proyectos estarás enfrentándote a data en inglés y
+será parte de tus tareas generar estrategias para encontrar el mejor
+acercamiento y entendimiento del problema.
+
 
 ## Entregables
 
