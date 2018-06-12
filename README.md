@@ -191,9 +191,6 @@ Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación
 Como mencionamos, **no** es necesario que construyas la interfaz tal como la
 diseñaste. Tendrás un tiempo limitado para hackear, así es que deberás priorizar.
 
-Como mínimo, tu implementación debe:
-
-
 La interfaz debe permitir al usuario:
 
 * Listar y poder seleccionar sedes
@@ -225,120 +222,86 @@ alineación, jerarquía, entre otros.
 
 ## Detalles de Implementación
 
-### data.js
-
+data.js
 El corazón de este proyecto es la manipulación de datos a través de arreglos y
-objetos. La idea de este archivo es contener toda la funcionalidad
-que corresponda a obtener, procesar y manipular datos.
+objetos. La idea de este archivo es contener toda la funcionalidad que
+corresponda a obtener, procesar y manipular datos.
 
 Parte de un buen proyecto es que esté ordenado y que otras programadoras puedan
 acceder a el código rápidamente. Es por esto que este orden no es casualidad y
 es una convención que generalmente encontrarás en internet bajo el nombre MVC o
 Modelo Vista Controlador. En este proyecto Controlador y Modelo estarán bajo
-el archivo **data.js**.
+el archivo data.js.
 
-El _boilerplate_ incluye tests que esperan que implementes las
-siguientes 4 funciones y las _exportes_ al entorno global (`window`) dentro del
-script `src/data.js`, ten en cuenta que esto es solo lo básico, si necesitas más
+El boilerplate incluye tests que esperan que implementes las
+siguientes 3 funciones y las exportes al entorno global (window) dentro del
+script src/data.js, ten en cuenta que esto es solo lo básico, si necesitas más
 funciones puedes hacerlo:
 
-#### 1) `computeUsersStats(users, progress, courses)`
+#### 1) `computarUsuarios(usuarios)`
 
 Esta función es la responsable de "crear" la lista de usuarios (estudiantes)
 que vamos a "pintar" en la pantalla. La idea es "recorrer" el arreglo de
-usuarios (`users`) y calcular los indicadores necesarios de progreso para cada
-uno. La función debe devolver un nuevo arreglo de usuarios donde a cada objeto
-de usuario se le debe agregar una _propiedad_ con el nombre `stats` con las
-estadísticas calculadas.
+usuarios (estudiantes) que se encuentra dentro de la "data".
+
+La función debe devolver un nuevo arreglo de usuarios donde cada objeto
+de usuario deberá tener una propiedad con el nombre `status` y dentro,
+sólo los datos requeridos.
 
 ##### Argumentos
 
-* `users`: Arreglo de objetos obtenido de la data en bruto.
-* `progress`: Objeto de progreso en bruto. Contiene una llave para cada usuario
-  (`uid`) con un objeto que contiene el progreso del usuario para cada curso.
-* `courses`: Arreglo de _strings_ con los _ids_ de los cursos del cohort en
-  cuestión. Esta data se puede extraer de la propiedad `coursesIndex` de los
-  objetos que representan los _cohorts_.
+* `usuarios`: Arreglo de objetos obtenido de la data en bruto.
 
 ##### Valor de retorno
 
-Un arreglo de objetos `usersWithStats` con la propiedad `stats`, la cual debe ser un
-objeto con las siguientes propiedades:
+Un arreglo de objetos las siguientes propiedades:
 
-* `percent`: Número entero entre 0 y 100 que indica el porcentaje de completitud
-  general del usuario con respecto a todos los cursos asignados a su cohort.
-* `exercises`: Objeto con tres propiedades:
-  - `total`: Número total de ejercicios autocorregidos presentes en cursos del
-    cohort.
-  - `completed`: Número de ejercicios autocorregidos completados por el usuario.
-  - `percent`: Porcentaje de ejercicios autocorregidos completados.
-* `reads`: Objeto con tres propiedades:
-  - `total`: Número total de lecturas presentes en cursos del cohort.
-  - `completed`: Número de lecturas completadas por el usuario.
-  - `percent`: Porcentaje de lecturas completadas.
-* `quizzes`: Objeto con cinco propiedades:
-  - `total`: Número total de quizzes presentes en cursos del cohort.
-  - `completed`: Número de quizzes completadas por el usuario.
-  - `percent`: Porcentaje de quizzes completadas.
-  - `scoreSum`: Suma de todas las puntuaciones (score) de los quizzes
-    completados.
-  - `scoreAvg`: Promedio de puntuaciones en quizzes completados.
+*`nombre`*: Nombre respectivo de la estudiante.
+*`correo`*: Correo electrónico de la estudiante.
+*`sede`*: Sede a la cual la estudiante pertenece.
+*`generacion`*: Generación a la cual la estudiante pertenece.
+*`status`*: Un objeto con las siguientes propiedades:
+  * `porcentajeCompletado`: Número entero entre 0 y 100 que indica el porcentaje de completitud
+  general del usuario con respecto a todos los temas asignados.
+  * `temas`: Un objeto que incluye como propiedades los temas del programa.
+    - `porcentajeCompletado`: Número entero entre 0 y 100 que indica el porcentaje de completitud
+  general del usuario con respecto al tema respectivo.
+    - `duracionTema`: Número entero que indica el tiempo necesario a invertir para completar el tema.  
+    - `subtemas`: Un objeto que incluye como propiedades los subtemas de ese tema en particular.
+      - `porcentajeCompletado`: Número entero entre 0 y 100 que indica el porcentaje de completitud 
+      general del usuario con respecto al subtema.
+      - `tipo`: String que indica la modalidad del subtema.
+      - `duracion`: Número entero que indica el tiempo necesario a invertir para completar el subtema.  
 
-#### 2) `sortUsers(users, orderBy, orderDirection)`
+#### 2) `ordenarUsuarios(usuarios, ordenadoPor, direccion)`
 
-La función `sortUsers()` se encarga de _ordenar_ la lista de usuarios creada con
-`computeUsersStats()` en base a `orderBy` y `orderDirection`.
+La función `ordenarUsuarios()` se encarga de _ordenar_ la lista de usuarios creada con
+`computarUsuarios()` en base a `ordenadoPor` y `direccion`.
 
 ##### Argumentos
 
-* `users`: Arreglo de objetos creado con `computeUsersStats()`.
-* `orderBy`: String que indica el criterio de ordenado. Debe permitir ordenar
-  por nombre, porcentaje de completitud total, porcentaje de ejercicios
-  autocorregidos completados, porcentaje de quizzes completados, puntuación
-  promedio en quizzes completados, y porcentaje de lecturas completadas.
-* `orderDirection`: La dirección en la que queremos ordenar. Posibles valores:
-  `ASC` y `DESC` (ascendiente y descendiente).
+* `usuarios`: Arreglo de objetos creado con `computarUsuarios()`.
+* `ordenadoPor`: String que indica el criterio de ordenado. Debe permitir ordenar
+  por nombre y porcentaje de completitud.
+* `direccion`: La dirección en la que queremos ordenar. Posibles valores:
+  `ASC` y `DESC` (ascendente y descendente).
 
 ##### Valor de retorno
 
 Arreglo de usuarios ordenado.
 
-#### 3) `filterUsers(users, search)`
+#### 3) `buscarUsuarios(usuarios, busqueda)`
 
 ##### Argumentos
 
-* `users`: Arreglo de objetos creado con `computeUsersStats()`.
-* `search`: String de búsqueda.
+* `usuarios`: Arreglo de objetos creado con `computarUsuarios()`.
+* `busqueda`: String de búsqueda.
 
 ##### Valor de retorno
 
 Nuevo arreglo de usuarios incluyendo solo aquellos que cumplan la condición de
-filtrado, es decir, aquellos que contengan el string _search_ en el nombre
-(`name`) del usuario.
-
-#### 4) `processCohortData(options)`
-
-Esta función es la que deberíamos usar al seleccionar un cohort y cada vez que
-el usuario cambia los criterios de ordenado y filtrado en la interfaz. Esta
-función debe invocar internamente a `computeUsersStats()`, `sortUsers()` y
-`filterUsers()`.
-
-##### Argumentos
-
-* `options`: Un objeto con las siguientes propiedades:
-  - `cohort`: Objeto cohort (de la lista de cohorts)
-  - `cohortData`: Objeto con dos propiedades:
-    + `users`: Arreglo de usuarios miembros del cohort.
-    + `progress`: Objeto con data de progreso de cada usuario en el contexto de
-      un cohort en particular.
-  - `orderBy`: String con criterio de ordenado (ver `sortUsers`).
-  - `orderDirection`: String con dirección de ordenado (ver `sortUsers`).
-  - `search`: String de búsqueda (ver `filterUsers`)
-
-##### Valor de retorno
-
-Nuevo arreglo de usuarios _ordenado_ y _filtrado_ con la propiedad `stats`
-añadida (ver `computeUsersStats`).
+filtrado, es decir, aquellos que contengan el string _busqueda_ en el nombre
+(`nombre`) del usuario.
 
 ### main.js
 
@@ -351,7 +314,7 @@ pantalla, y _data.js_ para todas las funciones que vimos que obtienen y
 manipulan los datos.
 
 Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
+carpetas, siempre y cuando la estructura sea clara.
 
 ### index.html
 
@@ -363,9 +326,8 @@ que hemos hecho.
 ### Data
 
 En esta carpeta están los datos de prueba del proyecto, contiene información
-sobre los cohorts (grupos de estudiantes de una generación y rama en particular),
-estudiantes y su progreso en cada uno de los cursos que son parte de cada cohort.
-Para poder usar cada uno de los archivos JSON, puedes ocupar el mismo método que
+sobre las sedes, las generaciones que han pasado por cada sede, las estudiantes que han pasado por cada generación y su progreso en cada uno de los temas y subtemas que han visto.
+Para poder usar el archivo  JSON, puedes ocupar el mismo método que
 usarías si es que estuvieses haciendo una llamada HTTP o a una API, pero usando
 una dirección **relativa**, ejemplo:
 
@@ -397,6 +359,8 @@ Una página se abrirá en tu navegador conteniendo los resultados de las pruebas
 
 Muy importante archivo, aunque no siempre estará (depende del proyecto). Acá es
 donde está el set de datos de prueba que se usarán para correr las pruebas.
+
+
 
 <!-- ### Habilidades blandas
 
