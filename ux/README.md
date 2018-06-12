@@ -45,10 +45,7 @@ __3. Insights:__
 
 __4. Data proporcionada:__ 
 
-    -_Qué datos encuentras relacionados con el team de formación:_
-
-
-    -_En términos del los cohorts:_
+     -_Data relacionada a los cursos:_
 
 __5. Insights del negocio:__
 
