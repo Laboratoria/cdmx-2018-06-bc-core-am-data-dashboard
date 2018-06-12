@@ -332,7 +332,7 @@ usarías si es que estuvieses haciendo una llamada HTTP o a una API, pero usando
 una dirección **relativa**, ejemplo:
 
 ```javascript
-"../data/cohorts.json"
+"../data/users.json"
 ```
 
 ### Tests
@@ -524,6 +524,16 @@ del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo. La otr
 6. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
   pruebas unitarias (unit tests) con el comando `npm test`.
 7. A codear se ha dicho! :rocket:
+
+## Herramientas
+
+Para facilitar la lectura del JSON te recomendamos instalar algún plugin en tu
+navegador o visitar un JSON parser online:
+
+* [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
+
+* [JSON Editor Online](https://jsoneditoronline.org/)
+
 
 ## Tips / Pistas
 
