@@ -128,14 +128,19 @@ como toda la configuración de dependencias y tests de ejemplo:
 │   ├── main.js
 │   └── style.css
 └── test
-    ├── data.spec.js
-    ├── fixtures.js
-    ├── headless.js
-    └── index.html
+|   ├── data.spec.js
+|   ├── fixtures.js
+|   ├── headless.js
+|   └── index.html
+└── ux
+    └── README.md
 ```
 
 La carpeta `data/` dentro del _boilerplate_ incluye un extracto de la data que
 podemos usar tanto en los tests como en la interfaz en sí.
+
+    
+La carpeta de `ux/`, incluye un `README` donde vas a encontrar una guía de qué hacer. Te pedimos que ahí mismo documentes ese proceso que realizaste.
 
 ## Entregables
 
@@ -367,6 +372,10 @@ una dirección **relativa**, ejemplo:
 ```javascript
 "../data/cohorts.json"
 ```
+
+### UX
+
+En esta carpeta vas a encontrar una guía para realizar el proceso de diseño de tu data dashboard, donde se explican las diferentes fases a seguir de manera muy breve, así como los pasos a desarrollar dentro de cada fase. También se deja espacios para que completes este `README` con tu información, pero si deseas agregar más cosas, siéntete en la libertad. Recuerda que este es un proceso creativo que responde a la data recopilada. 
 
 ### Tests
 
