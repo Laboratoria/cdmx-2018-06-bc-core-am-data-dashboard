@@ -1,44 +1,44 @@
 describe('data', () => {
 
-  it('debería exponer función computeUsersStats en objeto global', () => {
-    assert.isFunction(computeUsersStats);
+  it('debería exponer función computarUsuarios en objeto global', () => {
+    assert.isFunction(computarUsuarios);
   });
 
-  it('debería exponer función sortUsers en objeto global', () => {
-    assert.isFunction(sortUsers);
+  it('debería exponer función ordenarUsuarios en objeto global', () => {
+    assert.isFunction(ordenarUsuarios);
   });
 
-  it('debería exponer función filterUsers en objeto global', () => {
-    assert.isFunction(filterUsers);
+  it('debería exponer función buscarUsuarios en objeto global', () => {
+    assert.isFunction(buscarUsuarios);
   });
 
-  it('debería exponer función processCohortData en objeto global', () => {
-    assert.isFunction(processCohortData);
-  });
+  describe('computarUsuarios(usuarios)', () => {
 
-  describe('computeUsersStats(users, progress, courses)', () => {
+    //const cohort = fixtures.users.find(item => item.id === 'lim-2018-03-pre-core-pw');
+    //const courses = Object.keys(cohort.coursesIndex);
+    const { usuarios } = fixtures;
 
-    const cohort = fixtures.cohorts.find(item => item.id === 'lim-2018-03-pre-core-pw');
-    const courses = Object.keys(cohort.coursesIndex);
-    const { users, progress } = fixtures;
+    it('debería retornar arreglo de usuarios con propiedad status', () => {
+      const processed = computarUsuarios(usuarios);
+      
+      //assert.equal(usuarios.length, processed.length);
 
-    it('debería retornar arreglo de usuarios con propiedad stats', () => {
-      const processed = computeUsersStats(users, progress, courses);
-
-      assert.equal(users.length, processed.length);
-
-      processed.forEach(user => {
-        assert.ok(user.hasOwnProperty('stats'));
-        assert.isNumber(user.stats.percent);
-        assert.isObject(user.stats.exercises);
-        assert.isObject(user.stats.quizzes);
-        assert.isObject(user.stats.reads);
+      processed.forEach( (usuario, i) => {
+        assert.ok(usuario.hasOwnProperty('status'));
+        assert.isNumber(usuario.status.porcentajeCompletado);
+        /*assert.isObject(usuario.status.temas);
+        assert.isNumber(usuario.status.temas.porcentajeCompletado);
+        assert.isNumber(usuario.status.duracionTema);
+        assert.isObject(usuario['status']['temas'][i]['subtemas']);
+        assert.isNumber(usuario.status.temas.subtemas.porcentajeCompletado);
+        assert.isString(usuario.status.temas.subtemas.tipo);
+        assert.isNumber(usuario.status.temas.subtemas.duracion);*/
       });
     });
 
-    describe('user.stats para el primer usuario en data de prueba - ver carpeta data/', () => {
+    describe('usuario.status para el primer usuario en data de prueba - ver carpeta data/', () => {
 
-      const processed = computeUsersStats(users, progress, courses);
+      const processed = computarUsuarios(usuarios);
 
       it(
         'debería tener propiedad percent con valor 53',
@@ -96,11 +96,4 @@ describe('data', () => {
     it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)');
 
   });
-
-  describe('processCohortData({ cohortData, orderBy, orderDirection, filterBy })', () => {
-
-    it('debería retornar arreglo de usuarios con propiedad stats y aplicar sort y filter');
-
-  });
-
 });
