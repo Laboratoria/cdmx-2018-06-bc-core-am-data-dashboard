@@ -7,9 +7,9 @@ Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde p
 ### **1. Descubrimiento e investigación**
 (En esta fase es donde vamos a tener ese proceso de investigación y acercamiento con el usuario, es donde vamos a obtener el conocimiento para poder saber a quién vamos a llegar, pero de manera más profunda. Es tener la empatía y el acercamiento necesario para conocerlo.
 
-También vamos a tener en cuenta al negocio, sus objetivos y los stakeholders(involucrados)).
+También vamos a tener en cuenta al negocio, sus objetivos y a los stakeholders(involucrados)).
 
-__Usuarixs:__  (Toda la información que sepas de ellxs, ya sea porque las has podido observar o porque obtuviste datos directamente de de ellas)
+__Usuarixs:__  (Toda la información que sepas de ellxs, ya sea porque las has podido observar o porque obtuviste datos directamente de ellas)
 
 __Necesidades de las usuarias:__
 
@@ -17,7 +17,7 @@ __Necesidades de las usuarias:__
 __Objetivos de las usuarias:__ (Lo que quieren o esperan lograr)
 
 
-__Pain points:__ (En sus actividades diarias qué es lo que más les molesta u obstaculiza en el proceso de  realizar sus actividades o objetivos)
+__Pain points:__ (En sus actividades diarias qué es lo que más les molesta u obstaculiza en el proceso de  realizar sus actividades/objetivos)
 
 __Sentimientos:__(Sentimientos que les surgen dentro del proceso de sus actividades. Identificar cuáles predominan)
 
@@ -32,10 +32,7 @@ __6. Motivaciones del negocio para el data dashboard:__(Enlistarlo(s))
 
 __1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
 
-   - Sobre las alumnas:
- 
-
-   - Sobre los mentores:
+   - Sobre las estudiantes:
  
 
 __2. Lo que los usuarios esperan obtener:__
