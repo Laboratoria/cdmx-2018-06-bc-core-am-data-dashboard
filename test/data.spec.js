@@ -1,44 +1,44 @@
 describe('data', () => {
 
-  it('debería exponer función computarUsuarios en objeto global', () => {
-    assert.isFunction(computarUsuarios);
+  it('debería exponer función computeUsersStats en objeto global', () => {
+    assert.isFunction(computeUsersStats);
   });
 
-  it('debería exponer función ordenarUsuarios en objeto global', () => {
-    assert.isFunction(ordenarUsuarios);
+  it('debería exponer función sortUsers en objeto global', () => {
+    assert.isFunction(sortUsers);
   });
 
-  it('debería exponer función buscarUsuarios en objeto global', () => {
-    assert.isFunction(buscarUsuarios);
+  it('debería exponer función filterUsers en objeto global', () => {
+    assert.isFunction(filterUsers);
   });
 
-  describe('computarUsuarios(usuarios)', () => {
+  describe('computeUsersStats(users)', () => {
 
     //const cohort = fixtures.users.find(item => item.id === 'lim-2018-03-pre-core-pw');
     //const courses = Object.keys(cohort.coursesIndex);
-    const { usuarios } = fixtures;
+    const { users } = fixtures;
 
-    it('debería retornar arreglo de usuarios con propiedad status', () => {
-      const processed = computarUsuarios(usuarios);
+    it('debería retornar arreglo de users con propiedad stats', () => {
+      const processed = computeUsersStats(users);
       
       //assert.equal(usuarios.length, processed.length);
 
-      processed.forEach( (usuario, i) => {
-        assert.ok(usuario.hasOwnProperty('status'));
-        assert.isNumber(usuario.status.porcentajeCompletado);
-        /*assert.isObject(usuario.status.temas);
-        assert.isNumber(usuario.status.temas.porcentajeCompletado);
-        assert.isNumber(usuario.status.duracionTema);
-        assert.isObject(usuario['status']['temas'][i]['subtemas']);
-        assert.isNumber(usuario.status.temas.subtemas.porcentajeCompletado);
-        assert.isString(usuario.status.temas.subtemas.tipo);
-        assert.isNumber(usuario.status.temas.subtemas.duracion);*/
+      processed.forEach( (user, i) => {
+        assert.ok(user.hasOwnProperty('stats'));
+        assert.isNumber(user['stats']['completedPercentage'])
+        assert.isObject(user['stats']['topics']);
+        assert.isNumber(user['stats']['topics'][i]['completedPercentage']);
+        assert.isNumber(user['stats']['topics'][i]['topicDuration']);
+        assert.isObject(user['stats']['topics'][i]['subtopics']);
+        assert.isNumber(user['stats']['topics'][i]['subtopics'][i]['completedPercentage']);
+        assert.isString(user['stats']['topics'][i]['subtopics'][i]['type']);
+        assert.isNumber(user['stats']['topics'][i]['subtopics'][i]['duration']);
       });
     });
 
-    describe('usuario.status para el primer usuario en data de prueba - ver carpeta data/', () => {
+    describe('user.stats para el primer usuario en data de prueba - ver carpeta data/', () => {
 
-      const processed = computarUsuarios(usuarios);
+      const processed = computeUsersStats(users);
 
       it(
         'debería tener propiedad percent con valor 53',
@@ -91,7 +91,7 @@ describe('data', () => {
 
   });
 
-  describe('filterUsers(users, filterBy)', () => {
+  describe('filterUsers(users, search)', () => {
 
     it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)');
 

@@ -243,64 +243,64 @@ siguientes 3 funciones y las exportes al entorno global (window) dentro del
 script src/data.js, ten en cuenta que esto es solo lo básico, si necesitas más
 funciones puedes hacerlo:
 
-#### 1) `computarUsuarios(usuarios)`
+#### 1) `computeUsersStats(users)`
 
 Esta función es la responsable de "crear" la lista de usuarios (estudiantes)
 que vamos a "pintar" en la pantalla. La idea es "recorrer" el arreglo de
 usuarios (estudiantes) que se encuentra dentro de la "data".
 
 La función debe devolver un nuevo arreglo de usuarios donde cada objeto
-de usuario deberá tener una propiedad con el nombre `status` y dentro,
+de usuario deberá tener una propiedad con el nombre `stats` y dentro,
 sólo los datos requeridos.
 
 ##### Argumentos
 
-* `usuarios`: Arreglo de objetos obtenido de la data en bruto.
+* `users`: Arreglo de objetos obtenido de la data en bruto.
 
 ##### Valor de retorno
 
-Un arreglo de objetos las siguientes propiedades:
+Un arreglo de objetos `user` con las siguientes propiedades:
 
-*`nombre`*: Nombre respectivo de la estudiante.
-*`correo`*: Correo electrónico de la estudiante.
-*`sede`*: Sede a la cual la estudiante pertenece.
-*`generacion`*: Generación a la cual la estudiante pertenece.
-*`status`*: Un objeto con las siguientes propiedades:
-  * `porcentajeCompletado`: Número entero entre 0 y 100 que indica el porcentaje de completitud
+*`name`*: Nombre respectivo de la estudiante.
+*`email`*: Correo electrónico de la estudiante.
+*`campus`*: Sede a la cual la estudiante pertenece.
+*`generation`*: Generación a la cual la estudiante pertenece.
+*`stats`*: Un objeto con las siguientes propiedades:
+  * `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje de completitud
   general del usuario con respecto a todos los temas asignados.
-  * `temas`: Un objeto que incluye como propiedades los temas del programa.
-    - `porcentajeCompletado`: Número entero entre 0 y 100 que indica el porcentaje de completitud
+  * `topics`: Un objeto que incluye como propiedades los temas del programa.
+    - `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje de completitud
   general del usuario con respecto al tema respectivo.
-    - `duracionTema`: Número entero que indica el tiempo necesario a invertir para completar el tema.  
-    - `subtemas`: Un objeto que incluye como propiedades los subtemas de ese tema en particular.
-      - `porcentajeCompletado`: Número entero entre 0 y 100 que indica el porcentaje de completitud 
+    - `topicDuration`: Número entero que indica el tiempo necesario a invertir para completar el tema.  
+    - `subtopics`: Un objeto que incluye como propiedades los subtemas de ese tema en particular.
+      - `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje de completitud 
       general del usuario con respecto al subtema.
-      - `tipo`: String que indica la modalidad del subtema.
-      - `duracion`: Número entero que indica el tiempo necesario a invertir para completar el subtema.  
+      - `type`: String que indica la modalidad del subtema.
+      - `duration`: Número entero que indica el tiempo necesario a invertir para completar el subtema.  
 
-#### 2) `ordenarUsuarios(usuarios, ordenadoPor, direccion)`
+#### 2) `sortUsers(users, orderBy, orderDirection)`
 
-La función `ordenarUsuarios()` se encarga de _ordenar_ la lista de usuarios creada con
-`computarUsuarios()` en base a `ordenadoPor` y `direccion`.
+La función `sortUsers()` se encarga de _ordenar_ la lista de usuarios creada con
+`computeUsersStats()` en base a `orderBy` y `orderDirection`.
 
 ##### Argumentos
 
-* `usuarios`: Arreglo de objetos creado con `computarUsuarios()`.
-* `ordenadoPor`: String que indica el criterio de ordenado. Debe permitir ordenar
+* `users`: Arreglo de objetos creado con `computarUsuarios()`.
+* `orderBy`: String que indica el criterio de ordenado. Debe permitir ordenar
   por nombre y porcentaje de completitud.
-* `direccion`: La dirección en la que queremos ordenar. Posibles valores:
+* `orderDirection`: La dirección en la que queremos ordenar. Posibles valores:
   `ASC` y `DESC` (ascendente y descendente).
 
 ##### Valor de retorno
 
 Arreglo de usuarios ordenado.
 
-#### 3) `buscarUsuarios(usuarios, busqueda)`
+#### 3) `filterUsers(users, search)`
 
 ##### Argumentos
 
-* `usuarios`: Arreglo de objetos creado con `computarUsuarios()`.
-* `busqueda`: String de búsqueda.
+* `users`: Arreglo de objetos creado con `computarUsuarios()`.
+* `search`: String de búsqueda.
 
 ##### Valor de retorno
 
