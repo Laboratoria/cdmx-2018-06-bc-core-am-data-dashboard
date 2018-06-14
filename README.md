@@ -239,7 +239,7 @@ Modelo Vista Controlador. En este proyecto Controlador y Modelo estarán bajo
 el archivo data.js.
 
 El boilerplate incluye tests que esperan que implementes las
-siguientes 3 funciones y las exportes al entorno global (window) dentro del
+siguientes 4 funciones y las exportes al entorno global (window) dentro del
 script src/data.js, ten en cuenta que esto es solo lo básico, si necesitas más
 funciones puedes hacerlo:
 
@@ -266,19 +266,47 @@ Un arreglo de objetos `user` con las siguientes propiedades:
 *`campus`*: Sede a la cual la estudiante pertenece.
 *`generation`*: Generación a la cual la estudiante pertenece.
 *`stats`*: Un objeto con las siguientes propiedades:
-  * `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje de completitud
-  general del usuario con respecto a todos los temas asignados.
+  * `state`: Status para identificar si la estudiante esta por debajo del 60,
+  en 90 o superandolo, o dentro de la media en su `completedPercentage`.
+  * `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje
+  de completitud general del usuario con respecto a todos los temas asignados.
   * `topics`: Un objeto que incluye como propiedades los temas del programa.
-    - `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje de completitud
-  general del usuario con respecto al tema respectivo.
-    - `topicDuration`: Número entero que indica el tiempo necesario a invertir para completar el tema.  
-    - `subtopics`: Un objeto que incluye como propiedades los subtemas de ese tema en particular.
-      - `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje de completitud 
-      general del usuario con respecto al subtema.
+    - `completedPercentage`: Número entero entre 0 y 100 que indica el
+    porcentaje de completitud general del usuario con respecto al tema
+    respectivo.
+    - `percentageDuration`: Número entero que indica el porcentaje de tiempo
+    invertido según la duración indicada de cada tema.  
+    - `subtopics`: Un objeto que incluye como propiedades los subtemas de ese
+    tema en particular.
+      - `completedPercentage`: Número entero entre 0 y 100 que indica el
+      porcentaje de completitud general del usuario con respecto al subtema.
       - `type`: String que indica la modalidad del subtema.
-      - `duration`: Número entero que indica el tiempo necesario a invertir para completar el subtema.  
+      - `duration`: Número entero que indica el tiempo necesario a invertir
+      para completar el subtema.  
 
-#### 2) `sortUsers(users, orderBy, orderDirection)`
+#### 2) `computeGenerationsStats(users)`
+
+Esta función es la responsable de "crear" los status de cada generación
+que vamos a "pintar" en la pantalla. La idea es "recorrer" el arreglo de
+usuarios (estudiantes) que se encuentra dentro de la "data".
+
+La función debe devolver un nuevo arreglo de generaciones donde cada objeto
+`generation` deberá tener una propiedad con el nombre `average` y dentro el
+promedio de `completedPercentage` de todas las estudiantes de la generación.
+
+##### Argumentos
+
+* `users`: Arreglo de objetos obtenido de la data en bruto.
+
+##### Valor de retorno
+
+Un arreglo de objetos `generation` con las siguientes propiedades:
+
+* `campus`: Sede a la cual la generación pertenece.
+* `average`: Promedio del porcentaje completado de todas las estudiantes de la generación.
+* `count`: Número de estudiantes de la generación.
+
+#### 3) `sortUsers(users, orderBy, orderDirection)`
 
 La función `sortUsers()` se encarga de _ordenar_ la lista de usuarios creada con
 `computeUsersStats()` en base a `orderBy` y `orderDirection`.
@@ -295,7 +323,7 @@ La función `sortUsers()` se encarga de _ordenar_ la lista de usuarios creada co
 
 Arreglo de usuarios ordenado.
 
-#### 3) `filterUsers(users, search)`
+#### 4) `filterUsers(users, search)`
 
 ##### Argumentos
 
