@@ -41,8 +41,8 @@ describe('data', () => {
       const processed = computeUsersStats(users);
 
       it(
-        'debería tener propiedad percent con valor 53',
-        () => assert.equal(processed[0].stats.percent, 53)
+        'debería tener propiedad completedPercentage con valor 89',
+        () => assert.equal(processed[0]['stats']['completedPercentage'], 89)
       );
 
       it('debería tener propiedad exercises con valor {total: 2, completed: 0, percent: 0}', () => {
