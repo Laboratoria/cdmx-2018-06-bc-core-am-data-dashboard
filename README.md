@@ -116,7 +116,7 @@ como toda la configuración de dependencias y tests de ejemplo:
 ├── .gitignore
 ├── README.md
 ├── data 
-│   └── users.json
+│   └── laboratoria.json
 ├── package.json
 ├── src
 │   ├── data.js
@@ -243,31 +243,31 @@ siguientes 4 funciones y las exportes al entorno global (window) dentro del
 script src/data.js, ten en cuenta que esto es solo lo básico, si necesitas más
 funciones puedes hacerlo:
 
-#### 1) `computeUsersStats(users)`
+#### 1) `computeStudentsStats(laboratoria)`
 
-Esta función es la responsable de "crear" la lista de usuarios (estudiantes)
+Esta función es la responsable de "crear" la lista de estudiantes
 que vamos a "pintar" en la pantalla. La idea es "recorrer" el arreglo de
-usuarios (estudiantes) que se encuentra dentro de la "data".
+estudiantes que se encuentra dentro de `laboratoria.json`.
 
-La función debe devolver un nuevo arreglo de usuarios donde cada objeto
-de usuario deberá tener una propiedad con el nombre `stats` y dentro,
+La función debe devolver un nuevo arreglo de estudiantes donde cada objeto
+de estudiante deberá tener una propiedad con el nombre `stats` y dentro,
 sólo los datos requeridos.
 
 ##### Argumentos
 
-* `users`: Arreglo de objetos obtenido de la data en bruto.
+* `laboratoria`: Objeto obtenido de la data en bruto.
 
 ##### Valor de retorno
 
-Un arreglo de objetos `user` con las siguientes propiedades:
+Un arreglo de objetos `student` con las siguientes propiedades:
 
-*`name`*: Nombre respectivo de la estudiante.
-*`email`*: Correo electrónico de la estudiante.
-*`campus`*: Sede a la cual la estudiante pertenece.
-*`generation`*: Generación a la cual la estudiante pertenece.
-*`stats`*: Un objeto con las siguientes propiedades:
-  * `state`: Status para identificar si la estudiante esta por debajo del 60,
-  en 90 o superandolo, o dentro de la media en su `completedPercentage`.
+* `name`: Nombre respectivo de la estudiante.
+* `email`: Correo electrónico de la estudiante.
+* `campus`: Sede a la cual la estudiante pertenece.
+* `generation`: Generación a la cual la estudiante pertenece.
+* `stats`: Un objeto con las siguientes propiedades:
+  * `status`: Status para identificar si la estudiante esta por debajo del 60,
+  en 90 o superándolo, o dentro de la media en su `completedPercentage`.
   * `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje
   de completitud general del usuario con respecto a todos los temas asignados.
   * `topics`: Un objeto que incluye como propiedades los temas del programa.
@@ -275,7 +275,7 @@ Un arreglo de objetos `user` con las siguientes propiedades:
     porcentaje de completitud general del usuario con respecto al tema
     respectivo.
     - `percentageDuration`: Número entero que indica el porcentaje de tiempo
-    invertido según la duración indicada de cada tema.  
+    invertido según la duración indicada de cada tema, si el resultado son números flotantes deberías redondearlo al entero más cercano. Ejemplo: 78.78 = 79.  
     - `subtopics`: Un objeto que incluye como propiedades los subtemas de ese
     tema en particular.
       - `completedPercentage`: Número entero entre 0 y 100 que indica el
@@ -284,11 +284,11 @@ Un arreglo de objetos `user` con las siguientes propiedades:
       - `duration`: Número entero que indica el tiempo necesario a invertir
       para completar el subtema.  
 
-#### 2) `computeGenerationsStats(users)`
+#### 2) `computeGenerationsStats(laboratoria)`
 
-Esta función es la responsable de "crear" los status de cada generación
-que vamos a "pintar" en la pantalla. La idea es "recorrer" el arreglo de
-usuarios (estudiantes) que se encuentra dentro de la "data".
+Esta función es la responsable de "crear" los status de cada generación que
+vamos a "pintar" en la pantalla. La idea es "recorrer" el objeto que se
+encuentra dentro de la "data".
 
 La función debe devolver un nuevo arreglo de generaciones donde cada objeto
 `generation` deberá tener una propiedad con el nombre `average` y dentro el
@@ -296,24 +296,25 @@ promedio de `completedPercentage` de todas las estudiantes de la generación.
 
 ##### Argumentos
 
-* `users`: Arreglo de objetos obtenido de la data en bruto.
+* `laboratoria`: Objeto obtenido de la data en bruto.
 
 ##### Valor de retorno
 
 Un arreglo de objetos `generation` con las siguientes propiedades:
 
 * `campus`: Sede a la cual la generación pertenece.
-* `average`: Promedio del porcentaje completado de todas las estudiantes de la generación.
+* `generation`: Generación a la cual pertence
+* `average`: Promedio del porcentajeCompletado de todas las estudiantes de la generación, si resulta un número flotante debería de ser redondeado al número entero más cercano.
 * `count`: Número de estudiantes de la generación.
 
-#### 3) `sortUsers(users, orderBy, orderDirection)`
+#### 3) `sortStudents(students, orderBy, orderDirection)`
 
-La función `sortUsers()` se encarga de _ordenar_ la lista de usuarios creada con
-`computeUsersStats()` en base a `orderBy` y `orderDirection`.
+La función `sortStudents()` se encarga de _ordenar_ la lista de estudiantes creada con
+`computeStudentsStats()` en base a `orderBy` y `orderDirection`.
 
 ##### Argumentos
 
-* `users`: Arreglo de objetos creado con `computarUsuarios()`.
+* `students`: Arreglo de objetos creado con `computeStudentsStats()`.
 * `orderBy`: String que indica el criterio de ordenado. Debe permitir ordenar
   por nombre y porcentaje de completitud.
 * `orderDirection`: La dirección en la que queremos ordenar. Posibles valores:
@@ -321,20 +322,20 @@ La función `sortUsers()` se encarga de _ordenar_ la lista de usuarios creada co
 
 ##### Valor de retorno
 
-Arreglo de usuarios ordenado.
+Arreglo de estudiantes ordenado.
 
-#### 4) `filterUsers(users, search)`
+#### 4) `filterStudents(students, search)`
 
 ##### Argumentos
 
-* `users`: Arreglo de objetos creado con `computarUsuarios()`.
+* `students`: Arreglo de objetos creado con `computeStudentsStats()`.
 * `search`: String de búsqueda.
 
 ##### Valor de retorno
 
 Nuevo arreglo de usuarios incluyendo solo aquellos que cumplan la condición de
 filtrado, es decir, aquellos que contengan el string _busqueda_ en el nombre
-(`nombre`) del usuario.
+(`name`) de las estudiantes.
 
 ### main.js
 
