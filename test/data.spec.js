@@ -1,80 +1,102 @@
 describe('data', () => {
 
-  it('debería exponer función computeUsersStats en objeto global', () => {
-    assert.isFunction(computeUsersStats);
+  it('debería exponer función computeStudentsStats en objeto global', () => {
+    assert.isFunction(computeStudentsStats);
   });
 
-  it('debería exponer función sortUsers en objeto global', () => {
-    assert.isFunction(sortUsers);
+  it('debería exponer función computeGenerationsStats en objeto global', () => {
+    assert.isFunction(computeGenerationsStats);
   });
 
-  it('debería exponer función filterUsers en objeto global', () => {
-    assert.isFunction(filterUsers);
+  it('debería exponer función sortStudents en objeto global', () => {
+    assert.isFunction(sortStudents);
   });
 
-  describe('computeUsersStats(users)', () => {
+  it('debería exponer función filterStudents en objeto global', () => {
+    assert.isFunction(filterStudents);
+  });
 
-    //const cohort = fixtures.users.find(item => item.id === 'lim-2018-03-pre-core-pw');
-    //const courses = Object.keys(cohort.coursesIndex);
-    const { users } = fixtures;
+  describe('computeStudentsStats(laboratoria)', () => {
 
-    it('debería retornar arreglo de users con propiedad stats', () => {
-      const processed = computeUsersStats(users);
-      
-      //assert.equal(usuarios.length, processed.length);
+    const { laboratoria } = fixtures;
 
-      processed.forEach( (user, i) => {
-        assert.ok(user.hasOwnProperty('stats'));
-        assert.isNumber(user['stats']['completedPercentage'])
-        assert.isObject(user['stats']['topics']);
-        assert.isNumber(user['stats']['topics'][i]['completedPercentage']);
-        assert.isNumber(user['stats']['topics'][i]['topicDuration']);
-        assert.isObject(user['stats']['topics'][i]['subtopics']);
-        assert.isNumber(user['stats']['topics'][i]['subtopics'][i]['completedPercentage']);
-        assert.isString(user['stats']['topics'][i]['subtopics'][i]['type']);
-        assert.isNumber(user['stats']['topics'][i]['subtopics'][i]['duration']);
+    it('debería retornar arreglo de students con propiedad campus y propiedad generation', () => {
+      const processed = computeStudentsStats(laboratoria);
+
+      processed.forEach((student) => {
+        assert.ok(student.hasOwnProperty('campus'));
+        assert.ok(student.hasOwnProperty('generation'));
       });
     });
 
-    describe('user.stats para el primer usuario en data de prueba - ver carpeta data/', () => {
-
-      const processed = computeUsersStats(users);
-
-      it(
-        'debería tener propiedad percent con valor 53',
-        () => assert.equal(processed[0].stats.percent, 53)
-      );
-
-      it('debería tener propiedad exercises con valor {total: 2, completed: 0, percent: 0}', () => {
-        assert.deepEqual(processed[0].stats.exercises, {
-          total: 2,
-          completed: 0,
-          percent: 0,
+    it('debería retornar arreglo de students con propiedad stats', () => {
+      const processed = computeStudentsStats(laboratoria);
+    
+      processed.forEach( (student, i) => {
+        assert.ok(student.hasOwnProperty('stats'));
+        assert.isNumber(student.stats.completedPercentage);
+        assert.isObject(student.stats.topics);
+        assert.isNumber(student.stats.topics[i].completedPercentage);
+        assert.isNumber(student.stats.topics[i].topicDuration);
+        assert.isObject(student.stats.topics[i].subtopics);
+        assert.isNumber(student['stats']['topics'][i]['subtopics'][i]['completedPercentage']);
+        assert.isString(student['stats']['topics'][i]['subtopics'][i]['type']);
+        assert.isNumber(student['stats']['topics'][i]['subtopics'][i]['duration']);
         });
-      });
-
-      it('debería tener propiedad quizzes con valor {total: 3, completed: 2, percent: 67, scoreSum: 57, scoreAvg: 29}', () => {
-        assert.deepEqual(processed[0].stats.quizzes, {
-          total: 3,
-          completed: 2,
-          percent: 67,
-          scoreAvg: 29,
-        });
-      });
-
-      it('debería tener propiedad reads con valor {total: 11, completed: 6, percent: 55}', () => {
-        assert.deepEqual(processed[0].stats.reads, {
-          total: 11,
-          completed: 6,
-          percent: 55,
-        });
-      });
-
     });
 
+    describe('student.stats para el primer usuario en data de prueba - ver carpeta data/', () => {
+      const processed = computeStudentsStats(fixtures);
+
+      it('debería tener propiedad completedPercentage con valor 89', () => {       
+        assert.equal(processed[0].stats.completedPercentage, 89);
+      });
+
+      it('debería tener propiedad completedPercentage dentro de propiedad topics con valor 80', () => {
+        //assert.equal(processed[0])
+      });
+      it('debería tener propiedad percentageDuration dentro de propiedad topics con valor 79');
+
+      it(`debería tener propiedad "0-bienvenida-orientacion" dentro de objeto subtopics con valor 
+      {completado: 1, duracionSubtema: 55, tipo: "lectura"}`, () => {
+        const topics = Object.keys(processed[0].stats.topics);
+        const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
+       
+          assert.deepEqual(processed[0].stats.topics[topics[0]].subtopics[subTopics[0]], {
+            completado: 1,
+            duracionSubtema: 55,
+            tipo: "lectura"
+          });
+      });
+    });
   });
 
-  describe('sortUsers(users, orderBy, orderDirection)', () => {
+  describe('computeGenerationsStats(laboratoria)', () => {
+    const { laboratoria } = fixtures;
+    const processed = computeGenerationsStats(fixtures);
+
+    it('debería retornar un arreglo de generaciones con propiedad average y count', () => {
+      processed.forEach((generation) => {
+        assert.ok(generation.hasOwnProperty('average'));
+        assert.ok(generation.hasOwnProperty('count'));
+      })
+    });
+    
+    describe('generation para la primera generación en data de prueba - ver carpeta data/', () => {
+      const processed = computeGenerationsStats(fixtures);
+
+      it('debería tener una propiedad average con valor 75', () => {
+        assert.equal(processed[0].average, 75);
+      });
+
+      it('debería tener una propiedad count con valor 15', () => {
+        assert.equal(processed[0].count, 15);
+      });
+
+    }); 
+  });
+  
+  describe('sortStudents(students, orderBy, orderDirection)', () => {
 
     it('debería retornar arreglo de usuarios ordenado por nombre ASC');
     it('debería retornar arreglo de usuarios ordenado por nombre DESC');
@@ -91,7 +113,7 @@ describe('data', () => {
 
   });
 
-  describe('filterUsers(users, search)', () => {
+  describe('filterStudents(users, search)', () => {
 
     it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)');
 
