@@ -270,14 +270,14 @@ Un arreglo de objetos `student` con las siguientes propiedades:
   en 90 o superándolo, o dentro de la media en su `completedPercentage`.
   * `completedPercentage`: Número entero entre 0 y 100 que indica el porcentaje
   de completitud general del usuario con respecto a todos los temas asignados.
-  * `topics`: Un objeto que incluye como propiedades los temas del programa.
+  * `topics`: Un objeto que incluye como propiedades los temas del programa y cada tema tiene las siguientes propiedades:
     - `completedPercentage`: Número entero entre 0 y 100 que indica el
     porcentaje de completitud general del usuario con respecto al tema
     respectivo.
     - `percentageDuration`: Número entero que indica el porcentaje de tiempo
     invertido según la duración indicada de cada tema, si el resultado son números flotantes deberías redondearlo al entero más cercano. Ejemplo: 78.78 = 79.  
     - `subtopics`: Un objeto que incluye como propiedades los subtemas de ese
-    tema en particular.
+    tema en particular y cada subtema tiene las siguientes propiedades:
       - `completedPercentage`: Número entero entre 0 y 100 que indica el
       porcentaje de completitud general del usuario con respecto al subtema.
       - `type`: String que indica la modalidad del subtema.

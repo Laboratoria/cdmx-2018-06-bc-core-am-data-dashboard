@@ -53,11 +53,13 @@ describe('data', () => {
       });
 
       it('debería tener propiedad completedPercentage dentro de propiedad topics con valor 80', () => {
-        //assert.equal(processed[0])
+        assert.equal(processed[0].stats.topics['01-Introduccion-a-programacion'].completedPercentage, 80);
       });
-      it('debería tener propiedad percentageDuration dentro de propiedad topics con valor 79');
+      it('debería tener propiedad percentageDuration dentro de propiedad topics con valor 79', () => {
+        assert.equal(processed[0].stats.topics['01-Introduccion-a-programacion'].percentageDuration, 79)
+      });
 
-      it(`debería tener propiedad "0-bienvenida-orientacion" dentro de objeto subtopics con valor 
+      it(`debería tener propiedad subtopics que es un objeto con primera key "0-bienvenida-orientacion" con valor 
       {completado: 1, duracionSubtema: 55, tipo: "lectura"}`, () => {
         const topics = Object.keys(processed[0].stats.topics);
         const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
@@ -98,24 +100,15 @@ describe('data', () => {
   
   describe('sortStudents(students, orderBy, orderDirection)', () => {
 
-    it('debería retornar arreglo de usuarios ordenado por nombre ASC');
-    it('debería retornar arreglo de usuarios ordenado por nombre DESC');
-    it('debería retornar arreglo de usuarios ordenado por porcentaje general ASC');
-    it('debería retornar arreglo de usuarios ordenado por porcentaje general DESC');
-    it('debería retornar arreglo de usuarios ordenado por ejercicios completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por quizzes completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por quizzes completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas ASC');
-    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas DESC');
-
+    it('debería retornar arreglo de estudiantes ordenado por nombre ASC');
+    it('debería retornar arreglo de estudiantes ordenado por nombre DESC');
+    it('debería retornar arreglo de estudiantes ordenado por porcentaje general ASC');
+    it('debería retornar arreglo de estudiantes ordenado por porcentaje general DESC');
   });
 
   describe('filterStudents(users, search)', () => {
 
-    it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)');
+    it('debería retornar nuevo arreglo solo con estudiantes con nombres que contengan string (case insensitive)');
 
   });
 });
