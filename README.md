@@ -530,15 +530,6 @@ Esperamos que alcances al menos el nivel 2 en todas tus habilidades blandas.
 
 ***
 
-## Puntos de experiencia
-
-* Completando los requerimientos mínimos de este proyecto ganarás 250 XPs.
-* Completando el hacker edition de este proyecto ganarás 100 XPs adicionales.
-* Completando los ejercicios de manipulación de arreglos en el LMS (https://lms.laboratoria.la/cohorts/lim-2018-05-bc-core-am/courses/javascript/04-arrays/06-practice)
-  ganarás otros 25 XPs.
-* Completando los ejercicios de manipulación de objetos en el LMS (https://lms.laboratoria.la/cohorts/lim-2018-05-bc-core-am/courses/javascript/05-objects/06-practice)
-  ganarás otros 25 XPs.
-
 ## Primeros pasos
 
 1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
