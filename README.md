@@ -580,3 +580,5 @@ navegador o visitar un JSON parser online:
 * [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
 ## Investigación UX
+
+## Investigación UI
