@@ -580,3 +580,5 @@ navegador o visitar un JSON parser online:
 * [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
 Vania mi bolsillo esta cada vez màs vacio. Voy a traer panque de Romero con Miel. Voy aComprar estevia natural en el mercado o en las tiendas naturistas. como te diste cuanta de la alergia del azucar.
+
+Michele, trae muchos panqués de miel con romero y de semillas, de todos. jaja. 
