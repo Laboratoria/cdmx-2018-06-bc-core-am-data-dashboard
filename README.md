@@ -582,3 +582,5 @@ navegador o visitar un JSON parser online:
 ## Investigación UX
 
 ## Investigación UI
+
+## Investigación Final
