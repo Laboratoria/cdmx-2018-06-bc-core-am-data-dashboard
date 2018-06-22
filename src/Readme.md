@@ -1,13 +1,19 @@
 # Data Dashboard
 
 ## Introducción
+
 Esta es una página web creada para la fácil consulta de información sobre las estudiantes del Bootcamp Laboratoria, pensada en específico para las personas en el puesto de Training Managers. 
 Lxs **Training Managers** tienen como necesidad primordial, analizar la data de las alumnas con el fin de tomar las mejores decisiones con respecto al futuro de los procesos educativos; esto en una mejora continua de la experiencia de las alumnas actuales y de las próximas generaciones.
  En este demo podremos encontrar la información sobre los avances del LMS de las estudiantes de Laboratoria:
+
 *Por Sede
+
 *Por Generación
+
 *Por Alumna
+
 **Egresada
+
 **Actual
 
 
@@ -43,6 +49,6 @@ izquierdo, y en la parte central una barra de búsqueda.
 
 ![alt text](src/imagenes/3524a98f-6fbd-4f12-a2ae-ec3587968267.jpg)
  ![alt]
- 
+
 ![alt text](src/imagenes/03a665c5-829a-4cd4-ba74-ca146e6c866a.jpg)
  ![alt]
