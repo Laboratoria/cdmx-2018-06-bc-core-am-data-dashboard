@@ -161,13 +161,13 @@ desarrollar tu producto (Tip: entrevistas) y cuál fue tu proceso para definir
 el producto final a nivel de experiencia y de interfaz. Es importante que
 detalles:
 
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con el producto.
+* Quiénes son los principales usuarios de producto: todas las personas de Laboratoria involucradas en el proceso de mejora continua del bootcamp. 
+* Cuáles son los objetivos de estos usuarios en relación con el producto: Visualizar los datos recopilados del desempeño de aprendizaje y tomar decisiones que les permitan aplicar los cambios necesarios para el mejor aprovechamiento de las estudiantes .
 * Cuáles son los datos más relevantes que quieren ver en la interfaz y
-  por qué. Cómo los descubriste.
-* Cuándo revisan normalmente estos datos los usuarios.
-* Cómo crees que el producto les está resolviendo sus problemas.
-* Cómo fue tu proceso de diseño.
+  por qué. Cómo los descubriste: Se ejecutaron entrevistas a usuarios (TM y AC) con lo que descubrimos que lo mas importante para el usuario es conocer la cantidda de alumnas activas en el bootcamp para asì detectar el porcentaje de deserciòn desde el inicio a la fecha, asì como datos integrales del perfil (softskills) de cada alumna y su aprovechamiento.
+* Cuándo revisan normalmente estos datos los usuarios: Todos los dìas en todo momento, esto depende de quien les solicite esta informaciòn y para què la van a aplicar.
+* Cómo crees que el producto les está resolviendo sus problemas: agilizar la consulta que actualmente poseen y mejora el entendimiento del desempeño de todos los colaboradores de Laboratoria, asì como minimizar e integrar las herramientas (bases de datos) utilizadas actualmente.
+* Cómo fue tu proceso de diseño: se realizaron 3 sketches borrador y se seleccionò solo uno para mostrar la pantalla principal y que esta fuera fija para que la interfaz permitiera mostrar y ocultar elementos conforme la interacciòn del usuario.
 
 #### 2) Sketch de la solución (prototipo de baja fidelidad)
 
