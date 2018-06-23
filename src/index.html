@@ -2,10 +2,56 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Dashboard</title>
+    <title>Laboratoria</title>
     <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
+    <header>
+      <img class="logo "src="images/logo.png" alt="LABORATORIA"> <br>
+      <p class="titulo">BIENVENID@</p>
+      <div class="buscador">
+        <p>BUSCADOR</p>
+        <input type="text" name="" value="">
+      </div>
+    </header>
+
+    <main class="container" id="ocultar">
+      <div class="usuarioLab">
+        <p>USUARIO:</p>
+        <input type="text" name="usuario" class="user" >
+      </div>
+
+      <div class="passwordLab">
+        <p>PASSWORD:</p>
+        <input type="text" name="contraseña" class="password">
+     </div>
+
+     <div class="sedesLab">
+       <p>SEDE:</p>
+       <select class="sedes" name="sedes">
+         <option value="1">CDMX </option>
+        <option value="2">GUADALAJARA </option>
+        <option value="3">SAO PAOLO </option>
+        <option value="4">LIMA </option>
+        <option value="5">SANTIAGO </option>
+      </select>
+    </div>
+
+    <div class="generacionLab">
+      <p>GENERACION:</p>
+      <input type="number" name="generacion" value="generacion">
+      <input type="button" name="enviar" value="enviar" min="0" max="10">
+    </div>
+
+    <section>
+      <div class="reporte"></div>
+      <div class="reporteEgresados"></div>
+    </section>
+
+  </main>
+
+
     <script src="main.js"></script>
   </body>
 </html>
