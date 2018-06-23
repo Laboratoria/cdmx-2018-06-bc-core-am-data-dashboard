@@ -1,0 +1,19 @@
+.logo{
+
+    height: 70px;
+    width: 300px;
+
+}
+
+#ocultar {
+  display: none;
+}
+
+
+body{
+    margin: 1rem;
+    padding: 0rem; /*EStablece el area de relleno en sus cuatro lados*/
+    text-align: center;
+    margin: top;
+
+}
