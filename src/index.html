@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <title>Laboratoria</title>
     <link rel="stylesheet" href="style.css" />
-
+    
   </head>
-  <body>
+
+  <body id="prueba">
     <header>
       <img class="logo "src="images/logo.png" alt="LABORATORIA"> <br>
       <p class="titulo">BIENVENID@</p>
@@ -40,18 +41,20 @@
 
     <div class="generacionLab">
       <p>GENERACION:</p>
-      <input type="number" name="generacion" value="generacion">
+      <input type="number" name="generacion">
       <input type="button" name="enviar" value="enviar" min="0" max="10">
     </div>
 
     <section>
+      <div class="estudiantes"></div>
       <div class="reporte"></div>
       <div class="reporteEgresados"></div>
     </section>
 
   </main>
 
-
-    <script src="main.js"></script>
+  <script src="../data/laboratoria.json"></script>
+  <script src="main.js"></script>
+  <script src="data.js"></script>
   </body>
 </html>
