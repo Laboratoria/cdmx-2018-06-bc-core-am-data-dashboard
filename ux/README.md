@@ -5,12 +5,10 @@
 Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
 
 ### **1. Descubrimiento e investigación**
-(En esta fase es donde vamos a tener ese proceso de investigación y acercamiento con el usuario, es donde vamos a obtener el conocimiento para poder saber a quién vamos a llegar, pero de manera más profunda. Es tener la empatía y el acercamiento necesario para conocerlo.
 
-También vamos a tener en cuenta al negocio, sus objetivos y a los stakeholders(involucrados)).
 Para este reto, nuestras clientas fueron las Training managers de Laboratoria. Ellas necesitan una plataforma que agilice la toma de desiciones y la implementación de estrategias, pues su trabajo exige que estén en comunicación con el equipo, con otras sedes, clientes y alumnas, y la situación actual no les permite transformar de manera efectiva toda la data que se maneja en Laboratoria. A apartir de ello nos preguntamos ¿Cómo se tendría que ver la información para que su trabajo pueda mejorar? 
  
- Para implementar una solución  desarrollamos una entrevista que nos permitieran orientar nuestras ideas de la plataforma hacia las necesidades de nuestras clientes. La entrevista se realizó con las siguientes pregutnas:
+ Para implementar una solución  desarrollamos una entrevista que nos permitiera orientar nuestras ideas de la plataforma hacia las necesidades de nuestras clientes. La entrevista se realizó con las siguientes preguntas:
 
  * ¿Con qué interfaz visualizas y manipulas la información de las alumnas?
  * ¿Cuál es el dispositivo que utilizas más para visualizar la información?
@@ -24,6 +22,7 @@ Para este reto, nuestras clientas fueron las Training managers de Laboratoria. E
  La TM nos comunicó su descontento al utilizar una hoja de cálculo en Google Drive, donde han elaborado diferentes carpetas ("selección","formación","colocación laboral", etc) y han almacenado toda la data de las estudiantes por sede, por generación y por alumna. Por años, las hojas de Excel siempre nos han permitido manejar grandes cantidades de información, sin embargo, la gran desventaja de utilizar esta herramienta de google es que, si bien podemos almacenar y ordenar la data, es imposible visualizarla y procesarla de manera amigable y ágil; la segunda desventaja es que no hay una forma homogénea entre sedes de mostrar la información. Si alguna TM deseara comparar entre sedes la asistencia o el promedio general, el proceso conlleva muchos pasos, entre ellos, entender de qué manera almacena cada sede esa información.  Otro punto relevante es la necesidad de resguardar la información confidencial de las alumnas. Por lo tanto añadimos un inicio de sesión con dos propósitos: restringir el acceso y generar perfiles independientes. 
  
  De esta manera nuestro objetivo se centra en mostrar a las Training Managers la información procesada de lo más general (por ejemplo, el promedio de la generación) a lo más particular (la información por estudiante) reduciendo así los pasos para acceder a la información, utilizando de manera adecuada porcentajes y gráficas sin exceder de ellas (ya que eso retrocesaría la experiencia de usuario).
+ 
 Así mismo, la TM entrevistada prioriza la aplicación en computadora, pero reconoce la necesidad de poder acceder por el mobil al estar fuera de la oficina o en una junta con clientes.
 
 
