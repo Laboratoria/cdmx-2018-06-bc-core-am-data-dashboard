@@ -10,8 +10,7 @@ header{
 p{
   font-size: 30px;
   text-align: center;
-  font-family: 'Poor Story', cursive;
-}
+  }
 
 .button {
   background: rgb(255, 165, 0);/*color de botón*/
