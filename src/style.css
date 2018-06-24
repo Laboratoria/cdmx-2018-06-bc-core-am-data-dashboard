@@ -1,0 +1,63 @@
+#laboratoria{
+    text-align: center;
+
+}
+
+.ciudad{
+margin: 20px;
+padding: 30px;
+width: 100px;
+text-align: center;
+background-color:#ECDA38;
+list-style: none;
+text-decoration: none;
+
+}
+
+li a{
+ list-style: none;
+ text-decoration: none;
+}
+
+generacion a{
+list-style: none;
+text-decoration: none;
+}
+.ciudad:hover{
+    background-color: gray;
+}
+
+/* .ciudad:hover {
+    background-color: black;
+}
+
+li, a{
+background-color:yellow;
+text-decoration: none;
+
+
+}
+
+navegador1 > li {
+    float: left;
+}
+
+li ul{
+    display: none;
+}
+
+li:hover > ul{
+    display: block;
+} */ 
+ /* .ciudad{
+border: solid;
+list-style: none;
+text-align: center;
+background-color: yellow;
+}
+
+.generacion {
+    list-style: none;
+    text-align: center;
+} */
+
