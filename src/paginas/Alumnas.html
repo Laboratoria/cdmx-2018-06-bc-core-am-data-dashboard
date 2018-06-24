@@ -5,22 +5,25 @@
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="../style.css" />
 <header>
-  Laboratoria
+  <img src="../Images/Laboratoria-codigo.png" alt="">
     <p> Alumnas </p>
 </header>
   </head>
   <body>
-    <section>
-      <a href = "../index.html" class = "button"> Sedes </a> <!--Se enlaza con el html del menú Generaciones -->
-      <a href = "../Generaciones.html" class = "button"> Generaciones </a>
+
+    <input type="text" id="buscaAlumna" onkeyup="alumnas()" placeholder="Busca por nombre.." title="Pon el nombre">
+    <button type="button" name="Buscar">Buscar</button>
+
+  <section>
+
+      <a href = "../index.html" class = "button medium"> Sedes </a> <!--Se enlaza con el html del menú Generaciones -->
+      <a href = "Generaciones.html" class = "button"> Generaciones </a>
 
 En esta sección mostraremos un perfil con la información gneral del avance
 en su LMS, un porcentaje general y una grafica con los porcentajes de cada tema.
 
-
-
     </section>
 
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
   </body>
 </html>
