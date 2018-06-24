@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}/*Estilos generales*/
+
+header{
+  font-size: 80px;
+  text-align: center;
+  text color: black;
+  text-shadow: grey;
+  }
+
+p{
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.button {
+  background: rgb(255, 165, 0);/*color de botón*/
+  color: rgb(255, 255, 255);/*color de letra*/
+  display: inline-block;/*para que este un boton al lado de otro*/
+  font-size: 60px;/*Tamaño de la fuente*/
+  margin: 120px ; /*margen hacia todos los lados */
+  padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados*/
+  text-align: center;/*Texto centrado en los botone*/
+  width: 400px; /*anchura- se tiene que agregar pues al poner el inline-block ya no ocupa toda la línea */
+  text-decoration: none;/*Quitar el subrayado por defecto que tine <a>*/
+  box-shadow: 0px 3px 2px rgb(120, 120, 120);/*Efecto de la sombra del botón*/
+}
+
+.button.brasil{
+  text-align: center;
+  font-size: 50px;
+  width:
+}
