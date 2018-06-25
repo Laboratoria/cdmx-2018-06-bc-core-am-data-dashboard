@@ -1,51 +1,70 @@
-# Data Dashboard
 
+# Laboratoria LMS Dashboard
 ## Preámbulo
 
-En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la
-mayor cantidad de datos posibles respecto al progreso de las estudiantes para
-apoyarlas en su aprendizaje.
+Laboratoria LMS Dashboard surguió a partir de la necesidad de las Trainning Managers de Laboratoria de todas las sedes de consultar fácilmente la data de las estudiantes y sus progresos en Laboratoria Learning Managment System (Laboratoria LMS) para la toma de importantes desiciones basadas en datos y hechos específicos que podrían mejorar notablemente el rendimiento de la LMS y de las estudiantes.
 
-La principal medida de progreso de una estudiante en Laboratoria es su avance
-completando los proyectos de la [Ruta de Aprendizaje](https://docs.google.com/spreadsheets/d/1AoXQjZnZ5MTPwJPNEGDyvn5vksiOUoPr932TjAldTE4/edit#gid=536983970)
-y su desempeño en función a la [Rúbrica de Niveles Esperados](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkQy1waRpQ-16sn7VogiDTy-Fz5e7OSZSYUCiHC_bkLAKYewr4L8pWJ_BG210PeULe-TjLScNQQT_x/pubhtml).
-Sin embargo, para completar estos proyectos las estudiantes acceden a contenidos
-de aprendizaje (lecturas, videos, ejercicios y quizzes) en un sistema que
-llamamos LMS (Learning Management System). El LMS acumula data sobre quién
-leyó qué, qué ejercicios se han completado, los resultados de los quizzes, etc.
+Para la construcción de este producto se tomaron en cuenta las siguientes consideraciones:
 
-A pesar de que la data de progreso del LMS (ej. lecturas leídas, ejercicios
-  completados, nota en quizzes, etc.) no impacta directamente en la evaluación
-  de una estudiante, sí es una pieza de información relevante que las TMs
-  quisieran visualizar para tener un mejor entendimiento de cómo va cada
-  estudiante en su proceso de aprendizaje.
+Las usuarias principales del producto son:
+Trainning Manager de Laboratoria:
+* Lucile Baratier (Campus CDMX)
+* 
+* 
+* 
+* 
 
-Así, el reto de este proyecto es crear una interfaz donde las TMs puedan
-_ver_ y _usar_ la data de progreso del LMS. Para ello, proponemos crear un
+Por ello, la planeación del trabajo con las usuarias y clientes, se organizó de la siguiente manera:
+
+1º entevista con TM Lucile Baratier para obtener una idea general de sus especativas del Producto.
+
+2º producción del primer Sketch del producto 
+
+3ª Presentación del primer Sketch del producto a usuarios 
+
+El principal objetivo de las usuarias al interactuar con el producto sería: 
+
+* Consultar de manera ágil y precisa información general y particular sobre el desempeño de las alumnas y rendimiento de la LMS.
+
+El modo de uso de este producto resultó ser también una consideración importante para el diseño de la interfaz:
+
+* La consulta de esta data es muy frecuente. El producto podría ser utilizado más de 10 veces en un mismo día.
+
+* Se requiere su visualización móvil porque tiene una importante frecuencia de consulta fuera de oficina.
+
+* Se requiere poder ver datos muy generales y a la vez también poder acceder a datos específicos.
+
+Derivado de estas consideraciones, la interfaz del producto se desarrolló de la manera más intuituva y limpia posible, tratando de no saturar visualmente ni agobiar con la presentación inmediata de datos duros muy específicos. Por ello, se consideró el siguiente Sketch:
+
+
+
+_____
+En el README.md cuéntanos cómo pensaste y te acercaste a los usuarios al desarrollar tu producto (Tip: entrevistas) y cuál fue tu proceso para definir el producto final a nivel de experiencia y de interfaz. Es importante que detalles:
+
+Quiénes son los principales usuarios de producto. 
+Cuáles son los objetivos de estos usuarios en relación con el producto.
+Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué. Cómo los descubriste.
+Cuándo revisan normalmente estos datos los usuarios.
+Cómo crees que el producto les está resolviendo sus problemas.
+Cómo fue tu proceso de diseño.
+2) Sketch de la solución (prototipo de baja fidelidad)
+
+Debes hacer un sketch (boceto) de tu solución usando papel y lápiz, tomarle una foto, subirla a tu repositorio y hacer mención del sketch en tu README.md.
+
+3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
+
+Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés). Para eso debes aprender a utilizar alguna herramienta de diseño visual. Nosotros te recomendamos Figma que es una herramienta que funciona en el navegador y, además, puedes crear una cuenta gratis. Sin embargo, eres libre de utilizar otros editores gráficos como Illustrator, Photoshop, PowerPoint, Keynote, etc.
+
+El diseño debe representar tu ideal de solución. Digamos que es lo que desearías implementar si tuvieras tiempo ilimitado para hackear.
+
+Tu diseño debe seguir los fundamentos de visual design, como: contraste, alineación, jerarquía, entre otros. Tip: revisa el contenido de UX de la unidad de visual design.
+
+
 **data dashboard** (_tablero de visualización de datos_).
 
 ## Introducción
 
-Según un [estudio de IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN),
-el 90% de la data que existe hoy ha sido creada en los últimos dos años.
-Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
-
-Sin embargo, los datos por sí solos son de poca utilidad. Para transformar datos
-en **información** necesitamos procesarlos y entenderlos. Una manera muy
-sencilla de hacerlo es creando _visualizaciones_. Las
-empresas líderes de hoy generan visualizaciones dinámicas de su data
-que les permiten entender mejor su negocio y tomar decisiones apropiadas.
-
-En este proyecto tendrás tu primer acercamiento a transformar data en
-información creando tu primer **data dashboard**.
-
-Si pensamos en un _dashboard_ podemos pensar en el tablero de control de un auto
-o el de un avión. Un espacio desde el cual un usuario puede tener acceso a la
-información y controles más relevantes, en este caso, del vehículo que está
-utilizando. El _dashboard_ de un auto le permite a quien conduce saber a qué
-velocidad está yendo, qué cambio/velocidad está utilizando, cuánto combustible
-tiene disponible, cuál es la temperatura del motor, cuántas revoluciones por
-minuto dan las ruedas, cuánta distancia ha recorrido, etc.
+Durante cada Bootcamp, al menos 70 estudiantes comienzan a interactuar con su la plataforma de Laboratoria, llamada LMS,
 
 ![car dashboard](https://img.buzzfeed.com/buzzfeed-static/static/2017-02/7/12/enhanced/buzzfeed-prod-fastlane-03/original-17515-1486490056-3.jpg?crop=2041:1068;80,248)
 

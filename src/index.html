@@ -2,10 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Laboratoria LMS Dashboard</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheetgrid" href="bootstrap-grid.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Lobster+Two|Oswald|PT+Sans+Narrow|Pacifico" rel="stylesheet">
   </head>
+  <header> 
+    <img src="../images/Labo.png" id="labo"/>
+    <h1>Laboratoria LMS Dashboard</h1>
+    <li>
+        <input type="text" value="Usuaria">
+        <input type="password" value="Contraseña">
+        <input type="submit" value="Login">
+        </li>
+    <nav>
+      <ul>
+        <li><a href="#">Cambiar Sede</a></li>
+        <li><a href="#">LMS</a></li>
+        <li><a href="#">Estudiantes</a></li>
+        <li><a href="#">Buscar...</a></li>
+        <li><a href="#">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
   <body>
-    <script src="main.js"></script>
+    <h2>¡Bienvenida!</h2>
+    <article>
+      <ul>
+        <li>Elige la sede:</li>
+        <button id="btn">Function</button>
+        <li id="Lima">Lima</li>
+        <li id="Mexico">México</li>
+        <li id= "Santiago">Santiago</li>
+      </ul>
+    </article>
+    <article>
+      <ul>
+        <li>Elige la generación:</li>
+        <li>3ª generación</li>
+        <li>4ª generación</li>
+        <li>5ª generación</li>
+      </ul>
+    </article>
+  
+    
   </body>
+  <footer class:"footer">Talento que transforma</footer>
+  <!--Login -->
+  <script src="main.js"></script>
+  <script src="data.js"></script>
+  <script src="login.js"></script>
 </html>
