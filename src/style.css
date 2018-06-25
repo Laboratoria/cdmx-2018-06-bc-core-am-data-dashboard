@@ -1,0 +1,41 @@
+
+.cabeza {
+height: 60px;
+}
+
+.image_lab{
+padding-top: 10px;
+
+}
+
+.bottom_serch{
+padding-left:100px;
+
+}
+
+.user {
+background-color:#FFE032;
+height: 150px;
+
+}
+
+.image{
+padding-top: 50px;
+}
+
+.nav_Vertical{
+background-color:#FFE65C;
+height: 500px;
+}
+
+.button{
+padding-top: 20px;
+padding-left: 500px;
+}
+
+
+
+.centrado_botton .bottom_cont{
+
+font-size: 22px;
+}
