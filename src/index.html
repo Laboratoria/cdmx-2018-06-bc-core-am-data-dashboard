@@ -7,7 +7,50 @@
   </head>
 
   <body>
-    <h1>INICIAR SESION</h1>
+    <header id="laboratoria">
+        <h1>< Laboratoria ></h1>
+    </header>
+    <hr>
+  
+<form action="">
+  <h2>Login</h2>
+  <input type="text" placeholder="&#128274;  Username" name="usuario">
+  <input type="password" placeholder="&#128273;  Password" name="contraseña">
+  <input type="submit" value="Ingresar">
+</form>
+
+    <!-- primer navegador para ingresar a la sede -->
+    <nav>
+      <ul>
+        <li class="ciudad"><a href="#lista-generacion">CDMX</a>
+          <ul id="lista-generacion">
+              <li class="generacion"><a href="#">Quinta</a></li> 
+              <li class="generacion"><a href="#">Cuarta</a></li>
+              <li class="generacion"><a href="#">Tercera</a></li>
+          </ul>
+        </li>
+
+        <li class="ciudad"><a href="#">Lima</a>
+          <ul>
+            <li class="generacion"><a href="#">Quinta</a></li> 
+            <li class="generacion"><a href="#">Cuarta</a></li>
+            <li class="generacion"><a href="#">Tercera</a></li>
+        </ul>
+      </li>
+
+        <li class="ciudad"><a href="#">Santiago</a><ul>
+          <li class="generacion"><a href="#">Quinta</a></li> 
+          <li class="generacion"><a href="#">Cuarta</a></li>
+          <li class="generacion"><a href="#">Tercera</a></li>
+      </ul>
+    </li>
+      </ul>
+  </nav>
+<!-- 
+      <p id="box"></p>
+      <button id="btn">Next</button>
+       -->
+   
 
     <section id="box"> 
       <button id="btn">Next</button>
@@ -16,5 +59,7 @@
     <!--script type="text/javascript" src="../data/laboratoria.json"></script>-->
     <script src="data.js"></script>  
     <script src="main.js"></script>
+
+  
   </body>
 </html>

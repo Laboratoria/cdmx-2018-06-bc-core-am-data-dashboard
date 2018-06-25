@@ -169,6 +169,7 @@ detalles:
 * Cómo crees que el producto les está resolviendo sus problemas.
 * Cómo fue tu proceso de diseño.
 
+
 #### 2) Sketch de la solución (prototipo de baja fidelidad)
 
 Debes hacer un _sketch_ (boceto) de tu solución usando papel y lápiz, tomarle
@@ -579,6 +580,4 @@ navegador o visitar un JSON parser online:
 * [json.org](https://json.org/json-es.html)
 * [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
-## Investigación UX
 
-## Investigación UI
