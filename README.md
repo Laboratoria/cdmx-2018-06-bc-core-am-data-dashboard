@@ -161,36 +161,44 @@ Un Data Dashboard es una herramienta cuyo objetivo y utilidad básica es diagnos
 ![sketch](https://www.geckoboard.com/assets/data-dashboard-in-office.jpg)
 
 * Quiénes son los principales usuarios de producto.
+
 Todas las personas de Laboratoria involucradas en el proceso de mejora continua del Bootcamp.
 
-* Cuáles son los objetivos de estos usuarios en relación con el producto.  
-Es la base para mantener un buen control de situación, visualizar los datos recopilados del desempeño de aprendizaje y tomar decisiones que les permitan aplicar los cambios necesarios para el mejor aprovechamiento de las estudiantes.
+* Cuáles son los objetivos de estos usuarios en relación con el producto.
 
-* Cuáles son los datos más relevantes que quieren ver en la interfaz y
-  por qué. Cómo los descubriste.
+Mantener un buen control de situación, visualizar los datos recopilados del desempeño de aprendizaje y tomar decisiones que les permitan aplicar los cambios necesarios para el mejor aprovechamiento de las estudiantes.
+
+* Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué. Cómo los descubriste.
+
   Se ejecutaron entrevistas a usuarios (TM y AC) con lo que descubrimos que lo mas importante para el usuario es conocer la cantidad de alumnas activas en el bootcamp para asì detectar el porcentaje de deserciòn desde el inicio a la fecha, asì como datos integrales del perfil (softskills) de cada alumna y su aprovechamiento.
 
-* Cuándo revisan normalmente estos datos los usuarios.  
+* Cuándo revisan normalmente estos datos los usuarios.
+
 Todos los dìas en todo momento, esto depende de quien les solicite esta informaciòn y para què la van a aplicar.  
 
 * Cómo crees que el producto les está resolviendo sus problemas.
+
 Facilitarà el diagnóstico y la toma de decisiones. permitirà organizar y configurar la información asì como agilizar la consulta que actualmente poseen y mejora el entendimiento del desempeño de todos los colaboradores de Laboratoria.
 Ayudarà a minimizar e integrar las herramientas (bases de datos) utilizadas actualmente para manipular la información.
 
 * Cómo fue tu proceso de diseño.
+
 Se realizaron 3 sketches borrador y se seleccionò solo uno para mostrar la pantalla principal y que esta fuera fija para que la interfaz permitiera mostrar y ocultar elementos conforme la interacciòn del usuario.
 
-![entrevista TM](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DihvJ8wsalj4%26index%3D14%26list%3DWL%26t%3D0s&h=AT1B5nyqfUp4UcbP3oBc6SJ84vDsy4zDwN-YFYRWPlMVyKbABLR7Tkxp3anbDSvaa8bJcJp6C8Qbp27x8QoPeZzLMBu6MlZlGhxLLw-EmKFRHkML2gQra47_A49TTUBJTuMa)
+[entrevista TM](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DihvJ8wsalj4%26index%3D14%26list%3DWL%26t%3D0s&h=AT1B5nyqfUp4UcbP3oBc6SJ84vDsy4zDwN-YFYRWPlMVyKbABLR7Tkxp3anbDSvaa8bJcJp6C8Qbp27x8QoPeZzLMBu6MlZlGhxLLw-EmKFRHkML2gQra47_A49TTUBJTuMa)
 
 #### 2) Sketch de la solución (prototipo de baja fidelidad)
 
- ![sketch1](http://es.tinypic.com/r/9uswte/9)
- ![sketch2](http://es.tinypic.com/r/20f87wk/9)
- ![sketch3](http://es.tinypic.com/r/nbxisk/9)
- ![sketch4](http://es.tinypic.com/r/k1bc0i/9)
- ![sketch5](http://es.tinypic.com/r/1gtb1f/9)
- ![sketch6](http://es.tinypic.com/r/wbt6py/9)
- ![sketch7](http://es.tinypic.com/r/2ry22xw/9)
+ ![sketch1](https://imageshack.com/a/img921/8002/oxsAgR.jpg)
+ ![sketch2](https://imageshack.com/a/img924/8337/9NYSwM.jpg)
+ ![sketch3](https://imageshack.com/a/img922/6254/JlcbEP.jpg)
+ ![sketch4](https://imageshack.com/a/img924/5736/uEP9m0.jpg)
+ ![sketch5](https://imageshack.com/a/img923/2649/vHrfLh.jpg)
+ ![sketch6](https://imageshack.com/a/img921/1008/0ORHRE.jpg)
+
+ _diagrama de flujo_
+
+ ![sketch7](https://imageshack.com/a/img921/5562/ottPh6.jpg)
 
 #### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
