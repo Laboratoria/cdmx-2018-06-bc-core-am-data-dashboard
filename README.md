@@ -24,11 +24,11 @@ Por ello, la planeación del trabajo con las usuarias y clientes, se organizó d
 [![UX RESEARCH](/ux-research/Interview2.png)](https://youtu.be/lQHlnXwTWro "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
 
 2º producción del primer Sketch del producto 
-![Alt Text] (GIFsketch1.gif)
+<img /ux-research/GIFsketch1.gif>
 3ª Presentación del primer Sketch del producto a usuarios 
 
 4ª Reformulación del Sketch con feedback de usuarias potenciales
-![Alt Text] (GIFsketch2.gif)
+<img /ux-research/GIFsketch2.gif>
 
 El principal objetivo de las usuarias al interactuar con el producto sería: 
 
