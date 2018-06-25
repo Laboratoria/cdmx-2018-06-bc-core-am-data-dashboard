@@ -1,11 +1,153 @@
 <!DOCTYPE html>
-<html>
+<!--Agregando atributo LANG para indicar idioma de la página-->
+<html lang="es">
   <head>
     <meta charset="utf-8">
+    <!--Agregando meta para hacer responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Dashboard</title>
+    <!--Agregando link para poder usar Bootstrap CSS-->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <!--Inicia contenido de primera pantalla-->
+    <main class="container-fluid" id="login-container">
+      <div class="row">
+        <div class="d-flex justify-content-center"></div>
+        <form id="login-section">
+          <img src="img/Laboratoria-Logo-RGB.png" alt="laboratoria-logo" id="logo-login">
+          <br>
+          <h2 id="title-login">Bienvenid@ a LAB-Dash</h2>
+          <div class="form-group">
+            <label for="user-name">Ingresa tu usuario:</label>
+            <input type="text" class="form-control" id="user-name" placeholder="Nombre de usuario" name="user-name">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Ingresa tu contraseña:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pwd">
+          </div>
+          <div class="form-group">
+              <label for="exampleSelect1">Elige tu sede:</label>
+              <select class="form-control" id="select-venue">
+                <option>CDMX</option>
+                <option>LIMA</option>
+                <option>SANTIAGO</option>
+              </select>
+          </div>
+          <button type="button" class="btn btn-default" id="login-button">ENTRAR</button>
+        </form>
+      </div>  
+    </main>
+
+    <!--Termina contenido de primera pantalla-->
+
+    <!--Inicia contenido de segunda pantalla-->
+    <div id="main-page">
+    <nav class="navbar navbar-inverse visible-xs">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id="menu-button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <img src="img/Laboratoria-Logo-RGB.png" alt="laboratoria-logo">
+          <!--<a class="navbar-brand" href="#">Logo</a>-->
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Selecciona:</a></li>
+            <li><a href="#">Sede</a></li>
+            <li><a href="#">Generación</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!--Define el contenedor global-->
+    <main class="container-fluid"> 
+      <!--Abre la "fila" donde estarán todos nuestros contenedores-->
+      <div class="row content"> 
+        <!--Abre contenedor del menú de navegación-->
+        <div class="col-sm-3 sidenav hidden-xs"> 
+          <img src="img/Laboratoria-Logo-RGB.png" alt="laboratoria-logo" id="logo-nav">
+          <!--<h2>Logo</h2>-->
+          <ul class="nav nav-pills nav-stacked" id="selectors-nav">
+            <li class="active"><a href="#section1">Selecciona:</a></li>
+            <li><a href="#section2">Sede</a></li>
+            <li><a href="#section3">Generación</a></li>
+          </ul><br>
+        </div>
+        <br>
+        
+        <!--Abre el contenedor donde se despliegan los datos procesados-->
+        <div class="col-sm-9">
+    
+          <!--Abre sección donde despliega la Sede y Generación inicial-->
+          <div class="well">
+            <h3 id="venue">Sede</h3>
+            <h4 id="generation">Generación</h4>
+          </div>
+    
+          <!--Abre sección donde despliegan las estudiantes y los turnos-->
+          <div class="row">
+            <!--Abre caja donde despliegan las estudiantes activas-->
+            <div class="col-sm-6 student-section">
+              <div class="well">
+                <h4>Estudiantes activas</h4>
+                <p>Número de estudiantes</p> 
+              </div>
+            </div>
+    
+            <!--Abre caja donde despliegan las estudiantes por turno-->
+            <div class="col-sm-6 student-section">
+              <div class="well">
+                <h4>Turno AM</h4>
+                <p>40</p> 
+                <h4>Turno PM</h4>
+                <p>40</p>
+              </div>
+            </div> 
+    
+          </div>
+    
+          <!--Abre sección donde se despliega el avance en el LMS-->
+          <div class="panel panel-default">
+    
+            <div class="panel-heading">
+              <h4>Avance en el LMS</h4> 
+            </div>
+    
+            <div class="panel-body">
+              &#x25B2; 60%
+            </div>
+    
+            <div class="panel-body">
+              &#x25BC; 90%
+            </div>
+    
+          </div>
+          
+        </div>
+    
+      </div>
+      
+    </main>
+  </div>
+<!--Termina contenido de segunda pantalla-->
+
+    <footer class="page-footer font-small pt-4 mt-4">
+      <div class="footer-copyright text-center py-3">
+        Proyecto 2 Data Dashboard @ LABORATORIA Junio 2018 | Citlalli Del Moral - Palmidia Garay
+    </div>
+    </footer>
+     
     <script src="main.js"></script>
   </body>
 </html>

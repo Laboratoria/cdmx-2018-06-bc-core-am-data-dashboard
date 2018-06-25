@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#login-container{
+    height: 100vh;
+    display: block;
+    background-color: yellow;
+}
+
+#login-section{
+    width: 50%;
+    margin: 3em auto;
+    padding: 3em;
+    height: auto;
+    border: 1px solid grey;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+#main-page {
+    display: none;
+}
+
+footer{
+    height: auto;
+    padding-top: 0.8em;
+    text-align: center;
+    margin-top: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+    color: #fff;
+}
+
+.row.content {
+    height: 93vh;
+}
+    
+.sidenav {
+    background-color: #f1f1f1;
+    height: 93vh;
+}
+        
+@media screen and (max-width: 767px) {
+    
+    .row.content {
+    height: auto;
+    } 
+
+    .navbar-header{
+        background-color: #333333;
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+
+    #logo-login{
+        width: 100px;
+    }
+
+    #title-login{
+        font-size: 1.5em;
+    }
+
+}
+
+
+#logo-nav{
+    padding: 1em;
+}
+
+#selectors-nav{
+    padding-top: 1em;
+}
+
+#student-section{
+    height: 25px;
+}
+
+footer{
+    background-color: #333333;
+    color: #fff;
+}
