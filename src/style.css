@@ -1,0 +1,37 @@
+.lablogo{
+  top: 20%;
+  text-align: center;
+}
+.box-data{
+  position: absolute;
+width: 473px;
+height: 275px;
+left: 30%;
+top: 30%;
+
+background: #FDE45F;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 78px;
+}
+.box-input{
+  text-align: center;
+
+}
+.input{
+
+  text-align: center;
+  width: 250px;
+  height: 60px;
+  background: #DAC867;
+  border-radius: 15px;
+}
+
+#login{
+  width: 129.51px;
+  height: 48px;
+  background: #DAC867;
+  border-radius: 30px;
+}
+#login:hover{
+  background-color: grey;
+}
