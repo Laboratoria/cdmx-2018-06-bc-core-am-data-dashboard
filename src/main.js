@@ -35,6 +35,7 @@ Debes ingresar todos los datos`);
         console.log(name);
         console.log(password);
         console.log(venue);
+
         //agregamos esta línea para poder llamar los valores después
         return [name,venue];
 

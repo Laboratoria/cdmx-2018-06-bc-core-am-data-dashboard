@@ -4,6 +4,7 @@
 }
 
 /*Quitando margen y padding a toda la página*/
+
 body{
     margin: 0;
     padding: 0;
@@ -90,3 +91,4 @@ footer{
     background-color: #333333;
     color: #fff;
 }
+
