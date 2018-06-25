@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#login-container{
+    position: absolute;
+    height: 100vh;
+    display: block;
+    background-color: yellow;
+}
+
+#login-section{
+    width: auto;
+    margin: 3em auto;
+    padding: 3em;
+    height: auto;
+    border: 1px solid grey;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+#main-page {
+    display: none;
+}
+
+footer{
+    height: auto;
+    padding-top: 0.8em;
+    text-align: center;
+    margin-top: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+    color: #fff;
+}
+/*
+header{
+    position: absolute;
+    height: 44px;
+    width: 100%;
+    background-color: goldenrod;
+    z-index: 4;
+}
+
+nav{
+    position: absolute;
+    width: 30%;
+    background-color: blue;
+    height: 100vh;
+    z-index: 3;
+    padding-top: 44px;
+}*/
