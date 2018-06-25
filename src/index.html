@@ -6,27 +6,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main id="user-data">
-<div class="lablogo">
-  <img src="labologo.png" alt="labologo" width="500px" height="150px" >
-</div>
-      <div class="box-data">
-        <div class="box-input">
-          <br>
-          <br>
-          <br>
-      <input type="text" name= "usuario" class= "input" placeholder="username">
-      <br>
-      <br>
-      <input type="password" name="clave" class="input" placeholder="password">
-      <br>
-      <br>
-      <input type="submit" value="Entrar" id= "login">
-      <br>
-          </div>
-        </div>
+    
+    <main>
+    <section id="inputs">
+      <input type="text" name= "usuario" id= "usuario" placeholder="username"> <!--Simulacion de usuario y contraseña-->
+      <input type="password" name="clave" id="clave" placeholder="password">
+      <input type="button" value="Login" id= "entrar">
+    </section>
+    <section id="cdmx">
+      CDMX
+      <input type="button" value="Quinta" id="quinta">
+      <input type="button" value="Cuarta" id="cuarta"> <!--Desplegado primmera sede-->
+      <input type="button" value="Tercera" id="tercera">
+    </section>
+    <section id="lima">
+      LIMA
+      <input type="button" value="Quinta" id="quinta">
+      <input type="button" value="Cuarta" id="cuarta"><!--Desplegado segunda sede-->
+      <input type="button" value="Tercera" id="tercera">
+      </section>
+    <section id= "santiago">
+      SANTIAGO
+      <input type="button" value="Quinta" id="quinta">
+      <input type="button" value="Cuarta" id="cuarta"> <!--Desplegado tercera sede-->
+      <input type="button" value="Tercera" id="tercera">
+      </section>
+
     </main>
 
-    <script src="main.js"></script>
+    <script src="data.js">
+    </script>
+    <script src="main.js">
+    </script>
+
   </body>
+  
 </html>
