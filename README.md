@@ -18,10 +18,10 @@ Por ello, la planeación del trabajo con las usuarias y clientes, se organizó d
 
 1º entevista con TM Lucile Baratier para obtener una idea general de sus especativas del Producto.
 >"El Dashboard me solucionaría la vida"
-[![UX RESEARCH](https://imgur.com/XmJ5fHZ)](https://vimeo.com/3514904 "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
+[![UX RESEARCH](/ux-research/Interview1.png)](https://vimeo.com/3514904 "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
 
 >"Primero, me gustaría ingresar con un login"
-[![UX RESEARCH](https://imgur.com/ZmVEKkn)](https://youtu.be/lQHlnXwTWro "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
+[![UX RESEARCH](/ux-research/Interview2.png)](https://youtu.be/lQHlnXwTWro "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
 
 
 2º producción del primer Sketch del producto 
