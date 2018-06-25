@@ -170,7 +170,7 @@ Mantener un buen control de situación, visualizar los datos recopilados del des
 
 * Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué. Cómo los descubriste.
 
-  Se ejecutaron entrevistas a usuarios (TM y AC) con lo que descubrimos que lo mas importante para el usuario es conocer la cantidad de alumnas activas en el bootcamp para asì detectar el porcentaje de deserciòn desde el inicio a la fecha, asì como datos integrales del perfil (softskills) de cada alumna y su aprovechamiento.
+Se ejecutaron entrevistas a usuarios (TM y AC) con lo que descubrimos que lo mas importante para el usuario es conocer la cantidad de alumnas activas en el bootcamp para asì detectar el porcentaje de deserciòn desde el inicio a la fecha, asì como datos integrales del perfil (softskills) de cada alumna y su aprovechamiento.
 
 * Cuándo revisan normalmente estos datos los usuarios.
 
@@ -202,9 +202,20 @@ Se realizaron 3 sketches borrador y se seleccionò solo uno para mostrar la pant
 
 #### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
-![Prototipo1](https://imageshack.com/a/img922/7317/drkkFO.jpg)
+_Solicita usuario y contraseña para acceder_
+
+![Prototipo1](https://imageshack.com/a/img924/1163/QoKhZu.jpg)
+
+_Se observar las sedes listadas e informaciòn general de laboratoria_
+
 ![Prototipo2](https://imageshack.com/a/img922/4650/1WmdPt.jpg)
+
+_Permite seleccionar la generaciòn y buscar por nombre de alumna, muestra informaciòn general de la sede y generacion_
+
 ![Prototipo3](https://imageshack.com/a/img922/9652/JGFAB8.jpg)
+
+_Muestra porcentaje general de completitud y reporte de progreso de la alumna: porcentaje de completitud, porcentaje de tiempo completado de cada tema, lista subtemas y filtra subtemas completados, no completado y el tipo_
+
 ![Prototipo4](https://imageshack.com/a/img921/4885/crSZ1s.jpg)
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
