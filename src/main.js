@@ -1,3 +1,4 @@
+
 const gettingData= ()=> {
     let url = "https://raw.githubusercontent.com/DianaCarrillo/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json"
 
