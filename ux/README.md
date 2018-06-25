@@ -70,9 +70,9 @@ __5. Insights del negocio:__
 (Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
 
 ### **4. Prototipado**
-(Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
+De nuestro primer acercamiento al cliente realizamos el primer Sketch que se muestra a continuación:
+![Primer sketch](https://raw.githubusercontent.com/DianaCarrillo/cdmx-2018-06-bc-core-am-data-dashboard/master/README%20IMAGENES/sketch%201.jpg)
 
-Sketch: (Adjuntar liga)
 
 Prototipo en figma: (Adjuntar liga)
 
@@ -81,7 +81,4 @@ Prototipo en figma: (Adjuntar liga)
 ****
  
  
-De este primer acercamiento al cliente realizamos el primer Sketch que se muestra a continuación:
 
-(aquí va el sketch)
-![alt text](screenshots/sketch1.jpg"Description goes here")

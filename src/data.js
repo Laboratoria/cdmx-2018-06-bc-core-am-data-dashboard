@@ -1,33 +1,16 @@
- window.data = {
-     computeStudentsStats : () => {
+ window.computeStudentsStats= () => {
 
-     },
-     computeGenerationsStats : ()=> {
+    };
 
-     },
+     window.computeGenerationsStats = ()=> {
 
-     sortStudents : () => {
+     };
 
-     }
+     window.sortStudents = () => {
 
-    // lima: {
-    //     generacion:{
+     };
+     window.filterStudents = () => {
 
-    //     }
-    // },
+    };
 
-    // mexico: {
-    //     generacion: {
-
-    //     }
-    // },
-
-    // santiago: {
-    //     generacion: {
-
-    //     }
-
-    // }
-
-};
-
+    
