@@ -1,0 +1,74 @@
+body {
+background-color: rgb(243, 230, 44);
+text-align: center;
+font-family: "Lobster Two", cursive;
+font-size: x-large;
+padding: 10px;
+}
+
+nav {
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    /* outline: 1px solid yellow; */
+}
+ul {
+   /* outline: 2px; */
+    background-color: black;
+    list-style: none;
+    line-height: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+#labo {
+    max-height: 200px;
+    
+}
+
+li {
+   /* outline: 1px solid black; */
+    width: 140px;
+    display: inline-table;
+    text-align: center;
+}
+a {
+    /*outline: 1px solid white;*/
+    color: whitesmoke;
+    display: inline-block;
+    text-decoration: yellow;
+    
+}
+a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+article {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: whitesmoke;
+    display: inline-block;
+    text-decoration: yellow;
+    
+}
+article :hover {
+    background-color: yellow;
+    color: black;
+}
+header {
+    font-family: "Oswald", sans-serif;
+    font-size: x-large;
+
+}
+
+
+footer {
+padding: 40px;
+
+}
+
+/* fuentes css
+font-family: 'Oswald', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Lobster Two', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Grand Hotel', cursive; */
