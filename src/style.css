@@ -21,7 +21,7 @@ ul {
 }
 
 #labo {
-    max-height: 100px;
+    max-height: 200px;
     
 }
 
@@ -34,13 +34,12 @@ li {
 a {
     /*outline: 1px solid white;*/
     color: whitesmoke;
-    display: block;
+    display: inline-block;
     text-decoration: yellow;
     
 }
-
-a :hover {
-    background: yellow;
+a:hover {
+    background-color: yellow;
     color: black;
 }
 
@@ -49,12 +48,6 @@ article {
     color: whitesmoke;
     display: inline-block;
     text-decoration: yellow;
-       /* outline: 2px; */
-       background-color: black;
-       list-style: none;
-       line-height: 35px;
-       padding: 0;
-       margin: 0;
     
 }
 article :hover {

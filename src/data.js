@@ -1,12 +1,12 @@
 
 let clicking = function(){
-fetch(datos). /*then(function(enlace){
+fetch(datos).then(function(enlace){
 return datos.json();
-}).*/ then(function(sedes){
-    console.log(sedes.lima.generacion.tercera);
-    let gen = sedes.lima.generacion.cuarta;
+}).then(function(sedes){
+    console.log(sedes.lima[0].generacion.tercera);
+    let gen = sedes.lima[0].generacion.tercera;
     console.log(gen);
-    let gen2 = sedes.lima[0].generacion.tercera;
+    let gen2 = sedes.lima[0].generacion.cuarta;
     console.log(gen2);
 })
 console.log(datos);
