@@ -202,7 +202,10 @@ Se realizaron 3 sketches borrador y se seleccionò solo uno para mostrar la pant
 
 #### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
-![Prototipo](https://www.figma.com/file/dbTOgmca0PKJtkyavsV2JJSS/Untitled)
+![Prototipo1](https://imageshack.com/a/img922/7317/drkkFO.jpg)
+![Prototipo2](https://imageshack.com/a/img922/4650/1WmdPt.jpg)
+![Prototipo3](https://imageshack.com/a/img922/9652/JGFAB8.jpg)
+![Prototipo4](https://imageshack.com/a/img921/4885/crSZ1s.jpg)
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
