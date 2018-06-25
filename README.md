@@ -17,10 +17,19 @@ Trainning Manager de Laboratoria:
 Por ello, la planeación del trabajo con las usuarias y clientes, se organizó de la siguiente manera:
 
 1º entevista con TM Lucile Baratier para obtener una idea general de sus especativas del Producto.
+>"El Dashboard me solucionaría la vida"
+[![UX RESEARCH](https://imgur.com/XmJ5fHZ)](https://vimeo.com/3514904 "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
+
+>"Primero, me gustaría ingresar con un login"
+[![UX RESEARCH](https://imgur.com/ZmVEKkn)](https://youtu.be/lQHlnXwTWro "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
+
 
 2º producción del primer Sketch del producto 
-
+![Alt Text] (https://media.giphy.com/media/pb9RpRUfgXkT7oKnBO/giphy.gif)
 3ª Presentación del primer Sketch del producto a usuarios 
+
+4ª Reformulación del Sketch con feedback de usuarias potenciales
+![Alt Text] (https://media.giphy.com/media/ZgQaVt0ilfjtPgxLZO/giphy.gif)
 
 El principal objetivo de las usuarias al interactuar con el producto sería: 
 
