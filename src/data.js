@@ -1,14 +1,14 @@
 const objectLima = {
     generacion:"tercera, cuarta, quinta"
     }
-   const objectMex = {
+   const objectMexico = {
     generacion:"tercera, cuarta, quinta",
    }
-   const objectSant = {
+   const objectSantiago = {
     generacion:"tercera, cuarta, quinta",
    }
    
-   const objetoSedes = [objectLima,objectMex,objectSant];
+   const objetoSedes = [objectLima,objectMexico,objectSantiago];
    
    window.generaciones = {
     computeStudentsStats: () => {
