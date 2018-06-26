@@ -19,7 +19,8 @@ El producto esta dirigido para todo el staff de laboratoria.
 ## Creacion del Sketching, antes de la entrevista.
 
 Al inicio de la creación del sketching nos enfocamos en diseños básicos  tomando en cuenta una investigación generada en internet en la cual hay ejemplos muy claros de lo que se ha diseñado con anterioridad, para nosotras es importante que el usuario pueda tener la suficiennte interacción con la aplicación y le sea funcional. Trabajamos con el supuesto  de que requieren la información en tiempo real y que además es un contenido que se revisa diariamente  y que necesita ser actualizado con la misma frecuencia. Generamos sketchinn que nos permitieron tener una idea más clara de lo que el cliente requiere.
-imagenes/sketching.jpg
+
+![prototipo](imagenes/prototipo.png)
 
 ## Posterior a las entrevista 
  
@@ -82,4 +83,6 @@ El Data Dashboard se implementó para hacer el entorno laboral del usuario más 
 Durante los primeros días se generaron sketchin de prueba que nos permitieron llegar con el usuario para preguntarle por sus necesidades, debido a ello, las necesidades del mismo quedaron claras y especificas, el mostrar el sketching a un usuario nos permitio que el mismo se diera cuenta de cual diseño le funcionaba más, y cual otro tenia algunos conflictos, por lo mismo se creo una fución de todo lo que el usuario requiere y se llego a la conclusion de que se tenia que hacer un diseño funcional con colores minimalistas y que fuera sencillo de entender. Por ello el diseño final es el que aquí se presenta.
 
 
-![prototipo](C:\Users\Jazmin\Documents\data-board\cdmx-2018-06-bc-core-am-data-dashboard\ux\imagenes.jpg)
+![definitivo1](imagenes/definitivo1.jpg)
+
+![definitivo2](imagenes/definitivo2.jpg)
