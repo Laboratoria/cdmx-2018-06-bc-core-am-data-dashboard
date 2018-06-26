@@ -2,60 +2,52 @@
 
 ## **Proceso de UX**
 
-Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
 
 ### **1. Descubrimiento e investigación**
-(En esta fase es donde vamos a tener ese proceso de investigación y acercamiento con el usuario, es donde vamos a obtener el conocimiento para poder saber a quién vamos a llegar, pero de manera más profunda. Es tener la empatía y el acercamiento necesario para conocerlo.
 
-También vamos a tener en cuenta al negocio, sus objetivos y a los stakeholders(involucrados)).
+Una de las actividades diarias de las Training Managers (TMs) de laboratoria es analizar el proceso de las estudiantes, esto con el fin de apoyarlas en su aprendizaje. Son diferentes puntos a considerar para su evaluación, un pilar importante donde las estudiantes se apoyan para adquirir conocimiento y completar estos proyectos es el LMS (Learning Management System), donde proyectos las estudiantes acceden a contenidos de aprendizaje (lecturas, videos, ejercicios y quizzes). El LMS acumula data sobre quién leyó qué, qué ejercicios se han completado, los resultados de los quizzes, etc.
 
-__Usuarixs:__  (Toda la información que sepas de ellxs, ya sea porque las has podido observar o porque obtuviste datos directamente de ellas)
+A pesar de que la data de progreso del LMS (lecturas leídas, ejercicios completados, nota en quizzes, etc.) no impacta directamente en la evaluación de una estudiante, sí es una pieza de información relevante que las TMs quisieran visualizar para tener un mejor entendimiento de cómo va cada estudiante en su proceso de aprendizaje.
 
-__Necesidades de las usuarias:__
+Se contactó con 3 TMs de Laboratoria (Alejandra Ramírez de Lima, Karla Rejas de Guadalajara y Lucile Baratier de CDMX) para realizar entrevistas con el fin de recabar información sobre sus necesidades, complicaciones, y la forma en que consultaban esta información.
 
+Sorprendió saber que no están usando un Data Dashboard. Utilizan Spreadsheets u hojas de Excel, lo cual no es funcional ya que no es una forma amigable a la vista (No visualizan datos representativos), esto complica sus labores ya que toma mucho tiempo la consulta, la cual por lo general lo hacen en la lapp por lo complicado de la visualización. Coinciden en que diariamente se está consultando esta data y los datos principales a consultar son porcentajes generales de la generación (número total de alumnas vigente, deserciones, avance en unidades, etc.), posteriormente en casos puntuales se analizan los datos de cada alumna.
 
-__Objetivos de las usuarias:__ (Lo que quieren o esperan lograr)
+Debido a las múltiples funciones de las TMs, lo primordial que es la consulta de esta data día a día y lo complejo que es se tiene como objetivo crear una herramienta que ayude a procesar y visualizar estos datos de una forma rápida, eficaz y entendible, y que además puedan consultarse a cualquier hora del día así sea desde un equipo móvil o su lapp. 
 
+Formato entrevista:![Formato](FormatoEntrevista.png)
+Contacto entrevista:![Contacto](contactandoEntrevista.png)
+Entrevistas TMs:![Entrevista TM Lima](entrevista2.png)
+                ![Entrevista TM Guadalajara](entrevista1.png)
+                ![Entrevista TM CDMX](entrevistaLucile.jpg)
 
-__Pain points:__ (En sus actividades diarias qué es lo que más les molesta u obstaculiza en el proceso de  realizar sus actividades/objetivos)
-
-__Sentimientos:__(Sentimientos que les surgen dentro del proceso de sus actividades. Identificar cuáles predominan)
-
-__Técnicas usadas en esta fase:__ (Sabemos que en este punto, tal vez, sólo has ocupado encuestas, no te olvides de documentar este proceso de recolección de datos)
-
-__5. Objetivos del negocio:__ (Enlistarlo(s))
-
-__6. Motivaciones del negocio para el data dashboard:__(Enlistarlo(s))
 
 ### **2. Síntesis y definición**
-(Dada la fase anterior de investigación, ahora vamos a tomar todos los datos más importantes y transformarlos en información valiosa para comenzar a orientarse a la solución. También vamos a entender lo que la empresa quiere de ese producto y comenzar a entender ambas visiones con el fin de encontrar un punto armónico)
 
-__1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
+El Data Dashboard debe de ser una herramienta en la cual los datos se puedan conseguir de una manera simple y rápida.
 
-   - Sobre las estudiantes:
- 
+Para la elaboración de este proyecto se cuenta con la información de 3 sedes (México, Lima y Chile), de cada sede 3 generaciones con 15 alumnas cada una, de las cuales proporcionan sus datos (nombre y correo), progreso en general y también por tema (3) y por cada tema sus subtemas (6).
 
-__2. Lo que los usuarios esperan obtener:__
+Para las TMs es muy importante la visualización del avance general del grupo, algunos de los datos importantes a añadir serian: Total de estudiantes activas, promedio de estudiantes que avanzan con forme a lo estipulado y por debajo de este (esto es muy importante para identificar problemas en el caso que el avance no sea lo esperado o si la mayoría tiene problemas con el mismo tema). También es importante la información por alumna para evaluar casos puntuales.
 
-
-__3. Insights:__
-
-__4. Data proporcionada:__ 
-
-     -_Data relacionada a los cursos:_
-
-__5. Insights del negocio:__
 
 ### **3. Ideación**
-(Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
+
+Tomando en cuenta la investigación realizada sobre el tema y las necesidades del cliente se pensó en el diseño de un Data Dashboard que maneje la información sobre el avance de lectura del LMS de las alumnas. Este debe ser de fácil y rápido uso, que realmente sirva como una herramienta para la visualización de los resultados de búsqueda, ahorrando tiempo y trabajo en la consulta de datos.
+Se podrán consultar los datos por sede, generación (promedio general) y por alumna.
+
 
 ### **4. Prototipado**
-(Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
 
-Sketch: (Adjuntar liga)
+Para el prototipo del producto se pensó en primer plano que el usuario iniciara sesión solicitando nombre y contraseña (Ya que son datos importantes, no cualquiera puede tener acceso a ellos). Al acceder el usuario podrá seleccionar la sede, y después la generación. Después de seleccionar la sede se desplegará una tabla con las siguientes columnas: nombre de la alumna, porcentaje de progreso en general, porcentaje de temas terminados, tiempo completado por tema, temas terminados y temas no terminados. Se podrá acceder a la información de cada alumna dándole click al nombre de la misma. Se desplegará otra pantalla donde aparecerá la información de avance por tema y subtema y una gráfica que hará más visible y claro el avance o retroceso.
+ 
+Sketch: ![sketch](sketch1.jpg)
 
-Prototipo en figma: (Adjuntar liga)
+Prototipo: (Adjuntar liga)
+
 
 ### **5. User testing**
-(Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
+
+Al realizar la entrevista a la TMs de la sede de CDMX se le mostro el sketch del prototipo, le pareció funcional y dando feedback nos mencionó que agregaría datos extras que para ella son primordiales (Alumnas activas y promedio avance grupal).
 ****
+Nuevas propuestas: ![NPropuesta](propuestaSketch.jpg)
