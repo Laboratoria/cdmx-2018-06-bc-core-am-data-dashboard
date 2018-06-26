@@ -6,15 +6,15 @@ Laboratoria LMS Dashboard surguió a partir de la necesidad de las Trainning Man
 
 Para la construcción de este producto se tomaron en cuenta las siguientes consideraciones:
 
-Las usuarias principales del producto son:
-Trainning Manager de Laboratoria:
-* Lucile Baratier (Campus CDMX)
-* 
-* 
-* 
-* 
+Las usuarias principales del producto son las Trainning Manager de Laboratoria:
 
-Por ello, la planeación del trabajo con las usuarias y clientes, se organizó de la siguiente manera:
+* Lucile (Sede CDMX)
+* Alejandra (Sede Lima)
+* Valentina (Santiago)
+* Karla (Guadalajara)
+* Vanessa (Brasil)
+
+Por ello, la planeación del proceso de diseño del producto se organizó de la siguiente manera:
 
 1º entevista con TM Lucile Baratier para obtener una idea general de sus especativas del Producto.
 >"El Dashboard me solucionaría la vida"
@@ -24,11 +24,12 @@ Por ello, la planeación del trabajo con las usuarias y clientes, se organizó d
 [![UX RESEARCH](/ux-research/Interview2.png)](https://youtu.be/lQHlnXwTWro "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
 
 2º producción del primer Sketch del producto 
-<img /ux-research/GIFsketch1.gif>
+[![UX RESEARCH](/ux-research/GIFsketch1.gif)]
+
 3ª Presentación del primer Sketch del producto a usuarios 
 
 4ª Reformulación del Sketch con feedback de usuarias potenciales
-<img /ux-research/GIFsketch2.gif>
+[![UX RESEARCH](/ux-research/GIFsketch2.gif)]
 
 El principal objetivo de las usuarias al interactuar con el producto sería: 
 
@@ -42,78 +43,20 @@ El modo de uso de este producto resultó ser también una consideración importa
 
 * Se requiere poder ver datos muy generales y a la vez también poder acceder a datos específicos.
 
-Derivado de estas consideraciones, la interfaz del producto se desarrolló de la manera más intuituva y limpia posible, tratando de no saturar visualmente ni agobiar con la presentación inmediata de datos duros muy específicos. Por ello, se consideró el siguiente Sketch:
+Derivado de estas consideraciones, la interfaz del producto se desarrolló de la manera más intuituva y limpia posible, tratando de no saturar visualmente ni agobiar con la presentación inmediata de datos duros muy específicos. Por ello, se consideró el siguiente prototipo de alta fidelidad para la Interfaz de Usuario ideal:
+
+Esta interfaz como base fue hecha mediante Figma:
+
+[![UX RESEARCH](/ux-research/Figma.gif)]
+
 
 
 
 _____
-En el README.md cuéntanos cómo pensaste y te acercaste a los usuarios al desarrollar tu producto (Tip: entrevistas) y cuál fue tu proceso para definir el producto final a nivel de experiencia y de interfaz. Es importante que detalles:
-
-Quiénes son los principales usuarios de producto. 
-Cuáles son los objetivos de estos usuarios en relación con el producto.
-Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué. Cómo los descubriste.
-Cuándo revisan normalmente estos datos los usuarios.
-Cómo crees que el producto les está resolviendo sus problemas.
-Cómo fue tu proceso de diseño.
-2) Sketch de la solución (prototipo de baja fidelidad)
-
-Debes hacer un sketch (boceto) de tu solución usando papel y lápiz, tomarle una foto, subirla a tu repositorio y hacer mención del sketch en tu README.md.
-
-3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
-
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés). Para eso debes aprender a utilizar alguna herramienta de diseño visual. Nosotros te recomendamos Figma que es una herramienta que funciona en el navegador y, además, puedes crear una cuenta gratis. Sin embargo, eres libre de utilizar otros editores gráficos como Illustrator, Photoshop, PowerPoint, Keynote, etc.
-
-El diseño debe representar tu ideal de solución. Digamos que es lo que desearías implementar si tuvieras tiempo ilimitado para hackear.
-
-Tu diseño debe seguir los fundamentos de visual design, como: contraste, alineación, jerarquía, entre otros. Tip: revisa el contenido de UX de la unidad de visual design.
-
-
-**data dashboard** (_tablero de visualización de datos_).
-
-## Introducción
-
-Durante cada Bootcamp, al menos 70 estudiantes comienzan a interactuar con su la plataforma de Laboratoria, llamada LMS,
-
-![car dashboard](https://img.buzzfeed.com/buzzfeed-static/static/2017-02/7/12/enhanced/buzzfeed-prod-fastlane-03/original-17515-1486490056-3.jpg?crop=2041:1068;80,248)
-
-## Aplicaciones en el mundo real
-
-En el mundo de la web es muy común el uso de _dashboards_. De hecho, [wikipedia](https://goo.gl/P7PF4y)
-nos dice que un _dashboard_ puede ser un resumen gráfico de varias piezas de
-información importante, generalmente utilizadas para dar una visión general de
-una empresa o de un servicio. Así, tenemos dashboards como los de:
-
-* [Google Analytics](https://assets.econsultancy.com/images/resized/0003/3813/mobile_commerce_dashboard-blog-full.png)
-  para visualizar la data de tráfico de sitios web.
-
-* [Mailchimp](https://blog.mailchimp.com/wp-content/uploads/2016/11/Dashboard-view-3-Copy-1008x768.jpg)
-  para visualizar el desempeño de campañas de mercadeo digital por correo
-  electrónico.
-
-* [Quickbooks](https://quickbooks.intuit.com/content/dam/intuit/quickbooks/branding/make-organization-easy-visual.png)
-  para visualizar la información financiera de una empresa.
-
-Seguramente, a lo largo de tu carrera como diseñadora o desarrolladora, te
-tocará crear un _data dashboard_. Quizás sea para visualizar la data de un
-negocio de delivery de comida, o las rutas históricas de un negocio de
-transporte, o simplemente los indicadores clave de tu propio emprendimiento ;)
-
-## Objetivos de aprendizaje
-
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-_interfaz web_ donde podamos visualizar y manipular data.
-
-Esperamos que puedas pensar en el usuario, entender cuál es la mejor manera de visualizar la data según sus necesidades, y plasmar todo eso en tu diseño
-en la web.
-
-Además, este proyecto se debe "resolver" en parejas, por lo que un objetivo
-importante es ganar experiencia en trabajos colaborativos con entrega grupal.
-
+Por cubrir:
 ## Tópicos a cubrir
-
 Tendrás que familiarizarte con conceptos como:
 _arrays_,_objects_, _dom_, _xhr_ y _visual design_.
-
 Además, reforzarás lo aprendido en el proyecto anterior: _valores, tipos,
 variables_, _control de flujo_ y _tests unitarios_.
 
