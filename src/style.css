@@ -69,6 +69,9 @@ nav {
   margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 6px;
+  text-align: center;
+  font-style: italic;
+  font-size: 23px;
 }
 
 #contenido h2 {
