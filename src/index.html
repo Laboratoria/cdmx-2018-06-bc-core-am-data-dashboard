@@ -5,9 +5,31 @@
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <h1>Hola, esta es una prueba</h1>
-    <h2>Hola, prueba 2 de nancy</h2>
+    <h1>DATA DASHBOARD</h1>
+    <h2>Prueba 1</h2>
+
+    <!--PARA EL EVENTO DE SELECCIONAR SEDES-->
+    <select id="selectSedes" onchange="generation(event);">
+      <option value="0"></option>  
+    </select>
+
+    <!--PARA EL EVENTO DE SELECCIONAR GENERACIONES-->
+    <select id="generation" onchange="students(event);">
+      <option value="0"></option> 
+    </select>
+
+    <!--PARA QUE ME MUESTRE LOS DATOS EN FORMA DE TABLA-->
+    <table id="tabla">
+    </table>
+
+
+    <script src="../data/laboratoria.json"></script>
     <script src="main.js"></script>
+    <script src="data.js"></script>
+
+   
+
   </body>
 </html>
