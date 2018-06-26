@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Poor+Story');
 
-.Images{
-  width: 1000px;  /*ancho*/
+#Images{
+  resize: both;
+  width: 50%;  /*ancho*/
   margin: 100px 500px;/*100 de arriba 500 a los lados*/
-  }
-
-p{
-  font-size: 30px;
-  text-align: center;
-  }
+  align-items: center;
+}
 
 .button {
   background: rgb(255, 165, 0);/*color de botón*/
   color: rgb(255, 255, 255);/*color de letra*/
   display: inline-block;/*para que este un boton al lado de otro*/
-  font-size: 60px;/*Tamaño de la fuente*/
+  font-size: 60%;/*Tamaño de la fuente*/
   font-family: 'Poor Story', cursive;
   margin: 120px ; /*margen hacia todos los lados */
   padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados*/
@@ -25,13 +22,14 @@ p{
   border-radius: 50px;
 }
 
-.button.brasil{
-  text-align: center;
-  font-size: 55px;
-  width: 400px;
-}
-
 .button:hover{/*el efecto va hasta el finale de todos nuestos estilos de color*/
   box-shadow: 0px 0px 0px;
   padding-top: 7px;
+}
+
+#container{
+  font-size: 40px;
+  font-family: 'Poor Story', cursive;
+  text-align: center;
+
 }
