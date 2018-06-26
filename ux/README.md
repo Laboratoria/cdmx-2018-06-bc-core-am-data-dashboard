@@ -1,61 +1,52 @@
-# **Data Dashboard**
+# **Información general**
 
-## **Proceso de UX**
+En Laboratoria, las Training Managers se enfrentan en su día a día al análisis de datos, sin embargo, no cuentan con las herramientas necesarias y adecuadas para hacerlo. Por esta razón se recurrió a ciertas medidas para poder proporcionarles una herramienta cuyo propósito fuera la lectura sencilla y amigable para la interpretación de datos de las estudiantes.
+Se decidió hacer un estudio para ahondar en las necesidades de las Training Managers mediante cuestionarios y entrevistas personales.
 
-Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
+**Formato de la encuesta realizada**
 
-### **1. Descubrimiento e investigación**
-(En esta fase es donde vamos a tener ese proceso de investigación y acercamiento con el usuario, es donde vamos a obtener el conocimiento para poder saber a quién vamos a llegar, pero de manera más profunda. Es tener la empatía y el acercamiento necesario para conocerlo.
+<p align="center">
+  <img src="encuesta.jpg" width="300" height="330">
+</p>
 
-También vamos a tener en cuenta al negocio, sus objetivos y a los stakeholders(involucrados)).
+Realización de un sketch de baja fidelidad a partir del análisis de la encuesta así como de las entrevistas realizadas.
 
-__Usuarixs:__  (Toda la información que sepas de ellxs, ya sea porque las has podido observar o porque obtuviste datos directamente de ellas)
+<p align="center">
+  <img src="sketch.jpg" width="300" height="330">
+</p>
+<p align="center">
+  <img src="sketch2.jpg" width="300" height="330">
+</p>
 
-__Necesidades de las usuarias:__
+# **Análisis de datos**
 
+Al realizar un análisis detallado de las respuestas recibidas de la encuesta a las siguientes Training Managers:
+1. Lucile Baratier
+2. Alejandra Ramirez
+3. Karla Rejas
+4. Valentina Smith
+<br>
 
-__Objetivos de las usuarias:__ (Lo que quieren o esperan lograr)
+Nos dimos cuenta de que no hacen uso en absoluto de una interfaz propia para poder realizar su trabajo. Esto obviamente representa un obstáculo para el fácil acceso a los datos de las alumnas así como el análisis de estos.
 
+>***En caso de no contar con una interfaz ¿Por qué te sería importante contar con una?***
+> <br> Por que me ayudaría a dar feedback oportuno a nuestras estudiantes, y tener la información en un solo lugar y a tiempo real. Sería feliz!!
 
-__Pain points:__ (En sus actividades diarias qué es lo que más les molesta u obstaculiza en el proceso de  realizar sus actividades/objetivos)
-
-__Sentimientos:__(Sentimientos que les surgen dentro del proceso de sus actividades. Identificar cuáles predominan)
-
-__Técnicas usadas en esta fase:__ (Sabemos que en este punto, tal vez, sólo has ocupado encuestas, no te olvides de documentar este proceso de recolección de datos)
-
-__5. Objetivos del negocio:__ (Enlistarlo(s))
-
-__6. Motivaciones del negocio para el data dashboard:__(Enlistarlo(s))
-
-### **2. Síntesis y definición**
-(Dada la fase anterior de investigación, ahora vamos a tomar todos los datos más importantes y transformarlos en información valiosa para comenzar a orientarse a la solución. También vamos a entender lo que la empresa quiere de ese producto y comenzar a entender ambas visiones con el fin de encontrar un punto armónico)
-
-__1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
-
-   - Sobre las estudiantes:
- 
-
-__2. Lo que los usuarios esperan obtener:__
+El contar con una interfaz ayudaría a la agilización y optimización del trabajo, por esta razón se decidió implementar un *Data Dashboard*, una herramienta amigable y visualmente atractiva cuya función sería, como ya mencionado anteriormente, hacer el trabajo de las Training Managers ameno y que responda a sus necesidades.
 
 
-__3. Insights:__
+ ## Prototipo de baja fidelidad
 
-__4. Data proporcionada:__ 
+ Después de trabajar con el sketch se llegó a la decisión de hacer un prototipo de la interfaz.
 
-     -_Data relacionada a los cursos:_
+ <p align="center">
+   <img src="proto1.jpeg" width="300" height="300">
+ </p>
+ <p align="center">
+ <img src="proto2.jpeg" width="300" height="300">
+</p>
+<p align="center">
+<img src="proto3.jpeg" width="300" height="300">
+</p>
 
-__5. Insights del negocio:__
-
-### **3. Ideación**
-(Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
-
-### **4. Prototipado**
-(Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
-
-Sketch: (Adjuntar liga)
-
-Prototipo en figma: (Adjuntar liga)
-
-### **5. User testing**
-(Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
-****
+Al ser el primer prototipo y ponerlo a prueba se llegó a la conclusión junto con nuestra usaria (Lucile) de que es necesario hacer algunos cambios al momento de obtener los datos y estádisticas de las alumnas.
