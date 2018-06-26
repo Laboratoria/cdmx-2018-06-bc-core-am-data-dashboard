@@ -1,0 +1,52 @@
+body{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  padding: 10px;
+  border-bottom: #CCCCCC 1px solid;
+}
+
+.logo{
+max-width:300px;
+padding-left: 20px;
+}
+
+.user{
+  float: right;
+}
+
+.colVerticalNav{
+  background: #FFE521;
+  clear: both;
+	margin: 0;
+	display: inline-block;
+	width: 25%;
+  min-width: 350px;
+	height: 100%;
+	float: left;
+	padding: 20px;
+  overflow: scroll;
+
+}
+
+.navbar{
+  display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbar-nav{
+ list-style: none;
+}
+
+.navbar-nav li{
+  padding: 15px 0;
+  border-bottom: #F9D100 1px solid;
+}
+.navbar-nav a {
+  color: #2B2B2B;
+  text-decoration: none;
+}
