@@ -7,7 +7,7 @@
     
   </head>
 
-  <body id="prueba">
+  <body>
     <header>
       <img class="logo "src="images/logo.png" alt="LABORATORIA"> <br>
       <p class="titulo">BIENVENID@</p>
@@ -30,12 +30,13 @@
 
      <div class="sedesLab">
        <p>SEDE:</p>
-       <select class="sedes" name="sedes">
+       <select class="sedes">
+         <option value="0">SEDES</option>
          <option value="1">CDMX </option>
-        <option value="2">GUADALAJARA </option>
-        <option value="3">SAO PAOLO </option>
-        <option value="4">LIMA </option>
-        <option value="5">SANTIAGO </option>
+         <option value="2">GUADALAJARA </option>
+         <option value="3">SAO PAOLO </option>
+         <option id="sedes" value="4">LIMA </option>
+         <option value="5">SANTIAGO </option>
       </select>
     </div>
 
@@ -44,9 +45,10 @@
       <input type="number" name="generacion">
       <input type="button" name="enviar" value="enviar" min="0" max="10">
     </div>
+ 
 
     <section>
-      <div class="estudiantes"></div>
+      <div id="estudiantes"></div>
       <div class="reporte"></div>
       <div class="reporteEgresados"></div>
     </section>

@@ -1,20 +1,19 @@
 describe('data', () => {
 
   it('debería exponer función computeStudentsStats en objeto global', () => {
-    assert.isFunction(dataDashboard.computeStudentsStats);
-    // assert.isFunction(dataDashboard.computeStudentsStats);
+    assert.isFunction(ddb.computeStudentsStats);
   });
 
   it('debería exponer función computeGenerationsStats en objeto global', () => {
-    assert.isFunction(dataDashboard.computeGenerationsStats);
+    assert.isFunction(computeGenerationsStats);
   });
 
   it('debería exponer función sortStudents en objeto global', () => {
-    assert.isFunction(dataDashboard.sortStudents);
+    assert.isFunction(sortStudents);
   });
 
   it('debería exponer función filterStudents en objeto global', () => {
-    assert.isFunction(dataDashboard.filterStudents);
+    assert.isFunction(filterStudents);
   });
 
   describe('computeStudentsStats(laboratoria)', () => {
