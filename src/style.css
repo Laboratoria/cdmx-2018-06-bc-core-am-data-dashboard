@@ -1,0 +1,133 @@
+body{
+
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+/*  MENU   */
+nav{
+	width: 190px;
+	height: auto;
+    margin: 10px;
+	font-family: 'Oswald', sans-serif;
+
+
+}
+.menu label{
+	display: block;
+	padding: 10px;
+    background-color: #f7a630;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    border-bottom: solid 1px #FFF;
+
+}
+.menu label:hover{
+	background-color: gray;
+}
+.menu ul{
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .4s linear;
+}
+.menu input{
+	display: none;
+}
+.menu ul li a{
+	width: 100%;
+	height: 20%;
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	background-color: #fff;
+    color: orange;
+    border-bottom: solid #000 1px;
+}
+
+.menu ul li a:hover{
+	background-color: gray;
+}
+
+.menu input:checked ~ ul{
+	height: auto;
+	max-height: 200px;
+	transform: all;
+
+}
+.icono{}
+
+
+/*LOGIN*/
+.login{
+/*border:solid;*/
+}
+.izq{
+	border-radius: 10px 0 0 10px;
+	background-color:#ffffffe3;
+	display: block;
+    text-align: center;	
+
+}
+.der{
+	background-color: #ffe521e6;
+	height: 374px;
+	border-radius: 0 10px 10px 0;
+}
+.container{
+	margin-top: 140px;
+
+}
+.input{
+	display: block;
+
+}
+.cajita{
+    background: none;
+    border-width: 0;
+    width: 240px;
+    border-bottom: white solid 1px;
+   
+}
+.img{
+
+}
+
+.titulo{
+	text-align: center;
+    display: block;
+    margin: 35px 0;
+    font-size: 22px;
+}
+.check{
+	font-size: 13px;
+}
+.boton{
+	border-radius: 7px;
+    width: 135px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    font-size: 14px;
+
+}
+.log{
+    margin-top: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
