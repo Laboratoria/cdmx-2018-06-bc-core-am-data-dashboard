@@ -1,20 +1,38 @@
 # **Data Dashboard**
 
+# **Preámbulo**
+En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la mayor cantidad de datos posibles respecto al progreso de las estudiantes para apoyarlas en su aprendizaje.
+
+La principal medida de progreso de una estudiante en Laboratoria es su avance completando los proyectos de la Ruta de Aprendizaje y su desempeño en función a la Rúbrica de Niveles Esperados. Sin embargo, para completar estos proyectos las estudiantes acceden a contenidos de aprendizaje (lecturas, videos, ejercicios y quizzes) en un sistema que llamamos LMS (Learning Management System). El LMS acumula data sobre quién leyó qué, qué ejercicios se han completado, los resultados de los quizzes, etc.
+
+A pesar de que la data de progreso del LMS (ej. lecturas leídas, ejercicios completados, nota en quizzes, etc.) no impacta directamente en la evaluación de una estudiante, sí es una pieza de información relevante que las TMs quisieran visualizar para tener un mejor entendimiento de cómo va cada estudiante en su proceso de aprendizaje.
+
+
+
 ## **Proceso de UX**
 
 Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
 
 ### **1. Descubrimiento e investigación**
-(En esta fase es donde vamos a tener ese proceso de investigación y acercamiento con el usuario, es donde vamos a obtener el conocimiento para poder saber a quién vamos a llegar, pero de manera más profunda. Es tener la empatía y el acercamiento necesario para conocerlo.
 
-También vamos a tener en cuenta al negocio, sus objetivos y a los stakeholders(involucrados)).
 
-__Usuarixs:__  (Toda la información que sepas de ellxs, ya sea porque las has podido observar o porque obtuviste datos directamente de ellas)
+__Stakeholders:__ Las TMs de Laboratoria 👩‍💻
+*Karla Rejas sede Guadalajara*
+*Alejandra sede Lima*
+*Pau sede Mexico*
+
+__Usuarixs:__  
+*Karla Rejas sede Guadalajara*: Training Manager de la ciudad de Guadalajara.
+
+*Alejandra sede Lima*: Training Manager de Lima.
+
+*Pau Trevino*:CDP en CDMX .
+
 
 __Necesidades de las usuarias:__
 
 
-__Objetivos de las usuarias:__ (Lo que quieren o esperan lograr)
+__Objetivos de las usuarias:__ Nuestros usuarios tienen como objetivo el análisis de datos de las alumnas de Laboratoria ya que hacen uso de estos para saber en qué estatus están las estudiantes, en que pueden mejorar o en que pueden ayudarlas  y si es necesario hacer ajustes en el programa.
 
 
 __Pain points:__ (En sus actividades diarias qué es lo que más les molesta u obstaculiza en el proceso de  realizar sus actividades/objetivos)
@@ -33,14 +51,14 @@ __6. Motivaciones del negocio para el data dashboard:__(Enlistarlo(s))
 __1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
 
    - Sobre las estudiantes:
- 
+
 
 __2. Lo que los usuarios esperan obtener:__
 
 
 __3. Insights:__
 
-__4. Data proporcionada:__ 
+__4. Data proporcionada:__
 
      -_Data relacionada a los cursos:_
 

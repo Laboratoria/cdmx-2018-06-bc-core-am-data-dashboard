@@ -10,59 +10,104 @@
   <body>
 
 <!--Header -->
-<nav class=" navbar navbar-light bg-light justify-content-between border">
-<img src="imag/lab.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2 " type="search" placeholder="Buscar alumnas" aria-label="Search">
+<div class="col-ms-6">
+<nav class="navbar navbar-expand-lg navbar-light  navegador">
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+
+
+<img src="imag/lab.jpg" width="50" height="50" class="d-inline-block align-center " alt="">
+</div>
+<div class="col-ms-6">
+
+
+        <form class="form-inline ">
+          <input class="form-control mr-sm-2 " type="search" placeholder="Buscar alumnas" aria-label="Search">
     <button class="btn btn-outline-warning my-2 my-sm-0 border-light" type="submit">Buscar</button>
-  </form>
-</nav>
+        </form>
+        </div>
+      </div>
+    </nav>
 
 
 <!--User-->
 <div class="container-fluid">
       <div class="row">
         <header class="col-4  col-sm-3 col-md-2 border user">
-<img src="imag/Manager.png" width="60" height="60" class="img-fluid image" alt="Responsive image" >
+
+<img src="imag/Manager.png" width="70" height="70" class="img-fluid image" alt="Responsive image" >
 <div class=" font-weight-light correo">laboratoria@la.com </div>
         </header>
-<!--End User-->
+
 
 <div class="col-10 col-sm-10 col-md-10">
 
 </div>
       </div>
 </div>
+<!--End User-->
 
 <!--Nav yellow-->
 
-<div class="container-fluid">
+<div class="container-fluid ">
  <div class="row">
 
 <div class="col-4 col-sm-3 col-md-2 border-top-0 nav_Vertical " >
 
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link text-dark home  " href="#"><img src="imag/baseline_home_black_18dp.png">Home <span class="sr-only">(current)</span></a>
+    </li>
+<p></p>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-dark sedes" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <img src="imag/loc.png">  Sedes
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <optgroup  label="Lima">  </optgroup>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Tercera</a>
+        <a class="dropdown-item" href="#">Cuarta</a>
+        <a class="dropdown-item" href="#">Quinta</a>
+
+        <optgroup  label="Mexico">  </optgroup>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Tercera</a>
+        <a class="dropdown-item" href="#">Cuarta</a>
+        <a class="dropdown-item" href="#">Quinta</a>
+
+        <optgroup  label="Santiago">  </optgroup>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Tercera</a>
+        <a class="dropdown-item" href="#">Cuarta</a>
+        <a class="dropdown-item" href="#">Quinta</a>
+
+
+      </div>
+    </li>
+
+
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#"></a>
+    </li>
+  </ul>
+
+
 </div>
-<!--end yellow-->
+
 <div class="col-1 col-sm-1 col-md-3"></div>
 
 <div class="col-6 col-sm-6 col-md-4 button centrado_botton">
 
 
-<label>Selecciona tu sede:</label>
-<select class="  form-control  " >
-<option>Sede</option>
-</select>
-
-<p></p>
-
-<label>Selecciona tu generacion:</label>
-<select class="form-control ">
-  <option>Generacion</option>
-</select>
-
-<p></p>
-
-<button class="btn btn-outline-warning my-2 my-sm-0 border-light bottom_cont" type="submit" >Continuar</button>
 
 
 </div>
@@ -95,7 +140,7 @@
 
 
 
-
+     <script src="data.js"></script>
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

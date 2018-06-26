@@ -3,8 +3,16 @@
 height: 60px;
 }
 
+.navegador
+{
+background-color:#F7F7F7;
+
+
+}
+
+
 .image_lab{
-padding-top: 10px;
+padding-left:  10px;
 
 }
 
@@ -15,12 +23,12 @@ padding-left:100px;
 
 .user {
 background-color:#FFE032;
-height: 150px;
+height: 170px;
 
 }
 
 .image{
-padding-top: 50px;
+padding-top: 45px;
 }
 
 .nav_Vertical{
@@ -35,12 +43,23 @@ padding-left: 500px;
 
 
 
-.centrado_botton .bottom_cont{
+.centrado_botton .bottom_cont {
 
 font-size: 22px;
 }
 
-.correo{
-
+.correo {
+text-decoration-color: #000000;
 font-size: 12px;
+}
+
+
+.sedes
+{
+font-size: 18px;
+}
+.home
+{
+font-size: 18px;
+
 }
