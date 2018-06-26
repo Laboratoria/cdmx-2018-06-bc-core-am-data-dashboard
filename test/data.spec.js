@@ -1,11 +1,11 @@
 describe('data', () => {
 
   it('debería exponer función computeStudentsStats en objeto global', () => {
-    assert.isFunction(computeStudentsStats);
+    assert.isFunction(window.data.computeStudentsStats);
   });
 
   it('debería exponer función computeGenerationsStats en objeto global', () => {
-    assert.isFunction(computeGenerationsStats);
+    assert.isFunction(window.data.computeGenerationsStats);
   });
 
   it('debería exponer función sortStudents en objeto global', () => {
@@ -31,7 +31,7 @@ describe('data', () => {
 
     it('debería retornar arreglo de students con propiedad stats', () => {
       const processed = computeStudentsStats(laboratoria);
-    
+
       processed.forEach( (student, i) => {
         assert.ok(student.hasOwnProperty('stats'));
         assert.isNumber(student.stats.completedPercentage);
@@ -48,7 +48,7 @@ describe('data', () => {
     describe('student.stats para el primer usuario en data de prueba - ver carpeta data/', () => {
       const processed = computeStudentsStats(fixtures);
 
-      it('debería tener propiedad completedPercentage con valor 89', () => {       
+      it('debería tener propiedad completedPercentage con valor 89', () => {
         assert.equal(processed[0].stats.completedPercentage, 89);
       });
 
@@ -59,11 +59,11 @@ describe('data', () => {
         assert.equal(processed[0].stats.topics['01-Introduccion-a-programacion'].percentageDuration, 79)
       });
 
-      it(`debería tener propiedad subtopics que es un objeto con primera key "0-bienvenida-orientacion" con valor 
+      it(`debería tener propiedad subtopics que es un objeto con primera key "0-bienvenida-orientacion" con valor
       {completado: 1, duracionSubtema: 55, tipo: "lectura"}`, () => {
         const topics = Object.keys(processed[0].stats.topics);
         const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
-       
+
           assert.deepEqual(processed[0].stats.topics[topics[0]].subtopics[subTopics[0]], {
             completado: 1,
             duracionSubtema: 55,
@@ -83,7 +83,7 @@ describe('data', () => {
         assert.ok(generation.hasOwnProperty('count'));
       })
     });
-    
+
     describe('generation para la primera generación en data de prueba - ver carpeta data/', () => {
       const processed = computeGenerationsStats(fixtures);
 
@@ -95,9 +95,9 @@ describe('data', () => {
         assert.equal(processed[0].count, 15);
       });
 
-    }); 
+    });
   });
-  
+
   describe('sortStudents(students, orderBy, orderDirection)', () => {
 
     it('debería retornar arreglo de estudiantes ordenado por nombre ASC');
