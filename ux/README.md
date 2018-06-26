@@ -77,7 +77,7 @@ De nuestro primer acercamiento al cliente realizamos el primer Sketch que se mue
 ![Primer sketch](https://raw.githubusercontent.com/soberanesmajo/cdmx-2018-06-bc-core-am-data-dashboard/master/ux/Img%20readme/sketch1.jpeg)
 
 
-Prototipo en figma: (Adjuntar liga)
+Prototipo en figma: https://www.figma.com/file/U1pp48mdcx5hiEi3m9QxjWeo/Dashboard
 
 ### **5. User testing**
 (Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
