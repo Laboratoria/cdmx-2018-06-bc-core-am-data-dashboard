@@ -1,0 +1,13 @@
+body   {
+    background-color:#fff400;
+    /*background-image: url("../images/fondo1.png");*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    }
+
+image {
+    width: 350px;
+
+}
