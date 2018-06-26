@@ -87,9 +87,9 @@ __5. Insights del negocio:__
 ### **4. Prototipado**
 (Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
 
-Sketch: (Adjuntar liga)
+Sketch: ![Digital](https://github.com/BrisiaCastrejon/cdmx-2018-06-bc-core-am-data-dashboard/tree/readmeimg/ux/IMGREADUX)
 
-Prototipo en figma: (Adjuntar liga)
+Prototipo: [Visión general del producto esperado](https://projects.invisionapp.com/share/K2LSR5WY8U6#/screens)
 
 ### **5. User testing**
 (Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
