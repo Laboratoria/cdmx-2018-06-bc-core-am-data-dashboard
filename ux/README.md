@@ -2,13 +2,26 @@
 
 ## **Proceso de UX**
 
-Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
+Nuestro primer acercamiento lo hicimos a través del proceso de diseño, donde pasamos por diferentes etapas como:
 
 ### **1. Descubrimiento e investigación**
 
-Para este reto, nuestras clientas fueron las Training managers de Laboratoria. Ellas necesitan una plataforma que agilice la toma de desiciones y la implementación de estrategias, pues su trabajo exige que estén en comunicación con el equipo, con otras sedes, clientes y alumnas, y la situación actual no les permite transformar de manera efectiva toda la data que se maneja en Laboratoria. A apartir de ello nos preguntamos ¿Cómo se tendría que ver la información para que su trabajo pueda mejorar? 
- 
- Para implementar una solución  desarrollamos una entrevista que nos permitiera orientar nuestras ideas de la plataforma hacia las necesidades de nuestras clientes. La entrevista se realizó con las siguientes preguntas:
+__Usuarixs:__  Para este reto, nuestras clientas fueron las Training managers de Laboratoria. Ellas necesitan una plataforma que agilice la toma de desiciones y la implementación de estrategias, pues su trabajo exige que estén en comunicación con el equipo, con otras sedes, clientes y alumnas, y la situación actual no les permite transformar de manera efectiva toda la data que se maneja en Laboratoria. A apartir de ello nos preguntamos ¿Cómo se tendría que ver la información para que su trabajo pueda mejorar? 
+
+__Necesidades de las usuarias:__ Nuestras usuarias necesitan agilizar el modo en el que visualizan y procesan la data para el mejoramiento de su producto: Laboratoria. 
+
+
+__Objetivos de las usuarias:__ Tener una aplicación que les facilite el procesamiento y la visualización de los datos de las alumnas por sede y generación. Homogeneizar la manera en la que opera la plataforma para todas las sedes y mostrar resultados de manera sencilla.
+
+
+__Pain points:__ 
+* tener que realizar muchos pasos para llegar a los porcentajes que le permitan saber los avances de las alumnas por sede, por turno, generación y por alumna.
+* Gastar tiempo en entender qué y cómo están guardando sus datos las otras sedes.
+* Tardar en encontrar problemas y por lo tanto, de generar estrategias.
+
+__Sentimientos:__(Sentimientos que les surgen dentro del proceso de sus actividades. Identificar cuáles predominan) 
+
+__Técnicas usadas en esta fase:__ Para implementar una solución  desarrollamos una entrevista que nos permitiera orientar nuestras ideas de la plataforma hacia las necesidades de nuestras clientes. La entrevista se realizó con las siguientes preguntas:
 
  * ¿Con qué interfaz visualizas y manipulas la información de las alumnas?
  * ¿Cuál es el dispositivo que utilizas más para visualizar la información?
@@ -25,40 +38,30 @@ Para este reto, nuestras clientas fueron las Training managers de Laboratoria. E
  
 Así mismo, la TM entrevistada prioriza la aplicación en computadora, pero reconoce la necesidad de poder acceder por el mobil al estar fuera de la oficina o en una junta con clientes.
 
+__5. Objetivos del negocio:__ 
+* Optimizar el flujo de trabajo de las TM.
+* Generar una experiencia más amigable para la manipulación de datos.
+* Sintetizar la información.
 
-__Usuarixs:__  (Toda la información que sepas de ellxs, ya sea porque las has podido observar o porque obtuviste datos directamente de ellas)  Nuestras usuarias son personas que llevan un ritmo acelerado de trabajo. Su empleo les exige atención en más de una área: en este caso, estar en constante comunicación con las alumnas, otras sedes y con clientes. Su trabajo es demandante y requiere el empleo del menor tiempo posible realizando el procesamiento de los datos.
-
-__Necesidades de las usuarias:__ Nuestras usuarias necesitan agilizar el modo en el que visualizan y procesan la data para el mejoramiento de su producto: Laboratoria. 
-
-
-__Objetivos de las usuarias:__ Tener una aplicación que les facilite el procesamiento y la visualización de los datos de las alumnas por sede y generación. Homogeneizar la manera en la que opera la plataforma para todas las sedes y mostrar resultados de manera sencilla.
-
-
-__Pain points:__ 
-* tener que realizar muchos pasos para llegar a los porcentajes que le permitan saber los avances de las alumnas por sede, por turno, generación y por alumna.
-* Gastar tiempo en entender qué y cómo están guardando sus datos las otras sedes.
-* Tardar en encontrar problemas y por lo tanto, de generar estrategias.
-
-__Sentimientos:__(Sentimientos que les surgen dentro del proceso de sus actividades. Identificar cuáles predominan) 
-
-__Técnicas usadas en esta fase:__ Entrevista
-
-__5. Objetivos del negocio:__ (Enlistarlo(s))
-
-__6. Motivaciones del negocio para el data dashboard:__(Enlistarlo(s))
+__6. Motivaciones del negocio para el data dashboard:__
+* 
 
 ### **2. Síntesis y definición**
 (Dada la fase anterior de investigación, ahora vamos a tomar todos los datos más importantes y transformarlos en información valiosa para comenzar a orientarse a la solución. También vamos a entender lo que la empresa quiere de ese producto y comenzar a entender ambas visiones con el fin de encontrar un punto armónico)
 
 __1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
 
-   - Sobre las estudiantes:
+   - Sobre las estudiantes: Nivel de progreso de las estudiantes en porcentajes por sede y por generación. 
+   - Sobre cada estudiante: Los temas en los que presentan mayor deficiencia.
+   - Sobre los temas del LMS: Promedio general por tema.
+   - Priorizar los datos de la generación actual.
  
 
 __2. Lo que los usuarios esperan obtener:__
-
+Mejor visibilidad y manejo de datos.
 
 __3. Insights:__
+Durante la investigación se encontraron modelos de data dashboard que tomamos como punto de partida sobre lo que no nos parecía adecuado para la necesidad del cliente. 
 
 __4. Data proporcionada:__ 
 
@@ -71,7 +74,7 @@ __5. Insights del negocio:__
 
 ### **4. Prototipado**
 De nuestro primer acercamiento al cliente realizamos el primer Sketch que se muestra a continuación:
-![Primer sketch](https://raw.githubusercontent.com/DianaCarrillo/cdmx-2018-06-bc-core-am-data-dashboard/master/README%20IMAGENES/sketch%201.jpg)
+![Primer sketch](https://raw.githubusercontent.com/soberanesmajo/cdmx-2018-06-bc-core-am-data-dashboard/master/ux/Img%20readme/sketch1.jpeg)
 
 
 Prototipo en figma: (Adjuntar liga)
