@@ -21,16 +21,16 @@ El producto esta dirigido para todo el staff de laboratoria.
 Al inicio de la creación del sketching nos enfocamos en diseños básicos  tomando en cuenta una investigación generada en internet en la cual hay ejemplos muy claros de lo que se ha diseñado con anterioridad, para nosotras es importante que el usuario pueda tener la suficiennte interacción con la aplicación y le sea funcional. Trabajamos con el supuesto  de que requieren la información en tiempo real y que además es un contenido que se revisa diariamente  y que necesita ser actualizado con la misma frecuencia. Generamos sketchinn que nos permitieron tener una idea más clara de lo que el cliente requiere.
 ![GitHub Logo](/imagenes/sketching.jpg)
 
-## Posterior a las entrevista 
- 
+## Posterior a las entrevista
+
 =========Aplicaciones usadas actualmete.================
 
-Actualmente el equipo de Laboratoria se desempeña en sus roles y acceden a la información recopliada através de Gogle Drive y generan distintas bases de datos propias en las cuáles van actualizando la información gradualmente, esto les lleva a generar muchas tablas en excel en las que vacian el contenido. Esto genera conflictos ya que llegado un punto, no saben cuál es la que tiene la información que requieren. 
+Actualmente el equipo de Laboratoria se desempeña en sus roles y acceden a la información recopliada através de Gogle Drive y generan distintas bases de datos propias en las cuáles van actualizando la información gradualmente, esto les lleva a generar muchas tablas en excel en las que vacian el contenido. Esto genera conflictos ya que llegado un punto, no saben cuál es la que tiene la información que requieren.
 
 
 =======Acceso a la información.==================
 
-Una vez generada las  entrevista con las Training Manager nos dimos cuenta que el acceder a esta información les era complicado ya que tenia que hacer una busqueda incanzable para encontra los archivos necesarios dentro del Google Drive, lo cual les quita mucho tiempo que podrían estar utilizando para otras actividades, además de estar todo el tiempo tratando de recordar los datos que constantemente les piden en su entorno laboral es complicado, pues la data se actualiza todo el tiempo por lo cual requieren de una herramienta que les permita acelerar los procesos de fioltración para de acuerdo a eso, tomar las desiciones correspondientes de acuerdo a la situación. 
+Una vez generada las  entrevista con las Training Manager nos dimos cuenta que el acceder a esta información les era complicado ya que tenia que hacer una busqueda incanzable para encontra los archivos necesarios dentro del Google Drive, lo cual les quita mucho tiempo que podrían estar utilizando para otras actividades, además de estar todo el tiempo tratando de recordar los datos que constantemente les piden en su entorno laboral es complicado, pues la data se actualiza todo el tiempo por lo cual requieren de una herramienta que les permita acelerar los procesos de fioltración para de acuerdo a eso, tomar las desiciones correspondientes de acuerdo a la situación.
 
 
 =========Los equipos más usados.======================
@@ -80,7 +80,3 @@ El Data Dashboard se implementó para hacer el entorno laboral del usuario más 
 ## Proceso de diseño.
 
 Durante los primeros días se generaron sketchin de prueba que nos permitieron llegar con el usuario para preguntarle por sus necesidades, debido a ello, las necesidades del mismo quedaron claras y especificas, el mostrar el sketching a un usuario nos permitio que el mismo se diera cuenta de cual diseño le funcionaba más, y cual otro tenia algunos conflictos, por lo mismo se creo una fución de todo lo que el usuario requiere y se llego a la conclusion de que se tenia que hacer un diseño funcional con colores minimalistas y que fuera sencillo de entender. Por ello el diseño final es el que aquí se presenta.
-
-
-
-
