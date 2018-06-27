@@ -10,6 +10,7 @@ const pullInformation = () =>{ //Funcion para jalar la data
  pullInformation();
 
 window.computeStudentsStats= () => {
+    
 
 };
 
@@ -23,21 +24,3 @@ window.computeStudentsStats= () => {
  window.filterStudents = () => {
 
 };
-
-
-
-window.computeStudentsStats = () => {
-
-};
-
-window.computeGenerationsStats = () => {
-
-};
-
-window.sortStudents = () => {
-
-};
-
-window.filterStudents = () => {
-
-}; 
