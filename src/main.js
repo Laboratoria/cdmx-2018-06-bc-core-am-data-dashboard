@@ -14,8 +14,9 @@ document.getElementById("ingresar").addEventListener("click", obtenerDatos=()=>{
         sede.style.display="block";
         ingresar.style.display="none";
 
-    }else{
+    }
+    sede.style.display="none";
+    ingresar.style.display="none";
         alert("Usuario no identificado");
- 
-}
+     
 });

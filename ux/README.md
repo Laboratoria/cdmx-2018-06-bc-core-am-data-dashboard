@@ -76,6 +76,13 @@ __5. Insights del negocio:__
 De nuestro primer acercamiento al cliente realizamos el primer Sketch que se muestra a continuación:
 ![Primer sketch](https://raw.githubusercontent.com/soberanesmajo/cdmx-2018-06-bc-core-am-data-dashboard/master/ux/Img%20readme/sketch1.jpeg)
 
+Así mismo realizamos un sketch en Figma para tener una mejor perspectiva de nuestra interfaz junto con la clienta:
+![Primer sketch en figma](https://raw.githubusercontent.com/DianaCarrillo/cdmx-2018-06-bc-core-am-data-dashboard/ramadiana/ux/Img%20readme/FIGMA1.jpeg)
+
+Después del feedback de nuestra clienta realizamos modificaciones al sketch
+
+![Segundo sketch en figma]()
+
 
 Prototipo en figma: https://www.figma.com/file/U1pp48mdcx5hiEi3m9QxjWeo/Dashboard
 
