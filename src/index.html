@@ -1,54 +1,91 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Laboratoria LMS Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet">
     <title>Laboratoria LMS Dashboard</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheetgrid" href="bootstrap-grid.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Lobster+Two|Oswald|PT+Sans+Narrow|Pacifico" rel="stylesheet">
   </head>
-  <header> 
-    <img src="../images/Labo.png" id="labo"/>
-    <h1>Laboratoria LMS Dashboard</h1>
-    <li>
-        <input type="text" value="Usuaria">
-        <input type="password" value="Contraseña">
-        <input type="submit" value="Login">
-        </li>
-    <nav>
-      <ul>
-        <li><a href="#">Cambiar Sede</a></li>
-        <li><a href="#">LMS</a></li>
-        <li><a href="#">Estudiantes</a></li>
-        <li><a href="#">Buscar...</a></li>
-        <li><a href="#">Log out</a></li>
-      </ul>
-    </nav>
-  </header>
   <body>
-    <h2>¡Bienvenida!</h2>
-    <article>
-      <options>Elige la sede:</options>
-      <option> Lima </option>
-        <li id="Lima"><a></a></li>
-        <li id="Mexico"><a>México</a></li>
-        <li id= "Santiago"><a>Santiago</a></li>
-      </ul>
-    </article>
-    <article>
-      <ul>
-        <li><a>Elige la generación:</a></li>
-        <li><a>3ª generación</a></li>
-        <li><a>4ª generación</a></li>
-        <li><a>5ª generación</a></li>
-      </ul>
-    </article>
-    <button id="btn">Function</button>
-    
+   <header>
+
+      <src="../images/Laboratoria_isotipo_RGB-02.png" id="labo"/>
+      <h1>Laboratoria LMS Dashboard</h1>
+<br>
+<br>
+    <nav>
+      <li>
+          <input type="text" value="Usuaria" id="user-name"> <br>
+          <br>
+          <input type="password" value="Contraseña" id="pasword"><br>
+          <br>
+          <input type="submit" value="Login"> <br>
+        </li>
+      </nav>
+<br>
+<br>
+<br>
+      <nav>
+        <div>
+          <div class="row">
+            <div class="col-lg">
+            <li><a href="#">Cambiar Sede</a></li>
+            </div>
+            <div class="col-sm">
+            <li><a href="#">LMS</a></li>
+            </div>
+            <div class="col-sm">
+            <li><a href="#">Estudiantes</a></li>
+            </div>
+            <div class="col-sm">
+            <li><a href="#">Buscar...</a></li>
+            </div>
+            <div class="col-sm">
+            <li><a href="#">Log out</a></li>
+            </div>
+        </nav>
+  </header>
+<br>
+<br>
+<br>
+<nav>
+  <ul>
+    <div class="container">
+      <div class="col-sm">
+    <div>
+      <li><a href="#">Cambiar Sede</a></li>
+      <li><a href="#">Lima</a></li>
+      <li><a href="#">México</a></li>
+      <li><a href="#">Santiago</a></li>
+    </div>
+</ul>
+</nav>
+<br>
+<br>
+<nav>
+  <ul>
+    <div class="container">
+      <div class="col-sm">
+    <div>
+      <li><a href="#">Elige la generación:</a></li>
+      <li><a href="#">Tercera</a></li>
+      <li><a href="#">Cuarta</a></li>
+      <li><a href="#">Quinta</a></li>
+    </div>
+</ul>
+</nav>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>
-  <footer class:"footer">Talento que transforma</footer>
-  <!--Login -->
-  <script src="main.js"></script>
-  <script src="data.js"></script>
-  <script src="login.js"></script>
 </html>

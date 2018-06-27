@@ -1,74 +1,68 @@
-body {
-background-color: rgb(243, 230, 44);
-text-align: center;
-font-family: "Lobster Two", cursive;
-font-size: x-large;
-padding: 10px;
-}
 
-nav {
-    font-family: "Oswald", sans-serif;
-    text-align: center;
-    /* outline: 1px solid yellow; */
+h1{
+font-size: 60px;;
+ font-family: 'Bitter', serif;
+}
+#labo {
+height: 200px;
+  }
+body{
+  background-color: rgb(255, 229, 33);
+  text-aligne: center;
+  font-family: 'Bitter', serif;
+  font-size: 40px;
+  }
+header{
+  font-family: 'Bitter', serif;
+  text-align: center ;
+  list-style: none;
+  color:#000;
+  padding: 0;
+  margin: 0;
+}
+nav{
+  /*outline: 2px solid red;*/
+
+}
+div{
+  /*outline: 2px solid red;*/
+  background: #000;
+  /*line-height: 30px;*/
+}
+li{
+/*outline: 2px solid yellow;*/
+font-size: 30px;
+font-family: 'Bitter', serif;
+text-align: center;
+line-height: 55px;
+padding-bottom: 15px;
 }
 ul {
-   /* outline: 2px; */
-    background-color: black;
-    list-style: none;
-    line-height: 35px;
-    padding: 0;
-    margin: 0;
+  /*outline: 2px solid blue;*/
+  list-style: none;
+  text-decoration: yellow;
+  margin:0;
+  padding: 0;
+  width: 400px;
+  margin-left:auto;
+  margin-right: auto;
 }
+  a{
+    /*outline: 2px solid green;*/
+    text-decoration: none;
+    line-height: 55px;
+    color:#FDF5E6;
+    display: block;
+    padding-left: 10px;
+}
+  a:hover{
+background: #333;
+color:#ffe521;
+text-decoration: none;
+line-height: 55px;
+  }
+ul li:first-child{
 
-#labo {
-    max-height: 200px;
-    
+background: #696969 ;
+line-height: 80px;
 }
-
-li {
-   /* outline: 1px solid black; */
-    width: 140px;
-    display: inline-table;
-    text-align: center;
-}
-a {
-    /*outline: 1px solid white;*/
-    color: whitesmoke;
-    display: inline-block;
-    text-decoration: yellow;
-    
-}
-a:hover {
-    background-color: yellow;
-    color: black;
-}
-
-article {
-    font-family: 'PT Sans Narrow', sans-serif;
-    color: whitesmoke;
-    display: inline-block;
-    text-decoration: yellow;
-    
-}
-article :hover {
-    background-color: yellow;
-    color: black;
-}
-header {
-    font-family: "Oswald", sans-serif;
-    font-size: x-large;
-
-}
-
-
-footer {
-padding: 40px;
-
-}
-
-/* fuentes css
-font-family: 'Oswald', sans-serif;
-font-family: 'PT Sans Narrow', sans-serif;
-font-family: 'Lobster Two', cursive;
-font-family: 'Pacifico', cursive;
-font-family: 'Grand Hotel', cursive; */
