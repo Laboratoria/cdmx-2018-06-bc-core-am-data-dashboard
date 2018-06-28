@@ -1,0 +1,17 @@
+.Images{
+  width: 200px;  /*ancho*/
+  margin: 100px 500px;/*100 de arriba 500 a los lados*/
+  align-items: center;
+  }
+
+p{
+  font-size: 100px;
+  text-align: center;
+  align-content: center;
+  }
+
+#container{
+    font-size: 70%;
+    text-align: center;
+    font-family: 'Poor Story', cursive;
+}
