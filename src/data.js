@@ -14,21 +14,15 @@ computeStudentsStats: (laboratoria)=> {
 }
 
 
-    fetch(url).then(data => data.json())
-    .then(data => {
-        console.log(data);
-    });
-}
-
-gettingData();
+//     then(data => data.json())
+//     .then(data => {
+//         console.log(data);
+//     });
+// }
+// gettingData();
 
 
 /*window.computeStudentsStats = () => {
-
-    let student = [ 
-        {
-            name: 
-        }
 
 };
 

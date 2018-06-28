@@ -1,22 +1,24 @@
-
-
-
 let sede =document.getElementById("ciudad-generacion");
-let ingresar=document.getElementById("cuadro-ingresar");
+let ingresar =document.getElementById("ingresar");
+let inputName = document.getElementById("input-name");
+let password = document.getElementById("input-password");
+let form= document.getElementById("form");
+
 // ocultar las sedes y generaciones
 sede.style.display="none";
 
-document.getElementById("ingresar").addEventListener("click", obtenerDatos=()=>{
-    const usuario= "Lucile";
-    const contraseña= "contraseña";
-    if (usuario==="Lucile" && contraseña==="contraseña"){
-        
+ingresar.addEventListener("click", obtenerDatos = ()=> { 
+    let usuario1 = inputName.value;
+     console.log(usuario1);
+    let password1 = password.value;
+     console.log(password1);
+        if (usuario1==="lucile" && password1==="123"){
         sede.style.display="block";
-        ingresar.style.display="none";
+        form.style.display="none";
 
-    }
-    sede.style.display="none";
-    ingresar.style.display="none";
+    }else{
         alert("Usuario no identificado");
-     
+    }
 });
+
+
