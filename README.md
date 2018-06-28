@@ -121,7 +121,7 @@ como toda la configuración de dependencias y tests de ejemplo:
 ├── src
 │   ├── data.js
 │   ├── index.html
-│   ├── main.js
+│   ├── div.js
 │   └── style.css
 └── test
 |   ├── data.spec.js
@@ -338,13 +338,13 @@ Nuevo arreglo de usuarios incluyendo solo aquellos que cumplan la condición de
 filtrado, es decir, aquellos que contengan el string _busqueda_ en el nombre
 (`name`) de las estudiantes.
 
-### main.js
+### div.js
 
-Ten en cuenta también que existe otro archivo _main.js_ que no está solo por
+Ten en cuenta también que existe otro archivo _div.js_ que no está solo por
 casualidad en la estructura del proyecto. En general es una buena idea ir
 separando la funcionalidad en varios archivos, ya que a medida que un proyecto
 crece, se vuelve insostenible dejar todo en un solo archivo. En este caso puedes
-usar _main.js_ para todo tu código que tenga que ver con mostrar los datos en la
+usar _div.js_ para todo tu código que tenga que ver con mostrar los datos en la
 pantalla, y _data.js_ para todas las funciones que vimos que obtienen y
 manipulan los datos.
 
