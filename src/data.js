@@ -1,6 +1,18 @@
-
+//window.data
 const gettingData= ()=> {
-    let url = "https://raw.githubusercontent.com/DianaCarrillo/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json"
+    let url = "https://api.myjson.com/bins/1hcchi"
+    let laboratoria = fetch(url);
+    data.computeStudentsStats(laboratoria);
+},
+
+computeStudentsStats: (laboratoria)=> {
+    laboratoria.then(res => res.json())
+    .then(dato => {
+       let sede = Object.getOwnPropertyNames //esta imprime las propiedades del objeto (Lima.CDMX,Santiago)
+       let generación = Object.values(data); // esta imprime los valores de esas propiedades
+    }
+}
+
 
     fetch(url).then(data => data.json())
     .then(data => {
@@ -11,7 +23,7 @@ const gettingData= ()=> {
 gettingData();
 
 
-window.computeStudentsStats = () => {
+/*window.computeStudentsStats = () => {
 
     let student = [ 
         {
@@ -30,4 +42,4 @@ window.sortStudents = () => {
 
 window.filterStudents = () => {
 
-};    
+}; */

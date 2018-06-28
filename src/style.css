@@ -26,39 +26,44 @@ font-family:medium-content-sans-serif-font,-apple-system,BlinkMacSystemFont,"Seg
     text-align: center;
 }
 
-nav{
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+div{
     margin-top:25px;
     margin-left:540px;
     margin-right:15px;
     width: 200px;
 }
 
-ul{
+section li{
     list-style: none;
 }
 
-nav li a{
+div li a{
     background-color: #ECDA38;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
 }
 
-nav > li{
-float: left;
-}
+div > li{
+    float: left;
+    }
 
-nav li a:hover{
+div li a:hover{
     background-color: beige;
 }
 
-nav li ul{
+div li ul{
     display:none;
     position: absolute;
     min-width: 140px;
 }
 
-nav li:hover > ul{
+div li:hover > ul{
 display:block;
 }
 
