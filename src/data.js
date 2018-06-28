@@ -1,4 +1,4 @@
-
+/*
 let laboratoria = data;
 
 let estudiantes = laboratoria.lima.generacion.cuarta.estudiantes;
@@ -6,17 +6,10 @@ let nombres = [];
 
 for (let i = 0; i < estudiantes.length; i++){
   nombres += (`${estudiantes[i].nombre}<br>`);
-
 }
-
 document.getElementById("contenido").innerHTML = `Estudiantes de la 4ta Generacion de Lima:<br>  ${nombres}`;
 
-
-
-
-
-
-// alert("data vinculado");
+// alert("data vinculado"); */
 
 
 window.dataDashboard = {
