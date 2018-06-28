@@ -1,4 +1,4 @@
-const generation = (e) => {
+const generation = (e) => { //FUNCION GENERACION DE ACUERDO A LA SEDE SELECCIONADA
 	document.getElementById('generation').innerHTML = ""; //Limiamps el select de generaciones cada vez que se seleccione una nueva sede
 	document.getElementById('tabla').innerHTML = ""; //Limpiamos la tabla cada vez que se cambie la sede
 	let valor = document.getElementById('selectSedes').value; //obtenemos el valor de la lista de sedes seleccionada, con el evento onchange detectamos cada vez que cambie la lista de sedes
@@ -27,6 +27,8 @@ const students = (e) => {
 	let duracionPrograma = '';//cramos variables para usarlas despues para guardar el valor de duracionprograma
 	let porcentajeCompletado = '';//cramos variables para usarlas despues para guardar porcentajecompletado
 	document.getElementById('tabla').innerHTML = "";//limpiamos la tabla cada vez que cambien el valor del select(lista) de generaciones y asi poder mostrar la nueva informacion de la generaciones seleccionada
+	
+
 	//Se crea tabla
 	var table = document.getElementById('tabla');//obtenemos el elemento tabla del html, para poder crear su contenido despues.
 	let titlecorreo = document.createTextNode('Correo');//creamos un nuevo nodo de texto que se convertira en el titulo de correo
