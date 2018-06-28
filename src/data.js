@@ -1,7 +1,18 @@
+//window.data
+const gettingData= ()=> {
+    let url = "https://api.myjson.com/bins/1hcchi"
+    let laboratoria = fetch(url);
+    data.computeStudentsStats(laboratoria);
+},
 
-// const gettingData= ()=> {
-//     let url = "https://api.myjson.com/bins/fjbkm"
-//     let laboratoria = fetch(url);
+computeStudentsStats: (laboratoria)=> {
+    laboratoria.then(res => res.json())
+    .then(dato => {
+       let sede = Object.getOwnPropertyNames //esta imprime las propiedades del objeto (Lima.CDMX,Santiago)
+       let generación = Object.values(data); // esta imprime los valores de esas propiedades
+    }
+}
+
 
 //     then(data => data.json())
 //     .then(data => {
@@ -11,7 +22,7 @@
 // gettingData();
 
 
-window.computeStudentsStats = () => {
+/*window.computeStudentsStats = () => {
 
 };
 
@@ -25,4 +36,4 @@ window.sortStudents = () => {
 
 window.filterStudents = () => {
 
-};    
+}; */
