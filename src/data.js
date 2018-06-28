@@ -1,14 +1,39 @@
-/*
-let laboratoria = data;
 
-let estudiantes = laboratoria.lima.generacion.cuarta.estudiantes;
-let nombres = [];
+document.getElementById("estudiantes").addEventListener("click",cargarJSON);
 
-for (let i = 0; i < estudiantes.length; i++){
-  nombres += (`${estudiantes[i].nombre}<br>`);
+function cargarJSON(){
+   fetch ('https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json')
+    .then(res => res.json() )
+    .then(datos => {
+    /*  console.log(datos);*/
+        pintar(datos)
+    })
 }
-document.getElementById("contenido").innerHTML = `Estudiantes de la 4ta Generacion de Lima:<br>  ${nombres}`;
 
+function pintar(datos){
+  //  console.log(datos);
+  let numEst = datos.lima.generacion.cuarta.estudiantes;
+  // console.log(numEst);
+  name.innerHTML = "";
+  for (let i = 0; i < numEst.length; i++) {
+    name.innerHTML += `
+    <tr>
+      <th scope="col"> ${numEst[i].nombre}</th>
+      <th scope="col"> ${numEst[i].correo}</th>
+    </tr>
+    `
+}
+
+    /*for(let valor in datos){
+      console.log(valor);
+      contenido.innerHTML= valor;
+
+    }*/
+}
+let name = document.getElementById("lista_estudiantes");
+
+
+/*document.getElementById("contenido_general").innerHTML=;
 // alert("data vinculado"); */
 
 
