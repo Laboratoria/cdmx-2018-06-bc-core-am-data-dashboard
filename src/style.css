@@ -42,22 +42,62 @@ a:hover {
     background-color: yellow;
     color: black;
 }
+header {
+    font-family: "Oswald", sans-serif;
+    font-size: x-large;
 
-article {
+}
+
+/*article {
     font-family: 'PT Sans Narrow', sans-serif;
     color: whitesmoke;
     display: inline-block;
     text-decoration: yellow;
     
-}
+} 
 article :hover {
     background-color: yellow;
     color: black;
 }
-header {
-    font-family: "Oswald", sans-serif;
-    font-size: x-large;
+*/
+/*
+#navy-sedes li a {
+    text-decoration: none;
+    display: block;
+}
+#nav-sedes li a:hover {
+    background-color: orange;
+}
+#nav-sedes > li {
+    float: left;
+}
+#nav-sedes li ul {
+    position: absolute;
+    min-width: 140px;
+}
+#navy-gen {
+    text-decoration: none;
+    display: block;
+    float: left;
+}
+*/
 
+article {
+    margin: auto;
+    width: 300px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+#navy-sede {
+    list-style: none;
+}
+#navy-gen {
+    list-style: none;
+}
+
+#nav-sede li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
 }
 
 

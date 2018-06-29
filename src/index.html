@@ -5,19 +5,19 @@
     <title>Laboratoria LMS Dashboard</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheetgrid" href="bootstrap-grid.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Lobster+Two|Oswald|PT+Sans+Narrow|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Lobster+Two|Oswald|Pacifico" rel="stylesheet">
   </head>
   <header> 
     <img src="../images/Labo.png" id="labo"/>
-    <h1>Laboratoria LMS Dashboard</h1>
-    <li>
+     <h1>Laboratoria LMS Dashboard</h1>
+      <li>
         <input type="text" value="Usuaria" id="user-name">
         <input type="password" value="Contraseña" id="pasword">
         <input type="submit" value="Login">
-        </li>
+      </li>
     <nav>
       <ul>
-        <li><a href="#">Cambiar Sede</a></li>
+        <li>Cambiar Sede</li>
         <li><a href="#">LMS</a></li>
         <li><a href="#">Estudiantes</a></li>
         <li><a href="#">Buscar...</a></li>
@@ -28,23 +28,25 @@
   <body>
     <h2>¡Bienvenida!</h2>
     <article>
-      <options>Elige la sede:</options>
-      <option> Lima </option>
-        <li id="Lima"><a></a></li>
+      <input type="button" value="Data Json" id="Data">
+    <section id="navy-sede">
+        <ul>
+        <li id="sede"><a>Elige la sede:</a></li>
+        <li id="Lima"><a>Lima</a></li>
         <li id="Mexico"><a>México</a></li>
         <li id= "Santiago"><a>Santiago</a></li>
       </ul>
-    </article>
-    <article>
-      <ul>
+    </section>
+    <section>
+      <ul id= "navy-gen">
         <li><a>Elige la generación:</a></li>
         <li><a>3ª generación</a></li>
         <li><a>4ª generación</a></li>
         <li><a>5ª generación</a></li>
       </ul>
-    </article>
-    <button id="btn">Function</button>
-    
+    </section>
+  </article>
+
   </body>
   <footer class:"footer">Talento que transforma</footer>
   <!--Login -->
