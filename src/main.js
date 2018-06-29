@@ -3,5 +3,5 @@ let result = document.getElementById("result");
 
 getData.addEventListener("click", gettingData);
 function gettingData() {
-  result.innerHTML = window.data.getJson();
+  result.innerHTML = window.data.getInform();
 }
