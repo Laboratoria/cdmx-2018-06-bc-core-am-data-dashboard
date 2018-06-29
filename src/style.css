@@ -3,7 +3,7 @@ html{
   background: url("Images/blueyellow.png") no-repeat center center fixed;
 }
 body{
-<<<<<<< HEAD
+
   margin: 0;
   padding: 0;
 /* background: url(https://cde.canaln.pe/actualidad-mariana-salas-que-orgullo-que-zuckerberg-haya-mencionado-laboratoria-n254829-764x480-323020.jpg);*/
@@ -22,7 +22,7 @@ body{
   position: absolute;
   transform: translate(-50% -50%);
   box-sizing: border-box;
-=======
+
     margin: 0;
     padding: 0;
     background-size: cover;
@@ -53,7 +53,6 @@ body{
   border-radius: 50%;
   position: absolute;
   top: -50%;
-=======
     height: 100px;
     border-radius: 50%;
     position: absolute;
@@ -108,7 +107,7 @@ h1{
     background: #daa520;
     color: #000;
     font-style: 'Poor Story', cursive;
-    
+
 }
 
 .loginbox a{
@@ -119,8 +118,6 @@ h1{
   font-style: 'Poor Story', cursive;
 }
 
-.loginbox a:hover
-{
+.loginbox a:hover{
     color: #ffc107;
->>>>>>> 93b397b0c44bd72971ad0fb0562809b731113514
 }
