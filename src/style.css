@@ -1,94 +1,20 @@
 .logo{
     height: 75px;
-    width: 300px;
-    float: left;
+    width: 250px;
+  /*  float: left;
     margin: 30px;
     text-align: center;
-    line-height: 100px;
+    line-height: 100px;*/
 }
+
+.container{
+  background: #D5D8DC;
+  text-align: center;
+}
+
 
 * {  /*Quita los margenes predeterminados --*/
   margin:0px;
   padding: 0px;
-}
-
-body {
-  background-image: url("imagenes/01.jpg");
-  background-repeat: no-repeat;
-  background-origin: padding-box;  /*especifica el area de origen de la imagen*/
-  background-size: 100% 100%; /* Ancho y alto dHace la imagen al mayor tamaño posible sin estirarla.el fondo*/
-  background-attachment: fixed; /*fija la imagen de fondo */
-  background-position: 0px 0px; /*posicion de la imagen*/
-  position: static;
-
-}
-
-#contenedor {
-  width: 960px; /*ancho de la pagina*/
-  margin:auto;   /*centrar*/
-  margin-top: 20px; /*margen superior*/
-  margin-bottom: 20px;
-  border-radius: 20px;
-  overflow: hidden;
-
-}
-
-header {
-  height: 100px;
-  background: #EAECEE;
-}
-
-header h1 {
-  color:#34495E;
-  font-size: 40px;   /*tamaño de la letra*/
-  text-align: center; /*centrar texto*/
-  line-height: 100px; /*centra el texto verticalmente*/
-}
-
-nav {
-  background: orange;
-  height: 60px; /*alto del menu*/
-  line-height: 200px;
-
-
-
-}
-
-#buscadorLab{
-  width: 250px;
-  height: 30px;
-  float: right;
-  line-height: 200px;
-}
-
-#contenido {
-  width: 1000px;
-  height: 500px;
-  float: left;
-  background: #EAECEE;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 6px;
-}
-
-#contenido h2 {
-  font-size: 50px;
-  text-align: center;
-  line-height: 500px;
-
-}
-
-
-footer {
-  text-align: center;
-  color: #34495E;
-  background: #F8C471  ;
-  height: 50px;
-  clear: both; /*propiedad que permite no interrupir con los otros elementos*/
-}
-
-a: hover {
-  font-size: 20px;
-  text-align: center;
-  line-height: 50px;
+  /*  background: #273746;*/
 }
