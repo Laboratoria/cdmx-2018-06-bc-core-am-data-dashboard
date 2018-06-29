@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Laboratoria</title>
     <link rel="stylesheet" href="style.css" />
-
   </head>
 
   <body id="prueba">
@@ -14,12 +13,19 @@
          <h1>BIENVENID@</h1>
        </header>
        <nav>   <!--MENU-->
-         <div>
-         <!--<input type="text" name="Buscador" value="Buscador" id="buscadorLab">-->
-       </div>
-       </nav>
+        <div>
+           <select name="Escoger">
+              <option value="0">Elige que quieres ver</option>
+              <option value="1">Laboratoria</option>
+              <input type ="button" class="botones" id = "elegir" value = "Aceptar">
+           </select>
+           
+
+        </div>
+        </nav>
        <section id="contenido">  <!--CONTENIDO-->
          <article> <h2>ESTUDIANTES</h2>
+          <div id="resultado"></div>
            
          </article>
 
@@ -30,7 +36,7 @@
 
     </div>
 
-  <script src="../data/laboratoria.json"></script>
+  <!-- <script src="http://127.0.0.1:8887/laboratoria.json"></script> -->
   <script src="main.js"></script>
   <script src="data.js"></script>
   </body>
