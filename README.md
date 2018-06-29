@@ -1,20 +1,14 @@
 # Data Dashboard
 
-
-
 ### Definición del producto
 
 ### Definición del usuario.
 
-El producto esta dirigido para todo el staff de laboratoria.
-
-
+El proyecto se encuentra diseñado para el staff de Laboratoria en especifico para las Training Managers (TMs) quienes son el personal encargado de realizar el analisis de la mayor cantidad  de  datos posibles respecto al progreso de las estudiantes para apoyarlas en su aprendizaje y desempeño durante el bootcamp pensando que esta información se hiciera extensiva a los coaches para poder Identificar dentro de sus equipos asiganados los temas a reforzar con el obejetivo de cumplir metas y desarrollar habilidades especificas. Esta herramienta esta pensada para utilizarse como una base de datos que permiteria al área \*\*\* la consulta de datos personales de las egresadas para realizar el seguimiento correspondiente.
 
 ### Objetivos del usuario.
 
--Requieren una herramienta que les simplifique el proceso de obtención de datos definidos que les permitan llegar a soluciones en base a estadíticas.
-
-
+\-Contar con una herramienta que les permita la consulta y obtención de datos estadisticos para conocer el estado de la organización y poder implementar palanes de acción en pro de la mejora continua.
 
 ## Creacion del Sketching, antes de la entrevista.
 
@@ -27,14 +21,11 @@ Al inicio de la creación del sketching nos enfocamos en diseños básicos  toma
 
 Actualmente el equipo de Laboratoria se desempeña en sus roles y acceden a la información recopliada através de Gogle Drive y generan distintas bases de datos propias en las cuáles van actualizando la información gradualmente, esto les lleva a generar muchas tablas en excel en las que vacian el contenido. Esto genera conflictos ya que llegado un punto, no saben cuál es la que tiene la información que requieren.
 
-
 =======Acceso a la información.==================
 
 Una vez generada las  entrevista con las Training Manager nos dimos cuenta que el acceder a esta información les era complicado ya que tenia que hacer una busqueda incanzable para encontra los archivos necesarios dentro del Google Drive, lo cual les quita mucho tiempo que podrían estar utilizando para otras actividades, además de estar todo el tiempo tratando de recordar los datos que constantemente les piden en su entorno laboral es complicado, pues la data se actualiza todo el tiempo por lo cual requieren de una herramienta que les permita acelerar los procesos de fioltración para de acuerdo a eso, tomar las desiciones correspondientes de acuerdo a la situación.
 
-
 =========Los equipos más usados.======================
-
 
 Los equipos que más utiliza son la computadora y el celular, ya que en su día cotiadiano se le pide información acerca de las estudiantes de las distaintas sedes. Si  se encuentra en su oficina, desde su computadora puede ingresar a los datos, sin embargo le es complicado ingresar a la información ya que los sistemas que actualmente utiliza son rudimentarios y muy básicos. Ahora bien, cuando es necesario el reunirse con un cliente en un ambiente distinto al de su oficina también es complicado, pues al llevar su computadora tiene que volver a ingresar a Gogle Drive para acceder a la misma o recurre a su memoria. Por lo cual le sería más sencillo que el proyecto se pudiera adptar a un celular.
 
@@ -43,7 +34,6 @@ Los equipos que más utiliza son la computadora y el celular, ya que en su día 
 Las training Manager y en general el staff de colaboración generan el ingreso a diario de esta data, por lo cual se tiene en visión que la aplicación también se estaría usando con la misma frecuencia.
 
 ========Jerarquización de la información===========
-
 
 Datos más importantes.
 
@@ -61,21 +51,17 @@ Como un adicional mencionan que les sería muy útil tener los datos de las egre
 
 =======Requerimentos adicionales.=============================
 
-
 Debido a la información que maneja el Data Dashboard es necesario implementar una cuenta de usario y una contraseña, ya que los datos contenidos en esta son vulnerables.
 
 Durante el proceso de las enytrevistas captamos que para la mayoria de los usuarios les es más facíl que tenga un buscador en dode se pueda ingresar el nombre de la estudiante en cuestión y que les arroje el prefil de esta.
-
 
 ## Creación del Sketching posterior a las entrevistas.
 
 De acuerdo a nuestra investigación se determino que el producto se iba a generar de lo general a lo párticular, es decir que se daría prioridad a los datos que los usuarios tienen la necesidad de ver más. Por lo cuál se crea el siguiente sketching:
 
-
 ## Resolución  de los conflictos presentados por el usuario.
 
 El Data Dashboard se implementó para hacer el entorno laboral del usuario más sencilla, este producto les permite recpopilar la información de las estudiantes en tiempo real y se actualiza constantemente debido a ello, los usuarios pueden hacer distintas actividades sin pasart demasiado tiempo analizando los datos de cada sede y cada estudiante que existe en Laboratoria.
-
 
 ## Proceso de diseño.
 

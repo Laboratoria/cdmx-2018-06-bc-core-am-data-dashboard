@@ -1,9 +1,6 @@
-const sedes= (data.json){
-    lima = ["tercera, cuarta, quinta"],
-    mex = ["tercera, cuarta, quinta"],
-    santi = ["tercera, cuarta quinta"]
+let lima = document.getElementById('sede1');
+let santiago = document.getElementById('sede2');
+let mexico = document.getElementById('sede3');
 
-for (let i= 0; i < lima.length ){
 
-}
-}
+window.global.computeStudentsStats()
