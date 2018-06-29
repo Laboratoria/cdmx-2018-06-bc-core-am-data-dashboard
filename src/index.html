@@ -1,88 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+</head>
 
-  <body>
-    <header id="laboratoria">
-        <img id= "logo" src="../logo/laboratoria_logo.png">
-    </header>
-    
-  
-<form id="form" action="">
-  <h2>Login</h2>
-  <input id="input-name" type="text" placeholder="&#128274;  Username" name="usuario">
-  <input id="input-password" type="password" placeholder="&#128273;  Password" name="contraseña">
-<button id="ingresar" type="button">Ingresar</button>
-</form>
+<body>
+  <header id="laboratoria">
+    <img id="logo" src="../logo/laboratoria_logo.png">
+  </header>
+
+  <section class="container">
+
+    <form id="form" action="">
+      <h2>Login</h2>
+      <input id="input-name" type="text" placeholder="&#128274;  Username" name="usuario">
+      <input id="input-password" type="password" placeholder="&#128273;  Password" name="contraseña">
+      <button id="ingresar" type="button">Ingresar</button>
+    </form>
 
     <!-- primer navegador para ingresar a la sede (botones)-->
 
-<section class="container">
+    <div class="col-12">
 
-  <div class="row"> 
-
-  <div class="col-4">
-    <li><a href="#">CDMX</a> 
-      <ul id="lista-generacion">
-        <li class="generacion"><a href="#">Quinta</a></li> 
-        <li class="generacion"><a href="#">Cuarta</a></li>
-        <li class="generacion"><a href="#">Tercera</a></li>
-      </ul>
-    </li>
-  </div>
-
-       
-  <div class="col-4">
-    <li><a href="#">Lima</a>
-      <ul>
-        <li class="generacion"><a href="#">Quinta</a></li> 
-        <li class="generacion"><a href="#">Cuarta</a></li>
-        <li class="generacion"><a href="#">Tercera</a></li>
-      </ul>
-    </li> 
-  </div>
+      <div class="row">
+        <div class="col-4">
+          <ul>
+            <li>
+              <a href="#">CDMX</a>
+              <ul id="lista-generacion">
+                <li class="generacion">
+                  <a href="#">Quinta</a>
+                </li>
+                <li class="generacion">
+                  <a href="#">Cuarta</a>
+                </li>
+                <li class="generacion">
+                  <a href="#">Tercera</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
 
 
-<div class="col-4">
-  <li><a href="#">Santiago</a>
-    <ul>
-      <li class="generacion"><a href="#">Quinta</a></li> 
-      <li class="generacion"><a href="#">Cuarta</a></li>
-      <li class="generacion"><a href="#">Tercera</a></li>
-    </ul>
-  </li>
-</div> 
+        <div class="col-4">
+          <li>
+            <a href="#">Lima</a>
+            <ul>
+              <li class="generacion">
+                <a href="#">Quinta</a>
+              </li>
+              <li class="generacion">
+                <a href="#">Cuarta</a>
+              </li>
+              <li class="generacion">
+                <a href="#">Tercera</a>
+              </li>
+            </ul>
+          </li>
+        </div>
 
-</div>
 
-</section>
+        <div class="col-4">
+          <li>
+            <a href="#">Santiago</a>
+            <ul>
+              <li class="generacion">
+                <a href="#">Quinta</a>
+              </li>
+              <li class="generacion">
+                <a href="#">Cuarta</a>
+              </li>
+              <li class="generacion">
+                <a href="#">Tercera</a>
+              </li>
+            </ul>
+          </li>
+        </div>
 
-    
-<!-- 
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 
       <p id="box"></p>
       <button id="btn">Next</button>
        -->
-   
 
-    <!-- <div id="box"> 
+
+  <!-- <div id="box"> 
       <button id="btn">Next</button>
     </div> -->
 
-    <!-- sin conflictos -->
+  <!-- sin conflictos -->
 
-    <!--script type="text/javascript" src="../data/laboratoria.json"></script>-->
-    <script src="data.js"></script>  
-    <script src="div.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!--script type="text/javascript" src="../data/laboratoria.json"></script>-->
+  <script src="data.js"></script>
+  <script src="div.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
 
-  
-  </body>
+
+</body>
+
 </html>

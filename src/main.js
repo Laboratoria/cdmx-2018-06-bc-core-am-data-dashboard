@@ -1,4 +1,4 @@
-let sede =document.getElementById("ciudad-generacion");
+let sede =document.getElementsByClassName("col-12");
 let ingresar =document.getElementById("ingresar");
 let inputName = document.getElementById("input-name");
 let password = document.getElementById("input-password");
