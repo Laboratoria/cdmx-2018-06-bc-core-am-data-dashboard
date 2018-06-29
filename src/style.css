@@ -1,96 +1,101 @@
-body {
-    background-color:  #25272D;
+ /* .container {
+     background: #25272D;
+
+ } */
+ body {
+    background: #25272D;
+
 }
 
-#logo {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
+ #logo {
+     display: inline-block;
+     margin-left: auto;
+     margin-right: auto;
+ }
 
-#laboratoria{
-    background-color: #FF009E;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-font-family:medium-content-sans-serif-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-}
+ #laboratoria {
+     background-color: #FF009E;
+     padding-top: 8px;
+     padding-bottom: 8px;
+     text-align: center;
+     margin-top: 0px;
+     margin-bottom: 0px;
+     font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ }
 
-*{
+ /* *{
     margin:0px;
     padding: 0px;
     text-align: center;
-}
+} */
 
-.container {
+ /* .container {
     width: 100%;
     margin: auto;
-}
+} */
 
-div{
+ /* div{
     margin-top:25px;
     margin-left:540px;
     margin-right:15px;
     width: 200px;
-}
+} */
 
-section li{
-    list-style: none;
-}
+ section li {
+     list-style: none;
+ }
 
-div li a{
-    background-color: #ECDA38;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
+ div li a {
+     background-color: #ECDA38;
+     text-decoration: none;
+     padding: 10px 15px;
+     display: block;
+ }
 
-div > li{
+ /* div > li{
     float: left;
-    }
+    } */
 
-div li a:hover{
-    background-color: beige;
-}
+ div li a:hover {
+     background-color: beige;
+ }
 
-div li ul{
-    display:none;
-    position: absolute;
-    min-width: 140px;
-}
+ div li ul {
+     display: none;
+     position: relative;
+     left: -6.7%;
+     min-width: 140px;
+ }
 
-div li:hover > ul{
-display:block;
-}
+ div li:hover>ul {
+     display: block;
+     width: 100%;
+ }
 
-form{
-    margin: auto;
-    width:50%;
-    max-width: 400px;
-    padding:40px 30px;
-    border: 1px solid black;
-    margin: 30px;
-    margin-left: 400px;
-}
+ form {
+     margin: auto;
+     width: 50%;
+     max-width: 400px;
+     padding: 40px 30px;
+     border: 1px solid black;
+     margin: 30px;
+     margin-left: 400px;
+ }
 
-input{
-    width: 100%;
-    margin-bottom: 10px;
-    padding-top: 5px;
-    
-}
+ input {
+     width: 100%;
+     margin-bottom: 10px;
+     padding-top: 5px;
+ }
 
-input[type="button"]{
-    background-color:#ECDA38;
-    width: 50%;
-    border-radius: 4px;
-    padding-bottom: 4px;
-}
+ button {
+     background-color: #ECDA38;
+     width: 50%;
+     border-radius: 4px;
+     padding-bottom: 4px;
+ }
 
-h2{
-    margin-bottom: 10px;
-    font-family: Arial, Helvetica, sans-serif; 
-}
+ h2 {
+     margin-bottom: 10px;
+     font-family: Arial, Helvetica, sans-serif;
+ }
