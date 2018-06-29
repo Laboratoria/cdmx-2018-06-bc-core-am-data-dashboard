@@ -1,3 +1,2 @@
 
-const userName = Lucile;
 
