@@ -14,13 +14,14 @@ body{
   font-style: 'Poor Story', cursive;
   width: 320px;
   height: 420px;
-  background: #fffaf0;
+  background: rgba(255, 250, 240, 0.5);
   color: #000000;
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%,-50%);
   box-sizing: border-box;
+  background-blend-mode: lighten;
   padding: 70px 30px;
 }
 
@@ -58,34 +59,35 @@ h1{
     border-bottom: 1px solid #fff;
     background: transparent;
     outline: none;
-    height: 40px;
+    height: 30px;
     color: #fff;
     font-size: 16px;
     font-style: 'Poor Story', cursive;
-}
+  }
 
 .loginbox input[type="submit"]{
     border: none;
     outline: none;
-    height: 50px;
+    height: 40px;
     background: #f7b617;
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
     font-style: 'Poor Story', cursive;
-}
+    }
 
 .loginbox input[type="submit"]:hover{
     cursor: pointer;
     background: #daa520;
     color: #000;
     font-style: 'Poor Story', cursive;
+    
 }
 
 .loginbox a{
   text-decoration: none;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 40px;
   color: darkgrey;
   font-style: 'Poor Story', cursive;
 }
