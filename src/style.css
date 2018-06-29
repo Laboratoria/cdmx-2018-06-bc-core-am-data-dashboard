@@ -26,3 +26,38 @@
     margin-top: 30px;
     height: 1500px; /* Used in this example to enable scrolling */
   }
+@import url('https://fonts.googleapis.com/css?family=Poor+Story');
+
+#Images{
+  resize: both;
+  width: 50%;  /*ancho*/
+  margin: 100px 500px;/*100 de arriba 500 a los lados*/
+  align-items: center;
+}
+
+.button {
+  background: rgb(255, 165, 0);/*color de botón*/
+  color: rgb(255, 255, 255);/*color de letra*/
+  display: inline-block;/*para que este un boton al lado de otro*/
+  font-size: 60%;/*Tamaño de la fuente*/
+  font-family: 'Poor Story', cursive;
+  margin: 120px ; /*margen hacia todos los lados */
+  padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados*/
+  text-align: center;/*Texto centrado en los botone*/
+  width: 400px; /*anchura- se tiene que agregar pues al poner el inline-block ya no ocupa toda la línea */
+  text-decoration: none;/*Quitar el subrayado por defecto que tine <a>*/
+  box-shadow: 0px 3px 2px rgb(120, 120, 120);/*Efecto de la sombra del botón*/
+  border-radius: 50px;
+}
+
+.button:hover{/*el efecto va hasta el finale de todos nuestos estilos de color*/
+  box-shadow: 0px 0px 0px;
+  padding-top: 7px;
+}
+
+#container{
+  font-size: 40px;
+  font-family: 'Poor Story', cursive;
+  text-align: center;
+
+}
