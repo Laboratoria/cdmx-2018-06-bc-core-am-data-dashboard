@@ -1,2 +1,36 @@
 
-  
+header {
+  background: #E2E2E2;
+  height: 70px;
+}
+
+header .logo {
+  background: #FEE33E;
+  text-align: center;
+}
+
+header .logo img {
+  height: 100%;
+}
+
+header .search input {
+  border: none;
+  background: #E2E2E2;
+  border-bottom: 2px solid black;
+  height: 50px;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+div.sedes {
+  border: none;
+  background: #E2E2E2;
+  height: 80px;
+  margin: 10px 0px;
+  width: 100%;
+  float: none;
+  margin: 10px auto 10px;
+  padding-top: 10%;
+
+}
+
