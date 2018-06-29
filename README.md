@@ -41,5 +41,3 @@ Los diagramas
 ![Diagrama Flujo](/src/Pictures/DiagramaSprint1.jpg)
 Format: ![Alt Diagrama Sprint 1]
 
-![Pseudocódigo](/src/Pictures/TareasSprint1.jpg)
-Format: ![Alt Tareas 1]
