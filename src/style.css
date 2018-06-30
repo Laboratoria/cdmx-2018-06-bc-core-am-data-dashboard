@@ -76,23 +76,28 @@
      margin: auto;
      width: 50%;
      max-width: 400px;
-     padding: 40px 30px;
+     padding: 40px 60px;
      border: 1px solid black;
      margin: 30px;
-     margin-left: 400px;
+     margin-left: 350px;
+     background-color: gray;
  }
 
  input {
      width: 100%;
      margin-bottom: 10px;
      padding-top: 5px;
+     /* margin-left: 10px; */
  }
 
  button {
      background-color: #ECDA38;
      width: 50%;
+     margin-left:
      border-radius: 4px;
      padding-bottom: 4px;
+     margin-left 15px;
+     
  }
 
  h2 {

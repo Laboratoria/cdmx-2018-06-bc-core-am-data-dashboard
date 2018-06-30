@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 
 
 //     then(data => data.json())
@@ -48,3 +50,4 @@ const iterator = (data) => {
      
  
 }*/
+>>>>>>> upstream/master
