@@ -1,17 +1,4 @@
-//window.data
-const gettingData= ()=> {
-    let url = "https://api.myjson.com/bins/1hcchi"
-    let laboratoria = fetch(url);
-    data.computeStudentsStats(laboratoria);
-},
 
-computeStudentsStats: (laboratoria)=> {
-    laboratoria.then(res => res.json())
-    .then(dato => {
-       let sede = Object.getOwnPropertyNames //esta imprime las propiedades del objeto (Lima.CDMX,Santiago)
-       let generación = Object.values(data); // esta imprime los valores de esas propiedades
-    }
-}
 
 
 //     then(data => data.json())
@@ -37,3 +24,27 @@ window.sortStudents = () => {
 window.filterStudents = () => {
 
 }; */
+
+
+/*const json = '../data/laboratoria.json'
+
+const getData = () => {
+fetch(json)
+.then((response) => {
+    return response.json();
+})
+.then((res) => {
+    iterator(res);
+})
+.catch((error) => {
+    console.log(error);
+});
+}
+
+getData();
+
+const iterator = (data) => {
+ const sedes = Object.keys((data) =>
+     
+ 
+}*/
