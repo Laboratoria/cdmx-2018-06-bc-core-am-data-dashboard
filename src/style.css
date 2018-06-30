@@ -1,16 +1,39 @@
 body{
+	font-family: 'Oswald', sans-serif;
 
 }
 *{
 	margin: 0;
 	padding: 0;
 }
+
+
+/*HEADER*/
+header{
+    background-color: #ffe521;
+    height: 80px;
+    font-size: 18px;
+}
+
+.hambur{
+	margin: 23px 0 0 23px;
+}
+
+.usuario{
+    float: right;
+    margin-right: 100px;
+    margin-top: 8px;
+}
+
+
+
+
 /*  MENU   */
 nav{
 	width: 190px;
 	height: auto;
     margin: 10px;
-	font-family: 'Oswald', sans-serif;
+	
 
 
 }

@@ -1,6 +1,8 @@
 
 //url para obtener el json
-let apiUrl = "https://raw.githubusercontent.com/monicelica/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
+let url = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
+//crear let para poder pintar datos
+let showSedes= document.querySelector("#generaciones");
 // a través del boton iniciar funcion
 sed.addEventListener("click", function(){
   sede(); 
@@ -9,11 +11,19 @@ sed.addEventListener("click", function(){
 
 
 let sede = function(){
-	fetch(apiUrl).then(function(datos){
-	return datos.json();
-	}).then(function(data){
-	console.log(data);
-	})
+  fetch(url).then(function(datos){
+  return datos.json();
+  }).then(function(data){
+  console.log(data.lima);
+  let sedeLima= data.lima.generacion;
+  console.log(Object.keys(sedeLima));
+  let generacionesLima = Object.keys(sedeLima);
+  console.log(generacionesLima[0]);
+  for(let i = 0; i<generacionesLima.length; i++) {
+        showSedes.innerHTML+= "<div>" + generacionesLima[i] + "</div>";
+    }
+
+  })
 }
 
 
@@ -21,29 +31,4 @@ let sede = function(){
 
 
 
-/*let clicking = function(){
-  fetch(api).then(function(datos){
-  return datos.json();
-  }).then(function(data){
-  console.log(data.results[0].name.first);
-    let nombre = data.results[0].name.first; 
-    let apellido = data.results[0].name.last;
-    let fullnameAPI = nombre + ' ' + apellido;
-    
-    fullname.innerHTML = fullnameAPI;
-    
-    
-    let emailAPI = data.results[0].email;
-    email.innerHTML = emailAPI;
-    
-    let usernameAPI = data.results[0].login.username;
-    username.innerHTML = usernameAPI;
-    
-    let cityAPI = data.results[0].location.city;
-    city.innerHTML = cityAPI;
-    
-    let avatarAPI = data.results[0].picture.large;
-    avatar.setAttribute("src", avatarAPI);
 
-  })
-} */    
