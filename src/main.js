@@ -1,4 +1,6 @@
-let sede =document.getElementsByClassName("col-12");
+// BOTONES DE LOGIN 
+//let sede =document.getElementsByClassName("col-12");
+let sede = document.getElementById("buttons");
 let ingresar =document.getElementById("ingresar");
 let inputName = document.getElementById("input-name");
 let password = document.getElementById("input-password");
@@ -20,5 +22,22 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
         alert("Usuario no identificado");
     }
 });
+
+// LLAMANDO JSON
+
+const json = "../data/laboratoria.json";
+    
+const gettingData = () => {
+    fetch(json).then(res => res.json()) //Mando a llamar a json mediante fetch, entonces le digo que esa información la convierta en archivo json.
+    .then((laboratoria => {   //Aquí le asigo el nombre de laboratoria a la información que envió.
+    campus(laboratoria);  //Aquí estoy diciendo que a mi siguiente función (campus)le estoy mandando la data.
+    })
+}
+
+gettingData();
+
+const campus = (laboratoria) => {
+ 
+}
 
 
