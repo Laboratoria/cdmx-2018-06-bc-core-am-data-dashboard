@@ -21,22 +21,39 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
     }
 });
 
+// LLAMANDO JSON
 
-const json = '../data/laboratoria.json';// sabemos que tiene que haber un fetch para "jalar" la info. de la carpeta laboratoria.json, pero como está en un servidor necesitamos cargarlo. y cerrarlo después
-
-const getData = () => {// cuando jale la información, quiero que la convierta en json con el método .json()
-    fetch(json).then (response => response.json())// haciendo fetch de json y aplicando las promesas .then para que realicen una acción (función)
-    .then((res)=>{
-        const generations = computeGenerationStats(res);
-        const users= computeStudentsStats(res);
-        drawCampus(generations);
+const json = "../data/laboratoria.json";
+    
+const gettingData = () => {
+    fetch(json).then(res => res.json()) //Mando a llamar a json mediante fetch, entonces le digo que esa información la convierta en archivo json.
+    .then((laboratoria => {   //Aquí le asigo el nombre de laboratoria a la información que envió.
+    campus(laboratoria);  //Aquí estoy diciendo que a mi siguiente función (campus)le estoy mandando la data.
     })
-};
-getData();
+}
+
+gettingData();
+
+const campus = (laboratoria) => {
+ 
+}
+
+
+// const json = '../data/laboratoria.json';// sabemos que tiene que haber un fetch para "jalar" la info. de la carpeta laboratoria.json, pero como está en un servidor necesitamos cargarlo. y cerrarlo después
+
+// const getData = () => {// cuando jale la información, quiero que la convierta en json con el método .json()
+//     fetch(json).then (response => response.json())// haciendo fetch de json y aplicando las promesas .then para que realicen una acción (función)
+//     .then((res)=>{
+//         const generations = computeGenerationStats(res);
+//         const users= computeStudentsStats(res);
+//         drawCampus(generations);
+//     })
+// };
+// getData();
     
 
-const drawCampus = (data) => {
-    const sedes = Object.keys(data)
-}
+// const drawCampus = (data) => {
+//     const sedes = Object.keys(data)
+// }
 
 
