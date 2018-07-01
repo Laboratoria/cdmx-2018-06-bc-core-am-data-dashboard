@@ -6,78 +6,84 @@
   <!--  CSS  -->
   <link rel="stylesheet" type="text/css" href="style.css">
   <!-- BOOTSTRAP  -->
-  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 
 </head>
 <body>
+
+  <header>
+        <div>
+          <img class="hambur" src="multimedia/lista.png">
+          <div class="usuario" >
+          <img src="multimedia/chica.png">
+          Bienvenida
+          </div>
+
+        </div>
+  </header>
+
+
   <!--MENU-->
   <nav>
     <!--SEDES-->
     <div class="menu">
       <input  type="checkbox" id="check1">
       <label for="check1">
-        <img src="multimedia/universidad1.png">
+      <img src="multimedia/universidad1.png">
         Sedes
       </label>
         <ul>
-          <li><a href="">submenu1</a></li>
-          <li><a href="">submenu2</a></li>
-          <li><a href="">submenu3</a></li>
-          <li><a href="">submenu4</a></li>
+         <!--LIMA-->
+         <input  type="checkbox" id="check-lima">
+         <label for="check-lima">
+          <li>LIMA</li>
+         </label> 
+          <ul>
+            <li><a href="">4ta Generación</a></li>
+            <li><a href="">5ta Generación</a></li>
+            <li><a href="">6ta Generación</a></li>
+          </ul>
+          <!--MÉXICO-->
+          <input  type="checkbox" id="check-mex">
+          <label for="check-mex">
+            <li>MÉXICO</li>
+          </label>
+          <ul>
+            <li><a href="">4ta Generación</a></li>
+            <li><a href="">5ta Generación</a></li>
+            <li><a href="">6ta Generación</a></li>
+          </ul>
+
+          <li><a href="">SANTIAGO</a></li>
         </ul>
       
     </div>
-    <!--GENERACIONES-->
-    <div class="menu">
-      <input type="checkbox" id="check2">
-      <label for="check2">
-        <img src="multimedia/birrete.png">
-        Generaciones
-      </label>
-        <ul>
-          <li><a href="">submenu1</a></li>
-          <li><a href="">submenu2</a></li>
-          <li><a href="">submenu3</a></li>
-          <li><a href="">submenu4</a></li>
-        </ul>
-      
-    </div>
-    <!--ALUMNAS-->
-    <div class="menu">
-      <input type="checkbox" id="check3">
-      <label for="check3">
-        <img src="multimedia/estudiante.png">
-        Alumnas
-      </label>
-        <ul>
-          <li><a href="">submenu1</a></li>
-          <li><a href="">submenu2</a></li>
-          <li><a href="">submenu3</a></li>
-          <li><a href="">submenu4</a></li>
-        </ul>
-      
-    </div>
-    <!--EXTRAS-->
-    <div class="menu">
-      <input type="checkbox" id="check4">
-      <label for="check4">
-        <img src="multimedia/libros.png">
-        Extras
-      </label>
-        <ul>
-          <li><a href="">submenu1</a></li>
-          <li><a href="">submenu2</a></li>
-          <li><a href="">submenu3</a></li>
-          <li><a href="">submenu4</a></li>
-        </ul>
+   
       
     </div>
   </nav>
 
-  <input id="sed" type="button" name="" value="sedes">
+  <div id="sedes">
+  <input id="sedesAll" type="button" name="" value="sedes">
+  </div>
+
+  <div id="generaciones">
+  <input id="sed" type="button" name="" value="generaciones">
+  </div>
+
+  <div id="alumnas">
+  <input id="alumnasA" type="button" name="" value="alumnas">
+  </div>
+
+
+
+
+
+
+
     <script src="main.js"></script>
   
 </body>
