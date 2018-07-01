@@ -1,6 +1,7 @@
 //url para obtener el json
 let url = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
 //crear let para poder pintar datos
+
 let showGeneraciones = document.querySelector("#sedes");
 let showSedes = document.querySelector("#generaciones");
 let showAlumnas = document.querySelector("#alumnas");
@@ -17,12 +18,12 @@ sed.addEventListener("click", function () {
   generacion();
 })
 
+
 //ALUMNAS
 
-alumnasA.addEventListener("click", function () {
-  alumnas();
+alumnasA.addEventListener("click", function(){
+  alumnas(); 
 })
-
 
 let sede = function () {
   fetch(url).then(function (datos) {
@@ -36,9 +37,8 @@ let sede = function () {
     for (let i = 0; i < allSedes.length; i++) {
       showSedes.innerHTML += "<div>" + allSedes[i] + "</div>";
     }
-
   })
-}
+
 
 
 let generacion = function () {
@@ -52,12 +52,8 @@ let generacion = function () {
     console.log(sedesLima[0]);
     for (let i = 0; i < sedesLima.length; i++) {
       showSedes.innerHTML += "<div>" + sedesLima[i] + "</div>";
-    }
-
   })
 }
-
-
 
 let alumnas = function () {
   fetch(url).then(function (datos) {
