@@ -22,7 +22,9 @@ Conforme a esto haremos nuestro primer sketch tratando de cubrir las necesidades
 
 
 [Cuestionario del squad](https://goo.gl/forms/BXgYeoIpGxjYeaWF3)
+
 [Entrevist de  Estef Y Josc](https://drive.google.com/open?id=1ycNiDHLAAmdJVMujJPte19xgeIQGglg7)
+
 [Audio de entrevista de Florencia](https://drive.google.com/open?id=1RE-8SneGCdT9xByVd7m3r2tfd7xFTUhL)
 
 Iniciamos con una idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
@@ -30,10 +32,14 @@ Iniciamos con una idea de sketch que a continuación presentamos, su diagrama de
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/sketch1.png)
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/sketch2.png)
 
+El diagrama de flujoparecia sencillo, y lo era, pero no era eficiente.
+
+![Flujo](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/Flujo.png)
+
 Nos percatamos que eran demasiados HTML's y muchos botones, no era nada práctico y era un poco tedioso.
 
 Esta segunda idea, se nos hizo más viable.
 
-![sketch](Images/img_20180624_110803.jpg "Sketch")
-![sketch](Images/img_20180624_110803_1024.jpg "Sketch1")
-![sketch](Images/img_20180624_110814.jpg "Sketch2")
+![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110803_1024.jpg "Sketch")
+![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110803.jpg "Sketch1")
+![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110814.jpg "Sketch2")
