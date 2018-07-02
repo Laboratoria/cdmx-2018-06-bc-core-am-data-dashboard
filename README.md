@@ -43,3 +43,9 @@ Esta segunda idea, se nos hizo más viable.
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110803_1024.jpg "Sketch")
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110803.jpg "Sketch1")
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110814.jpg "Sketch2")
+
+Aquí dejo imágenes de lo que podria ser nuestra ultima versión, habra ajustes según se vayan presentando las necesidades de nuestro usuario, pero tomando en cuenta también las limitaciones de nuestro dead line.
+
+Se agregó una página de log in, pues para el usuario es importante la seguridad de los datos que manejara.
+
+Se trató de optimizar para esta entrega la data bien organizada y especifica, así no sería dificil de leer y se enfocará en la necesidad principal del usuario. Los resultados que arrojaron las entrevistas son que, es importante tener principalmente el avance general de la generación en formato de porcentaje y posteriormente un porcentaje personal por alumna, uno geneal y uno de cada tema del LMS, junto con los datos generales de la alumna.
