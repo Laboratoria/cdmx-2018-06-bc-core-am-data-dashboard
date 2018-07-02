@@ -70,7 +70,25 @@ __4. Data proporcionada:__
 __5. Insights del negocio:__
 
 ### **3. Ideación**
-(Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
+Base a todo lo anterior, se tomo como elemento clave la navegación del usuario, ya que dependiendo de la facilidad con la que pueda acceder a lo que busca todo resultara mas intuitivo, por lo mismo se puso como punto central el menú de navegación, se propone que a través de este se pueda acceder de manera fácil y rápida a la info que se busca.
+__3.1 Diagrama de Flujo
+Se propone un total de cuatro views: login, principal, generaciones y alumnas.
+Login: en el cual se accederá a view-general, en esta el usuario deberá ingresar tanto nombre y contraseña.
+View-general: en esta se podrá observar un icono el cual al darle click deslizara el menú a través de este se puede acceder a: sedes, generaciones, alumnas.
+En esta misma view se puede observar datos generales de las sedes como las generaciones y el promedio correspondiente a estas, también a través de esta se puede acceder a la view de generaciones principal.
+View Generaciones: En esta se puede acceder a datos como alumnas de una generación en especifico, conociendo los nombres y correos de las alumnas correspondientes a esta generación, y también a su nivel de completitud, y por ultimo se puede acceder a la view de alumnas.
+También hay una serie de botones en los cuales se puede elegir el orden en el que se quiere ver los datos de alumnas: en orden ascendente dependiendo del nivel de completitud, mayor de 90 o menor a 60 en nivel de completitud.
+View de Estudiantes: en esta se pueden acceder a datos básicamente de las alumnas como  nivel de completitud, los temas completados y cuales quedan pendientes, el tiempo invertido.__
+__3.2 Composición
+La pantalla estará dividida siempre en tres header, menú y contenido general,
+El contenido general será una tabla la cual tendrá filas y columnas, para poder jerarquizar la información y que esta sea mas legible.
+A través de todo lo anterior se busca resaltar la información clave para una mejor usabilidad.__
+__3.3 Paleta de color__
+(imagenes/colores.png)
+__3.4 Tipografía.__
+(imagenes/colores)
+
+
 
 ### **4. Prototipado**
 (Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
