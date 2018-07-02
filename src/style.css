@@ -1,28 +1,281 @@
 @import url('https://fonts.googleapis.com/css?family=Poor+Story');
 
-#Images{
-  resize: both;
-  width: 50%;  /*ancho*/
-  margin: 100px 500px;/*100 de arriba 500 a los lados*/
-  align-items: center;
+*{/*para quitar los margenes por defecto de la web*/
+  margin: 0px;
+  padding: 0px;
+  background: url("Images/blueyellow.png") no-repeat center center fixed;
+  background-size: cover;
+  max-width: 100%;
 }
 
-.button {
-  background: rgb(255, 165, 0);/*color de botón*/
-  color: rgb(255, 255, 255);/*color de letra*/
-  display: inline-block;/*para que este un boton al lado de otro*/
-  font-size: 60%;/*Tamaño de la fuente*/
+html {
+  background: url("Images/blueyellow.png") no-repeat center center fixed;
+  background-size: cover;
+  max-width: 100%;
+}
+
+/*HTML VistaGeneral, sedes, generaciones*/
+.navbar{
+  width: 100%;
+  background-color: #f7b617;
+  position: static;
+  float: left;
   font-family: 'Poor Story', cursive;
-  margin: 120px ; /*margen hacia todos los lados */
-  padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados*/
-  text-align: center;/*Texto centrado en los botone*/
-  width: 400px; /*anchura- se tiene que agregar pues al poner el inline-block ya no ocupa toda la línea */
+  color: #f0f8ff;
+}
+
+.navbar ul{
+  width: auto;
+  float: right;
+  margin-top: 8px;
+}
+
+.navbar li{
+  display: inline-block;
+  padding: 15px 15px;
   text-decoration: none;/*Quitar el subrayado por defecto que tine <a>*/
+
+}
+
+.navbar a{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Poor Story', cursive;
+  font-size: 20px;
   box-shadow: 0px 3px 2px rgb(120, 120, 120);/*Efecto de la sombra del botón*/
+  color: rgb(255, 255, 255);/*color de letra*/
+  text-decoration: none;
+  }
+
+.navbar a:hover{/*el efecto va hasta el finale de todos nuestos estilos de color*/
+  box-shadow: 0px 0px 0px;
+  padding-top: 7px;
+}
+
+/*HTML log in*/
+.loginbox{
+  width: 320PX;
+  height: 420px;
+  background: #cccccc;/*color de placeholder*/
+  color: #191919;/*Color de escritura al poner usuario*/
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50% -50%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  font-style: 'Poor Story', cursive;
+}
+
+.loginbox{
+  font-style: 'Poor Story', cursive;
+  width: 320px;
+  height: 420px;
+  background: rgba(255, 250, 240, 0.5);
+  color: #000000;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  background-blend-mode: lighten;
+  padding: 70px 30px;
+
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50%;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    font-style: 'Poor Story', cursive;
+}
+
+.loginbox p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-style: 'Poor Story', cursive;
+}
+
+.loginbox input{
+  width: 100%;
+  margin-bottom;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #191919;
+    font-size: 13px;
+    font-style: 'Poor Story', cursive;
+  }
+
+
+.button{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #f7b617;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 20px;
+    font-style: 'Poor Story', cursive;
+    }
+
+.button:hover{
+    cursor: pointer;
+    background: #daa520;
+    color: #000;
+    font-style: 'Poor Story', cursive;
+
+}
+
+.button a{
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 40px;
+  color: darkgrey;
+  font-style: 'Poor Story', cursive;
+}
+
+.button a:hover{
+    color: #ffc107;
+}
+
+.Menu {
+    display: none;
+    position: relative;
+}
+    /* Three basic menu layouts */
+    /* This also enforces that menu is a ul, and that
+     * layout modifier is specified
+     */
+    ul.Menu.-horizontal,
+    ul.Menu.-vertical {
+        display: inline-block;
+    }
+    ul.Menu.-floating {
+        display: block;
+        position: absolute;
+    }
+
+    /* Menu and menu-item layout */
+    .Menu,
+    .Menu li,
+    .Menu li > ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    .Menu li {
+        display: block;
+        position: relative;
+        white-space: nowrap;
+        word-break: keep-all;
+    }
+    .Menu.-horizontal > li {
+        display: inline-block;
+        float: left;
+    }
+    .Menu li > * {
+        display: block;
+        position: relative;
+    }
+    .Menu li > ul {
+        position: absolute;
+        min-width: 100%;
+        top: 0px;
+        left: 100%;
+    }
+    .Menu.-horizontal.-alignRight li > ul {
+        left: auto;
+        right: 100%;
+    }
+    .Menu.-horizontal.-alignRight > li > ul {
+        right: 0px;
+    }
+    .Menu.-horizontal > li > ul {
+        top: auto;
+        left: auto;
+    }
+
+    /* Comportamiento de munú */
+    .Menu li > ul,
+    .Menu.-floating {
+        display: none;
+    }
+    .Menu li > ul.-visible,
+    ul.Menu.-floating.-visible {
+        display: block;
+    }
+
+
+/*HTML de menús*
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px; /* Used in this example to enable scrolling
+  }
+
+.button {
+  background: rgb(255, 165, 0);/*color de botón
+  color: rgb(255, 255, 255);/*color de letra
+  display: inline-block;/*para que este un boton al lado de otro
+  font-size: 60%;/*Tamaño de la fuente
+  font-family: 'Poor Story', cursive;
+  margin: 120px ; /*margen hacia todos los lados
+  padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados
+  text-align: center;/*Texto centrado en los botone
+  width: 400px; /*anchura- se tiene que agregar pues al poner el inline-block ya no ocupa toda la línea
+  text-decoration: none;/*Quitar el subrayado por defecto que tine <a>
+  box-shadow: 0px 3px 2px rgb(120, 120, 120);/*Efecto de la sombra del botón
   border-radius: 50px;
 }
 
-.button:hover{/*el efecto va hasta el finale de todos nuestos estilos de color*/
+.button:hover{/*el efecto va hasta el finale de todos nuestos estilos de color
   box-shadow: 0px 0px 0px;
   padding-top: 7px;
 }
@@ -31,5 +284,12 @@
   font-size: 40px;
   font-family: 'Poor Story', cursive;
   text-align: center;
-
 }
+
+.navbar{
+  width: 100%;
+  background-color: rgb(255, 165, 0);
+  margin: 120px ; /*margen hacia todos los lados
+  padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados
+  text-align: center;
+}*/

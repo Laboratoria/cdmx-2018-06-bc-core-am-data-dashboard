@@ -1,4 +1,30 @@
+<<<<<<< HEAD
 window.computeStudentsStats = (laboratoria) => {
+=======
+//Aqui van las funciones globles.
+window.computeStudentsStats = (laboratoria) => {
+
+}
+
+
+window.computeGenerationsStats = (laboratoria) => {
+
+}
+
+window.sortStudents = (students, orderBy, orderDirection) => {
+
+}
+
+
+window.filterStudents = (students, search) => {
+
+}
+
+
+
+const Alumnas = document.getElementById('jsonBtn');
+Alumnas.addEventListener('click', cargarJSON);
+>>>>>>> 3e5d74afc1e7711916ce71d5b36ed0dad96251bd
 
 }
 
