@@ -77,7 +77,7 @@ __5. Insights del negocio:__
 
 Sketch: (Adjuntar liga)
 
-Prototipo en figma: (Adjuntar liga)
+Prototipo en figma: (https://www.figma.com/proto/c5pPKa7r0yXGu2lQEaEzocql/data?node-id=4%3A3&scaling=min-zoom)
 
 ### **5. User testing**
 (Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
