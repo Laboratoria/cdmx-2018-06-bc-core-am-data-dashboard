@@ -1,3 +1,8 @@
+console.log("main.js conectado");
+//Asignar variable a laboratoria.json desde el localhost
+const laboratoria = "../data/laboratoria.json";
+console.log(laboratoria);
+
 //Login provisional
 const usuaria = "Lucile";
 const password = "Devendra";
@@ -11,5 +16,9 @@ function login (usuaria, pasword) {
     }
     
 }
-//Asignar variable a laboratoria.json desde el localhost
-const laboratoria = "../data/laboratoria.json";
+
+//Función para ejecutar la función en los botones del menú sedes
+const selecionSedes = () => {
+    document.getElementById("Lima").addEventListener("click", sedeLima); 
+}
+//Función para ejecutar la función en los botones del menú generaciones
