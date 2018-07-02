@@ -13,26 +13,34 @@
 <div class="logo">
   <img class = "media" src = "../Images/LaboratoriaLogoNoBack.png" alt="">
 </div>
-<div class="Header">
-<ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Sedes</a></li>
-    <ul>
-      <li><a href="#">Lima</a></li>
-      <li><a href="#">Santiago</a></li>
-      <li><a href="#">México</a></li>
-        </ul>
-  <li><a href="#">Stats</a></li>
-  <li><a href="#">Search</a></li>
 
-</ul>
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Lima</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Santiago</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">México</button>
 
+<div id="Home" class="tabcontent">
+       <table id="table" >  </table>
 </div>
-<section>
-  Hola
-</section>
+    
+
+<div id="News" class="tabcontent">
+  
+  <table id="Sedes"></table>
+  </div>>
+
+<div id="Contact" class="tabcontent">
+  
+  <table id="stats">
+  </table>
+</div>
+
+
+
+
 
     <script src="../data.js"></script>
     <script src="../main.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
   </body>
 </html>
