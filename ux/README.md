@@ -77,7 +77,7 @@ __2. Lo que los usuarios esperan obtener:__
 
 __3. Insights:__
 
-* Crear un Data Dashboard
+* Número total de estudiantes activas e inactivas  por generación.
 
 __4. Data proporcionada:__
 
@@ -96,7 +96,7 @@ __4. Data proporcionada:__
 
 __5. Insights del negocio:__
 
-* Utilizar un Data Dashboard
+* Entender mejor su negocio y tomar decisiones apropiadas.
 
 ### **3. Ideación**
 
@@ -104,13 +104,37 @@ Una interfaz donde las TMs puedan ver y usar la data de progreso del LMS, para e
 
 ### **4. Prototipado**
 
-![Sketch](IMG-20180624-WA0001.jpg)
-
-[Prototipo](https://drive.google.com/file/d/11JHUu7A2Of50TwyKb7-vl6iCIN1-7YKR/view?ts=5b316bd4)
-[Prototipo](https://drive.google.com/file/d/104AMEvT1QFsndra1yx-ESjQYCuUrChuL/view?ts=5b316bd4)
-[Prototipo](https://drive.google.com/file/d/1dGhYMYBvE536mon03oSSQO4WIu3qnoF2/view?ts=5b316bd4)
+![Sketch](imagenes/scketch1.jpg)
+![Sketch](imagenes/scketch2.jpg)
+![Sketch](imagenes/scketch3.jpg)
+![Sketch](imagenes/scketch4.jpg)
+![Prototipo en Blanco y Negro](imagenes/prototipoblancoynegro.jpg)
+![Prototipo en Photoshop](imagenes/log in.png)
+![Prototipo en Photoshop](imagenes/sedes-gen.png)
+![Prototipo en Photoshop](imagenes/alumnas.png)
 
 ### **5. User testing**
 
-Se realizó un sketching del Data Dashboard y se presentó a Lucile Baratier (Training Manager CDMX), nos comenta que le agregaría valor tener una gráfica que despliegue el avance de cada una de las alumnas en los temas UX, HTML, CSS, JS etc  del 0 al 100 %. Por ejemplo una alumna en CSS lleva un 50%, en JS 20%, HTML 100%, UX 10%  esto le indica que no está avanzando en los temas más
-importantes como JS y UX ya que tienen un porcentaje bajo. Con esta información puede tomar decisiones de cómo ayudar a mejorar  el  progreso de la estudiante.
+Se presento el prototipo del Data Dashboard a Karla Rejas (Training Manager de Guadalajara), nos comenta que el diseño y los colores van acorde a la identidad de Laboratoria, el Dashboard es fácil de interpretar e intuitivo.
+
+### **6. Argumentación de Visual Design**
+
+<Laboratoria> ya cuenta con una identidad por eso decidimos que el Data Dashboard tendría  el amarillo como color principal y magenta. Se agregaron los corchetes ya que  son su principal símbolo y son vistos como los símbolos del progreso y la transformación.
+
+La tipografia que se utilizo es “Bitter” para los títulos y una “Open sans” para los textos, es contundente al expresarse por escrito, pero liviana al leer.
+
+Por ultimo se incluyo el slogan, “talento que transforma”, ya que enriquece su identidad visual.  
+
+## **Se anexa la encuesta que se envio a las TMs de Guadalajara y Lima**
+
+1.    ¿Qué herramientas utilizas normalmente para consultar la data de las alumnas de Laboratoria?
+
+2.    ¿Qué tan funcional es? ¿Por qué?
+
+3.    ¿Con que frecuencia consultas esta información?    
+
+4.    ¿En algún momento has sentido que estas herramientas obstaculizan el flujo de tus actividades?
+
+5.    ¿Cuáles son los datos más relevantes que te gustaría que mostrara la interfaz?
+
+6.    ¿Normalmente en que dispositivos monitoreas estos datos?
