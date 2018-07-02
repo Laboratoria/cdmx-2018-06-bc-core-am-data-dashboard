@@ -1,3 +1,8 @@
+console.log("main.js conectado");
+dataDashboard.conectado();
+
+dataDashboard.getData();
+
 //Login provisional
 const usuaria = "Lucile";
 const password = "Devendra";
@@ -9,11 +14,15 @@ function login (usuaria, pasword) {
     if (inputUser == usuaria && pasword == passwordUser) {
         return document.getElementById("welcome").write.usuaria
     }
-
 }
-//Asignar variable a laboratoria.json desde el localhost
-const laboratoria = "../data/laboratoria.json";
-
-
-
-// comentario
+//Función para ejecutar la función en los botones del menú sedes
+const seleccionSedeL = () => {
+    document.getElementById("Lima").addEventListener("click", sedeLima); 
+}
+const seleccionSedeM = () => {
+    document.getElementById("Mexico").addEventListener("click",sedeMx);
+}
+const seleccionSedeS = () => {
+    document.getElementById("Santiago").addEventListener("click", sedeSantiago);
+}
+//Función para ejecutar la función en los botones del menú generaciones
