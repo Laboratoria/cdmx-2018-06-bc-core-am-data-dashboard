@@ -25,10 +25,10 @@ Conforme a esto haremos nuestro primer sketch tratando de cubrir las necesidades
 [Entrevist de  Estef Y Josc](https://drive.google.com/open?id=1ycNiDHLAAmdJVMujJPte19xgeIQGglg7)
 [Audio de entrevista de Florencia](https://drive.google.com/open?id=1RE-8SneGCdT9xByVd7m3r2tfd7xFTUhL)
 
-Inicamos con una idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
+Iniciamos con una idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
 
-![sketch](/Images/sketch1.jpg)
-![sketch](/Images/sketch2.jpg)
+![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/sketch1.png)
+![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/sketch2.png)
 
 Nos percatamos que eran demasiados HTML's y muchos botones, no era nada práctico y era un poco tedioso.
 
