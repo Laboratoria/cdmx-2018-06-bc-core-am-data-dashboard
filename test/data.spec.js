@@ -102,16 +102,45 @@ describe('data', () => {
   });
 
   describe('sortStudents(students, orderBy, orderDirection)', () => {
-
-    it('debería retornar arreglo de estudiantes ordenado por nombre ASC');
-    it('debería retornar arreglo de estudiantes ordenado por nombre DESC');
-    it('debería retornar arreglo de estudiantes ordenado por porcentaje general ASC');
-    it('debería retornar arreglo de estudiantes ordenado por porcentaje general DESC');
+    it('debería retornar arreglo de estudiantes ordenado por nombre ASC',()=>{
+      const students = computeStudentsStats(fixtures);
+      const orderBy = "name";
+      const orderDirection = "ASC";
+      const processed = sortStudents(students, orderBy, orderDirection);
+      assert.equal(processed[0].name, "Aaliyah Lessie");
+    });
+    it('debería retornar arreglo de estudiantes ordenado por nombre DESC',()=>{
+      const students = computeStudentsStats(fixtures);
+      const orderBy = "name";
+      const orderDirection = "DESC";
+      const processed = sortStudents(students, orderBy, orderDirection);
+      assert.equal(processed[0].name, "Yolanda Zula");
+    });
+    it('debería retornar arreglo de estudiantes ordenado por porcentaje general ASC',()=>{
+      const students = computeStudentsStats(fixtures);
+      const orderBy = "percentage";
+      const orderDirection = "ASC";
+      const processed = sortStudents(students, orderBy, orderDirection);
+      assert.equal(processed[0].average, 46);
+    });
+    it('debería retornar arreglo de estudiantes ordenado por porcentaje general DESC',()=>{
+      const students = computeStudentsStats(fixtures);
+      const orderBy = "percentage";
+      const orderDirection = "DESC";
+      const processed = sortStudents(students, orderBy, orderDirection);
+      assert.equal(processed[0].average, 96);
+    });
   });
 
   describe('filterStudents(users, search)', () => {
-
-    it('debería retornar nuevo arreglo solo con estudiantes con nombres que contengan string (case insensitive)');
+    it('debería retornar nuevo arreglo solo con estudiantes con nombres que contengan string (case insensitive)',()=>{
+      //const { laboratoria } = fixtures;
+      const students = computeStudentsStats(fixtures);
+      const search = 'Aileen Edwyna';
+      const filter = filterStudents(students,search);
+      assert.equal(filter[0].name, 'Aileen Edwyna');
+      assert.equal(filter[1].name, 'Aileen Edwyna');
+    });
 
   });
 });
