@@ -1,4 +1,4 @@
-//loadsedes();
+loadsedes();
 const generation = () => { //FUNCION GENERACION DE ACUERDO A LA SEDE SELECCIONADA
 	document.getElementById('generation').innerHTML = ""; //Limiamps el select de generaciones cada vez que se seleccione una nueva sede
 	document.getElementById('tabla').innerHTML = ""; //Limpiamos la tabla cada vez que se cambie la sede
