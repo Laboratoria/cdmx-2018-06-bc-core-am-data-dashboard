@@ -21,9 +21,9 @@ Para ello implementaremos un cuestionario a la TMs de la sede de CDMX y algunos 
 Conforme a esto haremos nuestro primer sketch tratando de cubrir las necesidades con mayor importancia. Será una interfaz fluida y limpia. También se llevaron a cabo 2 entrevistas más, una videollamada y una presencial.
 
 
-[Cuestionario del squad] (https://goo.gl/forms/BXgYeoIpGxjYeaWF3)
-[Entrevist de  Estef Y Josc] (https://drive.google.com/open?id=1ycNiDHLAAmdJVMujJPte19xgeIQGglg7)
-[Audio de entrevista de Florencia] (https://drive.google.com/open?id=1RE-8SneGCdT9xByVd7m3r2tfd7xFTUhL)
+[Cuestionario del squad](https://goo.gl/forms/BXgYeoIpGxjYeaWF3)
+[Entrevist de  Estef Y Josc](https://drive.google.com/open?id=1ycNiDHLAAmdJVMujJPte19xgeIQGglg7)
+[Audio de entrevista de Florencia](https://drive.google.com/open?id=1RE-8SneGCdT9xByVd7m3r2tfd7xFTUhL)
 
 Inicamos con una idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
 
@@ -34,6 +34,6 @@ Nos percatamos que eran demasiados HTML's y muchos botones, no era nada práctic
 
 Esta segunda idea, se nos hizo más viable.
 
-![sketch](Images/img_20180624_110803.jpg)
-![sketch](Images/img_20180624_110803_1024.jpg)
-![sketch](Images/img_20180624_110814.jpg)
+![sketch](Images/img_20180624_110803.jpg "Sketch")
+![sketch](Images/img_20180624_110803_1024.jpg "Sketch1")
+![sketch](Images/img_20180624_110814.jpg "Sketch2")
