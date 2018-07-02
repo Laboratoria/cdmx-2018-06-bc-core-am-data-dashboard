@@ -1,7 +1,8 @@
 console.log("main.js conectado");
 dataDashboard.conectado();
-
-dataDashboard.getData();
+const laboratoria = "../data/laboratoria.json";
+console.log(laboratoria);
+dataDashboard.getData(laboratoria);
 
 //Login provisional
 const usuaria = "Lucile";
@@ -26,3 +27,4 @@ const seleccionSedeS = () => {
     document.getElementById("Santiago").addEventListener("click", sedeSantiago);
 }
 //Función para ejecutar la función en los botones del menú generaciones
+ 
