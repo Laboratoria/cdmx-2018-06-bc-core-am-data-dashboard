@@ -1,26 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Poor+Story');
 
+*{/*para quitar los margenes por defecto de la web*/
+  margin: 0px;
+  padding: 0px;
+}
 
 html {
   background: url("Images/blueyellow.png") no-repeat center center fixed;
-  background-size: auto;
+  background-size: cover;
   max-width: 100%;
-  height: 100%;
-  }
-
-/*.Images{
-  resize: both;
-  /*margin: 100px 100px;/*100 de arriba 500 a los lados
-  align-items: center;
-}*/
-
-body{
-  /* background: url(https://cde.canaln.pe/actualidad-mariana-salas-que-orgullo-que-zuckerberg-haya-mencionado-laboratoria-n254829-764x480-323020.jpg);*/
-  background-size: contain; ;/*Usa todo el fondo*/
-  background-position: center;
-  font-style: 'Poor Story', cursive;
 }
 
+/*HTML VistaGeneral, sedes, generaciones*/
+.navbar{
+  width: 100%;
+  background-color: #f7b617;
+  position: static;
+  float: left;
+  font-family: 'Poor Story', cursive;
+  color: #f0f8ff;
+}
+
+.navbar ul{
+  width: auto;
+  float: right;
+  margin-top: 8px;
+}
+
+.navbar li{
+  display: inline-block;
+  padding: 15px 15px;
+  text-decoration: none;/*Quitar el subrayado por defecto que tine <a>*/
+
+}
+
+.navbar a{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Poor Story', cursive;
+  font-size: 20px;
+  box-shadow: 0px 3px 2px rgb(120, 120, 120);/*Efecto de la sombra del botón*/
+  color: rgb(255, 255, 255);/*color de letra*/
+  text-decoration: none;
+  }
+
+.navbar a:hover{/*el efecto va hasta el finale de todos nuestos estilos de color*/
+  box-shadow: 0px 0px 0px;
+  padding-top: 7px;
+}
+
+/*HTML log in*/
 .loginbox{
   width: 320PX;
   height: 420px;
@@ -98,7 +127,8 @@ h1{
     font-style: 'Poor Story', cursive;
   }
 
-.loginbox input[type="submit"]{
+
+.button{
     border: none;
     outline: none;
     height: 40px;
@@ -109,7 +139,7 @@ h1{
     font-style: 'Poor Story', cursive;
     }
 
-.loginbox input[type="submit"]:hover{
+.button:hover{
     cursor: pointer;
     background: #daa520;
     color: #000;
@@ -117,7 +147,7 @@ h1{
 
 }
 
-.loginbox a{
+.button a{
   text-decoration: none;
   font-size: 12px;
   line-height: 40px;
@@ -125,10 +155,10 @@ h1{
   font-style: 'Poor Story', cursive;
 }
 
-.loginbox a:hover{
+.button a:hover{
     color: #ffc107;
-
-/*HTML de menús*/
+}
+/*HTML de menús*
 .navbar {
     overflow: hidden;
     background-color: #333;
@@ -155,25 +185,25 @@ h1{
   .main {
     padding: 16px;
     margin-top: 30px;
-    height: 1500px; /* Used in this example to enable scrolling */
+    height: 1500px; /* Used in this example to enable scrolling
   }
 
 .button {
-  background: rgb(255, 165, 0);/*color de botón*/
-  color: rgb(255, 255, 255);/*color de letra*/
-  display: inline-block;/*para que este un boton al lado de otro*/
-  font-size: 60%;/*Tamaño de la fuente*/
+  background: rgb(255, 165, 0);/*color de botón
+  color: rgb(255, 255, 255);/*color de letra
+  display: inline-block;/*para que este un boton al lado de otro
+  font-size: 60%;/*Tamaño de la fuente
   font-family: 'Poor Story', cursive;
-  margin: 120px ; /*margen hacia todos los lados */
-  padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados*/
-  text-align: center;/*Texto centrado en los botone*/
-  width: 400px; /*anchura- se tiene que agregar pues al poner el inline-block ya no ocupa toda la línea */
-  text-decoration: none;/*Quitar el subrayado por defecto que tine <a>*/
-  box-shadow: 0px 3px 2px rgb(120, 120, 120);/*Efecto de la sombra del botón*/
+  margin: 120px ; /*margen hacia todos los lados
+  padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados
+  text-align: center;/*Texto centrado en los botone
+  width: 400px; /*anchura- se tiene que agregar pues al poner el inline-block ya no ocupa toda la línea 
+  text-decoration: none;/*Quitar el subrayado por defecto que tine <a>
+  box-shadow: 0px 3px 2px rgb(120, 120, 120);/*Efecto de la sombra del botón
   border-radius: 50px;
 }
 
-.button:hover{/*el efecto va hasta el finale de todos nuestos estilos de color*/
+.button:hover{/*el efecto va hasta el finale de todos nuestos estilos de color
   box-shadow: 0px 0px 0px;
   padding-top: 7px;
 }
@@ -182,6 +212,12 @@ h1{
   font-size: 40px;
   font-family: 'Poor Story', cursive;
   text-align: center;
-
-
 }
+
+.navbar{
+  width: 100%;
+  background-color: rgb(255, 165, 0);
+  margin: 120px ; /*margen hacia todos los lados
+  padding: 20px 20px; /*20 hacia arriba y abajo y 20 hacia los lados
+  text-align: center;
+}*/
