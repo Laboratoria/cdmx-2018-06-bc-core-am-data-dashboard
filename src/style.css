@@ -1,0 +1,22 @@
+*{margin:0; padding:0;}
+header {
+    text-align: center;
+    background: white;
+    margin-bottom:20px;
+    overflow: hidden;
+}
+nav{
+    border-block-end-color: aliceblue;
+}
+#encabezado{
+    margin-left: 0;
+    margin-top: 2em;
+}
+body{
+    background-color: rgb(241, 235, 238);
+    color: black;
+}
+#responsive-img logo{
+    height: 50px;
+    width: 50px;
+}
