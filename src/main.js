@@ -1,7 +1,7 @@
 console.log("main.js conectado");
-//Asignar variable a laboratoria.json desde el localhost
-const laboratoria = "../data/laboratoria.json";
-console.log(laboratoria);
+dataDashboard.conectado();
+
+dataDashboard.getData();
 
 //Login provisional
 const usuaria = "Lucile";
@@ -14,11 +14,15 @@ function login (usuaria, pasword) {
     if (inputUser == usuaria && pasword == passwordUser) {
         return document.getElementById("welcome").write.usuaria
     }
-    
 }
-
 //Función para ejecutar la función en los botones del menú sedes
-const selecionSedes = () => {
+const seleccionSedeL = () => {
     document.getElementById("Lima").addEventListener("click", sedeLima); 
+}
+const seleccionSedeM = () => {
+    document.getElementById("Mexico").addEventListener("click",sedeMx);
+}
+const seleccionSedeS = () => {
+    document.getElementById("Santiago").addEventListener("click", sedeSantiago);
 }
 //Función para ejecutar la función en los botones del menú generaciones

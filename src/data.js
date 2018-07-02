@@ -1,41 +1,58 @@
+console.log("data.js está conectado");
+//Asignar variable a laboratoria.json desde el localhost
+const laboratoria = "../data/laboratoria.json";
+console.log(laboratoria);
+
 //Se crea el objeto dataDashboard como método del objeto window
 window.dataDashboard = {
-
-getData : (laboratoria) =>  {
+conectado : () => { console.log("holaDashBoard");},
+getData : () =>  {
+   laboratoriaData = "";
 //Realizar enlace fetch con arrow function
-const gettingFetch = () => {
-    fetch(laboratoria).then((response) => {response.json(); })
-    console.log(response.json)
+fetch(laboratoria).then((response) => {laboratoriaData = response.json();       
+    console.log(laboratoriaData);
+})
 //se ejecuta como .json
-    .then((sedes) => {
+.then((chooseSede) => {
+    console.log(response);
 //Debe enlazar la funcion al click en "sedes"
-        
-const chooseSede = "";
-        if (addEventListener("click", sedeLima) = true) { 
+        if (addEventListener("click", sedeLima)) { 
             const sedeLima = () => {
-                chooseSede = laboratoria.lima;
-                
+                chooseSede = laboratoria.lima; 
+                console.log(chooseSede);
+                if (addEventListener("click", terceraGen)) {
+                    chooseSede = lima.tercera;
+                    console.log(chooseSede);
+                }
+                else if (addEventListener("click", cuartaGen)) {
+                    chooseSede = lima.cuarta;
+                    console.log(chooseSede);
+                }
+                else {
+                    chooseSede = lima.quinta;
+                    console.log(chooseSede);
+                }
             }
          }
-        else if () {
+        else if (addEventListener("click", sedeMx)) {
             const sedeMX = () => {
                 chooseSede = laboratoria.mexico;
             }
         }
-        else () {
+        else {
             const sedeSantiago = () => {
                 chooseSede = laboratoria.santiago;
             }
         }
     })
-    .catch((errordeM&V) => {
-        console.log(errordeM&V);
+    .catch((error) => {
+        console.log("errordeMV");
     });
-        
 
-    })
-}
+    }
+    //se cierra getData
 
+ /*
 const computeStudentsStats = (laboratoria) => {
 
 }
@@ -55,5 +72,8 @@ const filterStudents = (students, search) => {
 
 //se cierra el método getData del objeto dataDashboard
 }
+*/
+
+
 //cierre del objeto window
 };
