@@ -1,16 +1,18 @@
 
+const laboratoria = "https://api.myjson.com/bins/1amyo6";
 let goes= document.getElementById("go");
-goes.addEventListener("click",go())
+goes.addEventListener("click",go)
 go =()=>{
   if (document.form.password.value=='tmmex2018' && document.form.login.value=='Lucile'){
           document.form.submit();
+          gettinAPI(laboratoria);
       }
       else{
            alert("Porfavor ingrese Usuario y Contraseña correctos.");
       }
   }
 
-  const laboratoria = "https://api.myjson.com/bins/1amyo6";
+
   let getData = document.getElementById("get");
   let result = document.getElementById("result");
 
