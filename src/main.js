@@ -9,7 +9,11 @@ function login (usuaria, pasword) {
     if (inputUser == usuaria && pasword == passwordUser) {
         return document.getElementById("welcome").write.usuaria
     }
-    
+
 }
 //Asignar variable a laboratoria.json desde el localhost
 const laboratoria = "../data/laboratoria.json";
+
+
+
+// comentario
