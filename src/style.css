@@ -15,10 +15,6 @@ header{
     font-size: 18px;
 }
 
-.hambur{
-	margin: 23px 0 0 23px;
-}
-
 .usuario{
     float: right;
     margin-right: 100px;
@@ -29,13 +25,36 @@ header{
 
 
 /*  MENU   */
+.hambur{
+	margin: -65px 0 0 23px;
+    cursor: pointer;
+    position: fixed;
+}
+
+#icono{
+	display: none;
+}
+
+#icono:checked ~ .menu-all{
+	max-height: 1200px;
+	transform: all;}
+
+.menu-all{
+	width: 190px;
+	max-height: 0;
+	list-style: none;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .4s linear;
+	overflow: hidden;
+	position: fixed;
+}
 nav{
 	width: 190px;
 	height: auto;
     margin: 10px;
-	
-
-
+	font-family: 'Oswald', sans-serif;
+    	
 }
 .menu label{
 	display: block;
@@ -77,11 +96,17 @@ nav{
 
 .menu input:checked ~ ul{
 	height: auto;
-	max-height: 200px;
+	max-height: 1200px;
 	transform: all;
 
 }
 .icono{}
+
+.titu{
+ text-align: center;
+ font-size: 14px;
+ 
+}
 
 
 /*LOGIN*/
@@ -141,3 +166,41 @@ nav{
 .log{
     margin-top: 120px;
 }
+
+article{
+    border: solid;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+}
+/*VIEW GENERAL*/
+.box-generales{
+    border: solid;
+    width: 80%;
+    margin-left: auto;
+}
+
+.box1{
+	
+	display: inline-block;
+    width: 32%;
+}
+.titular{
+    background: #f8069df2;
+    height: 50px;
+    text-align: center;
+    padding: 18px 0 0px;
+    color: white;
+    font-size: 24px;
+}
+.cuerpo{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
