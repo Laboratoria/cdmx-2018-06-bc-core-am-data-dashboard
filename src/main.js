@@ -1,6 +1,6 @@
 
-let go= document.getElementById("go");
-go.addEventListener("click",go)
+let goes= document.getElementById("go");
+goes.addEventListener("click",go())
 go =()=>{
   if (document.form.password.value=='tmmex2018' && document.form.login.value=='Lucile'){
           document.form.submit();
