@@ -33,9 +33,10 @@ lima.addEventListener("click", function(){
 console.log(data.lima.generacion.tercera.estudiantes);
 console.log(data.lima.generacion.cuarta.estudiantes);
 console.log(data.lima.generacion.quinta.estudiantes);
-console.log(data.lima.generacion.tercera.estudiantes[1].correo);
-console.log(data.lima.generacion.tercera.estudiantes[1].nombre);
-console.log(data.lima.generacion.tercera.estudiantes[1].progreso);
+console.log(data.lima.generacion.tercera.estudiantes[0].correo);
+console.log(data.lima.generacion.tercera.estudiantes[0].nombre);
+console.log(data.lima.generacion.tercera.estudiantes[0].progreso);
+console.log(data.lima.generacion.tercera.estudiantes[0].turno);
       })
 
   } 
@@ -61,7 +62,8 @@ console.log(data.mexico.generacion.cuarta.estudiantes);
 console.log(data.mexico.generacion.quinta.estudiantes);
 console.log(data.mexico.generacion.tercera.estudiantes[0].correo);
 console.log(data.mexico.generacion.tercera.estudiantes[0].nombre);
-console.log(data.mexico.generacion.tercera.estudiantes[0].progreso);  
+console.log(data.mexico.generacion.tercera.estudiantes[0].progreso); 
+console.log(data.mexico.generacion.tercera.estudiantes[0].turno);  
       })
 
    } 
@@ -87,6 +89,7 @@ console.log(data.santiago.generacion.quinta.estudiantes);
 console.log(data.santiago.generacion.tercera.estudiantes[0].correo);
 console.log(data.santiago.generacion.tercera.estudiantes[0].nombre);
 console.log(data.santiago.generacion.tercera.estudiantes[0].progreso);
+console.log(data.santiago.generacion.tercera.estudiantes[0].turno);
 
     
       })

@@ -41,9 +41,11 @@ Se podrán consultar los datos por sede, generación (promedio general) y por es
 
 Para el prototipo del producto se pensó en primer plano que el usuario iniciara sesión solicitando nombre y contraseña (Ya que son datos importantes, no cualquiera puede tener acceso a ellos). Al acceder el usuario podrá seleccionar la sede, y después la generación. Después de seleccionar la sede se desplegará una tabla con las siguientes columnas: nombre de la estudiante, porcentaje de progreso en general, porcentaje de temas terminados, tiempo completado por tema, temas terminados y temas no terminados. Se podrá acceder a la información de cada estudiante dándole click al nombre de la misma. Se desplegará otra pantalla donde aparecerá la información de avance por tema y subtema y una gráfica que hará más visible y claro el avance o retroceso.
  
-Sketch: ![sketch](Images/sketch1.jpg)
+Sketch:
+![sketch](img/sketch1.jpg)
 
-Prototipo: ![prototipo](Images/sketch1.jpg)
+Prototipo: 
+![prototipo](Prototipo/prototipo1.png)
 
 
 ### **5. User testing**
