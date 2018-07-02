@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <section class='container-fluid foundFont'>
+    <header class='row'>
+      <section class='col s12'>
+        <img class='responsive-img logo col s2' src="l_rgb_-01_360.png">
+
+        <div class="nav-wrapper col s10 offset-s2" id= "encabezado" class="navbar-fixed">
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </section>
+    </header>
+
+    <main class="row">
+      <aside class="col s2">
+
+        <ul class="col s12 collection">
+          <li class="collection-item option active" style="background-color: grey; color: #333333;">
+            <i class="material-icons">public</i>Sedes</li>
+          <li class="collection-item">
+            <i class="material-icons">school</i> Generaciones</li>
+          <li class="collection-item">
+            <i class="material-icons">people</i> Alumnas</li>
+        </ul>
+      </aside>
+
+
+
+
+
+
+
+
+      <script src="main.js"></script>
+</body>
+
 </html>
