@@ -7,8 +7,8 @@ const gettingFetch = () => {
     fetch(laboratoria).then((response) => {response.json(); })
 //se ejecuta como .json
     .then((sedes) => {
-//Debe enlazar la funcion al click en "sedes"
-        const chooseSede = 
+//Debe enlazar la funcion al click en "sedes1" activado
+        const chooseSede =
     })
 }
 
