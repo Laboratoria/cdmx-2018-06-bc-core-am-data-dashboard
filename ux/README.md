@@ -20,8 +20,8 @@ Sorprendió saber que no están usando un Data Dashboard. Utilizan Spreadsheets 
 
 Debido a las múltiples funciones de las TMs, lo primordial que es la consulta de esta data día a día y lo complejo que es se tiene como objetivo crear una herramienta que ayude a procesar y visualizar estos datos de una forma rápida, eficaz y entendible, y que además puedan consultarse a cualquier hora del día así sea desde un equipo móvil o su lapp.
 
-Formato entrevista:![Formato](FormatoEntrevista.png)
-Contacto entrevista:![Contacto](contactandoEntrevista.png)
+Formato entrevista:![Formato](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/FormatoEntrevista.png)
+Contacto entrevista:![https://raw.githubusercontent.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/master/ux/img/contactandoEntrevista.png]
 Entrevistas TMs:![Entrevista TM Lima](entrevista2.png)
                 ![Entrevista TM Guadalajara](entrevista1.png)
                 ![Entrevista TM CDMX](entrevistaLucile.jpg)
