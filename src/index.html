@@ -3,42 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <!-- se hace responsive -->
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1 id="titulo">DATA DASHBOARD LABORATORIA</h1>
-      </div>
-    </header>
-    <!-- se crea el contenedor principal dónde se explica cómo funciona el cifrado -->
-    <div class="options">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <select id="selectsedes" onchange="generation(event);" >
-           <option value="0">SEDE</option>
-         </select>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <select id="generation" onchange="students(event);">
-            <option value="0">GENERACIÓN</option>
-          </select>
-        </div>
-      </div>
-          <!-- se hace uso del grid -->
-
-     <table id="tabla">
-     </table>
-    </div>
-        <script src="src/js/bootstrap.min.js"></script>
-        <script src="../data/laboratoria.json"></script>
-        <script src="main.js"></script>
-        <script src="data.js"></script>
-
-
-
-      </body>
-    </html>
+    <h1>Data Dashboard</h1>
+    <select id="campus" name="">SEDES</select>
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+  </body>
+</html>

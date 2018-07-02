@@ -1,11 +1,11 @@
 describe('data', () => {
 
   it('debería exponer función computeStudentsStats en objeto global', () => {
-    assert.isFunction(window.data.computeStudentsStats);
+    assert.isFunction(computeStudentsStats);
   });
 
   it('debería exponer función computeGenerationsStats en objeto global', () => {
-    assert.isFunction(window.data.computeGenerationsStats);
+    assert.isFunction(computeGenerationsStats);
   });
 
   it('debería exponer función sortStudents en objeto global', () => {

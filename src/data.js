@@ -1,21 +1,59 @@
-// window.data = {
-//   computeStudentsStats: () => {
-//      let objData = $.getJSON("laboratoria.json", function(response){
-//       console.log(objData);
-//     });
-//     // $.getJSON("laboratoria.json", function(response){
-//     //   console.log(response);
-//     // });
-//   },
-//     //return "Hola" },
-//   computeGenerationsStats: () => { },
-// };
-var keys = Object.keys(data);
-let select = document.getElementById('selectsedes');
+//Primera funcion que requiere retorne un arreglo de objetos
+window.computeStudentsStats = (laboratoria) => {
+  computeGenerationsStats(laboratoria);
+  const students = [
+    {
+      campus : "",
+      generation: "",
+      stats: {
+        completedPercentage: 0,
+        percentageDuration: 0,
+        subtopic: {
+            completado: 1,
+            duracionSubtema: 55,
+            tipo: "lectura"
+        }
+      }
+    }
+  ];
+};
 
-for (let i = 0; i < keys.length; i++) {
-  	var opt = document.createElement('option');
-    opt.value = keys[i];
-    opt.innerHTML = keys[i];
-    select.appendChild(opt);
+//Se obtiene el campus
+window.getCampus = (laboratoria) => {
+  const campusArray = [];
+  for (key in laboratoria) {
+    const obj = {
+        campus: ''
+    };
+      obj.campus = key;
+      campusArray.push(obj.campus);
+    }
+    for (let i = 0; i < campusArray.length; i++) {
+      console.log(campusArray[i]);
+      drawCampus(campusArray[i]);
+    };
+};
+
+
+//Manejo de la data para generaciones
+window.computeGenerationsStats = (laboratoria) => {
+    const generationsArray = [];
+    const obj = {
+        campus: '',
+        generation: '',
+        average: 0,
+        count: 0,
+    };
+    // let average = 0;
+    for (key in laboratoria) {
+        obj.campus = key;
+        generationsArray.push(obj);
+        campusArray.push(key);
+
+    }
+    for (let i = 0; i < campusArray.length; i++) {
+      //console.log(generationsArray[i]);
+      //drawCampus(campusArray[i]);
+    };
+    return generationsArray;
 };
