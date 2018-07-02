@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const api = 'https://api.myjson.com/bins/1efx86';
 
 const getData = () => {
@@ -33,7 +32,6 @@ const drawCampus = (data) => {
 const drawGenerations = (e) => {
     //computeGenerationsStats(laboratoria)
 };
-=======
 //aqui la pintada
 
 //Hosteamos a "laboratoria.json" en un API y guardamos la URL en una variable.
@@ -72,4 +70,3 @@ var logIn = document.addEventListener("Login").click();
         alert('¡Bienvenidx!');
     }
 }
->>>>>>> 3e5d74afc1e7711916ce71d5b36ed0dad96251bd
