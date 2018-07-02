@@ -1,7 +1,10 @@
-let getData = document.getElementById("get");
-let result = document.getElementById("result");
-
-getData.addEventListener("click", gettingData);
-function gettingData() {
-  result.innerHTML = window.data.getInform();
-}
+let go= document.getElementById("go");
+go.addEventListener("click",go)
+go =()=>{
+  if (document.form.password.value=='tmmex2018' && document.form.login.value=='Lucile'){ 
+          document.form.submit(); 
+      } 
+      else{ 
+           alert("Porfavor ingrese Usuario y Contraseña correctos."); 
+      } 
+  } 
