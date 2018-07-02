@@ -1,9 +1,14 @@
 
-let go= document.getElementById("go");
-go.addEventListener("click",go)
+let goes= document.getElementById("go");
+goes.addEventListener("click",go())
 go =()=>{
   if (document.form.password.value=='tmmex2018' && document.form.login.value=='Lucile'){ 
           document.form.submit(); 
+          let generaciones =gettinAPI(laboratoria);
+          let cardTitle= document.getElementById("cards");
+          let contry = document.createElement("p");
+          contry.innerHTML=generaciones[4].generacion;
+          cardTitle.appendChild(contry);
       } 
       else{ 
            alert("Porfavor ingrese Usuario y Contraseña correctos."); 
@@ -25,21 +30,15 @@ por medio de FETCH*/
     .then(data => data.json())
     .then((data) => {
        //const venues = computeVenuesStats(data);
-       //const generations = computeGenerationsStats(data);
+       const generations = computeGenerationsStats(data);
        //const students = computeStudentsStats(data);
        //const orderBy ="percentage";
        //const orderDirection = "DESC";
        //const sort =sortStudents(students, orderBy, orderDirection);
        //const search = 'Aileen Edwyna';
        //const filter = filterStudents(students,search);
-       const students = deepStudentsStats(data);
-
-
-       /*printVenues(venues);
-       printGenerations(generations);
-       printStudents(students);
-       printStudentModal(students);
-       printViews(generations,students);*/
+       //const students = deepStudentsStats(data);
+       
     })
     .catch((error) => {
       console.log(error);
@@ -47,12 +46,7 @@ por medio de FETCH*/
       //window.location="../views/errorFiles/errorpopup.html";
       console.log("Error");
     });
+    return generations;
   }
-  //gettinAPI(laboratoria);
 
-const printVenues = (venues) =>{};
-const printGenerations = (generations) =>{};
-const printStudents = (students) =>{};
-const printStudentModal = (students)=>{};
-const printViews = (generations,students)=>{};
 
