@@ -83,3 +83,11 @@ body{
 ul li:first-child a {
 background: #696969 ;
 }
+
+.menu {
+  color: rgb(250, 250, 250);
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 20px;
+  background: red;
+}
