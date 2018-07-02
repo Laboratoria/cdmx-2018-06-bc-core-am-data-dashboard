@@ -25,10 +25,15 @@ Conforme a esto haremos nuestro primer sketch tratando de cubrir las necesidades
 [Entrevist de  Estef Y Josc] (https://drive.google.com/open?id=1ycNiDHLAAmdJVMujJPte19xgeIQGglg7)
 [Audio de entrevista de Florencia] (https://drive.google.com/open?id=1RE-8SneGCdT9xByVd7m3r2tfd7xFTUhL)
 
-Inicamos con uan idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
+Inicamos con una idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
 
-![sketch](/Images/img_20180624_110803.jpg)
-![sketch](/Images/img_20180624_110803_1024.jpg)
-![sketch](/Images/img_20180624_110814.jpg)
 ![sketch](/Images/sketch1.jpg)
 ![sketch](/Images/sketch2.jpg)
+
+Nos percatamos que eran demasiados HTML's y muchos botones, no era nada práctico y era un poco tedioso.
+
+Esta segunda idea, se nos hizo más viable.
+
+![sketch](Images/img_20180624_110803.jpg)
+![sketch](Images/img_20180624_110803_1024.jpg)
+![sketch](Images/img_20180624_110814.jpg)
