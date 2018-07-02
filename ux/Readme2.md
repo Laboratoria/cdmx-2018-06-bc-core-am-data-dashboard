@@ -73,7 +73,7 @@ izquierdo, y en la parte central una barra de búsqueda.
 
     * Estudiantes con más del 90% de completitud.
 
-6.- En caso de selecc   ionar Egresadas en el menú inicial, la pantalla mostrará un reporte general de las egresadas, donde se debe seleccionar una sede. Este reporte cuenta con la siguiente información:
+6.- En caso de seleccionar Egresadas en el menú inicial, la pantalla mostrará un reporte general de las egresadas, donde se debe seleccionar una sede. Este reporte cuenta con la siguiente información:
 
 * Sede
 
@@ -103,3 +103,24 @@ Y en formato tabla, la siguiente información por egresada:
 ![alt text](imagenes/03a665c5-829a-4cd4-ba74-ca146e6c866a.jpg)
 
 ![alt text](imagenes/SKETCH.jpg)
+
+## Prototipo
+
+Para la Data Dashboard se tomaron las siguientes consideraciones de acuerdo al Visual Desing.
+La paleta de colores es: 
+* Una base blanca, para darle limpieza al proyecto y que la informacion no pierda protagonismo.
+* Colores grises para los menus, y asi darle elegancia y sobriedad al proyecto.
+* Se elige el color amarilo como fondo para la información, pensando en darle energia a la data y por ser los colores institucionales de Laboratoria.
+
+<br>
+
+![alt text](imagenes/inicio.jpg)
+
+![alt text](imagenes/menu.jpg)
+
+![alt text](imagenes/sede_y_generacion.jpg)
+
+![alt text](imagenes/listado_alumnas.jpg)
+
+
+
