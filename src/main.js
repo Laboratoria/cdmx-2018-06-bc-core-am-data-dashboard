@@ -9,6 +9,7 @@ const generation = () => { //FUNCION GENERACION DE ACUERDO A LA SEDE SELECCIONAD
 }
 
 const students = () => {
+	let dataJSON='';
 	let valor = document.getElementById('selectSedes').value;//obtenemos el valor de las sedes, la sede que se selecciono
 	let generation = document.getElementById('generation').value;//obtenemos el valor de las generaciones, la que se ha seleccionado
 	let estudiantes = dataJSON[valor]['generacion'][generation]['estudiantes'];//obtenemos el objeto basandonos en la informacion obtenida y accediendo a los keys ejmplo data[mexico]['generacion'][cuarta]['estudiantes']
