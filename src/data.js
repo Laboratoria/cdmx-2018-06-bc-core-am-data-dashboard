@@ -1,3 +1,4 @@
+
 window.data = {
     cargandoDatos:() => {
       let laboratoria = fetch('https://raw.githubusercontent.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-data-dashboard/javascriptFetch/data/laboratoria.json');
