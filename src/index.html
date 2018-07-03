@@ -1,37 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
+ <head>
+   <meta charset="utf-8">
+   <!--Metadato para que la página sea responsiva-->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--Framework PURE-->
+   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+   <!--Framework Bootstrap-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+   <title>Data Dashboard</title>
+   <!--Enlace a style.css-->
+   <link rel="stylesheet" href="style.css"/>
+ </head>
 
-    <title>Data dashboard</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet"> -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body>
-    <div>
-      <header> 
-        <h1></h1>
-
-      </header>
+ <!--Comienza body del framework-->
+ <body>
+      <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+            <!--Menú a la izquierda-->
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#">
+                    <div class="text-center"><img src="pages/logo.jpg" alt="Laboratoria" class="responsive"></div>
+                </a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Generaciones</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link"><option value="lima">Lima</option></a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link"><option value="cdmx">CDMX</option></a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link"><option value="santiago">Santiago</option></a></li>
+    
+                    <li class="pure-menu-item menu-item-divided pure-menu-selected">
+                        <a href="#" class="pure-menu-link">Servicios</a>
+                    </li>
+    
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Fin de menú a la izquierda-->
+        <!--Mi main-->
+        <div id="main">
+            <div class="header">
+                <h1>Data DashBoard</h1>
+                    <div class="container">
+                        <div class="raw">
+                          <div class="offset-md-3 col-md-3">
+                          </div>
+                        </div>
+                      </div>
+            </div>
+<!--NavBar Bootstrap-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Menú</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-txoggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gráficas</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Opciones
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">AcciónUno</a>
+            <a class="dropdown-item" href="#">AcciónDos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">AcciónTres</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Cerrar Sesión</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar estudiantes" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Click!</button>
+      </form>
     </div>
-      <section>
-        <article>
-          <h2>
-            <p>
-              <ul>
-                <li></li>
-              </ul>
-            </p>
-          </h2>
-        </article>
+  </nav>
+  <!--Final de barra NavBar-->
+            <div class="content">
+                <h2 class="content-subhead">Tabla de información</h2>
+<!--Aquí comienza la tabla para imprimir los datos que se obtengan-->
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre Estudiante</th>
+                  <th scope="col">%Completitud </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td id="nombre1"></td>
+                  <td id="porcentaje1"></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td id="nombre2"></td>
+                    <td id="porcentaje2"></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td id="nombre3"></td>
+                  <td id="porcentaje3"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td id="nombre4"></td>
+                    <td id="porcentaje4"></td>
 
-      </section>
+                  </tr>
+                  <tr>
+                      <th scope="row">5</th>
+                      <td id="nombre5"></td>
+                      <td id="porcentaje5"></td>
+                      
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td id="nombre6"></td>
+                        <td id="porcentaje6"></td>
+                        
+                      </tr>
+                      <tr>
+                          <th scope="row">7</th>
+                          <td id="nombre7"></td>
+                          <td id="porcentaje7"></td>
+                          
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td id="nombre8"></td>
+                            <td id="porcentaje8"></td>
+                            
+                          </tr>
+                          <tr>
+                              <th scope="row">9</th>
+                              <td id="nombre9"></td>
+                              <td id="porcentaje9"></td>
+                              
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td id="nombre10"></td>
+                                <td id="porcentaje10"></td>
+                                
+                              </tr>
+                              <tr>
+                                  <th scope="row">11</th>
+                                  <td id="nombre11"></td>
+                                  <td id="porcentaje11"></td>
+                                  
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th>
+                                    <td id="nombre12"></td>
+                                    <td id="porcentaje12"></td>
+                                    
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">13</th>
+                                      <td id="nombre13"></td>
+                                      <td id="porcentaje13"></td>
+                                      
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td id="nombre14"></td>
+                                        <td id="porcentaje14"></td>
+                                        
+                                      </tr>
+                                      <tr>
+                                          <th scope="row">15</th>
+                                          <td id="nombre15"></td>
+                                          <td id="porcentaje15"></td>
+                                          
+                                        </tr>
+              </tbody>
+            </table>
+  <!--Aquí termina la tabla-->    
+                <h2 class="content-subhead">Información adicional</h2>
+                <div>
+                    <form action="">
+               <!--Aquí van las sedes y generaciones
+                      <select id="sedeTodas" required>
+                        <option value="" disabled selected>Selecciona la sede</option>
+                        <option value="lima">Lima</option>
+                        <option value="cdmx">CDMX</option>
+                        <option value="santiago">Santiago</option>
+                      </select>
+                    </form>
+                  </div>-->
+                  <div class="pure-g">
+                      <div class="pure-u-1-4">
+                        <p>caja 1</p>
+                      </div>
+                      <div class="pure-u-1-4">
+                          <p>caja 2</p>
+                      </div>
+                      <div class="pure-u-1-4">
+                          <p>caja 3</p>
+                      </div>
+                      <div class="pure-u-1-4">
+                          <p>caja 4</p>
+                      </div>
+                  </div>    
+            </div>
+        </div>
+      </div>
+    
+      <div>
+        <form>
+          <select id="generacion" required>
+            <option value="" disabled selected>Selecciona la generación</option>
+            <option value="5">Quinta</option>
+            <option value="4">Cuarta</option>
+            <option value="3">tercera</option>
+          </select>
+            <!--Botón que detona la busqueda-->
+            <input type="button" value="Buscar" id="botonResultado">
+        </form>
+      </div>
 
-    <script>
-    var header = document.querySelector('header');
-    var section = document.querySelector('section');
-    </script>
-    <script src="data.js"></script>  
-</body>
+      <div>
+        <div id="resultado"></div>
+      </div>
+ 
+   <!--Enlaces a los archivos JS-->
+   <script src="data.js"></script>
+   <script src="main.js"></script>
+ </body>
 </html>
