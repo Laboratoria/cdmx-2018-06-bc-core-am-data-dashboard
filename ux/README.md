@@ -16,11 +16,11 @@ A pesar de que la data de progreso del LMS (ej. lecturas leídas, ejercicios com
 El Proceso de Diseño tiene 5 pasos elementales. Estos 5 pasoso nos permiten crear productos centrados en el usuario es por ello
 que el desarollo del producto se vaso en estos:
 
- *Descubrimiento e Investigación(Reserch).
- *Síntesis y Definición.
- *Ideación.
- *Prptotipado.
- *User Testing.
+ *Descubrimiento e Investigación(Reserch).*
+ *Síntesis y Definición.*
+ *Ideación.*
+ *Prptotipado.*
+ *User Testing.*
 
 
 ### **1. Reserch**
@@ -36,44 +36,44 @@ __Usuarixs:__
 
 Las TMs de Laboratoria 👩‍💻
 
-*Karla Rejas sede Guadalajara*: Training Manager de la ciudad de Guadalajara.
+**Karla Rejas sede Guadalajara: Training Manager de la ciudad de Guadalajara.**
 
-*Alejandra sede Lima*: Training Manager de Lima.
+**Alejandra sede Lima: Training Manager de Lima.**
 
-*Pau Trevino*:CDP en CDMX .
+**Pau Trevino: CDP en CDMX.**
 
-*Valentina*
+**Valentina**
 
 Para poder entender a nuetros usuarios y sobre todo del problema hicimos uso de:
 
-*Entrevistas con usuarios*
+__Entrevistas con usuarios:__
 
 Se realizaron entrevistas vía correo electronico a las TMs de las diferentes sedes de Laboratoria (Guadalajara,Lima y Chile), estas encuestas
 fueron formuladas con 9 preguntas las cuales tienen como objetivo entender al usuario.
 
-*¿Qué problemas enfrentas al analizar datos sobre el progreso de las estuduantes?*
-*¿Comó gestionas esos problemas?*
-*¿Qué herramientas y procesos utilizas?*
-*¿Cuáles son tus metas y objetivos al analizar datos del progreso de las estuduantes?*
-*¿Cómo podriamos mejorar la manera en la que analizas data?*
-*¿Qué datos son los más importantes que quieren ver en la interfaz?*
-*¿Cómo te gustaría que se mostrarán?*
-*¿Por qué?*
-*¿Qué impacto tendría en tu trabajo diario?*
+1.**¿Qué problemas enfrentas al analizar datos sobre el progreso de las estuduantes?**
+2.**¿Comó gestionas esos problemas?**
+3.**¿Qué herramientas y procesos utilizas?**
+4.**¿Cuáles son tus metas y objetivos al analizar datos del progreso de las estuduantes?**
+5.**¿Cómo podriamos mejorar la manera en la que analizas data?**
+6.**¿Qué datos son los más importantes que quieren ver en la interfaz?**
+7.**¿Cómo te gustaría que se mostrarán?**
+8.**¿Por qué?**
+9.**¿Qué impacto tendría en tu trabajo diario?**
 
 *foto*
 
 
- *Búsqueda en la web de proyectos similares*
+ __Búsqueda en la web de proyectos similares:__
 
  Un data dashboard es una herramienta de trabajo en la cual puedes hacer mediciones de actividades de sitios web, información diaria de inversiones,
  hasta rendimientos físicos personales o de un equipo.
 
  Durante la búsqueda en la web encontramos las principales caracteristicas que un Data Dashboard debe contener:
 
- 1.-Un data dashboard debe transformar los datos en informacón y esta en conociminto para el negocio.
- 2.-No hay que añadir datos por añadir, sino mostrar de la forma más adecuada, aquellos que nos permitan tomar decisiones.
- 3.-Mostrar las información de forma que estas sean relevantes para el negocio asi como la persona que toma las decisiones sea
+ 1.Un data dashboard debe transformar los datos en informacón y esta en conociminto para el negocio.
+ 2.No hay que añadir datos por añadir, sino mostrar de la forma más adecuada, aquellos que nos permitan tomar decisiones.
+ 3.Mostrar las información de forma que estas sean relevantes para el negocio asi como la persona que toma las decisiones sea
  capaz de interpretarla mas fácilmente.
 
 
@@ -83,7 +83,7 @@ Las TMs de Laboratoria tienen como necesidad visualizar la información de las e
 para tener un mejor entendimiento de cómo van en su proceso de aprendizaje.
 
 
-_Objetivos de las usuarias:__
+__Objetivos de las usuarias:__
 
 Nuestros usuarios tienen como objetivo el análisis de datos de las estudiantes de Laboratoria ya que hacen uso de estos para saber en qué estatus se enecuentran, en que pueden mejorar o en que pueden ayudarlas  y si es necesario hacer ajustes en el programa.
 
@@ -106,9 +106,9 @@ __Impacto en su trabajo con el Data Dashboard:__
 
 Referente a la entrevista el impacto que tendría el uso de un Data Dashboard sería:
 
-1.-Mayor efieciencia al realizar las actividades de análisis y toma de desiciones.
-2.-Disminución de tiempos.
-3.-Claridad al momento de la visualización de datos.
+1.Mayor efieciencia al realizar las actividades de análisis y toma de desiciones.
+2.Disminución de tiempos.
+3.Claridad al momento de la visualización de datos.
 
 
 
@@ -116,9 +116,9 @@ Referente a la entrevista el impacto que tendría el uso de un Data Dashboard se
 
 Ya realizada la fase de investigación podremos entender los deseos y necesidades del usuario por lo que tomaremos en cuenta los datos más importantes  para el Data Dashboard.
 
-1.-Eficiencia.
-2.-Claridad.
-3.-Tiempo.
+1.Eficiencia.
+2.Claridad.
+3.Tiempo.
 
 
 __Lo que los usuarios esperan obtener:__
