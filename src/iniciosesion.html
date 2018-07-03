@@ -7,33 +7,34 @@
     <title>Inicio de sesión</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <section class='container-fluid foundFont'>
         <header class="row">
-            
-                <img class= "col s6 offset-s3 responsive-img logo" src="Pictures/laboratoria_logo_rgb_01_480.png">
-            
+            <img class="col s6 offset-s3 responsive-img logo" src="Pictures/laboratoria_logo_rgb_01_480.png">
         </header>
         <main class="row">
-            <form name=form action="log">
-
+            <form name=form class="col s4 offset-s4" action="log">
                 <INPUT type=text placeholder="Usuario" name=login>
                 <br>
                 <INPUT type=password placeholder="Contraseña" name=password>
                 <br>
                 <a href="index.html">
-                    <input id="go" type=button value=Acceder></input>
+                    <input id="go" type=button class="btn disabled" value=Acceder></input>
                 </a>
-
             </form>
-
+            
         </main>
-        </section>
+        <footer class="row">
+                <img class="responsive-img logo footer" src="Pictures/laboratoria_triangulos-32_720.png">
+        </footer>
+    </section>
 
 
-        <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
