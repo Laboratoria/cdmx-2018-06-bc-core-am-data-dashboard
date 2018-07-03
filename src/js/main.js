@@ -3,15 +3,17 @@
 window.onload = () => {
   // console.log('hola');
   // accede al json
-  fetch('data/laboratoria.json')
+  fetch('../data/laboratoria.json')
     .then(response => response.json())
     .then(laboratoria => {
       const url = location.pathname;
       // se compara el indexOf y si contiene el 'string' lo reemplaza ''
       if (url.indexOf('sedes') >= 0) {
+        // console.log(sede);
         getSedes(laboratoria);
       } else if (url.indexOf('generaciones') >= 0) {
         const sede = window.location.search.replace('?sede=', '');
+        // console.log(generaciones);
         getGenerations(laboratoria, sede);
       } else if (url.indexOf('alumnas') >= 0) {
         const parametros = window.location.search.replace('?sede=', '').replace('generation=', '').split('&');

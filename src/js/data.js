@@ -7,7 +7,7 @@ window.getSedes = (laboratoria) => {
 
   const sedesHTML = sedes.map(sede => (
     `<div class="alert alert-warning w-100 text-center" role="alert">
-      Ir a <a href="/generaciones.html?sede=${sede}" class="alert-link">${sede.toUpperCase()}</a>.
+      Ir a <a href="/views/generaciones.html?sede=${sede}" class="alert-link">${sede.toUpperCase()}</a>.
     </div>`
   ));
   // Arreglo de div, que son las sedes
@@ -26,7 +26,7 @@ window.getGenerations = (laboratoria, sede) => {
   const generationsHTML = generations.map(generation => (
     // templates donde se pintaran los datos
     `<div class="alert alert-warning w-100 text-center" role="alert">
-      Ir a <a href="/alumnas.html?sede=${sede}&generation=${generation}" class="alert-link">${generation.toUpperCase()}</a>.
+      Ir a <a href="/views/alumnas.html?sede=${sede}&generation=${generation}" class="alert-link">${generation.toUpperCase()}</a>.
     </div>`
   ));
   // console.log(sedesHTML);
@@ -48,11 +48,6 @@ window.getAlumnas = (laboratoria, sede, generation) => {
     </tr>`
   ));
 
-  // const alumnasHTML = alumnas.map(alumna => (
-  //   `<div class="alert alert-warning w-100 text-center" role="alert">
-  //     ${alumna.nombre.toUpperCase()} - ${alumna.correo}-${alumna.progreso.porcentajeCompletado}% completado
-  //   </div>`
-  // ));
   // Arreglo de 3 divs, que son las sedes
   // console.log(sedesHTML);
 
