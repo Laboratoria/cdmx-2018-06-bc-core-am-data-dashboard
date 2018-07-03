@@ -1,7 +1,20 @@
 console.log("data.js está conectado");
-//Asignar variable a laboratoria.json desde el localhost
 
-
+const pintarSedes = (data) => {
+    const ul = document.getElementById("ul-prueba");
+    for (let i in data) {
+        const listSedes = document.createElement("li");
+        const listLink = document.createElement("a");
+        listLink.innerHTML = i;
+        listSedes.classList.add("menu");
+        listSedes.addEventListener("click", prueba);
+        listSedes.appendChild(listLink);
+        ul.appendChild(listSedes);
+     }
+}
+const prueba = (event) => {
+    console.log(event.target);
+}
 //Se crea el objeto dataDashboard como método del objeto window
 window.dataDashboard = {
 conectado : () => { console.log("holaDashBoard");},
@@ -17,9 +30,10 @@ getData : (laboratoria) =>  {
         return response.json()
     }).then((chooseSede) => {
         //se ejecuta como .json
-        console.log("DAta",chooseSede);
+        console.log("Data",chooseSede);
     //Debe enlazar la funcion al click en "sedes"
         pintarSedes(chooseSede)
+
 
            /* if (addEventListener("click", sedeLima)) { 
                 const sedeLima = () => {
@@ -83,19 +97,3 @@ const filterStudents = (students, search) => {
 //cierre del objeto window
 };
 
-function pintarSedes(data){
-    const ul = document.getElementById("ul-prueba");
-    for (let i in data ) {
-        const listSedes = document.createElement("li");
-        const listLink = document.createElement("a");
-        listLink.innerHTML = i;
-        listSedes.classList.add("menu");
-        listSedes.addEventListener("click", prueba);
-        listSedes.appendChild(listLink);
-        ul.appendChild(listSedes);
-     }
-}
-
-function prueba(event){
-    console.log(event.target);
-}
