@@ -210,7 +210,7 @@ _Se observar las sedes listadas e informaciòn general de laboratoria_
 
 ![Prototipo2](https://imageshack.com/a/img922/4650/1WmdPt.jpg)
 
-_Permite seleccionar la generaciòn y buscar por nombre de alumna, muestra informaciòn general de la sede y generacion_
+_Permite seleccionar la generaciòn y buscar por nombre de alumna, muestra informacion de la generacion: Promedio de la generación, status estudiantes debajo del 60 porciento de completitud, status de estudiantes con 90 o más en su porcentaje de completitud, filtrar estudiantes por estos dos status_
 
 ![Prototipo3](https://imageshack.com/a/img922/9652/JGFAB8.jpg)
 

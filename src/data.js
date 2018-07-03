@@ -62,4 +62,3 @@ window.computeGenerationsStats = (laboratoria) => {
 //console.log(generationsArray);
 return generationsArray;
 }
-//creamos un evento para comenzar a ejecutar todo s
