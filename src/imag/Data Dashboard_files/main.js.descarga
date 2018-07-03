@@ -15,7 +15,6 @@ let sanquinta=document.getElementById("sant_quinta");
 
 tercer.addEventListener("click",evento=>{window.datadashboard.computeStudentsStats(studentsimp)});
 
-
 /*let nombre_tercera =
 
 laboratoria.innerHTML +=`
@@ -32,6 +31,6 @@ laboratoria.innerHTML +=`
      <option>Duracion Programa: ${progreso.duracionPrograma}</option>
      <option>Porcentaje Completado: ${progreso.porcentajeCompletado}</option>
    </select>
-</div>
+</div>*/
 
-`*/
+`

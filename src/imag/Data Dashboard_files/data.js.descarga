@@ -1,0 +1,39 @@
+window.datadashboard = {
+
+computeStudentsStats: (laboratoria) => {
+
+fetch(`https://raw.githubusercontent.com/brenduchiz/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json`)
+
+.then(respuesta => respuesta.json())
+
+.then ( data=> {
+
+
+
+tabla(data)
+
+})
+
+function tabla(data) {
+
+
+
+let estudiante = data.lima.generacion.tercera.estudiantes;
+
+for (let i = 0; i < estudiante.length; i++) {
+
+let nombre_tercera=estudiante[i];
+let progreso =nombre_tercera.progreso;
+console.log(progreso.temas)
+
+
+
+}
+return(nombre_tercera)
+
+}
+
+
+}
+
+}
