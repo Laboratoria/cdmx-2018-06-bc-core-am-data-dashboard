@@ -1,54 +1,65 @@
-
-debugger;
-
-$(documento).ready(function(){
-$.getJSON("imprime", function(response){
-  console.log(JSON.stringfy(response));
-});
-
-});
-
-/*var json={
-  "empleados": [{"nombre":"eugenio", "edad":35},
-                {"nombre":"maria", "edad":45},
-              ],
-  "autos": [{"marca":"Ford", "modelo":2016},
-           {"marca":  [{"submarca1":"sub1"},{"submarca2":"sub2"}] },
-              ]
-
-};
-
-$("#res").text(json.autos [1].marca[1].submarca1 );
-
-
-/*window.onload()=>{
-  datosJSON();
+//const sedes = document.getElementById('sedes')
+window.computeStudentsStats = (laboratoria) => {
 }
 
-function datosJSON() {
-  var dato=document.getElementById('datosJSON');
-  dato.onclick=_function(){
-    requestServer("GET", "data/laboratoria.json", "text", mostrardatosJSON
-}
-function mostrardatosJSON(rpta){
-  alert(rpta);
-}*/
+window.computeGenerationsStats = (laboratoria) => {
 
-/*/function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", "data/laboratoria.json", true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
+  console.log(laboratoria);
+  const generationsArray =[];
 
-//usage:
-readTextFile("data/laboratoria.json", function(text){
-    var data = JSON.parse(text);
-    // console.log(data(0));
-    console.log(data(0));
-});*/
+  const obj = {
+    campus: "",
+    generation: "",
+    average: 0,
+    count: 0,
+  };
+
+  //console.log(obj);
+  let average =0;
+
+  for(key in laboratoria){
+
+    obj.campus = key;
+    console.log(obj.campus);
+
+    average = 0;
+    const generations = Object.keys(laboratoria[key].generacion);
+    //console.log(laboratoria[key].generacion);
+      generations.forEach((generation) => {
+        obj.generation = generation;
+        console.log(obj.generation);
+        const students = laboratoria[key].generacion[generation].estudiantes;
+      //console.log(students);
+
+//console.log(studentsStats);
+        const studentsStats = students.map((student,i,array)=>{
+          average += array[i].progreso.porcentajeCompletado;
+          average = average / array.lenght;
+            obj.campus= key;
+            obj.generation= generation;
+            obj.average = average;
+            obj.count= array.length;
+            console.log(student);
+        })
+
+
+        /*for (student in students) {
+          average += students[student].progreso.porcentajeCompletado;
+          average = average / students.lenght;
+
+          obj.average = average;
+          obj.count = students.lenght;
+          console.log(obj.average);
+          console.log(obj.count);
+        }*/
+      //  console.log(generationsArray);
+//console.log(generationsArray.push(obj));
+      })
+
+//console.log(generationsArray.push(obj));
+  }
+
+//console.log(generationsArray);
+return generationsArray;
+}
+//creamos un evento para comenzar a ejecutar todo s
