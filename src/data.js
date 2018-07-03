@@ -11,19 +11,6 @@ window.filterStudents = () => {
 
 };
 
-window.computeStudentsStats = () =>{
-
-};
-window.computeGenerationsStats = () =>{
-
-};
-window.sortStudents = () => {
-
-};
-window.filterStudents = () => {
-
-};
-
 //url para obtener el json
 let url = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
 
@@ -39,7 +26,7 @@ let sede = function(){
     document.getElementById('mexico').innerHTML = Object.keys(data)[1];
     document.getElementById('santiago').innerHTML = Object.keys(data)[2];
     //pintando generaciones
- 	generacionLima(Object.keys(data.lima.generacion));
+  generacionLima(Object.keys(data.lima.generacion));
     generacionMexico(Object.keys(data.mexico.generacion));
     generacionSantiago(Object.keys(data.santiago.generacion));
     })
@@ -54,20 +41,18 @@ let alumnas = function(){
   }).then(function(data){
   //OBTENER NOMBRE
   console.log(data.lima.generacion.cuarta.estudiantes[0].nombre);
-  let nombreLima = data.lima.generacion.cuarta.estudiantes[0].nombre;
-  nombre.innerHTML = nombreLima;
-  /*console.log(data.lima.generacion.cuarta.estudiantes.nombre);
-  let nombreLima = data.lima.generacion.cuarta.estudiantes.nombre;
-  console.log(Object.keys(nombreLima));
-  let allnombres = Object.keys(nombreLima);
-  console.log(allnombres[0]);
-  for(let i = 0; i<allnombres.length; i++) {
-    nombre.innerHTML+= "<div>" + allnombres[i] + "</div>";
-  }*/
-  //OBTENER CORREO
-  console.log(data.lima.generacion.cuarta.estudiantes[0].correo);
-   let correoLima = data.lima.generacion.cuarta.estudiantes[0].correo;
-    correo.innerHTML = correoLima;
+  let result = "";
+  let estudianteLima = data.lima.generacion.cuarta.estudiantes;
+  for(let i = 0; i < estudianteLima.length; i++){
+    let alumna = estudianteLima[i];
+    let progresos = alumna.progreso;
+    console.log(progresos)
+    result+= (" Nombre: " + alumna.nombre) + (" Correo: " + alumna.correo) + 
+    (" Progreso duración del programa: " + progresos.duracionPrograma) +  
+    (" Progreso porcentaje completado: " + progresos.porcentajeCompletado);   
+  };
+  nombre.innerHTML = result;
+  return(result)
 
     })
 }
