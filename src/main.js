@@ -93,13 +93,12 @@ go =()=>{
     const cards = document.getElementsByClassName('card-data');
     for (i = 0; i< cards.length && i < filter.length; i++)
     {
-      cards[i].querySelector(".advertisment").innerHTML = filter[i].advertisment;
-      cards[i].querySelector(".average").innerHTML = filter[i].average;
       cards[i].querySelector(".campus").innerHTML = filter[i].campus;
       cards[i].querySelector(".generation").innerHTML = filter[i].generation;
       cards[i].querySelector(".name").innerHTML = filter[i].name;
-      cards[i].querySelector(".timeProm").innerHTML = filter[i].timeProm;
+      cards[i].querySelector(".average").innerHTML = filter[i].average;
+      cards[i].querySelector(".advertisment").innerHTML = filter[i].advertisment;
       cards[i].querySelector(".totalTime").innerHTML = filter[i].totalTime;
+      cards[i].querySelector(".timeProm").innerHTML = filter[i].timeProm;
     }
   };
-

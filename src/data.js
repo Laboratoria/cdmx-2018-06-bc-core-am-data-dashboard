@@ -104,13 +104,13 @@ window.computeVenuesStats = (laboratoria) =>{
               }
               else{ alerta = 'Medio avance';}
           totalTimeS = students[student].progreso.duracionPrograma;
-        myStudent.generation = generationS;
-        myStudent.campus = venuesS;
+        myStudent.campus = venuesS.toUpperCase();
+        myStudent.generation = generationS.toUpperCase();
+        myStudent.name = nameS;
         myStudent.average = averageS;
         myStudent.advertisment = alerta;
         myStudent.totalTime = totalTimeS;
         myStudent.timeProm = (totalTimeS*averageS)/100;
-        myStudent.name = nameS;
         studentArray.push(myStudent);
         }
       }
