@@ -6,20 +6,22 @@
 }
 body{
   background-color: rgb(255, 229, 33);
-  text-aligne: center;
+  text-align: center;
   font-family: 'Bitter', serif;
   font-size: 25px;
   }
   h1{
-      font-size: 60px;;
-      font-family: 'Bitter', serif;
+      font-size: 50px;
+      font-family: 'Oswald', sans-serif;
+
   }
   ul, li {
   list-style: none;
   }
 
   header{
-    font-family: serif;
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: serif;*/
     text-align: center ;
     list-style: none;
     padding: 0;
@@ -32,6 +34,7 @@ body{
     }
   ul {
       /*outline: 2px solid blue;*/
+
       list-style: none;
       text-decoration: yellow;
       margin:0;
@@ -61,7 +64,8 @@ body{
       text-decoration: none;
   }
 .nav li a {
-        font-family: 'Bitter', serif;
+        font-family: 'Open Sans', sans-serif;
+        position: relative;
         padding: 15px 20px  ;
     }
 
