@@ -13,38 +13,35 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<section>
+<section id= pantalla_1>
 <header>
-          <h1> Laboratoria LMS Dashboard 1</h1>
-  <br>
+          <h1> Laboratoria LMS Dashboard </h1>
+
   <img src="../images/Ldelabo.png " id="laboratoria">
-  <br>
+
     <nav>
-      <li>
+      <ul>
           <input type="text" value="Usuaria" id="user-name"> <br>
-          <br>
+
           <input type="password" value="Contraseña" id="password"><br>
-          <br>
+
           <input type="submit" value="Login"> <br>
           <button onclick="a()">Click me</button>
-        </li>
-    </>
+        </ul>
 
+  <h2 id="welcome"> ¡Bienvenida </h2>
 </header>
-      <footer>
-            <p>Talento que transforma</p>
-      </footer>
+
 </section>
-<br>
-<br>
+
 <!----------------------------------------------------------------------------->
-<section>
-    <nav>
+<main id= patalla_2>
+    <nav class="menu">
     <div id="barra-menu">
     <div class="row">
     <div class="col-md">
       <ul class= "nav">
-        <li><a href="#">Cambiar Sede </a>
+        <li><a href="#">Cambiar Sede</a>
         <ul>
         <li id="Lima"><a href="#">Lima</a></li>
         <li id="Mexico"><a href="#">México</a></li>
@@ -89,28 +86,24 @@
             </div>
           </ul>
         </nav>
-<br>
-<br>
+
 <!-- Cierra barra de nav-->
-<br>
-<br>
-<br>
-<br>
-<nav>
+<section id pantalla_3>
+
+<article>
+  <ul id="ul-prueba">
   <div class="col-lg">
     <div>
-      <ul id="ul-prueba">
         <li><a href="#">Cambiar Sede</a></li>
-        <!--<li id="Lima"><a href="#">Lima</a></li>
+        <li id="Lima"><a href="#">Lima</a></li>
         <li><a href="#">México</a></li>
-        <li><a href="#">Santiago</a></li>-->
-      </ul>
+        <li><a href="#">Santiago</a></li>
     </div>
-   </div>
-</nav>
-<br>
-<br>
-<nav>
+    </div>
+  </ul>
+</article>
+
+<article>
   <ul>
       <div class="col-lg">
     <div>
@@ -120,12 +113,17 @@
       <li id="quintaGen"><a href="#">Quinta</a></li>
     </div>
 </ul>
-</nav>
-<h2 id="welcome"> ¡Bienvenida </h2>
+</article>
+
+<footer>
+      <p>Talento que transforma</p>
+</footer>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
+</main>
 </html>
