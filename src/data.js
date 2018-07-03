@@ -260,11 +260,21 @@ window.computeVenuesStats = (laboratoria) =>{
               }
               else{ alerta = 'Medio avance';}
           totalTimeS = students[student].progreso.duracionPrograma;
-          const stats= laboratoria[key].generacion[generation].estudiantes[student].progreso;
-          console.log(stats);
-          for (stat in stats){
-            let myStat = new Object();
-          }
+          const Stats= laboratoria[key].generacion[generation].estudiantes[student].progreso;
+          let stats = new Object();
+            stats.completedPercentage = Stats.porcentajeCompletado;
+            if (stats.completedPercentage<=60){
+                stats.status = 'Bajo avance';
+            }else if (stats.completedPercentage>=90) {
+                stats.status = 'Alto avance';
+            }else{ stats.status = 'Medio avance';}
+              const Topics = Stats.temas;
+              let topics = new Object();
+              topics.completedPercentage = Topics.porcentajeCompletado;
+              topics.percentageDuration = Topics.duracionTemaCompletado;
+              console.log(Topics);
+
+
         myStudent.generation = generationS;
         myStudent.campus = venuesS;
         myStudent.average = averageS;

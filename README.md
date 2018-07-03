@@ -41,3 +41,10 @@ Los diagramas
 ![Diagrama Flujo](/src/Pictures/DiagramaSprint1.jpg)
 Format: ![Alt Diagrama Sprint 1]
 
+## Recurszos utilizados
+
+> Materialize: Material Design es un concepto de diseño de interfaces desarrollado e implementado por Google, lleva dicho nombre porque tiene como hecho principal el manejo de los elementos del diseño como objetos materiales, tal cual como en la vida real, las cosas ocupan un lugar dentro de un espacio y tienen un movimiento determinado. Material Design es un diseño donde la profundidad, las superficies, los bordes, las sombras, colores y movimientos juegan un papel principal. En este curso aprende a utilizar MaterializeCSS, un framework frontend para dar estilo Material Design a tu sitio web.
+
+> Fetch: La API Fetch proporciona una interfaz JavaScript para acceder y manipular partes de la tubería HTTP, como peticiones y respuestas. También provee un método global fetch() que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
+
+> API : Siglas para Interfaz de Aplicación Programable. Una API es un conjunto de comandos, funciones, protocolos, y objetos que los programadores pueden usar para crear software o interactuar con sistemas externos. 
