@@ -36,11 +36,11 @@ __Usuarixs:__
 
 Las TMs de Laboratoria 👩‍💻
 
-**Karla Rejas sede Guadalajara: Training Manager de la ciudad de Guadalajara.**
+**Karla Rejas sede Guadalajara:** Training Manager de la ciudad de Guadalajara.
 
-**Alejandra sede Lima: Training Manager de Lima.**
+**Alejandra sede Lima:** Training Manager de Lima.
 
-**Pau Trevino: CDP en CDMX.**
+**Pau Trevino:** CDP en CDMX.
 
 **Valentina**
 
@@ -51,15 +51,15 @@ __Entrevistas con usuarios:__
 Se realizaron entrevistas vía correo electronico a las TMs de las diferentes sedes de Laboratoria (Guadalajara,Lima y Chile), estas encuestas
 fueron formuladas con 9 preguntas las cuales tienen como objetivo entender al usuario.
 
-1.**¿Qué problemas enfrentas al analizar datos sobre el progreso de las estuduantes?**
-2.**¿Comó gestionas esos problemas?**
-3.**¿Qué herramientas y procesos utilizas?**
-4.**¿Cuáles son tus metas y objetivos al analizar datos del progreso de las estuduantes?**
-5.**¿Cómo podriamos mejorar la manera en la que analizas data?**
-6.**¿Qué datos son los más importantes que quieren ver en la interfaz?**
-7.**¿Cómo te gustaría que se mostrarán?**
-8.**¿Por qué?**
-9.**¿Qué impacto tendría en tu trabajo diario?**
+1. **¿Qué problemas enfrentas al analizar datos sobre el progreso de las estuduantes?**
+2. **¿Comó gestionas esos problemas?**
+3. **¿Qué herramientas y procesos utilizas?**
+4. **¿Cuáles son tus metas y objetivos al analizar datos del progreso de las estuduantes?**
+5. **¿Cómo podriamos mejorar la manera en la que analizas data?**
+6. **¿Qué datos son los más importantes que quieren ver en la interfaz?**
+7. **¿Cómo te gustaría que se mostrarán?**
+8. **¿Por qué?**
+9. **¿Qué impacto tendría en tu trabajo diario?**
 
 *foto*
 
@@ -71,9 +71,9 @@ fueron formuladas con 9 preguntas las cuales tienen como objetivo entender al us
 
  Durante la búsqueda en la web encontramos las principales caracteristicas que un Data Dashboard debe contener:
 
- 1.Un data dashboard debe transformar los datos en informacón y esta en conociminto para el negocio.
- 2.No hay que añadir datos por añadir, sino mostrar de la forma más adecuada, aquellos que nos permitan tomar decisiones.
- 3.Mostrar las información de forma que estas sean relevantes para el negocio asi como la persona que toma las decisiones sea
+ 1. Un data dashboard debe transformar los datos en informacón y esta en conociminto para el negocio.
+ 2. No hay que añadir datos por añadir, sino mostrar de la forma más adecuada, aquellos que nos permitan tomar decisiones.
+ 3. Mostrar las información de forma que estas sean relevantes para el negocio asi como la persona que toma las decisiones sea
  capaz de interpretarla mas fácilmente.
 
 
@@ -106,9 +106,9 @@ __Impacto en su trabajo con el Data Dashboard:__
 
 Referente a la entrevista el impacto que tendría el uso de un Data Dashboard sería:
 
-1.Mayor efieciencia al realizar las actividades de análisis y toma de desiciones.
-2.Disminución de tiempos.
-3.Claridad al momento de la visualización de datos.
+1. Mayor efieciencia al realizar las actividades de análisis y toma de desiciones.
+2. Disminución de tiempos.
+3. Claridad al momento de la visualización de datos.
 
 
 
@@ -116,16 +116,16 @@ Referente a la entrevista el impacto que tendría el uso de un Data Dashboard se
 
 Ya realizada la fase de investigación podremos entender los deseos y necesidades del usuario por lo que tomaremos en cuenta los datos más importantes  para el Data Dashboard.
 
-1.Eficiencia.
-2.Claridad.
-3.Tiempo.
+1. Eficiencia.
+2. Claridad.
+3. Tiempo.
 
 
 __Lo que los usuarios esperan obtener:__
 
-1.- Poder acceder principalmente desde su computadora y dispositivo movil.
-2.- Visualización mediante gráficas,fácil de comprender.
-3.-Vizualización de información relevante no. de estudiantes activas y comparación con otras sedes.
+1. Poder acceder principalmente desde su computadora y dispositivo movil.
+2. Visualización mediante gráficas,fácil de comprender.
+3. Vizualización de información relevante no. de estudiantes activas y comparación con otras sedes.
 
 
  Insights:__
