@@ -53,3 +53,21 @@ Prototipo:
 Al realizar la entrevista a la TMs de la sede de CDMX se le mostro el sketch del prototipo, le pareció funcional y dando feedback nos mencionó que agregaría datos extras que para ella son primordiales (Alumnas activas y promedio avance grupal).
 ****
 Nuevas propuestas: ![NPropuesta](propuestaSketch.jpg)
+
+### **6. Argumentación de Visual Design**
+Despues de un proceso de research con respecto al cliente en esta caso Laboratoria, se decidieron utilizar los colores, la tipografia, el logo y el slogan que identifican a Laboratoria como tal, debido a que es una imagen fresca, que recien comienzan a adaptar, despues de varios años portando tan emblematica imagen que los ha posicionado en el mercado tech de una manera destacada.
+
+1. LOGO:
+Es representado por la palabra Laboratoria entre corchetes <>. Laboratoria resume en una palabra lo que somos y los corchetes nos llevan al mundo del código. Presenta cambios en la tipografía y en el tamaño, color y ángulo de apertura de los corchetes, los cuales les permiten tener el mismo logo, pero con más fuerza y protagonismo.
+
+2. COLORES:
+Se utilizan colores enérgicos y feministas como Laboratoria, el amarillo como color principal, pero l más enérgico que antes. Además, se agregaron el magenta y el menta a su identidad. Todo con medida nada en exceso debido a que son una organización que forma mujeres adultas y fuertes.
+
+3. CORCHETES:
+Los corchetes son su principal símbolo. Los utilizan en su logo y los hacen con las manos cada vez que se toman una foto, su significado es el símbolo del progreso y la transformación que sucede en Laboratoria.
+
+4. TIPOGRAFIA:
+Se caracteriza por se contundente por escrito y liviana al leer. Conformada por una “Bitter” para los títulos y una “Open sans” para los textos.
+
+5. SLOGAN:
+“talento que transforma” denominado de tal manera debido a que es por las alumnas  que ocurre el cambio, pues no es el “código” lo que transforma; son ellas mismas las que transforman. Ellas, con sus ganas y su perseverancia transforman su vida en Laboratoria. Luego, al entrar a trabajar al mundo tech, transforman toda una industria, haciéndola más diversa, inclusiva e innovadora.
