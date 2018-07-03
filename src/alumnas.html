@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
   <header class="sedes row">
     <div class="logo col-md-2">
       <img src="img/laboratoria-logo.png">
@@ -24,8 +25,20 @@
       <span class="username">Usuario</span>
     </div>
   </header>
-  <!-- aqui pintara las sedes -->
-  <div id="sedes-container" class="row"></div>
+
+  <!-- <div id="alumnas-container" class="row"> -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Progreso</th>
+      </tr>
+    </thead>
+    <tbody id="alumnas-container"></tbody>
+  </table>
+  <!-- </div> -->
 
   <script src="data.js"></script>
   <script src="main.js"></script>
