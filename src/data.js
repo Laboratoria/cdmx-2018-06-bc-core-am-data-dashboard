@@ -3,14 +3,14 @@
 
 const json = "https://raw.githubusercontent.com/soberanesmajo/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
     
-const gettingData = (prueba) => {
+const gettingData = (access) => {
     fetch(json) //Mando a llamar a json mediante fetch.
     .then((res) => { //Aquí ya tiene la información.
         return res.json();  //Entonces le digo que a esa información la retorne como un archivo json.
     })
     .then((laboratoria) => {  //Aquí le asigno el nombre de laboratoria a la información que envió.
         //console.log(laboratoria);
-        otra(laboratoria, prueba)
+        otra(laboratoria, access)
     computeGenerationsStats(laboratoria); //Aquí estoy diciendo que a mis siguienten funciones, les estoy mandando esa data.
    // computeStudentsStats(laboratoria);
    // obtenerGenraciones(laboratoria);
@@ -20,15 +20,17 @@ const gettingData = (prueba) => {
     })
 }
 
+gettingData(json);
 
-otra = (laboratoria, prueba ) => {
-    let result = laboratoria[prueba];
-    console.log(laboratoria[prueba])
+
+const otra = (laboratoria, access ) => {
+    let result = laboratoria[access];
+    console.log(laboratoria[access])
     pintar(result)
 }
 
 
-pintar = (result) => {
+const pintar = (result) => {
    document.write(result.generacion)
 }
 
