@@ -17,6 +17,7 @@ lima.addEventListener("click", function(){
       fetch(urlDirection).then(function(datos){
       return datos.json();
       }).then(function(data){
+
        
         console.log(data);
       let sede = data.lima.generacion;
@@ -25,7 +26,15 @@ lima.addEventListener("click", function(){
        
     for(let i = 0; i<generaciones.length; i++) {
         sedeLima.innerHTML+= "<div>" + generaciones[i] + "</div>";
+              
+            let est=data.lima.generacion.tercera.estudiantes
+          
+            console.log(data.lima.generacion.tercera.estudiantes);
+            let gen=Object.keys(est);
+            for(let i = 0; i<gen.length; i++) {
+        sedeLima.innerHTML+= "<div>" + gen[i] + "</div>";
             }
+          }
 //
 
 
@@ -33,7 +42,7 @@ lima.addEventListener("click", function(){
 console.log(data.lima.generacion.tercera.estudiantes);
 console.log(data.lima.generacion.cuarta.estudiantes);
 console.log(data.lima.generacion.quinta.estudiantes);
-console.log(data.lima.generacion.tercera.estudiantes[0].correo);
+console.log(data.lima.generacion.tercera.estudiantes);
 console.log(data.lima.generacion.tercera.estudiantes[0].nombre);
 console.log(data.lima.generacion.tercera.estudiantes[0].progreso);
 console.log(data.lima.generacion.tercera.estudiantes[0].turno);
