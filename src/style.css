@@ -14,8 +14,12 @@ nav{
 }
 body{
     background-color: rgb(241, 235, 238);
-    color: black;
+    color: rgb(0, 0, 0);
 }
+#btn disabled{
+    color: yellow;
+}
+
 #responsive-img logo{
     height: 50px;
     width: 50px;
