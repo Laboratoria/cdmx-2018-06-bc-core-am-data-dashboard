@@ -1,3 +1,6 @@
+body{
+background-color: #F6E847;
+}
 form {
     font-family: 'Roboto', sans-serif;
     margin-top: 5px;
@@ -14,13 +17,20 @@ form>p {
     margin-left: auto;
     margin-right: auto;
     margin-top: 170px;
-    width: 370px; */
+    width: 370px;
+    background-color: white;
+    border-radius: 37px 37px 38px 38px;
+   -moz-border-radius: 37px 37px 38px 38px;
+   -webkit-border-radius: 37px 37px 38px 38px;
+    border: 3px solid #f5ebf5;
 }
 
 #logo {
-    height: 90px;
-    margin-left: 75px;
-    width: 200px;
+    height: 60px;
+    margin-left: 10px;
+    width: 350px;
+    padding-bottom: 20px;
+    padding-top: 25px;
 }
 
 input {
