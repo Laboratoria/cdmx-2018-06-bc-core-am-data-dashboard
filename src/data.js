@@ -16,14 +16,13 @@ window.computeStudentsStats = (laboratoria) => {
         //     student = student;
         //     console.log(student);
         // })
-        // name.innerHTML = "";  
+        name.innerHTML = "";  
         for (let i = 0; i < students.length; i++) {
             // listaEstudiantes.style.display = "block";
             name.innerHTML += `
             <tr>
             <th scope="col"> ${students[i].nombre}</th>
             <th scope="col"> ${students[i].correo}</th>
-
             </tr>
             `        
         }
