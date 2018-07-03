@@ -47,7 +47,6 @@ body{
   li {
         /*outline: 2px solid yellow;*/
         font-size: 25px;
-        /*font-family: 'Open Sans', sans-serif;*/
         font-family: serif;
         text-align: center;
         flex-direction: column;
@@ -71,9 +70,9 @@ body{
     }
 
 .nav li ul {
-  display: none;
+  display:none;
   position: absolute;
-  min-width: 150px
+  min-width: 150px;
 }
 .nav li:hover > ul {
   background:#1a1a1a ;
@@ -82,21 +81,17 @@ body{
 .nav li a:hover {
     background-color: #434343;
   }
-
-.nav li ul li{
-  position:relative;
-}
 .nav > li {
     float:left;
 }
-
-/*________________________________________________________*/
-.sedes li:first-child a {
-background: #696969 ;
-}
-.generacion li:first-child a {
+ul li:first-child a {
 background: #696969 ;
 }
 
-
-/**comentarioo*/
+.menu {
+  color: rgb(250, 250, 250);
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 20px;
+  background: red;
+}
