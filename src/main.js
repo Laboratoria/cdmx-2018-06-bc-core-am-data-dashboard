@@ -1,17 +1,19 @@
-let sede =document.getElementById("buttons");
 let ingresar =document.getElementById("ingresar");
 let inputName = document.getElementById("input-name");
 let password = document.getElementById("input-password");
 let form= document.getElementById("form");
+let sede =document.getElementById("buttons");
+let accessMexico = document.getElementById("access-mexico");
+let accessLima = document.getElementById("access-lima");
+let accessSantiago = document.getElementById("access-santiago")
 
 // ocultar las sedes y generaciones
 sede.style.display="none";
 
-ingresar.addEventListener("click", obtenerDatos = ()=> { 
+ingresar.addEventListener("click", obtenerDatos = () => { 
     let usuario1 = inputName.value;
-    //  console.log(usuario1);
     let password1 = password.value;
-    //  console.log(password1);
+    
         if (usuario1==="lucile" && password1==="123"){
         sede.style.display="block";
         form.style.display="none";
@@ -23,27 +25,53 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
 
 // LLAMANDO JSON
 
-const json = "../data/laboratoria.json";
-    
-const gettingData = () => {
-    fetch(json).then(res => res.json()) //Mando a llamar a json mediante fetch, entonces le digo que esa información la convierta en archivo json.
-    .then((laboratoria => {   //Aquí le asigo el nombre de laboratoria a la información que envió.
-    campus(laboratoria);  //Aquí estoy diciendo que a mi siguiente función (campus)le estoy mandando la data.
+
+accessCDMX.addEventListener("")
+
+const iterandoCampus = (data) => { // vamos a iterar sobre las propiedades de todo el objeto (sedes)
+    const sedes = Object.keys(data);// obteniendo propiqedades de toda la data 
+    const containerCampus = document.getElementById("campus");// agregando un select que guarde las sedes y nos deje elegir. Nosotras ya tenemos las cajas donde vamos a guardar las generaciones
+    // forEach nos sirve para pintar los elementos del arreglo 
+    sedes.forEach((sede) => { 
+        const option = document.createElement('option');
+        option.innerHTML = sede;
+        containerCampus.appendChild(option);
     })
-}
+    containerCampus.addEventListener('change', iterandoGeneracion);
+};
 
-gettingData();
+// const iterandoGeneracion = (e) => {
 
-const campus = (laboratoria) => {
- 
-}
+// }
 
 
-// const json = '../data/laboratoria.json';// sabemos que tiene que haber un fetch para "jalar" la info. de la carpeta laboratoria.json, pero como está en un servidor necesitamos cargarlo. y cerrarlo después
 
-// const getData = () => {// cuando jale la información, quiero que la convierta en json con el método .json()
-//     fetch(json).then (response => response.json())// haciendo fetch de json y aplicando las promesas .then para que realicen una acción (función)
-//     .then((res)=>{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //         const generations = computeGenerationStats(res);
 //         const users= computeStudentsStats(res);
 //         drawCampus(generations);

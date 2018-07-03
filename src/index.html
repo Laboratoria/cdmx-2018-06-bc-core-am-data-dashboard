@@ -15,7 +15,10 @@
   </header>
 
   <section class="container">
+    <!-- agregar select para seleccionar sede -->
+    <select name="" id="campus"></select>
 
+    <!-- formulario de LOGIN -->
     <form id="form" action="">
       <h2>Login</h2>
       <input id="input-name" type="text" placeholder="&#128274;  Username" name="usuario">
@@ -25,13 +28,15 @@
 
     <!-- primer navegador para ingresar a la sede (botones)-->
 
+
+
     <div class="col-12" id="buttons">
 
       <div class="row">
         <div class="col-4">
           <ul>
             <li>
-              <a href="#">CDMX</a>
+              <a id="access-mexico" href="#">México</a>
               <ul id="lista-generacion">
                 <li class="generacion">
                   <a href="#">Quinta</a>
@@ -50,7 +55,7 @@
 
         <div class="col-4">
           <li>
-            <a href="#">Lima</a>
+            <a id="access-lima" href="#">Lima</a>
             <ul>
               <li class="generacion">
                 <a href="#">Quinta</a>
@@ -68,7 +73,7 @@
 
         <div class="col-4">
           <li>
-            <a href="#">Santiago</a>
+            <a id="access-santiago" href="#">Santiago</a>
             <ul>
               <li class="generacion">
                 <a href="#">Quinta</a>
