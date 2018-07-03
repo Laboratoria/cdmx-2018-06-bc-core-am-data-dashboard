@@ -13,9 +13,8 @@ sede.style.display="none";
 // Botones de login
 ingresar.addEventListener("click", obtenerDatos = ()=> { 
     let usuario1 = inputName.value;
-    //  console.log(usuario1);
     let password1 = password.value;
-    //  console.log(password1);
+    
         if (usuario1==="lucile" && password1==="123"){
         sede.style.display="block";
         form.style.display="none";
@@ -27,19 +26,24 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
 
 //Botones de ingreso a generaciones
 accessMexico.addEventListener("click", event => {
-    let prueba = event.target.id;
-    gettingData(prueba);
+    let access = event.target.id;
+    gettingData(access);
 });
 
 accesLima.addEventListener("click", event => {
-    let prueba = event.target.id;
-    gettingData(prueba);
+    let access = event.target.id;
+    gettingData(access);
 });
 
 accessSantiago.addEventListener("click", event => {
-    let prueba = event.target.id;
-    gettingData(prueba);
+    let access = event.target.id;
+    gettingData(access);
 });
+
+
+
+
+
    //generation = campus[1];
    //console.log(generation);
    //console.log(event.target.id);
@@ -55,11 +59,7 @@ accessSantiago.addEventListener("click", event => {
 
 
 
-// const json = '../data/laboratoria.json';// sabemos que tiene que haber un fetch para "jalar" la info. de la carpeta laboratoria.json, pero como está en un servidor necesitamos cargarlo. y cerrarlo después
 
-// const getData = () => {// cuando jale la información, quiero que la convierta en json con el método .json()
-//     fetch(json).then (response => response.json())// haciendo fetch de json y aplicando las promesas .then para que realicen una acción (función)
-//     .then((res)=>{
 //         const generations = computeGenerationStats(res);
 //         const users= computeStudentsStats(res);
 //         drawCampus(generations);

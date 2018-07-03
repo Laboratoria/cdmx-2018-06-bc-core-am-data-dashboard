@@ -79,12 +79,11 @@ De nuestro primer acercamiento al cliente realizamos el primer Sketch que se mue
 Así mismo realizamos un sketch en Figma para tener una mejor perspectiva de nuestra interfaz junto con la clienta:
 ![Primer sketch en figma](https://raw.githubusercontent.com/DianaCarrillo/cdmx-2018-06-bc-core-am-data-dashboard/ramadiana/ux/Img%20readme/FIGMA1.jpeg)
 
-Después del feedback de nuestra clienta realizamos modificaciones al sketch
+Después del feedback de nuestra clienta realizamos modificaciones al sketch:
+![Segundo sketch en figma](https://www.figma.com/file/U1pp48mdcx5hiEi3m9QxjWeo/Dashboard )
 
-![Segundo sketch en figma]()
-
-
-Prototipo en figma: https://www.figma.com/file/U1pp48mdcx5hiEi3m9QxjWeo/Dashboard
+### **5. Argumentación de visual design**
+Pensamos el diseño con base en algunos métodos que optimizan la experiencia del usuario.  El color del fondo y la tipografía nos permiten viaulizar los elementos sin forzar el ojo, por ello elegimos el color gris como background, el rosa como contraste para el título y el color de la letra casi blanco pues entendemos que la plataorma será utilizada constamente. 
 
 ### **5. User testing**
 (Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
