@@ -1,16 +1,17 @@
-let ingresar =document.getElementById("ingresar");
+let sede = document.getElementById("buttons");
+let ingresar = document.getElementById("ingresar");
 let inputName = document.getElementById("input-name");
 let password = document.getElementById("input-password");
-let form= document.getElementById("form");
-let sede =document.getElementById("buttons");
-let accessMexico = document.getElementById("access-mexico");
-let accessLima = document.getElementById("access-lima");
-let accessSantiago = document.getElementById("access-santiago")
+let form = document.getElementById("form");
+let accessMexico = document.getElementById("mexico");
+let accesLima = document.getElementById("lima");
+let accessSantiago = document.getElementById("santiago");
 
-// ocultar las sedes y generaciones
+// Ocultar las sedes
 sede.style.display="none";
 
-ingresar.addEventListener("click", obtenerDatos = () => { 
+// Botones de login
+ingresar.addEventListener("click", obtenerDatos = ()=> { 
     let usuario1 = inputName.value;
     let password1 = password.value;
     
@@ -23,49 +24,31 @@ ingresar.addEventListener("click", obtenerDatos = () => {
     }
 });
 
-// LLAMANDO JSON
+//Botones de ingreso a generaciones
+accessMexico.addEventListener("click", event => {
+    let prueba = event.target.id;
+    gettingData(prueba);
+});
 
+accesLima.addEventListener("click", event => {
+    let prueba = event.target.id;
+    gettingData(prueba);
+});
 
-accessCDMX.addEventListener("")
+accessSantiago.addEventListener("click", event => {
+    let prueba = event.target.id;
+    gettingData(prueba);
+});
+   //generation = campus[1];
+   //console.log(generation);
+   //console.log(event.target.id);
+//});
 
-const iterandoCampus = (data) => { // vamos a iterar sobre las propiedades de todo el objeto (sedes)
-    const sedes = Object.keys(data);// obteniendo propiqedades de toda la data 
-    const containerCampus = document.getElementById("campus");// agregando un select que guarde las sedes y nos deje elegir. Nosotras ya tenemos las cajas donde vamos a guardar las generaciones
-    // forEach nos sirve para pintar los elementos del arreglo 
-    sedes.forEach((sede) => { 
-        const option = document.createElement('option');
-        option.innerHTML = sede;
-        containerCampus.appendChild(option);
-    })
-    containerCampus.addEventListener('change', iterandoGeneracion);
-};
+//accessLima.addEventListener("click", obtenerGeneracionesLima = () => {
+//});
 
-// const iterandoGeneracion = (e) => {
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//accessSantiago.addEventListener("click", obtenerGeneracionesSantiago = () => {
+//});
 
 
 
