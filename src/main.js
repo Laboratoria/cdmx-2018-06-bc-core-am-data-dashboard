@@ -1,11 +1,10 @@
 
 const laboratoria = "https://api.myjson.com/bins/1amyo6";
 let goes= document.getElementById("go");
-goes.addEventListener("click",go)
+//goes.addEventListener("click",go);
 go =()=>{
   if (document.form.password.value=='tmmex2018' && document.form.login.value=='Lucile'){
           document.form.submit();
-          gettinAPI(laboratoria);
       }
       else{
            alert("Porfavor ingrese Usuario y Contraseña correctos.");
@@ -91,11 +90,16 @@ go =()=>{
     });
   };
   const printFilter = (filter)=>{
-    const filterConteiner = document.getElementById('venues');
-    const Filter = (filter);
-    Filter.forEach((filt)=>{
-      const place = document.createElement('option');
-      place.innerHTML = Object.values(filt);
-      filterConteiner.appendChild(place);
-    });
+    const cards = document.getElementsByClassName('card-data');
+    for (i = 0; i< cards.length && i < filter.length; i++)
+    {
+      cards[i].querySelector(".advertisment").innerHTML = filter[i].advertisment;
+      cards[i].querySelector(".average").innerHTML = filter[i].average;
+      cards[i].querySelector(".campus").innerHTML = filter[i].campus;
+      cards[i].querySelector(".generation").innerHTML = filter[i].generation;
+      cards[i].querySelector(".name").innerHTML = filter[i].name;
+      cards[i].querySelector(".timeProm").innerHTML = filter[i].timeProm;
+      cards[i].querySelector(".totalTime").innerHTML = filter[i].totalTime;
+    }
   };
+
