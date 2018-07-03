@@ -16,11 +16,11 @@ A pesar de que la data de progreso del LMS (ej. lecturas leídas, ejercicios com
 El Proceso de Diseño tiene 5 pasos elementales. Estos 5 pasoso nos permiten crear productos centrados en el usuario es por ello
 que el desarollo del producto se vaso en estos:
 
- *Descubrimiento e Investigación(Reserch).*
- *Síntesis y Definición.*
- *Ideación.*
- *Prptotipado.*
- *User Testing.*
+ 1. **Descubrimiento e Investigación(Reserch).**
+ 2. **Síntesis y Definición.**
+ 3. **Ideación.**
+ 4. **Prptotipado.**
+ 5. **User Testing.**
 
 
 ### **1. Reserch**
@@ -134,7 +134,7 @@ __Data proporcionada:__
 
 -_Data relacionada a los cursos:_
 
-__5. Insights del negocio:__
+__Insights del negocio:__
 
 ### **3. Ideación**
 (Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
