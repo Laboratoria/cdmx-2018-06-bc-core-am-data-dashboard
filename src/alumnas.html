@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sedes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="sedes row">
+    <div class="logo col-md-2">
+      <img src="img/laboratoria-logo.png">
+    </div>
+    <div class="search col-md-8">
+      <input type="text" class="input-search" id="input-search">
+    </div>
+    <div class="user col-md-2">
+      <span class="user-logo"></span>
+      <span class="username">Usuario</span>
+    </div>
+  </header>
+
+  <!-- <div id="alumnas-container" class="row"> -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Progreso</th>
+      </tr>
+    </thead>
+    <tbody id="alumnas-container"></tbody>
+  </table>
+  <!-- </div> -->
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
