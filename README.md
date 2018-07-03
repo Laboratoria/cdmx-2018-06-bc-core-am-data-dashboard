@@ -43,12 +43,14 @@ Un data dashboard te puede ofrecer información procesada para que pueda ser usa
 ----
 * Foto del [Primer prototipo](https://photos.app.goo.gl/t2tRZaU243hLqXxP6)
 * Sketch para la versión [web](https://photos.app.goo.gl/ejrssZ2U6TfteCzB6)
-* Sketch para la versión de [tablet] (https://photos.app.goo.gl/Q978VjW2GFVEMPcE9)
-* Sketch para versiones [móviles] (https://photos.app.goo.gl/yvCkJY7zxNaXLTCV6)
+* Sketch para la versión de [tablet](https://photos.app.goo.gl/Q978VjW2GFVEMPcE9)
+* Sketch para versiones [móviles](https://photos.app.goo.gl/yvCkJY7zxNaXLTCV6)
+* Sketch de alta fidelidad inicio [web](https://photos.app.goo.gl/LmRR6vmsn9uXK1728)
+* Sketch de alta fidelidad ingreso a sedes y generaciones [web](https://photos.app.goo.gl/qu8jxZGk6fvL8Sup6)
 
 ----
 ## Última actualización
-* 25-Jun-2018 re-diseño
+* 03-Jul-2018 re-diseño
 
 ----
 ## Agradecimientos

@@ -7,14 +7,13 @@ const getData = () => {
     .then((res) => {
         const generations = window.getCampus(res);
         //const users = computeStudentsStats(res);
-        drawCampus();
+        //drawCampus(res);
 				//drawCampus(generations);
     })
     .catch((error) => {
         console.log(error);
     });
 }
-
 //Se trata al json
 getData();
 
@@ -24,6 +23,18 @@ const containerCampus = document.getElementById('campus');
 
 //Muestra las sedes
 const drawCampus = (data) => {
+  // const campusArray = [];
+  // for (key in laboratoria) {
+  //   const obj = {
+  //       campus: ''
+  //   };
+  //     obj.campus = key;
+  //     campusArray.push(obj.campus);
+  //   }
+  //   for (let i = 0; i < campusArray.length; i++) {
+  //     console.log(campusArray[i]);
+  //     // drawCampus(campusArray[i]);
+  //   };
 	const option = document.createElement('option');
 	option.innerHTML = data;
 	containerCampus.appendChild(option);

@@ -1,0 +1,19 @@
+header{
+  background: #FFFF6B;
+  color: #fff;
+  text-align: center;
+}
+
+#campus{
+  display: flex;
+  height:50px;
+  align: center;
+}
+
+#generacion{
+  align-content: flex-end;
+}
+
+#principal{
+  align-items: center;
+}
