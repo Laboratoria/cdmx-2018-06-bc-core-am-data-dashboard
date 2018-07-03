@@ -26,19 +26,24 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
 
 //Botones de ingreso a generaciones
 accessMexico.addEventListener("click", event => {
-    let prueba = event.target.id;
-    gettingData(prueba);
+    let access = event.target.id;
+    gettingData(access);
 });
 
 accesLima.addEventListener("click", event => {
-    let prueba = event.target.id;
-    gettingData(prueba);
+    let access = event.target.id;
+    gettingData(access);
 });
 
 accessSantiago.addEventListener("click", event => {
-    let prueba = event.target.id;
-    gettingData(prueba);
+    let access = event.target.id;
+    gettingData(access);
 });
+
+
+
+
+
    //generation = campus[1];
    //console.log(generation);
    //console.log(event.target.id);
