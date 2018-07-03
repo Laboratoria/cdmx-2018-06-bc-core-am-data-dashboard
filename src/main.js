@@ -1,12 +1,16 @@
-let sede =document.getElementById("buttons");
-let ingresar =document.getElementById("ingresar");
+let sede = document.getElementById("buttons");
+let ingresar = document.getElementById("ingresar");
 let inputName = document.getElementById("input-name");
 let password = document.getElementById("input-password");
-let form= document.getElementById("form");
+let form = document.getElementById("form");
+let accessMexico = document.getElementById("mexico");
+let accesLima = document.getElementById("lima");
+let accessSantiago = document.getElementById("santiago");
 
-// ocultar las sedes y generaciones
+// Ocultar las sedes
 sede.style.display="none";
 
+// Botones de login
 ingresar.addEventListener("click", obtenerDatos = ()=> { 
     let usuario1 = inputName.value;
     //  console.log(usuario1);
@@ -21,22 +25,34 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
     }
 });
 
-// LLAMANDO JSON
+//Botones de ingreso a generaciones
+accessMexico.addEventListener("click", event => {
+    let prueba = event.target.id;
+    gettingData(prueba);
+});
 
-const json = "../data/laboratoria.json";
-    
-const gettingData = () => {
-    fetch(json).then(res => res.json()) //Mando a llamar a json mediante fetch, entonces le digo que esa información la convierta en archivo json.
-    .then((laboratoria => {   //Aquí le asigo el nombre de laboratoria a la información que envió.
-    campus(laboratoria);  //Aquí estoy diciendo que a mi siguiente función (campus)le estoy mandando la data.
-    })
-}
+accesLima.addEventListener("click", event => {
+    let prueba = event.target.id;
+    gettingData(prueba);
+});
 
-gettingData();
+accessSantiago.addEventListener("click", event => {
+    let prueba = event.target.id;
+    gettingData(prueba);
+});
+   //generation = campus[1];
+   //console.log(generation);
+   //console.log(event.target.id);
+//});
 
-const campus = (laboratoria) => {
- 
-}
+//accessLima.addEventListener("click", obtenerGeneracionesLima = () => {
+//});
+
+//accessSantiago.addEventListener("click", obtenerGeneracionesSantiago = () => {
+//});
+
+
+
 
 
 // const json = '../data/laboratoria.json';// sabemos que tiene que haber un fetch para "jalar" la info. de la carpeta laboratoria.json, pero como está en un servidor necesitamos cargarlo. y cerrarlo después
