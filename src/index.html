@@ -13,75 +13,89 @@
   <header>
     <div class="row">
       <div class="col-md-3"></div>
-      <div class="col-md-3"><img src="https://image.ibb.co/hX7PUo/descarga.jpg"></div>
-      <div class="col-md-3"></div>
+      <div class="col-md-6"><img src="https://image.ibb.co/hX7PUo/descarga.jpg"></div>
       <div class="col-md-3"></div>
     </div>
   </header>
   <br>
   <br>
   <!--En esta parte del codigo esta el codigo del menú-->
-  <div class="container-fluid" id="menu">
-    <div class="row">
-      <div class="col-md-12">
-        <nav class="navbar navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Menú</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Exportar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Enviar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Configuración</a>
-              </li>
-            </ul>
+  <nav>
+    <div class="row" id=menu>
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="btn-group">
+          <button type="button" class="btn btn-warning">Lima</button>
+          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true">
+  <span class="sr-only">Toggle Dropdown</span>
+</button>
+          <div class="dropdown-menu" id="generacionesLima">
+            <a class="dropdown-item" href="#" id="lima4">Cuarta</a>
+            <a class="dropdown-item" href="#" id="lima5">Quinta</a>
+            <a class="dropdown-item" href="#" id="lima3">Tercera</a>
+            <div class="dropdown-divider"></div>
           </div>
-      </div>
-    </div>
-    </nav>
-
-
-    <br>
-    <br>
-    <!--Codigo de la lista desplegable-->
-    <div class="row" id="sedes">
-      <div class="col-md-2"></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-2">
-        <select class="custom-select">
-              <option selected>Selecciona la sede</option>
-              <option id="sede1">Lima</option>
-              <option id="sede2">México</option>
-              <option id="sede3">Santiago</option>
-            </select>
-      </div>
-      <div class="col-md-2"></div>
-      <div class="col-md-2"></div>
-    </div>
-    <!--Parte final de la página-->
-    <div class="row">
-      <div class="container">
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-warning">Santiago</button>
+          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+          <div class="dropdown-menu" id="generacionesSantiago">
+            <a class="dropdown-item" href="#">Cuarta</a>
+            <a class="dropdown-item" href="#">Quinta</a>
+            <a class="dropdown-item" href="#">Tercera</a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-warning">México</button>
+          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+          <div class="dropdown-menu" id="generacionesMexico">
+            <a class="dropdown-item" href="#">Cuarta</a>
+            <a class="dropdown-item" href="#">Quinta</a>
+            <a class="dropdown-item" href="#">Tercera</a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </div>
         <div class="col-md-4"></div>
-        <div class="col-md-8"></div>
       </div>
     </div>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+  </nav>
+  <br>
+  <br>
+  <br>
 
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!--Parte final de la página-->
+  <div id="pintar" class="col-md-4">
+  </div>
+  <div class="row">
+    <div class="container">
+      <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Progreso</th>
+            </tr>
+          </thead>
+            <tbody id="imprimir">
+                </tbody>
+        </table>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 
 </html>
