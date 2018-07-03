@@ -156,6 +156,12 @@ Hicimos varios bocetos de la visualización de nuestro producto.para llegar a nu
 __1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
 
    - Sobre las estudiantes:
+
+   **Nombre**
+   **Avance general de completitud de temas**
+   **Estudiantes por debajo del 60%**
+   **Estudiantes por encima del 90%**
+   **Estudiantes activas e inactvas**
  
 
 __2. Lo que los usuarios esperan obtener:__
@@ -167,17 +173,30 @@ __4. Data proporcionada:__
 
      -_Data relacionada a los cursos:_
 
+**Sedes**
+**Generaciones(tercera, cuarta y quinta)**
+**Estudiantes (nombre, correo, turno)**
+**Porcentaje de complititud**
+**Temas y subtemas (duración y porcentaje de completitud)**
+
 __5. Insights del negocio:__
 
 ### **3. Ideación**
-(Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
+Para solucionar el problema de nuestro cliente pensamos en crear un data dashboard, el cual les permita a los TMs y personal de Laboratoria analizar la información de las estudiantes, así como ver el progreso en general de las otras sedes para poder resolver conflictos, ver avance general y poder realizar cambios o mejoras.
 
 ### **4. Prototipado**
-(Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
+A continuación mostramos nuestro sketch y prototipo los cuales son nuestro primer diseño pensando en las necesidades del usuario, en que fuera fácil de usar y manipular.
 
-Sketch: (Adjuntar liga)
+Sketch: 
+![Primera pantalla](img/Sketch1.png)
+![Segunda pantalla](img/Sketch2.png)
+![Tercera pantalla](img/Sketch3.png)
 
-Prototipo en figma: (Adjuntar liga)
+Prototipo en figma: 
+
+![Cuarta pantalla](img/Prototipo1.jpg)
+![Quinta pantalla](img/Prototipo2.png)
+![Sexta pantalla](img/Prototipo3.png)
 
 ### **5. User testing**
 (Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
