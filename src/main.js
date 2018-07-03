@@ -1,7 +1,8 @@
 console.log("main.js conectado");
-dataDashboard.conectado();
+//Asignar variable a laboratoria.json desde el localhost
 const laboratoria = "../data/laboratoria.json";
 console.log(laboratoria);
+dataDashboard.conectado();
 dataDashboard.getData(laboratoria);
 
 //Login provisional
@@ -17,14 +18,14 @@ function login (usuaria, pasword) {
     }
 }
 //Función para ejecutar la función en los botones del menú sedes
-const seleccionSedeL = () => {
-    document.getElementById("Lima").addEventListener("click", sedeLima); 
-}
-const seleccionSedeM = () => {
-    document.getElementById("Mexico").addEventListener("click",sedeMx);
-}
-const seleccionSedeS = () => {
-    document.getElementById("Santiago").addEventListener("click", sedeSantiago);
-}
+//const seleccionSedeL = () => {
+//     document.getElementById("Lima").addEventListener("click", sedeLima); 
+// }
+// const seleccionSedeM = () => {
+//     document.getElementById("Mexico").addEventListener("click",sedeMx);
+// }
+// const seleccionSedeS = () => {
+//     document.getElementById("Santiago").addEventListener("click", sedeSantiago);
+// }
 //Función para ejecutar la función en los botones del menú generaciones
  
