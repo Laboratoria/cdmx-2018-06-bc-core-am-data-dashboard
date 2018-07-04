@@ -4,15 +4,14 @@ const realoadJSON = () => {
     fetch(json)
     .then( response => response.json() )
     .then((res) => {
-        computeStudentsStats(res);
+        computeStudentsStats(res)
         computeGenerationsStats(res);
         // drawCampus(generacionesFun);
     })
-    // .catch((error) => {
-    //     console.log(error);
-    // });
+    .catch((error) => {
+        console.log(error)
+    });
 }
-
 
 
 //pintar tabla
@@ -37,9 +36,6 @@ clickEstudiantes.addEventListener("click", realoadJSON);
 
 const drawCampus = (data) => {
     // const sedes = Object.keys(data);
-
-    
-
     // const containerCampus = document.getElementById('campus');
 
 /*    sedes.forEach((sede) => {
