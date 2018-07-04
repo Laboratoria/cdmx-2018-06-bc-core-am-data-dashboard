@@ -1,39 +1,45 @@
-console.log("data.js está conectado");
 
-const pintarSedes = (data) => {
-    const ul = document.getElementById("ul-prueba");
-    for (let i in data) {
-        const listSedes = document.createElement("li");
-        const listLink = document.createElement("a");
-        listLink.innerHTML = i;
-        listSedes.classList.add("menu");
-        listSedes.addEventListener("click", prueba);
-        listSedes.appendChild(listLink);
-        ul.appendChild(listSedes);
-     }
-}
-const prueba = (event) => {
-    console.log(event.target);
-}
-//Se crea el objeto dataDashboard como método del objeto window
-window.dataDashboard = {
-    //asignar la función de pintar como propiedad y llamarla dentro del main
-conectado : () => { console.log("holaDashBoard");},
-getData : (laboratoria) =>  {
-    laboratoriaData = "";
-    console.log(laboratoria);
+
+
+
+
+
+// console.log("data.js está conectado");
+
+// const pintarSedes = (data) => {
+//     const ul = document.getElementById("ul-prueba");
+//     for (let i in data) {
+//         const listSedes = document.createElement("li");
+//         const listLink = document.createElement("a");
+//         listLink.innerHTML = i;
+//         listSedes.classList.add("menu");
+//         listSedes.addEventListener("click", prueba);
+//         listSedes.appendChild(listLink);
+//         ul.appendChild(listSedes);
+//      }
+// }
+// const prueba = (event) => {
+//     console.log(event.target);
+// }
+// //Se crea el objeto dataDashboard como método del objeto window
+// window.dataDashboard = {
+//     //asignar la función de pintar como propiedad y llamarla dentro del main
+// conectado : () => { console.log("holaDashBoard");},
+// getData : (laboratoria) =>  {
+//     laboratoriaData = "";
+//     console.log(laboratoria);
     
-//Realizar enlace fetch con arrow function
-    fetch(laboratoria)
-    .then((response) => {
-       // laboratoriaData = response.json();       
-        console.log(response);
-        return response.json()
-    }).then((chooseSede) => {
-        //se ejecuta como .json
-        console.log("Data",chooseSede);
-    //Debe enlazar la funcion al click en "sedes"
-        pintarSedes(chooseSede)
+// //Realizar enlace fetch con arrow function
+//     fetch(laboratoria)
+//     .then((response) => {
+//        // laboratoriaData = response.json();       
+//         console.log(response);
+//         return response.json()
+//     }).then((chooseSede) => {
+//         //se ejecuta como .json
+//         console.log("Data",chooseSede);
+//     //Debe enlazar la funcion al click en "sedes"
+//         pintarSedes(chooseSede)
 
 
            /* if (addEventListener("click", sedeLima)) { 
@@ -63,13 +69,13 @@ getData : (laboratoria) =>  {
                 const sedeSantiago = () => {
                     chooseSede = laboratoria.santiago;
                 }
-            }*/
-        })
-        .catch((error) => {
-            console.log("errordeMV", error);
-        });
+        //     }*/
+        // })
+        // .catch((error) => {
+        //     console.log("errordeMV", error);
+        // });
 
-        }
+        // }
     //se cierra getData
 
  /*
@@ -96,5 +102,5 @@ const filterStudents = (students, search) => {
 
 
 //cierre del objeto window
-};
+//};
 
