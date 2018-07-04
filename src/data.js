@@ -9,7 +9,6 @@ window.computeStudentsStats = (laboratoria) => {
         generations.forEach((generation) => {
             generation = generation;
             students = laboratoria[key].generacion[generation].estudiantes;
-            // console.log(students);
         })
         // let student;
         // students.forEach((student) =>{
