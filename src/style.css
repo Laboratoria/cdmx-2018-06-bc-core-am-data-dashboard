@@ -91,3 +91,15 @@ background: #696969 ;
   padding: 15px 20px;
   background: red;
 }
+
+#page-students {
+  color: white;
+  text-align: center;
+  font-size: x-large;
+}
+
+#students-titles {
+  color: darkslategrey;
+  text-align: left;
+  font-size: 40%;
+}

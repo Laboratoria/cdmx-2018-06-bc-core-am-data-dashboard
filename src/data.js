@@ -17,6 +17,7 @@ const prueba = (event) => {
 }
 //Se crea el objeto dataDashboard como método del objeto window
 window.dataDashboard = {
+    //asignar la función de pintar como propiedad y llamarla dentro del main
 conectado : () => { console.log("holaDashBoard");},
 getData : (laboratoria) =>  {
     laboratoriaData = "";
