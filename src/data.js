@@ -8,7 +8,7 @@ window.computeStudentsStats = (laboratoria) => {
         let students;
         generations.forEach((generation) => {
             generation = generation;
-            students = laboratoria[key].generacion[generation].estudiantes
+            students = laboratoria[key].generacion[generation].estudiantes;
             // console.log(students);
         })
         // let student;
@@ -29,16 +29,12 @@ window.computeStudentsStats = (laboratoria) => {
     }
 }
 
-
-
-
-
 // window.computeStudentsStats = (laboratoria) => {
 
 // }
 
 window.computeGenerationsStats = (laboratoria) => {
-    // const arrayResult = [];
+    const arrayResult = [];
     
     const obj = {
         campus: '',
@@ -72,5 +68,5 @@ window.computeGenerationsStats = (laboratoria) => {
                         
          })     
     }
-    return obj
+    return obj;
 }
