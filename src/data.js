@@ -10,14 +10,10 @@ window.computeStudentsStats = (laboratoria) => {
             generation = generation;
             students = laboratoria[key].generacion[generation].estudiantes;
         })
-        // let student;
-        // students.forEach((student) =>{
-        //     student = student;
-        //     console.log(student);
-        // })
+
         name.innerHTML = "";  
         for (let i = 0; i < students.length; i++) {
-            // listaEstudiantes.style.display = "block";
+            listaEstudiantes.style.display = "block";            
             name.innerHTML += `
             <tr>
             <th scope="col"> ${students[i].nombre}</th>
@@ -25,6 +21,7 @@ window.computeStudentsStats = (laboratoria) => {
             </tr>
             `        
         }
+       
     }
 }
 
