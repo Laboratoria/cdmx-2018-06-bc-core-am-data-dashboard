@@ -7,34 +7,41 @@
       <title>Laboratoria LMS Dashboard</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+<section id= pantalla_1>
 <header>
-          <h1>Laboratoria LMS Dashboard_1</h1>
-  <br>
-  <img src="../images/Ldelabo.png " id="laboratorialogo">
-  <br>
+          <h1> Laboratoria LMS Dashboard </h1>
+
+  <img src="../images/Ldelabo.png " id="laboratoria">
+
     <nav>
-      <li>
+      <ul>
           <input type="text" value="Usuaria" id="user-name"> <br>
-          <br>
+
           <input type="password" value="Contraseña" id="password"><br>
-          <br>
+
           <input type="submit" value="Login"> <br>
-        </li>
-    </nav>
+          <button onclick="a()">Click me</button>
+        </ul>
+
+  <h2 id="welcome"> ¡Bienvenida </h2>
 </header>
-<br>
-<br>
-<!-- Barra de nav -->
-    <nav>
+
+</section>
+
+<!----------------------------------------------------------------------------->
+<main id= patalla_2>
+    <nav class="menu">
     <div id="barra-menu">
     <div class="row">
     <div class="col-md">
       <ul class= "nav">
-        <li><a href="#">Cambiar Sede </a>
+        <li><a href="#">Cambiar Sede</a>
         <ul>
         <li id="Lima"><a href="#">Lima</a></li>
         <li id="Mexico"><a href="#">México</a></li>
@@ -79,28 +86,24 @@
             </div>
           </ul>
         </nav>
-<br>
-<br>
+
 <!-- Cierra barra de nav-->
-<br>
-<br>
-<br>
-<br>
-<nav>
+<section id pantalla_3>
+
+<article>
+  <ul id="ul-prueba">
   <div class="col-lg">
     <div>
-      <ul id="ul-prueba">
         <li><a href="#">Cambiar Sede</a></li>
-        <!--<li id="Lima"><a href="#">Lima</a></li>
+        <li id="Lima"><a href="#">Lima</a></li>
         <li><a href="#">México</a></li>
-        <li><a href="#">Santiago</a></li>-->
-      </ul>
+        <li><a href="#">Santiago</a></li>
     </div>
-   </div> 
-</nav>
-<br>
-<br>
-<nav>
+    </div>
+  </ul>
+</article>
+
+<article>
   <ul>
       <div class="col-lg">
     <div>
@@ -110,24 +113,14 @@
       <li id="quintaGen"><a href="#">Quinta</a></li>
     </div>
 </ul>
-</nav>
-<h2 id="welcome"> ¡Bienvenida </h2>
-    <section id="page-students">
-      <h3>Estudiantes Activas:</h3>
-        <h4 id="generation">Generación: </h4>
-        <h5 id= "country">País: </h5>
-      <li id="students-titles">
-        <p id="student-name">Estudiante: </p>
-        <p id="studen-email">Email: </p>
-        <p id="student-progress">Progreso: </p>
-        <p id="turn">Turno: </p>
-      </li>
-    </section>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
+  <footer>
+        <p>Talento que transforma</p>
+  </footer>
+</main>
 </html>
