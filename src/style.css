@@ -3,7 +3,7 @@ header{
   background:#000;
 }
 body,html{
-  background: #ffc107;
+  background: #FFE521;
 }
 #usuario{
 text-align: right;
@@ -13,8 +13,11 @@ color: white;
 line-height: 20px;
 }
 #campus {
-background: #ffc107;
+background: #FFE521;
 
+}
+.login{
+    background: #FFE521;
 }
 .row .info-users .usario{
   line-height: 18px;
@@ -26,4 +29,8 @@ background: #ffc107;
 .search {
   float: right;
   padding: 20px;
-  background: #ffc107;
+  background: #FFE521;
+}
+.input-group{
+  background: #FFE521;
+}
