@@ -1,4 +1,50 @@
+console.log("conectado");
 
+const showResult = document.getElementById("result-list");
+//Definición de la primera función 
+window.computeStudentsStats = (laboratoria) => {
+//declaración de variables:
+const student = [{
+    name: null,
+    campus: null,
+    generation: null,
+    
+}];
+console.log(student);
+//se inicia la iteración en el primer nivel del objeto
+            for (findSede in laboratoria) {
+                student.campus = findSede;
+                console.log('1', Object.keys(laboratoria[findSede].generacion));
+                const generations = Object.keys(laboratoria[findSede].generacion);
+                     for (let i = 0; i < generations.length; i++) {
+                        const findGeneration = laboratoria[findSede].generacion[generations[i]];
+                        student.generation = Object.keys(findGeneration);
+                        console.log('2', student.generation);
+                            for (let i = 0; i < findGeneration.length; i++) {
+                            const findName = laboratoria[findSede].generacion[generations[i]].estudiantes;
+                            student.name = findName;
+                            console.log('3', student.name);
+                        }
+                     console.log(laboratoria[findSede].generacion[generations[i]].estudiantes);
+                     }
+            }
+              
+    //     for (propertyname in laboratoria) {
+    //        const sedes = Object.keys(laboratoria[i])
+    //        console.log(sedes);
+            
+    //     };
+    //     for (propertynames in laboratoria.generacion) {
+    //         const generation = Object.keys(laboratoria[i].generacion);
+    //         console.log(generation);    
+    //     };    
+    //     console.log();
+    // }
+   // return sedes = new Array [""];
+//laboratoria[0] ${'campus:'} + propertyname ) 
+
+//se cierra la función
+}
 
 
 
