@@ -1,21 +1,23 @@
 //Funciones de Login
 // Nombre y contraseña
-var name = document.getElementById('name');
-var pw = document.getElementById('pw');
+let name = document.getElementById('name').value;
+let pw = document.getElementById('pw').value;
 
+console.log(name)
+console.log(pw)
 // Compara si la información de registro es igual a la información de log in
-function check() {
-var logIn = document.addEventListener("Login").click();
+ check = () => {
+let logIn = document.getElementById("Login").addEventListener("click", (event)
     // información almacenada del registro
-    var storedName = "Lucile";
-    var storedPw = "laboratoria2018";
+    let storedName = "Lucile";
+    let storedPw = "laboratoria2018";
 
-    // entered data from the login-form
+    // info metida del log in
     //var userName = document.getElementById('userName');
     //var userPw = document.getElementById('userPw');
 
-    // check if stored data from register-form is equal to data from login form
-    if(logIn.name !== storedName || logIn.storedPw !== storedPw) {
+    // comparar la información de registro
+    if(name !== storedName || storedPw !== storedPw) {
         alert('ERROR');
     }else {
         alert('¡Bienvenidx!');
