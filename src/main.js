@@ -6,53 +6,53 @@ let urlDirection = "https://api.myjson.com/bins/ag4ny";
 let sedeLima = document.querySelector("#botonesSede");
 let sedeMexico= document.querySelector("#botonesSede1");
 let sedeSantiago = document.querySelector("#botonesSede2");
-let btn = document.querySelector("#lima");
-let btn1 = document.querySelector("#cdmx");
-let btn2 = document.querySelector("#cdmx2");
 
-// Funcion que muestra datos de sedes y alumnas de lima en consolg
-lima.addEventListener("click", function(){
-    sede();
+const campus =document.getElementsByClassName("campus");
+
+for(let i=0; i<campus.length; i++){
+  campus[i].addEventListener("click", function(e){
+    sede(e);
   })
 
-  let sede = function(){
+
+}
+// Funcion que muestra datos de sedes y alumnas de lima en consolg
+
+  let sede = function(e){
+    let campus= (e.target.value).toLowerCase();
       fetch(urlDirection).then(function(datos){
       return datos.json();
       }).then(function(data){
 
 
-        console.log(data);
-      let sede = data.lima.generacion;
-      console.log(data.lima.generacion);
-      let generaciones = Object.keys(sede);
+       
+      let gen = data[campus].generacion;
+     
+      let generaciones = Object.keys(gen);
 
-      console.log(generaciones[1]);
-
+      
 
 
     for(let i = 0; i<generaciones.length; i++) {
         sedeLima.innerHTML+= "<div>" + generaciones[i] + "</div>";
-
-            let est=data.lima.generacion.tercera.estudiantes
-
-          
-            
+        console.log(data[campus]);
+            let est=data[campus].generacion[generaciones[i]].estudiantes
+             
             for(let i = 0; i<est.length; i++) {
+              
+           
         sedeLima.innerHTML+= "<div>" + est[i].nombre + "</div>";
-
+        sedeLima.innerHTML+= "<div>" + est[i].correo + "</div>";
+        sedeLima.innerHTML+= "<div>" + est[i].progreso.duracionPrograma+ "</div>";
+        sedeLima.innerHTML+= "<div>" + est[i].progreso.porcentajeCompletado+ "</div>";
+        sedeLima.innerHTML+= "<div>" + est[i].turno + "</div>";
             }
           }
 //
 
 
 //
-console.log(data.lima.generacion.tercera.estudiantes);
-console.log(data.lima.generacion.cuarta.estudiantes);
-console.log(data.lima.generacion.quinta.estudiantes);
-console.log(data.lima.generacion.tercera.estudiantes);
-console.log(data.lima.generacion.tercera.estudiantes[0].nombre);
-console.log(data.lima.generacion.tercera.estudiantes[0].progreso);
-console.log(data.lima.generacion.tercera.estudiantes[0].turno);
+
       })
 
   }
