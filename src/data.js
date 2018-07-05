@@ -37,7 +37,7 @@ window.computeGenerationsStats = (laboratoria) => {
     generation1.forEach(elements => { //generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
       let average2 = 0; // Esta variable hace el corte del flujo por generación.
       generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
-      
+
       const students = laboratoria[sede].generacion[generation1].estudiantes; //Se usa [] para entrar porque es variable. Sino es con .
       for (student in students) {
         average2 += students[student].progreso.porcentajeCompletado; //Llegando al porcentajeCompletado (un número) se estará sumando.
@@ -64,23 +64,26 @@ window.computeStudentsStats = (laboratoria) => {
   let emailStudent = "";
   let sede = "";
   let generation1 = "";
-  let stats1 = {}
-  let status= "";
+  let stats1 = {};
+  let status = 0;
   let completedPercentage1 = 0;
-  let topics = {}
+  let topics1 = {};
   let completedPercentage2 = 0;
-  let percentageDuration = 0;
-  let subtopics = {}
-  let completedPercentage3 = 0;
+  let percentageDuration2 = 0;
+  let subtopics = {};
+  let completedPercentage = 0;
   let type = "";
   let duration = 0;
-   
-
+  //     }
+  //   }
+  // }
   for (key in laboratoria) {
     sede = key;
     generation1 = Object.keys(laboratoria[sede].generacion);
     generation1.forEach(elements => {
       generation1 = elements;
+
+      
 
       const students = laboratoria[sede].generacion[generation1].estudiantes; // Nos situamos a partir de las estudiantes.
       for (student in students) { // Iteramos students para acceder al nombre y correo.
@@ -97,12 +100,20 @@ window.computeStudentsStats = (laboratoria) => {
             let status3 = (stats1["status"] = completedPercentage1);
             status = status3;
           }
-        
-      }
+         const temas = students[student].progreso.temas;
+        console.log(temas);
+        // topics1.forEach(tema => {
+        //    topics1 = tema
+          //  console.log(topics1);
+          // completedPercentage2 = completedPercentage3;
+    
 
+          // completedPercentage2=completedPercentage3/temas.length;
 
-
-
+          // }) 
+        }
+     
     })
+    }
   }
 }
