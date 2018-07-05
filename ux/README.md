@@ -20,11 +20,11 @@ Sorprendió saber que no están usando un Data Dashboard. Utilizan Spreadsheets 
 
 Debido a las múltiples funciones de las TMs, lo primordial que es la consulta de esta data día a día y lo complejo que es se tiene como objetivo crear una herramienta que ayude a procesar y visualizar estos datos de una forma rápida, eficaz y entendible, y que además puedan consultarse a cualquier hora del día así sea desde un equipo móvil o su lapp.
 
-Formato entrevista:![https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/FormatoEntrevista.png]
-Contacto entrevista:![https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/contactandoEntrevista.png]
-Entrevistas TMs:![https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/entrevista2.png]
-                ![https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/entrevista1.png]
-                ![https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/entrevistaLucile.jpg]
+Formato entrevista:![Formato entrevista](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/FormatoEntrevista.png)
+Contacto entrevista:![Contacto entrevista](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/contactandoEntrevista.png)
+Entrevistas TMs:![entrevista1](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/entrevista2.png)
+![entrevista2](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/entrevista1.png])                
+![entrevistaLucile](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/entrevistaLucile.jpg)
 
 
 ### **2. Síntesis y definición**
@@ -46,13 +46,12 @@ Se podrán consultar los datos por sede, generación (promedio general) y por es
 
 Para el prototipo del producto se pensó en primer plano que el usuario iniciara sesión solicitando nombre y contraseña (Ya que son datos importantes, no cualquiera puede tener acceso a ellos). Al acceder el usuario podrá seleccionar la sede, y después la generación. Después de seleccionar la sede se desplegará una tabla con las siguientes columnas: nombre de la alumna, porcentaje de progreso en general, porcentaje de temas terminados, tiempo completado por tema, temas terminados y temas no terminados. Se podrá acceder a la información de cada alumna dándole click al nombre de la misma. Se desplegará otra pantalla donde aparecerá la información de avance por tema y subtema y una gráfica que hará más visible y claro el avance o retroceso.
 
-Sketch: ![https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/sketch1.jpg
-]
+Sketch: ![sketch](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/sketch1.jpg)
 
-Prototipo: (../prototipo1.png)
-           (../prototipo2.png)
-           (../prototipo3.png)
-           (..prototipo4.png)
+Prototipo: (..Prototipo/prototipo1.png)
+           (..Prototipo/prototipo2.png)
+           (..Prototipo/prototipo3.png)
+           (..Prototipo/prototipo4.png)
 
 
 ### **5. User testing**
@@ -60,7 +59,8 @@ Prototipo: (../prototipo1.png)
 Al realizar la entrevista a la TMs de la sede de CDMX se le mostro el sketch del prototipo, le pareció funcional y dando feedback nos mencionó que agregaría datos extras que para ella son primordiales (Alumnas activas y promedio avance grupal).
 ****
 
-Nuevas propuestas: ![https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/propuestaSketch.jpg]
+Nuevas propuestas:
+![propuestasketch](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/propuestaSketch.jpg)
 
 
 ### **6. Argumentación de Visual Design**
@@ -84,4 +84,3 @@ Gama cromatica de Laboratoria:
 
  5. SLOGAN:
  “talento que transforma” denominado de tal manera debido a que es por las alumnas  que ocurre el cambio, pues no es el “código” lo que transforma; son ellas mismas las que transforman. Ellas, con sus ganas y su perseverancia transforman su vida en Laboratoria. Luego, al entrar a trabajar al mundo tech, transforman toda una industria, haciéndola más diversa, inclusiva e innovadora.
-
