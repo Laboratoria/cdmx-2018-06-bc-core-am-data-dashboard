@@ -24,6 +24,7 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
     }
 });
 
+// Función para pintar sedes en el DOM
 const sedes = (laboratoria) => {
     // let result = laboratoria;
     const containerButtons= document.getElementById("container-buttons");
@@ -37,56 +38,30 @@ const sedes = (laboratoria) => {
         // falta agregar evento al divCol para que ese button detone una funcion
         containerButtons.appendChild(divCol);
         // console.log(key);
-
     }
 }
 
-// Botones de ingreso a generaciones
-accessMexico.addEventListener("click", event => {
-    let access = event.target.id;
-    gettingData(access);
-});
+//Botones de ingreso a generaciones
+// accessMexico.addEventListener("click", event => {
+//     let access = event.target.id;
+//     gettingData(access);
+// });
 
-accesLima.addEventListener("click", event => {
-    let access = event.target.id;
-    gettingData(access);
-});
+// accesLima.addEventListener("click", event => {
+//     let access = event.target.id;
+//     gettingData(access);
+// });
 
-accessSantiago.addEventListener("click", event => {
-    let access = event.target.id;
-    gettingData(access);
-});
-
-
-
-
-
-   //generation = campus[1];
-   //console.log(generation);
-   //console.log(event.target.id);
-//});
-
-//accessLima.addEventListener("click", obtenerGeneracionesLima = () => {
-//});
-
-//accessSantiago.addEventListener("click", obtenerGeneracionesSantiago = () => {
-//});
+// accessSantiago.addEventListener("click", event => {
+//     let access = event.target.id;
+//     gettingData(access);
+// });
 
 
 
 
 
 
-//         const generations = computeGenerationStats(res);
-//         const users= computeStudentsStats(res);
-//         drawCampus(generations);
-//     })
-// };
-// getData();
-    
 
-// const drawCampus = (data) => {
-//     const sedes = Object.keys(data)
-// }
 
 
