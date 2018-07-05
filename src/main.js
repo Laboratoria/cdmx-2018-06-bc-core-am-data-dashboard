@@ -1,27 +1,42 @@
-const json = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
 
-const realoadJSON = () => {
-    fetch(json)
-    .then( response => response.json() )
-    .then((res) => {
-        computeStudentsStats(res)
-        computeGenerationsStats(res);
-        // drawCampus(generacionesFun);
-    })
-    .catch((error) => {
-        console.log(error)
-    });
- }
-
-
-//pintar tabla
+//pintar tabla de estudiantes
 let listaEstudiantes = document.getElementById("tablaEstudiantes");
 
 //Variable que pintara la lista de estudiantes.
-let name = document.getElementById("lista_estudiantes");
+let listaResult = document.getElementById("lista_estudiantes");
 
-//interacción click estudiantes
-let clickEstudiantes = document.getElementById("estudiantes");
+//llamados id de links
+let clickEstudiantesTodos = document.getElementById("estudiantes");
+let clickEstudiantesC4 = document.getElementById("estudiantesC4");
+let clickEstudiantesC5 = document.getElementById("estudiantesC5");
+let clickEstudiantesC6 = document.getElementById("estudiantesC6");
+let clickEstudiantesL4 = document.getElementById("estudiantesL4");
+let clickEstudiantesL5 = document.getElementById("estudiantesL5");
+let clickEstudiantesL6 = document.getElementById("estudiantesL6");
+let clickEstudiantesS4 = document.getElementById("estudiantesS4");
+let clickEstudiantesS5 = document.getElementById("estudiantesS5");
+let clickEstudiantesS6 = document.getElementById("estudiantesS6");
 
-//evento para jalar data
-clickEstudiantes.addEventListener("click", realoadJSON);
+
+
+//evento para jalar lista de estudiantes
+clickEstudiantesTodos.addEventListener("click", (event) => {
+
+    computeStudentsStats();
+    // for (let i = 0; i < students.length; i++) {
+    //     listaResult.innerHTML += `
+    //             <tr><th scope="col"> ${n+i}</th>
+    //             <th scope="col"> ${nameStudent}</th>
+    //             <th scope="col"> ${mailStudent}</th>
+    //             <th scope="col"> ${turnoStudent}</th>
+    //             </tr>
+    //             `
+    //         }
+
+    listaEstudiantes.style.display = "block";
+});
+
+clickEstudiantesC4.addEventListener("click", (event) => {
+    computeStudentsStats();
+    listaEstudiantes.style.display = "block";
+});

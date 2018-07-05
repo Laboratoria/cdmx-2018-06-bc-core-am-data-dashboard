@@ -35,17 +35,19 @@
               </a>
 
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Cdmx - 4ta </a>
-                <a class="dropdown-item" href="#">Cdmx - 5ta</a>
-                <a class="dropdown-item" href="#">Cdmx - 6ta</a>
+                <a class="dropdown-item" href="#" id="estudiantesC4">Cdmx - 4ta </a>
+                <a class="dropdown-item" href="#" id="estudiantesC5">Cdmx - 5ta</a>
+                <a class="dropdown-item" href="#" id="estudiantesC6">Cdmx - 6ta</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" id="estudiantes">Lima - 4ta </a>
-                <a class="dropdown-item" href="#">Lima - 5ta</a>
-                <a class="dropdown-item" href="#">Lima - 6ta</a>
+                <a class="dropdown-item" href="#" id="estudiantesL4">Lima - 4ta </a>
+                <a class="dropdown-item" href="#" id="estudiantesL5">Lima - 5ta</a>
+                <a class="dropdown-item" href="#" id="estudiantesL6">Lima - 6ta</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Santiago - 4ta </a>
-                <a class="dropdown-item" href="#">Santiago - 5ta</a>
-                <a class="dropdown-item" href="#">Santiago - 6ta</a>
+                <a class="dropdown-item" href="#" id="estudiantesS4">Santiago - 4ta </a>
+                <a class="dropdown-item" href="#" id="estudiantesS5">Santiago - 5ta</a>
+                <a class="dropdown-item" href="#" id="estudiantesS6">Santiago - 6ta</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" id="estudiantes" >Todas las Estudiantes</a>
               </div>
             </li>
 
@@ -59,14 +61,16 @@
 
       <main class=container> <!--INICIO DE DIV´S PARA IMPRESION DE RESULTADOS-->
 
-        <div id="tablaEstudiantes" class="ocultar">
+        <div class="ocultar" id="tablaEstudiantes">
           <table class="table table-sm">
             <thead>
               <tr>
+                  <th scope="col">#</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Correo</th>
                 <th scope="col">Turno</th>
                 <th scope="col">% LMS</th>
+                <th scope="col">Sede</th>
               </tr>
             </thead>
             <tbody id="lista_estudiantes">
