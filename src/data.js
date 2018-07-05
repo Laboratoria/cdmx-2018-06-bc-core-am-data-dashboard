@@ -17,7 +17,7 @@ lima.addEventListener("click", function(){
   });
 window.global.computeStudentsStats()*/
 const container = document.getElementById('result');
-let sede = function(){
+/*let sede = function(){
     fetch(urlDirection).then(function(datos){
     return datos.json();
     }).then(function(data){
@@ -70,7 +70,7 @@ let sede1 = function(){
 
         for(let i = 0; i<est.length; i++) {
     /*sedeMexico.innerHTML+= "<div>" + est[i].nombre + "</div>";*/
-let result = "";
+/*let result = "";
     let nombres = est[i];
     //console.log(nombres, pintar);
     result = result + `<div class = "card">
@@ -92,7 +92,7 @@ let result = "";
             <td></td>
           </tr>
           <tr>`*/
-  }
+/*  }
   container.innerHTML = result;
 }
 })
@@ -108,3 +108,4 @@ console.log(data.mexico.generacion.tercera.estudiantes[0].nombre);
 console.log(data.mexico.generacion.tercera.estudiantes[0].progreso);
 console.log(data.mexico.generacion.tercera.estudiantes[0].turno);
       }
+*/

@@ -114,8 +114,7 @@ login.addEventListener("click",userdat =() =>{
 lima.addEventListener("click", function(){
     sede();
   })
-
-  /*let sede = function(){
+  let sede = function(){
       fetch(urlDirection).then(function(datos){
       return datos.json();
       }).then(function(data){
@@ -149,7 +148,7 @@ console.log(data.lima.generacion.tercera.estudiantes[0].progreso);
 console.log(data.lima.generacion.tercera.estudiantes[0].turno);
       })
 
-  }*/
+  }
   cdmx.addEventListener("click", function(){
     sede1();
   })
