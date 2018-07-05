@@ -12,8 +12,16 @@ image {
 
 }
 
- #lima {
-     
+.alinearSede{
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+}
+.alinearSede1{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 
-
- }
+.alinearSede2 {
+  text-align: right;
+  font-family: 'Open Sans', sans-serif;
+}

@@ -2,32 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
   </head>
-  
   <body>
-
-      <header>
+    <header>
     <img src="../Images/Imagen2.png" alt="">
   </header>
 
-  <div id="lima" onclick="">
-      Lima
-      <p id="generacionlima"></p>
-  </div>
-   <div id="mexico" onclick="">
-     México
-     <p id="generacionmexico"></p>
-   </div>
-   <div id="chile" onclick="">
-     Santiago
-     <p id="generacionsantiago"></p>
-   </div>
-  </div>
+    <!-- <select name="" id="sedes">
+      <option value= "cdmx">CDMX</option>
+      <option value="lima">Lima</option>
+      <option value="santiago">Santiago</option>
+    </select>
+       -->
+
+<div class="alinearSede" id="botonesSede">
+<input type="button"  value="LIMA" id="lima">
+
+</div>
+
+<div class="alinearSede1" id="botonesSede1">
+<input type="button" value="MEXICO" id="cdmx">
+
+</div>
+
+<div class="alinearSede2" id="botonesSede2">
+<input type="button" value="SANTIAGO" id="cdmx2">
+
+</div>
+
+</div>
+
 
     <script src="main.js"></script>
     <script src="data.js"></script>
-
   </body>
 </html>
