@@ -1,4 +1,3 @@
-
 //pintar tabla de estudiantes
 let listaEstudiantes = document.getElementById("tablaEstudiantes");
 
@@ -40,3 +39,4 @@ clickEstudiantesC4.addEventListener("click", (event) => {
     computeStudentsStats();
     listaEstudiantes.style.display = "block";
 });
+

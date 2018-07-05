@@ -1,3 +1,4 @@
+
 const json = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
 
 const realoadJSON = () => {
@@ -65,9 +66,11 @@ window.computeStudentsStats = (laboratoria) => {
 
 
 
+
+
 window.computeGenerationsStats = (laboratoria) => {
     const arrayResult = [];
-
+    
     const obj = {
         campus: '',
         generation: '',
@@ -88,6 +91,7 @@ window.computeGenerationsStats = (laboratoria) => {
             obj.generation = generation;
 
             const students = laboratoria[key].generacion[generation].estudiantes;
+
             for(student in students){
                 average = 0;
                 average += students[student].progreso.porcentajeCompletado;
@@ -96,9 +100,11 @@ window.computeGenerationsStats = (laboratoria) => {
                 obj.average = Math.round(average);
                 obj.count = students.length;
             }
+
             // console.log(obj);
 
         })
+
     }
     return obj;
 }
