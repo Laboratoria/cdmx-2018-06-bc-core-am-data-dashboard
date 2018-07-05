@@ -56,12 +56,3 @@ const sedes = (laboratoria) => {
 //     let access = event.target.id;
 //     gettingData(access);
 // });
-
-
-
-
-
-
-
-
-
