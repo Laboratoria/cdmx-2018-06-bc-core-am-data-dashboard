@@ -61,32 +61,4 @@ const sedes = (laboratoria) => {
 
 
 
-   //generation = campus[1];
-   //console.log(generation);
-   //console.log(event.target.id);
-//});
-
-//accessLima.addEventListener("click", obtenerGeneracionesLima = () => {
-//});
-
-//accessSantiago.addEventListener("click", obtenerGeneracionesSantiago = () => {
-//});
-
-
-
-
-
-
-//         const generations = computeGenerationStats(res);
-//         const users= computeStudentsStats(res);
-//         drawCampus(generations);
-//     })
-// };
-// getData();
-    
-
-// const drawCampus = (data) => {
-//     const sedes = Object.keys(data)
-// }
-
-
+   

@@ -13,7 +13,7 @@ const gettingData = (data) => {
       sedes(laboratoria)
       computeGenerationsStats(laboratoria); //Aquí estoy diciendo que a mis siguienten funciones, les estoy mandando esa data.
       computeStudentsStats(laboratoria);
-      
+
     })
     .catch((error) => {
       console.log(error);
@@ -37,12 +37,14 @@ window.computeGenerationsStats = (laboratoria) => {
     generation1.forEach(elements => { //generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
       let average2 = 0; // Esta variable hace el corte del flujo por generación.
       generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
+      
       const students = laboratoria[sede].generacion[generation1].estudiantes; //Se usa [] para entrar porque es variable. Sino es con .
       for (student in students) {
         average2 += students[student].progreso.porcentajeCompletado; //Llegando al porcentajeCompletado (un número) se estará sumando.
         average1 = Math.round(average2 / students.length); //Saca promedio y redondea la cifra.
         count1 = students.length;
       }
+      
       generation.push({
         "generation": generation1,
         "campus": sede,
@@ -57,42 +59,50 @@ window.computeGenerationsStats = (laboratoria) => {
 window.computeStudentsStats = (laboratoria) => {
 
   let student = [];
-  
+
   let nameStudent = "";
   let emailStudent = "";
   let sede = "";
   let generation1 = "";
-  let stats1 = {
-    // status: "",
-    completedPercentage: 0,
-    topics: {
-      // completedPercentage: 0,
-      // percentageDuration: 0,
-      subtopics: {
-        // completedPercentage: 0,
-        // type: "",
-        // duration: 0
-      }
-    }
-  }
+  let stats1 = {}
+  let status= "";
+  let completedPercentage1 = 0;
+  let topics = {}
+  let completedPercentage2 = 0;
+  let percentageDuration = 0;
+  let subtopics = {}
+  let completedPercentage3 = 0;
+  let type = "";
+  let duration = 0;
+   
 
   for (key in laboratoria) {
     sede = key;
-    generation1 = Object.keys(laboratoria[sede].generacion); 
-    generation1.forEach(elements => { 
-    generation1 = elements; 
+    generation1 = Object.keys(laboratoria[sede].generacion);
+    generation1.forEach(elements => {
+      generation1 = elements;
 
-    const students = laboratoria[sede].generacion[generation1].estudiantes; 
-    for (student in students){
-      nameStudent = students[student].nombre;
-      emailStudent = students[student].correo;
-      porcentajeCompletado = students[student].progreso.porcentajeCompletado;
-      console.log(porcentajeCompletado);
-    }
-    
-    
+      const students = laboratoria[sede].generacion[generation1].estudiantes; // Nos situamos a partir de las estudiantes.
+      for (student in students) { // Iteramos students para acceder al nombre y correo.
+        nameStudent = students[student].nombre;
+        emailStudent = students[student].correo;
+        completedPercentage1 = students[student].progreso.porcentajeCompletado; // Trazamos la ruta hacia porcentajeCompletado y creamos condiacionales para identificar el status de cada estudiante.
+        if(completedPercentage1 < 60){
+          let status1 = (stats1[status] = completedPercentage1);
+          status = status1;
+          } else if(completedPercentage1 >= 90){
+          let status2 = (stats1["status"] = completedPercentage1);
+          status = status2;
+          } else{
+            let status3 = (stats1["status"] = completedPercentage1);
+            status = status3;
+          }
+        
+      }
+
+
 
 
     })
-}
+  }
 }
