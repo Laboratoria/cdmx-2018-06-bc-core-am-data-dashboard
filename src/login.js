@@ -7,7 +7,7 @@ const loginUsuario = () => {
   console.log(loginUser);
 
   if(user === "admin" && loginUser === "123admin"){
-    window.open("principal.html");
+    window.open("index_1.html");
 
 
   }else {
