@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <section id= pantalla_1>
+    <section id="pantalla-1">
       <header>
         <h1> Laboratoria LMS Dashboard </h1>
         <img src="../images/Ldelabo.png " id="laboratoria">
@@ -26,7 +26,7 @@
         <h2 id="welcome"> ¡Bienvenida </h2>
       </header>
     </section>
-    <main id= patalla_2>
+    <main id="main">
       <nav class="menu">
         <div id="barra-menu">
         <div class="row">
@@ -55,7 +55,7 @@
           <ul class= "nav">
             <li><a href="#">Estudiantes</a>
               <ul>
-                <li><a href="#">Lista General</a></li>
+                <li id="btn-students"><a href="#">Lista General</a></li>
                 <li><a href="#">Mayor % de avance</a></li>
                 <li><a href="#">Menor % de avance</a></li>
               </ul>
@@ -78,7 +78,8 @@
           </ul>
       </nav>
 <!-- Cierra barra de nav-->
-    <section id pantalla_3>
+    <section id="pantalla-2">
+      <!-- Apertura de menús de navegación -->
       <article>
         <ul id="ul-prueba">
           <div class="col-lg">
@@ -97,10 +98,22 @@
           <li id="cuartaGen"><a href="#">Cuarta</a></li>
           <li id="quintaGen"><a href="#">Quinta</a></li>
         </ul>
+      </article>
+    </section>
+    <section id="pantalla-3">
+      <h3>Lista de estudiantes</h3>
+      <img src="">
+      <div id="result-list">
+        <div id="name"> - </div>
+        <div id="email"> - </div>
+        <div id="turno"> - </div>
+        <div id="progress"> - </div>
+      </div>
+    </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="data.js"></script>
     <script src="main.js"></script>
+    <script src="data.js"></script>
     </main>
   </body>
   <footer>

@@ -1,13 +1,15 @@
 //Paso uno: Traemos la dirección del servidor propio
 const host = '../data/laboratoria.json';
+console.log(host);
 //se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
 window.onload = () => {
   fetch(host)
     //obtenemos la traducción del host a .json para que sea leído
     .then(response => response.json())
     //haremos una segunda promesa que guarda en data el response.json
-    .then((data) => {
-      createInfo(data);
+    .then((laboratoria) => {
+      computeStudentsStats(laboratoria);
+      console.log(laboratoria);
       //createInfo es una función que se declara en el data.js para crear elementos en DOM
     })
     .catch((error) => {
@@ -16,6 +18,11 @@ window.onload = () => {
     })
 };
 
+    //manejar DOM para imprimir los datos de estudiantes en lista
+    // document.getElementById('btn-students').addEventListener("click", (event) => {
+    //   let result = "";
+    //   console.log( );
+    //   } )
 
 
 
