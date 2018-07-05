@@ -29,10 +29,9 @@ lima.addEventListener("click", function(){
               
             let est=data.lima.generacion.tercera.estudiantes
           
-            console.log(data.lima.generacion.tercera.estudiantes);
-            let gen=Object.keys(est);
-            for(let i = 0; i<gen.length; i++) {
-        sedeLima.innerHTML+= "<div>" + gen[i] + "</div>";
+            
+            for(let i = 0; i<est.length; i++) {
+        sedeLima.innerHTML+= "<div>" + est[i].nombre + "</div>";
             }
           }
 //
