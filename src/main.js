@@ -24,21 +24,38 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
     }
 });
 
+// Función para pintar sedes en el DOM
+const sedes = (laboratoria) => {
+    // let result = laboratoria;
+    const containerButtons= document.getElementById("container-buttons");
+    for(key in laboratoria){
+        const divCol = document.createElement("div");
+        const a= document.createElement("a");
+        divCol.classList.add("col-4");
+        a.id=key;
+        a.innerHTML=key;
+        divCol.appendChild(a); 
+        // falta agregar evento al divCol para que ese button detone una funcion
+        containerButtons.appendChild(divCol);
+        // console.log(key);
+    }
+}
+
 //Botones de ingreso a generaciones
-accessMexico.addEventListener("click", event => {
-    let access = event.target.id;
-    gettingData(access);
-});
+// accessMexico.addEventListener("click", event => {
+//     let access = event.target.id;
+//     gettingData(access);
+// });
 
-accesLima.addEventListener("click", event => {
-    let access = event.target.id;
-    gettingData(access);
-});
+// accesLima.addEventListener("click", event => {
+//     let access = event.target.id;
+//     gettingData(access);
+// });
 
-accessSantiago.addEventListener("click", event => {
-    let access = event.target.id;
-    gettingData(access);
-});
+// accessSantiago.addEventListener("click", event => {
+//     let access = event.target.id;
+//     gettingData(access);
+// });
 
 
 
