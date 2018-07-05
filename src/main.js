@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-/*// usar este archivo para todo el código que tenga que ver con mostrar los datos en la pantalla
-//let urlDirection obtiene el json de la data desde git hub
-//Des-comentar la línea de abajo
-=======
+
 
 //Declaracion de variables
->>>>>>> upstream/master
+
 let urlDirection = "https://api.myjson.com/bins/ag4ny";
 let sedeLima = document.querySelector("#botonesSede");
 let sedeMexico= document.querySelector("#botonesSede1");
@@ -29,21 +25,21 @@ lima.addEventListener("click", function(){
       let sede = data.lima.generacion;
       console.log(data.lima.generacion);
       let generaciones = Object.keys(sede);
-<<<<<<< HEAD
 
       console.log(generaciones[1]);
-=======
 
->>>>>>> upstream/master
+
+
     for(let i = 0; i<generaciones.length; i++) {
         sedeLima.innerHTML+= "<div>" + generaciones[i] + "</div>";
 
             let est=data.lima.generacion.tercera.estudiantes
 
-            console.log(data.lima.generacion.tercera.estudiantes);
-            let gen=Object.keys(est);
-            for(let i = 0; i<gen.length; i++) {
-        sedeLima.innerHTML+= "<div>" + gen[i] + "</div>";
+          
+            
+            for(let i = 0; i<est.length; i++) {
+        sedeLima.innerHTML+= "<div>" + est[i].nombre + "</div>";
+
             }
           }
 //

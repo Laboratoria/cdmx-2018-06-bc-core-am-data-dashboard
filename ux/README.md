@@ -59,12 +59,15 @@ Prototipo: (../prototipo1.png)
 
 Al realizar la entrevista a la TMs de la sede de CDMX se le mostro el sketch del prototipo, le pareció funcional y dando feedback nos mencionó que agregaría datos extras que para ella son primordiales (Alumnas activas y promedio avance grupal).
 ****
+
 Nuevas propuestas: ![https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/propuestaSketch.jpg]
+
 
 ### **6. Argumentación de Visual Design**
 Despues de un proceso de research con respecto al cliente en esta caso Laboratoria, se decidieron utilizar los colores, la tipografia, el logo y el slogan que identifican a Laboratoria como tal, debido a que es una imagen fresca, que recien comienzan a adaptar, despues de varios años portando tan emblematica imagen que los ha posicionado en el mercado tech de una manera destacada.
 
 1. LOGO:
+
  Es representado por la palabra Laboratoria entre corchetes <>. Laboratoria resume en una palabra lo que somos y los corchetes nos llevan al mundo del código. Presenta cambios en la tipografía y en el tamaño, color y ángulo de apertura de los corchetes, los cuales les permiten tener el mismo logo, pero con más fuerza y protagonismo.
 
  2. COLORES:
@@ -81,3 +84,4 @@ Gama cromatica de Laboratoria:
 
  5. SLOGAN:
  “talento que transforma” denominado de tal manera debido a que es por las alumnas  que ocurre el cambio, pues no es el “código” lo que transforma; son ellas mismas las que transforman. Ellas, con sus ganas y su perseverancia transforman su vida en Laboratoria. Luego, al entrar a trabajar al mundo tech, transforman toda una industria, haciéndola más diversa, inclusiva e innovadora.
+
