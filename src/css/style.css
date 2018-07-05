@@ -1,7 +1,19 @@
+*{
+  font-family: 'Bitter', serif;
+}
+
+.sidebar-sticky{
+  background: #FFFDFD;
+}
+
 header{
-  background: #FFFF6B;
+  background: #FFE521;
   color: #fff;
   text-align: center;
+}
+
+#form-control{
+  background: #FFFF6B;
 }
 
 #campus{
@@ -16,4 +28,9 @@ header{
 
 #principal{
   align-items: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }

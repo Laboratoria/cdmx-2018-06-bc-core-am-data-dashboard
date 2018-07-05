@@ -6,37 +6,63 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua|Nunito|Sofadi+One" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
   </head>
   <body>
     <header>
+      <div class="page-element widget-container page-element-type-image widget-image">
+        <div class="contents">
+          <img src="c.fastcdn.co/u/cf943cfe/27418802-0-Laboratoria-Logo-RGB.png" style="margin-top: 0px;" alt="">
+        </div>
+      </div>
       <h1>Data Dashboard</h1>
     </header>
-    <nav>
-
-    </nav>
-    <section class="principal">
-      <!-- <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+    <body>
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <select id="campus" name="">SEDES
+                <option value="">lima</option>
+                <option value="">mexico</option>
+                <option value="">santiago</option>
+              </select>
+            </li>
+            <li class="nav-item">
+              <select class="generacion" name="">GENERACIÓN
+                <option value="">cuarta</option>
+                <option value="">quinta</option>
+                <option value="">tercera</option>
+              </select>
+            </li>
+          </ul>
         </div>
-      </div> -->
-      <select id="campus" name="">SEDES</select>
-      <br>
-      <select id="generacion" name="">GENERACIÓN</select>
-      <br>
-      <button id="boton-sede-generacion"type="button" name="button">ACEPTAR</button>
-    </section>
-
+      </nav>
+      <section main class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4" role="main">
+        <div class="container-info">
+          <table class="estudiantes">
+            <tr>
+              <th>Promedio de generación</th>
+              <th>Status < 60 </th>
+              <th>Status > 90</th>
+            </tr>
+          </table>
+          <button class="boton-sede-generacion"type="button" name="button">ACEPTAR</button>
+        </div>
+      </section>
+    </body>
+    <!-- <nav class="navbar navbar-dark sticky-top bg-dark flex-md nowrap p-0">
+      <a class="navbar-brand" col-sm-3 col-md-2 mr-0 href="#">Laboratoria</a>
+      <input class="form-control  w-100" type="text" placeholder="Búsqueda por alumna" aria-label="Search">
+      <!-- <ul class="na-item text-nowrap">
+        <a class="nav-link" href="#">SEDES</a>
+        <a class="nav-link" href="#">GENERACION</a>
+      </ul> -->
+    <!-- </nav> -->
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
