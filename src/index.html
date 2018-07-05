@@ -10,31 +10,46 @@
   </head>
   <body>
     <header class="row">
-      <div class="header-logo col-sm-3">
+      <div class="header-logo col-sm-3" id="logo">
         <img src="../src/img/logo-labo.png" alt="Laboratoria">
       </div>
       <div class="info-users col-sm-9">
         <h3 class="usuaria" id="usuario">USUARI@ <i class="icono fab fa-rebel"></i></h3>
       </div>
     </header>
+    <form class="login" id="login" action="" method="">
+      <div class="form-group">
+        <input type="text" id="users" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+      </div>
+      <div class="">
+        <button class = "btn" type="button" id="enter">Enter</button>
 
+      </div>
+
+    </form>
+
+       <main id="visualSedes">
     <div class="search">
       <div class="input-group">
         <input type="text" class="form-control">
         <span class="input-group-btn">
-          <button class="btn btn-default form-control" type="button">Buscar</button>
+          <button class="btn btn-default form-cont" type="button">Buscar</button>
         </span>
       </div>
     </div>
       <br>
       <br>
       <br>
+      <div id="result"></div>
     <!-- <select name="" id="sedes">
       <option value= "cdmx">CDMX</option>
       <option value="lima">Lima</option>
       <option value="santiago">Santiago</option>
     </select>
        -->
+
+
        <div id= "campus">
 <div id="botonesSede">
 <input type="button"  value="LIMA" id="lima">
@@ -53,6 +68,7 @@
 </div>
 
      </div>
+   </main>
 <!---<table class="table table-striped">
   <thead>
     <tr>
