@@ -37,14 +37,14 @@ window.computeGenerationsStats = (laboratoria) => {
     generation1.forEach(elements => { //generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
       let average2 = 0; // Esta variable hace el corte del flujo por generación.
       generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
-
+     
       const students = laboratoria[sede].generacion[generation1].estudiantes; //Se usa [] para entrar porque es variable. Sino es con .
       for (student in students) {
         average2 += students[student].progreso.porcentajeCompletado; //Llegando al porcentajeCompletado (un número) se estará sumando.
         average1 = Math.round(average2 / students.length); //Saca promedio y redondea la cifra.
         count1 = students.length;
-      }
-
+      } 
+      
       generation.push({
         "generation": generation1,
         "campus": sede,
@@ -82,29 +82,33 @@ window.computeStudentsStats = (laboratoria) => {
     generation1 = Object.keys(laboratoria[sede].generacion);
     generation1.forEach(elements => {
       generation1 = elements;
-      // console.log(generation1);
 
-      const students = laboratoria[sede].generacion[generation1].estudiantes;
-      // console.log(students);
-      for (student in students) {
+      const students = laboratoria[sede].generacion[generation1].estudiantes; // Nos situamos a partir de las estudiantes.
+      for (student in students) { // Iteramos students para acceder al nombre y correo.
         nameStudent = students[student].nombre;
         emailStudent = students[student].correo;
-        console.log(nameStudent);
-        console.log(emailStudent);
-        const temas = students[student].progreso.temas;
-        console.log(temas);
-        // topics1.forEach(tema => {
-        //    topics1 = tema
-          //  console.log(topics1);
-          // completedPercentage2 = completedPercentage3;
-
-          // completedPercentage2=completedPercentage3/temas.length;
-
-          // }) 
+        completedPercentage1 = students[student].progreso.porcentajeCompletado; // Trazamos la ruta hacia porcentajeCompletado y creamos condiacionales para identificar el status de cada estudiante.
+        if (completedPercentage1 < 60) {
+          let status1 = (stats1[status] = completedPercentage1);
+          status = status1;
+        } else if (completedPercentage1 >= 90) {
+          let status2 = (stats1["status"] = completedPercentage1);
+          status = status2;
+        } else {
+          let status3 = (stats1["status"] = completedPercentage1);
+          status = status3;
         }
-     
+
+      }
     })
-    }
 
   }
 }
+
+
+// const temas = students[student].progreso.temas;
+// console.log(temas);
+// // topics1.forEach(tema => {
+//    topics1 = tema
+//  console.log(topics1);
+// completedPercentage2 = completedPercentage3;
