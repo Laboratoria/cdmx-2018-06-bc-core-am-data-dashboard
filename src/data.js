@@ -1,8 +1,3 @@
-executeEvents = (data) =>{
-  let getData = document.getElementById("get");//Toma el valor del botón
-  getData.addEventListener("click", gettingVenue(data));//Evento Onclick para detonar las funciones de accion (declaradas en data.js) y las funciones de impresion
-}
-
 window.computeVenuesStats = (laboratoria) =>{
   let venuesArray =[];
   let average = 0;
@@ -211,6 +206,7 @@ window.deepStudentsStats = (laboratoria) =>{
   let j=0, k=0;
   for (key in laboratoria){
     let venuesL = Object.getOwnPropertyNames(laboratoria);
+    //console.log(laboratoria);
     let generations = laboratoria[key].generacion;
     i++;
     for (generation in generations){
@@ -238,19 +234,25 @@ window.deepStudentsStats = (laboratoria) =>{
           j++;
           const arrayTopic = Array.from(Object.values(arrayStats[j]));
           const arrayUnitsNames = Array.from(Object.getOwnPropertyNames(arrayStats[j]));
-          arrayUnitsNames.forEach(function(unit){
-            let uni ={};
-            itemS = unit;
-            arrayTopic.forEach(function(top){
-              let tps={};
-              completedPercentageS = top.porcentajeCompletado;
-              percentageDurationS = top.duracionTemaCompletado;
-              tps.unit = itemS;
-              tps.completedPercentage = completedPercentageS;
-              tps.percentageDuration = percentageDurationS;
-              sts.topics = tps;
-            });
-          });
+          let k=0;
+            itemS=arrayUnitsNames[k];
+                let tps={};
+                completedPercentageS = arrayTopic[k].porcentajeCompletado;
+                percentageDurationS = arrayTopic[k].duracionTemaCompletado;
+                tps.unit = itemS;
+                tps.completedPercentage = completedPercentageS;
+                tps.percentageDuration = percentageDurationS;
+                sts.topics=tps;
+           k++;
+              itemS2=arrayUnitsNames[k];
+                let tps2={};
+                completedPercentageS = arrayTopic[k].porcentajeCompletado;
+                percentageDurationS = arrayTopic[k].duracionTemaCompletado;
+                tps2.unit = itemS2;
+                tps2.completedPercentage = completedPercentageS;
+                tps2.percentageDuration = percentageDurationS;
+                sts.topics=tps2;
+
           /*myStudent.stats.completedPercentage = Stats.porcentajeCompletado;
           const units = Stats.temas;
           const arrayUnits = Array.from(Object.values(units));

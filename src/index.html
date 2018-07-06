@@ -31,22 +31,23 @@
     <main class="row">
       <aside class="col s2">
         <ul class="col s12 collection">
-          <a href="sedes.html">
+          <a href="sedes.html" id="venuesFun">
             <li class="collection-item hoverable">
               <i class="material-icons" href="sedes.html">public</i> Sedes</li>
           </a>
-          <a href="generaciones.html">
+          <a href="generaciones.html" id="generationFun">
             <li class="collection-item hoverable">
               <i class="material-icons">school</i> Generaciones</li>
           </a>
-          <a href="index.html">
+          <a href="index.html" id="studentsFun">
             <li class="collection-item hoverable">
               <i class="material-icons">people</i> Alumnas</li>
           </a>
         </ul>
-        <input type="text" id="result">
-        <input type="button" id="get" value="Get" class="waves-effect waves-light btn pink">
-        <label title="Get" for="get"></label>
+        <input type="button" id="filt" value="Filter" class="waves-effect waves-light btn pink">
+        <label title="Filter" for="filt"></label>
+        <input type="button" id="sort" value="Sort" class="waves-effect waves-light btn pink">
+        <label title="Sort" for="sort"></label>
         <section id='venues'>
         </section>
       </aside>

@@ -1,6 +1,5 @@
 //const assert = require("chai").assert;
 //const computeStudentsStats = require("../src/data.js");
-
 describe('data', () => {
   it('debería exponer función computeStudentsStats en objeto global', () => {
     assert.isFunction(computeStudentsStats);
@@ -9,7 +8,7 @@ describe('data', () => {
 
   it('debería exponer función computeGenerationsStats en objeto global', () => {
     assert.isFunction(computeGenerationsStats);
-  });
+ });
 
   it('debería exponer función sortStudents en objeto global', () => {
     assert.isFunction(sortStudents);
@@ -35,16 +34,16 @@ describe('data', () => {
     it('debería retornar arreglo de students con propiedad stats', () => {
       const processed = computeStudentsStats(laboratoria);
 
-      processed.forEach( (student, i) => {
+      processed.forEach( (student) => {
         assert.ok(student.hasOwnProperty('stats'));
         assert.isNumber(student.stats.completedPercentage);
         assert.isObject(student.stats.topics);
-        assert.isNumber(student.stats.topics[i].completedPercentage);
-        assert.isNumber(student.stats.topics[i].topicDuration);
-        assert.isObject(student.stats.topics[i].subtopics);
-        assert.isNumber(student['stats']['topics'][i]['subtopics'][i]['completedPercentage']);
-        assert.isString(student['stats']['topics'][i]['subtopics'][i]['type']);
-        assert.isNumber(student['stats']['topics'][i]['subtopics'][i]['duration']);
+        assert.isNumber(student.stats.topics["01-Introduccion-a-programacion"].completedPercentage);
+        assert.isNumber(student.stats.topics["01-Introduccion-a-programacion"].percentageDuration);
+        assert.isObject(student.stats.topics["01-Introduccion-a-programacion"].subtopics);
+        assert.isNumber(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['completedPercentage']);
+        assert.isString(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['type']);
+        assert.isNumber(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['duration']);
         });
     });
 
@@ -133,7 +132,7 @@ describe('data', () => {
   });
 
   describe('filterStudents(users, search)', () => {
-    it('debería retornar nuevo arreglo solo con estudiantes con nombres que contengan string (case insensitive)',()=>{
+    it('debería retornar nuevo arreglo solo con estudiantes con nombres que contengan string (Aileen Edwyna)',()=>{
       //const { laboratoria } = fixtures;
       const students = computeStudentsStats(fixtures);
       const search = 'Aileen Edwyna';
