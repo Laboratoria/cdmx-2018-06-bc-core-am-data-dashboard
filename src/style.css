@@ -116,3 +116,41 @@ font-size: 18px;
 font-size: 18px;
 
 }
+
+
+.info{
+	width: 200px;
+  height: 200px;
+  display: inline-flex;
+  margin: 0.5rem;
+  background-color: #FF009A;
+  color: #FFFFFF;
+  text-align: center;
+	border-radius: 10px;
+
+}
+.infoa {
+	width: 200px;
+	height: 200px;
+	display: inline-flex;
+	margin: 0.5rem;
+	background-color:#1DDC65;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.infob {
+	width: 200px;
+	height: 200px;
+	display: inline-flex;
+	margin: 0.5rem;
+	background-color: #F0EE4C;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.p{
+	font-size: 89px;
+}

@@ -15,9 +15,9 @@ let sedeMex="mexico";
 let sedeSant="santiago";
 renderInfo = (res) => {
 
-sedeLima="lima";
+/*sedeLima="lima";
 sedeMex="mexico";
-sedeSant="santiago";
+sedeSant="santiago";*
 
 /*Boton tercera Lima*/
 tercer.addEventListener("click",evento=>{
@@ -55,7 +55,8 @@ window.computeStudentsStats(res,botonMex,sedeMex)
 /*Boton quinta Mex*/
 mquinta.addEventListener("click",evento=>{
 let botonMex = evento.target.innerHTML;
-window.computeStudentsStats(res,botonMex,sedeMex)});
+window.computeStudentsStats(res,botonMex,sedeMex)
+});
 
 
 
@@ -77,3 +78,6 @@ let botonSan = evento.target.innerHTML;
 window.computeStudentsStats(res,botonSan,sedeSant)
 });
 }
+
+document.getElementById('delete').addEventListener('click', (event) =>{
+    container.innerHTML = '';
