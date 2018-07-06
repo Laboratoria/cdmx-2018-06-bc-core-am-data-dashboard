@@ -90,15 +90,23 @@ go =()=>{
     });
   };
   const printFilter = (filter)=>{
-    const cards = document.getElementsByClassName('card-data');
-    for (i = 0; i< cards.length && i < filter.length; i++)
-    {
-      cards[i].querySelector(".campus").innerHTML = filter[i].campus;
-      cards[i].querySelector(".generation").innerHTML = filter[i].generation;
-      cards[i].querySelector(".name").innerHTML = filter[i].name;
-      cards[i].querySelector(".average").innerHTML = filter[i].average;
-      cards[i].querySelector(".advertisment").innerHTML = filter[i].advertisment;
-      cards[i].querySelector(".totalTime").innerHTML = filter[i].totalTime;
-      cards[i].querySelector(".timeProm").innerHTML = filter[i].timeProm;
+    const resultFilter = document.getElementById('students-result');
+    let studentsFilter ='';
+    for(let i=0; i<filter.length; i++){
+      studentsFilter += `<div class="col s3 m3">
+                  <div class="card white darken-1">
+                    <div class="card-content card-data black-text">
+                    <span class="card-title" id="cards"></span>
+                    <h4>Sede: ${filter[i].campus}</h4>
+                    <h5>Generacion: ${filter[i].generation}</h5>
+                    <p>Nombre: ${filter[i].name}</p>
+                    <p>Completitud: ${filter[i].average}${'%'}</p>
+                    <p>Status: ${filter[i].advertisment}</p>
+                    <p>Tiempo total del programa: ${filter[i].totalTime}${'hrs'}</p>
+                    <p>Tiempo invertido: ${filter[i].timeProm}${'hrs'}</p>
+                    </div>
+                  </div>
+                </div>`
     }
-  };
+    resultFilter.innerHTML= studentsFilter;
+   };

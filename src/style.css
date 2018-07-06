@@ -16,6 +16,10 @@ body{
     background-color: rgb(241, 235, 238);
     color: rgb(0, 0, 0);
 }
+#side a.active{
+    background-color: pink;
+    color: black;
+}
 #btn disabled{
     color: yellow;
 }
@@ -27,4 +31,7 @@ body{
 #footer{
     height: 100px;
     width: 100px;
+}
+{
+    background-color: blueviolet;
 }
