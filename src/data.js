@@ -29,8 +29,10 @@ window.computeStudentsStats = (laboratoria) => {
                 findStudentList.map((itemStudent) => {
                     let itemStudent1 = {}; 
                     itemStudent1[itemStudent] = itemStudent.nombre;
-                    console.log(itemStudent1);
-                    return student.name = itemStudent1;
+                    //console.log(itemStudent1);
+                    student.name = itemStudent1;
+                    console.log("nombre:", student.name);
+                    return student.name;
                     // console.log(itemStudent)});
                     // for (let i= 0; i < itemStudent.length; i++) {
                     //     const findEachName = itemStudent.nombre;
