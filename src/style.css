@@ -118,6 +118,8 @@ h1 {
 
 /*main*/
 
-#nav-mobile{
+#navbar{
   background-color: #f7b617;
+  box-shadow: #000;
 }
+
