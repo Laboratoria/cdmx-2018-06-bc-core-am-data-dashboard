@@ -78,6 +78,3 @@ let botonSan = evento.target.innerHTML;
 window.computeStudentsStats(res,botonSan,sedeSant)
 });
 }
-
-document.getElementById('delete').addEventListener('click', (event) =>{
-    container.innerHTML = '';
