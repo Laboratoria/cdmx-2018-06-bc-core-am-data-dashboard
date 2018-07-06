@@ -1,4 +1,3 @@
-
 //pintar tabla de estudiantes
 let listaEstudiantes = document.getElementById("tablaEstudiantes");
 
@@ -47,3 +46,4 @@ clickSantiago.addEventListener("click", (event) => {
   listaEstudiantes.style.display = "none";
   containerG.style.display = "block";
 });
+
