@@ -1,3 +1,4 @@
+
 console.log("conectado");
 
 const showResult = document.getElementById("result-list");
@@ -5,13 +6,13 @@ const showResult = document.getElementById("result-list");
 window.computeStudentsStats = (laboratoria) => {
 //declaración de variables:
 const student = [{
-    name: null,
-    campus: null,
-    generation: null,
+    name: "",
+    campus: "",
+    generation:"",
     
 }];
 console.log(student);
-//se inicia la iteración en el primer nivel del objeto
+//se inicia la iteración en el primer nivel del objeto]]]
             for (findSede in laboratoria) {
                 student.campus = findSede;
                 console.log('1', Object.keys(laboratoria[findSede].generacion));
@@ -22,7 +23,8 @@ console.log(student);
                         console.log('2', student.generation);
                             for (let i = 0; i < findGeneration.length; i++) {
                             const findName = laboratoria[findSede].generacion[generations[i]].estudiantes;
-                            student.name = findName;
+                            student.name = Object.keys(findName);
+            
                             console.log('3', student.name);
                         }
                      console.log(laboratoria[findSede].generacion[generations[i]].estudiantes);

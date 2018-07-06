@@ -1,5 +1,6 @@
 //Paso uno: Traemos la dirección del servidor propio
-const host = '../data/laboratoria.json';
+//const host = '../data/laboratoria.json';//
+const host = "https://vaniushar.github.io/cdmx-2018-06-bc-core-am-data-dashboard/data/laboratoria.json"
 console.log(host);
 //se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
 window.onload = () => {
