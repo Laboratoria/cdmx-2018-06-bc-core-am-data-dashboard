@@ -1,24 +1,73 @@
+
+
 .logo{
-    height: 75px;
-    width: 250px;
-  /*  float: left;
-    margin: 30px;
-    text-align: center;
-    line-height: 100px;*/
+  height: 90px;
+  width: 250px;
 }
 
 .container{
   background: #D5D8DC;
-  text-align: center;
+  display:flow-root;
 }
 
 
 * {  /*Quita los margenes predeterminados --*/
   margin:0px;
   padding: 0px;
-  /*  background: #273746;*/
+  font-family: 'Encode Sans Condensed', sans-sans-serif;
 }
 
 .ocultar {
   display: none;
 }
+
+.card {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 0.5rem;
+  color:#273746;
+  text-align: center;
+  font-size: 20px;
+  box-shadow:10px 10px 19px rgba(0, 0, 0, 0.75);
+}
+
+.info {
+  margin: 0 auto;
+}
+
+#cardColor{
+  background: #F8C471;
+}
+
+.img-fluid {
+  width:1120px;
+  height: 200px;
+}
+
+.iconos {
+width: 45px;
+height: 35px;
+display: inline-flex;
+}
+
+.tamañoDiv {
+  width: 300px;
+  height: 50px;
+  display: inline-flex;
+}
+
+.bienvenida { /*pendiente para hacer*/
+  width: 100px;
+  height: 5px;
+  margin: 2px;
+  margin-left:0px; margin-right:2px;
+}
+body {
+  background: #F8C471
+}
+
+
+/* .justificar{
+justify-content:center;
+} */
