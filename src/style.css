@@ -1,5 +1,5 @@
 body   {
-    background-color:#fff400;
+    background-color:#f7f7f3;
     /*background-image: url("../images/fondo1.png");*/
     background-position: center center;
     background-repeat: no-repeat;
@@ -12,6 +12,10 @@ image {
 
 }
 
+header {
+  color: #fff400
+}
+
 .alinearSede{
   text-align: left;
   font-family: 'Open Sans', sans-serif;
@@ -19,6 +23,7 @@ image {
 .alinearSede1{
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+
 }
 
 .alinearSede2 {
