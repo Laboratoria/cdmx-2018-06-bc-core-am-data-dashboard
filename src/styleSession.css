@@ -59,3 +59,10 @@ a{
 .loginbutton:hover{
 	background-color:#e5bf05;
 }
+
+.logo{
+    height: 200px;
+    width: 320px;
+		border-radius: 5px/5px;
+
+}
