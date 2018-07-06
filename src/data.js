@@ -10,7 +10,9 @@ const gettingData = (data) => {
     })
     .then((laboratoria) => { //Aquí le asigno el nombre de laboratoria a la información que envió.
       //console.log(laboratoria);
-      sedes(laboratoria)
+      sedes(laboratoria);
+      generations(laboratoria);
+      // generations(laboratoria);
       computeGenerationsStats(laboratoria); //Aquí estoy diciendo que a mis siguienten funciones, les estoy mandando esa data.
       computeStudentsStats(laboratoria);
 
@@ -23,7 +25,7 @@ const gettingData = (data) => {
 gettingData(json);
 
 window.computeGenerationsStats = (laboratoria) => {
-
+ 
   let generation = [];
 
   let generation1 = "";
@@ -34,10 +36,11 @@ window.computeGenerationsStats = (laboratoria) => {
   for (key in laboratoria) {
     sede = key; // Está me arroja las llaves del objeto JSON (lima, mexico, santiago)
     generation1 = Object.keys(laboratoria[sede].generacion); //Indico que quiero entrar a generación. Object.keys convierte a array mi objeto y marco la ruta a generaciones. Siempre indico la ruta antes de iterar.
+  
     generation1.forEach(elements => { //generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
       let average2 = 0; // Esta variable hace el corte del flujo por generación.
       generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
-
+    
       const students = laboratoria[sede].generacion[generation1].estudiantes; //Se usa [] para entrar porque es variable. Sino es con .
       for (student in students) {
         average2 += students[student].progreso.porcentajeCompletado; //Llegando al porcentajeCompletado (un número) se estará sumando.
@@ -52,8 +55,7 @@ window.computeGenerationsStats = (laboratoria) => {
       });
     })
   }
-  return generation;
-
+  return generation
 }
 
 window.computeStudentsStats = (laboratoria) => {
@@ -91,10 +93,10 @@ window.computeStudentsStats = (laboratoria) => {
           let status1 = (stats[status] = completedPercentage1);
           status = status1;
         } else if (completedPercentage1 >= 90) {
-          let status2 = (stats["status"] = completedPercentage1);
+          let status2 = (stats[status] = completedPercentage1);
           status = status2;
         } else {
-          let status3 = (stats["status"] = completedPercentage1);
+          let status3 = (stats[status] = completedPercentage1);
           status = status3;
         }
 
@@ -114,36 +116,37 @@ window.computeStudentsStats = (laboratoria) => {
             type1 = subtemas[subtema].tipo;
             duration1 = subtemas[subtema].duracionSubtema;
           }
-
         }
 
         student.push({
-            "name": nameStudent,
-            "email": emailStudent,
-            "campus": sede,
-            "generation": generation1,
-            "stats": {
-              "status": status,
-              "completedPercentage": completedPercentage1,
-              "topics": {
-                "completedPercentage": completedPercentage2,
-                "percentageDuration": percentageDuration2,
-                "subtopics": {
-                  "completedPercentage": completedPercentage3,
-                  "type": type1,
-                  "duration": duration1
-                }
+          "name": nameStudent,
+          "email": emailStudent,
+          "campus": sede,
+          "generation": generation1,
+          "stats": {
+            "status": status,
+            "completedPercentage": completedPercentage1,
+            "topics": {
+              "completedPercentage": completedPercentage2,
+              "percentageDuration": percentageDuration2,
+              "subtopics": {
+                "completedPercentage": completedPercentage3,
+                "type": type1,
+                "duration": duration1
               }
             }
-          });
-
+          }
+        });
       }
-
-
     })
-
-
   }
 
-  return student;
+  return student
+}
+
+window.sortStudents = (students, orderBy, orderDirection) => {
+}
+
+window.filterStudents =(students, search)=>{
+
 }
