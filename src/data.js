@@ -53,6 +53,7 @@ window.computeGenerationsStats = (laboratoria) => {
     })
   }
   return generation;
+
 }
 
 window.computeStudentsStats = (laboratoria) => {
@@ -64,7 +65,7 @@ window.computeStudentsStats = (laboratoria) => {
   let sede = "";
   let generation1 = "";
   let stats = {};
-  let status1 = 0;
+  let status = 0;
   let completedPercentage1 = 0;
   let topics = {};
   let completedPercentage2 = 0;
@@ -80,12 +81,12 @@ window.computeStudentsStats = (laboratoria) => {
     generation1.forEach(elements => {
       generation1 = elements;
 
-      const students = laboratoria[sede].generacion[generation1].estudiantes; // Nos situamos a partir de las estudiantes.
-      for (student in students) { // Iteramos students para acceder al nombre y correo.
-        nameStudent = students[student].nombre;
-        emailStudent = students[student].correo;
-        completedPercentage1 = students[student].progreso.porcentajeCompletado; // Trazamos la ruta hacia porcentajeCompletado y creamos condiacionales para identificar el status de cada estudiante.
 
+      const students = laboratoria[sede].generacion[generation1].estudiantes; // Nos situamos a partir de las estudiantes.
+      for (laboStudent in students) { // Iteramos students para acceder al nombre y correo.
+        nameStudent = students[laboStudent].nombre;
+        emailStudent = students[laboStudent].correo;
+        completedPercentage1 = students[laboStudent].progreso.porcentajeCompletado; // Trazamos la ruta hacia porcentajeCompletado y creamos condiacionales para identificar el status de cada estudiante.
         if (completedPercentage1 < 60) {
           let status1 = (stats[status] = completedPercentage1);
           status = status1;
@@ -97,33 +98,32 @@ window.computeStudentsStats = (laboratoria) => {
           status = status3;
         }
 
-        const temas = students[student].progreso.temas;
+
+        const temas = students[laboStudent].progreso.temas; // Trazamos la ruta para llegar al objeto temas y lo iteramos para sacar sus propiedades-objeto.
         for (tema in temas) {
           completedPercentage2 = temas[tema].porcentajeCompletado;
           let duracionTemaCompletado = temas[tema].duracionTemaCompletado;
           let duracionTema = temas[tema].duracionTema;
-          percentageDuration2 = Math.round((duracionTemaCompletado * 100) / duracionTema);
-          // console.log(percentageDuration2);
+          percentageDuration2 = Math.round((duracionTemaCompletado * 100) / duracionTema); // Regla de 3 para sacar el resultado
 
           const subtemasCompletados = temas[tema].subtemasCompletados;
           const subtemasTotales = temas[tema].subtemasTotales;
-          completedPercentage3 = Math.round((subtemasCompletados * 100) / subtemasTotales);
-          // console.log(completedPercentage3);
-
+          completedPercentage3 = Math.round((subtemasCompletados * 100) / subtemasTotales); // Regla de 3 para sacar el resultado
           const subtemas = temas[tema].subtemas;
           for (subtema in subtemas) {
             type1 = subtemas[subtema].tipo;
             duration1 = subtemas[subtema].duracionSubtema;
           }
 
+        }
 
-       console.log(student.push({
+        student.push({
             "name": nameStudent,
             "email": emailStudent,
             "campus": sede,
             "generation": generation1,
-            "stats":{
-              "status": status1,
+            "stats": {
+              "status": status,
               "completedPercentage": completedPercentage1,
               "topics": {
                 "completedPercentage": completedPercentage2,
@@ -132,16 +132,18 @@ window.computeStudentsStats = (laboratoria) => {
                   "completedPercentage": completedPercentage3,
                   "type": type1,
                   "duration": duration1
-                  // console.log(student.push);
                 }
               }
             }
-
-          }))
-        }
+          });
 
       }
+
+
     })
+
+
   }
-return student  
+
+  return student;
 }
