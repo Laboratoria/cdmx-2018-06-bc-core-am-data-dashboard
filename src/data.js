@@ -9,10 +9,8 @@ const gettingData = (data) => {
       return res.json(); //Entonces le digo que a esa información la retorne como un archivo json.
     })
     .then((laboratoria) => { //Aquí le asigno el nombre de laboratoria a la información que envió.
-      //console.log(laboratoria);
       sedes(laboratoria);
       generations(laboratoria);
-      // generations(laboratoria);
       computeGenerationsStats(laboratoria); //Aquí estoy diciendo que a mis siguienten funciones, les estoy mandando esa data.
       computeStudentsStats(laboratoria);
 
@@ -140,13 +138,15 @@ window.computeStudentsStats = (laboratoria) => {
       }
     })
   }
-
-  return student
+  console.log(student);
+  return student;
+  
 }
 
-window.sortStudents = (students, orderBy, orderDirection) => {
+window.sortStudents = ( students,orderBy,orderDirection ) => {
+
 }
 
-window.filterStudents =(students, search)=>{
+window.filterStudents = (students,search) => {
 
 }

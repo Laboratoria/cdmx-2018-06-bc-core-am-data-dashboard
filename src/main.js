@@ -61,21 +61,26 @@ const generations = (laboratoria) => {
 // const generations = (laboratoria ) => {
 //     const containerButtonsGenerations = document.getElementById("container-buttons-generations");
 
-//     for (key in laboratoria) {
-//         generation1 = Object.keys(laboratoria[key].generacion); //Indico que quiero entrar a generación. Object.keys convierte a array mi objeto y marco la ruta a generaciones. Siempre indico la ruta antes de iterar.
-//         generation1.forEach(elements => { //generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
-//             generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
-//             console.log(generation1)
-//     const divCol2 = document.createElement("div");
-//     const a2 = document.createElement("a");
-//     divCol2.classList.add("col-4");
-//     a2.id=generation1;
-//     a2.innerHTML=generation1;
-//     divCol2.appendChild(a2);
-//     containerButtonsGenerations.appendChild(divCol2);
-// })
-//     }
-// }
+
+const generations = (laboratoria) => {
+    const containerButtons = document.getElementById("container-buttons");
+    for (key in laboratoria) {
+        generation1 = Object.keys(laboratoria[key].generacion); 
+        generation1.forEach(elements => { 
+        generation1 = elements; 
+        const divCol = document.createElement("div");
+        const a= document.createElement("a");
+        divCol.classList.add("col-4");
+        a.id=generation1;
+        a.innerHTML=generation1;
+        divCol.appendChild(a); 
+        // falta agregar evento al divCol para que ese button detone una funcion
+        containerButtons.appendChild(divCol);
+        // console.log(key);
+        }
+        )}
+}
+
 //Botones de ingreso a generaciones
 // accessMexico.addEventListener("click", event => {
 //     let access = event.target.id;
