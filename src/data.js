@@ -16,7 +16,7 @@ window.computeVenuesStats = (laboratoria) =>{
     readingAverage = 0;
     quizAverage =0;
     timeAverage =0;
-    myobj.venue = key;
+    myobj.venue = key.toUpperCase();
     let generations = laboratoria[key].generacion;
     for(let generation in generations){
       const students = laboratoria[key].generacion[generation].estudiantes;
@@ -43,11 +43,11 @@ window.computeVenuesStats = (laboratoria) =>{
      readingAverage = readingAverage / numStudents;
      quizAverage = quizAverage / numStudents;
      timeAverage = (timeAverage*average)/100;
-     myobj.average = average;
+     myobj.average = Math.round(average);
      myobj.activeStudents = numStudents;
      myobj.advanceStudents = advanceStudents;
      myobj.inLowStudents = inLowStudents;
-     myobj.timeAverage = timeAverage;
+     myobj.timeAverage = Math.round(timeAverage);
      myobj.readingAverage = readingAverage;
      myobj.quizAverage = quizAverage;
      venuesArray.push(myobj);
@@ -277,3 +277,54 @@ window.deepStudentsStats = (laboratoria) =>{
   console.log(studentArray);
   return (studentArray);
 };
+window.generationsLima=(laboratoria)=>{
+  const generation=computeGenerationsStats(laboratoria);
+  const generationLim =[];
+  for(let i=0; i<3;i++){
+    generationLim[i]=generation[i];
+  }
+  return generationLim;
+}
+window.generationsMexico=(laboratoria)=>{
+  const generation=computeGenerationsStats(laboratoria);
+  const generationMex =[];
+  for(let i=3; i<=5;i++){
+    generationMex[i-3]=generation[i];
+  }
+  return generationMex;
+}
+window.generationsSantiago=(laboratoria)=>{
+  const generation=computeGenerationsStats(laboratoria);
+  const generationStg =[];
+  for(let i=3; i<=5;i++){
+    generationStg[i-3]=generation[i];
+  }
+  return generationStg;
+}
+window.studentsList =(laboratoria)=>{
+  const students = computeStudentsStats(laboratoria);
+  const list =[];
+
+}
+window.printSedesMex=(laboratoria)=>{
+  const sedeM = computeVenuesStats(laboratoria);
+  console.log(sedeM);
+  const resultFilter = document.getElementById('print-venues');
+  let sedeMex ='';
+  for(let i=0; i<sedeM.length; i++){
+    sedeMex += `<div class="col s3 m3">
+            <div class="card white darken-1">
+            <div class="card-content card-data black-text">
+             <span class="card-title" id="cards">${sedeM[i].venue}</span>
+             <h5>Alumnas activas:${sedeM[i].activeStudents}</h3>
+             <i class="material-icons"></i>sentiment_very_satisfiedsettings<span>Estudiantes:${sedeM[i].advanceStudents}</span>
+             <i class="material-icons">sentiment_dissatisfiedsentiment_neutral</i> <span>Estudiantes:${sedeM[i].inLowStudents} </span>
+             <p>Promedio general:${sedeM[i].average}${'%'} </p>
+             <i class="material-icons">schedule</i> <span>Tiempo de Completitud: ${sedeM[i].timeAverage}${'hrs'}</span>
+           </div>
+
+           </div>
+         </div>`
+}
+  resultFilter.innerHTML= sedeMex;
+}
