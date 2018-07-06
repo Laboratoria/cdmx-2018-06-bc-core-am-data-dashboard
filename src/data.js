@@ -5,9 +5,14 @@ const showResult = document.getElementById("result-list");
 window.computeStudentsStats = (laboratoria) => {
     //declaración de variables:
     const student = [{
-        name: "",
         campus: "",
         generation: "",
+        name: "",
+        email: "",
+        turn: "",
+        stats: {
+            status: "",
+        },
 
     }];
     console.log(student);
@@ -27,31 +32,72 @@ window.computeStudentsStats = (laboratoria) => {
                 //studentList = Object.keys(findStudentList);
                 //console.log("lista de estudiantes", studentList);
                 findStudentList.map((itemStudent) => {
-                    let itemStudent1 = {}; 
+                    let itemStudent1 = {};
                     itemStudent1[itemStudent] = itemStudent.nombre;
                     //console.log(itemStudent1);
                     student.name = itemStudent1;
                     console.log("nombre:", student.name);
                     return student.name;
-                    // console.log(itemStudent)});
-                    // for (let i= 0; i < itemStudent.length; i++) {
-                    //     const findEachName = itemStudent.nombre;
-                    //     console.log("Nombre de cada estudiante",findEachName);
-                     })
-                
-                // for (findEachStudent of studentList) {
-                //     console.log("Número de cada estudiante", studentList[findEachStudent]);
-                //         // for (let i =0; i < findEachStudent.length; i++) {
-                        // const findStudentName = findEachStudent[0].nombre;
-                        // student.name = findStudentName;
-                        // console.log("lista de nombres", student.name);
-                        // }
-                     
-                //     console.log("Nombre dentro de cada array", findStudentName);
-                //     
-                //    // 
-                //}
-                    }
+                })
+
+
+                for (let j = 0; j < findGeneration.length; j++) {
+                    const findEmailList = laboratoria[findSede].generacion[generations[i]].estudiantes;
+                    findEmailList.map((itemEmail) => {
+                        let itemStudent2 = {};
+                        itemStudent2[itemEmail] = itemEmail.correo;
+                        //console.log("item email", itemStudent2);
+                        student.email = itemStudent2;
+                        console.log("email:", student.email);
+                        return student.email;
+                    })
+
+                    for (let j = 0; j < findGeneration.length; j++) {
+                        const findTurnList = laboratoria[findSede].generacion[generations[i]].estudiantes;
+                        findTurnList.map((itemTurn) => {
+                            let itemStudent3 = {};
+                            itemStudent3[itemTurn] = itemTurn.turno;
+                            //console.log("item turno", itemStudent3);
+                            student.turn = itemStudent3;
+                            console.log("turno:", student.turn);
+                            return student.turn;
+                        })
+
+
+                //se cierra for para turno        
+                    }          
+            //se cierra for para email
+                }
+        //se cierra for para nombre
+            }
+
+            // findStudentList1.map((itemEmailStudent) => {
+            //     let itemStudent2 = {};
+            //     itemStudent2[itemEmailStudent] = itemStudent.email;
+            //     student.email = itemStudent2;
+            //     console.log("email", student.email);
+            //     return student.email;
+
+            // })
+            //     // console.log(itemStudent)});
+            // for (let i= 0; i < itemStudent.length; i++) {
+            //     const findEachName = itemStudent.nombre;
+            //     console.log("Nombre de cada estudiante",findEachName);
+
+
+            // for (findEachStudent of studentList) {
+            //     console.log("Número de cada estudiante", studentList[findEachStudent]);
+            //         // for (let i =0; i < findEachStudent.length; i++) {
+            // const findStudentName = findEachStudent[0].nombre;
+            // student.name = findStudentName;
+            // console.log("lista de nombres", student.name);
+            // }
+
+            //     console.log("Nombre dentro de cada array", findStudentName);
+            //     
+            //    // 
+            //}
+
             //console.log(laboratoria[findSede].generacion[generations[i]].estudiantes);
         }
     }
