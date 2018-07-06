@@ -10,7 +10,7 @@
     display: flex;
     min-height: 100vh;
   }
-  
+
   form {
     margin: auto;
     width: 50%;
@@ -20,6 +20,14 @@
     border: 1px solid rgba(0,0,0,0.2);
   }
   
+
+#logo {
+    height: 100px;
+    margin-left: 20px;
+    width: 200px;
+    padding-bottom: 20px;
+    padding-top: 25px;
+}
   h2 {
     text-align: center;
     margin-bottom: 20px;
