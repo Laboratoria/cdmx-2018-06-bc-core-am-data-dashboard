@@ -1,0 +1,36 @@
+*{
+  font-family: 'Bitter', serif;
+}
+
+.sidebar-sticky{
+  background: #FFFDFD;
+}
+
+header{
+  background: #FFE521;
+  color: #fff;
+  text-align: center;
+}
+
+#form-control{
+  background: #FFFF6B;
+}
+
+#campus{
+  display: flex;
+  height:50px;
+  align: center;
+}
+
+#generacion{
+  align-content: flex-end;
+}
+
+#principal{
+  align-items: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
