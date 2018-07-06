@@ -10,9 +10,9 @@ let correo = document.querySelector("#correo");
 // a través del boton iniciar funcion
 
 //SEDES
-check1.addEventListener("click", function(){
+/*check1.addEventListener("click", function(){
   sede(); 
-})
+})*/
 //GENERACIONES
 /*sed.addEventListener("click", function(){
   generacion(); 
@@ -20,9 +20,9 @@ check1.addEventListener("click", function(){
 
 //ALUMNAS
 
-alumnasA.addEventListener("click", function(){
+/*alumnasA.addEventListener("click", function(){
   alumnas(); 
-})
+})*/
 
 //GENERACIONES LIMA
 const generacionLima = (allGeneraciones) => {
@@ -60,6 +60,38 @@ const generacionSantiago = (allGeneraciones) => {
 });
 }
 
+const container = document.getElementById('resultadosAlumnas');
+
+
+renderInfo = (data) => {
+  document.getElementById("alumnas").addEventListener("click", (event) => {
+    //RESULTADOS
+    let result = "";
+    //SEDES
+    console.log(Object.values(data))
+    let name = "";
+    console.log(Object.values(data.lima.generacion.cuarta.estudiantes))
+    let estudianteLima = data.lima.generacion.cuarta.estudiantes;
+    for(let i = 0; i < estudianteLima.length; i++){
+    let alumna = estudianteLima[i];
+    let progresos = alumna.progreso;
+    console.log(progresos)   
+    result += `<div class="card">
+                            <div class="info">
+                                <p>Nombre: ${alumna.nombre}</p>
+                                <p>Correo: ${alumna.correo}</p>
+                                <p>Duración de Programa: ${progresos.duracionPrograma}</p>
+                                <p>Porsentaje Completado: ${progresos.porcentajeCompletado}</p>
+                            </div>
+                        </div>`
+  };
+ 
+   
+  container.innerHTML = result;
+
+  })
+}
+
 
 
 
@@ -81,7 +113,7 @@ const generacionSantiago = (allGeneraciones) => {
     }
 
   })
-}
+}*/
 
 
 

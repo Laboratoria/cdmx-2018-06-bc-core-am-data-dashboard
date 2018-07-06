@@ -175,15 +175,17 @@ article{
 }
 /*VIEW GENERAL*/
 .box-generales{
-    border: solid;
     width: 80%;
     margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+
 }
 
 .box1{
-	
 	display: inline-block;
     width: 32%;
+    margin: 0 2px 0;
 }
 .titular{
     background: #f8069df2;
@@ -196,6 +198,17 @@ article{
 .cuerpo{
     text-align: center;
     font-size: 20px;
+}
+
+.generaciones, .promgene{
+	margin: 15px 0;
+}
+.card{
+	background-color: gray;
+	height: 80px;
+}
+.info{
+	overflow: scroll;
 }
 
 

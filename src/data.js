@@ -26,7 +26,7 @@ let sede = function(){
     document.getElementById('mexico').innerHTML = Object.keys(data)[1];
     document.getElementById('santiago').innerHTML = Object.keys(data)[2];
     //pintando generaciones
-  generacionLima(Object.keys(data.lima.generacion));
+ 	generacionLima(Object.keys(data.lima.generacion));
     generacionMexico(Object.keys(data.mexico.generacion));
     generacionSantiago(Object.keys(data.santiago.generacion));
     })
@@ -35,7 +35,22 @@ let sede = function(){
 
 
 
-let alumnas = function(){
+
+
+window.onload = () => {
+  fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    renderInfo(data);
+  })
+  .catch(error => {
+      console.log('error');
+  })
+}
+
+
+/*let alumnas = function(){
   fetch(url).then(function(datos){
   return datos.json();
   }).then(function(data){
@@ -55,5 +70,5 @@ let alumnas = function(){
   return(result)
 
     })
-}
+}*/
   
