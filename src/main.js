@@ -26,7 +26,6 @@ ingresar.addEventListener("click", obtenerDatos = ()=> {
 
 // Función para pintar sedes en el DOM
 const sedes = (laboratoria) => {
-    // let result = laboratoria;
     const containerButtons= document.getElementById("container-buttons");
     for(key in laboratoria){
         const divCol = document.createElement("div");
@@ -40,6 +39,27 @@ const sedes = (laboratoria) => {
         // console.log(key);
     }
 }
+const generations = (laboratoria) => {
+    const containerButtons= document.getElementById("container-buttons");
+    for(key in laboratoria){
+        generation1 = Object.keys(laboratoria[key].generacion); //Indico que quiero entrar a generación. Object.keys convierte a array mi objeto y marco la ruta a generaciones. Siempre indico la ruta antes de iterar.
+        generation1.forEach(elements => { //generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
+        generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
+        
+        const divCol = document.createElement("div");
+        const a= document.createElement("a");
+        divCol.classList.add("col-4");
+        a.id=generation1;
+        a.innerHTML=generation1;
+        divCol.appendChild(a); 
+        // falta agregar evento al divCol para que ese button detone una funcion
+        containerButtons.appendChild(divCol);
+        // console.log(key);
+    })
+}
+}
+// const generations = (laboratoria ) => {
+//     const containerButtonsGenerations = document.getElementById("container-buttons-generations");
 
 
 const generations = (laboratoria) => {
