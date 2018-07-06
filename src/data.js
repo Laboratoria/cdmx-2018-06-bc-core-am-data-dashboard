@@ -37,14 +37,14 @@ window.computeGenerationsStats = (laboratoria) => {
     generation1.forEach(elements => { //generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
       let average2 = 0; // Esta variable hace el corte del flujo por generación.
       generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
-     
+
       const students = laboratoria[sede].generacion[generation1].estudiantes; //Se usa [] para entrar porque es variable. Sino es con .
       for (student in students) {
         average2 += students[student].progreso.porcentajeCompletado; //Llegando al porcentajeCompletado (un número) se estará sumando.
         average1 = Math.round(average2 / students.length); //Saca promedio y redondea la cifra.
         count1 = students.length;
-      } 
-      
+      }
+
       generation.push({
         "generation": generation1,
         "campus": sede,
@@ -64,19 +64,17 @@ window.computeStudentsStats = (laboratoria) => {
   let emailStudent = "";
   let sede = "";
   let generation1 = "";
-  let stats1 = {};
-  let status = 0;
+  let stats = {};
+  let status1 = 0;
   let completedPercentage1 = 0;
-  let topics1 = {};
+  let topics = {};
   let completedPercentage2 = 0;
   let percentageDuration2 = 0;
   let subtopics = {};
-  let completedPercentage = 0;
-  let type = "";
-  let duration = 0;
-  //     }
-  //   }
-  // }
+  let completedPercentage3 = 0;
+  let type1 = "";
+  let duration1 = 0;
+
   for (key in laboratoria) {
     sede = key;
     generation1 = Object.keys(laboratoria[sede].generacion);
@@ -88,27 +86,64 @@ window.computeStudentsStats = (laboratoria) => {
         nameStudent = students[student].nombre;
         emailStudent = students[student].correo;
         completedPercentage1 = students[student].progreso.porcentajeCompletado; // Trazamos la ruta hacia porcentajeCompletado y creamos condiacionales para identificar el status de cada estudiante.
+
         if (completedPercentage1 < 60) {
-          let status1 = (stats1[status] = completedPercentage1);
+          let status1 = (stats[status] = completedPercentage1);
           status = status1;
         } else if (completedPercentage1 >= 90) {
-          let status2 = (stats1["status"] = completedPercentage1);
+          let status2 = (stats["status"] = completedPercentage1);
           status = status2;
         } else {
-          let status3 = (stats1["status"] = completedPercentage1);
+          let status3 = (stats["status"] = completedPercentage1);
           status = status3;
+        }
+
+        const temas = students[student].progreso.temas;
+        for (tema in temas) {
+          completedPercentage2 = temas[tema].porcentajeCompletado;
+          let duracionTemaCompletado = temas[tema].duracionTemaCompletado;
+          let duracionTema = temas[tema].duracionTema;
+          percentageDuration2 = Math.round((duracionTemaCompletado * 100) / duracionTema);
+          // console.log(percentageDuration2);
+
+          const subtemasCompletados = temas[tema].subtemasCompletados;
+          const subtemasTotales = temas[tema].subtemasTotales;
+          completedPercentage3 = Math.round((subtemasCompletados * 100) / subtemasTotales);
+          // console.log(completedPercentage3);
+
+          const subtemas = temas[tema].subtemas;
+          for (subtema in subtemas) {
+            type1 = subtemas[subtema].tipo;
+            duration1 = subtemas[subtema].duracionSubtema;
+          }
+
+
+       console.log(student.push({
+            "name": nameStudent,
+            "email": emailStudent,
+            "campus": sede,
+            "generation": generation1,
+            "stats":{
+              "status": status1,
+              "completedPercentage": completedPercentage1,
+              "topics": {
+                "completedPercentage": completedPercentage2,
+                "percentageDuration": percentageDuration2,
+                "subtopics": {
+                  "completedPercentage": completedPercentage3,
+                  "type": type1,
+                  "duration": duration1
+                  // console.log(student.push);
+                }
+              }
+            }
+
+          }))
         }
 
       }
     })
 
   }
+return student  
 }
-
-
-// const temas = students[student].progreso.temas;
-// console.log(temas);
-// // topics1.forEach(tema => {
-//    topics1 = tema
-//  console.log(topics1);
-// completedPercentage2 = completedPercentage3;

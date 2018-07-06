@@ -61,11 +61,4 @@ const sedes = (laboratoria) => {
 
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
    
->>>>>>> upstream/master
