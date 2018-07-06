@@ -18,7 +18,6 @@ window.onload = () => {
       //.catch buscará errores en el enlace FETCH
     })
 };
-
     //manejar DOM para imprimir los datos de estudiantes en lista
     // document.getElementById('btn-students').addEventListener("click", (event) => {
     //   let result = "";

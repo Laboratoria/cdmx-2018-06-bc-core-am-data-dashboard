@@ -48,10 +48,6 @@ console.log(student);
 //se cierra la función
 }
 
-
-
-
-
 // console.log("data.js está conectado");
 
 // const pintarSedes = (data) => {
@@ -88,8 +84,6 @@ console.log(student);
 //         console.log("Data",chooseSede);
 //     //Debe enlazar la funcion al click en "sedes"
 //         pintarSedes(chooseSede)
-
-
            /* if (addEventListener("click", sedeLima)) { 
                 const sedeLima = () => {
                     chooseSede = laboratoria.lima; 
