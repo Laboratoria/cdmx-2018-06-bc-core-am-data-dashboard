@@ -55,7 +55,6 @@ const sedes = (laboratoria) => {
 // accessSantiago.addEventListener("click", event => {
 //     let access = event.target.id;
 //     gettingData(access);
-// });
 
 
 

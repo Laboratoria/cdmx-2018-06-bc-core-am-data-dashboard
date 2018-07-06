@@ -44,7 +44,6 @@ window.computeGenerationsStats = (laboratoria) => {
         average1 = Math.round(average2 / students.length); //Saca promedio y redondea la cifra.
         count1 = students.length;
       }
-
       generation.push({
         "generation": generation1,
         "campus": sede,
@@ -143,7 +142,6 @@ window.computeStudentsStats = (laboratoria) => {
 
       }
     })
-
   }
 return student  
 }
