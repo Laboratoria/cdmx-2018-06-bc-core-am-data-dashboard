@@ -1,136 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Poor+Story');
 
-*{/*para quitar los margenes por defecto de la web*/
-  margin: 0px;
-  padding: 0px;
-  background: url("Images/blueyellow.png") no-repeat center center fixed;
-  background-size: cover;
-  max-width: 100%;
+.card {
+  width: 200px;
+  height: 200px;
+  display: inline-flex;
+  margin: 0.5rem;
+  background-color: #FF009A;
+  color: #FFFFFF;
+  text-align: center;  
 }
 
-/*HTML log in*/
-.loginbox{
-  width: 320PX;
-  height: 420px;
-  background: #cccccc;/*color de placeholder*/
-  color: #191919;/*Color de escritura al poner usuario*/
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50% -50%);
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-position: center;
-  font-style: 'Poor Story', cursive;
+.info {
+  margin: 15 auto;
 }
 
-.loginbox{
-  font-style: 'Poor Story', cursive;
-  width: 320px;
-  height: 420px;
-  background: rgba(255, 250, 240, 0.5);
-  color: #000000;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  box-sizing: border-box;
-  background-blend-mode: lighten;
-  padding: 70px 30px;
-
-}
-
-.avatar{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  position: absolute;
-  top: -50%;
-  height: 100px;
-  border-radius: 50%;
-  position: absolute;
-  top: -50px;
-  left: calc(50% - 50px);
-}
-
-h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-    font-style: 'Poor Story', cursive;
-}
-
-.loginbox p{
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  font-style: 'Poor Story', cursive;
-}
-
-.loginbox input{
-  width: 100%;
-  margin-bottom;
-}
-
-.loginbox input[type="text"], input[type="password"]{
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-    height: 30px;
-    color: #191919;
-    font-size: 13px;
-    font-style: 'Poor Story', cursive;
-}
-  
-
-
-#container{/*From where the heck is this shit?*/
-  font-size: 40px;
-  font-family: 'Poor Story', cursive;
+h1 {
   text-align: center;
 }
 
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-/*body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial;*/
+.table, th, tr, td {
+  border: 1px solid black;
 }
-
-/* Style tab links */
-.tablink {
-    background-color: whitesmoke;
-    color: black;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-}
-
-.tablink:hover {
-    background-color: whitesmoke;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-    color: black;
-    display: none;
-    padding: 100px 20px;
-    height: 100%;
-}
-
-/*#Home {background-color: rgba(255, 250, 240, 0.5);}
-#News {background-color: rgba(255, 250, 240, 0.5);}
-#Contact {background-color: rgba(255, 250, 240, 0.5);}
-#About {background-color: rgba(255, 250, 240, 0.5);}
-
-
