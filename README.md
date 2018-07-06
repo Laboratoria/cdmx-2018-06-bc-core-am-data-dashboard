@@ -28,11 +28,21 @@ Conforme a esto haremos nuestro primer sketch tratando de cubrir las necesidades
 [Audio de entrevista de Florencia](https://drive.google.com/open?id=1RE-8SneGCdT9xByVd7m3r2tfd7xFTUhL)
 
 Iniciamos con una idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
+Tomamos en cuenta todas las sugerencias y necesidades de las entrevistas pero también hicimos un research externo inspirandonos en algunas páginas de data dashboards. Lo que pudimos observar fue que la mayor parte de la información está a primera vista, con diferentes formas de organización.
+La que más nos inspiró fue la de Canadá  https://www.statcan.gc.ca/eng/about/website-faq
+Tener todo en cards con gráficas y  porcentajes hace más entendible y accesible la información para el usuario.
+
+Páginas de Referencia
+
+[Statics Canada](https://www.statcan.gc.ca/eng/start)
+[Office for National Statics](https://www.ons.gov.uk/businessindustryandtrade/business)
+
+Nuestra primera idea fue un flujo a base de botones, donde la página inicial tuviera un boton con las sedes, de ahi una pagina con las sedes, de ahí a una página con las generaciones y esta llevara a una página con una vista inicial con los datos generales de la generación elegida y después de eso tuviera la opción de elegir a la alumna correspondiente. El flujo no era tan malo, pero no consideramos la cantidad de funciones para cada botón además de lo tedioso que se volvería con  el tiempo usar la plataforma. 
 
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/sketch1.png)
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/sketch2.png)
 
-El diagrama de flujoparecia sencillo, y lo era, pero no era eficiente.
+El diagrama de flujo parecia sencillo, y lo era, pero no era eficiente.
 
 ![Flujo](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/Flujo.png)
 
