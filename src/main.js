@@ -1,5 +1,6 @@
 //Paso uno: Traemos la dirección del servidor propio
-const host = '../data/laboratoria.json';
+//const host = '../data/laboratoria.json';
+const host = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
 console.log(host);
 //se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
 window.onload = () => {
@@ -10,13 +11,17 @@ window.onload = () => {
     .then((laboratoria) => {
       computeStudentsStats(laboratoria);
       console.log(laboratoria);
+      computeStudentsStats();
       //createInfo es una función que se declara en el data.js para crear elementos en DOM
     })
     .catch((error) => {
       console.log(error);
       //.catch buscará errores en el enlace FETCH
     })
+    
 };
+
+
 
     //manejar DOM para imprimir los datos de estudiantes en lista
     // document.getElementById('btn-students').addEventListener("click", (event) => {

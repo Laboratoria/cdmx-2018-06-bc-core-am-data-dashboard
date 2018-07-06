@@ -3,36 +3,61 @@ console.log("conectado");
 const showResult = document.getElementById("result-list");
 //Definición de la primera función 
 window.computeStudentsStats = (laboratoria) => {
-//declaración de variables:
-const student = [{
-    name: null,
-    campus: null,
-    generation: null,
-    
-}];
-console.log(student);
-//se inicia la iteración en el primer nivel del objeto
-            for (findSede in laboratoria) {
-                student.campus = findSede;
-                console.log('1', Object.keys(laboratoria[findSede].generacion));
-                const generations = Object.keys(laboratoria[findSede].generacion);
-                     for (let i = 0; i < generations.length; i++) {
-                        const findGeneration = laboratoria[findSede].generacion[generations[i]];
-                        student.generation = Object.keys(findGeneration);
-                        console.log('2', student.generation);
-                            for (let i = 0; i < findGeneration.length; i++) {
-                            const findName = laboratoria[findSede].generacion[generations[i]].estudiantes;
-                            student.name = findName;
-                            console.log('3', student.name);
-                        }
-                     console.log(laboratoria[findSede].generacion[generations[i]].estudiantes);
-                     }
-            }
-              
+    //declaración de variables:
+    const student = [{
+        name: "",
+        campus: "",
+        generation: "",
+
+    }];
+    console.log(student);
+    //se inicia la iteración en el primer nivel del objeto para obtener sus keys
+    for (findSede in laboratoria) {
+        student.campus = findSede;
+        console.log("sedes", student.campus)
+        //console.log('1', Object.keys(laboratoria[findSede].generacion));
+        const generations = Object.keys(laboratoria[findSede].generacion);
+        console.log("generations", generations);
+        for (let i = 0; i < generations.length; i++) {
+            const findGeneration = Object.keys(laboratoria[findSede].generacion[generations[i]]);
+            student.generation = findGeneration;
+            console.log("objeto estudiante", student.generation);
+            for (let i = 0; i < findGeneration.length; i++) {
+                const findStudentList = laboratoria[findSede].generacion[generations[i]].estudiantes;
+                //studentList = Object.keys(findStudentList);
+                //console.log("lista de estudiantes", studentList);
+                findStudentList.map((itemStudent) => {
+                    let itemStudent1 = {}; 
+                    itemStudent1[itemStudent] = itemStudent.nombre;
+                    console.log(itemStudent1);
+                    return student.name = itemStudent1;
+                    // console.log(itemStudent)});
+                    // for (let i= 0; i < itemStudent.length; i++) {
+                    //     const findEachName = itemStudent.nombre;
+                    //     console.log("Nombre de cada estudiante",findEachName);
+                     })
+                
+                // for (findEachStudent of studentList) {
+                //     console.log("Número de cada estudiante", studentList[findEachStudent]);
+                //         // for (let i =0; i < findEachStudent.length; i++) {
+                        // const findStudentName = findEachStudent[0].nombre;
+                        // student.name = findStudentName;
+                        // console.log("lista de nombres", student.name);
+                        // }
+                     
+                //     console.log("Nombre dentro de cada array", findStudentName);
+                //     
+                //    // 
+                //}
+                    }
+            //console.log(laboratoria[findSede].generacion[generations[i]].estudiantes);
+        }
+    }
+
     //     for (propertyname in laboratoria) {
     //        const sedes = Object.keys(laboratoria[i])
     //        console.log(sedes);
-            
+
     //     };
     //     for (propertynames in laboratoria.generacion) {
     //         const generation = Object.keys(laboratoria[i].generacion);
@@ -40,10 +65,10 @@ console.log(student);
     //     };    
     //     console.log();
     // }
-   // return sedes = new Array [""];
-//laboratoria[0] ${'campus:'} + propertyname ) 
+    // return sedes = new Array [""];
+    //laboratoria[0] ${'campus:'} + propertyname ) 
 
-//se cierra la función
+    //se cierra la función
 }
 
 
@@ -74,7 +99,7 @@ console.log(student);
 // getData : (laboratoria) =>  {
 //     laboratoriaData = "";
 //     console.log(laboratoria);
-    
+
 // //Realizar enlace fetch con arrow function
 //     fetch(laboratoria)
 //     .then((response) => {
@@ -88,63 +113,61 @@ console.log(student);
 //         pintarSedes(chooseSede)
 
 
-           /* if (addEventListener("click", sedeLima)) { 
-                const sedeLima = () => {
-                    chooseSede = laboratoria.lima; 
-                    console.log(chooseSede);
-                    if (addEventListener("click", terceraGen)) {
-                        chooseSede = lima.tercera;
-                        console.log(chooseSede);
-                    }
-                    else if (addEventListener("click", cuartaGen)) {
-                        chooseSede = lima.cuarta;
-                        console.log(chooseSede);
-                    }
-                    else {
-                        chooseSede = lima.quinta;
-                        console.log(chooseSede);
-                    }
-                }
-            }
-            else if (addEventListener("click", sedeMx)) {
-                const sedeMX = () => {
-                    chooseSede = laboratoria.mexico;
-                }
-            }
-            else {
-                const sedeSantiago = () => {
-                    chooseSede = laboratoria.santiago;
-                }
-        //     }*/
-        // })
-        // .catch((error) => {
-        //     console.log("errordeMV", error);
-        // });
+/* if (addEventListener("click", sedeLima)) { 
+     const sedeLima = () => {
+         chooseSede = laboratoria.lima; 
+         console.log(chooseSede);
+         if (addEventListener("click", terceraGen)) {
+             chooseSede = lima.tercera;
+             console.log(chooseSede);
+         }
+         else if (addEventListener("click", cuartaGen)) {
+             chooseSede = lima.cuarta;
+             console.log(chooseSede);
+         }
+         else {
+             chooseSede = lima.quinta;
+             console.log(chooseSede);
+         }
+     }
+ }
+ else if (addEventListener("click", sedeMx)) {
+     const sedeMX = () => {
+         chooseSede = laboratoria.mexico;
+     }
+ }
+ else {
+     const sedeSantiago = () => {
+         chooseSede = laboratoria.santiago;
+     }
+//     }*/
+// })
+// .catch((error) => {
+//     console.log("errordeMV", error);
+// });
 
-        // }
-    //se cierra getData
-
- /*
-const computeStudentsStats = (laboratoria) => {
-
-}
-
-const computeGenerationsStats = (laboratoria) => {
+// }
+//se cierra getData
 
 
-}
 
-const sortStudents = (students, orderBy, orderDirection) => {
 
-}
+window.computeGenerationsStats = (laboratoria) => {
 
-const filterStudents = (students, search) => {
+
+};
+
+window.sortStudents = (students, orderBy, orderDirection) => {
+
+};
+
+window.filterStudents = (students, search) => {
 
 }
 
 //se cierra el método getData del objeto dataDashboard
-}
-*/
+
+
 
 
 //cierre del objeto window

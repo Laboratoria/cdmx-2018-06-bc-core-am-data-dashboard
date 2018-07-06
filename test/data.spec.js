@@ -18,10 +18,8 @@ describe('data', () => {
 
   describe('computeStudentsStats(laboratoria)', () => {
 
-    const { laboratoria } = fixtures;
-
     it('debería retornar arreglo de students con propiedad campus y propiedad generation', () => {
-      const processed = computeStudentsStats(laboratoria);
+      const processed = computeStudentsStats(fixtures);
 
       processed.forEach((student) => {
         assert.ok(student.hasOwnProperty('campus'));
@@ -30,15 +28,17 @@ describe('data', () => {
     });
 
     it('debería retornar arreglo de students con propiedad stats', () => {
-      const processed = computeStudentsStats(laboratoria);
+      const processed = computeStudentsStats(fixtures);
     
-      processed.forEach( (student, i) => {
+      processed.forEach( (student) => {
+        console.log(student);
+        
         assert.ok(student.hasOwnProperty('stats'));
         assert.isNumber(student.stats.completedPercentage);
         assert.isObject(student.stats.topics);
-        assert.isNumber(student.stats.topics[i].completedPercentage);
-        assert.isNumber(student.stats.topics[i].topicDuration);
-        assert.isObject(student.stats.topics[i].subtopics);
+        assert.isNumber(student.stats.topics["01-Introduccion-a-programacion:"].percentajeDuration);
+        assert.isNumber(student.stats.topics["01-Introduccion-a-programacion:"].topicDuration);
+        assert.isObject(student.stats.topics[["01-Introduccion-a-programacion:"]].subtopics);
         assert.isNumber(student['stats']['topics'][i]['subtopics'][i]['completedPercentage']);
         assert.isString(student['stats']['topics'][i]['subtopics'][i]['type']);
         assert.isNumber(student['stats']['topics'][i]['subtopics'][i]['duration']);
@@ -101,6 +101,7 @@ describe('data', () => {
   describe('sortStudents(students, orderBy, orderDirection)', () => {
 
     it('debería retornar arreglo de estudiantes ordenado por nombre ASC');
+    asser.equal(processedPercentage)
     it('debería retornar arreglo de estudiantes ordenado por nombre DESC');
     it('debería retornar arreglo de estudiantes ordenado por porcentaje general ASC');
     it('debería retornar arreglo de estudiantes ordenado por porcentaje general DESC');

@@ -5,3 +5,6 @@ global.fixtures = {
 };
 require('../src/data');
 require('./data.spec.js');
+
+//Chai es un programa que corre dentro del proyecto para jecutar los test, por ello
+//funciona el .assert, etc.
