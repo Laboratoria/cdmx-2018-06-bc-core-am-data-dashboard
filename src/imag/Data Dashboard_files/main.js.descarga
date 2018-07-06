@@ -1,0 +1,36 @@
+/*Código que tenga que ver con mostrar los datos en la pantalla*/
+
+let studentsimp=document.querySelector("#pintar_estudiantes");
+let tercer=document.getElementById("lima_tercera");
+let cuarta=document.getElementById("lima_cuarta");
+let quinta=document.getElementById("lima_quinta");
+let mtercer=document.getElementById("mex_tercera");
+let mcuarta=document.getElementById("mex_cuarta");
+let mquinta=document.getElementById("mex_quinta");
+let santercer=document.getElementById("sant_tercera");
+let sancuarta=document.getElementById("sant_cuarta");
+let sanquinta=document.getElementById("sant_quinta");
+
+
+
+tercer.addEventListener("click",evento=>{window.datadashboard.computeStudentsStats(studentsimp)});
+
+/*let nombre_tercera =
+
+laboratoria.innerHTML +=`
+
+<div class="form-group">
+
+   <label for="exampleFormControlSelect2"></label>
+
+   <select multiple class="form-control" id="exampleFormControlSelect2">
+
+     <option>Nombre: ${nombre_tercera.nombre}</option>
+     <option>Correo: ${nombre_tercera.correo}</option>
+     <option>Progreso</option>
+     <option>Duracion Programa: ${progreso.duracionPrograma}</option>
+     <option>Porcentaje Completado: ${progreso.porcentajeCompletado}</option>
+   </select>
+</div>*/
+
+`
