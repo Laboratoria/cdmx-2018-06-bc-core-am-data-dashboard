@@ -60,19 +60,55 @@ const generacionSantiago = (allGeneraciones) => {
 });
 }
 
+
+
+//SEDES
+const containerSedes = document.getElementById('resultadosSedes');
+//GENERACIONES
+const containerGeneraciones = document.getElementById('resultadosGeneracionesLima');
+//ALUMNAS
 const container = document.getElementById('resultadosAlumnas');
+render = (data) => {
+  //SEDES
+  document.getElementById("sedes").addEventListener("click", (event) => {
+    let resultSedes = "";
+    console.log(data)
+    let sedesAll = data;
+    let sedesOne = Object.keys(sedesAll)
+    console.log(Object.keys(sedesAll))
+    for(let i = 0; i < sedesOne.length; i++){
+    //GUARDAR EL VALOR EN UNA VARIABLE PARA PINTARLA DESPUES
+    let sedes = sedesOne[i];
+    //PINTAR A TRAVES DEL ID SEÑALADO EN HTML
+    resultSedes += `<p>Sedes:${sedes}</p>`
+    };
+    containerSedes.innerHTML = resultSedes;
 
+  })
+  //GENERACIONES LIMA
+  //LLAMAR ID DEL BOTON PARA Q CORRA LA FUNSION
+  document.getElementById("generacionesLima").addEventListener("click", (event) => {
+    //RESULTADOS
+    let resultadosGeneracionesLima = "";
+    let generacionesAll = Object.keys(data.lima.generacion);
+    console.log(generacionesAll)
+    for(let i = 0; i < generacionesAll.length; i++){
+      let generacionesLima = generacionesAll[i];
+      resultadosGeneracionesLima += `<p>${generacionesLima} generación</p>`
+    };
+    containerGeneraciones.innerHTML = resultadosGeneracionesLima;
 
-renderInfo = (data) => {
+  })
+  //ALUMNAS
   document.getElementById("alumnas").addEventListener("click", (event) => {
     //RESULTADOS
     let result = "";
-    //SEDES
+    //SE HACE UN FOR PARA RECORRERR TODAS LAS ALUMNAS
     console.log(Object.values(data))
-    let name = "";
     console.log(Object.values(data.lima.generacion.cuarta.estudiantes))
     let estudianteLima = data.lima.generacion.cuarta.estudiantes;
     for(let i = 0; i < estudianteLima.length; i++){
+    //GUARDAR EL VALOR EN UNA VARIABLE PRA DESPUÉS PINTARLO
     let alumna = estudianteLima[i];
     let progresos = alumna.progreso;
     console.log(progresos)   
@@ -99,6 +135,7 @@ renderInfo = (data) => {
 
 
 
+
 /*let generacion = function(){
   fetch(url).then(function(datos){
   return datos.json();
@@ -117,12 +154,7 @@ renderInfo = (data) => {
 
 
 
-  /*console.log(Object.keys(sedeLimaGeneracion));
-  let generacionesLimaAlumanas = Object.keys(sedeLimaGeneracion);
-  console.log(generacionesLimaAlumanas[0]);
-  for(let i = 0; i<generacionesLimaAlumanas.length; i++) {
-        showAlumnas.innerHTML+= "<div>" + generacionesLimaAlumanas[i] + "</div>";
-    }*/
+  
 
   
 
