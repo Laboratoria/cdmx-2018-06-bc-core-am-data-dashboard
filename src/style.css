@@ -16,6 +16,17 @@ body{
     background-color: rgb(241, 235, 238);
     color: rgb(0, 0, 0);
 }
+span{
+    font-size: 1.5em;
+}
+#cards{
+    font-weight: bold;
+}
+
+#side a.active{
+    background-color: pink;
+    color: black;
+}
 #btn disabled{
     color: yellow;
 }
