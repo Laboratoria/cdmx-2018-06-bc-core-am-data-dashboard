@@ -151,7 +151,8 @@ window.onload = () =>{
   fetch(laboratoria)
     .then(data => data.json())
     .then((data) =>{
-      deepStudentsStats(data);
+      const print = printSedesMex(data);
+      //computeVenuesStats(data);
       listeners(data);
     })
     .catch((error) => {
