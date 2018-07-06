@@ -17,11 +17,11 @@ describe('data', () => {
   });
 
   describe('computeStudentsStats(laboratoria)', () => {
-
-    const { laboratoria } = fixtures;
+    //Se elimino el const laboratoria
+    //const { laboratoria } = fixtures;
 
     it('debería retornar arreglo de students con propiedad campus y propiedad generation', () => {
-      const processed = computeStudentsStats(laboratoria);
+      const processed = computeStudentsStats(fixtures);
 
       processed.forEach((student) => {
         assert.ok(student.hasOwnProperty('campus'));
@@ -30,18 +30,18 @@ describe('data', () => {
     });
 
     it('debería retornar arreglo de students con propiedad stats', () => {
-      const processed = computeStudentsStats(laboratoria);
+      const processed = computeStudentsStats(fixtures);
 
-      processed.forEach( (student, i) => {
+      processed.forEach( (student) => {
         assert.ok(student.hasOwnProperty('stats'));
         assert.isNumber(student.stats.completedPercentage);
         assert.isObject(student.stats.topics);
-        assert.isNumber(student.stats.topics[i].completedPercentage);
-        assert.isNumber(student.stats.topics[i].topicDuration);
-        assert.isObject(student.stats.topics[i].subtopics);
-        assert.isNumber(student['stats']['topics'][i]['subtopics'][i]['completedPercentage']);
-        assert.isString(student['stats']['topics'][i]['subtopics'][i]['type']);
-        assert.isNumber(student['stats']['topics'][i]['subtopics'][i]['duration']);
+        assert.isNumber(student.stats.topics["01-Introduccion-a-programacion"].completedPercentage);
+        assert.isNumber(student.stats.topics["01-Introduccion-a-programacion"].percentageDuration);
+        assert.isObject(student.stats.topics["01-Introduccion-a-programacion"].subtopics);
+        assert.isNumber(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['completedPercentage']);
+        assert.isString(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['type']);
+        assert.isNumber(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['duration']);
         });
     });
 

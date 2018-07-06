@@ -129,3 +129,7 @@ window.computeStudentsStats = (laboratoria) => {
   // console.log(Object.values(laboratoria)[1]);
   // console.log(Object.values(laboratoria)[2]);
 }
+
+window.computeGenerationsStats = (laboratoria) => {
+
+}
