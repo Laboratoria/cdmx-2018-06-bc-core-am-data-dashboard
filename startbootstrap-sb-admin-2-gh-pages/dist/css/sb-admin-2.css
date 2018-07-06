@@ -19,7 +19,7 @@ body {
     position: inherit;
     margin: 0 0 0 250px;
     padding: 0 30px;
-    border-left: 1px solid #e7e7e7;
+    border-left: 1px solid #000000;
   }
 }
 .navbar-top-links {
@@ -75,10 +75,10 @@ body {
   padding: 15px;
 }
 .sidebar ul li {
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #000000;
 }
 .sidebar ul li a.active {
-  background-color: #eeeeee;
+  background-color: ##ffe521;
 }
 .sidebar .arrow {
   float: right;
@@ -118,19 +118,19 @@ body {
   transition: all .5s;
 }
 .btn-primary.btn-outline {
-  color: #428bca;
+  color: #ffe521;
 }
 .btn-success.btn-outline {
-  color: #5cb85c;
+  color: #ffe521;
 }
 .btn-info.btn-outline {
-  color: #5bc0de;
+  color: #ffe521;
 }
 .btn-warning.btn-outline {
-  color: #f0ad4e;
+  color: #ffe521;
 }
 .btn-danger.btn-outline {
-  color: #d9534f;
+  color: #ffe521;
 }
 .btn-primary.btn-outline:hover,
 .btn-success.btn-outline:hover,
@@ -147,7 +147,7 @@ body {
 .chat li {
   margin-bottom: 10px;
   padding-bottom: 5px;
-  border-bottom: 1px dotted #999999;
+  border-bottom: 1px dotted #ffe521;
 }
 .chat li.left .chat-body {
   margin-left: 60px;
@@ -292,7 +292,7 @@ table.dataTable thead .sorting:after {
   left: 50%;
   width: 3px;
   margin-left: -1.5px;
-  background-color: #eeeeee;
+  background-color: #000000;
 }
 .timeline > li {
   position: relative;
@@ -319,7 +319,7 @@ table.dataTable thead .sorting:after {
   position: relative;
   width: 46%;
   padding: 20px;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #000000;
   border-radius: 2px;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
@@ -377,7 +377,7 @@ table.dataTable thead .sorting:after {
   border-left-width: 0;
 }
 .timeline-badge.primary {
-  background-color: #2e6da4 !important;
+  background-color: #ffe521 !important;
 }
 .timeline-badge.success {
   background-color: #3f903f !important;
