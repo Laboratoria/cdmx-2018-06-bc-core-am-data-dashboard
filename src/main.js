@@ -41,6 +41,26 @@ const sedes = (laboratoria) => {
     }
 }
 
+
+const generations = (laboratoria) => {
+    const containerButtons = document.getElementById("container-buttons");
+    for (key in laboratoria) {
+        generation1 = Object.keys(laboratoria[key].generacion); 
+        generation1.forEach(elements => { 
+        generation1 = elements; 
+        const divCol = document.createElement("div");
+        const a= document.createElement("a");
+        divCol.classList.add("col-4");
+        a.id=generation1;
+        a.innerHTML=generation1;
+        divCol.appendChild(a); 
+        // falta agregar evento al divCol para que ese button detone una funcion
+        containerButtons.appendChild(divCol);
+        // console.log(key);
+        }
+        )}
+}
+
 //Botones de ingreso a generaciones
 // accessMexico.addEventListener("click", event => {
 //     let access = event.target.id;
