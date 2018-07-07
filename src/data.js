@@ -11,20 +11,22 @@ window.computeStudentsStats = (laboratoria) => {
         generation: "",
         email: "",
 }];
-    console.log(student);
+    //console.log("1.2", student);
     //se inicia la iteración en el primer nivel del objeto para obtener sus keys
     for (findSede in laboratoria) {
         student.campus = findSede;
-
+        console.log("1.3", findSede)
         console.log("sedes", student.campus)
         //console.log('1', Object.keys(laboratoria[findSede].generacion));
         const generations = Object.keys(laboratoria[findSede].generacion);
-        console.log("generations", generations);
+        //console.log("1.1",Object.keys(laboratoria[findSede].generacion));
+        //console.log("generations", generations);
         for (let i = 0; i < generations.length; i++) {
             const findGeneration = Object.keys(laboratoria[findSede].generacion[generations[i]]);
             student.generation = findGeneration;
-            console.log("objeto estudiante", student.generation);
-            for (let i = 0; i < findGeneration.length; i++) {
+            //console.log("1",findGeneration)
+            //console.log("objeto estudiante", student.generation);
+            /*for (let i = 0; i < findGeneration.length; i++) {
                 const findStudentList = laboratoria[findSede].generacion[generations[i]].estudiantes;
                 //studentList = Object.keys(findStudentList);
                 //console.log("lista de estudiantes", studentList);
@@ -34,12 +36,12 @@ window.computeStudentsStats = (laboratoria) => {
                     //console.log(itemStudent1);
                     student.name = itemStudent1;
                     console.log("nombre:", student.name);
-                    return student.name;
+                    return student.name;*/
                         
                     // console.log(itemStudent)});
                     // for (let i= 0; i < itemStudent.length; i++) {              //     const findEachName = itemStudent.nombre;
                     //     console.log("Nombre de cada estudiante",findEachName);
-                     })
+                    // })
                 
                 // for (findEachStudent of studentList) {
                 //     console.log("Número de cada estudiante", studentList[findEachStudent]);
@@ -73,7 +75,7 @@ window.computeStudentsStats = (laboratoria) => {
     //laboratoria[0] ${'campus:'} + propertyname ) 
 
     //se cierra la función
-}
+//}
 
 // console.log("data.js está conectado");
 
