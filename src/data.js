@@ -1,4 +1,5 @@
 
+
 window.computeStudentsStats = (laboratoria) => {
     const students = [];
     const obj = {
@@ -48,5 +49,3 @@ window.sortStudents = (laboratoria) => {
 window.filterStudents = (laboratoria) => {
 
 }
-
-  
