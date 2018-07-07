@@ -316,7 +316,7 @@ window.printSedesMex = (laboratoria) => {
             <div class="card white darken-1">
             <div class="card-content card-data black-text">
              <h2 class="card-title" id="cards">${sedeM[i].venue}</h2>
-             <h5>Alumnas activas: ${sedeM[i].activeStudents}</h3>
+             <h5>Alumnas activas: ${sedeM[i].activeStudents}</h5>
              <span>Promedio: ${sedeM[i].average}${'%'} </span>
              <div class="progress">
              <div class="determinate" style="width: ${sedeM[i].average}%"></div>
