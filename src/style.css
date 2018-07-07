@@ -16,6 +16,13 @@ body{
     background-color: rgb(241, 235, 238);
     color: rgb(0, 0, 0);
 }
+span{
+    font-size: 1.5em;
+}
+#cards{
+    font-weight: bold;
+}
+
 #side a.active{
     background-color: pink;
     color: black;
@@ -31,7 +38,4 @@ body{
 #footer{
     height: 100px;
     width: 100px;
-}
-{
-    background-color: blueviolet;
 }

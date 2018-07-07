@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <section class='container-fluid foundFont'>
+    <header class='row'>
+      <section class='col s12'>
+        <img class='responsive-img logo col s2' src="Pictures/l_rgb_-01_360.png">
+        <div class="nav-wrapper col s10 offset-s2" id="encabezado" class="navbar-fixed">
+          <form>
+            <div class="input-field col s7">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </section>
+    </header>
+
+    <main class="row">
+      <aside class="col s2">
+        <ul class="col s12 collection">
+          <a href="sedes.html" id="venuesFun">
+            <li class="collection-item hoverable">
+              <i class="material-icons" href="sedes.html">public</i> Sedes</li>
+          </a>
+          <a href="generaciones.html" id="generationFun">
+            <li class="collection-item hoverable">
+              <i class="material-icons">school</i> Generaciones</li>
+          </a>
+          <a href="index.html" id="studentsFun">
+            <li class="collection-item hoverable">
+              <i class="material-icons">people</i> Alumnas</li>
+          </a>
+        </ul>
+        <input type="button" id="filt" value="Filter" class="waves-effect waves-light btn pink">
+        <label title="Filter" for="filt"></label>
+        <input type="button" id="sort" value="Sort" class="waves-effect waves-light btn pink">
+        <label title="Sort" for="sort"></label>
+        <section id='venues'></section>
+      </aside>
+        <div id="print-generation"></div>
+        <div id="print-venues"></div>
+        <div id="students-result"></div>  
+      </section>
+  </main>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
+
+
+</body>
+
+</html>
