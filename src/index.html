@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>DOM</title>
-  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Estudiantes</h1>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class = "img">
+      <img src="Images/1528575847-27360187-268x40x268x88x0x24-Laboratoria-Logo-RGB.png" alt="">
+  </div>
+  
 
-<DIV align="center">
+  <div class="row">
+   <nav id="navbar">
+    <div class="col s1.5">
+      <a href="#" class="brand-logo"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down"><i class="large material-icons left">group</i> 
+        <li><a id="btn Lima" href="">Lima</a></li>
+        <li><a id = "btn México" href="">México</a></li>
+        <li><a id= "btn Santiago" href="">Santiago</a></li>
+        <li><a id= "btn Stats" href=""><i class="large material-icons right">poll</i>Stats</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</div>
+<!--<DIV align="center">
     <button id='btn'>Ver estudiantes</button>
     <button id='delete'>Limpiar Estudiantes</button>
-</DIV>
+</DIV>-->
 
 
 
@@ -32,5 +50,6 @@
   <!-- Scripts -->
   <script src="data.js"></script>
   <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
 </html>

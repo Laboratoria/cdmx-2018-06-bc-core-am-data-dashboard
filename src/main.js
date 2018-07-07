@@ -1,3 +1,5 @@
+let api = "https://api.myjson.com/bins/1efx86"
+
 //const porque nunca cambia el div, solo la info depositada
 const container = document.getElementById('result');
 
@@ -35,3 +37,4 @@ const renderInfo = (data) => {
 document.getElementById('delete').addEventListener('click', (event) => {
     container.innerHTML = '';
 })
+
