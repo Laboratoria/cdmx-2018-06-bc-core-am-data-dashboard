@@ -9,12 +9,13 @@ window.computeStudentsStats = (laboratoria) => {
         name: "",
         campus: "",
         generation: "",
-
-    }];
+        email: "",
+}];
     console.log(student);
     //se inicia la iteración en el primer nivel del objeto para obtener sus keys
     for (findSede in laboratoria) {
         student.campus = findSede;
+
         console.log("sedes", student.campus)
         //console.log('1', Object.keys(laboratoria[findSede].generacion));
         const generations = Object.keys(laboratoria[findSede].generacion);
@@ -34,9 +35,9 @@ window.computeStudentsStats = (laboratoria) => {
                     student.name = itemStudent1;
                     console.log("nombre:", student.name);
                     return student.name;
+                        
                     // console.log(itemStudent)});
-                    // for (let i= 0; i < itemStudent.length; i++) {
-                    //     const findEachName = itemStudent.nombre;
+                    // for (let i= 0; i < itemStudent.length; i++) {              //     const findEachName = itemStudent.nombre;
                     //     console.log("Nombre de cada estudiante",findEachName);
                      })
                 
