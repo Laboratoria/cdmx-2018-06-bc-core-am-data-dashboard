@@ -1,64 +1,82 @@
-//const sedes = document.getElementById('sedes')
-window.computeStudentsStats = (laboratoria) => {
-}
 
-window.computeGenerationsStats = (laboratoria) => {
+window.data = {
+    cargandoDatos:() => {
+      let laboratoria = fetch('https://raw.githubusercontent.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-data-dashboard/javascriptFetch/data/laboratoria.json');
+//Primera función para los test
+      data.computeStudentsStats(laboratoria);
+    },
 
-  console.log(laboratoria);
-  const generationsArray =[];
+      computeStudentsStats: (laboratoria) => {
+              laboratoria.then(function(res){
+                  return res.json();
+              })
+              .then(function(data){
+                  let sedes = Object.getOwnPropertyNames(data);
+                  let generaciones = Object.values(data);
+                //Aquí hay que agregar el bucle que defina. PREGUNTAR AMALIA
+                  //console.log(sedes);
+                    //generaciones titulo
+                  generaciones.forEach(function (elements){
+                    let generation = Object.values(elements.generacion);
+//error
+                    generation.forEach(function (elements2){
+                      let estudiantes = elements2.estudiantes;
+                      estudiantes.forEach(function(elements3){
+                          //let infoEstudiantes =Object.values(elements3);
+                              let porcentajeCompl = elements3.progreso;
+                              let nombres = elements3.nombre;
+                                //console.log(nombres);
+                    })
 
-  const obj = {
-    campus: "",
-    generation: "",
-    average: 0,
-    count: 0,
-  };
+                    })
 
-  //console.log(obj);
-  let average =0;
+                  })
+                  /*let obtenidos = data.lima.generacion.cuarta.estudiantes;
+                  //console.log(data.lima.generacion.cuarta.estudiantes)
+                  let contenedor = '';
+                  obtenidos.forEach(element => {
+                      contenedor += `<li>${element.nombre}</li>`;
+                      //console.log(element.nombre);
 
-  for(key in laboratoria){
+                  });
+                  let retornados = JSON.stringify(contenedor);
+                  let result =  document.getElementById("resultado");
+                  result.insertAdjacentHTML("beforeEnd", contenedor)
+                  //console.log(retornados);*/
+                  let obtenidos = data.lima.generacion.cuarta.estudiantes;
+                  let i = 1;
+                  let j = 1;
+                  obtenidos.forEach(element =>{
+                     document.getElementById(`nombre${i++}`).innerHTML = element.nombre;
+                     let students = Object.values(element.progreso);  
+                    document.getElementById(`porcentaje${j++}`).innerHTML = element.progreso.porcentajeCompletado;
+                  })
+              })
+      },
 
-    obj.campus = key;
-    console.log(obj.campus);
+      computeGenerationsStats: () => {
 
-    average = 0;
-    const generations = Object.keys(laboratoria[key].generacion);
-    //console.log(laboratoria[key].generacion);
-      generations.forEach((generation) => {
-        obj.generation = generation;
-        console.log(obj.generation);
-        const students = laboratoria[key].generacion[generation].estudiantes;
-      //console.log(students);
+      },
 
-//console.log(studentsStats);
-        const studentsStats = students.map((student,i,array)=>{
-          average += array[i].progreso.porcentajeCompletado;
-          average = average / array.lenght;
-            obj.campus= key;
-            obj.generation= generation;
-            obj.average = average;
-            obj.count= array.length;
-            console.log(student);
-        })
+      sortStudents: () => {
+
+      },
+
+      filterStudents: () => {
+
+      }
+
+   }
+   /*
 
 
-        /*for (student in students) {
-          average += students[student].progreso.porcentajeCompletado;
-          average = average / students.lenght;
-
-          obj.average = average;
-          obj.count = students.lenght;
-          console.log(obj.average);
-          console.log(obj.count);
-        }*/
-      //  console.log(generationsArray);
-//console.log(generationsArray.push(obj));
-      })
-
-//console.log(generationsArray.push(obj));
-  }
-
-//console.log(generationsArray);
-return generationsArray;
-}
+   fetch('../data/laboratoria.json')
+   .then(function(res){
+      return res.json();
+   })
+   .then(function(data){
+          let laboratoria = data.lima.generacion.cuarta.estudiantes;
+         let resultado = JSON.stringify(laboratoria);
+         console.log(resultado);
+          document.getElementById('resultado').innerHTML = resultado;
+   })*/
