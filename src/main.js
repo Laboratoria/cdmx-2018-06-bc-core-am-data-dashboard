@@ -5,7 +5,7 @@ const orderBy ="percentage";
 const orderDirection = "DESC";
 //DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
 const printVenues = (venues) =>{
-  const resultVen = document.getElementById('print-sede');
+  const resultVen = document.getElementById('print-venues');
   let ven ='';
   for(let i=0; i<venues.length; i++){
     let venueAverage= Math.round(venues[i].average);
@@ -57,8 +57,8 @@ const printStudents = (students) =>{
                   <h4">Sede: ${students[i].campus}</h4>
                   <h5>Generacion: ${students[i].generation}</h5>
                   <p>Nombre: ${students[i].name}</p>
-                  <p>Completitud: ${students[i].average}${'%'}</p>
-                  <p>Status: ${students[i].advertisment}</p>
+                  <p>Completitud: ${students[i].stats.completedPercentage}${'%'}</p>
+                  <p>Status: ${students[i].stats.status}</p>
                   <p>Tiempo total del programa: ${students[i].totalTime}${'hrs'}</p>
                   <p>Tiempo invertido: ${students[i].timeProm}${'hrs'}</p>
                   </div>
@@ -78,8 +78,8 @@ const printSort = (sort)=>{
                   <h4>Sede: ${sort[i].campus}</h4>
                   <h5>Generacion: ${sort[i].generation}</h5>
                   <p>Nombre: ${sort[i].name}</p>
-                  <p>Completitud: ${sort[i].average}${'%'}</p>
-                  <p>Status: ${sort[i].advertisment}</p>
+                  <p>Completitud: ${sort[i].stats.completedPercentage}${'%'}</p>
+                  <p>Status: ${sort[i].stats.status}</p>
                   <p>Tiempo total del programa: ${sort[i].totalTime}${'hrs'}</p>
                   <p>Tiempo invertido: ${sort[i].timeProm}${'hrs'}</p>
                   </div>
@@ -99,8 +99,8 @@ const printFilter = (filter)=>{
                   <h4>Sede: ${filter[i].campus}</h4>
                   <h5>Generacion: ${filter[i].generation}</h5>
                   <p>Nombre: ${filter[i].name}</p>
-                  <p>Completitud: ${filter[i].average}${'%'}</p>
-                  <p>Status: ${filter[i].advertisment}</p>
+                  <p>Completitud: ${filter[i].stats.completedPercentage}${'%'}</p>
+                  <p>Status: ${filter[i].stats.status}</p>
                   <p>Tiempo total del programa: ${filter[i].totalTime}${'hrs'}</p>
                   <p>Tiempo invertido: ${filter[i].timeProm}${'hrs'}</p>
                   </div>
@@ -132,7 +132,7 @@ const listeners = (data) => {
   let getVenue = document.getElementById("venuesFun");
   getVenue.addEventListener("click", (e)=>{
     const venues = computeVenuesStats(data);
-    const printVenues = printVenues(venues);
+    printVenues(venues);
   });
   //Evento que manda a ejecutar e imprimir la funcion de generaciones
   let getGeneration = document.getElementById("generationFun");
@@ -151,7 +151,7 @@ window.onload = () =>{
   fetch(laboratoria)
     .then(data => data.json())
     .then((data) =>{
-      const print = printSedesAll(data);
+      //const print = generationsLima(data);
       listeners(data);
     })
     .catch((error) => {
