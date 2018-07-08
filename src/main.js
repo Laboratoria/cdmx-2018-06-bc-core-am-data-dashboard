@@ -13,7 +13,7 @@ const renderInfo = (data) => {
         for (var generacion in info) {
             if (info.hasOwnProperty(generacion)) {
                 console.log("la clave es " + generacion + " y el valor es " + info[generacion])
-                //console.log(info.lima.generacion)
+                    //console.log(info.lima.generacion)
 
                 let arrLaboratoriaEstudiantes = data.lima.generacion[info[generacion]].estudiantes;
 
@@ -37,4 +37,3 @@ const renderInfo = (data) => {
 document.getElementById('delete').addEventListener('click', (event) => {
     container.innerHTML = '';
 })
-
