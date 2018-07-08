@@ -433,7 +433,7 @@ window.printSedesAll = (laboratoria) => {
   const resultFilter = document.getElementById('print-venues');
   let sedeMex = '';
   for (let i = 0; i < sedeM.length; i++) {
-    sedeMex += `<div class="col s3 m3">
+   /* sedeMex += `<div class="col s3 m3">
             <div class="card white darken-1">
             <div class="card-content card-data black-text">
              <h2 class="card-title" id="cards">${sedeM[i].venue}</h2>
@@ -448,7 +448,11 @@ window.printSedesAll = (laboratoria) => {
 
            </div>
            </div>
-         </div>`
+         </div>` */
   }
   resultFilter.innerHTML = sedeMex;
 }
+
+$(document).ready(function(){
+  $('.tooltipped').tooltip();
+});

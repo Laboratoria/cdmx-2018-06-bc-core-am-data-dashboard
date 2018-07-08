@@ -1,17 +1,65 @@
-*{margin:0; padding:0;}
-header {
-    text-align: center;
-    background: white;
-    margin-bottom:20px;
-    overflow: hidden;
+header,
+main,
+footer {
+  padding-left: 70px;
+  margin-bottom: 5px;
 }
+
+
 nav{
-    border-block-end-color: aliceblue;
+    background-color: white;
+    color: black;
 }
-#encabezado{
-    margin-left: 0;
-    margin-top: 2em;
+nav ul a, nav a {
+    color:black;
+    font-weight: bold;
 }
+
+.header-logo{
+    height: 60px;
+}
+
+#my-side-bar {
+  width: 70px;
+
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+#my-side-bar:hover {
+  width: 300px;
+}
+
+.bar-element{
+    width: 300px;
+}
+.bar-logo{
+    width: 70px;
+    margin-top: 13px;
+    margin-left: 2px;
+}
+
+.sidenav li>a{
+    padding-left: 25px;
+}
+
+@media only screen and (max-width: 993px) {
+  header,
+  main,
+  footer {
+    padding-left: 0px;
+  }
+
+  #my-side-bar {
+    width: 300px;
+  }
+}
+
+
 body{
     background-color: rgb(241, 235, 238);
     color: rgb(0, 0, 0);
@@ -21,6 +69,7 @@ span{
 }
 #cards{
     font-weight: bold;
+    text-align: center;
 }
 
 #side a.active{
@@ -38,4 +87,51 @@ span{
 #footer{
     height: 100px;
     width: 100px;
+}
+h5{
+    background-color: yellow;
+}
+#numero{
+    font-size: 3em;
+    text-align: center
+}
+#color-activas{
+    background-color: #ffe521;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.tamaño-barra{
+    border-radius: 5px;
+    height: 20px;
+    background-color: gainsboro;
+}
+.color-fondo{
+    background-color:pink;
+}
+.letra-progreso{
+    font-size: 1.5em;
+
+}
+
+.color-progreso2{
+    background-color: #dc3545;
+}
+.color-progreso1{
+    background-color: rgb(131, 204, 21) !important;
+}
+.izquierda{
+    float: left;
+}
+.derecha{
+    float: right;
+}
+.letra-barra{
+    font-size: 1em;
+}
+.elemento-card{
+    margin-top: 15px;
+}
+#map{
+    width: 100%;
 }
