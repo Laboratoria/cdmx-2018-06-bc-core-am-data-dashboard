@@ -131,11 +131,11 @@ window.computeGenerationsStats = (laboratoria) => {
           advanceStudentsO++;
         }
       }
-      myObj.generation = generationsO;
-      myObj.venue = venuesO;
-      myObj.count = countsO;
+      myObj.generation = generationsO.toUpperCase();
+      myObj.venue = venuesO.toUpperCase();
+      myObj.count =countsO;
       myObj.average = Math.round(averageO / countsO);
-      myObj.timeAverage = Math.round(((timeAverageO / countsO) * (averageO / countsO)) / 100);
+      myObj.timeAverage = Math.round(((timeAverageO / countsO) * (averageO / countsO))/100);
       myObj.inLowStudents = inLowStudentsO;
       myObj.advanceStudents = advanceStudentsO;
       generationsArray.push(myObj);
@@ -217,6 +217,7 @@ window.deepStudentsStats = (laboratoria) => {
         let myStudent = {};
         nameS = students[student].nombre;
         emailS = students[student].correo;
+        turnoS = students[student].turno;
         const Stats = laboratoria[key].generacion[generation].estudiantes[student].progreso;
         const arrayStats = Array.from(Object.values(Stats));
         averageS = 0; totalTimeS = 0; timeProm = 0; statusS = ''; j = 0;
@@ -234,46 +235,50 @@ window.deepStudentsStats = (laboratoria) => {
         j++;
         const arrayTopic = Array.from(Object.values(arrayStats[j]));
         const arrayUnitsNames = Array.from(Object.getOwnPropertyNames(arrayStats[j]));
-        let k = 0;
-        itemS = arrayUnitsNames[k];
-        let tps = {};
-        completedPercentageS = arrayTopic[k].porcentajeCompletado;
-        percentageDurationS = arrayTopic[k].duracionTemaCompletado;
-        tps.unit = itemS;
-        tps.completedPercentage = completedPercentageS;
-        tps.percentageDuration = percentageDurationS;
-        sts.topics = tps;
-        k++;
-        itemS2 = arrayUnitsNames[k];
-        let tps2 = {};
-        completedPercentageS = arrayTopic[k].porcentajeCompletado;
-        percentageDurationS = arrayTopic[k].duracionTemaCompletado;
-        tps2.unit = itemS2;
-        tps2.completedPercentage = completedPercentageS;
-        tps2.percentageDuration = percentageDurationS;
-        sts.topics = tps2;
-
-        /*myStudent.stats.completedPercentage = Stats.porcentajeCompletado;
-        const units = Stats.temas;
-        const arrayUnits = Array.from(Object.values(units));
-        let topics = {};
-        arrayUnits.forEach(function(unite){
-          myStudent.stats.topics.completedPercentage = unite.porcentajeCompletado;
-          myStudent.stats.topics.percentageDuration = unite.duracionTemaCompletado;
-        });*/
-        myStudent.name = nameS;
-        myStudent.email = emailS;
-        myStudent.campus = venuesS;
-        myStudent.generation = generationS;
-        myStudent.timeProm = (totalTimeS * averageS) / 100;
-        myStudent.totalTime = totalTimeS;
-        myStudent.stats = sts;
-        //myStudent.stats.completedPercentage = averageS;
-        //myStudent.stats.status = alerta;
-        studentArray.push(myStudent);
+        for (let k=0; k<1;k++){
+            itemS=arrayUnitsNames[k];
+                let tps={};
+                completedPercentageS = arrayTopic[k].porcentajeCompletado;
+                percentageDurationS = arrayTopic[k].duracionTemaCompletado;
+                tps.unit = itemS;
+                tps.completedPercentage = completedPercentageS;
+                tps.percentageDuration = percentageDurationS;
+                sts.topics1=tps;
+          }
+          for (let k=1; k<2;k++){
+            itemS=arrayUnitsNames[k];
+                let tps={};
+                completedPercentageS = arrayTopic[k].porcentajeCompletado;
+                percentageDurationS = arrayTopic[k].duracionTemaCompletado;
+                tps.unit = itemS;
+                tps.completedPercentage = completedPercentageS;
+                tps.percentageDuration = percentageDurationS;
+                sts.topics2=tps;
+          }
+          for (let k=2; k<3;k++){
+            itemS=arrayUnitsNames[k];
+                let tps={};
+                completedPercentageS = arrayTopic[k].porcentajeCompletado;
+                percentageDurationS = arrayTopic[k].duracionTemaCompletado;
+                tps.unit = itemS;
+                tps.completedPercentage = completedPercentageS;
+                tps.percentageDuration = percentageDurationS;
+                sts.topics3=tps;
+          }
+          myStudent.name = nameS;
+          myStudent.email = emailS;
+          myStudent.turno = turnoS;
+          myStudent.campus = venuesS.toUpperCase();
+          myStudent.generation = generationS.toUpperCase();
+          myStudent.timeProm = Math.round((totalTimeS*averageS)/100);
+          myStudent.totalTime = totalTimeS;
+          myStudent.stats = sts;
+          //myStudent.stats.completedPercentage = averageS;
+          //myStudent.stats.status = alerta;
+          studentArray.push(myStudent);
+        }
       }
     }
-  }
   console.log(studentArray);
   return (studentArray);
 };
@@ -283,6 +288,29 @@ window.generationsLima = (laboratoria) => {
   for (let i = 0; i < 3; i++) {
     generationLim[i] = generation[i];
   }
+  //-----
+  const resultGenLim = document.getElementById('print-generation');
+  let genLim ='';
+  for(let i=0; i<generationLim.length; i++){
+    genLim += `<div class="col s3 m3">
+                <div class="card white darken-1">
+                  <div class="card-content card-data black-text">
+                  <h2 class="card-title" id="cards">${generationLim[i].venue}</h2>
+                  <h5>Alumnas activas: ${generationLim[i].count}</h5>
+                  <span>Promedio: ${generationLim[i].average}${'%'} </span>
+                  <div class="progress">
+                  <div class="determinate" style="width: ${generationLim[i].average}%"></div>
+                  </div>
+                  <p><i class="material-icons">star</i> <span>Estudiantes: ${generationLim[i].advanceStudents} ✔</span></p>
+                  <p><i class="material-icons">star_half</i> <span>Estudiantes: ${generationLim[i].inLowStudents} ✘</span></p>
+                  <p><i class="material-icons">schedule</i> <span>Tiempo: ${generationLim[i].timeAverage}${'hrs'}</span></p>
+
+         </div>
+         </div>
+       </div>`
+}
+  resultGenLim.innerHTML= genLim;
+  //---
   return generationLim;
 }
 window.generationsMexico = (laboratoria) => {
@@ -291,6 +319,29 @@ window.generationsMexico = (laboratoria) => {
   for (let i = 3; i <= 5; i++) {
     generationMex[i - 3] = generation[i];
   }
+  //-----
+  const resultGenMex = document.getElementById('print-generation');
+  let genMex ='';
+  for(let i=0; i<generationMex.length; i++){
+    genMex += `<div class="col s3 m3">
+                <div class="card white darken-1">
+                  <div class="card-content card-data black-text">
+                  <h2 class="card-title" id="cards">${generationMex[i].venue}</h2>
+                  <h5>Alumnas activas: ${generationMex[i].count}</h5>
+                  <span>Promedio: ${generationMex[i].average}${'%'} </span>
+                  <div class="progress">
+                  <div class="determinate" style="width: ${generationMex[i].average}%"></div>
+                  </div>
+                  <p><i class="material-icons">star</i> <span>Estudiantes: ${generationMex[i].advanceStudents} ✔</span></p>
+                  <p><i class="material-icons">star_half</i> <span>Estudiantes: ${generationMex[i].inLowStudents} ✘</span></p>
+                  <p><i class="material-icons">schedule</i> <span>Tiempo: ${generationMex[i].timeAverage}${'hrs'}</span></p>
+
+         </div>
+         </div>
+       </div>`
+}
+  resultGenMex.innerHTML= genMex;
+  //---
   return generationMex;
 }
 window.generationsSantiago = (laboratoria) => {
@@ -299,14 +350,84 @@ window.generationsSantiago = (laboratoria) => {
   for (let i = 3; i <= 5; i++) {
     generationStg[i - 3] = generation[i];
   }
+  //-----
+  const resultGenStg = document.getElementById('print-generation');
+  let genStg ='';
+  for(let i=0; i<generationStg.length; i++){
+    genStg += `<div class="col s3 m3">
+                <div class="card white darken-1">
+                  <div class="card-content card-data black-text">
+                  <h2 class="card-title" id="cards">${generationStg[i].venue}</h2>
+                  <h5>Alumnas activas: ${generationStg[i].count}</h5>
+                  <span>Promedio: ${generationStg[i].average}${'%'} </span>
+                  <div class="progress">
+                  <div class="determinate" style="width: ${generationStg[i].average}%"></div>
+                  </div>
+                  <p><i class="material-icons">star</i> <span>Estudiantes: ${generationStg[i].advanceStudents} ✔</span></p>
+                  <p><i class="material-icons">star_half</i> <span>Estudiantes: ${generationStg[i].inLowStudents} ✘</span></p>
+                  <p><i class="material-icons">schedule</i> <span>Tiempo: ${generationStg[i].timeAverage}${'hrs'}</span></p>
+
+         </div>
+         </div>
+       </div>`
+}
+  resultGenStg.innerHTML= genStg;
+  //---
   return generationStg;
 }
 window.studentsList = (laboratoria) => {
-  const students = computeStudentsStats(laboratoria);
-  const list = [];
-
+  const students = deepStudentsStats(laboratoria);
+  const list =[];
+  let nameO='', averageO=0, timeAverageO=0;
+  for (let i=0; i<students.length; i++){
+    let objStudent ={};
+    nameO = students[i].name;
+    averageO = students[i].stats.completedPercentage;
+    timeAverageO = students[i].timeProm;
+    objStudent.name = nameO;
+    objStudent.average = averageO;
+    objStudent.timeAverage = timeAverageO;
+    list.push(objStudent);
+  }
+console.log(list);
+return list;
 }
-window.printSedesMex = (laboratoria) => {
+window.studentsModal =(laboratoria)=>{
+  const students = deepStudentsStats(laboratoria);
+  const list =[];
+  let nameO='', emailO='', turnoO= '', averageO=0, timeAverageO=0;
+  let u1O='', u2O='', u3O='', p1O=0, p2O=0, p3O=0;
+  for (let i=0; i<students.length; i++){
+    let objStudent ={};
+    nameO = students[i].name;
+    emailO = students[i].email;
+    turnoO = students[i].turno;
+    timeAverageO = students[i].timeProm;
+    averageO = students[i].stats.completedPercentage;
+    u1O = students[i].stats.topics1.unit;
+    u2O = students[i].stats.topics2.unit;
+    u3O = students[i].stats.topics3.unit;
+    p1O= students[i].stats.topics1.completedPercentage;
+    p2O= students[i].stats.topics2.completedPercentage;
+    p3O= students[i].stats.topics3.completedPercentage;
+    objStudent.name = nameO;
+    objStudent.email = emailO;
+    objStudent.turno = turnoO;
+    objStudent.average = averageO;
+    objStudent.timeAverage = timeAverageO;
+    objStudent.average = averageO;
+    objStudent.u1 = u1O;
+    objStudent.u2 = u2O;
+    objStudent.u3 = u3O;
+    objStudent.p1 = p1O;
+    objStudent.p2 = p2O;
+    objStudent.p3 = p3O;
+    list.push(objStudent);
+  }
+console.log(list);
+return list;
+}
+window.printSedesAll = (laboratoria) => {
   const sedeM = computeVenuesStats(laboratoria);
   console.log(sedeM);
   const resultFilter = document.getElementById('print-venues');
