@@ -10,25 +10,37 @@ window.onload = () => {
     //haremos una segunda promesa que guarda en data el response.json
     .then((laboratoria) => {
       computeStudentsStats(laboratoria);
-      console.log(laboratoria);
+      //console.log(laboratoria);
       computeStudentsStats();
+      computeGenerationsStats(laboratoria);
+      computeGenerationsStats();
       //createInfo es una función que se declara en el data.js para crear elementos en DOM
     })
     .catch((error) => {
       console.log(error);
       //.catch buscará errores en el enlace FETCH
     })
-    
+
 };
 
+//window.computeGenerationsStats(laboratoria);
 
+//manejar DOM para imprimir los datos de estudiantes en lista
+// document.getElementById('btn-students').addEventListener("click", (event) => {
+//   let result = "";
+//   console.log( );
+//   } )
+//VARIABLES DE LA SEGUNDA FUNCIÓN
 
-    //manejar DOM para imprimir los datos de estudiantes en lista
-    // document.getElementById('btn-students').addEventListener("click", (event) => {
-    //   let result = "";
-    //   console.log( );
-    //   } )
+let generations = [];
+//objetos generation
+let campus = "";
+let generation = "";
+let average = "";
+let count = "";
 
+//usage 
+let eachPercent = 0;
 
 
 
