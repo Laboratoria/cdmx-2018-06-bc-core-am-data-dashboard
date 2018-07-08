@@ -69,22 +69,26 @@ window.computeGenerationsStats = (laboratoria) => {
             let totalStud = stud.length;
             count = totalStud;
             console.log(totalStud);
-            //sacar el 
+            //const progressAddition = laboratoria[sedes].generacion[numberG].estudiantes.porcentajeCompletado;
+            //console.log(progressAddition);
             // console.log(stud);
             for (eachStudent in stud) {
-                //console.log(eachStudent);
-                const studentKey = laboratoria[sedes].generacion[numberG].estudiantes[eachStudent].progreso.porcentajeCompletado;
+                console.log(eachStudent);
+                //aquí se suman los porcentajes de cada una
+                eachGenPercent += laboratoria[sedes].generacion[numberG].estudiantes[eachStudent].progreso.porcentajeCompletado;
+                console.log(eachGenPercent);
+                //aquí podría obtener un avance total de todas las estudiantes del mundo
+                let totalProgress = eachGenPercent;
+                console.log(totalProgress);
                 
-                Math.round(studentKey);
-                console.log(studentKey);
-
-                // for (eachProgressSt in studentKey) {
-                // console.log(eachProgressSt);
-                // const studentProgress = Object.keys(laboratoria[sedes].generacion[numberG].estudiantes[eachStudent].progreso[studentKey].porcentajeCompletado);
-                // console.log(studentProgress);
-                // }
+                //let genAddProgress = ;
             }
-
+            //AQUÍ ME SUMA 134 STUDENTS
+            totalStudentsOfHoleWorld += count;
+            console.log(totalStudentsOfHoleWorld);
+            //AHORA A DIVIDIR EL TOTAL DE ESTUDIANTES ENTRE EL TOTAL DE LA SUMA DE SUS PROGRESOS
+            let totalAverage = eachGenPercent / totalStudentsOfHoleWorld;
+                console.log(totalAverage);
             generations.push({"campus": campus, "generation": generation, "count": count}); 
             //console.log('2º for in', st);
         }

@@ -40,7 +40,8 @@ let average = "";
 let count = "";
 
 //usage 
-let eachPercent = 0;
+let eachGenPercent = 0;
+let totalStudentsOfHoleWorld = 0;
 
 
 
