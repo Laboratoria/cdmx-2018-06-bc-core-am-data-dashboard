@@ -1,125 +1,130 @@
 /*Log in box*/
-body{
-  margin: 0;
-  padding: 0;
-  background: whitesmoke;
-  font-family: sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+    font-family: sans-serif;
 }
 
-
-.loginbox{
-  width: 320px;
-  height: 420px;
-  background: #f7b617;
-  color:black;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  box-sizing: border-box;
-  padding: 70px 30px;
+.loginbox {
+    width: 320px;
+    height: 420px;
+    background: #f7b617;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
 }
 
-.avatar{
-  width: 100px;
-  height: 100px;
-  /*border-radius: 50%;si lo quiero circular*/
-  position: absolute;
-  top: -50px;
-  left: calc(50% - 50px);
-}
-
-h1{
-  margin: 0;
-  padding: 0 0 20px;
-  text-align: center;
-  font-size: 22px;
-}
-
-p{
-  margin: 0;
-  padding: 0 0 20px;
-  text-align: left;
-  font-size: 18px;
-}
-
-.loginbox p{
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-}
-
-.loginbox input{
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.loginbox input[type="text"], input[type="password"]
-{
-  border: none;
-  border-bottom: 1px solid #fff;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
-}
-.loginbox input[type="submit"]
-{
-  border: none;
-  outline: none;
-  height: 40px;
-  background: #fb2525;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 20px;
-}
-.loginbox input[type="submit"]:hover
-{
-  cursor: pointer;
-  background: #ffc107;
-  color: #000;
-}
-.loginbox a{
-  text-decoration: none;
-  font-size: 12px;
-  line-height: 20px;
-  color: darkgrey;
-}
-
-.loginbox a:hover
-{
-  color: #ffc107;
-}
-
-/*cards*/
-.card {
-  width: 200px;
-  height: 200px;
-  display: inline-flex;
-  margin: 0.5rem;
-  background-color: rgb(252, 248, 250);
-  color: #FFFFFF;
-  text-align: center;
-  border-block-start-color: black  
-}
-
-.info {
-  margin: 15 auto;
+.avatar {
+    width: 100px;
+    height: 100px;
+    /*border-radius: 50%;si lo quiero circular*/
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
 }
 
 h1 {
-  text-align: center;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
 }
 
-.table, th, tr, td {
-  border: 1px solid black;
+p {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: left;
+    font-size: 18px;
 }
+
+.loginbox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.loginbox a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.loginbox a:hover {
+    color: #ffc107;
+}
+
+
+/*cards*/
+
+.card {
+    width: 200px;
+    height: 200px;
+    display: inline-flex;
+    margin: 0.5rem;
+    background-color: rgb(252, 248, 250);
+    color: #FFFFFF;
+    text-align: center;
+    border-block-start-color: black
+}
+
+.info {
+    margin: 15 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.table,
+th,
+tr,
+td {
+    border: 1px solid black;
+}
+
 
 /*main*/
 
-#navbar{
-  background-color: #f7b617;
-  box-shadow: #000;
+#navbar {
+    background-color: #f7b617;
+    padding: 0px 10px;
 }
-

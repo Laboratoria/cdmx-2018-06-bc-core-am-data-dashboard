@@ -36,4 +36,3 @@ window.onload = () => {
 
 
 }
->>>>>>> upstream/master
