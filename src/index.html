@@ -2,78 +2,74 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laboratoria Data Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laboratoria Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>  
 </head>
-
 <body>
-    <div class="img">
-        <img src="Images/logo_laboratoria_blanco.png" alt=""></img>
-    </div>
 
-    <div class="wrapper">
         <header>
+                <nav class="row">
+                        <div class="nav-wrapper">
+                          <a href="#!" class="brand-logo">Laboratoria</a>
+                          <ul class="right hide-on-med-and-down">
+                            
+                            <!-- Dropdown Trigger menú going down =] -->
+                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Lima<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">México<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Santiago<i class="material-icons right">arrow_drop_down</i></a></li>
+                          </ul>
+                        </div>
+                      </nav>
 
-            <nav>
-
-                <div class="menu-icon">
-                    <i class="fa fa-bars fa-2x"></i>
-                </div>
-
-                <div class="menu">
-                    <ul>
-                        <li><a id="btn Lima" href="#">Lima</a></li>
-                        <li><a id="btn México" href="#">México</a></li>
-                        <li><a id="btn Santiago" href="#">Santiago</a></li>
-                        <li><a id="btn Alumnas" href="#">Alumnas</a></li>
-                        <li><a id="btn Stats" href="#">Stats</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="headback"></div>
+                <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="#!">Generación 3</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!">Generación 4</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!">Generación 5</a></li>
+                      </ul>
+    
+                        <ul id="dropdown2" class="dropdown-content">
+                            <li><a href="#!">Generación 3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">Generación 4</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">Generación 5</a></li>
+                        </ul>
+    
+                        <ul id="dropdown3" class="dropdown-content">
+                                <li><a href="#!">Generación 3</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!">Generación 4</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!">Generación 5</a></li>
+                        </ul>
+                <content>
+                        <div class="card">
+                                <div class="card-body">
+                                  <h4 class="card-title">Nombre</h4>
+                                  <p class="card-text">Info de Estudiante</p>
+                                  <a href="#" class="card-text">Porcentaje</a>
+                                  <a href="#" class="card-text">Completitud</a>
+                                </div>
+                              </div>
+                </content>
+                      
         </header>
+        
 
-        <div id="result">
-
-            <div class="card">
-                <div class="card-header">
-                    <img src="Images/imagesavatarstudent.jpg" alt="">
-                    <div class="cover"></div>
-                </div>
-                <div class="info">
-
-                </div>
-            </div>
-        </div>
-
-        <script type="text/javascript">
-            // Menu-toggle button
-
-            $(document).ready(function() {
-                $(".menu-icon").on("click", function() {
-                    $("nav ul").toggleClass("showing");
-                });
-            });
-
-            // Scrolling Effect
-
-            $(window).on("scroll", function() {
-                if ($(window).scrollTop()) {
-                    $('nav').addClass('black');
-                } else {
-                    $('nav').removeClass('black');
-                }
-            })
-        </script>
-        <script src="data.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script><!--Se ponen primero estos scripst por la forma de lectura-->
         <script src="main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="data.js"></script>
+
 </body>
 
 </html>
