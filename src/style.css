@@ -1,4 +1,28 @@
-*{
+ .container {
+   background-color: yellow;
+
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*
+ *{
   margin:0 ;
   padding: 0;
   box-sizing: border-box;
@@ -12,11 +36,11 @@ body{
   }
 
   main {
-    /*outline: 2px solid blue;*/
+    outline: 2px solid blue;
     padding: 2em;
   }
   article{
-    /*outline: 2px solid red;*/
+    outline: 2px solid red;
     padding-top: 1em;
     padding-bottom: 1em;
   }
@@ -37,12 +61,12 @@ body{
     margin: 0
   }
   div{
-    /*outline: 2px solid red;*/
+    /*outline: 2px solid red;
     background: #1a1a1a;
     text-align: center;
     }
   ul {
-      /*outline: 2px solid blue;*/
+      /*outline: 2px solid blue;
 
       list-style: none;
       text-decoration: yellow;
@@ -54,14 +78,14 @@ body{
       flex-direction: column;
       }
   li {
-        /*outline: 2px solid yellow;*/
+        /*outline: 2px solid yellow;
         font-size: 25px;
         font-family: serif;
         text-align: center;
         flex-direction: column;
       }
   a{
-    /*outline: 2px solid green;*/
+    /*outline: 2px solid green;
     color: #FDF5E6;
     display: block;
     text-decoration: none;
@@ -107,7 +131,7 @@ width: 280px;
   text-decoration: none;
   padding: 15px 20px;
   background: red;
-}*/
+}
 footer{
   padding-top: 2em;
   padding: 2em;
@@ -118,4 +142,4 @@ main div ul{
 main nav div ul:hover{
   background-color: #434343
 }
-
+ */

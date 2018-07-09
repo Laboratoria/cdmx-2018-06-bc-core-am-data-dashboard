@@ -1,54 +1,48 @@
-//Paso uno: Traemos la dirección del servidor propio
-//const host = '../data/laboratoria.json';
-const host = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
+// Paso uno: Traemos la dirección del servidor propio
+// const host = '../data/laboratoria.json';
+const host = 'https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 console.log(host);
-//se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
+// se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
 window.onload = () => {
   fetch(host)
-    //obtenemos la traducción del host a .json para que sea leído
+    // obtenemos la traducción del host a .json para que sea leído
     .then(response => response.json())
-    //haremos una segunda promesa que guarda en data el response.json
+    // haremos una segunda promesa que guarda en data el response.json
     .then((laboratoria) => {
       computeStudentsStats(laboratoria);
-      //console.log(laboratoria);
+      // console.log(laboratoria);
       computeStudentsStats();
       computeGenerationsStats(laboratoria);
       computeGenerationsStats();
-      //createInfo es una función que se declara en el data.js para crear elementos en DOM
+      // createInfo es una función que se declara en el data.js para crear elementos en DOM
     })
     .catch((error) => {
       console.log(error);
-      //.catch buscará errores en el enlace FETCH
-    })
-
+      // .catch buscará errores en el enlace FETCH
+    });
 };
 
-//window.computeGenerationsStats(laboratoria);
+// window.computeGenerationsStats(laboratoria);
 
-//manejar DOM para imprimir los datos de estudiantes en lista
+// manejar DOM para imprimir los datos de estudiantes en lista
 // document.getElementById('btn-students').addEventListener("click", (event) => {
 //   let result = "";
 //   console.log( );
 //   } )
-//VARIABLES DE LA SEGUNDA FUNCIÓN
+// VARIABLES DE LA SEGUNDA FUNCIÓN
 
 let generations = [];
-//objetos generation
-let campus = "";
-let generation = "";
-let average = "";
-let count = "";
+// objetos generation
+let campus = '';
+let generation = '';
+let average = '';
+let count = '';
 
-//usage 
-let eachGenPercent = 0;
+// usage 
+let eachStudAddition = 0;
 let totalStudentsOfHoleWorld = 0;
-
-
-
-
-
-
-
+let averagePG = 0;
+let percentForSG = 0;
 
 
 // console.log("main.js conectado");
@@ -70,8 +64,8 @@ let totalStudentsOfHoleWorld = 0;
 //         return document.getElementById("welcome").write.usuaria
 //     }
 // }
-//Función para ejecutar la función en los botones del menú sedes
-//const seleccionSedeL = () => {
+// Función para ejecutar la función en los botones del menú sedes
+// const seleccionSedeL = () => {
 //     document.getElementById("Lima").addEventListener("click", sedeLima); 
 // }
 // const seleccionSedeM = () => {
@@ -80,4 +74,4 @@ let totalStudentsOfHoleWorld = 0;
 // const seleccionSedeS = () => {
 //     document.getElementById("Santiago").addEventListener("click", sedeSantiago);
 // }
-//Función para ejecutar la función en los botones del menú generaciones
+// Función para ejecutar la función en los botones del menú generaciones
