@@ -1,52 +1,9 @@
-//Codigo para templete string estudiantes-funcionalidad html.
-// Barra Menu lateral colapsable
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, {});
-});
-
-var collapsibleElem = document.querySelector('.collapsible');
-var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
-
-// ToolTip
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.tooltipped');
-  var instances = M.Tooltip.init(elems, {});
-});
-
-//Colapsable alumnas ->pestaña
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.collapsible');
-  var instances = M.Collapsible.init(elems, {});
-});
-//Fin decodigo para funcionalidaD HTML
 //Variables globales
 const laboratoria = "https://api.myjson.com/bins/1amyo6";//API con DATA a usar (base de datos de alumnas)
 const search = 'Aileen Edwyna';
 const orderBy = "percentage";
 const orderDirection = "DESC";
 //DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
-const printVenues = (venues) => {
-  const resultVen = document.getElementById('cardsSpace');
-  let ven = '';
-  for (let i = 0; i < venues.length; i++) {
-    let venueAverage = Math.round(venues[i].average);
-    console.log(venues[i]);
-    ven += `<div class="col s3 m3">
-                <div class="card white darken-1">
-                  <div class="card-content card-data black-text">
-                  <span class="card-title" id="cards"></span>
-                  <h4>Sede: ${venues[i].venue}</h4>
-                  <h5>Prom. Completitud: ${venueAverage}${'%'}</h5>
-                  <p>Alumnas Activas: ${venues[i].activeStudents}</p>
-                  <p># Alumnas de bajo avance: ${venues[i].inLowStudents}</p>
-                  <p># Alumnas de alto avance: ${venues[i].advanceStudents}</p>
-                  </div>
-                </div>
-              </div>`
-  }
-  resultVen.innerHTML = ven;
-};
 const printGenerations = (generations) => {
   const resultGen = document.getElementById('cardsSpace');
   let gen = '';
@@ -114,20 +71,61 @@ const printFilter = (filter) => {
   const resultFilter = document.getElementById('cardsSpace');
   let studentsFilter = '';
   for (let i = 0; i < filter.length; i++) {
-    studentsFilter += `<div class="col s3 m3">
-                <div class="card white darken-1">
-                  <div class="card-content card-data black-text">
-                  <span class="card-title" id="cards"></span>
-                  <h4>Sede: ${filter[i].campus}</h4>
-                  <h5>Generacion: ${filter[i].generation}</h5>
-                  <p>Nombre: ${filter[i].name}</p>
-                  <p>Completitud: ${filter[i].stats.completedPercentage}${'%'}</p>
-                  <p>Status: ${filter[i].stats.status}</p>
-                  <p>Tiempo total del programa: ${filter[i].totalTime}${'hrs'}</p>
-                  <p>Tiempo invertido: ${filter[i].timeProm}${'hrs'}</p>
-                  </div>
-                </div>
-              </div>`
+    studentsFilter += `<div class="row" id="cardsSpace">
+                   <div class="col l4 m6 s12">
+                       <div class="card white darken-1">
+                           <div class="card-content card-data black-text">
+                               <span class="card-title" id="cards">${filter[i].campus}</span>
+                               <h5>Generacion: ${filter[i].generation}</h5>
+                               <div id="color-activas">
+                                   <span id="numero">${filter[i].name}</span>
+                                   <span> Nombre</span>
+                               </div>
+
+                               <!--Promedios generales inicio-->
+                               <div class="elemento-card">
+                                   <span>Promedio general</span>
+                                   <div class="progress tamaño-barra">
+                                       <div class="determinate blue" class="color-fondo" style="width: ${filter[i].stats.completedPercentage}${'%'}"></div>
+                                       <span class="derecha letra-barra">${filter[i].stats.completedPercentage}${'%'}</span>
+                                   </div>
+                               </div>
+
+                               <p>Intoducción a la programación</p>
+                               <div class="progress grey">
+                                   <div class="determinate pink" class="color-fondo" style="width: /*codigo PROMEDIO AVANCE*/%">
+                                   </div>
+                               </div>
+
+                               <p>Variables y tipos de datos</p>
+                               <div class="progress grey">
+                                   <div class="determinate purple" class="color-fondo" style="width: /*codigo PROMEDIO AVANCE*/%"></div>
+                               </div>
+                               <p>UX</p>
+                               <div class="progress grey">
+                                   <div class="determinate orange" class="color-fondo" style="width: /*codigo PROMEDIO AVANCE*/%"></div>
+                               </div>
+                               <!--Promedios generales fin-->
+                               <p>
+                                   <i class="material-icons">schedule</i>
+                                   <span>Tiempo: ${filter[i].timeProm}${'hrs'}</span>
+                               </p>
+                               <!--Barra de avance dos colores-->
+                               <div class="elemento-card">
+                                   <span class="letra-progreso izquierda">
+                                       <i class="material-icons">mood</i>+90%</span>
+                                   <span class="letra-progreso derecha">
+                                       -60%
+                                       <i class="material-icons">mood_bad</i>
+                                   </span>
+                                   <div class="progress tamaño-barra color-progreso2">
+                                       <div class="determinate color-progreso1" class="color-fondo" style="width: 40%"></div>
+                                   </div>
+                               </div>
+
+                           </div>
+                       </div>
+                   </div>`
   }
   resultFilter.innerHTML = studentsFilter;
 };
@@ -137,8 +135,7 @@ const listeners = (data) => {
   // Evento que manda a ejecutar e imprimir la funcion de sedes
   let getVenue = document.getElementById("goVenues");
   getVenue.addEventListener("click", (e) => {
-    const venues = computeVenuesStats(data);
-    printVenues(venues);
+    printSedesAll(data);
   });
   // Evento que manda a ejecutar e imprimir la funcion de generaciones
   let getGeneration = document.getElementById("goGeneretions");

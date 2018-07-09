@@ -32,14 +32,6 @@ window.computeVenuesStats = (laboratoria) => {
         } else if (students[student].progreso.porcentajeCompletado >= 90) {
           advanceStudents++;
         }
-        const progresses = laboratoria[key].generacion[generation].estudiantes[student].progreso;
-        for (let progres in progresses) {
-          const items = laboratoria[key].generacion[generation].estudiantes[student].progreso[progres];
-          // console.log(items);
-          for (let item in items) {
-            const subs = Object.values(items);
-          }
-        }
       }
     } average = average / numStudents;// Calculo de promedios
     timeAverage = timeAverage / numStudents;
@@ -552,26 +544,63 @@ window.printSedesAll = (laboratoria) => {
   const sedeM = computeVenuesStats(laboratoria);
   console.log(sedeM);
   const resultFilter = document.getElementById('cardsSpace');
-  let sedeMex = '';
+  let sedeAll = '';
   for (let i = 0; i < sedeM.length; i++) {
-   /* sedeMex += `<div class="col s3 m3">
-            <div class="card white darken-1">
-            <div class="card-content card-data black-text">
-             <h2 class="card-title" id="cards">${sedeM[i].venue}</h2>
-             <h5>Alumnas activas: ${sedeM[i].activeStudents}</h5>
-             <span>Promedio: ${sedeM[i].average}${'%'} </span>
-             <div class="progress">
-             <div class="determinate" style="width: ${sedeM[i].average}%"></div>
-             </div>
-             <p><i class="material-icons">star</i> <span>Estudiantes: ${sedeM[i].advanceStudents} ✔</span></p>
-             <p><i class="material-icons">star_half</i> <span>Estudiantes: ${sedeM[i].inLowStudents} ✘</span></p>
-             <p><i class="material-icons">schedule</i> <span>Tiempo: ${sedeM[i].timeAverage}${'hrs'}</span></p>
+    sedeAll += `<div class="row" id="cardsSpace">
+                  <div class="col l4 m6 s12">
+                       <div class="card white darken-1">
+                           <div class="card-content card-data black-text">
+                               <span class="card-title" id="cards">${sedeM[i].venue}</span>
+                               <div id="color-activas">
+                                   <span id="numero">${sedeM[i].activeStudents}</span>
+                                   <span> Alumnas</span>
+                               </div>
 
-           </div>
-           </div>
-         </div>` */
+                               <!--Promedios generales inicio-->
+                               <div class="elemento-card">
+                                   <span>Promedio general</span>
+                                   <div class="progress tamaño-barra">
+                                       <div class="determinate blue" class="color-fondo" style="width: ${sedeM[i].average}${'%'}"></div>
+                                       <span class="derecha letra-barra">${sedeM[i].average}${'%'}</span>
+                                   </div>
+                               </div>
+
+                               <p>Intoducción a la programación</p>
+                               <div class="progress grey">
+                                   <div class="determinate pink" class="color-fondo" style="width: /*codigo PROMEDIO AVANCE*/%">
+                                   </div>
+                               </div>
+
+                               <p>Variables y tipos de datos</p>
+                               <div class="progress grey">
+                                   <div class="determinate purple" class="color-fondo" style="width: /*codigo PROMEDIO AVANCE*/%"></div>
+                               </div>
+                               <p>UX</p>
+                               <div class="progress grey">
+                                   <div class="determinate orange" class="color-fondo" style="width: /*codigo PROMEDIO AVANCE*/%"></div>
+                               </div>
+                               <!--Promedios generales fin-->
+                               <p>
+                                   <i class="material-icons">schedule</i>
+                                   <span>Tiempo: ${sedeM[i].timeAverage}${'Hrs.'}</span>
+                               </p>
+                               <!--Barra de avance dos colores-->
+                               <div class="elemento-card">
+                                   <span class="letra-progreso izquierda">
+                                       <i class="material-icons">mood</i>+90%</span>
+                                   <span class="letra-progreso derecha">
+                                       -60%
+                                       <i class="material-icons">mood_bad</i>
+                                   </span>
+                                   <div class="progress tamaño-barra color-progreso2">
+                                       <div class="determinate color-progreso1" class="color-fondo" style="width: 40%"></div>
+                                   </div>
+                               </div>
+                               </div>
+                           </div>
+                       </div>`
   }
-  resultFilter.innerHTML = sedeMex;
+  resultFilter.innerHTML = sedeAll;
 }
 
 $(document).ready(function(){
