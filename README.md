@@ -113,4 +113,4 @@ Conservamos la idea de un menú fijo y colores más amigables con la vista a cua
 
 Volvimos a respetar los colores de la empresa y hay un equilibrio entre formal y juvenil pues es nuestro usuario principal, y aunque es una web laboral queremos hacer la experiencia amena.
 
-![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/LogInPage.png "Sketch")
+![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/LastSketch.png "Sketch")
