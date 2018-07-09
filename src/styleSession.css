@@ -11,10 +11,10 @@ a{
 }
 
 #loginform{
-	margin-top:150px;
+	margin-top:100px;
   margin-left:auto;
   margin-right:auto;
-	width:270px;
+	width:335px;
 }
 
 .input{
@@ -58,4 +58,10 @@ a{
 
 .loginbutton:hover{
 	background-color:#e5bf05;
+}
+
+.logo{
+    height: 200px;
+    width: 320px;
+		border-radius: 5px/5px;
 }

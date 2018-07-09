@@ -1,110 +1,114 @@
 
-const json = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
-
-const realoadJSON = () => {
-    fetch(json)
-        .then(response => response.json())
-        .then((res) => {
-            computeStudentsStats(res);
-            computeGenerationsStats(res)
-        })
-        // .catch((error) => {
-        //     console.log(error)
-        // });
-}
-realoadJSON();
-
-
 window.computeStudentsStats = (laboratoria) => {
-    const arrayResult = [];
-    const objEstudiantes = {
-        campus: "",
-        numStudent: 0,
-        nameStudent: "",
-        mailStudent: "",
-        turnoStudent: "",
-        average: 0,
-    }
-    for (key in laboratoria){
-        objEstudiantes.campus = key;
-        const generations = Object.keys(laboratoria[key].generacion);
-        // let generation;
-        let students;
-        let n = 1;
-        generations.forEach((generation) => {
-            generation = generation;
-            students = laboratoria[key].generacion[generation].estudiantes;
-            for (let i = 0; i < students.length; i++) {
-                objEstudiantes.average = students[i].progreso.porcentajeCompletado;
-                objEstudiantes.numStudent = i;
-                objEstudiantes.nameStudent = students[i].nombre;
-                objEstudiantes.mailStudent = students[i].correo;
-                objEstudiantes.turnoStudent = students[i].turno;
-                listaResult.innerHTML += `
-                    <tr><th scope="col"> ${n+i}</th>
-                    <th scope="col"> ${objEstudiantes.nameStudent}</th>
-                    <th scope="col"> ${objEstudiantes.mailStudent}</th>
-                    <th scope="col"> ${objEstudiantes.turnoStudent}</th>
-                    <th scope="col"> ${objEstudiantes.average}</th>
-                    <th scope="col"> ${objEstudiantes.campus}</th>
-                    </tr>
-                    ` ;
-                    arrayResult.push(objEstudiantes);
-                    console.log(objEstudiantes);
-            }
-            listaResult.innerHTML += `<br>`;
+  // arreglo de objetos final
+  let student = [];
+
+  let campus = '';
+  let name = '';
+  let mail = '';
+  let turnoStudent = '';
+  let stats;
+  let status = '';
+  // let completedPercentagE = 0;
+  let completedPercentage = 0;
+  let topics;
 
 
-        })
+  for (key in laboratoria) {
+    campus = key;
+    const generations = Object.keys(laboratoria[key].generacion);
+      generations.forEach((generation) => {
+      generation = generation;
 
-    }
+      students = laboratoria[key].generacion[generation].estudiantes;
+      for (let i = 0; i < students.length; i++) {
+        name = students[i].nombre;
+        mail = students[i].correo;
+        turnoStudent = students[i].turno;
+        let statS = students[i].progreso;
+        completedPercentage = statS.porcentajeCompletado;
 
-    console.log(arrayResult);
-
-    return  //arrayResult; //objEstudiantes;
-}
-
-
-
+        if (completedPercentage <= 60) {
+          status = 'Esta estudiante ha estudiado poco';
+        } else if (completedPercentage >= 90) {
+          status = 'Esta estudiante ha estudiado mucho';
+        } else {
+          status = 'Es una estudiante promedio';
+        }
+        let topics = statS.temas;
+        for (key1 in topics) {
+          topicS = key1;
+          // subtopics = topicS
+          // console.log(topicS);
+        }
+        student.push({
+          name,
+          mail,
+          campus,
+          generation,
+          turnoStudent,
+          stats: {
+            status,
+            completedPercentage,
+            topics: { // hay que genrara un objeto de cada tema
+              completedPercentage: 0,
+              percentageDuration: 0,
+              subtopics: {
+                completedPercentage: 0,
+                type: '',
+                duration: 0,
+              },
+            },
+          },
+        });
+      }
+      // console.log(student);
+    });
+  }
+  return student;
+};
 
 
 window.computeGenerationsStats = (laboratoria) => {
-    const arrayResult = [];
-    
-    const obj = {
-        campus: '',
-        generation: '',
-        average: 0,
-        count: 0,
-    }
+  const generacion = [];
 
-    for (key in laboratoria){
-        //rellenando propiedad 'campus' con la key de Laboratoria
-        obj.campus = key;
+  let campus = '';
+  let average = '';
+  let count = 0;
+
+  for (key in laboratoria) {
+    // rellenando propiedad 'campus' con la key de Laboratoria
+    campus = key;
+    // devolviendo un array del objeto de generaciones
+    const generaciones = Object.keys(laboratoria[key].generacion);
+    // console.log(generaciones);
+    generaciones.forEach((generation) => {
+      generation = generation;
+      const students = laboratoria[key].generacion[generation].estudiantes;
+      let result = '';
+      for (let i = 0; i < students.length; i++) {
+        let statS = students[i].progreso;
+        count = students.length;
+        // console.log(statS);
+      }
+      generacion.push({
+        campus,
+        generation,
+        average,
+        count,
+      });
+    });
+  }
+
+  return generacion;
+};
 
 
-        //devolviendo un array del objeto de generaciones
-
-        const generaciones = Object.keys(laboratoria[key].generacion);
-        // console.log(generaciones);
-        generaciones.forEach((generation) => {
-            obj.generation = generation;
-
-            const students = laboratoria[key].generacion[generation].estudiantes;
-
-            for(student in students){
-                average = 0;
-                average += students[student].progreso.porcentajeCompletado;
-                // console.log(students.length);
-                average /= students.length;
-                obj.average = Math.round(average);
-                obj.count = students.length;
-            }
-
-            // console.log(obj);
-
-        })
-
-    }
-    return obj;
-}
+window.sortStudents = () => {
+  return;
+},
+window.filterStudents = (infoStudent, search) => {
+  console.log(infoStudent);
+  const busquedaResultado = infoStudent.filter(name => (infoStudent.name === search));
+  return busquedaResultado;
+};
