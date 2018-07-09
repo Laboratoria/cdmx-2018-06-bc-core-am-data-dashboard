@@ -48,7 +48,7 @@ Tenemos muy presente que los usuarios entrevistados no habian utilizado un data 
 
 Puntuaron que no era tan importante saber que porcentaje había comenzado el bootcamp y su progreso, sino que lo más importante eran las actuales activas. Aunque si le interesa quien va por debajo del porcentaje esperado y quien va al nivel o incluso un poco más arriba, eso le daría una idea más cercana y actual de cómo es el rendimiento en general.
 
-###El perfil
+### El perfil
 
 Hicimos entrevistas a jovenes adultos de entre 25 a 32 años que han desarrollado un cargo como TMs, trabajadores de empresas como Nielsen, usuarios regulares con acceso y experiencia en datos.
 
@@ -65,7 +65,7 @@ Las pruebas de estos demos resultaron con mejores experiencias, pero el tema del
 
 Se reconsidero todo el sketch, pero conservamos la idea de un nav bar, pues tuvimos buenos feedbacks de ello. El log in se incorporó y mantuvimos la idea de nosotros brindar el user y password. Los colores de la empresa se respetaron y tratamos de hacer un contraste menos agresivo. Elegimos colores más serios pero incorporamos un contraste armónico usando los colores de la empresa, así la navegación no sera cansada ni de día ni de noche. Esperamos que el resultado sea del agrado total del usuario.
 
-###Sketchs
+### Sketchs
 
 En esta sección mostraremos la evolución de los sketches que realizamos durante el proceso de entrega del producto y están por orden cronológico. 
 
@@ -106,3 +106,11 @@ Se trató de optimizar para esta entrega la data bien organizada y especifica, a
 
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/LogInPage.png "Sketch")
 ![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/MainPage.png "Sketch")
+
+Este último sketch lanzó tanto buenos comentarios como desacuerdos, el principal fue que era infantil y no se tomaría enserio aunque duera para uso interno y personal de los usuarios, se resideño conforme a lo sugerido por agunos usuarios que la probaron y observaron, además de feedback de nuestro equipo de trabajo.
+
+Conservamos la idea de un menú fijo y colores más amigables con la vista a cuaquier hora del día. El flujo sería simple con un nav bar, en cuanto a la infromación a mostrar no queremos saturar a quién es el usuario principal y mostraremos la información que consideramos más importante para su objetivo; que es saber en que aspectos puede mejorar el bootcamp y que aspectos de atención son importantes.
+
+Volvimos a respetar los colores de la empresa y hay un equilibrio entre formal y juvenil pues es nuestro usuario principal, y aunque es una web laboral queremos hacer la experiencia amena.
+
+![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/LogInPage.png "Sketch")
