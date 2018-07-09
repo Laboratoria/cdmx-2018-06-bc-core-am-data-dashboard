@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('data:application/octet-stream;base64,QGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdNb250c2VycmF0JzsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IGxvY2FsKCdNb250c2VycmF0IFJlZ3VsYXInKSwgbG9jYWwoJ01vbnRzZXJyYXQtUmVndWxhcicpLCB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL21vbnRzZXJyYXQvdjEyL0pUVVNqSWcxX2k2dDhrQ0hLbTQ1OVdsaHpnLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9Cg==');
+@import url('https://fonts.googleapis.com/css?family=Bitter|Open+Sans');
+
+
 header{
   background:#000;
 }
-body,html{
+
+body.fondo{
   background: #FFE521;
+   font-family: 'Open Sans', sans-serif;
 }
+
+.txt_title{
+  font-family: 'Bitter', serif;
+}
+
 #usuario{
 text-align: right;
 margin-top: 30px;
@@ -12,10 +22,8 @@ margin-right: 100px;
 color: white;
 line-height: 20px;
 }
-#campus {
-background: #FFE521;
 
-}
+
 .login{
     background: #FFE521;
 }
@@ -36,3 +44,4 @@ background: #FFE521;
   background: #FFE521;
 
 }
+

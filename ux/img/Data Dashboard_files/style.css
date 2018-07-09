@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+header{
+  background:#000;
+}
+body,html{
+  background: #FFE521;
+}
+#usuario{
+text-align: right;
+margin-top: 30px;
+margin-right: 100px;
+color: white;
+line-height: 20px;
+}
+#campus {
+background: #FFE521;
+
+}
+.login{
+    background: #FFE521;
+}
+.row .info-users .usario{
+  line-height: 18px;
+  margin-right: 90px;
+}
+.header-logo {
+  text-align: center;
+}
+.search {
+  float: right;
+  padding: 20px;
+
+  background: #FFE521;
+}
+.input-group{
+  background: #FFE521;
+
+}
