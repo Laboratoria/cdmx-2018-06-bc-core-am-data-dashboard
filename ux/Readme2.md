@@ -107,7 +107,13 @@ Y en formato tabla, la siguiente información por egresada:
 ## Prototipo
 
 Para la Data Dashboard se tomaron las siguientes consideraciones de acuerdo al Visual Desing.
-La paleta de colores es: 
+
+### Tipografía
+Se considero usar una tipografía sin curvas, con trazos rectos y de fácil lectura. Por tal la tipografía [Encode Sans Condensed](https://fonts.google.com/specimen/Encode+Sans+Condensed), que tiene una visualización estetica, limpia y ordenada fue la adecuada para este proyecto.
+
+
+
+### La paleta de colores es: 
 * Una base blanca, para darle limpieza al proyecto y que la informacion no pierda protagonismo.
 * Colores grises para los menus, y asi darle elegancia y sobriedad al proyecto.
 * Se elige el color amarilo como fondo para la información, pensando en darle energia a la data y por ser los colores institucionales de Laboratoria.
