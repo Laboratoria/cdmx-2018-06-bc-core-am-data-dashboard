@@ -3,8 +3,15 @@
 body {
     margin: 0;
     padding: 0;
-    background: whitesmoke;
+    background: #333333;
     font-family: sans-serif;
+}
+
+.img {
+    background-color: #333333;
+    width: 100%;
+    position: fixed;
+    padding: 10px;
 }
 
 .loginbox {
@@ -33,7 +40,7 @@ h1 {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 p {
@@ -96,35 +103,128 @@ input[type="password"] {
 /*cards*/
 
 .card {
-    width: 200px;
+    width: 50px;
     height: 200px;
     display: inline-flex;
     margin: 0.5rem;
-    background-color: rgb(252, 248, 250);
-    color: #FFFFFF;
-    text-align: center;
-    border-block-start-color: black
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 8px;
+    width: 90%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    -moz-box-align: center;
 }
 
 .info {
     margin: 15 auto;
+    text-align: justify;
+    font-size: 15px;
+    padding: 10px;
+    text-shadow: rgba(5, 241, 202, 0.473);
 }
 
-h1 {
-    text-align: center;
-}
 
-.table,
-th,
-tr,
-td {
+/*.table, th,tr,td {
     border: 1px solid black;
-}
+}*/
 
 
 /*main*/
 
-#navbar {
-    background-color: #f7b617;
-    padding: 0px 10px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+
+.headback {
+    width: 100%;
+    height: 30vh;
+    padding-top: 10px;
+    background-image: url("Images/TalentoQueTransforma.png");
+    background-color: #000;
+    background-size: 100% 100%;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;
+    ;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 786px) {
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+    nav.black ul {
+        background: #000;
+    }
+    .showing {
+        max-height: 34em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
 }

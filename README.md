@@ -13,19 +13,42 @@ en el método de aprendizaje.
 
 ## UX Research
 
-Para saber los requerimiento que se tendrán que cubrir para l@s TMs,  y  que tengan una visualización general y personal del progreso en cada una las alumnas, es necesario
-tener una buena base de datos y una organización eficiente de ella.
+La clave para prosperar en el entorno competitivo de los productos digitales, sin duda, es centrarse en la Experiencia del Usuario (UX). La gente simplemente no va a pagar dinero por un producto que no se adapte a sus necesidades.
 
-Para ello implementaremos un cuestionario a la TMs de la sede de CDMX y algunos de los coaches.
+Existen actividades específicas de investigación de usuarios que pueden ayudarte en cada etapa del proceso de desarrollo del producto: entrevistas, pruebas de usabilidad, investigación contextual; ejercicios generativos; encuestas; analytics; pruebas A/B. El desafío es identificar cuál es el adecuado para el problema que deseas resolver y asignar tiempo suficiente para ejecutarlo y obtener valor de él. La clave reside en probar poco y a menudo.
 
-Conforme a esto haremos nuestro primer sketch tratando de cubrir las necesidades con mayor importancia. Será una interfaz fluida y limpia. También se llevaron a cabo 2 entrevistas más, una videollamada y una presencial.
+En esta ocasion el usuario neceswita de un data dashboard, pero antes de investigar sus necesidades, debemos nosotrso de comprender el concepto para ser más puntuales en nuestra investigación, pues depende mucho de nuestro conocimiento previo para hacer las preguntas precisas y saber que necesidades podemos cubrir para una mejor experiencia de usuario.
 
+Los Data Dashboards permiten tener un seguimiento gráfico de los indicadores de una situación un e-business. Un tablero de control está compuesto por una serie de indicadores que permiten entender una situación determinada. Lo más importante de los tableros es, lograr combianar y escoger los indicadores precisos a comparar y poder llegar al detalle de una causa, viendo solo la punta del iceberg. Un tablero de control, le permite tener el control de su e-business, llevando un Balanced Scorecard BSC en su dispositivo móvil (mobile BI, inteligencia de negocios móvil).
+
+En el caso de nuestro cliente-usuario la información que debe visualizar es el avance de sus alumnas y dependiendo de esa información tomar desiciones para mejorar su programa.
+
+Para saber los requerimiento que se tendrán que cubrir para l@s TMs,  y  que tengan una visualización general y personal del progreso en cada una las alumnas, es necesario tener una buena base de datos y una organización eficiente de ella. Para ello implementaremos un cuestionario a la TMs de la sede de CDMX y algunos de los coaches.
+
+Como plan inicial, se tiene pensado hacer un cuestionario general por parte de todo el squad, para atender las dudas generales para comenzar el proyecto, posteriormente retroalimentarnos con las entrevistas, y hacer el perfil de los usuarios dsetinados para esta web.
 
 [Cuestionario del squad](https://goo.gl/forms/BXgYeoIpGxjYeaWF3)
 
 [Entrevist de  Estef Y Josc](https://drive.google.com/open?id=1ycNiDHLAAmdJVMujJPte19xgeIQGglg7)
 
 [Audio de entrevista de Florencia](https://drive.google.com/open?id=1RE-8SneGCdT9xByVd7m3r2tfd7xFTUhL)
+
+
+Conforme a estos resultados haremos nuestro primer sketch tratando de cubrir las necesidades con mayor importancia. Será una interfaz fluida y limpia. 
+
+Tomando en cuenta lo que el usuario puntuo como importante decidimos llevar acabo nuestro primer sketch, respetamos los colores de la empresa y tratamos de que fuera lo más amigable posible para el usuario.
+
+También haciendo investigación sobre estos tableros nos enfocamos en doa preguntas importantes 
+-[x]¿Qué tipo de datos se buscan en este data dashboard para hacerlo más eficiente? 
+-[x]¿Qué tipo de cuestiones responde el contenido de este data dashboard?
+
+Apegandonos a lo que las entrevisatas lanzaron como resultados, nos quedo claro que lo más importante era un visión general de cómo estaba el estado actual de todas la generación, no era tan importante la visualización de una grafica con mucha información, o de información ineficiente; era más importante ver números concretos como porcentajes que les daba a los usuraios un número escencial para tomar acciones.
+
+Tenemos muy presente que los usuarios entrevistados no habian utilizado un data dasboard previamente, entonces tanto como usuario como nosotros no   información sobre el este campo, pero puntuo que era importante saber cuantas alumnas estaban estudiando activamente, y que sería un dato primordial de tenerlo como principal,  pues hacía el proceso manualmente en la aplicación que usa actualmente.
+
+Puntuaron que no era tan importante saber que porcentaje había comenzado y su progreso, sino que lo más importante eran las actuales activas. Aunque si le interesa quien va por debajo del porcentaje esperado y quien va al nivel o incluso un poco más arriba, eso le daría una idea más cercana y actual de cómo es el rendimiento en general.
+
+
 
 Iniciamos con una idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
 Tomamos en cuenta todas las sugerencias y necesidades de las entrevistas pero también hicimos un research externo inspirandonos en algunas páginas de data dashboards. Lo que pudimos observar fue que la mayor parte de la información está a primera vista, con diferentes formas de organización.

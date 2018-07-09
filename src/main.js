@@ -4,7 +4,7 @@ let api = "https://api.myjson.com/bins/1efx86"
 const container = document.getElementById('result');
 
 const renderInfo = (data) => {
-    document.getElementById('btn').addEventListener('click', (event) => {
+    document.getElementById('btn Lima').addEventListener('click', (event) => {
         let result = '';
         console.log(Object.keys(data.lima.generacion))
         const info = Object.keys(data.lima.generacion);
