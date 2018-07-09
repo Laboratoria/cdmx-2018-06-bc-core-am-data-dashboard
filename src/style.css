@@ -71,31 +71,15 @@ span{
     font-weight: bold;
     text-align: center;
 }
-
-#side a.active{
-    background-color: pink;
-    color: black;
-}
-#btn disabled{
-    color: yellow;
-}
-
 #responsive-img logo{
     height: 50px;
     width: 50px;
 }
-#footer{
-    height: 100px;
-    width: 100px;
-}
-h5{
-    background-color: yellow;
-}
-#numero{
+.numero{
     font-size: 3em;
     text-align: center
 }
-#color-activas{
+.color-activas{
     background-color: #ffe521;
     text-align: center;
     border-radius: 20px;
@@ -143,4 +127,20 @@ h5{
 }
 .fondo-blanco{
     background-color: white;
+}
+.center{
+    font-size: 2em;
+    text-align: center;
+    
+}
+.color-alumnas{
+    background-color: pink darken-2;
+    text-align: center;
+    border-radius: 20px;
+    padding: 15px;
+}
+.btn-alumnas{
+   color: white;
+   background-color: pink;
+   font-size: .8em;
 }
