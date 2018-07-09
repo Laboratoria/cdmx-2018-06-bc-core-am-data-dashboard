@@ -1,5 +1,8 @@
+/* data.js es el archivos JS en el cual se declaran las funciones globales y locales para la extracción y procesamiento de la data del
+proyecto. En algunas funciones se hace uso de Templete String para la creacion de card dinámicas para presentar información en el DOM*/
 window.computeVenuesStats = (laboratoria) => {
-  let venuesArray = [];
+// Función que extrae infomación sobre cada una de las sedes, genera un arreglo como: [{},{},{}]
+  let venuesArray = [];//Variables locales
   let average = 0;
   let advanceStudents = 0;
   let inLowStudents = 0;
@@ -7,16 +10,16 @@ window.computeVenuesStats = (laboratoria) => {
   let readingAverage = 0;
   let quizAverage = 0;
   let timeAverage = 0;
-  for (let key in laboratoria) {
+  for (let key in laboratoria) {// Ciclo de evaluacion general
     let myobj = {};
-    average = 0;
+    average = 0;// Reinicio de variables
     advanceStudents = 0;
     inLowStudents = 0;
     numStudents = 0;
     readingAverage = 0;
     quizAverage = 0;
     timeAverage = 0;
-    myobj.venue = key.toUpperCase();
+    myobj.venue = key.toUpperCase();// Extraccion y procesamiento de data
     let generations = laboratoria[key].generacion;
     for (let generation in generations) {
       const students = laboratoria[key].generacion[generation].estudiantes;
@@ -32,18 +35,18 @@ window.computeVenuesStats = (laboratoria) => {
         const progresses = laboratoria[key].generacion[generation].estudiantes[student].progreso;
         for (let progres in progresses) {
           const items = laboratoria[key].generacion[generation].estudiantes[student].progreso[progres];
-          //console.log(items);
+          // console.log(items);
           for (let item in items) {
             const subs = Object.values(items);
           }
         }
       }
-    } average = average / numStudents;
+    } average = average / numStudents;// Calculo de promedios
     timeAverage = timeAverage / numStudents;
     readingAverage = readingAverage / numStudents;
     quizAverage = quizAverage / numStudents;
     timeAverage = (timeAverage * average) / 100;
-    myobj.average = Math.round(average);
+    myobj.average = Math.round(average);// Generación de propiedades del objeto Sede
     myobj.activeStudents = numStudents;
     myobj.advanceStudents = advanceStudents;
     myobj.inLowStudents = inLowStudents;
@@ -53,53 +56,9 @@ window.computeVenuesStats = (laboratoria) => {
     venuesArray.push(myobj);
   }
   console.log(venuesArray);
-  return (venuesArray);
+  return (venuesArray);// Retorna un objeto sede que se almacena en una localidad del array
 };
-window.computeStudentsStats = (laboratoria) => {
-  let studentArray = [];
-  let averageS = 0;
-  let generationS = '';
-  let venuesS = [];
-  let totalTimeS = 0;
-  let timeProm = 0;
-  let alerta = '';
-  let nameS = '';
-  let i = -1;
-  for (let key in laboratoria) {
-    let venuesL = Object.getOwnPropertyNames(laboratoria);
-    let generations = laboratoria[key].generacion;
-    i++;
-    for (let generation in generations) {
-      generationS = generation;
-      venuesS = venuesL[i];
-      const students = laboratoria[key].generacion[generation].estudiantes;
-      for (let student in students) {
-        let myStudent = {};
-        nameS = students[student].nombre;
-        averageS = 0; totalTimeS = 0; timeProm = 0; alerta = '';
-        averageS = students[student].progreso.porcentajeCompletado;
-        if (students[student].progreso.porcentajeCompletado <= 60) {
-          alerta = 'Bajo avance';
-        } else if (students[student].progreso.porcentajeCompletado >= 90) {
-          alerta = 'Alto avance';
-        }
-        else { alerta = 'Medio avance'; }
-        totalTimeS = students[student].progreso.duracionPrograma;
-        myStudent.campus = venuesS.toUpperCase();
-        myStudent.generation = generationS.toUpperCase();
-        myStudent.name = nameS;
-        myStudent.average = averageS;
-        myStudent.advertisment = alerta;
-        myStudent.totalTime = totalTimeS;
-        myStudent.timeProm = (totalTimeS * averageS) / 100;
-        studentArray.push(myStudent);
-      }
-    }
-  }
-  console.log(studentArray);
-  return (studentArray);
-};
-window.computeGenerationsStats = (laboratoria) => {
+window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre las generaciones, da un array: [{},{},{},{},{},{},{},{},{}]
   let generationsArray = [];
   let averageO = 0;
   let advanceStudentsO = 0;
@@ -131,11 +90,11 @@ window.computeGenerationsStats = (laboratoria) => {
           advanceStudentsO++;
         }
       }
-      myObj.generation = generationsO;
-      myObj.venue = venuesO;
-      myObj.count = countsO;
+      myObj.generation = generationsO.toUpperCase();
+      myObj.venue = venuesO.toUpperCase();
+      myObj.count =countsO;
       myObj.average = Math.round(averageO / countsO);
-      myObj.timeAverage = Math.round(((timeAverageO / countsO) * (averageO / countsO)) / 100);
+      myObj.timeAverage = Math.round(((timeAverageO / countsO) * (averageO / countsO))/100);
       myObj.inLowStudents = inLowStudentsO;
       myObj.advanceStudents = advanceStudentsO;
       generationsArray.push(myObj);
@@ -167,12 +126,12 @@ window.sortStudents = (students, orderBy, orderDirection) => {
   } else if (orderBy == 'percentage') {
     if (orderDirection == 'ASC') {
       ordered = students.sort(function (a, b) {
-        return (a.average - b.average);
+        return (a.stats.completedPercentage - b.stats.completedPercentage);
       });
       console.log(ordered);
     } else {
       ordered = students.sort(function (a, b) {
-        return (b.average - a.average);
+        return (b.stats.completedPercentage - a.stats.completedPercentage);
       });
       console.log(ordered);
     }
@@ -188,7 +147,7 @@ window.filterStudents = (students, search) => {
   console.log(filtered);
   return (filtered);
 };
-window.deepStudentsStats = (laboratoria) => {
+window.computeStudentsStats = (laboratoria) => {
   let studentArray = [];
   let averageS = 0;
   let generationS = '';
@@ -217,6 +176,7 @@ window.deepStudentsStats = (laboratoria) => {
         let myStudent = {};
         nameS = students[student].nombre;
         emailS = students[student].correo;
+        turnoS = students[student].turno;
         const Stats = laboratoria[key].generacion[generation].estudiantes[student].progreso;
         const arrayStats = Array.from(Object.values(Stats));
         averageS = 0; totalTimeS = 0; timeProm = 0; statusS = ''; j = 0;
@@ -232,48 +192,215 @@ window.deepStudentsStats = (laboratoria) => {
         sts.completedPercentage = averageS;
         sts.status = statusS;
         j++;
-        const arrayTopic = Array.from(Object.values(arrayStats[j]));
-        const arrayUnitsNames = Array.from(Object.getOwnPropertyNames(arrayStats[j]));
-        let k = 0;
-        itemS = arrayUnitsNames[k];
-        let tps = {};
-        completedPercentageS = arrayTopic[k].porcentajeCompletado;
-        percentageDurationS = arrayTopic[k].duracionTemaCompletado;
-        tps.unit = itemS;
-        tps.completedPercentage = completedPercentageS;
-        tps.percentageDuration = percentageDurationS;
-        sts.topics = tps;
-        k++;
-        itemS2 = arrayUnitsNames[k];
-        let tps2 = {};
-        completedPercentageS = arrayTopic[k].porcentajeCompletado;
-        percentageDurationS = arrayTopic[k].duracionTemaCompletado;
-        tps2.unit = itemS2;
-        tps2.completedPercentage = completedPercentageS;
-        tps2.percentageDuration = percentageDurationS;
-        sts.topics = tps2;
-
-        /*myStudent.stats.completedPercentage = Stats.porcentajeCompletado;
-        const units = Stats.temas;
-        const arrayUnits = Array.from(Object.values(units));
-        let topics = {};
-        arrayUnits.forEach(function(unite){
-          myStudent.stats.topics.completedPercentage = unite.porcentajeCompletado;
-          myStudent.stats.topics.percentageDuration = unite.duracionTemaCompletado;
-        });*/
-        myStudent.name = nameS;
-        myStudent.email = emailS;
-        myStudent.campus = venuesS;
-        myStudent.generation = generationS;
-        myStudent.timeProm = (totalTimeS * averageS) / 100;
-        myStudent.totalTime = totalTimeS;
-        myStudent.stats = sts;
-        //myStudent.stats.completedPercentage = averageS;
-        //myStudent.stats.status = alerta;
-        studentArray.push(myStudent);
+        let unitiesContent = arrayStats[j];
+          let tps ={};
+          let completedPercentageT =0, percentageDurationT=0;
+        for (let unit in unitiesContent){
+          //console.log((Object.values(unitiesContent))[0].subtemas);
+          if (unit=="01-Introduccion-a-programacion"){
+             completedPercentageT = (Object.values(unitiesContent))[0].porcentajeCompletado;
+             percentageDurationT = (Object.values(unitiesContent))[0].duracionTemaCompletado;
+             let deepCont ={};
+             deepCont.completedPercentage = completedPercentageT;
+             deepCont.percentageDuration = percentageDurationT;
+             let subtopicsUnits = (Object.values(unitiesContent))[0].subtemas;
+             //let subTopics ={};
+             for (let subtop in subtopicsUnits){
+               //console.log(Object.values(subtopicsUnits));
+               if (subtop == "00-bienvenida-orientacion"){
+                 let completedSub = (Object.values(subtopicsUnits))[0].completado;
+                 let timeSub = (Object.values(subtopicsUnits))[0].duracionSubtema;
+                 let typeSub = (Object.values(subtopicsUnits))[0].tipo;
+                 let deepSubCont ={};
+                 deepSubCont.completedPercentage = completedSub;
+                 deepSubCont.duration = timeSub;
+                 deepSubCont.type = typeSub;
+                 deepCont["00-bienvenida-orientacion"]= deepSubCont;
+               }else if (subtop == "01-desarrollo-profesional") {
+                 let completedSub = (Object.values(subtopicsUnits))[1].completado;
+                 let timeSub = (Object.values(subtopicsUnits))[1].duracionSubtema;
+                 let typeSub = (Object.values(subtopicsUnits))[1].tipo;
+                 let deepSubCont ={};
+                 deepSubCont.completedPercentage = completedSub;
+                 deepSubCont.duration = timeSub;
+                 deepSubCont.type = typeSub;
+                 deepCont["01-desarrollo-profesional"]= deepSubCont;
+               }else if (subtop == "02-por-que-aprender-a-programar") {
+                 let completedSub = (Object.values(subtopicsUnits))[2].completado;
+                 let timeSub = (Object.values(subtopicsUnits))[2].duracionSubtema;
+                 let typeSub = (Object.values(subtopicsUnits))[2].tipo;
+                 let deepSubCont ={};
+                 deepSubCont.completedPercentage = completedSub;
+                 deepSubCont.duration = timeSub;
+                 deepSubCont.type = typeSub;
+                 deepCont["02-por-que-aprender-a-programar"]= deepSubCont;
+               }else if (subtop == "03-tu-primer-sitio") {
+                 let completedSub = (Object.values(subtopicsUnits))[3].completado;
+                 let timeSub = (Object.values(subtopicsUnits))[3].duracionSubtema;
+                 let typeSub = (Object.values(subtopicsUnits))[3].tipo;
+                 let deepSubCont ={};
+                 deepSubCont.completedPercentage = completedSub;
+                 deepSubCont.duration = timeSub;
+                 deepSubCont.type = typeSub;
+                 deepCont["03-tu-primer-sitio"]= deepSubCont;
+               }else if (subtop =="04-quiz") {
+                 let completedSub = (Object.values(subtopicsUnits))[4].completado;
+                 let timeSub = (Object.values(subtopicsUnits))[4].duracionSubtema;
+                 let typeSub = (Object.values(subtopicsUnits))[4].tipo;
+                 let scoreSub = (Object.values(subtopicsUnits))[4].puntuacion;
+                 let deepSubCont ={};
+                 deepSubCont.completedPercentage = completedSub;
+                 deepSubCont.duration = timeSub;
+                 deepSubCont.type = typeSub;
+                 deepSubCont.score = scoreSub;
+                 deepCont["04-quiz"]= deepSubCont;
+               }
+             }
+             tps["01-Introduccion-a-programacion"] = deepCont;
+          }else if (unit=="02-Variables-y-tipo-de-datos") {
+            completedPercentageT = (Object.values(unitiesContent))[1].porcentajeCompletado;
+            percentageDurationT = (Object.values(unitiesContent))[1].duracionTemaCompletado;
+            let deepCont ={};
+            deepCont.completedPercentage = completedPercentageT;
+            deepCont.percentageDuration = percentageDurationT;
+            let subtopicsUnits = (Object.values(unitiesContent))[1].subtemas;
+            //let subTopics ={};
+            for (let subtop in subtopicsUnits){
+              //console.log(Object.values(subtopicsUnits));
+              if (subtop == "00-Tipos-de-datos-y-operadores"){
+                let completedSub = (Object.values(subtopicsUnits))[0].completado;
+                let timeSub = (Object.values(subtopicsUnits))[0].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[0].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["00-Tipos-de-datos-y-operadores"]= deepSubCont;
+              }else if (subtop == "01-variables") {
+                let completedSub = (Object.values(subtopicsUnits))[1].completado;
+                let timeSub = (Object.values(subtopicsUnits))[1].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[1].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["01-variables"]= deepSubCont;
+              }else if (subtop == "02-por-que-aprender-a-programar02-auto-aprendizaje-MDN") {
+                let completedSub = (Object.values(subtopicsUnits))[2].completado;
+                let timeSub = (Object.values(subtopicsUnits))[2].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[2].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["02-auto-aprendizaje-MDN"]= deepSubCont;
+              }else if (subtop == "03-comments") {
+                let completedSub = (Object.values(subtopicsUnits))[3].completado;
+                let timeSub = (Object.values(subtopicsUnits))[3].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[3].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["03-comments"]= deepSubCont;
+              }else if (subtop =="04-ejercicios-guiados") {
+                let completedSub = (Object.values(subtopicsUnits))[4].completado;
+                let timeSub = (Object.values(subtopicsUnits))[4].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[4].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["04-ejercicios-guiados"]= deepSubCont;
+              }else if (subtop =="05-quiz") {
+                let completedSub = (Object.values(subtopicsUnits))[5].completado;
+                let timeSub = (Object.values(subtopicsUnits))[5].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[5].tipo;
+                let scoreSub = (Object.values(subtopicsUnits))[5].puntuacion;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepSubCont.score = scoreSub;
+                deepCont["05-quiz"]= deepSubCont;
+              }else if (subtop =="06-ejercicios") {
+                let completedSub = (Object.values(subtopicsUnits))[6].completado;
+                let timeSub = (Object.values(subtopicsUnits))[6].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[6].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["06-ejercicios"]= deepSubCont;
+              }
+            }
+            tps["02-Variables-y-tipo-de-datos"] = deepCont;
+          }else if (unit=="03-UX") {
+            completedPercentageT = (Object.values(unitiesContent))[2].porcentajeCompletado;
+            percentageDurationT = (Object.values(unitiesContent))[2].duracionTemaCompletado;
+            let deepCont ={};
+            deepCont.completedPercentage = completedPercentageT;
+            deepCont.percentageDuration = percentageDurationT;
+            let subtopicsUnits = (Object.values(unitiesContent))[2].subtemas;
+            //let subTopics ={};
+            for (let subtop in subtopicsUnits){
+              //console.log(Object.values(subtopicsUnits));
+              if (subtop == "00-equipos-de-desarrollo"){
+                let completedSub = (Object.values(subtopicsUnits))[0].completado;
+                let timeSub = (Object.values(subtopicsUnits))[0].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[0].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["00-equipos-de-desarrollo"]= deepSubCont;
+              }else if (subtop == "01-ux-diseno") {
+                let completedSub = (Object.values(subtopicsUnits))[1].completado;
+                let timeSub = (Object.values(subtopicsUnits))[1].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[1].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["01-ux-diseno"]= deepSubCont;
+              }else if (subtop == "02-ux-vs-ui") {
+                let completedSub = (Object.values(subtopicsUnits))[2].completado;
+                let timeSub = (Object.values(subtopicsUnits))[2].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[2].tipo;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont["02-ux-vs-ui"]= deepSubCont;
+              }else if (subtop =="03-quiz") {
+                let completedSub = (Object.values(subtopicsUnits))[3].completado;
+                let timeSub = (Object.values(subtopicsUnits))[3].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[3].tipo;
+                let scoreSub = (Object.values(subtopicsUnits))[3].puntuacion;
+                let deepSubCont ={};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepSubCont.score = scoreSub;
+                deepCont["03-quiz"]= deepSubCont;
+              }
+            }
+            tps["03-UX"] = deepCont;
+          }
+          sts.topics=tps;
+        }
+          myStudent.name = nameS;
+          myStudent.email = emailS;
+          myStudent.turno = turnoS;
+          myStudent.campus = venuesS.toUpperCase();
+          myStudent.generation = generationS.toUpperCase();
+          myStudent.timeProm = Math.round((totalTimeS*averageS)/100);
+          myStudent.totalTime = totalTimeS;
+          myStudent.stats = sts;
+          studentArray.push(myStudent);
+        }
       }
     }
-  }
   console.log(studentArray);
   return (studentArray);
 };
@@ -283,6 +410,29 @@ window.generationsLima = (laboratoria) => {
   for (let i = 0; i < 3; i++) {
     generationLim[i] = generation[i];
   }
+  //-----
+  const resultGenLim = document.getElementById('cardsSpace');
+  let genLim ='';
+  for(let i=0; i<generationLim.length; i++){
+    genLim += `<div class="col s3 m3">
+                <div class="card white darken-1">
+                  <div class="card-content card-data black-text">
+                  <h2 class="card-title" id="cards">${generationLim[i].venue}</h2>
+                  <h5>Alumnas activas: ${generationLim[i].count}</h5>
+                  <span>Promedio: ${generationLim[i].average}${'%'} </span>
+                  <div class="progress">
+                  <div class="determinate" style="width: ${generationLim[i].average}%"></div>
+                  </div>
+                  <p><i class="material-icons">star</i> <span>Estudiantes: ${generationLim[i].advanceStudents} ✔</span></p>
+                  <p><i class="material-icons">star_half</i> <span>Estudiantes: ${generationLim[i].inLowStudents} ✘</span></p>
+                  <p><i class="material-icons">schedule</i> <span>Tiempo: ${generationLim[i].timeAverage}${'hrs'}</span></p>
+
+         </div>
+         </div>
+       </div>`
+}
+  resultGenLim.innerHTML= genLim;
+  //---
   return generationLim;
 }
 window.generationsMexico = (laboratoria) => {
@@ -291,25 +441,117 @@ window.generationsMexico = (laboratoria) => {
   for (let i = 3; i <= 5; i++) {
     generationMex[i - 3] = generation[i];
   }
+  //-----
+  const resultGenMex = document.getElementById('cardsSpace');
+  let genMex ='';
+  for(let i=0; i<generationMex.length; i++){
+    genMex += `<div class="col s3 m3">
+                <div class="card white darken-1">
+                  <div class="card-content card-data black-text">
+                  <h2 class="card-title" id="cards">${generationMex[i].venue}</h2>
+                  <h5>Alumnas activas: ${generationMex[i].count}</h5>
+                  <span>Promedio: ${generationMex[i].average}${'%'} </span>
+                  <div class="progress">
+                  <div class="determinate" style="width: ${generationMex[i].average}%"></div>
+                  </div>
+                  <p><i class="material-icons">star</i> <span>Estudiantes: ${generationMex[i].advanceStudents} ✔</span></p>
+                  <p><i class="material-icons">star_half</i> <span>Estudiantes: ${generationMex[i].inLowStudents} ✘</span></p>
+                  <p><i class="material-icons">schedule</i> <span>Tiempo: ${generationMex[i].timeAverage}${'hrs'}</span></p>
+
+         </div>
+         </div>
+       </div>`
+}
+  resultGenMex.innerHTML= genMex;
+  //---
   return generationMex;
 }
 window.generationsSantiago = (laboratoria) => {
   const generation = computeGenerationsStats(laboratoria);
   const generationStg = [];
-  for (let i = 3; i <= 5; i++) {
-    generationStg[i - 3] = generation[i];
+  for (let i = 5; i < 8; i++) {
+    generationStg[i - 5] = generation[i];
   }
+  //-----
+  const resultGenStg = document.getElementById('cardsSpace');
+  let genStg ='';
+  for(let i=0; i<generationStg.length; i++){
+    genStg += `<div class="col s3 m3">
+                <div class="card white darken-1">
+                  <div class="card-content card-data black-text">
+                  <h2 class="card-title" id="cards">${generationStg[i].venue}</h2>
+                  <h5>Alumnas activas: ${generationStg[i].count}</h5>
+                  <span>Promedio: ${generationStg[i].average}${'%'} </span>
+                  <div class="progress">
+                  <div class="determinate" style="width: ${generationStg[i].average}%"></div>
+                  </div>
+                  <p><i class="material-icons">star</i> <span>Estudiantes: ${generationStg[i].advanceStudents} ✔</span></p>
+                  <p><i class="material-icons">star_half</i> <span>Estudiantes: ${generationStg[i].inLowStudents} ✘</span></p>
+                  <p><i class="material-icons">schedule</i> <span>Tiempo: ${generationStg[i].timeAverage}${'hrs'}</span></p>
+
+         </div>
+         </div>
+       </div>`
+}
+  resultGenStg.innerHTML= genStg;
+  //---
   return generationStg;
 }
 window.studentsList = (laboratoria) => {
   const students = computeStudentsStats(laboratoria);
-  const list = [];
-
+  const list =[];
+  let nameO='', averageO=0, timeAverageO=0;
+  for (let i=0; i<students.length; i++){
+    let objStudent ={};
+    nameO = students[i].name;
+    averageO = students[i].stats.completedPercentage;
+    timeAverageO = students[i].timeProm;
+    objStudent.name = nameO;
+    objStudent.average = averageO;
+    objStudent.timeAverage = timeAverageO;
+    list.push(objStudent);
+  }
+console.log(list);
+return list;
 }
-window.printSedesMex = (laboratoria) => {
+window.studentsModal =(laboratoria)=>{
+  const students = computeStudentsStats(laboratoria);
+  const list =[];
+  let nameO='', emailO='', turnoO= '', averageO=0, timeAverageO=0;
+  let u1O='', u2O='', u3O='', p1O=0, p2O=0, p3O=0;
+  for (let i=0; i<students.length; i++){
+    let objStudent ={};
+    nameO = students[i].name;
+    emailO = students[i].email;
+    turnoO = students[i].turno;
+    timeAverageO = students[i].timeProm;
+    averageO = students[i].stats.completedPercentage;
+    u1O = "01-Introduccion-a-programacion";
+    u2O = "2-Variables-y-tipo-de-datos";
+    u3O = "03-UX";
+    p1O= students[i].stats.topics["01-Introduccion-a-programacion"].completedPercentage;
+    p2O= students[i].stats.topics["02-Variables-y-tipo-de-datos"].completedPercentage;
+    p3O= students[i].stats.topics["03-UX"].completedPercentage;
+    objStudent.name = nameO;
+    objStudent.email = emailO;
+    objStudent.turno = turnoO;
+    objStudent.average = averageO;
+    objStudent.timeAverage = timeAverageO;
+    objStudent.u1 = u1O;
+    objStudent.u2 = u2O;
+    objStudent.u3 = u3O;
+    objStudent.p1 = p1O;
+    objStudent.p2 = p2O;
+    objStudent.p3 = p3O;
+    list.push(objStudent);
+  }
+console.log(list);
+return list;
+}
+window.printSedesAll = (laboratoria) => {
   const sedeM = computeVenuesStats(laboratoria);
   console.log(sedeM);
-  const resultFilter = document.getElementById('print-venues');
+  const resultFilter = document.getElementById('cardsSpace');
   let sedeMex = '';
   for (let i = 0; i < sedeM.length; i++) {
    /* sedeMex += `<div class="col s3 m3">

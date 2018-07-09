@@ -40,10 +40,10 @@ describe('data', () => {
         assert.isObject(student.stats.topics);
         assert.isNumber(student.stats.topics["01-Introduccion-a-programacion"].completedPercentage);
         assert.isNumber(student.stats.topics["01-Introduccion-a-programacion"].percentageDuration);
-        assert.isObject(student.stats.topics["01-Introduccion-a-programacion"].subtopics);
-        assert.isNumber(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['completedPercentage']);
-        assert.isString(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['type']);
-        assert.isNumber(student['stats']['topics']["01-Introduccion-a-programacion"]['subtopics']["00-bienvenida-orientacion"]['duration']);
+        assert.isObject(student.stats.topics["01-Introduccion-a-programacion"]["00-bienvenida-orientacion"]);
+        assert.isNumber(student['stats']['topics']["01-Introduccion-a-programacion"]["00-bienvenida-orientacion"]['completedPercentage']);
+        assert.isString(student['stats']['topics']["01-Introduccion-a-programacion"]["00-bienvenida-orientacion"]['type']);
+        assert.isNumber(student['stats']['topics']["01-Introduccion-a-programacion"]["00-bienvenida-orientacion"]['duration']);
         });
     });
 
@@ -57,19 +57,19 @@ describe('data', () => {
       it('debería tener propiedad completedPercentage dentro de propiedad topics con valor 80', () => {
         assert.equal(processed[0].stats.topics['01-Introduccion-a-programacion'].completedPercentage, 80);
       });
-      it('debería tener propiedad percentageDuration dentro de propiedad topics con valor 79', () => {
-        assert.equal(processed[0].stats.topics['01-Introduccion-a-programacion'].percentageDuration, 79)
+      it('debería tener propiedad percentageDuration dentro de propiedad topics con valor 130', () => {
+        assert.equal(processed[0].stats.topics['01-Introduccion-a-programacion'].percentageDuration, 130)
       });
 
-      it(`debería tener propiedad subtopics que es un objeto con primera key "0-bienvenida-orientacion" con valor
-      {completado: 1, duracionSubtema: 55, tipo: "lectura"}`, () => {
-        const topics = Object.keys(processed[0].stats.topics);
-        const subTopics = Object.keys(processed[0].stats.topics[topics[0]].subtopics);
+      it(`debería tener propiedad subtopics que es un objeto con primera key "00-bienvenida-orientacion" con valor
+      {completado: 1, duracionSubtema: 30, tipo: "lectura"}`, () => {
+        const topics = processed[0].stats.topics;
+        const subTopics = processed[0].stats.topics['01-Introduccion-a-programacion']["00-bienvenida-orientacion"];
 
-          assert.deepEqual(processed[0].stats.topics[topics[0]].subtopics[subTopics[0]], {
-            completado: 1,
-            duracionSubtema: 55,
-            tipo: "lectura"
+          assert.deepEqual(processed[0].stats.topics['01-Introduccion-a-programacion']["00-bienvenida-orientacion"], {
+            completedPercentage: 1,
+            duration: 30,
+            type: "lectura"
           });
       });
     });
@@ -120,14 +120,14 @@ describe('data', () => {
       const orderBy = "percentage";
       const orderDirection = "ASC";
       const processed = sortStudents(students, orderBy, orderDirection);
-      assert.equal(processed[0].average, 46);
+      assert.equal(processed[0].stats.completedPercentage, 46);
     });
     it('debería retornar arreglo de estudiantes ordenado por porcentaje general DESC',()=>{
       const students = computeStudentsStats(fixtures);
       const orderBy = "percentage";
       const orderDirection = "DESC";
       const processed = sortStudents(students, orderBy, orderDirection);
-      assert.equal(processed[0].average, 96);
+      assert.equal(processed[0].stats.completedPercentage, 96);
     });
   });
 
