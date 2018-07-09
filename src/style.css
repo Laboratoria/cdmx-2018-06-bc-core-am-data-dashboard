@@ -7,7 +7,7 @@ header{
 }
 
 body.fondo{
-  background: #FFE521;
+  background: #ffe521;
    font-family: 'Open Sans', sans-serif;
 }
 
@@ -22,7 +22,6 @@ margin-right: 100px;
 color: white;
 line-height: 20px;
 }
-
 
 .login{
     background: #FFE521;
@@ -45,3 +44,9 @@ line-height: 20px;
 
 }
 
+
+.black {
+  background-color: red;
+  text-align: center;
+  width: 100%;
+}
