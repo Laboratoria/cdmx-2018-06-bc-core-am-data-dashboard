@@ -1,4 +1,4 @@
-/*window.computeStudentsStats = (laboratoria) => {
+/* window.computeStudentsStats = (laboratoria) => {
 
 
    };

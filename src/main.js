@@ -1,111 +1,105 @@
 // usar este archivo para todo el código que tenga que ver con mostrar los datos en la pantalla
-//let urlDirection obtiene el json de la data desde git hub
+// la direccion para utilizar el JSON se sacó de la pagina http://myjson.com/ la cual creo una API para poder extraer los datos de JSON
 
 let urlDirection = 'https://api.myjson.com/bins/9n48i';
-let sedeLima = document.querySelector("#botonesSede");
-let sedeMexico= document.querySelector("#botonesSede1");
-let sedeSantiago = document.querySelector("#botonesSede2");
-let btn = document.querySelector("#lima");
-let btn1 = document.querySelector("#cdmx");
-let btn2 = document.querySelector("#santiago");
+let sede = document.getElementById('sedes');
+console.log(sede);
+
+// let sedeLima = document.querySelector('#botonesSede');
+// let sedeMexico = document.querySelector('#botonesSede1');
+// let sedeSantiago = document.querySelector('#botonesSede2');
+// let btn = document.querySelector('#lima');
+// let btn1 = document.querySelector('#cdmx');
+// let btn2 = document.querySelector('#santiago');
 
 // usando el boton de las sedes llamamos a la función para que aparezca en consola data>lima>generacion>cuarta
+// addEventLister, escucha los eventos del DOM
+sede.addEventListener('click', function() {
+  // con el fetch se extrae la data del JSON y se realiza a través de promesas(then).
+  fetch(urlDirection).then(function(datos) {
+    // se retornan los datos del jason
+    return datos.json();
+  }).then(function(data) {
+    // Object.keys, devuelve un array cuyos elementos son strings correspondientes
+    // a las propiedades enumerables que se encuentran dentro de un OBJETO
+    let sedes = Object.keys(data);
+      
+    // va a crear un arreglo dentro de un arreglo 
+    let arrFinal = [];
 
-lima.addEventListener("click", function(){
-    sede();
-  })
+    // sede es un arreglo
+    // variableSedes es un ARREGLO, el for se repite hasta que la condición especificada se evalúa como false.
+    // es un bucle o un loop, tambien es un ciclo que se repite un número especifico de veces,
+    // en este caso se repetira hasta que recorra todas las sedes de la variable Sedes
+    // .length de un objeto String representa la longitud de una cadena
+    for (let i = 0; i < sedes.length; i++) {
+      let drawSede = sedes[i];
+      sede.innerHTML = sedes;
+        
+      // el loop recorre las 3 generaciones de la variable generaciones
+      let generaciones = Object.keys(data[sedes[i]].generacion);
 
-  let sede = function(){
-      fetch(urlDirection).then(function(datos){
-      return datos.json();
-      }).then(function(data){
+      for (let j = 0; j < generaciones.length; j++) {
+        let drawGeneracion = generaciones[j];
+        let estudiantes = data[sedes[i]].generacion[generaciones[j]].estudiantes;
 
-        console.log(data);
-      let sede = data.lima.generacion;
-      console.log(data.lima.generacion);
-      let generaciones = Object.keys(sede);
+        // el map  recorre todas las respuestas y devuelve un arreglo con las promesas de extraer la respuesta en JSON.
+        // en este caso recorre la variable de estudiantes y nos regresa los arreglos dentro de ellas(nombre, mail,campus,%, etc..)
+        let est = estudiantes.map((usuario) => {
+          console.log(usuario);
+            
 
-    for(let i = 0; i < generaciones.length; i++) {
-        sedeLima.innerHTML+= "<div>" + generaciones[i] + "</div>";
-        sedeLima.addEventListener("click",(e) =>{
-          console.log(e.target.innerHTML);
-        })
+          let porcentajeCompletado = usuario.progreso.porcentajeCompletado;
+          let status = '';
 
-        let est = data.lima.generacion.cuarta.estudiantes
+          // si el porcentaje de completado es menor de 60, nos mostrara a las estudiantes con bajo desempeño
+          if (porcentajeCompletado < 60) {
+            status = 'Estudiante con bajo desempeño';
+    
+            // si no se cumple la primera entonces nos mostrara a las estudiantes que tengan un alto desempeño
+          } else if (porcentajeCompletado > 90) {
+            status = 'Estudiante con alto desempeño';
 
-           for(let i = 0; i < est.length; i++) {
-       sedeLima.innerHTML+= "<div>" + est[i].nombre + "</div>";
-       sedeLima.innerHTML+= "<div>" + est[i].correo + "</div>";
-       sedeLima.innerHTML+= "<div>" + est[i].turno + "</div>";
-           }
+            // de no cumplirse ninguna de las dos anteriores se mostraran a las alumnas que se encuntran a la mitad del desempeño.
+          } else {
+            status = 'Estudiantes con desempeño medio';
+          }
 
-        let est1 = data.lima.generacion.quinta.estudiantes
-
-           for(let i = 0; i < est1.length; i++) {
-       sedeLima.innerHTML+= "<div>" + est[i].nombre + "</div>";
-       sedeLima.innerHTML+= "<div>" + est[i].correo + "</div>";
-       sedeLima.innerHTML+= "<div>" + est[i].turno + "</div>";
-           }
-
-        let est2 = data.lima.generacion.tercera.estudiantes
-
-          for(let i = 0; i < est2.length; i++) {
-       sedeLima.innerHTML+= "<div>" + est[i].nombre + "</div>";
-       sedeLima.innerHTML+= "<div>" + est[i].correo + "</div>";
-       sedeLima.innerHTML+= "<div>" + est[i].turno + "</div>";
-           }
-
-        //console.log(data.lima.estudiantes[estudiantes[i]]);
+          // aquí se va a retornar la funcion de .map
+          return {
+            'name': usuario.nombre,
+            'email': usuario.correo,
+            'campus': drawSede,
+            'generation': drawGeneracion,
+            'stats': {
+              'status': status,
+              'completedPercentage': porcentajeCompletado,
             }
+          };
+        });
+        arrFinal.push(est);
+        
+        
+        console.log(est);
+      }
+      console.log(arrFinal);
+      
+      // concat se utiliza para unir dos o más arrays, no cambia el array existente; lo que va a hacer es devolver uno nuevo
+      // arrconsolidado, nos va a unir el array que hemos creado y lo va a separar en objetos.
+      let arrConsolidado = arrFinal[0].concat(
+        arrFinal[1],
+        arrFinal[2],
+        arrFinal[3],
+        arrFinal[4],
+        arrFinal[5],
+        arrFinal[6],
+        arrFinal[7],
+        arrFinal[8]);
 
-//console.log(data.lima.generacion.cuarta.estudiantes);
-//console.log(data.lima.generacion.quinta.estudiantes);
-      })
+      console.log(arrConsolidado);
+
+      // .filter
     }
-
-  cdmx.addEventListener("click", function(){
-    sede1();
-  })
-let sede1 = function(){
-      fetch(urlDirection).then(function(datos){
-      return datos.json();
-      }).then(function(data){
-      console.log(data.mexico.generacion);
-      let sede1 = data.mexico.generacion;
-      console.log(Object.keys(sede1));
-      let generaciones = Object.keys(sede1);
-
-      console.log(generaciones[0]);
-    for(let i = 0; i<generaciones.length; i++) {
-        sedeMexico.innerHTML+= "<div>" + generaciones[i] + "</div>";
-        sedeMexico.addEventListener("click",(e) =>{
-          console.log(e.target.innerHTML);
-        })
-        console.log(data.mexico.generacion[generaciones[i]]);
-            }
-      })
-
-   }
-  santiago.addEventListener("click", function(){
-    sede2();
-  })
-let sede2 = function(){
-      fetch(urlDirection).then(function(datos){
-      return datos.json();
-      }).then(function(data){
-      console.log(data.santiago.generacion);
-      let sede2 = data.santiago.generacion;
-      console.log(Object.keys(sede2));
-      let generaciones = Object.keys(sede2);
-
-    for(let i = 0; i<generaciones.length; i++) {
-        sedeSantiago.innerHTML+= "<div>" + generaciones[i] + "</div>";
-        sedeSantiago.addEventListener("click",(e) =>{
-          console.log(e.target.innerHTML);
-        })
-        console.log(data.santiago.generacion[generaciones[i]]);
-            }
-
-      })
-
-    }
+  });
+  // lima.innerHTML = arrFinal;
+});                       
