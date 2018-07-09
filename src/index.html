@@ -14,12 +14,12 @@
 <body>
   <header id="laboratoria">
     <img id="logo" src="../logo/laboratoria_logo.png">
-  </header>
-   
+  </header> 
+
   <br>
 
-    <!-- formulario de LOGIN -->
-    <section>
+  <!-- formulario de LOGIN -->
+  <section>
     <form id="form" action="">
       <h2>Login</h2>
       <input id="input-name" type="text" placeholder="&#128274;  Username" name="usuario">
@@ -29,34 +29,59 @@
     </form>
   </section>
 
-    <!-- primer navegador para ingresar a la sede (botones)-->
+  <!-- primer navegador para ingresar a la sede (botones)-->
 
-  <section>
-
-    <div class="col-12 row offset-4 flex-container" id="buttons">
-
-      <div id="container-buttons">
-      
-          <!-- <div class="row" id="container-buttons2"> -->
-        <!-- <div class="col-4" >
-          <a id="mexico" href="#">México</a>
-         </div>
-
-      <div class="col-4">
-            <a id="lima" href="#">Lima</a>
-        </div>
-
-
-        <div class="col-4">
-          <a id= "santiago" href="#">Santiago</a>
-        </div>  -->
-        <!-- </div> -->
+  <section id="buttons-campus">
+    <div class="sedes col-xs-12 col-sm-4 row offset-4 container"> Sedes
+      <div id="container-buttons-campus">
       </div>
     </div>
   </section>
 
+  <!-- Botones de generaciones  -->
+  <section id="buttons-generations">
+    <div class="col-xs-12 col-sm-4 row offset-4 container"> Generaciones
+      <div id="container-buttons-generations">
+      </div>
+    </div>
+  </section>
 
-  
+  <!-- Contenedor para promedio en porcentaje -->
+  <section id="content-generation-average">
+    <div class="col-xs-12 col-sm-4  row offset-4">
+      <div id="container-average">
+      </div>
+    </div>
+  </section>
+
+  <!-- contenedor para conteo alumnas -->
+  <section id="content-generation-count">
+    <div class="col-xs-12 col-sm-4  row offset-4">
+      <div id="container-count">
+      </div>
+    </div>
+  </section>
+
+  <section id="students1">
+    <div class=" col-xs-12 col-sm-4 row justify-content-end offset-4">
+      <div id="container-classified-students">
+      </div>
+    </div>
+  </section>
+
+  <!-- const divCol = document.createElement("div");
+  const a = document.createElement("a");
+  divCol.classList.add("col-4");
+  a.id = key;
+  a.innerHTML = key;
+  divCol.appendChild(a);
+  containerButtonsCampus.appendChild(divCol); -->
+
+
+
+
+
+
 
   <!--script type="text/javascript" src="../data/laboratoria.json"></script>-->
   <script src="data.js"></script>
