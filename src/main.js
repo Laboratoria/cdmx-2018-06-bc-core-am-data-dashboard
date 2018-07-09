@@ -1,37 +1,35 @@
+//Codigo para templete string estudiantes-funcionalidad html.
+// Barra Menu lateral colapsable
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, {});
+});
+var collapsibleElem = document.querySelector('.collapsible');
+var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
 
+// ToolTip
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(elems, {});
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Colapsable alumnas
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.collapsible');
+  var instances = M.Collapsible.init(elems, {});
+});
+//Fin decodigo para funcionalidaD HTML
 //Variables globales
 const laboratoria = "https://api.myjson.com/bins/1amyo6";//API con DATA a usar (base de datos de alumnas)
 const search = 'Aileen Edwyna';
-const orderBy ="percentage";
+const orderBy = "percentage";
 const orderDirection = "DESC";
 //DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
-const printVenues = (venues) =>{
+const printVenues = (venues) => {
   const resultVen = document.getElementById('cardsSpace');
-  let ven ='';
-  for(let i=0; i<venues.length; i++){
-    let venueAverage= Math.round(venues[i].average);
+  let ven = '';
+  for (let i = 0; i < venues.length; i++) {
+    let venueAverage = Math.round(venues[i].average);
     console.log(venues[i]);
     ven += `<div class="col s3 m3">
                 <div class="card white darken-1">
@@ -46,12 +44,12 @@ const printVenues = (venues) =>{
                 </div>
               </div>`
   }
-  resultVen.innerHTML= ven;
+  resultVen.innerHTML = ven;
 };
-const printGenerations = (generations) =>{
+const printGenerations = (generations) => {
   const resultGen = document.getElementById('cardsSpace');
-  let gen ='';
-  for(let i=0; i<generations.length; i++){
+  let gen = '';
+  for (let i = 0; i < generations.length; i++) {
     gen += `<div class="col s3 m3">
                 <div class="card white darken-1">
                   <div class="card-content card-data black-text">
@@ -67,12 +65,12 @@ const printGenerations = (generations) =>{
                 </div>
               </div>`
   }
-  resultGen.innerHTML= gen;
+  resultGen.innerHTML = gen;
 };
-const printStudents = (students) =>{
+const printStudents = (students) => {
   const resultStudents = document.getElementById('cardsSpace');
-  let studentsS ='';
-  for(let i=0; i<students.length; i++){
+  let studentsS = '';
+  for (let i = 0; i < students.length; i++) {
     studentsS += `<div class="col s3 m3">
                 <div class="card white darken-1">
                   <div class="card-content card-data black-text">
@@ -88,12 +86,12 @@ const printStudents = (students) =>{
                 </div>
               </div>`
   }
-  resultStudents.innerHTML= studentsS;
+  resultStudents.innerHTML = studentsS;
 };
-const printSort = (sort)=>{
+const printSort = (sort) => {
   const resultSort = document.getElementById('cardsSpace');
-  let studentsSort ='';
-  for(let i=0; i<sort.length; i++){
+  let studentsSort = '';
+  for (let i = 0; i < sort.length; i++) {
     studentsSort += `<div class="col s3 m3">
                 <div class="card white darken-1">
                   <div class="card-content card-data black-text">
@@ -109,12 +107,12 @@ const printSort = (sort)=>{
                 </div>
               </div>`
   }
-  resultSort.innerHTML= studentsSort;
+  resultSort.innerHTML = studentsSort;
 };
-const printFilter = (filter)=>{
+const printFilter = (filter) => {
   const resultFilter = document.getElementById('cardsSpace');
-  let studentsFilter ='';
-  for(let i=0; i<filter.length; i++){
+  let studentsFilter = '';
+  for (let i = 0; i < filter.length; i++) {
     studentsFilter += `<div class="col s3 m3">
                 <div class="card white darken-1">
                   <div class="card-content card-data black-text">
@@ -130,38 +128,38 @@ const printFilter = (filter)=>{
                 </div>
               </div>`
   }
-  resultFilter.innerHTML= studentsFilter;
+  resultFilter.innerHTML = studentsFilter;
 };
 // DECLARACION DE LA FUNCION QUE SE EJECUTARÁ CON LOS EVENTOS CLIK
 const listeners = (data) => {
   // Evento que manda a ejecutar e imprimir la funcion de filtrado
   // Evento que manda a ejecutar e imprimir la funcion de sedes
   let getVenue = document.getElementById("goVenues");
-  getVenue.addEventListener("click", (e)=>{
+  getVenue.addEventListener("click", (e) => {
     const venues = computeVenuesStats(data);
     printVenues(venues);
   });
   // Evento que manda a ejecutar e imprimir la funcion de generaciones
   let getGeneration = document.getElementById("goGeneretions");
-  getGeneration.addEventListener("click", (e)=>{
+  getGeneration.addEventListener("click", (e) => {
     const generation = computeGenerationsStats(data);
     printGenerations(generation);
   });
   let getStudents = document.getElementById("goStudents");
-  getStudents.addEventListener("click", (e)=>{
+  getStudents.addEventListener("click", (e) => {
     const students = computeStudentsStats(data);
     printStudents(students);
   });
   let getFilter = document.getElementById("goFilter");
-  getFilter.addEventListener("click", (e)=>{
+  getFilter.addEventListener("click", (e) => {
     const students = computeStudentsStats(data);
     const search = 'Aileen Edwyna';
-    const filter = filterStudents(students,search);
+    const filter = filterStudents(students, search);
     const printF = printFilter(filter);
   });
   // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
   let getSort = document.getElementById("goSort");
-  getSort.addEventListener("click", (e)=>{
+  getSort.addEventListener("click", (e) => {
     const students = computeStudentsStats(data);
     const orderBy = "percentage";
     const orderDirection = "DESC";
@@ -170,10 +168,10 @@ const listeners = (data) => {
   });
 }
 
-window.onload = () =>{
+window.onload = () => {
   fetch(laboratoria)
     .then(data => data.json())
-    .then((data) =>{
+    .then((data) => {
       listeners(data);
     })
     .catch((error) => {
