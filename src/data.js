@@ -11,10 +11,24 @@ window.computeStudentsStats = (laboratoria) => {
         let name = "";
         let email = "";
         let turn = "";
-        let completedPercentage = "";
-        let percentDuration = "";
-        let stats = {};
-        let topics = {};
+        let completedPercentage = 0;
+        
+        let stats = {           
+        "status": "" , 
+        "completedPercentage": 0, 
+        "topics": { 
+            "topic":{ "topic": "",
+                "completedPercentage": 0, 
+                "percentageDuration": 0,
+                "subtopics": {
+                    "subtopics": "" ,
+                    "completedPercentage": 0,
+                    "duration": 0 ,
+                    "type": ""
+                }
+                }
+    }};
+        
         
     for (findSede in laboratoria) {
         campus = findSede;
@@ -43,8 +57,7 @@ window.computeStudentsStats = (laboratoria) => {
         completedTheme = studentsTopics[topic].duracionTemaCompletado;
         percentageDuration = parseInt((completedTheme * 100) / durationTheme );
         //console.log("8", percentageDuration );
-
-        
+       
         const subTopics = studentsTopics[topic].subtemas;
         for (subItem in subTopics){
         type = subTopics[subItem].tipo;
@@ -65,10 +78,11 @@ window.computeStudentsStats = (laboratoria) => {
             "status": studentPerformance , 
             "completedPercentage":completedPercentage, 
             "topics": { 
-                "topic":{  
+                "topic":{ "topic": topic ,
                     "completedPercentage": completedPercentage1, 
                     "percentageDuration":percentageDuration,
                     "subtopics": {
+                        "subtopics": subItem ,
                         "completedPercentage": completedPercentage2,
                         "duration": subItemDuration ,
                         "type": type
