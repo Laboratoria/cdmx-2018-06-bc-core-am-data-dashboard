@@ -115,7 +115,7 @@ como toda la configuración de dependencias y tests de ejemplo:
 ├── .eslintrc
 ├── .gitignore
 ├── README.md
-├── data 
+├── data
 │   └── laboratoria.json
 ├── package.json
 ├── src
@@ -144,7 +144,7 @@ será parte de tus tareas generar estrategias para encontrar el mejor
 acercamiento y entendimiento del problema.
 
 
-    
+
 La carpeta de `ux/`, incluye un `README` donde vas a encontrar una guía de qué hacer. Te pedimos que ahí mismo documentes ese proceso que realizaste.
 
 ## Entregables
@@ -156,39 +156,67 @@ proyecto son:
 
 #### 1) Definición del producto
 
-En el `README.md` cuéntanos cómo pensaste y te acercaste a los usuarios al
-desarrollar tu producto (Tip: entrevistas) y cuál fue tu proceso para definir
-el producto final a nivel de experiencia y de interfaz. Es importante que
-detalles:
+Un Data Dashboard es una herramienta cuyo objetivo y utilidad básica es diagnosticar adecuadamente una situación, permite crear vistas personalizadas de con conjunto de indicadores cuyo seguimiento y evaluación periódica permitirá contar con un mayor conocimiento de la situación.
+
+![sketch](https://www.geckoboard.com/assets/data-dashboard-in-office.jpg)
 
 * Quiénes son los principales usuarios de producto.
+
+Todas las personas de Laboratoria involucradas en el proceso de mejora continua del Bootcamp.
+
 * Cuáles son los objetivos de estos usuarios en relación con el producto.
-* Cuáles son los datos más relevantes que quieren ver en la interfaz y
-  por qué. Cómo los descubriste.
+
+Mantener un buen control de situación, visualizar los datos recopilados del desempeño de aprendizaje y tomar decisiones que les permitan aplicar los cambios necesarios para el mejor aprovechamiento de las estudiantes.
+
+* Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué. Cómo los descubriste.
+
+Se ejecutaron entrevistas a usuarios (TM y AC) con lo que descubrimos que lo mas importante para el usuario es conocer la cantidad de alumnas activas en el bootcamp para asì detectar el porcentaje de deserciòn desde el inicio a la fecha, asì como datos integrales del perfil (softskills) de cada alumna y su aprovechamiento.
+
 * Cuándo revisan normalmente estos datos los usuarios.
+
+Todos los dìas en todo momento, esto depende de quien les solicite esta informaciòn y para què la van a aplicar.  
+
 * Cómo crees que el producto les está resolviendo sus problemas.
+
+Facilitarà el diagnóstico y la toma de decisiones. permitirà organizar y configurar la información asì como agilizar la consulta que actualmente poseen y mejora el entendimiento del desempeño de todos los colaboradores de Laboratoria.
+Ayudarà a minimizar e integrar las herramientas (bases de datos) utilizadas actualmente para manipular la información.
+
 * Cómo fue tu proceso de diseño.
+
+Se realizaron 3 sketches borrador y se seleccionò solo uno para mostrar la pantalla principal y que esta fuera fija para que la interfaz permitiera mostrar y ocultar elementos conforme la interacciòn del usuario.
+
+[entrevista TM](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DihvJ8wsalj4%26index%3D14%26list%3DWL%26t%3D0s&h=AT1B5nyqfUp4UcbP3oBc6SJ84vDsy4zDwN-YFYRWPlMVyKbABLR7Tkxp3anbDSvaa8bJcJp6C8Qbp27x8QoPeZzLMBu6MlZlGhxLLw-EmKFRHkML2gQra47_A49TTUBJTuMa)
 
 #### 2) Sketch de la solución (prototipo de baja fidelidad)
 
-Debes hacer un _sketch_ (boceto) de tu solución usando papel y lápiz, tomarle
-una foto, subirla a tu repositorio y hacer mención del _sketch_ en tu `README.md`.
+ ![sketch1](https://imageshack.com/a/img921/8002/oxsAgR.jpg)
+ ![sketch2](https://imageshack.com/a/img924/8337/9NYSwM.jpg)
+ ![sketch3](https://imageshack.com/a/img922/6254/JlcbEP.jpg)
+ ![sketch4](https://imageshack.com/a/img924/5736/uEP9m0.jpg)
+ ![sketch5](https://imageshack.com/a/img923/2649/vHrfLh.jpg)
+ ![sketch6](https://imageshack.com/a/img921/1008/0ORHRE.jpg)
+
+ _diagrama de flujo_
+
+ ![sketch7](https://imageshack.com/a/img921/5562/ottPh6.jpg)
 
 #### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés).
-Para eso debes aprender a utilizar alguna herramienta de diseño visual.
-Nosotros te recomendamos [Figma](https://www.figma.com/) que  es una herramienta
-que funciona en el navegador y, además, puedes crear una cuenta gratis. Sin
-embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
+_Solicita usuario y contraseña para acceder_
 
-El diseño debe representar tu _ideal_ de solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para hackear.
+![Prototipo1](https://imageshack.com/a/img924/1163/QoKhZu.jpg)
 
-Tu diseño debe seguir los fundamentos de _visual design_, como:
-contraste, alineación, jerarquía, entre otros. Tip: revisa el contenido de UX
-de la unidad de visual design.
+_Se observar las sedes listadas e informaciòn general de laboratoria_
+
+![Prototipo2](https://imageshack.com/a/img922/4650/1WmdPt.jpg)
+
+_Permite seleccionar la generaciòn y buscar por nombre de alumna, muestra informacion de la generacion: Promedio de la generación, status estudiantes debajo del 60 porciento de completitud, status de estudiantes con 90 o más en su porcentaje de completitud, filtrar estudiantes por estos dos status_
+
+![Prototipo3](https://imageshack.com/a/img922/9652/JGFAB8.jpg)
+
+_Muestra porcentaje general de completitud y reporte de progreso de la alumna: porcentaje de completitud, porcentaje de tiempo completado de cada tema, lista subtemas y filtra subtemas completados, no completado y el tipo_
+
+![Prototipo4](https://imageshack.com/a/img921/4885/crSZ1s.jpg)
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
@@ -216,7 +244,7 @@ La interfaz debe permitir al usuario:
     * Poder filtrar estudiantes por estos dos status
     * Filtrar y poder buscar estudiantes por nombre
     * Poder ordenar de manera ascendente y descendente a las estudiantes según
-    porcentaje de completitud 
+    porcentaje de completitud
 * Utiliza la interfaz sin problemas desde distintos tamaños de pantallas:
   móviles, tablets, desktops
 * Realizar pruebas unitarias
@@ -371,7 +399,7 @@ una dirección **relativa**, ejemplo:
 
 ### UX
 
-En esta carpeta vas a encontrar una guía para realizar el proceso de diseño de tu data dashboard, donde se explican las diferentes fases a seguir de manera muy breve, así como los pasos a desarrollar dentro de cada fase. También se deja espacios para que completes este `README` con tu información, pero si deseas agregar más cosas, siéntete en la libertad. Recuerda que este es un proceso creativo que responde a la data recopilada. 
+En esta carpeta vas a encontrar una guía para realizar el proceso de diseño de tu data dashboard, donde se explican las diferentes fases a seguir de manera muy breve, así como los pasos a desarrollar dentro de cada fase. También se deja espacios para que completes este `README` con tu información, pero si deseas agregar más cosas, siéntete en la libertad. Recuerda que este es un proceso creativo que responde a la data recopilada.
 
 ### Tests
 
@@ -439,12 +467,12 @@ Features/características extra sugeridas:
 
 ## Entrega
 
-En este proyecto deberás trabajar colaborativamente. Para ello, una de las integrantes del equipo deberá forkear el repositorio del cohort y la otra integrante **deberá hacer un fork del repositorio de su compañera**. Luego de esto, deberás [configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/) un `remote` hacia el repositorio del cual hiciste el fork. 
+En este proyecto deberás trabajar colaborativamente. Para ello, una de las integrantes del equipo deberá forkear el repositorio del cohort y la otra integrante **deberá hacer un fork del repositorio de su compañera**. Luego de esto, deberás [configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/) un `remote` hacia el repositorio del cual hiciste el fork.
 
-Para mandar cambios desde un repositorio forkeado al original debes crear un [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) y el propietario del repositorio original recibirá una notificación para [revisar el pull request](https://help.github.com/articles/reviewing-proposed-changes-in-a-pull-request/) y [aceptar los cambios](https://help.github.com/articles/merging-a-pull-request/). 
+Para mandar cambios desde un repositorio forkeado al original debes crear un [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) y el propietario del repositorio original recibirá una notificación para [revisar el pull request](https://help.github.com/articles/reviewing-proposed-changes-in-a-pull-request/) y [aceptar los cambios](https://help.github.com/articles/merging-a-pull-request/).
 
 Aquí algunas recomendaciones para que organices mejor el trabajo con tu compañera:
-* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de trabajo con dos ramas principales: 
+* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de trabajo con dos ramas principales:
   * `master`: rama que contiene las funcionalidades terminadas y sin errores.
   * `develop`: rama dónde integrarás las funcionalidades conforme las vayas desarrollando.
 
@@ -457,7 +485,7 @@ Aquí algunas recomendaciones para que organices mejor el trabajo con tu compañ
 
 * Un [fork](https://help.github.com/articles/fork-a-repo/) es una copia de un repositorio en el que puedes experimentar sin afectar al repositorio original. Generalmente se usa para proponer cambios al proyecto de alguien más o para usar el proyecto de otra persona como punto de partida para una idea que quieras realizar.
 
-* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR) te permite solicitar la inclusión de cambios al repositorio original (tu punto de partida) en GitHub. Cuando un PR es abierto, este permite solicitar, discutir y revisar los cambios realizados con todos los colaboradores y agregar otros commits antes de que los cambios sean incluidos al repositorio original. 
+* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR) te permite solicitar la inclusión de cambios al repositorio original (tu punto de partida) en GitHub. Cuando un PR es abierto, este permite solicitar, discutir y revisar los cambios realizados con todos los colaboradores y agregar otros commits antes de que los cambios sean incluidos al repositorio original.
 
 
 
@@ -544,7 +572,7 @@ Esperamos que alcances al menos el nivel 2 en todas tus habilidades blandas.
   también). Si usas Windows puedes usar [Git bash](https://git-scm.com/download/win),
   aunque recomendaría que consideres probar :penguin: GNU/Linux.
 3. Una de las integrantes del equipo debe realizar un :fork_and_knife: [fork](https://help.github.com/articles/fork-a-repo/)
-del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo. La otra integrante del equipo deber hacer un fork **del repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote` hacia el mismo. 
+del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo. La otra integrante del equipo deber hacer un fork **del repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote` hacia el mismo.
 4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
   tu _fork_ a tu computadora (copia local).
 5. 📦 Instala las dependencias del proyecto con el comando `npm
