@@ -1,3 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Variables globales
 const laboratoria = "https://api.myjson.com/bins/1amyo6";//API con DATA a usar (base de datos de alumnas)
 const search = 'Aileen Edwyna';
@@ -109,7 +132,7 @@ const printFilter = (filter)=>{
   }
   resultFilter.innerHTML= studentsFilter;
 };
-//DECLARACION DE LA FUNCION QUE SE EJECUTARÁ CON LOS EVENTOS CLIK
+// DECLARACION DE LA FUNCION QUE SE EJECUTARÁ CON LOS EVENTOS CLIK
 const listeners = (data) => {
   // Evento que manda a ejecutar e imprimir la funcion de filtrado
   // Evento que manda a ejecutar e imprimir la funcion de sedes
