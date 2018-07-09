@@ -39,16 +39,35 @@ Conforme a estos resultados haremos nuestro primer sketch tratando de cubrir las
 Tomando en cuenta lo que el usuario puntuo como importante decidimos llevar acabo nuestro primer sketch, respetamos los colores de la empresa y tratamos de que fuera lo más amigable posible para el usuario.
 
 También haciendo investigación sobre estos tableros nos enfocamos en doa preguntas importantes 
--[x]¿Qué tipo de datos se buscan en este data dashboard para hacerlo más eficiente? 
--[x]¿Qué tipo de cuestiones responde el contenido de este data dashboard?
+*¿Qué tipo de datos se buscan en este data dashboard para hacerlo más eficiente? 
+*¿Qué tipo de cuestiones responde el contenido de este data dashboard?
 
 Apegandonos a lo que las entrevisatas lanzaron como resultados, nos quedo claro que lo más importante era un visión general de cómo estaba el estado actual de todas la generación, no era tan importante la visualización de una grafica con mucha información, o de información ineficiente; era más importante ver números concretos como porcentajes que les daba a los usuraios un número escencial para tomar acciones.
 
 Tenemos muy presente que los usuarios entrevistados no habian utilizado un data dasboard previamente, entonces tanto como usuario como nosotros no   información sobre el este campo, pero puntuo que era importante saber cuantas alumnas estaban estudiando activamente, y que sería un dato primordial de tenerlo como principal,  pues hacía el proceso manualmente en la aplicación que usa actualmente.
 
-Puntuaron que no era tan importante saber que porcentaje había comenzado y su progreso, sino que lo más importante eran las actuales activas. Aunque si le interesa quien va por debajo del porcentaje esperado y quien va al nivel o incluso un poco más arriba, eso le daría una idea más cercana y actual de cómo es el rendimiento en general.
+Puntuaron que no era tan importante saber que porcentaje había comenzado el bootcamp y su progreso, sino que lo más importante eran las actuales activas. Aunque si le interesa quien va por debajo del porcentaje esperado y quien va al nivel o incluso un poco más arriba, eso le daría una idea más cercana y actual de cómo es el rendimiento en general.
 
+###El perfil
 
+Hicimos entrevistas a jovenes adultos de entre 25 a 32 años que han desarrollado un cargo como TMs, trabajadores de empresas como Nielsen, usuarios regulares con acceso y experiencia en datos.
+
+Cada uno tuvo sus preferencias, pues a unos les interesaba más los gráficos pues eran más visibles los avances y las áreas de problema, pero para otros no eran primordiales.
+Como prueba para este primer sketck decidimos incorporarlas y ver cual era la reacción. La mayoria de ellos no las encontró ni muy necesarias pero tampoco inútiles. 
+
+Los colores y su contrastes no fueron del agrado de todos, pues pensaban que eran muy contrastantes y la tipografía fue considerada muy infantil. Otro aspecto que nos dieron a notar es que el flijo era un poco tedioso al tener que hacer muchos clicks para llegar al destino final y no lo encontraron práctico. Pero estuvieron de acuerdo que la información era suficiente pero poco detallada. Aunque he de puntuar que para esta primera entrega no se incorporó toda la información.
+
+Con las primeras pruebas de nuestro demo decidimos hacer algunos cambios para el segundo sketch, incorporamos un log in pues el tema de la seguridad es importante para nuestro cliente, pero le aclaramos que de no ser posible para la entrega final no se adjuntaria. 
+
+El sketch consta de un log in, donde nosotros le brindamos al usuario y contraseña para que no tenga problemas de un registro, y por motivos de más seguridad. Agilizamos el demo incorporando un nav bar para una navegación más dinámica y eficaz, además que el desarrollo se simplifico al no emplear tantos enlaces hacía otros HTMLS.
+
+Las pruebas de estos demos resultaron con mejores experiencias, pero el tema del demo, tanto el fondo como otros aspectos seguían pareciendo un poco infantiles y no correspondian a el objetivo final, el cual aunque no era de un rango empresarial cuadrado tampoco entraba en el perfil deseado.
+
+Se reconsidero todo el sketch, pero conservamos la idea de un nav bar, pues tuvimos buenos feedbacks de ello. El log in se incorporó y mantuvimos la idea de nosotros brindar el user y password. Los colores de la empresa se respetaron y tratamos de hacer un contraste menos agresivo. Elegimos colores más serios pero incorporamos un contraste armónico usando los colores de la empresa, así la navegación no sera cansada ni de día ni de noche. Esperamos que el resultado sea del agrado total del usuario.
+
+###Sketchs
+
+En esta sección mostraremos la evolución de los sketches que realizamos durante el proceso de entrega del producto y están por orden cronológico. 
 
 Iniciamos con una idea de sketch que a continuación presentamos, su diagrama de flujo y sus sketchs primarios en papel.
 Tomamos en cuenta todas las sugerencias y necesidades de las entrevistas pero también hicimos un research externo inspirandonos en algunas páginas de data dashboards. Lo que pudimos observar fue que la mayor parte de la información está a primera vista, con diferentes formas de organización.
@@ -70,6 +89,8 @@ El diagrama de flujo parecia sencillo, y lo era, pero no era eficiente.
 ![Flujo](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/Flujo.png)
 
 Nos percatamos que eran demasiados HTML's y muchos botones, no era nada práctico y era un poco tedioso.
+
+![sketch](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/sketch%201%20copia.jpg)
 
 Esta segunda idea, se nos hizo más viable.
 
