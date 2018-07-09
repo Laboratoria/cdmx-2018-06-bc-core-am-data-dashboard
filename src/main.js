@@ -5,7 +5,7 @@ const orderBy ="percentage";
 const orderDirection = "DESC";
 //DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
 const printVenues = (venues) =>{
-  const resultVen = document.getElementById('print-venues');
+  const resultVen = document.getElementById('cardsSpace');
   let ven ='';
   for(let i=0; i<venues.length; i++){
     let venueAverage= Math.round(venues[i].average);
@@ -26,7 +26,7 @@ const printVenues = (venues) =>{
   resultVen.innerHTML= ven;
 };
 const printGenerations = (generations) =>{
-  const resultGen = document.getElementById('print-generation');
+  const resultGen = document.getElementById('cardsSpace');
   let gen ='';
   for(let i=0; i<generations.length; i++){
     gen += `<div class="col s3 m3">
@@ -47,7 +47,7 @@ const printGenerations = (generations) =>{
   resultGen.innerHTML= gen;
 };
 const printStudents = (students) =>{
-  const resultStudents = document.getElementById('students-result');
+  const resultStudents = document.getElementById('cardsSpace');
   let studentsS ='';
   for(let i=0; i<students.length; i++){
     studentsS += `<div class="col s3 m3">
@@ -68,7 +68,7 @@ const printStudents = (students) =>{
   resultStudents.innerHTML= studentsS;
 };
 const printSort = (sort)=>{
-  const resultSort = document.getElementById('students-result');
+  const resultSort = document.getElementById('cardsSpace');
   let studentsSort ='';
   for(let i=0; i<sort.length; i++){
     studentsSort += `<div class="col s3 m3">
@@ -89,7 +89,7 @@ const printSort = (sort)=>{
   resultSort.innerHTML= studentsSort;
 };
 const printFilter = (filter)=>{
-  const resultFilter = document.getElementById('students-result');
+  const resultFilter = document.getElementById('cardsSpace');
   let studentsFilter ='';
   for(let i=0; i<filter.length; i++){
     studentsFilter += `<div class="col s3 m3">
@@ -111,16 +111,33 @@ const printFilter = (filter)=>{
 };
 //DECLARACION DE LA FUNCION QUE SE EJECUTARÁ CON LOS EVENTOS CLIK
 const listeners = (data) => {
-  //Evento que manda a ejecutar e imprimir la funcion de filtrado
-  let getFilter = document.getElementById("filt");
+  // Evento que manda a ejecutar e imprimir la funcion de filtrado
+  // Evento que manda a ejecutar e imprimir la funcion de sedes
+  let getVenue = document.getElementById("goVenues");
+  getVenue.addEventListener("click", (e)=>{
+    const venues = computeVenuesStats(data);
+    printVenues(venues);
+  });
+  // Evento que manda a ejecutar e imprimir la funcion de generaciones
+  let getGeneration = document.getElementById("goGeneretions");
+  getGeneration.addEventListener("click", (e)=>{
+    const generation = computeGenerationsStats(data);
+    printGenerations(generation);
+  });
+  let getStudents = document.getElementById("goStudents");
+  getStudents.addEventListener("click", (e)=>{
+    const students = computeStudentsStats(data);
+    printStudents(students);
+  });
+  let getFilter = document.getElementById("goFilter");
   getFilter.addEventListener("click", (e)=>{
     const students = computeStudentsStats(data);
     const search = 'Aileen Edwyna';
     const filter = filterStudents(students,search);
     const printF = printFilter(filter);
   });
-  //Evento que manda a ejecutar e imprimir la funcion de ordenamiento
-  let getSort = document.getElementById("sort");
+  // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
+  let getSort = document.getElementById("goSort");
   getSort.addEventListener("click", (e)=>{
     const students = computeStudentsStats(data);
     const orderBy = "percentage";
@@ -128,30 +145,12 @@ const listeners = (data) => {
     const sort = sortStudents(students, orderBy, orderDirection);
     const printS = printSort(sort);
   });
-  //Evento que manda a ejecutar e imprimir la funcion de sedes
-  let getVenue = document.getElementById("venuesFun");
-  getVenue.addEventListener("click", (e)=>{
-    const venues = computeVenuesStats(data);
-    printVenues(venues);
-  });
-  //Evento que manda a ejecutar e imprimir la funcion de generaciones
-  let getGeneration = document.getElementById("generationFun");
-  getGeneration.addEventListener("click", (e)=>{
-    const generation = computeGenerationsStats(data);
-    printGenerations(generation);
-  });
-  let getStudents = document.getElementById("studentsFun");
-  getStudents.addEventListener("click", (e)=>{
-    const students = computeStudentsStats(data);
-    printStudents(students);
-  });
 }
 
 window.onload = () =>{
   fetch(laboratoria)
     .then(data => data.json())
     .then((data) =>{
-      //const print = generationsLima(data);
       listeners(data);
     })
     .catch((error) => {

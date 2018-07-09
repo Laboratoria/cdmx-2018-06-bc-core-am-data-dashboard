@@ -1,5 +1,8 @@
+/* data.js es el archivos JS en el cual se declaran las funciones globales y locales para la extracción y procesamiento de la data del
+proyecto. En algunas funciones se hace uso de Templete String para la creacion de card dinámicas para presentar información en el DOM*/
 window.computeVenuesStats = (laboratoria) => {
-  let venuesArray = [];
+// Función que extrae infomación sobre cada una de las sedes, genera un arreglo como: [{},{},{}]
+  let venuesArray = [];//Variables locales
   let average = 0;
   let advanceStudents = 0;
   let inLowStudents = 0;
@@ -7,16 +10,16 @@ window.computeVenuesStats = (laboratoria) => {
   let readingAverage = 0;
   let quizAverage = 0;
   let timeAverage = 0;
-  for (let key in laboratoria) {
+  for (let key in laboratoria) {// Ciclo de evaluacion general
     let myobj = {};
-    average = 0;
+    average = 0;// Reinicio de variables
     advanceStudents = 0;
     inLowStudents = 0;
     numStudents = 0;
     readingAverage = 0;
     quizAverage = 0;
     timeAverage = 0;
-    myobj.venue = key.toUpperCase();
+    myobj.venue = key.toUpperCase();// Extraccion y procesamiento de data
     let generations = laboratoria[key].generacion;
     for (let generation in generations) {
       const students = laboratoria[key].generacion[generation].estudiantes;
@@ -32,18 +35,18 @@ window.computeVenuesStats = (laboratoria) => {
         const progresses = laboratoria[key].generacion[generation].estudiantes[student].progreso;
         for (let progres in progresses) {
           const items = laboratoria[key].generacion[generation].estudiantes[student].progreso[progres];
-          //console.log(items);
+          // console.log(items);
           for (let item in items) {
             const subs = Object.values(items);
           }
         }
       }
-    } average = average / numStudents;
+    } average = average / numStudents;// Calculo de promedios
     timeAverage = timeAverage / numStudents;
     readingAverage = readingAverage / numStudents;
     quizAverage = quizAverage / numStudents;
     timeAverage = (timeAverage * average) / 100;
-    myobj.average = Math.round(average);
+    myobj.average = Math.round(average);// Generación de propiedades del objeto Sede
     myobj.activeStudents = numStudents;
     myobj.advanceStudents = advanceStudents;
     myobj.inLowStudents = inLowStudents;
@@ -53,9 +56,9 @@ window.computeVenuesStats = (laboratoria) => {
     venuesArray.push(myobj);
   }
   console.log(venuesArray);
-  return (venuesArray);
+  return (venuesArray);// Retorna un objeto sede que se almacena en una localidad del array
 };
-window.computeGenerationsStats = (laboratoria) => {
+window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre las generaciones, da un array: [{},{},{},{},{},{},{},{},{}]
   let generationsArray = [];
   let averageO = 0;
   let advanceStudentsO = 0;
@@ -408,7 +411,7 @@ window.generationsLima = (laboratoria) => {
     generationLim[i] = generation[i];
   }
   //-----
-  const resultGenLim = document.getElementById('print-generation');
+  const resultGenLim = document.getElementById('cardsSpace');
   let genLim ='';
   for(let i=0; i<generationLim.length; i++){
     genLim += `<div class="col s3 m3">
@@ -439,7 +442,7 @@ window.generationsMexico = (laboratoria) => {
     generationMex[i - 3] = generation[i];
   }
   //-----
-  const resultGenMex = document.getElementById('print-generation');
+  const resultGenMex = document.getElementById('cardsSpace');
   let genMex ='';
   for(let i=0; i<generationMex.length; i++){
     genMex += `<div class="col s3 m3">
@@ -470,7 +473,7 @@ window.generationsSantiago = (laboratoria) => {
     generationStg[i - 5] = generation[i];
   }
   //-----
-  const resultGenStg = document.getElementById('print-generation');
+  const resultGenStg = document.getElementById('cardsSpace');
   let genStg ='';
   for(let i=0; i<generationStg.length; i++){
     genStg += `<div class="col s3 m3">
@@ -534,7 +537,6 @@ window.studentsModal =(laboratoria)=>{
     objStudent.turno = turnoO;
     objStudent.average = averageO;
     objStudent.timeAverage = timeAverageO;
-    objStudent.average = averageO;
     objStudent.u1 = u1O;
     objStudent.u2 = u2O;
     objStudent.u3 = u3O;
@@ -549,7 +551,7 @@ return list;
 window.printSedesAll = (laboratoria) => {
   const sedeM = computeVenuesStats(laboratoria);
   console.log(sedeM);
-  const resultFilter = document.getElementById('print-venues');
+  const resultFilter = document.getElementById('cardsSpace');
   let sedeMex = '';
   for (let i = 0; i < sedeM.length; i++) {
    /* sedeMex += `<div class="col s3 m3">
