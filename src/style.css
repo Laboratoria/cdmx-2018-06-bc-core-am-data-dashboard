@@ -1,84 +1,84 @@
 header,
 main,
 footer {
-  padding-left: 70px;
-  margin-bottom: 5px;
+ padding-left: 70px;
+ margin-bottom: 5px;
 }
 
 
 nav{
-    background-color: white;
-    color: black;
+   background-color: white;
+   color: black;
 }
 nav ul a, nav a {
-    color:black;
-    font-weight: bold;
+   color:black;
+   font-weight: bold;
 }
 
 
 
 .header-logo{
-    height: 60px;
+   height: 60px;
 }
 
 #my-side-bar {
-  width: 70px;
+ width: 70px;
 
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  /* ...and now for the proper property */
-  transition:.5s;
+ -o-transition:.5s;
+ -ms-transition:.5s;
+ -moz-transition:.5s;
+ -webkit-transition:.5s;
+ /* ...and now for the proper property */
+ transition:.5s;
 }
 
 #my-side-bar:hover {
-  width: 300px;
+ width: 300px;
 }
 
 .bar-element{
-    width: 300px;
+   width: 300px;
 }
 .bar-logo{
-    width: 70px;
-    margin-top: 13px;
-    margin-left: 2px;
+   width: 70px;
+   margin-top: 13px;
+   margin-left: 2px;
 }
 
 .sidenav li>a{
-    padding-left: 25px;
+   padding-left: 25px;
 }
 
 @media only screen and (max-width: 993px) {
-  header,
-  main,
-  footer {
-    padding-left: 0px;
-  }
+ header,
+ main,
+ footer {
+   padding-left: 0px;
+ }
 
-  #my-side-bar {
-    width: 300px;
-  }
+ #my-side-bar {
+   width: 300px;
+ }
 }
+
 .barra-alumnas{
     width: 70%;
     margin:0 auto;
 }
-
 body{
-    background-color: rgb(241, 235, 238);
-    color: rgb(0, 0, 0);
+   background-color: rgb(241, 235, 238);
+   color: rgb(0, 0, 0);
 }
 span{
-    font-size: 1.5em;
+   font-size: 1.5em;
 }
 .cards{
     font-weight: bold;
     text-align: center;
 }
 #responsive-img logo{
-    height: 50px;
-    width: 50px;
+   height: 50px;
+   width: 50px;
 }
 .numero{
     font-size: 3em;
@@ -91,52 +91,57 @@ span{
 }
 
 .tamaño-barra{
-    border-radius: 5px;
-    height: 20px;
-    background-color: gainsboro;
+   border-radius: 5px;
+   height: 20px;
+   background-color: gainsboro;
 }
 .color-fondo{
-    background-color:pink;
+   background-color:pink;
 }
 .letra-progreso{
-    font-size: 1.5em;
+   font-size: 1.5em;
 
 }
 
 .color-progreso2{
-    background-color: #dc3545;
+   background-color: #dc3545;
 }
 .color-progreso1{
-    background-color: rgb(131, 204, 21) !important;
+   background-color: rgb(131, 204, 21) !important;
 }
 .izquierda{
-    float: left;
+   float: left;
 }
 .derecha{
-    float: right;
+   float: right;
 }
 .letra-barra{
-    font-size: 1em;
+   font-size: 1em;
 }
 .elemento-card{
-    margin-top: 15px;
+   margin-top: 15px;
 }
 #map{
-    width: 100%;
+   width: 100%;
 }
 .lista-alumnas{
-    background-color: bisque;
+   background-color: bisque;
 }
 .collapsible-header{
-    display: block;
+   display: block;
 }
 .fondo-blanco{
-    background-color: white;
+   background-color: white;
+}
+.center{
+   font-size: 2em;
+   text-align: center;
+
 }
 .center{
     font-size: 2em;
     text-align: center;
-    
+
 }
 .color-alumnas{
     background-color: pink darken-2;
@@ -146,7 +151,7 @@ span{
 }
 .btn-alumnas{
    color: white;
-   background-attachment: 
+   background-attachment:
    font-size: .8em;
 }
 .collapsible-header{
