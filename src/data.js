@@ -92,7 +92,7 @@ window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre 
     i++;
     for (generation in generations) {
       let myObj = {};
-      countsO = 0; averageO = 0; advanceStudentsO = 0; inLowStudentsO = 0; timeAverageO = 0;
+      countsO = 0; averageO = 0; advanceStudentsO = 0; inLowStudentsO = 0; timeAverageO = 0; mediumStudents =0;
       advanceU1 =0; advanceU2 =0; advanceU3=0; quizU1=0; quizU2=0; quizU3=0;
       generationsO = generation;
       venuesO = venuesValue[i];
@@ -128,6 +128,7 @@ window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre 
       myObj.advanceU3 = Math.round(advanceU3/countsO);
       myObj.quizAverage = Math.round(quizAverageO);
       generationsArray.push(myObj);
+      countsO =0;
     }
   }
   console.log(generationsArray);
@@ -737,12 +738,11 @@ window.printSedesAll = (laboratoria) => {
     advancePercentage[i] = Math.round(((sedeM[i].advanceStudents)*100)/(sedeM[i].activeStudents));
     lowPercentage[i] = Math.round(((sedeM[i].inLowStudents)*100)/(sedeM[i].activeStudents));
     mediumPercentage[i] = Math.round(((sedeM[i].mediumStudents)*100)/(sedeM[i].activeStudents));
-    sedeAll += `<div class="row" id="cardsSpace">
-                  <div class="col l4 m6 s12">
+    sedeAll += `<div class="col l4 m6 s12">
                        <div class="card white darken-1">
                            <div class="card-content card-data black-text">
-                               <span class="card-title" id="cards">${sedeM[i].venue}</span>
-                               <div id="color-activas">
+                               <span class="card-title cards">${sedeM[i].venue}</span>
+                               <div class="color-activas">
                                    <span id="numero">${sedeM[i].activeStudents}</span>
                                    <span> Alumnas</span>
                                </div>
@@ -754,21 +754,25 @@ window.printSedesAll = (laboratoria) => {
                                        <div class="determinate blue" class="color-fondo" style="width: ${sedeM[i].average}${'%'}"></div>
                                        <span class="derecha letra-barra">${sedeM[i].average}${'%'}</span>
                                    </div>
-                               </div>
+
 
                                <p>Intoducción a la programación</p>
                                <div class="progress grey">
-                                   <div class="determinate pink" class="color-fondo" style="width: ${sedeM[i].advanceU1}${'%'}">
+                                   <div class="determinate pink" class="color-fondo" style="width: ${sedeM[i].advanceU1}${'%'}" title ="${sedeM[i].advanceU1}${'%'}">
                                    </div>
                                </div>
 
                                <p>Variables y tipos de datos</p>
                                <div class="progress grey">
-                                   <div class="determinate purple" class="color-fondo" style="width: ${sedeM[i].advanceU2}${'%'}"></div>
+                                   <div class="determinate purple" class="color-fondo" style="width: ${sedeM[i].advanceU2}${'%'}" title ="${sedeM[i].advanceU2}${'%'}"></div>
                                </div>
                                <p>UX</p>
                                <div class="progress grey">
-                                   <div class="determinate orange" class="color-fondo" style="width: ${sedeM[i].advanceU3}${'%'}"></div>
+                                   <div class="determinate orange" class="color-fondo" style="width: ${sedeM[i].advanceU3}${'%'}" title ="${sedeM[i].advanceU3}${'%'}"></div>
+                               </div>
+                               <p>Quiz´s</p>
+                               <div class="progress grey">
+                                   <div class="determinate green" class="color-fondo" style="width: ${sedeM[i].quizAverage}${'%'}" title ="${sedeM[i].quizAverage}${'ptos'}"></div>
                                </div>
                                <!--Promedios generales fin-->
                                <p>
@@ -785,9 +789,9 @@ window.printSedesAll = (laboratoria) => {
                                        <i class="small material-icons">star_half</i>
                                    </span>
                                    <div class="progress grey tamaño-barra">
-                                       <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
-                                       <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"></div>
-                                       <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas"></div>
+                                       <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares" title="${sedeM[i].mediumStudents}${' Alumnas regulares'}"></div>
+                                       <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas" title="${sedeM[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                                       <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas" title="${sedeM[i].advanceStudents}${' Alumnas avanzadas'}"></div>
 
                                    </div>
                                </div>

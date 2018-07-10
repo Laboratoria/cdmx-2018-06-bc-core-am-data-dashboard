@@ -4,32 +4,41 @@ const laboratoria = "https://api.myjson.com/bins/1amyo6";//API con DATA a usar (
 const printGenerations = (generations) => {
   const resultGen = document.getElementById('cardsSpace');
   let gen = '';
+  let advancePercentage =[];
+  let lowPercentage =[];
+  let mediumPercentage =[];
   for (let i = 0; i < generations.length; i++) {
+    advancePercentage[i] = Math.round(((generations[i].advanceStudents)*100)/(generations[i].count));
+    lowPercentage[i] = Math.round(((generations[i].inLowStudents)*100)/(generations[i].count));
+    mediumPercentage[i] = Math.round(((generations[i].mediumStudents)*100)/(generations[i].count));
     gen += `<div class="row" id = "cardsSpace">
               <div class="col s12 m12 l12">
                 <div class="card whithe col s12 m12 l12">
                   <div class="card-content black-text col s12 m12 l12">
                     <div class="col s6 m5 l5">
-                    <!--generaciones1-->
+                      <!--generaciones1-->
                       <span class="card-title cards">${generations[i].generation} Generación</span>
                       <span class="card-title cards">${generations[i].venue}</span>
-                      <div id="color-activas">
-                        <span id="numero">${generations[i].count}</span>
-                        <span> Alumnas</span>
-                      </div>
-                      <!--Barra de avance dos colores-->
-                      <div class="elemento-card">
-                        <span class="letra-progreso izquierda">
-                          <i class="material-icons">mood</i>+80%</span>
-                        <span class="letra-progreso derecha">
-                          -60%
-                          <i class="material-icons">mood_bad</i>
-                        </span>
-                        <div class="progress tamaño-barra color-progreso2">
-                        <div class="determinate color-progreso1" class="color-fondo" style="width: ${generations[i].inLowStudents}${'%'}"></div>
-                        </div>
-                        </div>
-                        <!--Tiempo promedio-->
+                        <div class="color-activas">
+                          <span class="numero">${generations[i].count}</span>
+                          <span> Alumnas</span>
+                          </div>
+                          <!--Barra de avance tres colores-->
+                          <span class="center">Progreso alumnas:</span>
+                          <div class="elemento-card">
+                            <span class="letra-progreso izquierda">
+                            <i class="small material-icons">star</i>+90%</span>
+                            <span class="letra-progreso derecha">
+                              -60%
+                            <i class="small material-icons">star_half</i>
+                            </span>
+                            <div class="progress grey tamaño-barra">
+                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares" title="${generations[i].mediumStudents}${' Alumnas regulares'}"></div>
+                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas" title="${generations[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas" title="${generations[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                            </div>
+                          </div>
+                          <!--Tiempo promedio-->
                           <p>
                             <i class="material-icons">schedule</i>
                             <span>Tiempo promedio invertido: ${generations[i].timeAverage}${'hrs'}</span>
@@ -45,27 +54,29 @@ const printGenerations = (generations) => {
                                 <span class="derecha letra-barra">${generations[i].average}${'%'}</span>
                               </div>
                             </div>
-
                             <p>Intoducción a la programación</p>
                               <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:/*codigo AVANCE PORCENTAJE*/ %">
+                                <div class="determinate pink" class="color-fondo" style="width:${generations[i].advanceU1}${'%'}" title ="${generations[i].advanceU1}${'%'}">
                                 </div>
                               </div>
-
                             <p>Variables y tipos de datos</p>
                               <div class="progress grey">
-                                <div class="determinate purple" class="color-fondo" style="width: /*codigo AVANCE PORCENTAJE*/%"></div>
+                                <div class="determinate purple" class="color-fondo" style="width: ${generations[i].advanceU2}${'%'}" title ="${generations[i].advanceU2}${'%'}"></div>
                                 </div>
-                              <p>UX</p>
-                                <div class="progress grey">
-                                  <div class="determinate orange" class="color-fondo" style="width: /*codigo AVANCE PORCENTAJE*/%"></div>
-                                  </div>
-                              <!--Promedios generales fin-->
+                            <p>UX</p>
+                              <div class="progress grey">
+                                <div class="determinate orange" class="color-fondo" style="width: ${generations[i].advanceU3}${'%'}" title ="${generations[i].advanceU3}${'%'}"></div>
+                                </div>
+                            <p>Quiz´s</p>
+                              <div class="progress grey">
+                                <div class="determinate green" class="color-fondo" style="width: ${generations[i].quizAverage}${'%'}" title ="${generations[i].quizAverage}${'ptos'}"></div>
+                                </div>
+                            <!--Promedios generales fin-->
                             </div>
                           </div>
-                       </div>
-                   </div>
-               </div>`
+                        </div>
+                      </div>
+                    </div>`
   }
   resultGen.innerHTML = gen;
 };
@@ -168,12 +179,14 @@ const listeners = (data) => {
     const printS = printSort(sort);
   });
 }
-
+// Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
 window.onload = () => {
   fetch(laboratoria)
     .then(data => data.json())
     .then((data) => {
-      generationsLima(data);
+      // printSedesAll imprime la primer vista de la pagina con cards de informaciónde las sedes
+      printSedesAll(data);
+      // Ejecuta los eventos cuando se ejecuta una interacción con espacion en DOM
       listeners(data);
     })
     .catch((error) => {

@@ -67,21 +67,21 @@ span{
    font-size: 1.5em;
 }
 .cards{
-   font-weight: bold;
-   text-align: center;
+    font-weight: bold;
+    text-align: center;
 }
 #responsive-img logo{
    height: 50px;
    width: 50px;
 }
 .numero{
-   font-size: 3em;
-   text-align: center
+    font-size: 3em;
+    text-align: center
 }
 .color-activas{
-   background-color: #ffe521;
-   text-align: center;
-   border-radius: 20px;
+    background-color: #ffe521;
+    text-align: center;
+    border-radius: 20px;
 }
 
 .tamaño-barra{
@@ -131,4 +131,20 @@ span{
    font-size: 2em;
    text-align: center;
 
+}
+.center{
+    font-size: 2em;
+    text-align: center;
+
+}
+.color-alumnas{
+    background-color: pink darken-2;
+    text-align: center;
+    border-radius: 20px;
+    padding: 15px;
+}
+.btn-alumnas{
+   color: white;
+   background-attachment:
+   font-size: .8em;
 }
