@@ -1,5 +1,5 @@
- body {
-    background: #25272D;
+body {
+    /* background-color: #25272D; */
 
 }
 
@@ -22,7 +22,7 @@
  .flex-container {
     display: flex;
     flex-direction: column;
- }
+    }
 
  div a {
      margin-bottom: 20%;
@@ -66,11 +66,11 @@
 
  button {
      background-color: #ECDA38;
-     width: 50%;
+     width: 100%;
      margin-right:15px;
      border-radius: 4px;
      padding-bottom: 4px;
-     margin-left: 15px;
+     /* margin-left: 30%; */
      margin-top: 2px;
      
  }

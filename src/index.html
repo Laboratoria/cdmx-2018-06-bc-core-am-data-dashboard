@@ -6,9 +6,9 @@
   <title>Data Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -19,20 +19,23 @@
   <br>
 
   <!-- formulario de LOGIN -->
-  <section>
-    <form id="form" action="">
-      <h2>Login</h2>
+  <section class="container">
+    <main class="row"> 
+    <form id="form" action="" class="col-xs-8 col-sm-4 ">
+      <h3>Login</h3>
       <input id="input-name" type="text" placeholder="&#128274;  Username" name="usuario">
       <input id="input-password" type="password" placeholder="&#128273;  Password" name="contraseña">
       <button id="ingresar" type="button">Ingresar</button>
       </div>
     </form>
+  </main>
   </section>
 
   <!-- primer navegador para ingresar a la sede (botones)-->
 
   <section id="buttons-campus">
-    <div class="sedes col-xs-12 col-sm-4 row offset-4 container"> Sedes
+    <div class="col-xs-12 col-sm-4 row offset-4 container"> 
+     
       <div id="container-buttons-campus">
       </div>
     </div>
@@ -62,12 +65,27 @@
     </div>
   </section>
 
-  <section id="students1">
-    <div class=" col-xs-12 col-sm-4 row justify-content-end offset-4">
+  <section id="students">
+    <div class=" col-xs-12 col-sm-4 row offset-4">
       <div id="container-classified-students">
       </div>
     </div>
   </section>
+
+  <section id="student">
+    <div class=" col-xs-12 col-sm-4 row offset-4">
+      <div id="container-info-student">
+      </div>
+    </div>
+  </section>
+
+  <section id="progress">
+    <div class=" col-xs-12 col-sm-4 row offset-4">
+      <div id="container-progress">
+      </div>
+    </div>
+  </section>
+
 
   <!-- const divCol = document.createElement("div");
   const a = document.createElement("a");
