@@ -744,21 +744,28 @@ window.studentsPrint = (laboratoria) => {
   const studentsM = studentsModal(laboratoria);
   const studentsCollap = document.getElementById('cardsSpace');
   let studentsPrint = '';
+  studentsPrint = `
+                 <nav class="barra-alumnas">
+                   <div class="nav-wrapper col s12 m12 l6 offset-l3">
+                     <span class="alumnas">Alumnas</span>
+                   </div>
+                 </nav>`;
   for (let i = 0; i < studentsM.length;i++) {
+    
     studentsPrint += `<div class="container collapsable-color">
                        <ul class="collapsible">
                            <li>
                                <div class="collapsible-header">
-                                   <div>${studentsM[i].name}  ${studentsM[i].average}
+                                   <div>${studentsM[i].name}${'  '}${studentsM[i].average}${'%'}
                                        <a class="secondary-content waves-effect waves-light">
                                            <i class="material-icons">send</i>
                                        </a>
                                    </div>
                                    <div class="progress grey">
-                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ studentsM[i].p1}${'%'}" style="width: ${studentsM[i].p1}${'%'}" title = "${' U1 '}${studentsM[i].p1}${'%'}"></div>
-                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ studentsM[i].p2}${'%'}" style="width: ${studentsM[i].p2}${'%'}" title = "${' U2 '}${studentsM[i].p2}${'%'}"></div>
-                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${studentsM[i].p3}${'%'}" style="width: ${studentsM[i].p3}${'%'}" title = "${' U3 '}${studentsM[i].p3}${'%'}"></div>
-                                   </div>
+                                      <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ studentsM[i].p1}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3 + studentsM[i].p1 / 3}${'%'}" title = "${' U1 '}${studentsM[i].p1}${'%'}"></div>
+                                      <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ studentsM[i].p2}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3}${'%'}" title = "${' U2 '}${studentsM[i].p2}${'%'}"></div>
+                                      <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${studentsM[i].p3}${'%'}" style="width: ${studentsM[i].p3 / 3}${'%'}" title = "${' U3 '}${studentsM[i].p3}${'%'}"></div>
+                                  </div>
                                </div>
                                <div class="collapsible-body">
                                    <div>
@@ -775,25 +782,25 @@ window.studentsPrint = (laboratoria) => {
                                        <i class="material-icons">wb_sunny</i> Turno: ${studentsM[i].turno}
                                    </p>
                                    <p class="collapsable">
-                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${studentsM[i].timeAverage}
+                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${studentsM[i].timeAverage}${' hrs.'}
                                    </p>
                                    <p class="collapsable">
                                        <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${studentsM[i].p1}${'%'}
                                    </p>
                                    <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${studentsM[i].quizU1}
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${studentsM[i].quizU1}${'  ptos.'}
                                    </p>
                                    <p class="collapsable">
                                        <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${studentsM[i].p2}${'%'}
                                    </p>
                                    <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${studentsM[i].quizU2}
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${studentsM[i].quizU2}${'  ptos.'}
                                    </p>
                                    <p class="collapsable">
                                        <i class="material-icons">book</i> Unidad 3 UX: ${studentsM[i].p3}${'%'}
                                    </p>
                                    <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${studentsM[i].quizU3}
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${studentsM[i].quizU3}${'  ptos.'}
                                    </p>
                                </div>
                            </li>
@@ -803,9 +810,10 @@ window.studentsPrint = (laboratoria) => {
   }
   studentsCollap.innerHTML = studentsPrint;
   // ToolTip
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.tooltipped');
-    var instances = M.Tooltip.init(elems, {});
+  $(document).ready(function(){
+   $('.tooltipped').tooltip({
+     accordion: true
+   });
   });
   // Colapso de alumnas
   $(document).ready(function() {

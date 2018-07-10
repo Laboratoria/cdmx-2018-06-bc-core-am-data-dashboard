@@ -1,4 +1,4 @@
-// barra para alumnas
+// barra verde para alumnas
 $('.dropdown-trigger').dropdown();
 
 // Variables globales
@@ -83,27 +83,6 @@ const printGenerations = (generations) => {
   }
   resultGen.innerHTML = gen;
 };
-const printStudents = (students) => {
-  const resultStudents = document.getElementById('cardsSpace');
-  let studentsS = '';
-  for (let i = 0; i < students.length; i++) {
-    studentsS += `<div class="col s3 m3">
-                    <div class="card white darken-1">
-                    <div class="card-content card-data black-text">
-                      <span class="card-title" id="cards"></span>
-                      <h4">Sede: ${students[i].campus}</h4>
-                      <h5>Generacion: ${students[i].generation}</h5>
-                      <p>Nombre: ${students[i].name}</p>
-                      <p>Completitud: ${students[i].stats.completedPercentage}${'%'}</p>
-                      <p>Status: ${students[i].stats.status}</p>
-                      <p>Tiempo total del programa: ${students[i].totalTime}${'hrs'}</p>
-                      <p>Tiempo invertido: ${students[i].timeProm}${'hrs'}</p>
-                    </div>
-                  </div>
-                </div>`;
-  }
-  resultStudents.innerHTML = studentsS;
-};
 const printSort = (sort) => {
   const resultSort = document.getElementById('cardsSpace');
   let studentsSort = '';
@@ -112,7 +91,7 @@ const printSort = (sort) => {
                        <ul class="collapsible">
                            <li>
                                <div class="collapsible-header">
-                                   <div>${sort[i].name}  ${sort[i].average}
+                                   <div>${sort[i].name}${'  '}${sort[i].average}${'%'}
                                        <a class="secondary-content waves-effect waves-light">
                                            <i class="material-icons">send</i>
                                        </a>
@@ -185,7 +164,7 @@ const printFilter = (filter) => {
                        <ul class="collapsible">
                            <li>
                                <div class="collapsible-header">
-                                   <div>${filter[i].name}  ${filter[i].average}
+                                   <div>${filter[i].name}${'  '}${filter[i].average}${'%'}
                                        <a class="secondary-content waves-effect waves-light">
                                            <i class="material-icons">send</i>
                                        </a>
@@ -217,19 +196,19 @@ const printFilter = (filter) => {
                                        <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${filter[i].p1}${'%'}
                                    </p>
                                    <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${filter[i].quizU1}
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${filter[i].quizU1}${'  ptos.'}
                                    </p>
                                    <p class="collapsable">
                                        <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${filter[i].p2}${'%'}
                                    </p>
                                    <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${filter[i].quizU2}
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${filter[i].quizU2}${'  ptos.'}
                                    </p>
                                    <p class="collapsable">
                                        <i class="material-icons">book</i> Unidad 3 UX: ${filter[i].p3}${'%'}
                                    </p>
                                    <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${filter[i].quizU3}
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${filter[i].quizU3}${'  ptos.'}
                                    </p>
                                </div>
                            </li>
@@ -272,7 +251,7 @@ const listeners = (data) => {
   let getFilter = document.getElementById('goFilter');
   getFilter.addEventListener('click', (event) => {
     const students = studentsModal(data);
-    const search = 'Aileen Edwyna';
+    const search = 'Melisa Marjorie';
     const filter = filterStudents(students, search);
     const printF = printFilter(filter);
   });
