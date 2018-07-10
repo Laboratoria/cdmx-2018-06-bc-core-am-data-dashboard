@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alumnas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <!--Barra superior-->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">
+                    <img class="header-logo" src="Pictures/black-logo.png">
+                </a>
+                <a href="#" data-target="my-side-bar" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a>Hola Lucile!!!</a>
+                    </li>
+                    <li>
+                        <a href="iniciosesion.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Menu lateral-->
+        <ul id="my-side-bar" class="sidenav sidenav-fixed">
+            <li class="bar-element">
+                <div>
+                    <a href="#">
+                        <img class="bar-logo" src="Pictures/l_rgb_-01_360.png">
+                    </a>
+                </div>
+            </li>
+            <li class="bar-element" id="goVenues">
+                <a href="#!">
+                    <i class="material-icons">location_on</i>Sedes</a>
+            </li>
+            <li class="bar-element">
+                <a href="#!" id="goGeneretions">
+                    <i class="material-icons">school</i>Generaciones</a>
+            </li>
+            <li class="bar-element">
+                <a href="#!" id="goStudents">
+                    <i class="material-icons">face</i>Alumnas</a>
+            </li>
+            <li class="bar-element">
+                <a href="#!" id="goFilter">
+                    <i class="material-icons">filter_list</i>Filtrar</a>
+            </li>
+            <li class="bar-element">
+                <a href="#!" id="goSort">
+                    <i class="material-icons">find_replace</i>Ordenar</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+            <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="#!"><i class="material-icons right">school</i>3ra generación</a></li>
+                    <li><a href="#!"><i class="material-icons right">school</i>4ta generación</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!"><i class="material-icons right">school</i>5ta generación</a></li>
+                  </ul>
+                  <ul id="dropdown2" class="dropdown-content">
+                        <li><a href="#!"><i class="material-icons right">school</i>3ra generación</a></li>
+                        <li><a href="#!"><i class="material-icons right">school</i>4ta generación</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!"><i class="material-icons right">school</i>5ta generación</a></li>
+                      </ul>
+                      <ul id="dropdown3" class="dropdown-content">
+                            <li><a href="#!"><i class="material-icons right">school</i>3ra generación</a></li>
+                            <li><a href="#!"><i class="material-icons right">school</i>4ta generación</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!"><i class="material-icons right">school</i>5ta generación</a></li>
+                          </ul>
+                  <nav class="barra-alumnas">
+                    <div class="nav-wrapper col s12 m12 l6 offset-l3">
+                      <span class="alumnas">Alumnas</span>
+                      <ul class="right hide-on-med-and-down">
+                        
+                        <!-- Dropdown Trigger -->
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">SANTIAGO<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">MEXICO<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">LIMA<i class="material-icons right">arrow_drop_down</i></a></li>
+                      </ul>
+                    </div>
+                  </nav>
+
+        <!--Alumnas-->
+        <div class="col s6 container collapsable-color">
+            <ul class="collapsible">
+               
+                <li>
+                    <div class="collapsible-header">
+                        <div><span>Nayely Estefania Molina Escobar</span><span>'  '${90%}</span>
+
+                            <a class="secondary-content waves-effect waves-light">
+                                <i class="material-icons">send</i>
+                            </a>
+
+                        </div>
+                        <div class="progress grey">
+                            <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX 90%" style="width: 90%"></div>
+                            <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos 90%" style="width: 60%"></div>
+                            <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion 90%" style="width: 30%"></div>
+                        </div>
+                        <div><p>MEXICO - QUINTA generación</p></div>
+                    </div>
+                    <div class="collapsible-body">
+                        <div>
+                            <span>
+                                <img style="width:150px; height:150px;" src="Pictures/perfil.png">
+                            </span>
+                            <span>
+                                Nayely Estefania Molina Ecobar
+                            </span>
+                        </div>
+
+                        <p class="collapsable">
+                            <i class="material-icons">mail_outline</i> Email: nayelocs@gmail.com
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">wb_sunny</i> Turno: AM
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">schedule</i> Tiempo promedio invertido:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 1 Introducción a la programación:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 1:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 2:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 3 UX:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 3:
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <div>Nayely Estefania Molina Escobar 90%
+
+                            <a class="secondary-content waves-effect waves-light">
+                                <i class="material-icons">send</i>
+                            </a>
+
+                        </div>
+                        <div class="progress grey">
+                            <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX 90%" style="width: 90%"></div>
+                            <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos 90%" style="width: 60%"></div>
+                            <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion 90%" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <div>
+                            <span>
+                                <img style="width:150px; height:150px;" src="Pictures/perfil.png">
+                            </span>
+                            <span>
+                                Nayely Estefania Molina Ecobar
+                            </span>
+                        </div>
+
+                        <p class="collapsable">
+                            <i class="material-icons">mail_outline</i> Email: nayelocs@gmail.com
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">wb_sunny</i> Turno: AM
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">schedule</i> Tiempo promedio invertido:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 1 Introducción a la programación:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 1:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 2:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 3 UX:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 3:
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <div>Nayely Estefania Molina Escobar 90%
+
+                            <a class="secondary-content waves-effect waves-light">
+                                <i class="material-icons">send</i>
+                            </a>
+
+                        </div>
+                        <div class="progress grey">
+                            <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX 90%" style="width: 90%"></div>
+                            <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos 90%" style="width: 60%"></div>
+                            <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion 90%" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <div>
+                            <span>
+                                <img style="width:150px; height:150px;" src="Pictures/perfil.png">
+                            </span>
+                            <span>
+                                Nayely Estefania Molina Ecobar
+                            </span>
+                        </div>
+
+                        <p class="collapsable">
+                            <i class="material-icons">mail_outline</i> Email: nayelocs@gmail.com
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">wb_sunny</i> Turno: AM
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">schedule</i> Tiempo promedio invertido:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 1 Introducción a la programación:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 1:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 2:
+                        </p>
+                        <p class="collapsable">
+                            <i class="material-icons">book</i> Unidad 3 UX:
+                        </p>
+                        <p class="collapsable-sub">
+                            <i class="material-icons">playlist_add_check</i> Score quiz 3:
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Fin de alumna, inicio de la siguiente-->
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+
+
+
+ 
+
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+//barra para alumnas
+$(".dropdown-trigger").dropdown();
 //Codigo para templete string estudiantes-funcionalidad html.
 // Barra Menu lateral colapsable
 document.addEventListener('DOMContentLoaded', function () {
@@ -148,8 +150,7 @@ const listeners = (data) => {
   });
   let getStudents = document.getElementById("goStudents");
   getStudents.addEventListener("click", (e) => {
-    const students = computeStudentsStats(data);
-    printStudents(students);
+    studentsPrint(data);
   });
   let getFilter = document.getElementById("goFilter");
   getFilter.addEventListener("click", (e) => {
