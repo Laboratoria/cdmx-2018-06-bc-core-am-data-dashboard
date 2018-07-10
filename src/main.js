@@ -1,20 +1,19 @@
+// barra verde para alumnas
+$('.dropdown-trigger').dropdown();
 
-//barra verde para alumnas
-$(".dropdown-trigger").dropdown();
-
-//Variables globales
-const laboratoria = "https://api.myjson.com/bins/1amyo6";//API con DATA a usar (base de datos de alumnas)
-//DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
+// Variables globales
+const laboratoria = 'https://api.myjson.com/bins/1amyo6';// API con DATA a usar (base de datos de alumnas)
+// DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
 const printGenerations = (generations) => {
   const resultGen = document.getElementById('cardsSpace');
   let gen = '';
-  let advancePercentage =[];
-  let lowPercentage =[];
-  let mediumPercentage =[];
+  let advancePercentage = [];
+  let lowPercentage = [];
+  let mediumPercentage = [];
   for (let i = 0; i < generations.length; i++) {
-    advancePercentage[i] = Math.round(((generations[i].advanceStudents)*100)/(generations[i].count));
-    lowPercentage[i] = Math.round(((generations[i].inLowStudents)*100)/(generations[i].count));
-    mediumPercentage[i] = Math.round(((generations[i].mediumStudents)*100)/(generations[i].count));
+    advancePercentage[i] = Math.round(((generations[i].advanceStudents) * 100) / (generations[i].count));
+    lowPercentage[i] = Math.round(((generations[i].inLowStudents) * 100) / (generations[i].count));
+    mediumPercentage[i] = Math.round(((generations[i].mediumStudents) * 100) / (generations[i].count));
     gen += `<div class="row" id = "cardsSpace">
               <div class="col s12 m12 l12">
                 <div class="card whithe col s12 m12 l12">
@@ -80,109 +79,192 @@ const printGenerations = (generations) => {
                           </div>
                         </div>
                       </div>
-                    </div>`
+                    </div>`;
   }
   resultGen.innerHTML = gen;
-};
-const printStudents = (students) => {
-  const resultStudents = document.getElementById('cardsSpace');
-  let studentsS = '';
-  for (let i = 0; i < students.length; i++) {
-    studentsS += `<div class="col s3 m3">
-                    <div class="card white darken-1">
-                    <div class="card-content card-data black-text">
-                      <span class="card-title" id="cards"></span>
-                      <h4">Sede: ${students[i].campus}</h4>
-                      <h5>Generacion: ${students[i].generation}</h5>
-                      <p>Nombre: ${students[i].name}</p>
-                      <p>Completitud: ${students[i].stats.completedPercentage}${'%'}</p>
-                      <p>Status: ${students[i].stats.status}</p>
-                      <p>Tiempo total del programa: ${students[i].totalTime}${'hrs'}</p>
-                      <p>Tiempo invertido: ${students[i].timeProm}${'hrs'}</p>
-                    </div>
-                  </div>
-                </div>`
-  }
-  resultStudents.innerHTML = studentsS;
 };
 const printSort = (sort) => {
   const resultSort = document.getElementById('cardsSpace');
   let studentsSort = '';
-  for (let i = 0; i < sort.length; i++) {
-    studentsSort += `<div class="col s3 m3">
-                      <div class="card white darken-1">
-                        <div class="card-content card-data black-text">
-                          <span class="card-title" id="cards"></span>
-                          <h4>Sede: ${sort[i].campus}</h4>
-                          <h5>Generacion: ${sort[i].generation}</h5>
-                          <p>Nombre: ${sort[i].name}</p>
-                          <p>Completitud: ${sort[i].stats.completedPercentage}${'%'}</p>
-                          <p>Status: ${sort[i].stats.status}</p>
-                          <p>Tiempo total del programa: ${sort[i].totalTime}${'hrs'}</p>
-                          <p>Tiempo invertido: ${sort[i].timeProm}${'hrs'}</p>
-                        </div>
-                      </div>
-                    </div>`
+  for (let i = 0; i < sort.length;i++) {
+    studentsSort += `<div class="container collapsable-color">
+                       <ul class="collapsible">
+                           <li>
+                               <div class="collapsible-header">
+                                   <div>${sort[i].name}${'  '}${sort[i].average}${'%'}
+                                       <a class="secondary-content waves-effect waves-light">
+                                           <i class="material-icons">send</i>
+                                       </a>
+                                   </div>
+                                   <div class="progress grey">
+                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ sort[i].p1}${'%'}" style="width: ${sort[i].p1}${'%'}" title = "${' U1 '}${sort[i].p1}${'%'}"></div>
+                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ sort[i].p2}${'%'}" style="width: ${sort[i].p2}${'%'}" title = "${' U2 '}${sort[i].p2}${'%'}"></div>
+                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${sort[i].p3}${'%'}" style="width: ${sort[i].p3}${'%'}" title = "${' U3 '}${sort[i].p3}${'%'}"></div>
+                                   </div>
+                               </div>
+                               <div class="collapsible-body">
+                                   <div>
+                                       <span>
+                                           <img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
+                                           <span>
+                                                   ${sort[i].name}
+                                           </span>
+                                   </div>
+                                   <p class="collapsable">
+                                       <i class="material-icons">mail_outline</i> Email: ${sort[i].email}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">wb_sunny</i> Turno: ${sort[i].turno}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${sort[i].timeAverage}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${sort[i].p1}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${sort[i].quizU1}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${sort[i].p2}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${sort[i].quizU2}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 3 UX: ${sort[i].p3}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${sort[i].quizU3}
+                                   </p>
+                               </div>
+                           </li>
+
+                           </ul>
+                           </div>`;
   }
   resultSort.innerHTML = studentsSort;
+  // ToolTip
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, {});
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
 };
 const printFilter = (filter) => {
   const resultFilter = document.getElementById('cardsSpace');
   let studentsFilter = '';
-  for (let i = 0; i < filter.length; i++) {
-    studentsFilter += `<div class="col s3 m3">
-                        <div class="card white darken-1">
-                          <div class="card-content card-data black-text">
-                            <span class="card-title" id="cards"></span>
-                            <h4>Sede: ${filter[i].campus}</h4>
-                            <h5>Generacion: ${filter[i].generation}</h5>
-                            <p>Nombre: ${filter[i].name}</p>
-                            <p>Completitud: ${filter[i].average}${'%'}</p>
-                            <p>Status: ${filter[i].advertisment}</p>
-                            <p>Tiempo total del programa: ${filter[i].totalTime}${'hrs'}</p>
-                            <p>Tiempo invertido: ${filter[i].timeProm}${'hrs'}</p>
-                          </div>
-                        </div>
-                      </div>`
+  for (let i = 0; i < filter.length;i++) {
+    studentsFilter += `<div class="container collapsable-color">
+                       <ul class="collapsible">
+                           <li>
+                               <div class="collapsible-header">
+                                   <div>${filter[i].name}${'  '}${filter[i].average}${'%'}
+                                       <a class="secondary-content waves-effect waves-light">
+                                           <i class="material-icons">send</i>
+                                       </a>
+                                   </div>
+                                   <div class="progress grey">
+                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ filter[i].p1}${'%'}" style="width: ${filter[i].p1}${'%'}" title = "${' U1 '}${filter[i].p1}${'%'}"></div>
+                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ filter[i].p2}${'%'}" style="width: ${filter[i].p2}${'%'}" title = "${' U2 '}${filter[i].p2}${'%'}"></div>
+                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${filter[i].p3}${'%'}" style="width: ${filter[i].p3}${'%'}" title = "${' U3 '}${filter[i].p3}${'%'}"></div>
+                                   </div>
+                               </div>
+                               <div class="collapsible-body">
+                                   <div>
+                                       <span>
+                                           <img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
+                                           <span>
+                                                   ${filter[i].name}
+                                           </span>
+                                   </div>
+                                   <p class="collapsable">
+                                       <i class="material-icons">mail_outline</i> Email: ${filter[i].email}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">wb_sunny</i> Turno: ${filter[i].turno}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${filter[i].timeAverage}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${filter[i].p1}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${filter[i].quizU1}${'  ptos.'}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${filter[i].p2}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${filter[i].quizU2}${'  ptos.'}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 3 UX: ${filter[i].p3}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${filter[i].quizU3}${'  ptos.'}
+                                   </p>
+                               </div>
+                           </li>
+
+                           </ul>
+                           </div>`;
   }
   resultFilter.innerHTML = studentsFilter;
+  // ToolTip
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, {});
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
 };
 // DECLARACION DE LA FUNCION QUE SE EJECUTARÁ CON LOS EVENTOS CLIK
 const listeners = (data) => {
   // Evento que manda a ejecutar e imprimir la funcion de sedes
-  let getVenue = document.getElementById("goVenues");
-  getVenue.addEventListener("click", (e) => {
+  let getVenue = document.getElementById('goVenues');
+  getVenue.addEventListener('click', (event) => {
     printSedesAll(data);
   });
   // Evento que manda a ejecutar e imprimir la funcion de generaciones
-  let getGeneration = document.getElementById("goGeneretions");
-  getGeneration.addEventListener("click", (e) => {
+  let getGeneration = document.getElementById('goGeneretions');
+  getGeneration.addEventListener('click', (event) => {
     const generation = computeGenerationsStats(data);
     printGenerations(generation);
   });
-  let getStudents = document.getElementById("goStudents");
-  getStudents.addEventListener("click", (e) => {
-    //const students = studentsModal(data);
+  let getStudents = document.getElementById('goStudents');
+  getStudents.addEventListener('click', (event) => {
+    // const students = studentsModal(data);
     studentsPrint(data);
   });
   // Evento que manda a ejecutar e imprimir la funcion de filtrado
-  let getFilter = document.getElementById("goFilter");
-  getFilter.addEventListener("click", (e) => {
-    const students = computeStudentsStats(data);
-    const search = 'Aileen Edwyna';
+  let getFilter = document.getElementById('goFilter');
+  getFilter.addEventListener('click', (event) => {
+    const students = studentsModal(data);
+    const search = 'Melisa Marjorie';
     const filter = filterStudents(students, search);
     const printF = printFilter(filter);
   });
   // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
-  let getSort = document.getElementById("goSort");
-  getSort.addEventListener("click", (e) => {
-    const students = computeStudentsStats(data);
-    const orderBy = "percentage";
-    const orderDirection = "DESC";
+  let getSort = document.getElementById('goSort');
+  getSort.addEventListener('click', (event) => {
+    const students = studentsModal(data);
+    const orderBy = 'percentage';
+    const orderDirection = 'ASC';
     const sort = sortStudents(students, orderBy, orderDirection);
     const printS = printSort(sort);
   });
-}
+};
 // Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
 window.onload = () => {
   fetch(laboratoria)
@@ -196,4 +278,4 @@ window.onload = () => {
     .catch((error) => {
       console.log(error);
     });
-}
+};
