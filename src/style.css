@@ -1,4 +1,23 @@
-*{
+
+ #perfil-image {
+   width: 25%;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ /*
+ *{
   margin:0 ;
   padding: 0;
   box-sizing: border-box;
@@ -43,7 +62,8 @@ body{
     text-align: center;
     }
   ul {
-      /*outline: 2px solid blue;*
+      /*outline: 2px solid blue;
+
       list-style: none;
       text-decoration: yellow;
       margin:0;
@@ -105,8 +125,8 @@ width: 280px;
   text-decoration: none;
   padding: 15px 20px;
   background: red;
-}*/
-/*footer{
+}
+footer{
   padding-top: 2em;
   padding: 2em;
 }
