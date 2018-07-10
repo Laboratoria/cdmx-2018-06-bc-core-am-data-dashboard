@@ -803,14 +803,14 @@ window.studentsPrint = (laboratoria) => {
   }
   studentsCollap.innerHTML = studentsPrint;
   // ToolTip
-  document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.tooltipped');
-      var instances = M.Tooltip.init(elems, {});
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, {});
   });
   // Colapso de alumnas
-  $(document).ready(function(){
+  $(document).ready(function() {
     $('.collapsible').collapsible({
-      accordion : true
+      accordion: true
     });
   });
 };

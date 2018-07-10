@@ -1,9 +1,9 @@
-//barra para alumnas
-$(".dropdown-trigger").dropdown();
+// barra para alumnas
+$('.dropdown-trigger').dropdown();
 
-//Variables globales
-const laboratoria = "https://api.myjson.com/bins/1amyo6";//API con DATA a usar (base de datos de alumnas)
-//DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
+// Variables globales
+const laboratoria = 'https://api.myjson.com/bins/1amyo6';// API con DATA a usar (base de datos de alumnas)
+// DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
 const printGenerations = (generations) => {
   const resultGen = document.getElementById('cardsSpace');
   let gen = '';
