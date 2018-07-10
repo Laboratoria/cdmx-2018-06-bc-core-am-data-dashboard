@@ -157,12 +157,12 @@ window.sortStudents = (students, orderBy, orderDirection) => {
   } else if (orderBy === 'percentage') {
     if (orderDirection === 'ASC') {
       ordered = students.sort((arrayA, arrayB) => {
-        return (arrayB.stats.completedPercentage - arrayB.stats.completedPercentage);
+        return (arrayA.average - arrayB.average);
       });
       console.log(ordered);
     } else {
       ordered = students.sort((arrayA, arrayB) =>{
-        return (arrayB.stats.completedPercentage - arrayA.stats.completedPercentage);
+        return (arrayB.average - arrayA.average);
       });
       console.log(ordered);
     }

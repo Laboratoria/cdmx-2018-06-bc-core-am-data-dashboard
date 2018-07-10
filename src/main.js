@@ -107,44 +107,148 @@ const printStudents = (students) => {
 const printSort = (sort) => {
   const resultSort = document.getElementById('cardsSpace');
   let studentsSort = '';
-  for (let i = 0; i < sort.length; i++) {
-    studentsSort += `<div class="col s3 m3">
-                      <div class="card white darken-1">
-                        <div class="card-content card-data black-text">
-                          <span class="card-title" id="cards"></span>
-                          <h4>Sede: ${sort[i].campus}</h4>
-                          <h5>Generacion: ${sort[i].generation}</h5>
-                          <p>Nombre: ${sort[i].name}</p>
-                          <p>Completitud: ${sort[i].stats.completedPercentage}${'%'}</p>
-                          <p>Status: ${sort[i].stats.status}</p>
-                          <p>Tiempo total del programa: ${sort[i].totalTime}${'hrs'}</p>
-                          <p>Tiempo invertido: ${sort[i].timeProm}${'hrs'}</p>
-                        </div>
-                      </div>
-                    </div>`;
+  for (let i = 0; i < sort.length;i++) {
+    studentsSort += `<div class="container collapsable-color">
+                       <ul class="collapsible">
+                           <li>
+                               <div class="collapsible-header">
+                                   <div>${sort[i].name}  ${sort[i].average}
+                                       <a class="secondary-content waves-effect waves-light">
+                                           <i class="material-icons">send</i>
+                                       </a>
+                                   </div>
+                                   <div class="progress grey">
+                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ sort[i].p1}${'%'}" style="width: ${sort[i].p1}${'%'}" title = "${' U1 '}${sort[i].p1}${'%'}"></div>
+                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ sort[i].p2}${'%'}" style="width: ${sort[i].p2}${'%'}" title = "${' U2 '}${sort[i].p2}${'%'}"></div>
+                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${sort[i].p3}${'%'}" style="width: ${sort[i].p3}${'%'}" title = "${' U3 '}${sort[i].p3}${'%'}"></div>
+                                   </div>
+                               </div>
+                               <div class="collapsible-body">
+                                   <div>
+                                       <span>
+                                           <img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
+                                           <span>
+                                                   ${sort[i].name}
+                                           </span>
+                                   </div>
+                                   <p class="collapsable">
+                                       <i class="material-icons">mail_outline</i> Email: ${sort[i].email}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">wb_sunny</i> Turno: ${sort[i].turno}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${sort[i].timeAverage}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${sort[i].p1}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${sort[i].quizU1}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${sort[i].p2}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${sort[i].quizU2}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 3 UX: ${sort[i].p3}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${sort[i].quizU3}
+                                   </p>
+                               </div>
+                           </li>
+
+                           </ul>
+                           </div>`;
   }
   resultSort.innerHTML = studentsSort;
+  // ToolTip
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, {});
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
 };
 const printFilter = (filter) => {
   const resultFilter = document.getElementById('cardsSpace');
   let studentsFilter = '';
-  for (let i = 0; i < filter.length; i++) {
-    studentsFilter += `<div class="col s3 m3">
-                        <div class="card white darken-1">
-                          <div class="card-content card-data black-text">
-                            <span class="card-title" id="cards"></span>
-                            <h4>Sede: ${filter[i].campus}</h4>
-                            <h5>Generacion: ${filter[i].generation}</h5>
-                            <p>Nombre: ${filter[i].name}</p>
-                            <p>Completitud: ${filter[i].average}${'%'}</p>
-                            <p>Status: ${filter[i].advertisment}</p>
-                            <p>Tiempo total del programa: ${filter[i].totalTime}${'hrs'}</p>
-                            <p>Tiempo invertido: ${filter[i].timeProm}${'hrs'}</p>
-                          </div>
-                        </div>
-                      </div>`;
+  for (let i = 0; i < filter.length;i++) {
+    studentsFilter += `<div class="container collapsable-color">
+                       <ul class="collapsible">
+                           <li>
+                               <div class="collapsible-header">
+                                   <div>${filter[i].name}  ${filter[i].average}
+                                       <a class="secondary-content waves-effect waves-light">
+                                           <i class="material-icons">send</i>
+                                       </a>
+                                   </div>
+                                   <div class="progress grey">
+                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ filter[i].p1}${'%'}" style="width: ${filter[i].p1}${'%'}" title = "${' U1 '}${filter[i].p1}${'%'}"></div>
+                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ filter[i].p2}${'%'}" style="width: ${filter[i].p2}${'%'}" title = "${' U2 '}${filter[i].p2}${'%'}"></div>
+                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${filter[i].p3}${'%'}" style="width: ${filter[i].p3}${'%'}" title = "${' U3 '}${filter[i].p3}${'%'}"></div>
+                                   </div>
+                               </div>
+                               <div class="collapsible-body">
+                                   <div>
+                                       <span>
+                                           <img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
+                                           <span>
+                                                   ${filter[i].name}
+                                           </span>
+                                   </div>
+                                   <p class="collapsable">
+                                       <i class="material-icons">mail_outline</i> Email: ${filter[i].email}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">wb_sunny</i> Turno: ${filter[i].turno}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${filter[i].timeAverage}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${filter[i].p1}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${filter[i].quizU1}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${filter[i].p2}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${filter[i].quizU2}
+                                   </p>
+                                   <p class="collapsable">
+                                       <i class="material-icons">book</i> Unidad 3 UX: ${filter[i].p3}${'%'}
+                                   </p>
+                                   <p class="collapsable-sub">
+                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${filter[i].quizU3}
+                                   </p>
+                               </div>
+                           </li>
+
+                           </ul>
+                           </div>`;
   }
   resultFilter.innerHTML = studentsFilter;
+  // ToolTip
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, {});
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
 };
 // DECLARACION DE LA FUNCION QUE SE EJECUTARÁ CON LOS EVENTOS CLIK
 const listeners = (data) => {
@@ -167,7 +271,7 @@ const listeners = (data) => {
   // Evento que manda a ejecutar e imprimir la funcion de filtrado
   let getFilter = document.getElementById('goFilter');
   getFilter.addEventListener('click', (event) => {
-    const students = computeStudentsStats(data);
+    const students = studentsModal(data);
     const search = 'Aileen Edwyna';
     const filter = filterStudents(students, search);
     const printF = printFilter(filter);
@@ -175,9 +279,9 @@ const listeners = (data) => {
   // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
   let getSort = document.getElementById('goSort');
   getSort.addEventListener('click', (event) => {
-    const students = computeStudentsStats(data);
+    const students = studentsModal(data);
     const orderBy = 'percentage';
-    const orderDirection = 'DESC';
+    const orderDirection = 'ASC';
     const sort = sortStudents(students, orderBy, orderDirection);
     const printS = printSort(sort);
   });
