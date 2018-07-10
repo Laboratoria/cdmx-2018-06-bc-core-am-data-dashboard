@@ -48,7 +48,10 @@ Para el prototipo del producto se pensó en primer plano que el usuario iniciara
 
 Sketch: ![sketch](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/sketch1.jpg)
 
-Prototipo:![prototipo](https://www.figma.com/file/gpI5I1ODAjiSnFwx0IIXheUm/Prototipo-Proyecto-2)
+Prototipo:![prototipo en figma ](https://github.com/samglvn/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/Prototipo/Prototipo%20Proyecto%202%20%E2%80%93%20Figma.png)
+![pagina 2](https://github.com/samglvn/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/Prototipo/FireShot%20Capture%203%20-%20Prototipo%20Proyecto%202%20%E2%80%93%20Figma_%20-%20https___www.figma.com_file_gpI5I1OD.png)
+![pagina 3](https://github.com/samglvn/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/Prototipo/Prototipo%20Proyecto%202%20%E2%80%93%20Figma_%20-%20https___www.figma.com_file_gpI5I1OD.png)
+![pagina 4](https://github.com/samglvn/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/Prototipo/FireShot%20Capture%205%20-%20Prototipo%20Proyecto%202%20%E2%80%93%20Figma.png)
 
 ### **5. User testing**
 
