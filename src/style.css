@@ -1,5 +1,5 @@
 body   {
-    background-color:#f7f7f3;
+    background-color: #FFE521;
     /*background-image: url("../images/fondo1.png");*/
     background-position: center center;
     background-repeat: no-repeat;
@@ -16,18 +16,21 @@ image {
 header {
   color: #fff400
 }
-
-.alinearSede{
-  text-align: left;
+.card {
+  width: 200px;
   font-family: 'Open Sans', sans-serif;
-}
-.alinearSede1{
+  height: 200px;
+  display: inline-flex;
+  margin: 0.5rem;
+  background-color: #000000;
+  color: #FFFFFF;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-
 }
 
-.alinearSede2 {
-  text-align: right;
-  font-family: 'Open Sans', sans-serif;
+.info {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
 }
