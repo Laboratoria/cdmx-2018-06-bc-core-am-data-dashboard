@@ -13,54 +13,63 @@
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>  
 </head>
 <body>
+  container
 
-        <header>
+        <header class="row">
+            <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+          </div>
                 <nav class="row">
-                        <div class="nav-wrapper">
-                          <a href="#!" class="brand-logo">Laboratoria</a>
+                        <div class="col-2" id="nav-wrapper">
+                         <img  src="Images/1528575847-27360187-268x40x268x88x0x24-Laboratoria-Logo-RGB.png" alt="">
                           <ul class="right hide-on-med-and-down">
                             
                             <!-- Dropdown Trigger menú going down =] -->
-                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Lima<i class="material-icons right">arrow_drop_down</i></a></li>
-                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">México<i class="material-icons right">arrow_drop_down</i></a></li>
-                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Santiago<i class="material-icons right">arrow_drop_down</i></a></li>
+                            
+                            <li><a id="Lima" class="dropdown-trigger" href="#!" data-target="dropdown1">Lima<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a id="Lima" class="dropdown-trigger" href="#!" data-target="dropdown2">México<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a id="Lima" class="dropdown-trigger" href="#!" data-target="dropdown3">Santiago<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a id="Lima" class="dropdown-trigger" href="#!" data-target="">Stats</a></li>
                           </ul>
                         </div>
                       </nav>
 
                 <ul id="dropdown1" class="dropdown-content">
-                        <li><a href="#!">Generación 3</a></li>
+                        <li><a id="Lima3" href="#!">Generación 3</a></li>
                         <li class="divider"></li>
-                        <li><a href="#!">Generación 4</a></li>
+                        <li><a id="Lima4" href="#!">Generación 4</a></li>
                         <li class="divider"></li>
-                        <li><a href="#!">Generación 5</a></li>
+                        <li><a id="Lima5" href="#!">Generación 5</a></li>
                       </ul>
     
                         <ul id="dropdown2" class="dropdown-content">
-                            <li><a href="#!">Generación 3</a></li>
+                            <li><a id="México3" href="#!">Generación 3</a></li>
                             <li class="divider"></li>
-                            <li><a href="#!">Generación 4</a></li>
+                            <li><a id="México4" href="#!">Generación 4</a></li>
                             <li class="divider"></li>
-                            <li><a href="#!">Generación 5</a></li>
+                            <li><a id="México5" href="#!">Generación 5</a></li>
                         </ul>
     
                         <ul id="dropdown3" class="dropdown-content">
-                                <li><a href="#!">Generación 3</a></li>
+                                <li><a id="Santiago3" href="#!">Generación 3</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#!">Generación 4</a></li>
+                                <li><a id="Santiago4" href="#!">Generación 4</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#!">Generación 5</a></li>
+                                <li><a id="Santiago5" href="#!">Generación 5</a></li>
                         </ul>
-                <content>
-                        <div class="card">
-                                <div class="card-body">
-                                  <h4 class="card-title">Nombre</h4>
-                                  <p class="card-text">Info de Estudiante</p>
-                                  <a href="#" class="card-text">Porcentaje</a>
-                                  <a href="#" class="card-text">Completitud</a>
-                                </div>
+                 
+                          <div class="row card">
+                             <div class="row container">
+                               <div><i class="medium material-icons">account_circle</i>
+                                <h4 class="col-4">Nombre:</h4>
+                                <p>Correo:</p>
+                                <p>Stats</p>
+                                <p>Porcentaje</p>             
                               </div>
-                </content>
+                            </div>
+                          </div>
+                        
+                
                       
         </header>
         

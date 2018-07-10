@@ -1,19 +1,22 @@
-$(".dropdown-trigger").dropdown();
-const url = 'https://raw.githubusercontent.com/emeraldng/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
+$(".dropdown-trigger").dropdown();//para el menú de mail
 
+const url = 'http://api.myjson.com/bins/1efx86';
+
+//la data se carga el reload la pagina
 window.onload = () => {
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            //esta func aun no existe, aqui van tantas fun necesites con la misma info
-            //renderInfo(data);
-            //console.log(renderInfo);
-        })
-        .catch(error => {
-            console.log('errormio');
-
-        })
-
-
+  fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+      //aquí van toda las funciones que ultilizaran la data (las de window y las de dibujar)
+      console.log(data)
+      const students = computeStudentsStats(data);
+      const generations = computeGenerationsStats(data);
+      //drawStudents(students);
+      //drawCampus(generations);
+      //sortStudents(data)
+      //filterStudents(data)
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
