@@ -1,11 +1,12 @@
-//let lima = document.getElementById('imprimir');
-let limacuatro = document.getElementById('generacionesLima');
-let pintar = document.getElementById('pintar')
-
-// Se llama el evento del botón
-limacuatro.addEventListener("click", evento => {
-  data.lima.generacion.cuarta.estudiantes
-  //console.log("hola")
-});
-window.global.computeStudentsStats()
-//console.log("hola");
+const url = 'https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
+// Se genera una función y dentro de ella una constante con la url del JSON para llamarlo
+window.onload = () => {
+  fetch(url)
+    .then(respuesta => respuesta.json())
+    .then(data => {
+      laboratoria(data);
+    })
+    .catch(error =>{
+      console.log('Te equivocaste');
+    });
+};
