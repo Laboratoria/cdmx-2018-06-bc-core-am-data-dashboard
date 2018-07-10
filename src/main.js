@@ -14,7 +14,12 @@ console.log(sede);
 
 // usando el boton de las sedes llamamos a la función para que aparezca en consola data>lima>generacion>cuarta
 // addEventLister, escucha los eventos del DOM
-sede.addEventListener('click', function() {
+sede.addEventListener('change', function(e) {
+  let index = e.target.selectedIndex;
+  let campus = e.target[index].dataset.sede;
+  let generation = e.target[index].dataset.gen;
+  
+  
   // con el fetch se extrae la data del JSON y se realiza a través de promesas(then).
   fetch(urlDirection).then(function(datos) {
     // se retornan los datos del jason
@@ -22,6 +27,9 @@ sede.addEventListener('click', function() {
   }).then(function(data) {
     // Object.keys, devuelve un array cuyos elementos son strings correspondientes
     // a las propiedades enumerables que se encuentran dentro de un OBJETO
+    let sede = data[campus].generacion[generation].estudiantes;
+    console.log(sede);
+    
     let sedes = Object.keys(data);
       
     // va a crear un arreglo dentro de un arreglo 
@@ -34,7 +42,7 @@ sede.addEventListener('click', function() {
     // .length de un objeto String representa la longitud de una cadena
     for (let i = 0; i < sedes.length; i++) {
       let drawSede = sedes[i];
-      sede.innerHTML = sedes;
+      // sede.innerHTML = drawSede;
         
       // el loop recorre las 3 generaciones de la variable generaciones
       let generaciones = Object.keys(data[sedes[i]].generacion);
@@ -97,9 +105,29 @@ sede.addEventListener('click', function() {
         arrFinal[8]);
 
       console.log(arrConsolidado);
+      
 
-      // .filter
+    
+      // let  = document.getElementById('sedeLima');
+      // for (let k = 0; k < arrFinal.length; k++) {
+      //   console.log(arrFinal);
+      //   const alumnasLima = name.filter();
+      //   console.log(alumnasLima);
+      // }
+
+
+      // for (let sedeLima in alumnasLima){
+      //  sedeLima = document.createElement("alumnas");
+      //  
+      //  //sedeLima.textContent = mostrasAlumnas;
+      //
+      //  arrConsolidado.appendChild(sedeLima);
+      //  console.log(arrConsolidado.appendChild);
+      //  
     }
+      
+
+    // .filter
   });
-  // lima.innerHTML = arrFinal;
-});                       
+});
+// lima.innerHTML = arrFinal;             
