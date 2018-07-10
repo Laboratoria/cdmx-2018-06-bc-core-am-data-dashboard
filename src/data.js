@@ -32,9 +32,9 @@ for(let i = 0; i<campus.length; i++){
         let est = data[campus].generacion[generaciones[i]].estudiantes
         document.getElementById('titulos').innerHTML += 
               '<tr >' + 
-                '<td>' +campus+ '</td>' +
-                '<td>' +generaciones[i]+ '</td>' +
-                '<td>' +est.length+ '</td>' +
+                '<td>' +"Sede: "+campus+ '</td>' +
+                '<td>' +"Generacion: "+generaciones[i]+ '</td>' +
+                '<td>' +"Alumnas activas: "+est.length+ '</td>' +
              '</tr>'
          //pinta sedes            
             for(let i = 0; i<est.length; i++) {
