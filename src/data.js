@@ -19,7 +19,6 @@ const gettingData = (data) => {
       // Aquí va mi función para un posible error.
     });
 };
-
 gettingData(json);
 
 window.computeGenerationsStats = (laboratoria) => {
