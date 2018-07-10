@@ -44,15 +44,11 @@ Se podrán consultar los datos por sede, generación (promedio general) y por es
 
 ### **4. Prototipado**
 
-Para el prototipo del producto se pensó en primer plano que el usuario iniciara sesión solicitando nombre y contraseña (Ya que son datos importantes, no cualquiera puede tener acceso a ellos). Al acceder el usuario podrá seleccionar la sede, y después la generación. Después de seleccionar la sede se desplegará una tabla con las siguientes columnas: nombre de la alumna, porcentaje de progreso en general, porcentaje de temas terminados, tiempo completado por tema, temas terminados y temas no terminados. Se podrá acceder a la información de cada alumna dándole click al nombre de la misma. Se desplegará otra pantalla donde aparecerá la información de avance por tema y subtema y una gráfica que hará más visible y claro el avance o retroceso.
+Para el prototipo del producto se pensó en primer plano que el usuario iniciara sesión solicitando nombre y contraseña (Ya que son datos importantes, no cualquiera puede tener acceso a ellos). Al acceder el usuario podrá seleccionar la sede, y después la generación. Después de seleccionar la sede se desplegará una tabla con las siguientes columnas: nombre de la alumna, porcentaje de progreso en general, porcentaje de temas terminados, tiempo completado por tema, temas terminados y temas no terminados.
 
 Sketch: ![sketch](https://github.com/Sanmc84/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/ux/img/sketch1.jpg)
 
-Prototipo: (..Prototipo/prototipo1.png)
-           (..Prototipo/prototipo2.png)
-           (..Prototipo/prototipo3.png)
-           (..Prototipo/prototipo4.png)
-
+Prototipo:![prototipo](https://www.figma.com/file/gpI5I1ODAjiSnFwx0IIXheUm/Prototipo-Proyecto-2)
 
 ### **5. User testing**
 
@@ -64,16 +60,15 @@ Nuevas propuestas:
 
 
 ### **6. Argumentación de Visual Design**
-Despues de un proceso de research con respecto al cliente en esta caso Laboratoria, se decidieron utilizar los colores, la tipografia, el logo y el slogan que identifican a Laboratoria como tal, debido a que es una imagen fresca, que recien comienzan a adaptar, despues de varios años portando tan emblematica imagen que los ha posicionado en el mercado tech de una manera destacada.
+Despues de un proceso de research con respecto al cliente en esta caso Laboratoria, se decidieron utilizar los colores amarillo y negro de su gama cromatica, la tipografia, el logo y el slogan que identifican a Laboratoria como tal, debido a que es una imagen fresca, que recien comienzan a adaptar, despues de varios años portando tan emblematica imagen que los ha posicionado en el mercado tech de una manera destacada.
 
 1. LOGO:
 
  Es representado por la palabra Laboratoria entre corchetes <>. Laboratoria resume en una palabra lo que somos y los corchetes nos llevan al mundo del código. Presenta cambios en la tipografía y en el tamaño, color y ángulo de apertura de los corchetes, los cuales les permiten tener el mismo logo, pero con más fuerza y protagonismo.
 
  2. COLORES:
- Se utilizan colores enérgicos y feministas como Laboratoria, el amarillo como color principal, pero l más enérgico que antes. Además, se agregaron el magenta y el menta a su identidad. Todo con medida nada en exceso debido a que son una organización que forma mujeres adultas y fuertes.
+ Se utilizan colores enérgicos y feministas como Laboratoria, el amarillo como color principal, pero  más enérgico que antes.  Todo con medida nada en exceso debido a que son una organización que forma mujeres adultas y fuertes.
 
-Gama cromatica de Laboratoria:
 
 
  3. CORCHETES:
