@@ -1,4 +1,5 @@
-//barra para alumnas
+
+//barra verde para alumnas
 $(".dropdown-trigger").dropdown();
 
 //Variables globales
