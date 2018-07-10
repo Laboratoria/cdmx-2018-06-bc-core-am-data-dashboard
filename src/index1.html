@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body class="fondo">
+  <div class="container">
+    <div class="row">
+      <header>
+        <div class="col-md-8"><img src="../src/img/logo-labo.png" alt=""></div>
+      </header>
+    </div>
+    <br> 
+    <h2 class="txt_title">"Bienvenido elije una sede"</h2>  
+    <div id= "campus" class="row">
+      <div id="botonesSede"class="col-md-3">
+        <input type="button" class="campus btn btn-dark" value="LIMA" id="lima">
+      </div>
+
+      <div id="botonesSede1"class="col">
+        <input type="button" class="campus btn btn btn-dark" value="MEXICO" id="cdmx">
+      </div>
+      <div id="botonesSede2"class="col">
+        <input type="button" class="campus btn btn btn-dark" value="SANTIAGO" id="cdmx2">
+      </div>
+
+      <div class="col">
+        <button class="campus btn btn btn-dark"  id="delete">LIMPIAR DATOS</button>
+      </div>
+    </div>
+    <br>  
+
+    <div class="table-responsive">
+      <table  id="titulos" class="table table-dark ">
+          <tr>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">CORREO</th>
+            <th scope="col">TURNO</th>
+            <th scope="col">% COMPLETADO</th>
+            <th scope="col">DURACION PROGRAMA</th>
+          </tr>
+        <thead>
+          <tr>
+            <th scope="col">SEDE</th>
+            <th scope="col">GENERACION</th>
+            <th scope="col">ALUMNAS ACTIVAS</th>
+          </tr>
+        </thead>
+      </table>
+      <table  id="estadisticas" class="table table-warning ">
+        <thead>
+        <!--   <tr>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">CORREO</th>
+            <th scope="col">TURNO</th>
+            <th scope="col">% COMPLETADO</th>
+            <th scope="col">DURACION PROGRAMA</th>
+          </tr> -->
+        </thead>
+      </table>
+    </div>
+  </div>
+</body>
+   <script src="main.js"></script>
+    <script src="data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,82 @@
+
+
+//Declaracion de variables
+let urlDirection = "https://api.myjson.com/bins/ag4ny";
+let resultado = document.querySelector("#botonesSede");
+
+const campus =document.getElementsByClassName("campus");
+
+
+for(let i=0; i<campus.length; i++){
+  campus[i].addEventListener("click", function(e){
+    sede(e);
+  })
+}
+// Funcion que muestra datos de sedes y estudiantes  
+
+  let sede = function(e){
+      let campus= (e.target.value).toLowerCase();
+      fetch(urlDirection).then(function(datos){
+      return datos.json();
+      }).then(function(data){
+      console.log(data);
+           
+      let gen = data[campus].generacion;
+     
+      let generaciones = Object.keys(gen);
+
+     
+      
+
+
+    for(let i = 0; i<generaciones.length; i++) {
+        let est=data[campus].generacion[generaciones[i]].estudiantes
+
+        resultado.innerHTML+= "<div>"+"Sede:"+campus + "</div>";
+        resultado.innerHTML+=
+        "<div>"
+          +" Generacion: "+generaciones[i]+"  "+"Alumnas activas: "+est.length+ 
+        "</div>";
+       
+         //pinta sedes            
+            for(let i = 0; i<est.length; i++) {
+                       
+      "<table class='table'> "
+        resultado.innerHTML+= 
+       ""
+        +"<thead class='thead-dark'>Nombre:</thead>" +" <tbody><tr><td>"est[i].nombre"</td></tr></tbody>" + 
+        ""; 
+        resultado.innerHTML+=
+        ""
+        +"<thead class='thead-dark'>Correo:</thead> " +est[i].correo + 
+        "";
+        resultado.innerHTML+= 
+        ""
+        +"<thead class='thead-dark'>Duracion programa:</thead> " +est[i].progreso.duracionPrograma+" hrs"+
+          "";
+        resultado.innerHTML+=
+         ""
+          +"<thead class='thead-dark'>Porcentaje completado:</thead> "+ est[i].progreso.porcentajeCompletado+"%"+ 
+          "";
+        resultado.innerHTML+= 
+        ""
+        +"Turno: " +est[i].turno + 
+        "";
+        // let porcent=(est[i].progreso.porcentajeCompletado)
+        // let estud=est.length
+      "</table>" 
+       
+   
+            }
+             
+
+          }
+//
+
+
+//
+
+      })
+
+  }
+  
