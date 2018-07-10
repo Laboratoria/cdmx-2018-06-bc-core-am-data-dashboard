@@ -6,13 +6,11 @@ laboratoria = (data) =>{
     let estudiante = data.lima.generacion.cuarta.estudiantes;
     let progress = estudiante.progreso;
     let result = '';
-    for (progress of estudiante) {
+    for(progress  of  estudiante){
       let pro = progress.progreso;
-      console.log(pro);
-      
-        for (let i = 0; i < estudiante.length; i++) {
-          let nombres = estudiante[i];
-          result += `   
+     for (let i = 0; i < estudiante.length; i++) {
+      let nombres = estudiante[i];
+      result += `   
           <tr>
             <th scope="row"></th>
             <td>${nombres.nombre}</td>
@@ -24,22 +22,39 @@ laboratoria = (data) =>{
           
                          `;
         }
-    
+      
   
         container.innerHTML = result;
         return result;
       
     }
-  }),
+  })
+  
 
 
   document.getElementById('boton2').addEventListener('click', (event) => {
     let estudiante = data.santiago.generacion.cuarta.estudiantes;
     let progress = estudiante.progreso;
     let result = '';
+    let x = 0;
+    let y = 0;
+    let z = 0;
     for (progress of estudiante) {
-      let pro = progress.progreso;
-      console.log(pro);
+      let pro = progress.progreso.porcentajeCompletado;
+      // console.log(estudiante);
+      // console.log(progress); 
+      // console.log(pro);
+      if (pro >= 60){
+        x++;
+      } else if (pro <= 60){
+        y++;
+      }else if (pro >= 90){
+        z++;
+      }
+      console.log(x);
+      console.log(y);
+      console.log(z);
+      
       for (let i = 0; i < estudiante.length; i++) {
         let nombres = estudiante[i];
         result += `<div class="card">
@@ -50,13 +65,13 @@ laboratoria = (data) =>{
             <p>Turno: ${nombres.turno}</p>
             <p>Duracion del programa: ${pro.duracionPrograma}</p>
             <p>Porcentaje completado: ${pro.porcentajeCompletado}</p>
-            // <p>Temas: ${pro.temas}</p>
             </div>
             </div> `;
       }
-      container.innerHTML = result;
-      return result;
+      
     };
+    container.innerHTML = result;
+    return result;
   }),
 
 
@@ -64,14 +79,12 @@ laboratoria = (data) =>{
     let estudiante = data.mexico.generacion.cuarta.estudiantes;
     let progress = estudiante.progreso;
     let result = '';
-    let porcentProgress = '';
-    let durationOfProgram = '';
     for (progress of estudiante) {
       let pro = progress.progreso;
       // console.log(pro);
       for (let i = 0; i < estudiante.length; i++) {
         let nombres = estudiante[i];
-        console.log(nombres);
+        // console.log(nombres);
         result += `<div class="card">
           <div class = "estudiante">
         
@@ -86,5 +99,5 @@ laboratoria = (data) =>{
       container.innerHTML = result;
       return result;
     }
-  });
+    })
 };
