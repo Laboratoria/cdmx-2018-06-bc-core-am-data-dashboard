@@ -32,10 +32,11 @@ div a:hover {
 }
 
 form {
-  display: inline-block;
+  display: inline-block; 
   vertical-align: middle;
   margin: 5% auto 0;
-  padding: 3% 5%;
+  padding-left: 100px;;
+  padding-right:100px;
   border: 2px solid black;
   margin-left: 25%;
   text-align: center;
@@ -45,7 +46,7 @@ input {
   width: 100%;
   margin-bottom: 10px;
   padding-top: 5px;
-  /* margin-left: 10px; */
+  margin-left: 10px;
   margin-bottom: 3px;
 }
 
