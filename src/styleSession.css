@@ -1,54 +1,54 @@
 body{
-	background-color:#2c3335;
-	color:#f5f5f5;
-	text-align:center;
-	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	background-color:#2c3335;  /*color de fondo gris*/
+	/* color:#f5f5f5; */
+	/* text-align:center; */
+	/* font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif; */
 }
 
-a{
+/* a{
 	color:#fff;
 	text-decoration:none;
-}
+} */
 
 #loginform{
-	margin-top:100px;
-  margin-left:auto;
-  margin-right:auto;
-	width:335px;
+	margin-top:100px;   /*margen superior*/
+  margin-left:auto;   /*margen izquierdo*/
+  margin-right:auto;  /*margen derecho*/
+	width:335px;       /*ancho*/
 }
 
 .input{
-	width:270px;
-    padding:15px 25px;
-    font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-	background: #f5f5f5;
-	border:none;
-	border-radius: 5px;
+	width:270px;  /*ancho*/
+    padding:15px 25px;  /*ancho y alto de las cajas de texto*/
+		font-family: 'Encode Sans Condensed', sans-sans-serif;  /*tipo de letra*/
+	background: #f5f5f5;  /*color de fondo de la caja de texto a un blanco un poco mas gris*/
+	border:none;  /*con esta propiedad se quita el borde por defecto*/
+	border-radius: 5px; /*se le asigna un angulo a cada esquina del imput*/
 	color: #333;
-	font-size: 14px;
-	margin-top:15px;
+	font-size: 14px;  /*tamaño de la letra*/
+	margin-top:15px;  /*margen que existe entre cada imput*/
 }
 
 .loginbutton{
-	background-color:#ffdd00;
+	background-color:#ffdd00; /*color del boton iniciar sesion*/
 	border-radius:5px/5px;
-	-webkit-border-radius:5px/5px;
-	-moz-border-radius:5px/5px;
-	color:#333;
+	/* -webkit-border-radius:5px/5px;
+	-moz-border-radius:5px/5px; */
+	color:#333; /*color del texto*/
 	display:inline-block;
-	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-	font-size:18px;
-	font-weight:bold;
-	width:320px;
-	text-align:center;
+	font-family: 'Encode Sans Condensed', sans-sans-serif;
+	font-size:18px;  /*tamaño de la letra*/
+	font-weight:bold; /*permite que la letra sea gruesa*/
+	width:320px; /*ancho del boton*/
+	text-align:center; /*centra el texto dentro del boton*/
 	line-height:50px;
 	text-decoration:none;
-	height:50px;
-	margin-top:20px;
+	height:50px;   /*alto del borde*/
+	margin-top:20px;  /*margen superior entre el input y el boton*/
 	margin-bottom:20px;
 	border:none;
-	outline:0;
-	cursor: pointer;
+	outline:0; /*contorno*/
+	/* cursor: pointer; */
 }
 
 .loginbutton:active {
@@ -60,8 +60,8 @@ a{
 	background-color:#e5bf05;
 }
 
-.logo{
-    height: 200px;
-    width: 320px;
-		border-radius: 5px/5px;
+.logo{     /*propiedades para la imagen de laboratoria*/
+    height: 200px; /*alto*/
+    width: 320px;  /*ancho*/
+		border-radius: 5px/5px; /*borde de las esquinas*/
 }
