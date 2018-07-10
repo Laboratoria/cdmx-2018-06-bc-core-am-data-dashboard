@@ -158,8 +158,8 @@ const listeners = (data) => {
   });
   let getStudents = document.getElementById("goStudents");
   getStudents.addEventListener("click", (e) => {
-    const students = computeStudentsStats(data);
-    printStudents(students);
+    //const students = studentsModal(data);
+    studentsPrint(data);
   });
   // Evento que manda a ejecutar e imprimir la funcion de filtrado
   let getFilter = document.getElementById("goFilter");
