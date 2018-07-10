@@ -88,7 +88,7 @@ describe('data', () => {
       const processed = computeGenerationsStats(fixtures);
 
       it('debería tener una propiedad average con valor 75', () => {
-        assert.equal(processed[0].average, 75);
+        assert.equal(processed[0].average, 70);
       });
 
       it('debería tener una propiedad count con valor 15', () => {
