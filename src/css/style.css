@@ -42,10 +42,6 @@
   background: #F8C471; /*color de fondo de div de pocentajes*/
 }
 
-/* .img-fluid {
-  width:1120%;
-  height: 200%;
-} */
 p {  /*esta parrafo proviene de el archivo main.js especificamente de la tabla inscrustada*/
   display: block;
   margin:inherit;
@@ -63,12 +59,6 @@ p {  /*esta parrafo proviene de el archivo main.js especificamente de la tabla i
 }
 
 /* Inicio de propiedades para las redes sociales*/
-
-.imgCarrusel {
-  width: 100px;
-  height: 50px;
-
-}
 
 .social-bar {
   position: fixed; /* permite quedar fijo en la pantalla*/
