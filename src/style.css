@@ -1,61 +1,78 @@
 /*Log in box*/
-body{
+
+body {
   margin: 0;
   padding: 0;
-  background: whitesmoke;
+  background: #333333;
   font-family: sans-serif;
+  background-color: rgba(0,0,0,0.8);
+  background-image: url("Images/backgroundBlackboard.jpg");
+  background-repeat: no-repeat;
+  background-position: fixed;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
 
-.loginbox{
+/*LogIN*/
+
+#logInLogo{
+  width: 100%;
+  height: 100%;
+}
+
+.loginbox {
   width: 320px;
   height: 420px;
   background: #f7b617;
-  color:black;
-  top: 50%;
+  color: black;
+  top: 60%;
   left: 50%;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 70px 30px;
 }
 
-.avatar{
+.avatar {
   width: 100px;
   height: 100px;
-  /*border-radius: 50%;si lo quiero circular*/
+  border-radius: 50%;
+  background-color: antiquewhite;
   position: absolute;
   top: -50px;
   left: calc(50% - 50px);
 }
 
-h1{
+h1 {
   margin: 0;
   padding: 0 0 20px;
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
 }
 
-p{
+p {
   margin: 0;
   padding: 0 0 20px;
   text-align: left;
   font-size: 18px;
 }
 
-.loginbox p{
+.loginbox p {
   margin: 0;
   padding: 0;
   font-weight: bold;
 }
 
-.loginbox input{
+.loginbox input {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.loginbox input[type="text"], input[type="password"]
-{
+.loginbox input[type="text"],
+input[type="password"] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -64,62 +81,40 @@ p{
   color: #fff;
   font-size: 16px;
 }
-.loginbox input[type="submit"]
-{
+
+.loginbox input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
-  background: #fb2525;
   color: #fff;
   font-size: 18px;
   border-radius: 20px;
 }
-.loginbox input[type="submit"]:hover
-{
+
+.loginbox input[type="submit"]:hover {
   cursor: pointer;
   background: #ffc107;
   color: #000;
 }
-.loginbox a{
+
+.loginbox a {
   text-decoration: none;
   font-size: 12px;
   line-height: 20px;
-  color: darkgrey;
+  color: whitesmoke;
 }
 
-.loginbox a:hover
-{
+.loginbox a:hover {
   color: #ffc107;
 }
 
-/*cards*/
-.card {
-  width: 200px;
-  height: 200px;
-  display: inline-flex;
-  margin: 0.5rem;
-  background-color: rgb(252, 248, 250);
-  color: #FFFFFF;
-  text-align: center;
-  border-block-start-color: black  
-}
-
-.info {
-  margin: 15 auto;
-}
-
-h1 {
-  text-align: center;
-}
-
-.table, th, tr, td {
-  border: 1px solid black;
-}
-
 /*main*/
-
-#navbar{
+#nav-wrapper{
   background-color: #f7b617;
-  box-shadow: #000;
+  justify-content: space-around;
 }
 
+.dropdown-content{
+  background-color: rgb(236, 224, 58);
+  color: #000;
+}
