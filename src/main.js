@@ -33,20 +33,21 @@ ingresar.addEventListener('click', obtenerDatos = () => {
 const sedes = (laboratoria) => {
   const containerButtonsCampus = document.getElementById('container-buttons-campus');
   for (key in laboratoria) {
-   
-  
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    div.addEventListener('click', () => generations(laboratoria));
+    const seccion = document.createElement('seccion');
+    seccion.classList.add('container');
+    const divRow = document.createElement('div');
+    divRow.classList.add('row');
+    const divCol = document.createElement('div');
+    divCol.classList.add('col-4');
+    const aElement = document.createElement('a');
+    aElement.id = key;
+    aElement.innerHTML = key.toUpperCase();
+    seccion.appendChild(aElement);
+    containerButtonsCampus.appendChild(seccion);
+
+    seccion.addEventListener('click', () => generations(laboratoria));
+
   }
 };
 
@@ -62,20 +63,20 @@ const generations = (laboratoria) => {
       generation1.forEach(elements => { // generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
         generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
 
-        
-        
-        
-        
-        
-      
+        const seccion = document.createElement('section');
+        seccion.classList.add('container');
+        const divRow = document.createElement('div');
+        divRow.classList.add('row');
+        const divCol = document.createElement('div');
+        divCol.classList.add('col-4');
+        const aElement = document.createElement('a');
+        aElement.id = generation1;
+        aElement.innerHTML = generation1.toUpperCase();
+        seccion.appendChild(aElement);
+        containerButtonsGenerations.appendChild(seccion);
 
-        
-        
-        
-        
-        
-        
-        div.addEventListener('click', () => dentroGen(laboratoria, selectSede));
+        seccion.addEventListener('click', () => dentroGen(laboratoria, selectSede));
+
       });
     }
   }
@@ -169,4 +170,5 @@ const dentroGen = (laboratoria, selectSede) => {
 //     }
 //   }
 // };
+
 
