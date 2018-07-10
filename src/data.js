@@ -751,7 +751,7 @@ window.studentsPrint = (laboratoria) => {
                    </div>
                  </nav>`;
   for (let i = 0; i < studentsM.length;i++) {
-    
+
     studentsPrint += `<div class="container collapsable-color">
                        <ul class="collapsible">
                            <li>
