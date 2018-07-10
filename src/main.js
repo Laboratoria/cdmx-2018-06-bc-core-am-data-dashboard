@@ -43,7 +43,10 @@ let count = "";
 let eachGenPercent = 0;
 let totalStudentsOfHoleWorld = 0;
 
-
+//---- se introduce sentencia para ligar al botton de siguiente Pantalla-1//
+document.getElementById('delete').addEventListener('click', (event) =>{
+  container.innerHTML ="";
+})
 
 
 

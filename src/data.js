@@ -97,4 +97,4 @@ window.computeStudentsStats = (laboratoria) => {
     }
      console.log("1.1", student);
 }
- 
+

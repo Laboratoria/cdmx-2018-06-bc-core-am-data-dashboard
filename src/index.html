@@ -19,87 +19,159 @@
         <h1> Laboratoria LMS Dashboard </h1>
         <img src="../images/Ldelabo.png" id="laboratoria">
         <ul>
-          <input type="text" value="Usuaria" id="user-name"> 
-          <input type="password" value="Contraseña" id="password"><br>
-          <input type="submit" value="Login"> 
-        </ul>
-        <h2 id="welcome"> ¡Bienvenida </h2>
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">                  
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">         
+                  
+                  <button id="delete" type="button" 
+                  class="btn btn-secondary">Siguiente</button>
+           
+                <br>  
+                <small id="emailHelp" class="btn btn-link">Olvidaste tu password</small>
+              </form>
+
+        <h2 id="welcome"> ¡Bienvenida! </h2>
       </header>
-    </section>
-    <main id="main">
-      <nav class="menu">
-        <div id="barra-menu">
-        <div class="row">
-        <div class="col-md">
-          <ul class= "nav">
-            <li><a href="#">Cambiar Sede</a>
-              <ul>
-                <li id="Lima"><a href="#">Lima</a></li>
-                <li id="Mexico"><a href="#">México</a></li>
-                <li id="Santiago"><a href="#">Santiago</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>      
-        <div class="col-md">
-          <ul class= "nav">
-            <li><a href="#">LMS</a>
-              <ul>
-                <li><a href="#">Temas</a></li>
-                <li><a href="#">Rendimiento</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md">
-          <ul class= "nav">
-            <li><a href="#">Estudiantes</a>
-              <ul>
-                <li id="btn-students"><a href="#">Lista General</a></li>
-                <li><a href="#">Mayor % de avance</a></li>
-                <li><a href="#">Menor % de avance</a></li>
-              </ul>
-            </li>
-            </ul>
-          </div>
-          <div class="col-md">
-            <ul class= "nav">
-              <li><a href="#">Buscar...</a>
-                <ul>
-                  <li><a href="#"></a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md">
-            <ul class= "nav">
-              <li><a href="#">Log out</a></li>
-          </div>
-          </ul>
-      </nav>
-<!-- Cierra barra de nav-->
-    <section id="pantalla-2">
+ <!--  Termina pantalla inicial-->   
+
+      <section id="pantalla-2">
       <!-- Apertura de menús de navegación -->
-      <article>
-        <ul id="ul-prueba">
-          <div class="col-lg">
-            <li><a href="#">Cambiar Sede</a></li>
-            <li id="Lima"><a href="#">Lima</a></li>
-            <li><a href="#">México</a></li>
-            <li><a href="#">Santiago</a></li>
+      <div class="btn-group">
+          <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Escoge Sede
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Ciudad de México</a>
+            <a class="dropdown-item" href="#">Lima</a>
+            <a class="dropdown-item" href="#">Santiago</a>
           </div>
+        </div> 
+<br>
+<br>
+        <div class="btn-group">
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Escoge Generación
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Tercera </a>
+              <a class="dropdown-item" href="#">Cuarta </a>
+              <a class="dropdown-item" href="#">Quinta</a>
+            </div>
+          </div> 
+
+<!--Comienza barra de navegación-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+  <a class="navbar-brand" href="#">LABORATORIA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        LMS (Rendimiento)
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">  Rendimiento General </a>
+          <a class="dropdown-item" href="#"> Rendimiento Temas</a>
+        </div>
+      </li>
+
+
+    <!--li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           LMS  </a>
+        </li>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Rendimiento</a>
+            <a class="dropdown-item" href="#">Temas</a>
+          </div-->
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Estudiantes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">  Lista General </a>
+            <a class="dropdown-item" href="#"> Arriba del 90 %</a>
+            <a class="dropdown-item" href="#">Abajo del 60 %</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Log Out</a>
+        </li>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+<!--/section>
+<main id="main">
+  <nav class="menu">
+    <div id="barra-menu">
+    <div class="row">
+    <div class="col-md">
+      <ul class= "nav">
+        <li><a href="#">Cambiar Sede</a>
+          <ul>
+            <li id="Lima"><a href="#">Lima</a></li>
+            <li id="Mexico"><a href="#">México</a></li>
+            <li id="Santiago"><a href="#">Santiago</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>      
+    <div class="col-md">
+      <ul class= "nav">
+        <li><a href="#">LMS</a>
+          <ul>
+            <li><a href="#">Temas</a></li>
+            <li><a href="#">Rendimiento</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md">
+      <ul class= "nav">
+        <li><a href="#">Estudiantes</a>
+          <ul>
+            <li id="btn-students"><a href="#">Lista General</a></li>
+            <li><a href="#">Mayor % de avance</a></li>
+            <li><a href="#">Menor % de avance</a></li>
+          </ul>
+        </li>
         </ul>
-      </article>
-      <article>
-        <ul>
-        <div class="col-lg">
-          <li><a href="#">Elige la generación:</a></li>
-          <li id="terceraGen"><a href="#">Tercera</a></li>
-          <li id="cuartaGen"><a href="#">Cuarta</a></li>
-          <li id="quintaGen"><a href="#">Quinta</a></li>
+      </div>
+      <div class="col-md">
+        <ul class= "nav">
+          <li><a href="#">Buscar...</a>
+            <ul>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
         </ul>
-      </article>
-    </section>
+      </div>
+      <div class="col-md">
+        <ul class= "nav">
+          <li><a href="#">Log out</a></li>
+      </div>
+      </ul>
+  </nav-->
+<!-- Cierra barra de nav-->    
     <section id="pantalla-3">
       <h3>Lista de estudiantes</h3>
       <img src="">
