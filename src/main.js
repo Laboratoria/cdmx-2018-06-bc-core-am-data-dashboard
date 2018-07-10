@@ -188,7 +188,7 @@ window.onload = () => {
     .then(data => data.json())
     .then((data) => {
       // printSedesAll imprime la primer vista de la pagina con cards de informaciónde las sedes
-      const sedes = printSedesAll(data);
+      printSedesAll(data);
       // Ejecuta los eventos cuando se ejecuta una interacción con espacion en DOM
       listeners(data);
     })
