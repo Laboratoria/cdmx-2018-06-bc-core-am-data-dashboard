@@ -10,7 +10,6 @@ const gettingData = (data) => {
     })
     .then((laboratoria) => { // Aquí le asigno el nombre de laboratoria a la información que envió.
       sedes(laboratoria);
-      drawClassifiedStudents(laboratoria);
       computeGenerationsStats(laboratoria); // Aquí estoy diciendo que a mis siguienten funciones, les estoy mandando esa data.
       computeStudentsStats(laboratoria);
     })
