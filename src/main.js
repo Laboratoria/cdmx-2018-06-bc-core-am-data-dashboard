@@ -10,7 +10,6 @@ window.onload = () => {
     // haremos una segunda promesa que guarda en data el response.json
     .then((laboratoria) => {
       computeStudentsStats(laboratoria);
-      // console.log(laboratoria);
       computeStudentsStats();
       computeGenerationsStats(laboratoria);
       computeGenerationsStats();
@@ -29,21 +28,6 @@ window.onload = () => {
 //   let result = "";
 //   console.log( );
 //   } )
-// VARIABLES DE LA SEGUNDA FUNCIÓN
-
-let generations = [];
-// objetos generation
-let campus = '';
-let generation = '';
-let average = '';
-let count = '';
-
-// usage 
-let eachStudAddition = 0;
-let totalStudentsOfHoleWorld = 0;
-let averagePG = 0;
-let percentForSG = 0;
-
 
 // console.log("main.js conectado");
 // //Asignar variable a laboratoria.json desde el localhost
