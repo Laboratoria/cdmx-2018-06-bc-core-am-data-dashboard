@@ -6,20 +6,20 @@
   <title>Data Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header id="laboratoria">
     <img id="logo" src="../logo/laboratoria_logo.png">
   </header>
-   
+
   <br>
 
-    <!-- formulario de LOGIN -->
-    <section>
+  <!-- formulario de LOGIN -->
+  <section>
     <form id="form" action="">
       <h2>Login</h2>
       <input id="input-name" type="text" placeholder="&#128274;  Username" name="usuario">
@@ -29,25 +29,50 @@
     </form>
   </section>
 
-    <!-- primer navegador para ingresar a la sede (botones)-->
-
-  <section  id="buttons-campus">
-     <div class="sedes col-xs-12 col-sm-4 row offset-4 container">
-      <div id="container-buttons-campus">
-      </div>  
-     </div>
+  <!-- primer navegador para ingresar a la sede (botones)-->
+  <section id="buttons-campus">
+    <div id="container-buttons-campus"></div>
   </section>
 
+  <!-- Botones de generaciones  -->
   <section id="buttons-generations">
-    <div class="col-xs-12 col-sm-4 row offset-4 container">
-    <div id="container-buttons-generations">
-    </div>
+    <div id="container-buttons-generations"></div>
+  </section>
+
+  <!-- Contenedor para promedio en porcentaje -->
+  <section id="content-generation-average">
+      <div id="container-average"></div>
+  </section>
+
+  <!-- contenedor para conteo alumnas -->
+  <section id="content-generation-count">
+    <div class="col-xs-12 col-sm-4  row offset-4">
+      <div id="container-count">
+      </div>
     </div>
   </section>
-   
 
+  <section id="students">
+    <div class=" col-xs-12 col-sm-4 row offset-4">
+      <div id="container-classified-students">
+      </div>
+    </div>
+  </section>
 
-  
+  <section id="student">
+    <div class=" col-xs-12 col-sm-4 row offset-4">
+      <div id="container-info-student">
+      </div>
+    </div>
+  </section>
+
+  <section id="progress">
+    <div class=" col-xs-12 col-sm-4 row offset-4">
+      <div id="container-progress">
+      </div>
+    </div>
+  </section>
+
 
   <!--script type="text/javascript" src="../data/laboratoria.json"></script>-->
   <script src="data.js"></script>

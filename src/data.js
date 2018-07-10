@@ -10,7 +10,7 @@ const gettingData = (data) => {
     })
     .then((laboratoria) => { // Aquí le asigno el nombre de laboratoria a la información que envió.
       sedes(laboratoria);
-      // generations(laboratoria);
+      drawClassifiedStudents(laboratoria);
       computeGenerationsStats(laboratoria); // Aquí estoy diciendo que a mis siguienten funciones, les estoy mandando esa data.
       computeStudentsStats(laboratoria);
     })
@@ -49,8 +49,11 @@ window.computeGenerationsStats = (laboratoria) => {
         'average': average1,
         'count': count1
       });
+      // console.log(average1);
+      // console.log(count1);
     });
   }
+ 
   return generation;
 };
 
@@ -77,16 +80,19 @@ window.computeStudentsStats = (laboratoria) => {
     generation1 = Object.keys(laboratoria[sede].generacion);
     generation1.forEach(elements => {
       generation1 = elements;
-
+      // console.log(sede);
+      // console.log(generation1);
 
       const students = laboratoria[sede].generacion[generation1].estudiantes; // Nos situamos a partir de las estudiantes.
       for (laboStudent in students) { // Iteramos students para acceder al nombre y correo.
         nameStudent = students[laboStudent].nombre;
+        // console.log(nameStudent);
         emailStudent = students[laboStudent].correo;
         completedPercentage1 = students[laboStudent].progreso.porcentajeCompletado; // Trazamos la ruta hacia porcentajeCompletado y creamos condiacionales para identificar el status de cada estudiante.
         if (completedPercentage1 < 60) {
           let status1 = (stats[status] = completedPercentage1);
           status = status1;
+          // console.log(status);
         } else if (completedPercentage1 >= 90) {
           let status2 = (stats[status] = completedPercentage1);
           status = status2;
@@ -135,7 +141,7 @@ window.computeStudentsStats = (laboratoria) => {
       }
     });
   }
-  console.log(student);
+  // console.log(student);
   return student;
 };
 
