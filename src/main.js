@@ -71,7 +71,7 @@ const printGenerations = (generations) => {
                               <div class="progress grey">
                                 <div class="determinate green" class="color-fondo" style="width: ${generations[i].quizAverage}${'%'}" title ="${generations[i].quizAverage}${'ptos'}"></div>
                                 </div>
-                            <!--Promedios generales fin-->
+                            <!--Promedios generales y de quiz fin-->
                             </div>
                           </div>
                         </div>
