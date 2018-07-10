@@ -1,16 +1,16 @@
-//Variables globales
-const laboratoria = "https://api.myjson.com/bins/1amyo6";//API con DATA a usar (base de datos de alumnas)
-//DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
+// Variables globales
+const laboratoria = 'https://api.myjson.com/bins/1amyo6';// API con DATA a usar (base de datos de alumnas)
+// DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
 const printGenerations = (generations) => {
   const resultGen = document.getElementById('cardsSpace');
   let gen = '';
-  let advancePercentage =[];
-  let lowPercentage =[];
-  let mediumPercentage =[];
+  let advancePercentage = [];
+  let lowPercentage = [];
+  let mediumPercentage = [];
   for (let i = 0; i < generations.length; i++) {
-    advancePercentage[i] = Math.round(((generations[i].advanceStudents)*100)/(generations[i].count));
-    lowPercentage[i] = Math.round(((generations[i].inLowStudents)*100)/(generations[i].count));
-    mediumPercentage[i] = Math.round(((generations[i].mediumStudents)*100)/(generations[i].count));
+    advancePercentage[i] = Math.round(((generations[i].advanceStudents) * 100) / (generations[i].count));
+    lowPercentage[i] = Math.round(((generations[i].inLowStudents) * 100) / (generations[i].count));
+    mediumPercentage[i] = Math.round(((generations[i].mediumStudents) * 100) / (generations[i].count));
     gen += `<div class="row" id = "cardsSpace">
               <div class="col s12 m12 l12">
                 <div class="card whithe col s12 m12 l12">
@@ -76,7 +76,7 @@ const printGenerations = (generations) => {
                           </div>
                         </div>
                       </div>
-                    </div>`
+                    </div>`;
   }
   resultGen.innerHTML = gen;
 };
@@ -97,7 +97,7 @@ const printStudents = (students) => {
                       <p>Tiempo invertido: ${students[i].timeProm}${'hrs'}</p>
                     </div>
                   </div>
-                </div>`
+                </div>`;
   }
   resultStudents.innerHTML = studentsS;
 };
@@ -118,7 +118,7 @@ const printSort = (sort) => {
                           <p>Tiempo invertido: ${sort[i].timeProm}${'hrs'}</p>
                         </div>
                       </div>
-                    </div>`
+                    </div>`;
   }
   resultSort.innerHTML = studentsSort;
 };
@@ -139,57 +139,57 @@ const printFilter = (filter) => {
                             <p>Tiempo invertido: ${filter[i].timeProm}${'hrs'}</p>
                           </div>
                         </div>
-                      </div>`
+                      </div>`;
   }
   resultFilter.innerHTML = studentsFilter;
 };
 // DECLARACION DE LA FUNCION QUE SE EJECUTARÁ CON LOS EVENTOS CLIK
 const listeners = (data) => {
   // Evento que manda a ejecutar e imprimir la funcion de sedes
-  let getVenue = document.getElementById("goVenues");
-  getVenue.addEventListener("click", (e) => {
+  let getVenue = document.getElementById('goVenues');
+  getVenue.addEventListener('click', (event) => {
     printSedesAll(data);
   });
   // Evento que manda a ejecutar e imprimir la funcion de generaciones
-  let getGeneration = document.getElementById("goGeneretions");
-  getGeneration.addEventListener("click", (e) => {
+  let getGeneration = document.getElementById('goGeneretions');
+  getGeneration.addEventListener('click', (event) => {
     const generation = computeGenerationsStats(data);
     printGenerations(generation);
   });
-  let getStudents = document.getElementById("goStudents");
-  getStudents.addEventListener("click", (e) => {
-    //const students = studentsModal(data);
+  let getStudents = document.getElementById('goStudents');
+  getStudents.addEventListener('click', (event) => {
+    // const students = studentsModal(data);
     studentsPrint(data);
   });
   // Evento que manda a ejecutar e imprimir la funcion de filtrado
-  let getFilter = document.getElementById("goFilter");
-  getFilter.addEventListener("click", (e) => {
+  let getFilter = document.getElementById('goFilter');
+  getFilter.addEventListener('click', (event) => {
     const students = computeStudentsStats(data);
     const search = 'Aileen Edwyna';
     const filter = filterStudents(students, search);
     const printF = printFilter(filter);
   });
   // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
-  let getSort = document.getElementById("goSort");
-  getSort.addEventListener("click", (e) => {
+  let getSort = document.getElementById('goSort');
+  getSort.addEventListener('click', (event) => {
     const students = computeStudentsStats(data);
-    const orderBy = "percentage";
-    const orderDirection = "DESC";
+    const orderBy = 'percentage';
+    const orderDirection = 'DESC';
     const sort = sortStudents(students, orderBy, orderDirection);
     const printS = printSort(sort);
   });
-}
+};
 // Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
 window.onload = () => {
   fetch(laboratoria)
     .then(data => data.json())
     .then((data) => {
       // printSedesAll imprime la primer vista de la pagina con cards de informaciónde las sedes
-      printSedesAll(data);
+      const sedes = printSedesAll(data);
       // Ejecuta los eventos cuando se ejecuta una interacción con espacion en DOM
       listeners(data);
     })
     .catch((error) => {
       console.log(error);
     });
-}
+};
