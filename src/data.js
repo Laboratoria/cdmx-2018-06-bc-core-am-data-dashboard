@@ -66,7 +66,8 @@ window.computeStudentsStats = (laboratoria) => {
       });
     });
   }
-  console.log(studentLab);
+  // console.log(studentLab);
+  printerComputeStudentsStats(studentLab);
   return studentLab;
 };
 // SEGUNDA FUNCIÓN:
@@ -85,44 +86,45 @@ window.computeGenerationsStats = (laboratoria) => {
   for (sedes in laboratoria) {
     campus = sedes;
     const gen = Object.keys(laboratoria[sedes].generacion);
-     console.log('1º for in', gen);
+    // console.log('1º for in', gen);
     for (let numberG of gen) {
-       console.log(numberG);
+      // console.log(numberG);
       generation = numberG;
       const stud = laboratoria[sedes].generacion[numberG].estudiantes;
       // sacar el número de estudiantes por generación
       let totalStud = stud.length;
       count = totalStud;
-      console.log(totalStud);
+      // console.log(totalStud);
       // const progressAddition = laboratoria[sedes].generacion[numberG].estudiantes.porcentajeCompletado;
       // console.log(progressAddition);
       // console.log(stud);
       for (eachStudent in stud) {
-         console.log(eachStudent);
+        // console.log(eachStudent);
         // aquí se suman los porcentajes de cada una
         eachGenPercent += laboratoria[sedes].generacion[numberG].estudiantes[eachStudent].progreso.porcentajeCompletado;
-         console.log(eachGenPercent);
+        // console.log(eachGenPercent);
         // aquí podría obtener un avance total de todas las estudiantes del mundo
-        //let totalProgress = eachGenPercent;
+        // let totalProgress = eachGenPercent;
         // console.log(totalProgress);
         // let genAddProgress = ;
       }
       // AQUÍ ME SUMA 134 STUDENTS
       totalStudentsOfHoleWorld += count;
-      console.log(totalStudentsOfHoleWorld);
+      // console.log(totalStudentsOfHoleWorld);
       // AHORA A DIVIDIR EL TOTAL DE ESTUDIANTES ENTRE EL TOTAL DE LA SUMA DE SUS PROGRESOS
       let totalAverage = Math.round(eachGenPercent / totalStudentsOfHoleWorld);
-      console.log(totalAverage);
+      // console.log(totalAverage);
       
       generations.push({'campus': campus,
         'generation': generation,
         'average': totalAverage,
         'count': count
-        }); 
+      }); 
     }
   }
   console.log(generations);
-   return generations; 
+  // sprinterFunction2f(generations);
+  return generations; 
   // se cierra el segundo for in al nivel generaciones
 };
     

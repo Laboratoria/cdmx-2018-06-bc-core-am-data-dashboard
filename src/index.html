@@ -1,203 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-<container class="container">
+<html lang='en'>
+<container class='container'>
 
   <head>
     <!-- Meta tags para responsive -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
     <title>Laboratoria LMS Dashboard</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-      crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB'
+      crossorigin='anonymous'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+    <link rel='stylesheet' href='style.css'>
   </head>
-
   <body>
-    <div class="jumbotron">
-      <section id="pantalla-1">
+    <div class='jumbotron'>
+      <section id='pantalla-1'>
         <header>
           <h1> Laboratoria LMS Dashboard
             <small> Toda la data en un solo lugar</small>
           </h1>
-          <img src="../images/Ldelabo.png" id="laboratoria">
+          <img src='../images/Ldelabo.png' id='laboratoria'>
     </div>
-    <ul>
-      <input type="text" value="Usuaria" id="user-name">
-      <br>
-      <input type="password" value="Contraseña" id="password">
-      <br>
-      <input type="submit" value="Login">
-      <br>
-      <button onclick="a()">Click me</button>
-    </ul>
-    <h2 id="welcome"> ¡Bienvenida </h2>
+    <div id='login'>
+    <form id='formLg'>
+        <input type='text'  placeholder='write your email' id='user'>
+        <input type='password' placeholder='password' id='password'>
+        <button type='button' id='buttonLogin' > Login </button>
+    </form>
+  </div>
+    <h2 id='welcome'> ¡Bienvenida Lucile! </h2>
     </header>
     </section>
-    <main id="main">
-      <nav class="menu">
-        <div id="barra-menu">
-          <div class="row">
-            <div class="col-md">
-              <ul class="nav">
+    <main id='main'>
+      <nav class='menu'>
+        <div id='barra-menu'>
+          <div class='row'>
+            <div class='col-md'>
+              <ul class='nav'>
                 <li>
-                  <a href="#">Cambiar Sede</a>
+                  <a href='#'>Cambiar Sede</a>
                   <ul>
-                    <li id="Lima">
-                      <a href="#">Lima</a>
+                    <li id='Lima'>
+                      <a href='#'>Lima</a>
                     </li>
-                    <li id="Mexico">
-                      <a href="#">México</a>
+                    <li id='Mexico'>
+                      <a href='#'>México</a>
                     </li>
-                    <li id="Santiago">
-                      <a href="#">Santiago</a>
+                    <li id='Santiago'>
+                      <a href='#'>Santiago</a>
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
-            <div class="col-md">
-              <ul class="nav">
+            <div class='col-md'>
+              <ul class='nav'>
                 <li>
-                  <a href="#">LMS</a>
+                  <a href='#'>LMS</a>
                   <ul>
                     <li>
-                      <a href="#">Temas</a>
+                      <a href='#'>Temas</a>
                     </li>
                     <li>
-                      <a href="#">Rendimiento</a>
+                      <a href='#'>Rendimiento</a>
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
-            <div class="col-md">
-              <ul class="nav">
+            <div class='col-md'>
+              <ul class='nav'>
                 <li>
-                  <a href="#">Estudiantes</a>
+                  <a href='#'>Estudiantes</a>
                   <ul>
-                    <li id="btn-students">
-                      <a href="#">Lista General</a>
+                    <li id='btn-students'>
+                      <a href='#'>Lista General</a>
                     </li>
                     <li>
-                      <a href="#">Mayor % de avance</a>
+                      <a href='#'>Mayor % de avance</a>
                     </li>
                     <li>
-                      <a href="#">Menor % de avance</a>
+                      <a href='#'>Menor % de avance</a>
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
-            <div class="col-md">
-              <ul class="nav">
+            <div class='col-md'>
+              <ul class='nav'>
                 <li>
-                  <a href="#">Buscar...</a>
+                  <a href='#'>Buscar...</a>
                   <ul>
                     <li>
-                      <a href="#"></a>
+                      <a href='#'></a>
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
-            <div class="col-md">
-              <ul class="nav">
+            <div class='col-md'>
+              <ul class='nav'>
                 <li>
-                  <a href="#">Log out</a>
+                  <a href='#'>Log out</a>
                 </li>
             </div>
             </ul>
       </nav>
       <!-- Cierra barra de nav-->
-      <section id="pantalla-2">
+      <section id='pantalla-2'>
         <!-- Apertura de menús de navegación -->
         <article>
-          <ul id="ul-prueba">
-            <div class="col-lg">
+          <ul id='ul-prueba'>
+            <div class='col-lg'>
               <li>
-                <a href="#">Cambiar Sede</a>
+                <a href='#'>Cambiar Sede</a>
               </li>
-              <li id="Lima">
-                <a href="#">Lima</a>
-              </li>
-              <li>
-                <a href="#">México</a>
+              <li id='Lima'>
+                <a href='#'>Lima</a>
               </li>
               <li>
-                <a href="#">Santiago</a>
+                <a href='#'>México</a>
+              </li>
+              <li>
+                <a href='#'>Santiago</a>
               </li>
             </div>
           </ul>
         </article>
         <article>
           <ul>
-            <div class="col-lg">
+            <div class='col-lg'>
               <li>
-                <a href="#">Elige la generación:</a>
+                <a href='#'>Elige la generación:</a>
               </li>
-              <li id="terceraGen">
-                <a href="#">Tercera</a>
+              <li id='terceraGen'>
+                <a href='#'>Tercera</a>
               </li>
-              <li id="cuartaGen">
-                <a href="#">Cuarta</a>
+              <li id='cuartaGen'>
+                <a href='#'>Cuarta</a>
               </li>
-              <li id="quintaGen">
-                <a href="#">Quinta</a>
+              <li id='quintaGen'>
+                <a href='#'>Quinta</a>
               </li>
           </ul>
         </article>
         <!-- Lugar para imprimir lista de estudiantes -->
       </section>
-      <section id="pantalla-3">
+      <section id='pantalla-3'>
         <h3>Lista de estudiantes</h3>
-        <img src="">
-        <div id="result-list">
-          <div id="name"> - </div>
-          <div id="email"> - </div>
-          <div id="turno"> - </div>
-          <div id="progress"> - </div>
-        </div>
+        <button id='btn'>Ver a todas las estudiantes</button>
+        <button id='delete'>Limpiar pantalla</button>
       </section>
-      <div class="table-responsive">
-        <table class="table">
-          <thead> Estudiantes
-            <tr>
-              <th>#</th>
-              <th>Nombre Completo</th>
-              <th>Email</th>
-              <th>Generación</th>
-              <th>Turno</th>
-              <th>Sede</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Ana Robles</td>
-              <td>Robles@gmail.com</td>
-              <td>3ra</td>
-              <td>AM</td>
-              <td>Lima</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              <div id='result'></div>
+              <!--RECORTE 1-->
       <!-- jQuery & Popper.js, para funcionalidad de estilo Bootstrap -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-      <script src="main.js"></script>
-      <script src="data.js"></script>
+      <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
+        crossorigin='anonymous'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
+        crossorigin='anonymous'></script>
+      <script src='main.js'></script>
+      <script src='data.js'></script>
     </main>
   </body>
   <footer>
     <p>Talento que transforma</p>
   </footer>
 </container>
-
 </html>
