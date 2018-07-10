@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!--Barra superior-->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">
+                    <img class="header-logo" src="Pictures/black-logo.png">
+                </a>
+                <a href="#" data-target="my-side-bar" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a>Hola Lucile!!!</a>
+                    </li>
+                    <li>
+                        <a href="iniciosesion.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Menu lateral-->
+        <ul id="my-side-bar" class="sidenav sidenav-fixed">
+            <li class="bar-element">
+                <div>
+                    <a href="#">
+                        <img class="bar-logo" src="Pictures/l_rgb_-01_360.png">
+                    </a>
+                </div>
+            </li>
+            <li class="bar-element" id="goVenues">
+                <a href="#!">
+                    <i class="material-icons">location_on</i>Sedes</a>
+            </li>
+            <li class="bar-element">
+                <a href="#!" id="goGeneretions">
+                    <i class="material-icons">school</i>Generaciones</a>
+            </li>
+            <li class="bar-element">
+                <a href="#!" id="goStudents">
+                    <i class="material-icons">face</i>Alumnas</a>
+            </li>
+            <li class="bar-element">
+                <a href="#!" id="goFilter">
+                    <i class="material-icons">filter_list</i>Filtrar</a>
+            </li>
+            <li class="bar-element">
+                <a href="#!" id="goSort">
+                    <i class="material-icons">find_replace</i>Ordenar</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <!--Inicio de card-->
+        <div class="row" class="cardsSpace">
+            <div class="col l4 m6 s12">
+                <div class="card white darken-1">
+                    <div class="card-content card-data black-text">
+                        <span class="card-title cards">MEXICO</span>
+                        <div class="color-activas">
+                            <span class="numero">15</span>
+                            <span> Alumnas activas</span>
+                        </div>
+
+                        <!--Promedios generales inicio-->
+                        <div class="elemento-card">
+                            <span>Promedio general prueba </span>
+                            <div class="progress tamaño-barra">
+                                <div class="determinate blue color-fondo" style="width: 20%"></div>
+                                <span class="derecha letra-barra">20%</span>
+                            </div>
+                        </div>
+
+                        <p>Intoducción a la programación</p>
+                        <div class="progress grey">
+                            <div class="determinate pink color-fondo" style="width: 10%">
+                            </div>
+                        </div>
+
+                        <p>Variables y tipos de datos</p>
+                        <div class="progress grey">
+                            <div class="determinate purple color-fondo" style="width: 20%"></div>
+                        </div>
+                        <p>UX</p>
+                        <div class="progress grey">
+                            <div class="determinate orange color-fondo" style="width: 30%"></div>
+                        </div>
+                        <!--Promedios generales fin-->
+                        <p>
+                            <i class="material-icons">schedule</i>
+                            <span>Tiempo: 219Hrs.</span>
+                        </p>
+                        <!--Barra de avance TRES colores-->
+                        <span class="center">Progreso alumnas:</span>
+                        <div class="elemento-card">
+                            <span class="letra-progreso izquierda">
+                                <i class="small material-icons">star</i>+80%</span>
+                            <span class="letra-progreso derecha">
+                                -60%
+                                <i class="small material-icons">star_half</i>
+                            </span>
+                            <div class="progress grey tamaño-barra">
+                                <div class="determinate amber darken-4 tooltipped" style="width: 93%" data-position="right" data-tooltip="Alumnas regulares"></div>
+                                <div class="determinate red accent-4 tooltipped" style="width: 50%" data-position="bottom" data-tooltip="Alumnas atrasadas"></div>
+                                <div class="determinate light-green accent-4 tooltipped" style="width: 10%" data-position="left" data-tooltip="Alumnas avanzadas"></div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fin de card-->
+
+        <!--Inicio de card-->
+        <div class="col l4 m6 s12">
+            <div class="card white darken-1">
+                <div class="card-content card-data black-text">
+                    <span class="card-title" id="cards">SANTIAGO</span>
+                    <div class="color-activas">
+                        <span class="numero">15</span>
+                        <span> Alumnas activas</span>
+                    </div>
+
+                    <!--Promedios generales inicio-->
+                    <div class="elemento-card">
+                        <span>Promedio general </span>
+                        <div class="progress tamaño-barra">
+                            <div class="determinate blue color-fondo" style="width: 70%"></div>
+                            <span class="derecha letra-barra">70%</span>
+                        </div>
+                    </div>
+
+                    <p>Intoducción a la programación</p>
+                    <div class="progress grey">
+                        <div class="determinate pink color-fondo" style="width: 70%">
+                        </div>
+                    </div>
+
+                    <p>Variables y tipos de datos</p>
+                    <div class="progress grey">
+                        <div class="determinate purple color-fondo" style="width: 70%"></div>
+                    </div>
+                    <p>UX</p>
+                    <div class="progress grey">
+                        <div class="determinate orange color-fondo" style="width: 70%"></div>
+                    </div>
+                    <!--Promedios generales fin-->
+                    <p>
+                        <i class="material-icons">schedule</i>
+                        <span>Tiempo: 219Hrs.</span>
+                    </p>
+                    <!--Barra de avance dos colores-->
+                    <div class="elemento-card">
+                        <span class="letra-progreso izquierda">
+                            <i class="material-icons">mood</i>+80%</span>
+                        <span class="letra-progreso derecha">
+                            -60%
+                            <i class="material-icons">mood_bad</i>
+                        </span>
+                        <div class="progress tamaño-barra color-progreso2">
+                            <div class="determinate color-progreso1 color-fondo" style="width: 40%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--Fin de card-->
+
+        <!--Inicio de card-->
+        <div class="col col l4 m6 s12">
+            <div class="card white darken-1">
+                <div class="card-content card-data black-text">
+                    <span class="card-title cards">LIMA</span>
+                    <div class="color-activas">
+                        <span class="numero">15</span>
+                        <span> Alumnas activas</span>
+                    </div>
+
+                    <!--Promedios generales inicio-->
+                    <div class="elemento-card">
+                        <span>Promedio general </span>
+                        <div class="progress tamaño-barra">
+                            <div class="determinate blue color-fondo" style="width: 70%"></div>
+                            <span class="derecha letra-barra">70%</span>
+                        </div>
+                    </div>
+
+                    <p>Intoducción a la programación</p>
+                    <div class="progress grey">
+                        <div class="determinate pink color-fondo" style="width: 70%">
+                        </div>
+                    </div>
+
+                    <p>Variables y tipos de datos</p>
+                    <div class="progress grey">
+                        <div class="determinate purple color-fondo" style="width: 70%"></div>
+                    </div>
+                    <p>UX</p>
+                    <div class="progress grey">
+                        <div class="determinate orange color-fondo" style="width: 70%"></div>
+                    </div>
+                    <!--Promedios generales fin-->
+                    <p>
+                        <i class="material-icons">schedule</i>
+                        <span>Tiempo: 219Hrs.</span>
+                    </p>
+                    <!--Barra de avance dos colores-->
+                    <div class="elemento-card">
+                        <span class="letra-progreso izquierda">
+                            <i class="material-icons">mood</i>+80%</span>
+                        <span class="letra-progreso derecha">
+                            -60%
+                            <i class="material-icons">mood_bad</i>
+                        </span>
+                        <div class="progress tamaño-barra color-progreso2">
+                            <div class="determinate color-progreso1 color-fondo" style="width: 40%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--Fin de card-->
+            <!--Mapa-->
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <div id="map-container">
+                    <img id="map" src="Pictures/map.jpg" />
+                </div>
+            </div>
+        </div>
+        <!--Cards generaciones-->
+        <!--Inicio de card generacion-->
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                        <div class="col s6 m5 l5">
+                            <!--generaciones1-->
+                            <span class="card-title cards">QUINTA Generación</span>
+                            <div class="color-activas">
+                                <span class="numero">15</span>
+                                <span> Alumnas activas</span>
+                            </div>
+                            <!--Barra de avance dos colores-->
+                            <div class="elemento-card">
+                                <span class="letra-progreso izquierda">
+                                    <i class="material-icons">mood</i>+80%</span>
+                                <span class="letra-progreso derecha">
+                                    -60%
+                                    <i class="material-icons">mood_bad</i>
+                                </span>
+                                <div class="progress tamaño-barra color-progreso2">
+                                    <div class="determinate color-progreso1 color-fondo" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <!--Tiempo promedio-->
+                            <p>
+                                <i class="material-icons">schedule</i>
+                                <span>Tiempo promedio invertido: 219Hrs.</span>
+                            </p>
+                        </div>
+                        <div class="col s5 m7 l7">
+                            <!--generaciones2-->
+                            <!--Promedios generales inicio-->
+                            <div class="elemento-card">
+                                <span>Promedio general </span>
+                                <div class="progress tamaño-barra">
+                                    <div class="determinate blue color-fondo" style="width: 70%"></div>
+                                    <span class="derecha letra-barra">70%</span>
+                                </div>
+                            </div>
+
+                            <p>Intoducción a la programación</p>
+                            <div class="progress grey">
+                                <div class="determinate pink color-fondo" style="width: 70%">
+                                </div>
+                            </div>
+
+                            <p>Variables y tipos de datos</p>
+                            <div class="progress grey">
+                                <div class="determinate purple color-fondo" style="width: 70%"></div>
+                            </div>
+                            <p>UX</p>
+                            <div class="progress grey">
+                                <div class="determinate orange color-fondo" style="width: 70%"></div>
+                            </div>
+                            <!--Promedios generales fin-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fin card generacion-->
+        <!--Inicio de card generacion-->
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                        <div class="col s6 m5 l5">
+                            <!--generaciones1-->
+                            <span class="card-title cards">CUARTA Generación</span>
+                            <div class="color-activas">
+                                <span class="numero">15</span>
+                                <span> Alumnas activas</span>
+                            </div>
+                            <!--Barra de avance dos colores-->
+                            <div class="elemento-card">
+                                <span class="letra-progreso izquierda">
+                                    <i class="material-icons">mood</i>+80%</span>
+                                <span class="letra-progreso derecha">
+                                    -60%
+                                    <i class="material-icons">mood_bad</i>
+                                </span>
+                                <div class="progress tamaño-barra color-progreso2">
+                                    <div class="determinate color-progreso1 color-fondo" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <!--Tiempo promedio-->
+                            <p>
+                                <i class="material-icons">schedule</i>
+                                <span>Tiempo promedio invertido: 219Hrs.</span>
+                            </p>
+                        </div>
+                        <div class="col s5 m7 l7">
+                            <!--generaciones2-->
+                            <!--Promedios generales inicio-->
+                            <div class="elemento-card">
+                                <span>Promedio general </span>
+                                <div class="progress tamaño-barra">
+                                    <div class="determinate blue color-fondo" style="width: 70%"></div>
+                                    <span class="derecha letra-barra">70%</span>
+                                </div>
+                            </div>
+
+                            <p>Intoducción a la programación</p>
+                            <div class="progress grey">
+                                <div class="determinate pink color-fondo" style="width: 70%">
+                                </div>
+                            </div>
+
+                            <p>Variables y tipos de datos</p>
+                            <div class="progress grey">
+                                <div class="determinate purple color-fondo" style="width: 70%"></div>
+                            </div>
+                            <p>UX</p>
+                            <div class="progress grey">
+                                <div class="determinate orange color-fondo" style="width: 70%"></div>
+                            </div>
+                            <!--Promedios generales fin-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fin card generacion-->
+        <!--Inicio de card generacion-->
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                        <div class="col s6 m5 l5">
+                            <!--generaciones1-->
+                            <span class="card-title cards">TERCERA Generación</span>
+                            <div class="color-activas">
+                                <span class="numero">15</span>
+                                <span> Alumnas activas</span>
+                            </div>
+                            <!--Barra de avance dos colores-->
+                            <div class="elemento-card">
+                                <span class="letra-progreso izquierda">
+                                    <i class="material-icons">mood</i>+80%</span>
+                                <span class="letra-progreso derecha">
+                                    -60%
+                                    <i class="material-icons">mood_bad</i>
+                                </span>
+                                <div class="progress tamaño-barra color-progreso2">
+                                    <div class="determinate color-progreso1 color-fondo" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <!--Tiempo promedio-->
+                            <p>
+                                <i class="material-icons">schedule</i>
+                                <span>Tiempo promedio invertido: 219Hrs.</span>
+                            </p>
+                        </div>
+                        <div class="col s5 m7 l7">
+                            <!--generaciones2-->
+                            <!--Promedios generales inicio-->
+                            <div class="elemento-card">
+                                <span>Promedio general </span>
+                                <div class="progress tamaño-barra">
+                                    <div class="determinate blue color-fondo" style="width: 70%"></div>
+                                    <span class="derecha letra-barra">70%</span>
+                                </div>
+                            </div>
+
+                            <p>Intoducción a la programación</p>
+                            <div class="progress grey">
+                                <div class="determinate pink color-fondo" style="width: 70%">
+                                </div>
+                            </div>
+
+                            <p>Variables y tipos de datos</p>
+                            <div class="progress grey">
+                                <div class="determinate purple color-fondo" style="width: 70%"></div>
+                            </div>
+                            <p>UX</p>
+                            <div class="progress grey">
+                                <div class="determinate orange color-fondo" style="width: 70%"></div>
+                            </div>
+                            <!--Promedios generales fin-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--Fin card generacion-->
+        </div>
+
+        <!--INICIO DE LISTA PARA ALUMNAS-->
+        <div class="row">
+            <div class="col s12 cards">
+                <span class="cards izquierda">MEXICO :TERCERA Generación</span>
+            </div>
+
+            <!--botones para las otras generaciones-->
+            <span>
+                <a class="waves-effect waves-light btn">
+                    <i class="material-icons right">school</i>CUARTA generación</a>
+            </span>
+            <span>
+                <a class="waves-effect waves-light btn">
+                    <i class="material-icons right">school</i>QUINTA generación</a>
+            </span>
+            <!--inicio de colapsable de alumnas-->
+            <div class="container collapsable-color">
+                <ul class="collapsible">
+                    <div class="row">
+                        <h2 class="center">MEXICO</h2>
+                        <!--Botones para generaciones-->
+                        <span class="derecha">
+                            <a class="btn disabled">
+                                <i class="material-icons right">school</i>3ra generación</a>
+                            <a class="btn disabled">
+                                <i class="material-icons right">school</i>4ta generación</a>
+                            <a class="btn disabled">
+                                <i class="material-icons right">school</i>5ta generación</a>
+                        </span>
+                        <span class="color-alumnas center pink lighten-3">QUINTA generacion</span>
+                    </div>
+                    <li>
+                        <div class="collapsible-header">
+                            <div>Nayely Estefania Molina Escobar 90%
+
+                                <a class="secondary-content waves-effect waves-light">
+                                    <i class="material-icons">send</i>
+                                </a>
+
+                            </div>
+                            <div class="progress grey">
+                                <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX 90%" style="width: 90%"></div>
+                                <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos 90%" style="width: 60%"></div>
+                                <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion 90%" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="collapsible-body">
+                            <div>
+                                <span>
+                                    <img style="width:150px; height:150px;" src="Pictures/perfil.png" ></span>
+                                    <span>
+                                        Nayely Estefania Molina Ecobar
+                                    </span>
+                            </div>
+
+                            <p class="collapsable">
+                                <i class="material-icons">mail_outline</i> Email: nayelocs@gmail.com
+                            </p>
+                            <p class="collapsable">
+                                <i class="material-icons">wb_sunny</i> Turno: AM
+                            </p>
+                            <p class="collapsable">
+                                <i class="material-icons">schedule</i> Tiempo promedio invertido:
+                            </p>
+                            <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 1 Introducción a la programación:
+                            </p>
+                            <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 1:
+                            </p>
+                            <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos:
+                            </p>
+                            <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 2:
+                            </p>
+                            <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 3 UX:
+                            </p>
+                            <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 3:
+                            </p>
+                        </div>
+                    </li>
+
+                    <!--Fin de alumna, inicio de la siguiente-->
+                    <li>
+                        <div class="collapsible-header">
+                            <div>Nayely Estefania Molina Escobar
+
+                                <a href="#!" class="secondary-content">
+                                    <span>60%</span>
+                                    <i class="material-icons">send</i>
+                                </a>
+                            </div>
+                            <div class="progress grey">
+                                <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX 60%" style="width: 60%"></div>
+                                <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos 60%" style="width: 40%"></div>
+                                <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion 60%" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="collapsible-body">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                        </div>
+                    </li>
+                    <!--barra dividida en tres-->
+                    <li>
+                        <div class="collapsible-header">
+                            <div>Nayely Estefania Molina Escobar
+                                <a href="#!" class="secondary-content">
+                                    <i class="material-icons">send</i>
+                                </a>
+                            </div>
+                            <div class="progress grey">
+
+                                <div class="determinate orange tooltipped" style="width: 50%" data-position="right" data-tooltip="UX 90%"></div>
+                                <div class="determinate grey" style="width: 66.6%"></div>
+                                <div class="determinate purple tooltipped" style="width: 63.3%" data-position="bottom" data-tooltip="Variables y tipos de datos 50%"></div>
+                                <div class="determinate grey" style="width: 33.3%"></div>
+                                <div class="determinate pink tooltipped" style="width: 30%" data-position="left" data-tooltip="Introduccion a la programacion 30%"></div>
+                            </div>
+                        </div>
+                        <div class="collapsible-body">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                        </div>
+                    </li>
+                    <!--fin barra de tres-->
+                    <li>
+                        <div class="collapsible-header">
+                            <div>Nayely Estefania Molina Escobar
+                                <a href="#!" class="secondary-content">
+                                    <i class="material-icons">send</i>
+                                </a>
+                            </div>
+                            <div class="progress grey">
+                                <div class="determinate orange tooltipped" style="width: 93%" data-position="right" data-tooltip="UX 90%"></div>
+                                <div class="determinate grey" style="width: 66.6%"></div>
+                                <div class="determinate purple tooltipped" style="width: 60%" data-position="bottom" data-tooltip="Variables y tipos de datos 90%"></div>
+                                <div class="determinate grey" style="width: 33.3%"></div>
+                                <div class="determinate pink tooltipped" style="width: 26.64%" data-position="left" data-tooltip="Introduccion a la programacion 90%"></div>
+                            </div>
+                        </div>
+                        <div class="collapsible-body">
+                            <span>Lorem ipsum dolor sit amet.</span>
+                        </div>
+                    </li>
+
+                </ul>
+                <!--modal-->
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4>MEXICO :TERCERA Generación</h4>
+                    </li>
+                    <li class="collection-item">
+                        <div>Nayely Estefania Molina Escobar 90%
+
+                            <a class="secondary-content waves-effect waves-light  modal-trigger" href="#modal1">
+                                <i class="material-icons">send</i>
+                            </a>
+
+                        </div>
+                        <div class="progress grey">
+                            <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX 90%" style="width: 90%"></div>
+                            <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos 90%" style="width: 60%"></div>
+                            <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion 90%" style="width: 30%"></div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+                        <div>Nayely Estefania Molina Escobar
+
+                            <a href="#!" class="secondary-content">
+                                <span>60%</span>
+                                <i class="material-icons">send</i>
+                            </a>
+                        </div>
+                        <div class="progress grey">
+                            <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX 60%" style="width: 60%"></div>
+                            <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos 60%" style="width: 40%"></div>
+                            <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion 60%" style="width: 20%"></div>
+                        </div>
+                    </li>
+                    <li class="collection-item">
+
+                    </li>
+                    <li class="collection-item">
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="modal-alumnas">
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Nayely Estefania Molina Escobar</h4>
+                    <p>
+                        <i class="material-icons">location_on</i>MEXICO, Quinta Generacion</p>
+                    <p>
+                        <i class="material-icons">mail_outline</i>Email: nayelocs@gmail.com</p>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salir</a>
+                </div>
+            </div>
+        </div>
+        <!--fin modal-->
+
+
+    </main>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script>
+
+        // Barra Menu lateral colapsable
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+        });
+        var collapsibleElem = document.querySelector('.collapsible');
+        var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+
+        // ToolTip
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(elems, {});
+        });
+
+        //Colapsable alumnas
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, {});
+        });
+
+        //Modal
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, {});
+        });
+
+    </script>
+
+</body>
+
+</html>

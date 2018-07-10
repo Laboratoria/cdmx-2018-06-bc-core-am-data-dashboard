@@ -228,6 +228,7 @@ window.computeStudentsStats = (laboratoria) => {
         let tps = {};
         let completedPercentageT = 0, percentageDurationT = 0;
         for (let unit in unitiesContent) {
+<<<<<<< HEAD
           if (unit === '01-Introduccion-a-programacion') {
             completedPercentageT = (Object.values(unitiesContent))[0].porcentajeCompletado;
             percentageDurationT = (Object.values(unitiesContent))[0].duracionTemaCompletado;
@@ -890,8 +891,3 @@ window.printSedesAll = (laboratoria) => {
   }
   resultFilter.innerHTML = sedeAll;
 };
-
-/*$(document).ready(function() {
-  $('.tooltipped').tooltip();
-});
-*/

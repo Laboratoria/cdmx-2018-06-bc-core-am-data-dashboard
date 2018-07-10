@@ -15,6 +15,8 @@ nav ul a, nav a {
    font-weight: bold;
 }
 
+
+
 .header-logo{
    height: 60px;
 }
@@ -59,6 +61,10 @@ nav ul a, nav a {
  }
 }
 
+.barra-alumnas{
+    width: 70%;
+    margin:0 auto;
+}
 body{
    background-color: rgb(241, 235, 238);
    color: rgb(0, 0, 0);
@@ -149,7 +155,7 @@ span{
    font-size: .8em;
 }
 .collapsible-header{
-    background-color: #ffebee;
+    background-color: white;
 }
 .collapsable-color{
     background-color: #fffde7;
@@ -164,3 +170,15 @@ img1{
     width:50px;
     height:50px;
    } 
+i.material-icons{
+    color: #424242;
+}
+.barra-alumnas{
+    background-color: #69f0ae;
+    color:#212121;
+    font-weight: bolder;
+}
+.alumnas{
+    margin-left: 36%;
+    font-size: 2em;
+}
