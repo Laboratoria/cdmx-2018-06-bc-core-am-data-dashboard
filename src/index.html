@@ -4,94 +4,72 @@
 <head>
   <meta charset="utf-8">
   <title>Data Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 
 <body>
   <!--En este apartado se encuentra la imagen de la cabecera-->
-  <header>
+  <header class="container-fluid">
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6"><img src="https://image.ibb.co/hX7PUo/descarga.jpg"></div>
-      <div class="col-md-3"></div>
-    </div>
-  </header>
-  <br>
-  <br>
-  <!-- Código esta el codigo del menú  donde se muestran las sedes y generaciones-->
-  <nav>
-    <div class="row" id=menu>
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <div class="btn-group">
-          <button type="button" class="btn btn-warning">Lima</button>
-          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true">
-  <span class="sr-only">Toggle Dropdown</span>
-</button>
-          <div class="dropdown-menu" id="generacionesLima">
-            <a class="dropdown-item" href="#" id="lima4">Cuarta</a>
-            <a class="dropdown-item" href="#" id="lima5">Quinta</a>
-            <a class="dropdown-item" href="#" id="lima3">Tercera</a>
-            <div class="dropdown-divider"></div>
-          </div>
-        </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-warning">Santiago</button>
-          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-          <div class="dropdown-menu" id="generacionesSantiago">
-            <a class="dropdown-item" href="#">Cuarta</a>
-            <a class="dropdown-item" href="#">Quinta</a>
-            <a class="dropdown-item" href="#">Tercera</a>
-            <div class="dropdown-divider"></div>
-          </div>
-        </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-warning">México</button>
-          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-          <div class="dropdown-menu" id="generacionesMexico">
-            <a class="dropdown-item" href="#">Cuarta</a>
-            <a class="dropdown-item" href="#">Quinta</a>
-            <a class="dropdown-item" href="#">Tercera</a>
-            <div class="dropdown-divider"></div>
-          </div>
-        </div>
-        <div class="col-md-4"></div>
+      <div class="col-md-2">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/4237c162847359.Y3JvcCw5ODcsNzcyLDIxLDc.png">
       </div>
-    </div>
-  </nav>
-  <br>
-  <br>
-  <br>
+      <!-- Código esta el codigo del menú  donde se muestran las sedes y generaciones-->
+      <nav class="col-md">
+        <div class="btn-group col-md-2">
+          <button type="button" class="btn">Lima</button>
+          <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu  col-md-1" id="generacionesLima">
+            <a class="dropdown-item" href="#" id="lima-cuarta">Cuarta</a>
+            <a class="dropdown-item" href="#" id="lima-quinta">Quinta</a>
+            <a class="dropdown-item" href="#" id="lima-tercera">Tercera</a>
+          </div>
+        </div>
+        <div class="btn-group col-md-2">
+          <button type="button" class="btn">Santiago</button>
+          <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu  col-md-1" id="generacionesSantiago">
+            <a class="dropdown-item" href="#" id="santiago-cuarta">Cuarta</a>
+            <a class="dropdown-item" href="#" id="santiago-quinta">Quinta</a>
+            <a class="dropdown-item" href="#" id="santiago-tercera">Tercera</a>
+          </div>
+        </div>
+        <div class="btn-group col-md-2">
+          <button type="button" class="btn">México</button>
+          <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu  col-md-1" id="generacionesMexico">
+            <a class="dropdown-item" href="#" id="mexico-cuarta">Cuarta</a>
+            <a class="dropdown-item" href="#" id="mexico-quinta">Quinta</a>
+            <a class="dropdown-item" href="#" id="mexico-tercera">Tercera</a>
+          </div>
+        </div>
+      </nav>
+  </header>
 
   <!--Tabla donde se muetran los datos de las estudientes-->
-  <div class="col-md-4">
-  </div>
+  <div class="container">
   <div class="row">
-    <div class="container">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-        <table class="table table-striped" id="pintar">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Correo</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Progreso</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-md-3">
-      </div>
-    </div>
+    <table id="tabla" class="table table-bordered col-md-8 offset-md-2">
+      <thead class="thead">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Turno</th>
+          <th scope="col"> % Completado</th>
+        </tr>
+      </thead>
+      <tbody id="pintar"></tbody>
+    </table>
   </div>
+  </div>
+
   <script src="data.js"></script>
   <script src="main.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
