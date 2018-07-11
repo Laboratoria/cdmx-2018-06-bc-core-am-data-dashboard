@@ -13,20 +13,22 @@
     <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link rel='stylesheet' href='style.css'>
+    
   </head>
   <body>
     <section id='pantalla-1'>
       <header>
         <h1> Laboratoria LMS Dashboard </h1>
-        <img src='../images/Ldelabo.png' id='laboratoria'>
-        <div id=welcome1></div>
+        <img src="../images/Ldelabo.png" id="laboratoria" class="img-fluid" alt"Responsive image">
+       
         <div id='login'>
             <form id='formLg'>
+              
                 <input type='text'  placeholder='write your email' id='user'>
                 <input type='password' placeholder='password' id='password'>
                 <button type='button' id='buttonLogin' > Login </button>
-                <button type='reset' id='exit'>Log Out</button>
-          </form>
+            </form>
+            </section>
       </header>
  <!--  Termina pantalla inicial-->   
       <section id='pantalla-2'>
@@ -52,14 +54,29 @@
             </div>
           </div> 
 <!--Comienza barra de navegación-->
-<nav class='navbar navbar-expand-lg navbar-light bg-dark'>
-  <a id='barra-navegacion' class='navbar-brand' href='#'>LABORATORIA</a>
-    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class='navbar-toggler-icon'></span>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <li class='nav-item dropdown'>
-        <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown3' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-        LMS (Rendimiento)
+
+    <li class="nav-item dropdown">
+      
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cambiar Sede
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"> CDMX </a>
+          <a class="dropdown-item" href="#"> Lima </a>
+          <a class="dropdown-item" href="#"> Santiago </a>
+        </div>
+      </li>
+
+  
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        LMS 
         </a>
         <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
           <a class='dropdown-item' href='#'>  Rendimiento General </a>
@@ -79,21 +96,31 @@
         <li class='nav-item'>
           <a class='nav-link disabled' href='#'>Log Out</a>
         </li>
-      <form class='form-inline my-2 my-lg-0'>
-        <input class='form-control mr-sm-4' type='search' placeholder='Search' aria-label='Search'>
-        <button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Search</button>
+      <form class="form-inline my-2 my-lg-0">
+        <input  id="place-holder" class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+        <button  class="form-control mr-sm-4"   class="text-white bg-dark" type="submit">Search</button>
       </form>
     </div>
   </nav>
 </main>
-
-<!-- Cierra barra de nav-->    
-<button id='delete'>Limpiar pantalla</button>
-<section id='container2'>
-    <div id='data-generations'></div>
-    <div id='result'></div>
 </section>
-       
+<section id='pantalla-3'>
+  
+  <button id='btn'>Ver a todas las estudiantes</button>
+  <button id='delete'>Limpiar pantalla</button>
+</section> 
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Estudiantes</h5>
+                  <p class="card-text">
+                      <div id='result'> </p>
+                </div>              
+              </div>
+     
+
+
+
+        
         <!--RECORTE 1-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

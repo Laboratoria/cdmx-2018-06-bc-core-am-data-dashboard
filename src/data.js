@@ -110,7 +110,7 @@ window.computeGenerationsStats = (laboratoria) => {
 };
     
     
-// se cierra primer fon in al nivel sedes
+// se cierra primer fun in al nivel sedes
 // }
     
 // }
