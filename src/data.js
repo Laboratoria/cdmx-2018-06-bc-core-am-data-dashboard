@@ -32,11 +32,7 @@ window.computeStudentsStats = (laboratoria) => {
                 duration: 0,
   
               },
-<<<<<<< HEAD
               "03-tu-primer-sitio": {
-=======
-              '03-tu-primer-sitio': {
->>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
