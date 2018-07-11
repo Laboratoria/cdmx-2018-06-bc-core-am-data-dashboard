@@ -38,7 +38,7 @@ window.computeVenuesStats = (laboratoria) => {
           advanceStudents++;
         } else {
           mediumStudents++;
-        }
+        }// Avance y calificación por unidad
         advanceU1 += students[student].progreso.temas['01-Introduccion-a-programacion'].porcentajeCompletado;
         advanceU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].porcentajeCompletado;
         advanceU3 += students[student].progreso.temas['03-UX'].porcentajeCompletado;
@@ -67,12 +67,14 @@ window.computeVenuesStats = (laboratoria) => {
     myobj.advanceU2 = Math.round(advanceU2);
     myobj.advanceU3 = Math.round(advanceU3);
     myobj.quizAverage = Math.round(quizAverage);
-    venuesArray.push(myobj);
+    venuesArray.push(myobj);// Ingresa el objeto al arreglo a retornar
   }
   console.log(venuesArray);
   return (venuesArray);// Retorna un objeto sede que se almacena en una localidad del array
 };
-window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre las generaciones, da un array: [{},{},{},{},{},{},{},{},{}]
+window.computeGenerationsStats = (laboratoria) => {
+// Extrae información sobre las generaciones, da un array: [{},{},{},{},{},{},{},{},{}]
+// Declaración de funciones locales
   let generationsArray = [];
   let averageO = 0;
   let advanceStudentsO = 0;
@@ -86,6 +88,7 @@ window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre 
   let advanceU1 = 0, advanceU2 = 0, advanceU3 = 0;
   let quizU1 = 0, quizU2 = 0, quizU3 = 0;
   let i = -1;
+  // Inicio de iteración de la data
   for (key in laboratoria) {
     let generations = laboratoria[key].generacion;
     let venuesValue = Object.getOwnPropertyNames(laboratoria);
@@ -101,13 +104,14 @@ window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre 
       for (student in students) {
         averageO += students[student].progreso.porcentajeCompletado;
         timeAverageO += students[student].progreso.duracionPrograma;
-        if (students[student].progreso.porcentajeCompletado <= 60) {
+        if (students[student].progreso.porcentajeCompletado <= 60) { // Evalua average para indicar status
           inLowStudentsO++;
         } else if (students[student].progreso.porcentajeCompletado >= 90) {
           advanceStudentsO++;
         } else {
           mediumStudents++;
         }
+        // Avance por unidad y evaluación de los quiz´s
         advanceU1 += students[student].progreso.temas['01-Introduccion-a-programacion'].porcentajeCompletado;
         advanceU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].porcentajeCompletado;
         advanceU3 += students[student].progreso.temas['03-UX'].porcentajeCompletado;
@@ -115,6 +119,7 @@ window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre 
         quizU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].subtemas['05-quiz'].puntuacion;
         quizU3 += students[student].progreso.temas['03-UX'].subtemas['03-quiz'].puntuacion;
       } quizAverageO = (quizU1 + quizU2 + quizU3) / (countsO * 3);
+      // Genera propiedades del objeto generaciones
       myObj.generation = generationsO.toUpperCase();
       myObj.venue = venuesO.toUpperCase();
       myObj.count = countsO;
@@ -127,48 +132,53 @@ window.computeGenerationsStats = (laboratoria) => {// Extrae información sobre 
       myObj.advanceU2 = Math.round(advanceU2 / countsO);
       myObj.advanceU3 = Math.round(advanceU3 / countsO);
       myObj.quizAverage = Math.round(quizAverageO);
-      generationsArray.push(myObj);
+      generationsArray.push(myObj); // Genera arreglo de objetos generaciones
       countsO = 0;
     }
   }
   console.log(generationsArray);
   return (generationsArray);
 };
+// Función que ordena arreglo de estudiantes
 window.sortStudents = (students, orderBy, orderDirection) => {
   let ordered;
+  // Ordena por nombre
   if (orderBy === 'name') {
+    // Ordena por nombre en forma ASC
     if (orderDirection === 'ASC') {
       ordered = students.sort((arrayA, arrayB) => {
         var nameA = arrayA.name.toLowerCase(), nameB = arrayB.name.toLowerCase();
-        if (nameA < nameB) return -1;
-        if (nameA > nameB) return 1;
+        if (nameA < nameB) return -1; // Retorna "namaA" primero si es menor que nameB
+        if (nameA > nameB) return 1; // Retorna "namaB" primero si es menor que nameA
         return 0;
       });
       console.log(ordered);
     } else {
+      // Ordena por nombre en forma DESC
       ordered = students.sort((arrayA, arrayB) => {
         var nameA = arrayA.name.toLowerCase(), nameB = arrayB.name.toLowerCase();
-        if (nameA > nameB) return -1;
-        if (nameA < nameB) return 1;
+        if (nameA > nameB) return -1; // Retorna "namaA"  si este mayor que nameB
+        if (nameA < nameB) return 1; // Retorna "namaB"  si este mayor que nameA
         return 0;
       });
       console.log(ordered);
     }
-  } else if (orderBy === 'percentage') {
-    if (orderDirection === 'ASC') {
+  } else if (orderBy === 'percentage') {// Ordena por porcentajeCompletado
+    if (orderDirection === 'ASC') { // Ordena en forma ascendente
       ordered = students.sort((arrayA, arrayB) => {
-        return (arrayA.average - arrayB.average);
+        return (arrayA.average - arrayB.average); // Coloca arrayA primero si el resultado de la resta es >0
       });
       console.log(ordered);
     } else {
       ordered = students.sort((arrayA, arrayB) =>{
-        return (arrayB.average - arrayA.average);
+        return (arrayB.average - arrayA.average);// Coloca arrayB primero si el resultado de la resta es <0
       });
       console.log(ordered);
     }
   }
   return (ordered);
 };
+// Filtra un arreglo devolviendo solo aquellos en los que coincida el nombre
 window.filterStudents = (students, search) => {
   let filtered = [];
   for (let i = 0; i < students.length; i++) {
@@ -761,6 +771,9 @@ window.studentsPrint = (laboratoria) => {
                                            <i class="material-icons">send</i>
                                        </a>
                                    </div>
+                                   <div>${studentsM[i].venue}${'  '}${studentsM[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
+                                   </a>
+                               </div>
                                    <div class="progress grey">
                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ studentsM[i].p1}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3 + studentsM[i].p1 / 3}${'%'}" title = "${' U1 '}${studentsM[i].p1}${'%'}"></div>
                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ studentsM[i].p2}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3}${'%'}" title = "${' U2 '}${studentsM[i].p2}${'%'}"></div>
