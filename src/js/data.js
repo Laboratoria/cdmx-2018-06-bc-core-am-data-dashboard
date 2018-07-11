@@ -7,7 +7,7 @@ window.getSedes = (laboratoria) => {
 
   const sedesHTML = sedes.map(sede => (
     `<div class="alert alert-warning w-100 text-center" role="alert">
-      Ir a <a href="/views/generaciones.html?sede=${sede}" class="alert-link">${sede.toUpperCase()}</a>.
+      <a href="./generaciones.html?sede=${sede}" class="alert-link">${sede.toUpperCase()}</a>.
     </div>`
   ));
   // Arreglo de div, que son las sedes
@@ -26,9 +26,11 @@ window.getGenerations = (laboratoria, sede) => {
   const generationsHTML = generations.map(generation => (
     // templates donde se pintaran los datos
     `<div class="alert alert-warning w-100 text-center" role="alert">
-      Ir a <a href="/views/alumnas.html?sede=${sede}&generation=${generation}" class="alert-link">${generation.toUpperCase()}</a>.
+      <a href="./alumnas.html?sede=${sede}&generation=${generation}" class="alert-link">${generation.toUpperCase()}</a>.
     </div>`
   ));
+
+
   // console.log(sedesHTML);
   document.getElementById('generations-container').innerHTML = generationsHTML;
   // return sedes;
@@ -38,13 +40,13 @@ window.getGenerations = (laboratoria, sede) => {
 window.getAlumnas = (laboratoria, sede, generation) => {
   let alumnas = laboratoria[sede].generacion[generation].estudiantes;
   // console.log(alumnas);
+  const alumnasHTML = alumnas.map((alumna) => (
 
-  const alumnasHTML = alumnas.map((alumna, indice) => (
     `<tr>
-      <th scope="row">${indice + 1}</th>
-      <td>${alumna.nombre.toUpperCase()}</td>
+      <th scope="row">${alumna.nombre.toUpperCase()}</th>
       <td>${alumna.correo}</td>
       <td>${alumna.progreso.porcentajeCompletado}%</td>
+      <td>Estado General de la Alumna</td>
     </tr>`
   ));
 
@@ -57,6 +59,6 @@ window.getAlumnas = (laboratoria, sede, generation) => {
 }
 
 window.computeStudentsStats = (laboratoria) => {
-  console.log(laboratoria, 1);
+  // console.log(laboratoria, 1);
 }
 
