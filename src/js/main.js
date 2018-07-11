@@ -14,9 +14,9 @@ window.realoadJSON = () => {
       studentDraw(infoStudent);
       generationDraw(infoGeneration);
     });
-  // .catch((error) => {
-  //     console.log(error)
-  // });
+   .catch((error) => {
+       console.log(error)
+   });
 };
 
 // pintar tabla de estudiantes
@@ -43,9 +43,10 @@ window.studentDraw = (infoStudent) => {
             <tr><th scope="col"> ${number + i}</th>
                 <th scope="col"> ${infoStudent[i].name}</th>
                 <th scope="col"> ${infoStudent[i].mail}</th>
+                <th scope="col"> ${infoStudent[i].campus}</th>
                 <th scope="col"> ${infoStudent[i].turnoStudent}</th>
                 <th scope="col"> ${infoStudent[i].stats.completedPercentage}</th>
-                <th scope="col"> ${infoStudent[i].campus}</th>
+                <th scope="col"> ${infoStudent[i].stats.status}</th>
             </tr>
             ` ;
   }
@@ -78,4 +79,3 @@ clickSedes.addEventListener('click', (event) => {
   listaEstudiantes.style.display = 'none';
   containerG.style.display = 'block';
 });
-

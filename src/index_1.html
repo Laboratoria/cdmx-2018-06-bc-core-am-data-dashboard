@@ -1,71 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-la">
 <head>
   <meta charset="utf-8">
+  <!-- ETIQUETA PARA CONTROLAR LA COMPOCISION DE LOS NAVEGADORES MOVILES -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laboratoria</title>
-  <link rel="stylesheet" href="font.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- VINCULOS CON ARCHIVOS DE ESTILO CSS -->
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- LINK PARA TEMPLATE DE ESTILOS CSS DE BOOTSTRAP -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!-- LINK DE TIPOGRAFIA DE GOOGLE -->
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:500" rel="stylesheet">
-  <link rel="stylesheet" href="responsive.css">
 </head>
+
 <body>
-  <header class="container"> <!--INICIO  DE MENU-->
+  <!--INICIO  DE MENU-->
+  <header class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"><img class="logo" src="imagenes/logo.gif" alt="LABORATORIA"></a>
+      <!-- LOGO CON FUNCIONALIDAD DE ACTUALIZAR LA PAGINA -->
+      <a class="navbar-brand"><img class="logo" src="imagenes/logo.gif" alt="LABORATORIA" onclick = "history.go(0)"></a>
+      <!-- BOTON QUE CONTIENE EL MENU EN RESPONSIVE DESING -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- MENUS DESPLEGABLES -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
-          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               PORCENTAJE GENERAL
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#" id="cdmx">SEDES</a>
-              <!-- <a class="dropdown-item" href="#" id="lima">LIMA</a>
-              <a class="dropdown-item" href="#" id="santiago">SANTIAGO</a> -->
+            <div class="dropdown-menu">
+              <a class="dropdown-item" id="sedes">SEDES</a>
             </div>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               LISTADO
             </a>
 
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <!-- <a class="dropdown-item" href="#" id="estudiantesC4">Cdmx - 4ta </a>
-              <a class="dropdown-item" href="#" id="estudiantesC5">Cdmx - 5ta</a>
-              <a class="dropdown-item" href="#" id="estudiantesC6">Cdmx - 6ta</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" id="estudiantesL4">Lima - 4ta </a>
-              <a class="dropdown-item" href="#" id="estudiantesL5">Lima - 5ta</a>
-              <a class="dropdown-item" href="#" id="estudiantesL6">Lima - 6ta</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" id="estudiantesS4">Santiago - 4ta </a>
-              <a class="dropdown-item" href="#" id="estudiantesS5">Santiago - 5ta</a>
-              <a class="dropdown-item" href="#" id="estudiantesS6">Santiago - 6ta</a>
-              <div class="dropdown-divider"></div> -->
-              <a class="dropdown-item" href="#" id="estudiantes" >ESTUDIANTES</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" id="estudiantes" >ESTUDIANTES</a>
             </div>
           </li>
-
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" id="search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="btnSearch">BUSCAR</button>
-          </form>
+        </ul>
       </div>
     </nav>
-  </header> <!--TERMINO DE MENU-->
+    <!--TERMINO DE MENU Y HEADER-->
+  </header>
+
   <section>
-    <!-- div de bienvenida -->
-    <div class="bienvenido container" >
-      < B I E N V E N I D @ >
+    <!-- DIV DE BIENVENIDA -->
+    <div class="bienvenido container" >B I E N V E N I D @
     </div>
 
     <!--SOCIAL BAR-->
@@ -74,45 +62,20 @@
       <a href="http://convocatoria.laboratoria.la/" class="icon icon-embed" target="_blank"></a>
       <a href="https://twitter.com/?lang=es" class="icon icon-twitter" target="_blank"></a>
     </div>
-    <!--INICIO DE DIV´S PARA IMPRESION DE RESULTADOS-->
   </section>
 
-  <main class="container  justificar">
-    <div class="ocultar" id="tablaEstudiantes">
-      <table class="table table-sm">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Correo</th>
-            <th scope="col">Turno</th>
-            <th scope="col">% LMS</th>
-            <th scope="col">Sede</th>
-          </tr>
-        </thead>
-        <tbody id="lista_estudiantes">
-        </tbody>
-      </table>
-    </div>
-
-    <div class="row">
-      <div id="contenido_general" class="ocultar "> </div>
-      <div id="completitud_general" class="ocultar"> </div>
-      <div id="porcentaje_tiempo" class="ocultar"> </div>
-    </div>
-  </main>
-      <!-- Inicio del carrusel -->
+      <!-- INICIO CARRUSEL -->
   <div class="container carrusel" id="carrusel" >
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="imagenes/laboratoria01.png" alt="laboratoria" class="imgCarrusel">
+          <img class="d-block w-100" src="imagenes/laboratoria01.png" alt="laboratoria">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="imagenes/laboratoria02.png" alt="Laboratoria" class="imgCarrusel">
+          <img class="d-block w-100" src="imagenes/laboratoria02.png" alt="Laboratoria">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="imagenes/logo2.jpg" alt="laboratoria" class="imgCarrusel">
+          <img class="d-block w-100" src="imagenes/logo2.jpg" alt="laboratoria">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -126,17 +89,44 @@
     </div>
   </div>
 
-  <!-- pie de pagina -->
+  <!-- MUESTRA DE RESULTADOS EN PANTALLA -->
+  <main class="container  justificar">
+    <div class="ocultar" id="tablaEstudiantes">
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">CORREO</th>
+            <th scope="col">SEDE</th>
+            <th scope="col">TURNO</th>
+            <th scope="col">% LMS</th>
+            <th scope="col">ESTATUS</th>
+          </tr>
+        </thead>
+        <tbody id="lista_estudiantes">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <div id="contenido_general" class="ocultar "> </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
   <footer class="container pie-pagina">
     <p> © Copyright 2018. All Rights Reserved. LABORATORIA </p>
   </footer>
 
-  <script src="main.js"></script>
+  <!-- VINCULOS CON ARCHIVOS JAVASCRIPT -->
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
   <script src="data.js"></script>
-  <script src="login.js"></script>
+
+  <!-- VINCULOS DE BOOTSTRAP -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
   </body>
 </html>

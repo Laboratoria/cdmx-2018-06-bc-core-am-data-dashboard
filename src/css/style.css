@@ -1,7 +1,8 @@
+/*NOTA: hay propiedades que se especificaron en % esto para que los media querys pudieran detectarlos*/
 
 .logo{
-  height: 90px;
-  width:250px;
+  height: 90px; /*alto*/
+  width:250px; /*ancho*/
   /* height: 90px;
   width: 250px; */
 }
@@ -12,42 +13,36 @@
 }
 
 
-* {  /*Quita los margenes predeterminados --*/
-  margin:0%;
+* {
+  margin:0%; /*Quita los margenes predeterminados*/
   padding: 0%;
   font-family: 'Encode Sans Condensed', sans-sans-serif;
 }
 
 .ocultar {
-  display: none;
+  display: none; /*propiedad que permite ocultar tabla estudiantes y porcentaje cuando se le da click al boton*/
 }
 
-.card {
-  width: 200px;
-  height: 200px;
-  float: left;
-  margin: 0.5rem;
-  color:#273746;
-  text-align: center;
-  font-size: 20px;
-  box-shadow:10px 10px 19px rgba(0, 0, 0, 0.75);
+.card {  /*esta clase proviene del archivo main.js */
+  width: 200px; /*ancho*/
+  height: 200px; /*alto*/
+  float: left; /*propiedad que permite que los div se alinien uno de lado del otro*/
+  margin: 0.5rem; /*margen que existe fuera de cada div*/
+  color:#273746; /*color del fondo del div*/
+  text-align: center; /*Centra el texto*/
+  font-size: 20px; /*tamaño de la letra*/
+  box-shadow:10px 10px 19px rgba(0, 0, 0, 0.75); /*Sombra en el borde del div porcentajes*/
 }
 
-.info {
-  margin: 0 auto;
+.info { /*esta clase proviene del archivo main.js */
+  margin: 0 auto; /*quita el margen que viene por defecto*/
 }
 
 #cardColor{
-  background: #F8C471;
+  background: #F8C471; /*color de fondo de div de pocentajes*/
 }
 
-.img-fluid {
-  width:1120%;
-  height: 200%;
-}
-
-
-p {
+p {  /*esta parrafo proviene de el archivo main.js especificamente de la tabla inscrustada*/
   display: block;
   margin:inherit;
   text-align: center;
@@ -56,15 +51,14 @@ p {
 
 .bienvenido {
   background:  #D5D8DC;
-  font-size: 150%;
+  font-size: 150%; /*tamaño del texto*/
   text-align: center;
   display: block;
   color: #808B96;
-  text-shadow: 2px 2px 5px rgba(241, 196, 15);
+  text-shadow: 2px 2px 5px rgba(241, 196, 15); /*efecto de sombra en el texto bienvenido*/
 }
 
 /* Inicio de propiedades para las redes sociales*/
-
 
 .social-bar {
   position: fixed; /* permite quedar fijo en la pantalla*/
