@@ -7,7 +7,7 @@ window.getSedes = (laboratoria) => {
 
   const sedesHTML = sedes.map(sede => (
     `<div class="alert alert-warning w-100 text-center" role="alert">
-      Ir a <a href="../views/generaciones.html?sede=${sede}" class="alert-link">${sede.toUpperCase()}</a>.
+      Ir a <a href="./generaciones.html?sede=${sede}" class="alert-link">${sede.toUpperCase()}</a>.
 
     </div>`
   ));
@@ -30,8 +30,8 @@ window.getGenerations = (laboratoria, sede) => {
     // templates donde se pintaran los datos
     `<div class="alert alert-warning w-100 text-center" role="alert">
 
-      Ir a <a href="../views/alumnas.html?sede=${sede}&generation=${generation}" class="alert-link">${generation.toUpperCase()}</a>.
-      
+      Ir a <a href="./alumnas.html?sede=${sede}&generation=${generation}" class="alert-link">${generation.toUpperCase()}</a>.
+
     </div>`
   ));
 
@@ -44,22 +44,16 @@ window.getGenerations = (laboratoria, sede) => {
 
 window.getAlumnas = (laboratoria, sede, generation) => {
   let alumnas = laboratoria[sede].generacion[generation].estudiantes;
-<<<<<<< HEAD
-  //console.log(alumnas);
-
-  const alumnasHTML = alumnas.map((alumna, indice) => ( 
-=======
   // console.log(alumnas);
   const alumnasHTML = alumnas.map((alumna) => (
 
->>>>>>> master
     `<tr>
       <th scope="row">${alumna.nombre.toUpperCase()}</th>
       <td>${alumna.correo}</td>
       <td>${alumna.progreso.porcentajeCompletado}%</td>
       <td>Estado General de la Alumna</td>
     </tr>`
-   ));
+  ));
 
   // Arreglo de 3 divs, que son las sedes
   // console.log(sedesHTML);
@@ -103,14 +97,14 @@ window.filterGeneration = (student, search) => {
     }
   });
   // console.log(searchResult);
-  return searchResult; 
+  return searchResult;
 };
 
 window.filterStudents = (infoStudent, search) => {
   //   console.log(infoStudent);
-    const busquedaResultado = infoStudent.filter(name => (infoStudent.name === search));
-    return busquedaResultado;
-  };
+  const busquedaResultado = infoStudent.filter(name => (infoStudent.name === search));
+  return busquedaResultado;
+};
 
 window.computeStudentsStats = (laboratoria) => {
   // console.log(laboratoria, 1);
