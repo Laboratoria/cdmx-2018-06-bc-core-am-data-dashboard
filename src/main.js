@@ -1,4 +1,4 @@
-$(".dropdown-trigger").dropdown();//para el menú de mail
+
 
 const url = 'http://api.myjson.com/bins/1efx86';
 
