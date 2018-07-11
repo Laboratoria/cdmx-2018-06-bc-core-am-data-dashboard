@@ -8,13 +8,10 @@ window.computeStudentsStats = (laboratoria) => {
   let mail = '';
   let turnoStudent = '';
   let status = '';
-  let topics;
+  let topics = {};
   let percentageDuration = 0;
-  let subtopics = {
-    completedPercentageST: 0,
-    type: '',
-    duration: 0,
-  };
+  let subtopics = {};
+
    //FOR PARA OBTENER EL NOMBRE DE CADA SEDE
   for (key in laboratoria) {
     campus = key;  // GUARDANDO SEDES EN VARIABLE CAMPUS
@@ -42,34 +39,36 @@ window.computeStudentsStats = (laboratoria) => {
           status = 'Es una estudiante promedio';
         }
 
+        // ITERANDO EN TEMAS PARA OBTENER DATOS DE OBJETO TOPICS
         let topicsS = statS.temas;
-        let completedPercentageT = 0;
-        // let topicsSarr = Object.keys(topicsS);
-        // console.log(topicsS.length);
-
         for (key1 in topicsS) {
-          const completedPercentageT = topicsS[key1].porcentajeCompletado;
-
-
-          student.push({
-            name,
-            mail,
-            campus,
-            generation,
-            turnoStudent,
-            stats: {
-              status,
-              completedPercentage,
-              topics: {
-                completedPercentageT,
-                percentageDuration: 0,
-              }
-            },
-          });
+          let tema = key1;  // OBTENIENDO EL NOMBRE DE CADA TEMA
+          const completedPercentageT = topicsS[key1].porcentajeCompletado; // OBTENIENDO EL PORCENTAJE COMPLETADO
+          percentageDuration = topicsS[key1].duracionTemaCompletado;
         }
+        // ARREGLO RESULTANTE
+        student.push({
+          name,
+          mail,
+          campus,
+          generation,
+          turnoStudent,
+          stats: {
+            status,
+            completedPercentage,
+            topics: {
+              completedPercentage,
+              percentageDuration: 0,
+              subtopics: {
+                completedPercentage: 0,
+                type: '',
+                duration: 0,
+              },
+            },
+          },
+        });
       }
     });
-    console.log(student);
   }
   return student;
 };
