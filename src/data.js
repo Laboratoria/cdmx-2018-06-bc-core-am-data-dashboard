@@ -24,7 +24,7 @@ for(let i = 0; i<campus.length; i++){
      
       let generaciones = Object.keys(gen);
 
-     
+     document.getElementById("titulos").innerHTML= '';
       
 
 
@@ -32,14 +32,15 @@ for(let i = 0; i<campus.length; i++){
         let est = data[campus].generacion[generaciones[i]].estudiantes
         document.getElementById('titulos').innerHTML += 
               '<tr >' + 
-                '<td>' +"Sede: "+campus+ '</td>' +
-                '<td>' +"Generacion: "+generaciones[i]+ '</td>' +
-                '<td>' +"Alumnas activas: "+est.length+ '</td>' +
+                '<td>' +"SEDE: "+campus+ '</td>' +
+                '<td>' +"GENERACION: "+generaciones[i]+ '</td>' +
+                '<td>' +"ALUMNAS ACTIVAS: "+est.length+ '</td>' +
              '</tr>'
          //pinta sedes            
             for(let i = 0; i<est.length; i++) {
-              console.log(document.getElementById('estadisticas'))
+              
               document.getElementById('titulos').innerHTML += 
+              
               '<tr class= "black">' + 
                 '<td>' + est[i].nombre + '</td>' +
                 '<td>' + est[i].correo + '</td>' +
@@ -57,6 +58,6 @@ for(let i = 0; i<campus.length; i++){
   }
   
 document.getElementById('delete').addEventListener('click', (event) =>{
-    document.getElementById("estadisticas").innerHTML= '';
+    //document.getElementById("estadisticas").innerHTML= '';
     document.getElementById("titulos").innerHTML= '';
 })
