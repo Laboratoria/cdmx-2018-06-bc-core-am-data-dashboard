@@ -20,7 +20,7 @@ window.onload = () => {
         const sede = parametros[0];
         const generacion = parametros[1];
         getAlumnas(laboratoria, sede, generacion)
-        // console.log(parametros[0], parametros[1]);
+        console.log(parametros[0], parametros[1]);
       }
 
 

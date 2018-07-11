@@ -1,7 +1,7 @@
 
 header {
   background: #E2E2E2;
-  height: 70px;
+  height: 90px;
 }
 
 header .logo {
@@ -13,13 +13,62 @@ header .logo img {
   height: 100%;
 }
 
-header .search input {
+header .user-logo img{
+  vertical-align: middle;
+  border-style: none;
+  height: 60%;
+}
+
+.row{
+  margin-bottom: 50px;
+}
+
+
+
+.menu{
+  font-size: 20px;
+  background: #FF009E;
+  color: #fff;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 1px solid gainsboro;
+  width: 10%;
+}
+/* header .search input {
   border: none;
   background: #E2E2E2;
   border-bottom: 2px solid black;
   height: 50px;
   margin: 10px 0px;
   width: 100%;
+} */
+
+div.input-search {
+  height: 40px;
+  margin-top: 15px;
+  /* border-radius: 25px; */
+  width: 100%;
+  vertical-align: top;
+}
+
+
+
+.alert-warning {
+
+  color: black;
+  background-color: #ff009E;
+  border-color: #FF009E;
+  padding-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+
+.alert-link{
+  font-size: 28px;
+  color: #fff!important;
 }
 
 div.sedes {
@@ -33,4 +82,5 @@ div.sedes {
   padding-top: 10%;
 
 }
+
 
