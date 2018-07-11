@@ -31,11 +31,11 @@ window.computeGenerationsStats = (laboratoria) => {
   for (key in laboratoria) {
     sede = key; // Está me arroja las llaves del objeto JSON (lima, mexico, santiago)
     generation1 = Object.keys(laboratoria[sede].generacion); // Indico que quiero entrar a generación. Object.keys convierte a array mi objeto y marco la ruta a generaciones. Siempre indico la ruta antes de iterar.
-  
+
     generation1.forEach(elements => { // generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
       let average2 = 0; // Esta variable hace el corte del flujo por generación.
       generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
-    
+
       const students = laboratoria[sede].generacion[generation1].estudiantes; // Se usa [] para entrar porque es variable. Sino es con .
       for (student in students) {
         average2 += students[student].progreso.porcentajeCompletado; // Llegando al porcentajeCompletado (un número) se estará sumando.
@@ -52,7 +52,7 @@ window.computeGenerationsStats = (laboratoria) => {
       // console.log(count1);
     });
   }
- 
+
   return generation;
 };
 
