@@ -39,16 +39,16 @@ window.getGenerations = (laboratoria, sede) => {
 
 window.getAlumnas = (laboratoria, sede, generation) => {
   let alumnas = laboratoria[sede].generacion[generation].estudiantes;
-  // console.log(alumnas);
+  //console.log(alumnas);
 
-  const alumnasHTML = alumnas.map((alumna, indice) => (
+  const alumnasHTML = alumnas.map((alumna, indice) => ( 
     `<tr>
       <th scope="row">${indice + 1}</th>
       <td>${alumna.nombre.toUpperCase()}</td>
       <td>${alumna.correo}</td>
       <td>${alumna.progreso.porcentajeCompletado}%</td>
     </tr>`
-  ));
+   ));
 
   // Arreglo de 3 divs, que son las sedes
   // console.log(sedesHTML);
@@ -57,6 +57,49 @@ window.getAlumnas = (laboratoria, sede, generation) => {
   // return sedes;
   return alumnas;
 }
+
+window.filterStudent = (student, search) => {
+  let searchResult = [];
+  student.forEach(element => {
+    if (element.name.indexOf(search) !== -1) {
+      searchResult.push(element);
+    }
+  });
+  // console.log(element);
+  return searchResult;
+};
+
+// Filtrar Sedes y generaciones
+window.filterCampus = (student, search) => {
+  let searchResult = [];
+  student.forEach(element => {
+    // console.log(element);
+    if (element.campus === search) {
+      searchResult.push(element);
+    }
+  });
+  // console.log(element);
+  return searchResult;
+};
+
+window.filterGeneration = (student, search) => {
+  let searchResult = [];
+  // console.log(student);
+  student.forEach(element => {
+    // console.log(search);
+    if (element.generation === search) {
+      searchResult.push(element);
+    }
+  });
+  // console.log(searchResult);
+  return searchResult; 
+};
+
+window.filterStudents = (infoStudent, search) => {
+  //   console.log(infoStudent);
+    const busquedaResultado = infoStudent.filter(name => (infoStudent.name === search));
+    return busquedaResultado;
+  };
 
 window.computeStudentsStats = (laboratoria) => {
   console.log(laboratoria, 1);

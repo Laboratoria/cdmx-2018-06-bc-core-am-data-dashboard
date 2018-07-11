@@ -1,25 +1,33 @@
 # **Data Dashboard**
 
 ## **Proceso de UX**
+Para la fase inicial es necesario enfocarnos hacia el cliente y usuario con el propósito de conocerlos, saber cuales son sus necesidades y requerimientos.
 
-Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
+En base a ello comenzamos con el proceso de diseño, donde pasamos por diferentes etapas como:
 
 ### **1. Descubrimiento e investigación**
-El data-dashboard es una herramienta utilizada por training  managers, coach y personal que interviene en la consecución de los objetivos de Laboratoria, y que está orientada a la toma de decisiones para optimizar la estrategia.
-En este proyecto nuestro objetivo principal es crear una dashboard que permita al personal de Laboratoria principalmente TMs y Coaches monitorear el proceso de cada una de las alumnas (coders) dentro del Bootcamp y su interacción con el LMS (Learning Management System), este es un sistema de aprendizaje que permite a las estudiantes adquirir o reforzar conocimientos a través de lecturas, videos, ejercicios y quizzes.
+Laboratoria es una Asoción sin fines de lucro comprometida con el desarrollo y la inclusión de mujeres en el sector Tech.
+
+Una de las actividades diarias de Los Trainin Managers y el personal de Laboratoria, es el proceso, seguimiento y análisis de las estudiantes durante el bootcamp. Esto con la finalidad de apoyar a las estudiantes con su aprendizaje y ver como funcionan las implementaciones durante el desarrollo del mismo.
+
+En este proyecto nuestro objetivo principal es crear una base de datos la cual llameremos Lab-dashboard que permita al personal de Laboratoria principalmente TMs y Coaches monitorear el proceso de cada una de las estudiantes (coders) dentro del Bootcamp y su interacción con el LMS (Learning Management System), este es un sistema de aprendizaje que permite a las estudiantes adquirir o reforzar conocimientos a través de lecturas, videos, ejercicios y quizzes.
+
+Cabe mencionar que en Laboratoria el progreso en el LMS (lecturas leídas, videos, quiz y ejercicios realizados) no afectan directamente a las evaluciones de las estudiantes. Ellos toman más esa data obtenida para la ayuda y mejora tanto de estudiantes como de las estrategias implementadas.
+
+Podemos concluir y sintetizar diciendo que Lab-dashboard es una herramienta utilizada por Training  Managers, coach y personal que interviene en la consecución de los objetivos de Laboratoria, y que está orientada a la toma de decisiones para optimizar la estrategia.
 
 La principal problemática de mi usuario es que actualmente Laboratoria no cuenta con un data dashboard y la información la manejan por medio de Excel pero el proceso para acceder es complicado  y les consume tiempo.
 
 
 
 
-__Usuarixs:__  La información que recopilamos del personal de Laboratoria la obtuvimos mediante entrevistas a Lucile Baratier (Training Manager, CDMX) y Yujy (Alumni Network Manager, CDMX).
+__Usuarixs:__  La información que recopilamos la obtuvimos mediante entrevistas a Lucile Baratier (Training Manager,  Laboratoria CDMX) y Yujy (Alumni Network Manager, Laboratoria CDMX).
 
 
-__Necesidades de las usuarias:__
+__Necesidades de las usuarias__
 
 
-__Objetivos de las usuarias:__ Nos dimos cuenta que la necesidad principal de crear un data-dasboard es poder visualizar la información de forma rápida y eficaz y que está a su vez sirva para tomar decisiones a tiempo, dar solución o mejorar aún más la experiencia.
+Nos dimos cuenta que la necesidad principal de crear un data-dasboard es poder visualizar la información de forma rápida y eficaz y que está a su vez sirva para tomar decisiones a tiempo, dar solución o mejorar aún más la experiencia durante el Bootcamp
 
 Tomando en cuenta sus opiniones los datos a visualizar serían los siguientes:
 
@@ -41,13 +49,14 @@ Y estos datos estarían protegidos, ya que sólo personas autorizadas (que tenga
 
 Los usuarios estarían accediendo a la plataforma como mínimo 5 días a la semana  por medio de computadoras (escritorio o laptop) y celulares.
 
-Así mismo queremos simplificar al máximo la usabilidad de la plataforma  para sea amigable, esto por medio de filtros de búsqueda, información precisa y clara, botones visibles y en el lugar adecuado y que la plataforma sea sencilla de usar para que así  nuestro usuario emplee su tiempo de manera asertiva y eficaz, permitiéndole realizar otras actividades de su vida cotidiana. 
+Así mismo queremos simplificar al máximo la usabilidad de la plataforma  para sea amigable, esto por medio de información precisa y clara, botones visibles y en el lugar adecuado y que la plataforma sea sencilla de usar para que así  nuestro usuario emplee su tiempo de manera asertiva y eficaz, permitiéndole realizar otras actividades de su vida cotidiana. 
 
 
 
-__Pain points:__ (En sus actividades diarias qué es lo que más les molesta u obstaculiza en el proceso de  realizar sus actividades/objetivos)
+__Pain points:__ 
+Tomando en cuanta la herramienta utilizada (excel) para la consulta y manejo de datos en grandes cantidades, es difícil y en ocasiones llega a ser un poco tedioso acceder a información específica que requieren.
 
-__Sentimientos:__(Sentimientos que les surgen dentro del proceso de sus actividades. Identificar cuáles predominan)
+__Sentimientos:__Por medio de las entrevistas nos pudimos percatar que existe un poco de frustración porque excel les es útil pero no es la mejor opción para manejar una gran cantidad de datos ya que se tienen que seguir una serie de pasos para llegar a cierta información que se desee consultar, así mismo influye también el tiempo que esto les toma.
 
 __Técnicas usadas en esta fase:__ 
 
@@ -129,6 +138,10 @@ Sí sería muy bueno.
 
 __5. Objetivos del negocio:__ 
 
+Crear un data dashboard intuitiva que facilite el proceso de trabajo de lxs TM´s y personal de Laboratoria. Es decir, que sea fácil de entender y los datos que se muestren sean concisos.
+
+Siguiendo las necesidades de nuestros usuarios tomas los siguientes puntos:
+
 * Facilitar la visualización de información de las alumnas y que está a su vez sea clara y concisa.
 * Darse cuenta a tiempo de problemáticas que se lleguen a presentar.
 * Poder tomar decisiones de una forma más rápida y eficaz. 
@@ -136,36 +149,41 @@ __5. Objetivos del negocio:__
 
 
 __6. Motivaciones del negocio para el data dashboard:__
-* Crear una mejor experiencia para el usuario y las alumnas.
-* Aprovechar el tiempo.
-* Focalizar problemas y realizar cambios.
+
+* Agilizar el proceso de trabajo de las TM´s y personal de Laboratoria
+* Crear una mejor experiencia para el usuario realizando una interfaz intuitiva y amigable.
+* Que el usuario pueda focalizar problemas de forma rápida para poder dar solución lo antes posible, así mismo pueda ver la eficiencia de ciertas estrategias implementadas 
+* Que nuestro usuario pueda optimizar su tiempo.
+* Que gracias a esta Lab-dashboard la experiencia tanto del personal como de las estudiantes de Laboratoria sea lo mejor posible.
 
 __6. Proceso de diseño:__
 
-Principalmente nos enfocamos en recopilar las necesidades y requerimientos de nuestro usuario.
-Realizamos un pseudo-código para organizar la información obtenida
-Por consiguiente hicimos un diagrama de flujo para entender las acciones que debía tener nuestro producto.
+Principalmente nos enfocamos en recopilar las necesidades y requerimientos de nuestro cliente y usuario.
 Pensamos en el diseño y colocación de botones para hacer la plataforma lo más amigable posible.
-Hicimos varios bocetos de la visualización de nuestro producto.para llegar a nuestro sketch de baja fidelidad.
+Hicimos varios bocetos (sketch) de la visualización de nuestro producto para así llegar a nuestro prototipo de alta fidelidad y con ello implementar el diseño a Lab-dashboard
 
 
 
 ### **2. Síntesis y definición**
-(Dada la fase anterior de investigación, ahora vamos a tomar todos los datos más importantes y transformarlos en información valiosa para comenzar a orientarse a la solución. También vamos a entender lo que la empresa quiere de ese producto y comenzar a entender ambas visiones con el fin de encontrar un punto armónico)
 
 __1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
 
    - Sobre las estudiantes:
 
-   **Nombre**
-   **Avance general de completitud de temas**
+   **Nombre/datos generales**
    **Estudiantes por debajo del 60%**
    **Estudiantes por encima del 90%**
+   **Avance general de completitud de temas**
    **Estudiantes activas e inactvas**
- 
+
+   - En general:
+
+   **Porcentaje concreto de avance por generaciones y Sedes**
+
 
 __2. Lo que los usuarios esperan obtener:__
-
+Poder accesar facilmente a la información (avance de las estudiantes, generación o sedes).
+Poder filtrar y obtener un dato en específico por estudiante, generación o sedes.
 
 __3. Insights:__
 
@@ -184,20 +202,77 @@ __5. Insights del negocio:__
 ### **3. Ideación**
 Para solucionar el problema de nuestro cliente pensamos en crear un data dashboard, el cual les permita a los TMs y personal de Laboratoria analizar la información de las estudiantes, así como ver el progreso en general de las otras sedes para poder resolver conflictos, ver avance general y poder realizar cambios o mejoras.
 
+### **3.1 Pseudocódigo** 
+Se propone un total de cuatro views: login, sedes, generaciones y alumnas. Login: en el cual el usuario debe ingresar con su e-mail o nombre de usuario y contraseña, después accederá a view-sedes.
+View-Sedes: en esta página se podrá observar el logo de laboratoria <L> un icono de usuario, log-out y 3 botones los cuales contienen el nombre de las Sedes, al darle click en alguno de ellos pasa a view-generaciones.
+View-Generaciones: en esta página al igual que en view-sedes se podrá observar el logo de laboratoria <L> un icono de usuario, log-out y 3 botones (aquí la diferencia) los cuales contienen las 3 generaciones y al darle click en alguno de ellos pasa a view-alumnas. 
+View-Alumnas: en esta página al igual que en view-sedes y view-generaciones se pueden acceder a datos de las alumnas como nombre, correo, porcentaje de completitud e identificar que estudiantes están por debajo, en la media y sobresaliente.
+
+### **3.2 Paleta de colores**
+https://ibb.co/i9yZsJ
+
 ### **4. Prototipado**
 A continuación mostramos nuestro sketch y prototipo los cuales son nuestro primer diseño pensando en las necesidades del usuario, en que fuera fácil de usar y manipular.
 
-Sketch: 
+**Sketch:** 
+
+
 ![Primera pantalla](img/Sketch1.png)
 ![Segunda pantalla](img/Sketch2.png)
 ![Tercera pantalla](img/Sketch3.png)
 
-Prototipo en figma: 
 
-![Cuarta pantalla](img/Prototipo1.jpg)
-![Quinta pantalla](img/Prototipo2.png)
-![Sexta pantalla](img/Prototipo3.png)
+**Sketch con Feedback aplicado:**
+
+Login
+
+![Primera pantalla](img/SketchFeedback1.png)
+
+Sedes
+
+![Segunda pantalla](img/SketchFeedback2.png)
+
+Generaciones
+
+![Tercera pantalla](img/SketchFeedback3.png)
+
+Alumnas
+
+![Cuarta pantalla](img/SketchFeedback4.png)
+![Quinta pantalla](img/SketchFeedback5.png)
+![Sexta pantalla](img/SketchFeedback6.png)
+
+
+
+**Prototipo en figma:** 
+
+Login
+https://www.figma.com/file/FuQsDKh5REXsC4Zu6aZkLK2U/Untitled
+
+Sedes
+https://www.figma.com/file/FuQsDKh5REXsC4Zu6aZkLK2U/Untitled?node-id=7%3A0
+
+Generaciones
+https://www.figma.com/file/FuQsDKh5REXsC4Zu6aZkLK2U/Untitled?node-id=10%3A31
+
+Alumnas
+https://www.figma.com/file/FuQsDKh5REXsC4Zu6aZkLK2U/Untitled?node-id=10%3A63
 
 ### **5. User testing**
-(Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
+
+Nos acercamos a Lucile para recibir Feedback y es por ello que decidimos cambiar el diseño original de nuestra Lab-dashboard.
+
+### **6. Argumentación de Visual Desing
+
+Después de conocer a nuestro cliente en este caso Laboratoria, decidimos utilizar los colores de la empresa, ya que también están inovando con nuevo Logo e implementando nueva paleta de colores.
+Dentro de esta implementación optamos por los colores amarillo y rosa. Para darle un toque de equilibrio entre estos 2 colores utilizamos el color gris.
+
+* Logo: optamos por el siguiente logo <L> La letra "L" dentro de símbolos de mayor y menor que, los cuales nos introducen al mundo del código, ya que estos tienen constante presencia ya sea para etiquetas o en la implementación de código en si.
+
+* Login: Los símbolos de mayor que y el slogan <Labortoria> talento que transforma presentados en el login los elegimos pensando en hacer viaulmente agradable y dinámica la primera impresión que tenga nuestro usuario al interactuar con la página principal de nuestro Lab-dashboard.
+
+* Colores: 
+- Rosa representa lo femenino y como ya mencionamos antes, Laboratoria es un Bootcamp de puras mujeres!
+- Amarillo representa el optimismo, tránsmite felicidad, abundancia y por otro lado lo asocian un poco con el color naranja ya que despierta el apetito y consideramos que en este caso no se trata de comida 😁 sino que despierta el apetito de aprender a aprender en todos los ámbitos, para así adquirir las herramientas para el mundo laboral.
+- Gris transmite seriedad y elegancia.
 
