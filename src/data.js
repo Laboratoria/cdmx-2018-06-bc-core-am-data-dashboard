@@ -478,7 +478,6 @@ window.generationsLima = (laboratoria) => {
                       <!--generaciones1-->
                       <span class="card-title cards">${generationLim[i].generation} Generación</span>
                       <span class="card-title cards">${generationLim[i].venue}</span>
-                      <div>${generationLim[i].venue}${'  '}${generationLim[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light"></a>
                         <div class="color-activas">
                           <span class="numero">${generationLim[i].count}</span>
                           <span> Alumnas</span>
@@ -540,17 +539,17 @@ window.generationsLima = (laboratoria) => {
   }
   resultGenLim.innerHTML = genLim;
   // ToolTip
-    $(document).ready(function(){
-     $('.tooltipped').tooltip({
-       accordion: true
-     });
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
     });
-    // Colapso de alumnas
-    $(document).ready(function() {
-      $('.collapsible').collapsible({
-        accordion: true
-      });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
     });
+  });
   return generationLim;
 };
 window.generationsMexico = (laboratoria) => {
@@ -577,9 +576,6 @@ window.generationsMexico = (laboratoria) => {
                       <!--generaciones1-->
                       <span class="card-title cards">${generationMex[i].generation} Generación</span>
                       <span class="card-title cards">${generationMex[i].venue}</span>
-                      <div>${generationMex[i].venue}${'  '}${generationMex[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
-                      </a>
-                      </div>
                         <div class="color-activas">
                           <span class="numero">${generationMex[i].count}</span>
                           <span> Alumnas</span>
@@ -639,12 +635,12 @@ window.generationsMexico = (laboratoria) => {
                       </div>
                     </div>`;
   }
-    resultGenMex.innerHTML = genMex;
+  resultGenMex.innerHTML = genMex;
   // ToolTip
-  $(document).ready(function(){
-   $('.tooltipped').tooltip({
-     accordion: true
-   });
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
   });
   // Colapso de alumnas
   $(document).ready(function() {
@@ -692,9 +688,9 @@ window.generationsSantiago = (laboratoria) => {
                             <i class="small material-icons">star_half</i>
                             </span>
                             <div class="progress grey tamaño-barra">
-                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares" title="${generationStg[i].mediumStudents}${' Alumnas regulares'}"></div>
-                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas" title="${generationStg[i].inLowStudents}${' Alumnas atrasadas'}"></div>
-                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas" title="${generationStg[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${generationStg[i].mediumStudents}${' Alumnas regulares'}"></div>
+                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${generationStg[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${generationStg[i].advanceStudents}${' Alumnas avanzadas'}"></div>
                             </div>
                           </div>
                           <!--Tiempo promedio-->
@@ -715,20 +711,20 @@ window.generationsSantiago = (laboratoria) => {
                             </div>
                             <p>Intoducción a la programación</p>
                               <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:${generationStg[i].advanceU1}${'%'}" title ="${generationStg[i].advanceU1}${'%'}">
+                                <div class="determinate pink" class="color-fondo" style="width:${generationStg[i].advanceU1}${'%'}" data-tooltip ="${generationStg[i].advanceU1}${'%'}">
                                 </div>
                               </div>
                             <p>Variables y tipos de datos</p>
                               <div class="progress grey">
-                                <div class="determinate purple" class="color-fondo" style="width: ${generationStg[i].advanceU2}${'%'}" title ="${generationStg[i].advanceU2}${'%'}"></div>
+                                <div class="determinate purple" class="color-fondo" style="width: ${generationStg[i].advanceU2}${'%'}" data-tooltip ="${generationStg[i].advanceU2}${'%'}"></div>
                                 </div>
                             <p>UX</p>
                               <div class="progress grey">
-                                <div class="determinate orange" class="color-fondo" style="width: ${generationStg[i].advanceU3}${'%'}" title ="${generationStg[i].advanceU3}${'%'}"></div>
+                                <div class="determinate orange" class="color-fondo" style="width: ${generationStg[i].advanceU3}${'%'}" data-tooltip ="${generationStg[i].advanceU3}${'%'}"></div>
                                 </div>
                             <p>Quiz´s</p>
                               <div class="progress grey">
-                                <div class="determinate green" class="color-fondo" style="width: ${generationStg[i].quizAverage}${'%'}" title ="${generationStg[i].quizAverage}${'ptos'}"></div>
+                                <div class="determinate green" class="color-fondo" style="width: ${generationStg[i].quizAverage}${'%'}" data-tooltip ="${generationStg[i].quizAverage}${'ptos'}"></div>
                                 </div>
                             <!--Promedios generales y de quiz fin-->
                             </div>
@@ -738,6 +734,18 @@ window.generationsSantiago = (laboratoria) => {
                     </div>`;
   }
   resultGenStg.innerHTML = genStg;
+  // ToolTip
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
   return generationStg;
 };
 // ----- Genera info para impresion de informacion de alumnas
@@ -791,7 +799,6 @@ window.studentsPrint = (laboratoria) => {
                    </div>
                  </nav>`;
   for (let i = 0; i < studentsM.length;i++) {
-
     studentsPrint += `<div class="container collapsable-color">
                        <ul class="collapsible">
                            <li>
@@ -805,9 +812,9 @@ window.studentsPrint = (laboratoria) => {
                                    </a>
                                </div>
                                    <div class="progress grey">
-                                      <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ studentsM[i].p1}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3 + studentsM[i].p1 / 3}${'%'}" title = "${' U1 '}${studentsM[i].p1}${'%'}"></div>
-                                      <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ studentsM[i].p2}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3}${'%'}" title = "${' U2 '}${studentsM[i].p2}${'%'}"></div>
-                                      <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${studentsM[i].p3}${'%'}" style="width: ${studentsM[i].p3 / 3}${'%'}" title = "${' U3 '}${studentsM[i].p3}${'%'}"></div>
+                                      <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ studentsM[i].p1}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3 + studentsM[i].p1 / 3}${'%'}"></div>
+                                      <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ studentsM[i].p2}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3}${'%'}"></div>
+                                      <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${studentsM[i].p3}${'%'}" style="width: ${studentsM[i].p3 / 3}${'%'}"></div>
                                   </div>
                                </div>
                                <div class="collapsible-body">
@@ -855,10 +862,10 @@ window.studentsPrint = (laboratoria) => {
   // Declara eventos de materialize dentro de cada funcion porque el Templete String es dinámico y crea elementos
   // solo en momentos especificos, por eso no reconoce estos eventos de forma global
   // ToolTip
-  $(document).ready(function(){
-   $('.tooltipped').tooltip({
-     accordion: true
-   });
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
   });
   // Colapso de alumnas
   $(document).ready(function() {
@@ -900,21 +907,21 @@ window.printSedesAll = (laboratoria) => {
 
                                <p>Intoducción a la programación</p>
                                <div class="progress grey">
-                                   <div class="determinate pink" class="color-fondo" style="width: ${sedeM[i].advanceU1}${'%'}" title ="${sedeM[i].advanceU1}${'%'}">
+                                   <div class="determinate pink" class="color-fondo" style="width: ${sedeM[i].advanceU1}${'%'}" data-tooltip ="${sedeM[i].advanceU1}${'%'}">
                                    </div>
                                </div>
 
                                <p>Variables y tipos de datos</p>
                                <div class="progress grey">
-                                   <div class="determinate purple" class="color-fondo" style="width: ${sedeM[i].advanceU2}${'%'}" title ="${sedeM[i].advanceU2}${'%'}"></div>
+                                   <div class="determinate purple" class="color-fondo" style="width: ${sedeM[i].advanceU2}${'%'}" data-tooltip ="${sedeM[i].advanceU2}${'%'}"></div>
                                </div>
                                <p>UX</p>
                                <div class="progress grey">
-                                   <div class="determinate orange" class="color-fondo" style="width: ${sedeM[i].advanceU3}${'%'}" title ="${sedeM[i].advanceU3}${'%'}"></div>
+                                   <div class="determinate orange" class="color-fondo" style="width: ${sedeM[i].advanceU3}${'%'}" data-tooltip ="${sedeM[i].advanceU3}${'%'}"></div>
                                </div>
                                <p>Quiz´s</p>
                                <div class="progress grey">
-                                   <div class="determinate green" class="color-fondo" style="width: ${sedeM[i].quizAverage}${'%'}" title ="${sedeM[i].quizAverage}${'ptos'}"></div>
+                                   <div class="determinate green" class="color-fondo" style="width: ${sedeM[i].quizAverage}${'%'}" data-tooltip ="${sedeM[i].quizAverage}${'ptos'}"></div>
                                </div>
                                <!--Promedios generales fin-->
                                <p>
@@ -931,9 +938,9 @@ window.printSedesAll = (laboratoria) => {
                                        <i class="small material-icons">star_half</i>
                                    </span>
                                    <div class="progress grey tamaño-barra">
-                                       <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares" title="${sedeM[i].mediumStudents}${' Alumnas regulares'}"></div>
-                                       <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas" title="${sedeM[i].inLowStudents}${' Alumnas atrasadas'}"></div>
-                                       <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas" title="${sedeM[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                                       <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${sedeM[i].mediumStudents}${' Alumnas regulares'}"></div>
+                                       <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${sedeM[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                                       <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${sedeM[i].advanceStudents}${' Alumnas avanzadas'}"></div>
 
                                    </div>
                                </div>
@@ -943,4 +950,16 @@ window.printSedesAll = (laboratoria) => {
                        </div>`;
   }
   resultFilter.innerHTML = sedeAll;
+  // ToolTip
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
 };

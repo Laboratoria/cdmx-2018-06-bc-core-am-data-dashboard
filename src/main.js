@@ -36,9 +36,9 @@ const printGenerations = (generations) => {
                             <i class="small material-icons">star_half</i>
                             </span>
                             <div class="progress grey tamaño-barra">
-                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares" title="${generations[i].mediumStudents}${' Alumnas regulares'}"></div>
-                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas" title="${generations[i].inLowStudents}${' Alumnas atrasadas'}"></div>
-                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas" title="${generations[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${generations[i].mediumStudents}${' Alumnas regulares'}"></div>
+                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${generations[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${generations[i].advanceStudents}${' Alumnas avanzadas'}"></div>
                             </div>
                           </div>
                           <!--Tiempo promedio-->
@@ -59,20 +59,20 @@ const printGenerations = (generations) => {
                             </div>
                             <p>Intoducción a la programación</p>
                               <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:${generations[i].advanceU1}${'%'}" title ="${generations[i].advanceU1}${'%'}">
+                                <div class="determinate pink" class="color-fondo" style="width:${generations[i].advanceU1}${'%'}" data-tooltip ="${generations[i].advanceU1}${'%'}">
                                 </div>
                               </div>
                             <p>Variables y tipos de datos</p>
                               <div class="progress grey">
-                                <div class="determinate purple" class="color-fondo" style="width: ${generations[i].advanceU2}${'%'}" title ="${generations[i].advanceU2}${'%'}"></div>
+                                <div class="determinate purple" class="color-fondo" style="width: ${generations[i].advanceU2}${'%'}" data-tooltip ="${generations[i].advanceU2}${'%'}"></div>
                                 </div>
                             <p>UX</p>
                               <div class="progress grey">
-                                <div class="determinate orange" class="color-fondo" style="width: ${generations[i].advanceU3}${'%'}" title ="${generations[i].advanceU3}${'%'}"></div>
+                                <div class="determinate orange" class="color-fondo" style="width: ${generations[i].advanceU3}${'%'}" data-tooltip ="${generations[i].advanceU3}${'%'}"></div>
                                 </div>
                             <p>Quiz´s</p>
                               <div class="progress grey">
-                                <div class="determinate green" class="color-fondo" style="width: ${generations[i].quizAverage}${'%'}" title ="${generations[i].quizAverage}${'ptos'}"></div>
+                                <div class="determinate green" class="color-fondo" style="width: ${generations[i].quizAverage}${'%'}" data-tooltip ="${generations[i].quizAverage}${'ptos'}"></div>
                                 </div>
                             <!--Promedios generales y de quiz fin-->
                             </div>
@@ -82,6 +82,18 @@ const printGenerations = (generations) => {
                     </div>`;
   }
   resultGen.innerHTML = gen;
+  // ToolTip
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
 };
 const printSort = (sort) => {
   const resultSort = document.getElementById('cardsSpace');
@@ -97,9 +109,9 @@ const printSort = (sort) => {
                                        </a>
                                    </div>
                                    <div class="progress grey">
-                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ sort[i].p1}${'%'}" style="width: ${sort[i].p1}${'%'}" title = "${' U1 '}${sort[i].p1}${'%'}"></div>
-                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ sort[i].p2}${'%'}" style="width: ${sort[i].p2}${'%'}" title = "${' U2 '}${sort[i].p2}${'%'}"></div>
-                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${sort[i].p3}${'%'}" style="width: ${sort[i].p3}${'%'}" title = "${' U3 '}${sort[i].p3}${'%'}"></div>
+                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ sort[i].p1}${'%'}" style="width: ${sort[i].p1}${'%'}"></div>
+                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ sort[i].p2}${'%'}" style="width: ${sort[i].p2}${'%'}"></div>
+                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${sort[i].p3}${'%'}" style="width: ${sort[i].p3}${'%'}"></div>
                                    </div>
                                </div>
                                <div class="collapsible-body">
@@ -170,9 +182,9 @@ const printFilter = (filter) => {
                                        </a>
                                    </div>
                                    <div class="progress grey">
-                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ filter[i].p1}${'%'}" style="width: ${filter[i].p1}${'%'}" title = "${' U1 '}${filter[i].p1}${'%'}"></div>
-                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ filter[i].p2}${'%'}" style="width: ${filter[i].p2}${'%'}" title = "${' U2 '}${filter[i].p2}${'%'}"></div>
-                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${filter[i].p3}${'%'}" style="width: ${filter[i].p3}${'%'}" title = "${' U3 '}${filter[i].p3}${'%'}"></div>
+                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ filter[i].p1}${'%'}" style="width: ${filter[i].p1}${'%'}"></div>
+                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ filter[i].p2}${'%'}" style="width: ${filter[i].p2}${'%'}"></div>
+                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${filter[i].p3}${'%'}" style="width: ${filter[i].p3}${'%'}"></div>
                                    </div>
                                </div>
                                <div class="collapsible-body">
@@ -272,7 +284,7 @@ window.onload = () => {
     .then((data) => {
       // printSedesAll imprime la primer vista de la pagina con cards de informaciónde las sedes
       printSedesAll(data);
-      // Ejecuta los eventos cuando se ejecuta una interacción con espacion en DOM
+      // Ejecuta los eventos cuando se ejecuta una interacción con espacio en DOM
       listeners(data);
     })
     .catch((error) => {

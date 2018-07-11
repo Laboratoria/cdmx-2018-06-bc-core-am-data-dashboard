@@ -64,43 +64,43 @@ La nueva vista no genera un documento HTML nuevo, solo oculta la vista anterior 
 
 * Diseño de baja fidelidad
 ![GitHub Sketch final de baja fidelidad](/scr/Pictures/SketchFinalBajaF.jpeg)
-Format: ![Alt Baja fidelidad]
+Format: ![Alt Baja fidelidad](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36978819_1712967655439153_8484534733051527168_n.jpg?_nc_cat=0&oh=7930ac6f45770e21492ec5649f85be91&oe=5BCEACC8)
 
 * Diseño de mediana fidelidad con FeedBack aplicado
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/1.png)
-Format: ![Alt LogIn]
+Format: ![Alt LogIn](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36959183_1712966605439258_6005070325186822144_n.png?_nc_cat=0&oh=8d314b7830493db61557250a49b4d519&oe=5BE0FD1A)
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/2.png)
-Format: ![Alt 1a vista]
+Format: ![Alt 1a vista](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36985567_1712966822105903_5704157967171977216_n.png?_nc_cat=0&oh=f14b96bd47bd874cf704edb146f5ccb1&oe=5BE8924E)
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/3.png)
-Format: ![Alt Menú sedes]
+Format: ![Alt Menú sedes](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36907298_1712967055439213_6805984212953333760_n.png?_nc_cat=0&oh=95c6993a25cec28b05d6b61af4d590f6&oe=5BCE1B66)
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/4.png)
-Format: ![Alt Vista Sedes]
+Format: ![Alt Vista Sedes](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36897148_1712967242105861_5009632575400968192_n.png?_nc_cat=0&oh=23fbfc88284b042853fbf98d80407551&oe=5BE3E0B7)
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/5.png)
-Format: ![Alt Menú generaciones]
+Format: ![Alt Menú generaciones](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36981028_1712966575439261_5001690983302168576_n.png?_nc_cat=0&oh=3415b18f1f7c196f849c9a5ee835660b&oe=5BDF493D)
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/6.png)
-Format: ![Alt Alumnas]
+Format: ![Alt Alumnas](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36889846_1712966325439286_654393432105549824_n.png?_nc_cat=0&oh=addb69c59d4689e5c913d689b2705dab&oe=5BEC2C88)
 
 * Diseño de alta fidelidad en Canva
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital1.jpeg)
-Format: ![Alt LogIn]
+Format: ![Alt LogIn](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36909163_1712966732105912_7288000957995024384_n.jpg?_nc_cat=0&oh=b14984fd55fc8355e9b936aa2fa13848&oe=5BDB23F5)
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital2.jpeg)
-Format: ![Alt Vista Generaciones Mex]
+Format: ![Alt Vista Generaciones Mex](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36968019_1712967492105836_1030552556289392640_n.jpg?_nc_cat=0&oh=a1341611998e60d566c42b899130ae66&oe=5BA50E03)
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital3.jpeg)
-Format: ![Alt Vista lista de alumnas]
+Format: ![Alt Vista lista de alumnas](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36928133_1712967678772484_9076781732140679168_n.jpg?_nc_cat=0&oh=708b5653ef008243a1a7f9fdfbdd0967&oe=5B9E9356)
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital4.jpeg)
-Format: ![Alt Vista de modales]
+Format: ![Alt Vista de modales](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36983632_1712967355439183_6386776013086392320_n.jpg?_nc_cat=0&oh=8041b2281badfed82824cd7526e5b85b&oe=5BE735E4)
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital5.jpeg)
-Format: ![Alt Vista Generaciones]
+Format: ![Alt Vista Generaciones](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36998508_1712967598772492_8780329663302991872_n.jpg?_nc_cat=0&oh=eda62775e933863facc01404af75d45b&oe=5BA1543E)
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital6.jpeg)
-Format: ![Alt Vista Sedes]
+Format: ![Alt Vista Sedes](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36913510_1712967575439161_7639487895950065664_n.jpg?_nc_cat=0&oh=efc89b15ab0abba9db0c002e9f704cee&oe=5BEA93CB)
 
 * Diseño del sitio final
 
 ![GitHub Implementación Desktop](/scr/Pictures/ImplementacionDesktop.png)
-Format: ![Alt Implementación Desktop]
+Format: ![Alt Implementación Desktop](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36916355_1712966978772554_1750215979327029248_n.png?_nc_cat=0&oh=39b2883c4d178aae0204ea8c8d56d793&oe=5BD4D934)
 
 ![GitHub Implementación responsive](/scr/Pictures/ImplementacionRespinsive.png)
-Format: ![Alt Implementación Responsive]
+Format: ![Alt Implementación Responsive](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36990055_1712967525439166_6920390515242303488_n.png?_nc_cat=0&oh=8b434f4da9f044b3a02cd93a67fac9f8&oe=5BD3F057)
 
 ### 4. Desarrollo y maquetación
 
@@ -110,7 +110,7 @@ Format: ![Alt Implementación Responsive]
 
 > Se da una asesoría al cliente sobre el uso y administración del sitio.
 
-Se otorga al usuario una liga a un video de YouTobe con explicación de uso de la página y donde se explican los detalles más importantes de la implementación. Se otorga un periodo de un mes al cliente para encontrar posibles fallas o dudas sobre el sistema, después de este periodo se podría requerir alguna gratificación por asesorías.
+Se da explicación de uso de la página y donde se explican los detalles más importantes de la implementación. Se otorga un periodo de un mes al cliente para encontrar posibles fallas o dudas sobre el sistema, después de este periodo se podría requerir alguna gratificación por asesorías.
 
 ### 6. Publicación en el servidor o URL definitiva
 
@@ -151,12 +151,12 @@ see [GitHub Pages]
 15.	├── package.json
 16.	├── src
 17.	|   |__ views
-18.	|       |__ index2.html
+18.	|       |__ index.html
 19.	|   |__ Pictures
 20.	|       |__ colection of project´s pictures
 21.	|   |
 22.	│   ├── data.js
-23.	│   ├── index.html
+23.	│   ├── iniciosesion.html
 24.	│   ├── main.js
 25.	│   └── style.css
 26.	└── test
@@ -363,8 +363,7 @@ Contacto de colaboradoras:
 -	see [GitHub]
 (https://github.com/EstefaniaMolinaa)
 
--	FaceBook: ´@´Nay Molina
--	Correo:
+-	FaceBook: @Nay Molina
 
    * Yocelin García
 
@@ -376,5 +375,5 @@ Contacto:
 - see [GitHub]
 (https://github.com/YocelinGR)
 
--	FaceBook: ´@´Yocelin Garcia Romero
+-	FaceBook: @Yocelin Garcia Romero
 -	Correo: garcia_romero.y@hotmail.com
