@@ -17,12 +17,35 @@
     <div class="logo col-md-2">
       <img src="../img/laboratoria-logo.png">
     </div>
-    <div class="search col-md-8">
-      <input type="text" class="input-search" id="input-search">
+    <!-- <div class="input-search col-md-8">
+      <input type="text" class="form-control" placeholder="Nombre de la Alumna" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn-search btn-outline-secondary" type="button">Buscar</button>
+      </div> -->
+
+    <!-- <div class="search col-md-8"> -->
+    <!-- <input type="text" class="input-search" id="input-search"> -->
+    <!-- <input type="text" class="form-control" placeholder="Nombre de la Alumna" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <button class="btn-search btn-outline-secondary" type="button">Buscar</button>
+    </div> -->
+
+    <!-- <div class="input-search mb-3 col-md-8">
+      <input type="text" class="form-control" placeholder="Nombre de la Alumna..." aria-label="Nombre de la Alumna" aria-describedby="basic-addon2">
+      <button class="btn btn-outline-secondary" type="button">Buscar</button>
+    </div> -->
+
+    <div class="input-group mb-3 col-md-8">
+      <input type="text" class="form-control" placeholder="Nombre de la alumna..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">Button</button>
+      </div>
     </div>
+
     <div class="user col-md-2">
-      <span class="user-logo"></span>
-      <span class="username">Usuario</span>
+      <span class="user-logo">
+        <img src="../img/icon-user.jpg" alt="">
+      </span>
+      <span class="sesion-stats">Cerrar Sesion</span>
     </div>
   </header>
 
@@ -30,10 +53,11 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Correo</th>
-        <th scope="col">Progreso</th>
+
+        <th class="menu" scope="col">NOMBRE</th>
+        <th class="menu" scope="col">CORREO</th>
+        <th class="menu" scope="col">PROGRESO</th>
+        <th class="menu" scope="col">CLASIFICACIÓN</th>
       </tr>
     </thead>
     <tbody id="alumnas-container"></tbody>
