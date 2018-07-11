@@ -14,20 +14,22 @@
     <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link rel='stylesheet' href='style.css'>
+    
   </head>
   <body>
     <section id="pantalla-1">
       <header>
         <h1> Laboratoria LMS Dashboard </h1>
-        <img src="../images/Ldelabo.png" id="laboratoria">
+        <img src="../images/Ldelabo.png" id="laboratoria" class="img-fluid" alt"Responsive image">
        
         <div id='login'>
             <form id='formLg'>
+              
                 <input type='text'  placeholder='write your email' id='user'>
                 <input type='password' placeholder='password' id='password'>
                 <button type='button' id='buttonLogin' > Login </button>
             </form>
-            
+            </section>
       </header>
  <!--  Termina pantalla inicial-->   
 
@@ -47,7 +49,7 @@
         </div> 
 <br>
 <br>
-        <div id="genracion" class="btn-group">
+        <div id="generacion" class="btn-group">
             <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Escoge Generación
             </button>
@@ -61,14 +63,27 @@
 <!--Comienza barra de navegación-->
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     
-  <a id="barra-navegacion" class="navbar-brand" href="#">LABORATORIA</a>
+  
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <li class="nav-item dropdown">
+      
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cambiar Sede
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"> CDMX </a>
+          <a class="dropdown-item" href="#"> Lima </a>
+          <a class="dropdown-item" href="#"> Santiago </a>
+        </div>
+      </li>
+
   
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        LMS (Rendimiento)
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        LMS 
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">  Rendimiento General </a>
@@ -90,74 +105,30 @@
           <a class="nav-link disabled" href="#">Log Out</a>
         </li>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input  id="place-holder" class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+        <button  class="form-control mr-sm-4"   class="text-white bg-dark" type="submit">Search</button>
       </form>
     </div>
   </nav>
 </main>
-
-<!--/section>
-<main id="main">
-  <nav class="menu">
-    <div id="barra-menu">
-    <div class="row">
-    <div class="col-md">
-      <ul class= "nav">
-        <li><a href="#">Cambiar Sede</a>
-          <ul>
-            <li id="Lima"><a href="#">Lima</a></li>
-            <li id="Mexico"><a href="#">México</a></li>
-            <li id="Santiago"><a href="#">Santiago</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>      
-    <div class="col-md">
-      <ul class= "nav">
-        <li><a href="#">LMS</a>
-          <ul>
-            <li><a href="#">Temas</a></li>
-            <li><a href="#">Rendimiento</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md">
-      <ul class= "nav">
-        <li><a href="#">Estudiantes</a>
-          <ul>
-            <li id="btn-students"><a href="#">Lista General</a></li>
-            <li><a href="#">Mayor % de avance</a></li>
-            <li><a href="#">Menor % de avance</a></li>
-          </ul>
-        </li>
-        </ul>
-      </div>
-      <div class="col-md">
-        <ul class= "nav">
-          <li><a href="#">Buscar...</a>
-            <ul>
-              <li><a href="#"></a></li>
-            </ul>
-          </li>ç
-
-        </ul>
-      </div>
-      <div class="col-md">
-        <ul class= "nav">
-          <li><a href="#">Log out</a></li>
-      </div>
-      </ul>
-  </nav-->
-<!-- Cierra barra de nav-->    
 </section>
 <section id='pantalla-3'>
-  <h3>Lista de estudiantes</h3>
+  
   <button id='btn'>Ver a todas las estudiantes</button>
   <button id='delete'>Limpiar pantalla</button>
-</section>
-        <div id='result'></div>
+</section> 
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Estudiantes</h5>
+                  <p class="card-text">
+                      <div id='result'> </p>
+                </div>              
+              </div>
+     
+
+
+
+        
         <!--RECORTE 1-->
 
     <!-- Optional JavaScript -->
