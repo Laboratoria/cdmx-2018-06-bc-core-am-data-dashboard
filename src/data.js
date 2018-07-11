@@ -32,12 +32,20 @@ window.computeStudentsStats = (laboratoria) => {
                 duration: 0,
   
               },
+<<<<<<< HEAD
               "03-tu-primer-sitio": {
+=======
+              '03-tu-primer-sitio': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
               },
+<<<<<<< HEAD
               "04-quiz": {
+=======
+              '04-quiz': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
@@ -45,63 +53,107 @@ window.computeStudentsStats = (laboratoria) => {
             }
   
           },
+<<<<<<< HEAD
           "02-Variables-y-tipo-de-datos": {
             completedPercentage: 0,
             percentageDuration: 0,
             subtopics: {
               "00-Tipos-de-datos-y-operadores": {
+=======
+          '02-Variables-y-tipo-de-datos': {
+            completedPercentage: 0,
+            percentageDuration: 0,
+            subtopics: {
+              '00-Tipos-de-datos-y-operadores': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
   
               },
+<<<<<<< HEAD
               "01-variables": {
+=======
+              '01-variables': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
   
               },
+<<<<<<< HEAD
               "02-auto-aprendizaje-MDN": {
+=======
+              '02-auto-aprendizaje-MDN': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
   
               },
+<<<<<<< HEAD
               "03-comments": {
+=======
+              '03-comments': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
               },
+<<<<<<< HEAD
               "04-ejercicios-guiado": {
+=======
+              '04-ejercicios-guiado': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
               }
             }
           },
+<<<<<<< HEAD
           "03-UX": {
             completedPercentage: 0,
             percentageDuration: 0,
             subtopics: {
               "00-equipos-de-desarrollo": {
+=======
+          '03-UX': {
+            completedPercentage: 0,
+            percentageDuration: 0,
+            subtopics: {
+              '00-equipos-de-desarrollo': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
   
               },
+<<<<<<< HEAD
               "01-ux-diseno": {
+=======
+              '01-ux-diseno': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
   
               },
+<<<<<<< HEAD
               "02-ux-vs-ui": {
+=======
+              '02-ux-vs-ui': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
   
               },
+<<<<<<< HEAD
               "03-quiz": {
+=======
+              '03-quiz': {
+>>>>>>> upstream/master
                 completedPercentage: 0,
                 type: '',
                 duration: 0,
@@ -112,6 +164,7 @@ window.computeStudentsStats = (laboratoria) => {
   
   
       }
+<<<<<<< HEAD
   
     };
     for (key in laboratoria) {
@@ -140,11 +193,21 @@ window.computeStudentsStats = (laboratoria) => {
       const generations = Object.keys(laboratoria[key].generacion);
       generations.forEach((generation) => {
         objGenerations.generation = generation;
+=======
+    };
+    for (key in laboratoria) {
+  
+      objStudents.campus = key;
+      const generations = Object.keys(laboratoria[key].generacion);
+      generations.forEach((generation) => {
+        objStudents.generation = generation;
+>>>>>>> upstream/master
         const students = laboratoria[key].generacion[generation].estudiantes;
         let suma = 0;
          
         
         for (student in students) {
+<<<<<<< HEAD
           suma += students[student].progreso.porcentajeCompletado;
           average = Math.round(suma / students.length);
           objGenerations.average = average;
@@ -214,3 +277,78 @@ window.computeStudentsStats = (laboratoria) => {
     return (filtered);
   };
   
+=======
+          objStudents.name = students[student].estudiantes[nombre];
+          console.log(objStudents.name);
+          objStudents.email = students[student].estudiantes.correo;
+          objStudents.stats.completedPercentage = students[student].progreso.porcentajeCompletado;
+          console.log(objStudents);
+  
+          if (objStudents.stats.completedPercentage <= 60) {
+  
+            objStudents.stats.status = 'Delayed';
+  
+          } else if (objStudents.stats.completedPercentage <= 90) {
+  
+            objStudents.stats.status = 'Optimus';
+          } else {
+            objStudents.stats.status = 'Excellent';
+          }
+        }
+      })
+    }
+}
+
+
+
+
+window.computeGenerationsStats = (laboratoria) => {
+    generationsArray = [];
+    const objGenerations = {
+      campus: '',
+      generation: '',
+      average: 0,
+      count: 0,
+    };
+    let average = 0;
+    for (key in laboratoria) {
+  
+      objGenerations.campus = key;
+      // let average = 0;
+      const generations = Object.keys(laboratoria[key].generacion);
+      generations.forEach((generation) => {
+        objGenerations.generation = generation;
+        const students = laboratoria[key].generacion[generation].estudiantes;
+        //console.log(laboratoria[key].generacion[generation].estudiantes);
+        let suma = 0;
+         for (student in students) {
+          suma += students[student].progreso.porcentajeCompletado;
+          average = Math.round(suma / students.length);
+          objGenerations.average = average;
+          objGenerations.count = students.length;
+        }
+        generationsArray.push(objGenerations);
+        console.log(generationsArray);
+        
+        
+      })
+  
+    }
+    return (generationsArray);
+}
+  
+window.sortStudents = (students, orderBy, orderDirection) => {
+    
+}
+
+window.filterStudents = (students, search) => {
+    
+};
+    
+  
+  
+  
+  
+  
+  
+>>>>>>> upstream/master
