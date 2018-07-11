@@ -15,16 +15,16 @@
 }
 
 .parragraph1 {
-padding-bottom: 2%;
-background-color: greenyellow;
-margin-left: 5%;
-margin-right: 5%;
-max-width:100%;
-
+  padding-bottom: 2%;
+  border: solid greenyellow;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 40%;
 }
+
 .parragraph2 {
-  background-color: rgba(255, 255, 0, 0.692);
-  max-width:100%;
+  border: solid rgba(255, 255, 0, 0.692);
+  max-width: 40%;
   margin-left: 5%;
   margin-right: 5%;
   padding-bottom: 2%;
@@ -32,8 +32,8 @@ max-width:100%;
 
 .parragraph {
   padding-bottom: 2%;
-  background-color: red;
-  max-width:100%;
+  border: solid red;
+  max-width: 40%;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -103,7 +103,6 @@ main {
   text-align: center;
   font-size: 130%;
   color: black;
-
 }
 
 /*#classified-students{
