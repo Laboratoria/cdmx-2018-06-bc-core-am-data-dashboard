@@ -65,9 +65,9 @@ Mejor visibilidad y manejo de datos.
 __3. Insights:__
 
 Después de conocer la necesidad de Lucile e indagar sobre lo que es un data dashboard, encontramos ejemplos que consideramos como punto de partida sobre lo que no nos parecía adecuado para la necesidad del cliente. 
-![Primer ejemplo dd](ux/Img readme/ejem.dd.1.png)
-![Segundo ejemplo dd](ux/Img readme/ejem.dd.2.png)
-![Tercer ejemplo dd](ux/Img readme/ejem.dd.3.jpg)
+![Primer ejemplo dd](https://github.com/soberanesmajo/cdmx-2018-06-bc-core-am-data-dashboard/blob/ramamajo/ux/Img%20readme/ejem.dd.1.png)
+![Segundo ejemplo dd](https://github.com/soberanesmajo/cdmx-2018-06-bc-core-am-data-dashboard/blob/ramamajo/ux/Img%20readme/data-ejemplo2.jpeg)
+![Tercer ejemplo dd](https://github.com/soberanesmajo/cdmx-2018-06-bc-core-am-data-dashboard/blob/ramamajo/ux/Img%20readme/ejem.dd.3.jpg)
 
 ### **Ideación**
 Nuestro primer acercamiento fue a través del sketching, tratando así, de aterrizar nuestro ideal de manera más tangible.
@@ -84,6 +84,7 @@ Después del feedback de nuestra clienta realizamos modificaciones al sketch:
 
 ### **5. Argumentación de visual design**
 Pensamos el diseño con base en algunas observaciones de nuestra usuaria, para que optimice su experiencia a través de mínimos movimientos. La paleta de colores está pensada totalmente en Laboratoria, sus colores oficiales fueron los seleccionados para lograr una interfaz amigable pero a corde a la identidad de la empresa.
+Nuestro producto está pensado para ser empleado principalmente en un ordenador, sin embargo, si el usuario lo prefiere, también puede acceder a la plataforma a través de dispositivos móviles (Design Responsive).
 
 ### **Modo de instalación**
 
