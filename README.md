@@ -54,5 +54,9 @@ En caunto a los estilos se emplearon parte de la libreria y nativo, lo mismo apl
 
 
 ![Lógica]( https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110630_1024.jpg "Diagrama uno")
+<<<<<<< HEAD
+![Lógica](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110648_1024.jpg"Diagrama dos")
+=======
 ![Lógica](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110648_1024.jpg "Diagrama dos")
+>>>>>>> upstream/master
 ![Lógica](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110711.jpg "Diagrama tres")

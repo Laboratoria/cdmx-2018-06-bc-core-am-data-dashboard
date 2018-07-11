@@ -115,3 +115,7 @@ input[type="password"] {
   color: #000;
 }
 
+.dropdown-content{
+    background-color: rgb(236, 224, 58);
+    color: #000;
+}
