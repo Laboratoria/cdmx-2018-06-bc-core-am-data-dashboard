@@ -1,0 +1,110 @@
+/*NOTA: hay propiedades que se especificaron en % esto para que los media querys pudieran detectarlos*/
+
+.logo{
+  height: 90px; /*alto*/
+  width:250px; /*ancho*/
+  /* height: 90px;
+  width: 250px; */
+}
+
+.container{
+  background: #D5D8DC;
+  display:flow-root;
+}
+
+
+* {
+  margin:0%; /*Quita los margenes predeterminados*/
+  padding: 0%;
+  font-family: 'Encode Sans Condensed', sans-sans-serif;
+}
+
+.ocultar {
+  display: none; /*propiedad que permite ocultar tabla estudiantes y porcentaje cuando se le da click al boton*/
+}
+
+.card {  /*esta clase proviene del archivo main.js */
+  width: 200px; /*ancho*/
+  height: 200px; /*alto*/
+  float: left; /*propiedad que permite que los div se alinien uno de lado del otro*/
+  margin: 0.5rem; /*margen que existe fuera de cada div*/
+  color:#273746; /*color del fondo del div*/
+  text-align: center; /*Centra el texto*/
+  font-size: 20px; /*tamaño de la letra*/
+  box-shadow:10px 10px 19px rgba(0, 0, 0, 0.75); /*Sombra en el borde del div porcentajes*/
+}
+
+.info { /*esta clase proviene del archivo main.js */
+  margin: 0 auto; /*quita el margen que viene por defecto*/
+}
+
+#cardColor{
+  background: #F8C471; /*color de fondo de div de pocentajes*/
+}
+
+p {  /*esta parrafo proviene de el archivo main.js especificamente de la tabla inscrustada*/
+  display: block;
+  margin:inherit;
+  text-align: center;
+  color: #212F3D;
+}
+
+.bienvenido {
+  background:  #D5D8DC;
+  font-size: 150%; /*tamaño del texto*/
+  text-align: center;
+  display: block;
+  color: #808B96;
+  text-shadow: 2px 2px 5px rgba(241, 196, 15); /*efecto de sombra en el texto bienvenido*/
+}
+
+/* Inicio de propiedades para las redes sociales*/
+
+.social-bar {
+  position: fixed; /* permite quedar fijo en la pantalla*/
+  right: 0; /*se pone a la derecha de la pantalla*/
+  top: 35%; /* se posiciona en el centro*/
+  font-size: 1.5rem; /* tamaño de la fuente*/
+  display: flex;
+  flex-direction:column;  /* se cambia la direccion que viene por defecto*/
+  align-items: flex-end; /* se alinea a la parte inferior*/
+  z-index: 100; /*permite que la barra social se alinie encima de los elementos de l pagina*/
+}
+
+.icon {
+  color: white; /* se le asigna un color*/
+  text-decoration: none;
+  padding: .7rem;
+  display: flex;
+  transition: all .5s; /*se animan todos los cambios que se le realizan a las propiedades */
+}
+
+.icon-facebook {
+  background: #2E406E;
+}
+
+.icon-embed {
+  background: #F4D03F;
+}
+
+.icon-twitter {
+  background: #339DC5;
+}
+
+.icon:first-child {   /*seudo clase */
+  border-radius: 1rem 0 0 0; /*esquina superior izquierda*/
+}
+
+.icon:last-child {  /*seudo clase*/
+  border-radius: 0 0 0 1rem; /*esquina inferior izquierda*/
+}
+
+.icon:hover { /* se aplican propiedades para que haya efectos cuando se pase el mouse*/
+  padding-right: 3rem;
+  border-radius: 1rem 0 0 1rem; /*se pone un borde radius en las esquina superior e inferior izquierda*/
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+.header {
+    margin-top: -50px;
+}
