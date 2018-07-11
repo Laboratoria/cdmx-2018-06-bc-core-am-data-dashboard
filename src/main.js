@@ -11,6 +11,8 @@ window.onload = () => {
       console.log(data)
       const students = computeStudentsStats(data);
       const generations = computeGenerationsStats(data);
+      
+      renderInfo(data);
       //drawStudents(students);
       //drawCampus(generations);
       //sortStudents(data)

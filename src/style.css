@@ -11,11 +11,6 @@ body {
     background-position: fixed;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-  }
-
   /*LogIN*/
 
 #logInLogo{
