@@ -1,6 +1,6 @@
 
  #perfil-image {
-   width: 25%;
+   width: 100%;
  }
  
  
@@ -16,19 +16,19 @@
  
 
  
- /*
+
  *{
   margin:0 ;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Bitter', serif;
+  /*font-family: 'Bitter', serif;*/
   background-color: rgb(255, 229, 33);
   text-align: center;
 }
 body{
   background-color: rgb(255, 229, 33);
   text-align: center;
-  font-family: 'Bitter', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   }
   /*main {

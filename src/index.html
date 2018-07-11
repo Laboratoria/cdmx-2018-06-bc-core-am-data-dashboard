@@ -21,65 +21,72 @@
         <h1> Laboratoria LMS Dashboard </h1>
         <img src="../images/Ldelabo.png" id="laboratoria">
        
-
-        <h2 id="welcome"> ¡Bienvenida! </h2>
+        <div id='login'>
+            <form id='formLg'>
+                <input type='text'  placeholder='write your email' id='user'>
+                <input type='password' placeholder='password' id='password'>
+                <button type='button' id='buttonLogin' > Login </button>
+            </form>
+            
       </header>
  <!--  Termina pantalla inicial-->   
 
       <section id="pantalla-2">
+
+          <h2 id="welcome"> ¡Bienvenida! </h2>
       <!-- Apertura de menús de navegación -->
-      <div class="btn-group">
+      <div id="sede" class="btn-group">
           <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Escoge Sede
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Ciudad de México</a>
-            <a class="dropdown-item" href="#">Lima</a>
-            <a class="dropdown-item" href="#">Santiago</a>
+          <div class="dropdown-sedes">
+            <a class="dropdown-cdmx" href="#">Ciudad de México</a>
+            <a class="dropdown-lima" href="#">Lima</a>
+            <a class="dropdown-santiago" href="#">Santiago</a>
           </div>
         </div> 
 <br>
 <br>
-        <div class="btn-group">
+        <div id="generacion"  class="btn-group">
             <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Escoge Generación
             </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Tercera </a>
-              <a class="dropdown-item" href="#">Cuarta </a>
-              <a class="dropdown-item" href="#">Quinta</a>
+            <div class="dropdown-generacion">
+              <a class="dropdown-tercera" href="#">Tercera </a>
+              <a class="dropdown-cuarta" href="#">Cuarta </a>
+              <a class="dropdown-quinta" href="#">Quinta</a>
             </div>
           </div> 
 
 <!--Comienza barra de navegación-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
     
   <a class="navbar-brand" href="#">LABORATORIA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <li class="nav-item dropdown">
+    <li class="nav-lms-dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         LMS (Rendimiento)
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-lms" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">  Rendimiento General </a>
           <a class="dropdown-item" href="#"> Rendimiento Temas</a>
         </div>
       </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-student-dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Estudiantes
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">  Lista General </a>
-            <a class="dropdown-item" href="#"> Arriba del 90 %</a>
-            <a class="dropdown-item" href="#">Abajo del 60 %</a>
+          <div class="dropdown-student" aria-labelledby="navbarDropdown">
+            <a class="dropdown-graList" href="#">  Lista General </a>
+            <a class="dropdown-up" href="#"> Arriba del 90 %</a>
+            <a class="dropdown-low" href="#"> Abajo del 60 %</a>
           </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-log-out">
           <a class="nav-link disabled" href="#">Log Out</a>
         </li>
       <form class="form-inline my-2 my-lg-0">
@@ -88,13 +95,7 @@
       </form>
     </div>
   </nav>
-
-
-
-
-
-
-
+</main>
 
 <!--/section>
 <main id="main">
@@ -139,7 +140,8 @@
             <ul>
               <li><a href="#"></a></li>
             </ul>
-          </li>
+          </li>ç
+
         </ul>
       </div>
       <div class="col-md">
@@ -149,16 +151,15 @@
       </ul>
   </nav-->
 <!-- Cierra barra de nav-->    
-    <section id="pantalla-3">
-      <h3>Lista de estudiantes</h3>
-      <img src="">
-      <div id="result-list">
-        <div id="name"> - </div>
-        <div id="email"> - </div>
-        <div id="turno"> - </div>
-        <div id="progress"> - </div>
-      </div>
-    </section>
+</section>
+<section id='pantalla-3'>
+  <h3>Lista de estudiantes</h3>
+  <button id='btn'>Ver a todas las estudiantes</button>
+  <button id='delete'>Limpiar pantalla</button>
+</section>
+        <div id='result'></div>
+        <!--RECORTE 1-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="main.js"></script>
