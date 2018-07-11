@@ -104,7 +104,7 @@ window.computeGenerationsStats = (laboratoria) => {
     }
   }
   console.log(generations);
-  // printercomputeGenerationsStats(generations);
+  printercomputeGenerationsStats(generations);
   return generations; 
   // se cierra el segundo for in al nivel generaciones
 };
