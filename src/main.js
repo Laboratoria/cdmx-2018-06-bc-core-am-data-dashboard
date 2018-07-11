@@ -1,4 +1,3 @@
-// Paso uno: Traemos la dirección del servidor o de un link 
 
 // const host = '../data/laboratoria.json';
 const host = 'https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
@@ -7,13 +6,16 @@ console.log(host);
 // LOGIN PROVISIONAL
 let enter = document.getElementById('login');
 let userSingin = document.getElementById('buttonLogin');
+const welcomeMessage = document.getElementById('welcome1');
 
 userSingin.addEventListener('click', event => {
   let user = document.getElementById('user').value;
   let password = document.getElementById('password').value;
   if (user === 'lucile@laboratoria.la' && password === 'Devendra') {
     enter.style.display = 'none';
-    // document.write('Welcome' + 'Lucile !');
+    const welcome = `<h2> 
+    ¡Bienvenida! </h2>`;
+    welcome1.innerHTML = welcome;
   } else {
     alert(
       `Password or User Name incorrect. 
@@ -23,40 +25,46 @@ userSingin.addEventListener('click', event => {
                   Best rewards, Mich&Vania Co. `);
   }
 });
+// LOG OUT
+const logOut = document.getElementById('exit');
+logOut.addEventListener('click', event => {
+  container.style.display = 'none';
+});
 
-    // se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
-    window.onload = () => {
-      fetch(host)
-      // obtenemos la traducción del host a .json para que sea leído
-        .then(response => response.json())
-      // haremos una segunda promesa que guarda en data el response.json
-        .then((laboratoria) => {
-          computeStudentsStats(laboratoria);
-          computeStudentsStats();
-          computeGenerationsStats(laboratoria);
-          computeGenerationsStats();
-          // createInfo es una función que se declara en el data.js para crear elementos en DOM
-        })
-        .catch((error) => {
-          console.log(error);
-          // .catch buscará errores en el enlace FETCH
-        });
-    };
 
-    // FUNCIONES PARA PINTAR DATOS DE LA SEGUNDA FUNCIÓN:
-    const container = document.getElementById('result');
+// se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
+window.onload = () => {
+  fetch(host)
+  // obtenemos la traducción del host a .json para que sea leído
+    .then(response => response.json())
+  // haremos una segunda promesa que guarda en data el response.json
+    .then((laboratoria) => {
+      computeStudentsStats(laboratoria);
+      computeStudentsStats();
+      computeGenerationsStats(laboratoria);
+      computeGenerationsStats();
+      // createInfo es una función que se declara en el data.js para crear elementos en DOM
+    })
+    .catch((error) => {
+      console.log(error);
+      // .catch buscará errores en el enlace FETCH
+    });
+};
 
-    printerComputeStudentsStats = (studentLab) => {
-      document.getElementById('btn').addEventListener('click', (event) => {
-        // console.log(studentLab);
-        let result = '';
+// FUNCIONES PARA PINTAR DATOS DE LA SEGUNDA FUNCIÓN:
+const container = document.getElementById('result');
 
-        // console.log(Object.values(studentLab));
-        const totalInfo = Object.values(studentLab);
-        // console.log(totalInfo);
-        for (let i = 0; i < totalInfo.length; i++) {
-          // console.log(totalInfo[i]);
-          result += `<div class='table-responsive'>
+printerComputeStudentsStats = (studentLab) => {
+  document.getElementById('btn').addEventListener('click', (event) => {
+    // console.log(studentLab);
+    let result = '';
+
+    // console.log(Object.values(studentLab));
+    const totalInfo = Object.values(studentLab);
+    // console.log(totalInfo);
+    for (let i = 0; i < totalInfo.length; i++) {
+      // console.log(totalInfo[i]);
+      result += `<div class='table-responsive'>
       <table class='table'>
         <thead>
           <tr>
@@ -75,22 +83,58 @@ userSingin.addEventListener('click', event => {
               <td> ${totalInfo[i].email}</td>
               <td> ${totalInfo[i].generation}</td>
               <td> ${totalInfo[i].turn}</td>
-              <td>Lima ${totalInfo[i].campus}</td>
+              <td> ${totalInfo[i].campus}</td>
             </tr>
           </tbody>
           </table>
           </div>`;
     
-          // console.log(result);
-          console.log(container);
+      // console.log(result);
+      console.log(container);
     
-          container.innerHTML = result;
-        }
-      });
-    };
+      container.innerHTML = result;
+    }
+  });
+};
 
-    document.getElementById('delete').addEventListener('click', (event) =>{
-      container.innerHTML = '';
-    });
- 
- 
+document.getElementById('delete').addEventListener('click', (event) =>{
+  container.innerHTML = '';
+});
+
+printercomputeGenerationsStats = (generations) => {
+  document.getElementById('btnG').addEventListener('click', (event) => {
+    let result = '';
+    const totalInfoG = Object.values(generations);
+    for (let i = 0; i < generations.length; i++) {
+      result += `<div class='table-responsive'>
+      <table class='table'>
+        <thead> Progress by Generations
+          <tr>
+            <th> Generation </th>
+            <th> Campus </th>
+            <th> Total Students </th>
+            <th> Average </th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td> ${totalInfoG[i].generation}</td>
+              <td> ${totalInfoG[i].campus}</td>
+              <td> ${totalInfoG[i].count}</td>
+              <td> ${totalInfoG[i].average}</td>
+            </tr>
+          </tbody>
+          </table>
+          </div>`;
+      // console.log(result);
+      console.log(container2);
+    
+      container2.innerHTML = result;
+    }
+  });
+};
+
+document.getElementById('delete').addEventListener('click', (event) =>{
+  container2.innerHTML = '';
+});
+    

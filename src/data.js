@@ -80,41 +80,22 @@ window.computeGenerationsStats = (laboratoria) => {
   let count = '';
   // Variables de un uso: 
   let eachGenPercent = 0;
-  let totalStudentsOfHoleWorld = 0;
+  let totalStudentPerGeneration = 0;
 
   // arreglo de objetos
   for (sedes in laboratoria) {
     campus = sedes;
     const gen = Object.keys(laboratoria[sedes].generacion);
-    // console.log('1º for in', gen);
     for (let numberG of gen) {
-      // console.log(numberG);
       generation = numberG;
       const stud = laboratoria[sedes].generacion[numberG].estudiantes;
-      // sacar el número de estudiantes por generación
       let totalStud = stud.length;
       count = totalStud;
-      // console.log(totalStud);
-      // const progressAddition = laboratoria[sedes].generacion[numberG].estudiantes.porcentajeCompletado;
-      // console.log(progressAddition);
-      // console.log(stud);
       for (eachStudent in stud) {
-        // console.log(eachStudent);
-        // aquí se suman los porcentajes de cada una
         eachGenPercent += laboratoria[sedes].generacion[numberG].estudiantes[eachStudent].progreso.porcentajeCompletado;
-        // console.log(eachGenPercent);
-        // aquí podría obtener un avance total de todas las estudiantes del mundo
-        // let totalProgress = eachGenPercent;
-        // console.log(totalProgress);
-        // let genAddProgress = ;
       }
-      // AQUÍ ME SUMA 134 STUDENTS
-      totalStudentsOfHoleWorld += count;
-      // console.log(totalStudentsOfHoleWorld);
-      // AHORA A DIVIDIR EL TOTAL DE ESTUDIANTES ENTRE EL TOTAL DE LA SUMA DE SUS PROGRESOS
-      let totalAverage = Math.round(eachGenPercent / totalStudentsOfHoleWorld);
-      // console.log(totalAverage);
-      
+      totalStudentPerGeneration += count;
+      let totalAverage = Math.round(eachGenPercent / totalStudentPerGeneration);
       generations.push({'campus': campus,
         'generation': generation,
         'average': totalAverage,
@@ -123,7 +104,7 @@ window.computeGenerationsStats = (laboratoria) => {
     }
   }
   console.log(generations);
-  // sprinterFunction2f(generations);
+  printercomputeGenerationsStats(generations);
   return generations; 
   // se cierra el segundo for in al nivel generaciones
 };
