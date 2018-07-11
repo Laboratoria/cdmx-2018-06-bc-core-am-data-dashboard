@@ -13,9 +13,6 @@ window.onload = () => {
       dataMex(data);
       dataSantiago(data);
       dataLima(data);
-
-
-      
       renderInfo(data);
       //drawStudents(students);
       //drawCampus(generations);
