@@ -1,252 +1,44 @@
-  window.computeStudentsStats = (laboratoria) => {
-  const studentsArray = [];
-
-  const objStudents = {
-    name: '',
-    email: '',
-    campus: '',
-    generation: '',
-    stats: {
-      status: '',
-      completedPercentage: 0,
-      topics: {
-        '01-Introduccion-a-programacion': {
-          completedPercentage: 0,
-          percentageDuration: 0,
-          subtopics: {
-            '00-bienvenida-orientacion': {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            '01-desarrollo-profesional': {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            '02-por-que-aprender-a-programar': {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            "03-tu-primer-sitio": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-            },
-            "04-quiz": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-            }
-          }
-
-        },
-        "02-Variables-y-tipo-de-datos": {
-          completedPercentage: 0,
-          percentageDuration: 0,
-          subtopics: {
-            "00-Tipos-de-datos-y-operadores": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            "01-variables": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            "02-auto-aprendizaje-MDN": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            "03-comments": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-            },
-            "04-ejercicios-guiado": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-            }
-          }
-        },
-        "03-UX": {
-          completedPercentage: 0,
-          percentageDuration: 0,
-          subtopics: {
-            "00-equipos-de-desarrollo": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            "01-ux-diseno": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            "02-ux-vs-ui": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-
-            },
-            "03-quiz": {
-              completedPercentage: 0,
-              type: '',
-              duration: 0,
-            }
-          }
-        }
-      }
-
-
-    }
-
-  };
-  for (key in laboratoria) {
-
-    objStudents.campus = key;
-    const generations = Object.keys(laboratoria[key].generacion);
-    //console.log(Object.keys(laboratoria[key].generacion));
-
-    generations.forEach((generation) => {
-        objStudents.generation = generation;
-        const students = laboratoria[key].generacion[generation].estudiantes;
-        console.log(students);
-        let percentage = 0;
-        for (student in students) {
-          //console.log(students[student].progreso.porcentajeCompletado);
-
-          objStudents.name = students[student].estudiantes[nombre];
-          console.log(objStudents.name);
-          objStudents.email = students[student].estudiantes.correo;
-          objStudents.stats.completedPercentage = students[student].progreso.porcentajeCompletado;
-          console.log(objStudents);
-
-          if (objStudents.stats.completedPercentage <= 60) {
-
-            objStudents.stats.status = "Delayed";
-
-          } else if (objStudents.stats.completedPercentage <= 90) {
-
-            objStudents.stats.status = "Optimus";
-          } else {
-            objStudents.stats.status = "Excellent";
-          }
-          //console.log(objStudents);
-          //console.log(objStudents.stats.status);
-
-          //objStudents.stats.topics.01-Introduccion-a-programacion.completedPercentage = 
-
-
-        }
 
 
 
-      }
+// 
+
+//const porque nunca cambia el div, solo la info depositada
+const container = document.getElementById('result');
+
+const renderInfo = (data) => {
+    document.getElementById('btn').addEventListener('click', (event) => {
+          let result = ''; 
+          console.log(Object.keys(data.lima.generacion))
+          const info = Object.keys(data.lima.generacion);
+          console.log(Object.keys(info));
+
+            for (var generacion in info) {                
+                if(info.hasOwnProperty(generacion)) {
+                    console.log("la clave es " + generacion + " y el valor es " + info[generacion])
+               //console.log(info.lima.generacion)
+
+               let arrLaboratoriaEstudiantes = data.lima.generacion[info[generacion]].estudiantes;
+  
+               for(i=0;  i<arrLaboratoriaEstudiantes.length; i++){
+                    result += `<div class='table'>
+                                <div class='info'>
+                                   <p>Nombre: ${data.lima.generacion[info[generacion]].estudiantes[i].nombre}</p>
+                                   <p>"01-Introduccion-a-programacion" - Duracion: ${data.lima.generacion[info[generacion]].estudiantes[i].progreso.temas["01-Introduccion-a-programacion"].duracionTema}</p>
+                                    </div>
+                                    </div>`
+            
+ 
+               }
+                                     }
+            container.innerHTML = result;
+        
+    } 
+    });        
 
 
+  } 
 
-
-
- window.computeGenerationsStats = (laboratoria) => {
-  generationsArray = [];
-  const objGenerations = {
-    campus: '',
-    generation: '',
-    average: 0,
-    count: 0,
-  };
-  let average = 0;
-  for (key in laboratoria) {
-
-    objGenerations.campus = key;
-    // let average = 0;
-    const generations = Object.keys(laboratoria[key].generacion);
-    generations.forEach((generation) => {
-      objGenerations.generation = generation;
-      const students = laboratoria[key].generacion[generation].estudiantes;
-      //console.log(laboratoria[key].generacion[generation].estudiantes);
-      let suma = 0;
-
-
-      for (student in students) {
-        suma += students[student].progreso.porcentajeCompletado;
-        average = Math.round(suma / students.length);
-        objGenerations.average = average;
-        objGenerations.count = students.length;
-      }
-      generationsArray.push(objGenerations);
-      //console.log(objGenerations);
-
-      // average = average / students.length;
-      //   console.log(students.length);
-      //   console.log(average);
-
-    })
-
-  }
-  return (generationsArray);
-}
-
-
-
-window.sortStudents = (students, orderBy, orderDirection) => {
-  let ordered;
-  if (orderBy == 'name') {
-    if (orderDirection == 'ASC') {
-      ordered = students.sort(function (a, b) {
-        var nameA = a.name.toLowerCase(),
-          nameB = b.name.toLowerCase();
-        if (nameA < nameB) return -1;
-        if (nameA > nameB) return 1;
-        return 0;
-      })
-      console.log(ordered);
-    } else {
-      ordered = students.sort(function (a, b) {
-        var nameA = a.name.toLowerCase(),
-          nameB = b.name.toLowerCase();
-        if (nameA > nameB) return -1;
-        if (nameA < nameB) return 1;
-        return 0;
-      })
-      console.log(ordered);
-    }
-  } else if (orderBy == 'percentage') {
-    if (orderDirection == 'ASC') {
-      ordered = students.sort(function (a, b) {
-        return (a.average - b.average);
-      });
-      console.log(ordered);
-    } else {
-      ordered = students.sort(function (a, b) {
-        return (b.average - a.average);
-      });
-      console.log(ordered);
-    }
-  }
-  return (ordered);
-};
-window.filterStudents = (students, search) => {
-  let filtered = [];
-  for (let i = 0; i < students.length; i++) {
-    var currentS = students[i];
-    if (currentS.name == search) {
-      filtered.push(currentS);
-    }
-  }
-  console.log(filtered);
-  return (filtered);
-};
+document.getElementById('delete').addEventListener('click', (event) =>{
+    container.innerHTML = '';
+})

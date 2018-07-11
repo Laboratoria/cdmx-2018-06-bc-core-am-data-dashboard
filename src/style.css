@@ -11,10 +11,6 @@ body {
   background-position: fixed;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
 
 /*LogIN*/
 
@@ -118,3 +114,4 @@ input[type="password"] {
   background-color: rgb(236, 224, 58);
   color: #000;
 }
+
