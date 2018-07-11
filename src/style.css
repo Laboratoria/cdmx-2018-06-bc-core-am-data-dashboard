@@ -80,6 +80,12 @@ span{
    height: 50px;
    width: 50px;
 }
+
+.tamaño-barra{
+   border-radius: 5px;
+   height: 20px;
+   background-color: gainsboro;
+}
 .numero{
     font-size: 3em;
     text-align: center
@@ -87,13 +93,8 @@ span{
 .color-activas{
     background-color: #ffe521;
     text-align: center;
-    border-radius: 20px;
-}
-
-.tamaño-barra{
-   border-radius: 5px;
-   height: 20px;
-   background-color: gainsboro;
+    border-radius: 15px;  
+    font-size: 1.5em;
 }
 .color-fondo{
    background-color:pink;
@@ -138,11 +139,6 @@ span{
    text-align: center;
 
 }
-.center{
-    font-size: 2em;
-    text-align: center;
-
-}
 .color-alumnas{
     background-color: pink darken-2;
     text-align: center;
@@ -181,4 +177,17 @@ i.material-icons{
 .alumnas{
     margin-left: 36%;
     font-size: 2em;
+}
+.card-title{
+    font-weight: bold;
+    text-align: center;
+}
+span.card-title.cards{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+div.color-activas{
+    background-color: #ffe521;
+    text-align: center;
+    border-radius: 15px;
 }
