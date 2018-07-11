@@ -1,5 +1,6 @@
 /* data.js es el archivos JS en el cual se declaran las funciones globales y locales para la extracción y procesamiento de la data del
 proyecto. En algunas funciones se hace uso de Templete String para la creacion de card dinámicas para presentar información en el DOM*/
+// FUNCIONES DE LÓGICA DE EXTRACCIÓN Y PROCESAMIENTO DE A DATA
 window.computeVenuesStats = (laboratoria) => {
 // Función que extrae infomación sobre cada una de las sedes, genera un arreglo como: [{},{},{}]
   let venuesArray = [];// Variables locales
@@ -139,57 +140,9 @@ window.computeGenerationsStats = (laboratoria) => {
   console.log(generationsArray);
   return (generationsArray);
 };
-// Función que ordena arreglo de estudiantes
-window.sortStudents = (students, orderBy, orderDirection) => {
-  let ordered;
-  // Ordena por nombre
-  if (orderBy === 'name') {
-    // Ordena por nombre en forma ASC
-    if (orderDirection === 'ASC') {
-      ordered = students.sort((arrayA, arrayB) => {
-        var nameA = arrayA.name.toLowerCase(), nameB = arrayB.name.toLowerCase();
-        if (nameA < nameB) return -1; // Retorna "namaA" primero si es menor que nameB
-        if (nameA > nameB) return 1; // Retorna "namaB" primero si es menor que nameA
-        return 0;
-      });
-      console.log(ordered);
-    } else {
-      // Ordena por nombre en forma DESC
-      ordered = students.sort((arrayA, arrayB) => {
-        var nameA = arrayA.name.toLowerCase(), nameB = arrayB.name.toLowerCase();
-        if (nameA > nameB) return -1; // Retorna "namaA"  si este mayor que nameB
-        if (nameA < nameB) return 1; // Retorna "namaB"  si este mayor que nameA
-        return 0;
-      });
-      console.log(ordered);
-    }
-  } else if (orderBy === 'percentage') {// Ordena por porcentajeCompletado
-    if (orderDirection === 'ASC') { // Ordena en forma ascendente
-      ordered = students.sort((arrayA, arrayB) => {
-        return (arrayA.average - arrayB.average); // Coloca arrayA primero si el resultado de la resta es >0
-      });
-      console.log(ordered);
-    } else {
-      ordered = students.sort((arrayA, arrayB) =>{
-        return (arrayB.average - arrayA.average);// Coloca arrayB primero si el resultado de la resta es <0
-      });
-      console.log(ordered);
-    }
-  }
-  return (ordered);
-};
-// Filtra un arreglo devolviendo solo aquellos en los que coincida el nombre
-window.filterStudents = (students, search) => {
-  let filtered = [];
-  for (let i = 0; i < students.length; i++) {
-    var currentS = students[i];
-    if (currentS.name === search) filtered.push(currentS);
-  }
-  console.log(filtered);
-  return (filtered);
-};
+// Obtiene todos los datos de las alumnas
 window.computeStudentsStats = (laboratoria) => {
-  let studentArray = [];
+  let studentArray = []; // Zona de declaración de cariables locales (para impresión)
   let averageS = 0;
   let generationS = '';
   let venuesS = [];
@@ -205,9 +158,8 @@ window.computeStudentsStats = (laboratoria) => {
   let percentageDurationS = [];
   let itemS = '';
   let j = 0;
-  for (key in laboratoria) {
+  for (key in laboratoria) { // Inicio de extracciónde data
     let venuesL = Object.getOwnPropertyNames(laboratoria);
-    // console.log(laboratoria);
     let generations = laboratoria[key].generacion;
     i++;
     for (generation in generations) {
@@ -226,7 +178,7 @@ window.computeStudentsStats = (laboratoria) => {
         totalTimeS = arrayStats[j];
         j++;
         averageS = arrayStats[j];
-        if (averageS <= 60) {
+        if (averageS <= 60) { // Evalua estatus
           statusS = 'Bajo avance';
         } else if (averageS >= 90) {
           statusS = 'Alto avance';
@@ -237,7 +189,7 @@ window.computeStudentsStats = (laboratoria) => {
         let unitiesContent = arrayStats[j];
         let tps = {};
         let completedPercentageT = 0, percentageDurationT = 0;
-        for (let unit in unitiesContent) {
+        for (let unit in unitiesContent) { // Entrar a data profunda
           if (unit === '01-Introduccion-a-programacion') {
             completedPercentageT = (Object.values(unitiesContent))[0].porcentajeCompletado;
             percentageDurationT = (Object.values(unitiesContent))[0].duracionTemaCompletado;
@@ -432,7 +384,9 @@ window.computeStudentsStats = (laboratoria) => {
             tps['03-UX'] = deepCont;
           }
           sts.topics = tps;
-        } scorePercentage = scorePercentage / 3;
+        }
+        // Genera objeto con rpopiedades extrahidas
+        scorePercentage = scorePercentage / 3;
         myStudent.name = nameS;
         myStudent.email = emailS;
         myStudent.turno = turnoS;
@@ -449,13 +403,64 @@ window.computeStudentsStats = (laboratoria) => {
   console.log(studentArray);
   return (studentArray);
 };
+// Función que ordena arreglo de estudiantes
+window.sortStudents = (students, orderBy, orderDirection) => {
+  let ordered;
+  // Ordena por nombre
+  if (orderBy === 'name') {
+    // Ordena por nombre en forma ASC
+    if (orderDirection === 'ASC') {
+      ordered = students.sort((arrayA, arrayB) => {
+        var nameA = arrayA.name.toLowerCase(), nameB = arrayB.name.toLowerCase();
+        if (nameA < nameB) return -1; // Retorna "namaA" primero si es menor que nameB
+        if (nameA > nameB) return 1; // Retorna "namaB" primero si es menor que nameA
+        return 0;
+      });
+      console.log(ordered);
+    } else {
+      // Ordena por nombre en forma DESC
+      ordered = students.sort((arrayA, arrayB) => {
+        var nameA = arrayA.name.toLowerCase(), nameB = arrayB.name.toLowerCase();
+        if (nameA > nameB) return -1; // Retorna "namaA"  si este mayor que nameB
+        if (nameA < nameB) return 1; // Retorna "namaB"  si este mayor que nameA
+        return 0;
+      });
+      console.log(ordered);
+    }
+  } else if (orderBy === 'percentage') {// Ordena por porcentajeCompletado
+    if (orderDirection === 'ASC') { // Ordena en forma ascendente
+      ordered = students.sort((arrayA, arrayB) => {
+        return (arrayA.average - arrayB.average); // Coloca arrayA primero si el resultado de la resta es >0
+      });
+      console.log(ordered);
+    } else {
+      ordered = students.sort((arrayA, arrayB) =>{
+        return (arrayB.average - arrayA.average);// Coloca arrayB primero si el resultado de la resta es <0
+      });
+      console.log(ordered);
+    }
+  }
+  return (ordered);
+};
+// Filtra un arreglo devolviendo solo aquellos en los que coincida el nombre
+window.filterStudents = (students, search) => {
+  let filtered = [];
+  for (let i = 0; i < students.length; i++) {
+    var currentS = students[i];
+    if (currentS.name === search) filtered.push(currentS);
+  }
+  console.log(filtered);
+  return (filtered);
+};
+
+// FUNCIONES DE IMPRESION BASADAS EN TEMPLETE STRING: IMPRIMIR DE FORMA DINÁMICA
 window.generationsLima = (laboratoria) => {
   const generation = computeGenerationsStats(laboratoria);
   const generationLim = [];
   for (let i = 0; i < 3; i++) {
     generationLim[i] = generation[i];
   }
-  // -----
+  // ----- Templete String para impresion dinámica de la funcion impresion de Generaciones resultGenLim
   const resultGenLim = document.getElementById('cardsSpace');
   let genLim = '';
   let advancePercentage = [];
@@ -473,6 +478,7 @@ window.generationsLima = (laboratoria) => {
                       <!--generaciones1-->
                       <span class="card-title cards">${generationLim[i].generation} Generación</span>
                       <span class="card-title cards">${generationLim[i].venue}</span>
+                      <div>${generationLim[i].venue}${'  '}${generationLim[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light"></a>
                         <div class="color-activas">
                           <span class="numero">${generationLim[i].count}</span>
                           <span> Alumnas</span>
@@ -487,9 +493,9 @@ window.generationsLima = (laboratoria) => {
                             <i class="small material-icons">star_half</i>
                             </span>
                             <div class="progress grey tamaño-barra">
-                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares" title="${generationLim[i].mediumStudents}${' Alumnas regulares'}"></div>
-                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas" title="${generationLim[i].inLowStudents}${' Alumnas atrasadas'}"></div>
-                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas" title="${generationLim[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
+                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"}"></div>
+                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas"></div>
                             </div>
                           </div>
                           <!--Tiempo promedio-->
@@ -510,20 +516,20 @@ window.generationsLima = (laboratoria) => {
                             </div>
                             <p>Intoducción a la programación</p>
                               <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:${generationLim[i].advanceU1}${'%'}" title ="${generationLim[i].advanceU1}${'%'}">
+                                <div class="determinate pink" class="color-fondo" style="width:${generationLim[i].advanceU1}${'%'}">
                                 </div>
                               </div>
                             <p>Variables y tipos de datos</p>
                               <div class="progress grey">
-                                <div class="determinate purple" class="color-fondo" style="width: ${generationLim[i].advanceU2}${'%'}" title ="${generationLim[i].advanceU2}${'%'}"></div>
+                                <div class="determinate purple" class="color-fondo" style="width: ${generationLim[i].advanceU2}${'%'}"></div>
                                 </div>
                             <p>UX</p>
                               <div class="progress grey">
-                                <div class="determinate orange" class="color-fondo" style="width: ${generationLim[i].advanceU3}${'%'}" title ="${generationLim[i].advanceU3}${'%'}"></div>
+                                <div class="determinate orange" class="color-fondo" style="width: ${generationLim[i].advanceU3}${'%'}"></div>
                                 </div>
                             <p>Quiz´s</p>
                               <div class="progress grey">
-                                <div class="determinate green" class="color-fondo" style="width: ${generationLim[i].quizAverage}${'%'}" title ="${generationLim[i].quizAverage}${'ptos'}"></div>
+                                <div class="determinate green" class="color-fondo" style="width: ${generationLim[i].quizAverage}${'%'}"></div>
                                 </div>
                             <!--Promedios generales y de quiz fin-->
                             </div>
@@ -533,8 +539,18 @@ window.generationsLima = (laboratoria) => {
                     </div>`;
   }
   resultGenLim.innerHTML = genLim;
-  // coment dos
-  // ---
+  // ToolTip
+    $(document).ready(function(){
+     $('.tooltipped').tooltip({
+       accordion: true
+     });
+    });
+    // Colapso de alumnas
+    $(document).ready(function() {
+      $('.collapsible').collapsible({
+        accordion: true
+      });
+    });
   return generationLim;
 };
 window.generationsMexico = (laboratoria) => {
@@ -543,7 +559,7 @@ window.generationsMexico = (laboratoria) => {
   for (let i = 3; i <= 5; i++) {
     generationMex[i - 3] = generation[i];
   }
-  // -----
+  // ----- Templete String para impresion dinámica de la funcion impresion de Generaciones resultGenMex
   const resultGenMex = document.getElementById('cardsSpace');
   let genMex = '';
   let advancePercentage = [];
@@ -561,6 +577,9 @@ window.generationsMexico = (laboratoria) => {
                       <!--generaciones1-->
                       <span class="card-title cards">${generationMex[i].generation} Generación</span>
                       <span class="card-title cards">${generationMex[i].venue}</span>
+                      <div>${generationMex[i].venue}${'  '}${generationMex[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
+                      </a>
+                      </div>
                         <div class="color-activas">
                           <span class="numero">${generationMex[i].count}</span>
                           <span> Alumnas</span>
@@ -575,9 +594,9 @@ window.generationsMexico = (laboratoria) => {
                             <i class="small material-icons">star_half</i>
                             </span>
                             <div class="progress grey tamaño-barra">
-                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares" title="${generationMex[i].mediumStudents}${' Alumnas regulares'}"></div>
-                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas" title="${generationMex[i].inLowStudents}${' Alumnas atrasadas'}"></div>
-                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas" title="${generationMex[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
+                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"></div>
+                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas"></div>
                             </div>
                           </div>
                           <!--Tiempo promedio-->
@@ -598,20 +617,20 @@ window.generationsMexico = (laboratoria) => {
                             </div>
                             <p>Intoducción a la programación</p>
                               <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:${generationMex[i].advanceU1}${'%'}" title ="${generationMex[i].advanceU1}${'%'}">
+                                <div class="determinate pink" class="color-fondo" style="width:${generationMex[i].advanceU1}${'%'}">
                                 </div>
                               </div>
                             <p>Variables y tipos de datos</p>
                               <div class="progress grey">
-                                <div class="determinate purple" class="color-fondo" style="width: ${generationMex[i].advanceU2}${'%'}" title ="${generationMex[i].advanceU2}${'%'}"></div>
+                                <div class="determinate purple" class="color-fondo" style="width: ${generationMex[i].advanceU2}${'%'}"></div>
                                 </div>
                             <p>UX</p>
                               <div class="progress grey">
-                                <div class="determinate orange" class="color-fondo" style="width: ${generationMex[i].advanceU3}${'%'}" title ="${generationMex[i].advanceU3}${'%'}"></div>
+                                <div class="determinate orange" class="color-fondo" style="width: ${generationMex[i].advanceU3}${'%'}"></div>
                                 </div>
                             <p>Quiz´s</p>
                               <div class="progress grey">
-                                <div class="determinate green" class="color-fondo" style="width: ${generationMex[i].quizAverage}${'%'}" title ="${generationMex[i].quizAverage}${'ptos'}"></div>
+                                <div class="determinate green" class="color-fondo" style="width: ${generationMex[i].quizAverage}${'%'}"></div>
                                 </div>
                             <!--Promedios generales y de quiz fin-->
                             </div>
@@ -620,8 +639,19 @@ window.generationsMexico = (laboratoria) => {
                       </div>
                     </div>`;
   }
-  resultGenMex.innerHTML = genMex;
-  // ---
+    resultGenMex.innerHTML = genMex;
+  // ToolTip
+  $(document).ready(function(){
+   $('.tooltipped').tooltip({
+     accordion: true
+   });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
   return generationMex;
 };
 window.generationsSantiago = (laboratoria) => {
@@ -630,7 +660,7 @@ window.generationsSantiago = (laboratoria) => {
   for (let i = 5; i < 8; i++) {
     generationStg[i - 5] = generation[i];
   }
-  // -----
+  // ----- Templete String para impresion dinámica de la funcion impresion de Generaciones resultGenStg
   const resultGenStg = document.getElementById('cardsSpace');
   let genStg = '';
   let advancePercentage = [];
@@ -708,10 +738,9 @@ window.generationsSantiago = (laboratoria) => {
                     </div>`;
   }
   resultGenStg.innerHTML = genStg;
-  // ---
   return generationStg;
 };
-
+// ----- Genera info para impresion de informacion de alumnas
 window.studentsModal = (laboratoria)=>{
   const students = computeStudentsStats(laboratoria);
   const list = [];
@@ -750,6 +779,7 @@ window.studentsModal = (laboratoria)=>{
   console.log(list);
   return list;
 };
+// ----- Templete Stringdinamico para impresion de informacion de alumnas
 window.studentsPrint = (laboratoria) => {
   const studentsM = studentsModal(laboratoria);
   const studentsCollap = document.getElementById('cardsSpace');
@@ -822,6 +852,8 @@ window.studentsPrint = (laboratoria) => {
                            </div>`;
   }
   studentsCollap.innerHTML = studentsPrint;
+  // Declara eventos de materialize dentro de cada funcion porque el Templete String es dinámico y crea elementos
+  // solo en momentos especificos, por eso no reconoce estos eventos de forma global
   // ToolTip
   $(document).ready(function(){
    $('.tooltipped').tooltip({
@@ -835,6 +867,7 @@ window.studentsPrint = (laboratoria) => {
     });
   });
 };
+// Imprime Templete String de cada sede en un card difrente
 window.printSedesAll = (laboratoria) => {
   const sedeM = computeVenuesStats(laboratoria);
   console.log(sedeM);
