@@ -1,7 +1,7 @@
-const url = 'http://api.myjson.com/bins/1efx86';
+const api = 'http://api.myjson.com/bins/1efx86';
 
 window.onload = () => {
-  fetch(url)
+  fetch(api)
       .then(response => response.json())
       .then(data => {
           console.log(data);
