@@ -3,7 +3,7 @@
 window.onload = () => {
   // console.log('hola');
   // accede al json
-  fetch('../data/laboratoria.json')
+  fetch('https://raw.githubusercontent.com/lunavazquez/cdmx-2018-06-bc-core-am-data-dashboard/master/src/data/laboratoria.json')
     .then(response => response.json())
     .then(laboratoria => {
       const url = location.pathname;
