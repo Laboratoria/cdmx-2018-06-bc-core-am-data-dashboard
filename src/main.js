@@ -75,7 +75,7 @@ const dataMex = (data) => {
     for (var generacion in info) {
       if (info.hasOwnProperty(generacion)) {
         console.log("la clave es " + generacion + " y el valor es " + info[generacion])
-        //console.log(info.lima.generacion)
+        
 
         let arrLaboratoriaEstudiantesMex = data.mexico.generacion[info[generacion]].estudiantes;
 
@@ -119,8 +119,7 @@ const dataSantiago = (data) => {
 
     for (var generacion in info) {
       if (info.hasOwnProperty(generacion)) {
-        console.log("la clave es " + generacion + " y el valor es " + info[generacion])
-        //console.log(info.lima.generacion)
+        
 
         let arrLaboratoriaEstudiantesSan = data.santiago.generacion[info[generacion]].estudiantes;
 
