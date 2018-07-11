@@ -2,40 +2,26 @@
  #perfil-image {
    width: 25%;
  }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
- 
- /*
- *{
+*{
   margin:0 ;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Bitter', serif;
-}
-body{
   background-color: rgb(255, 229, 33);
   text-align: center;
-  font-family: 'Bitter', serif;
-  font-size: 25px;
+}
+/*body{
+  background-color: rgb(255, 229, 33);
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
   }
-
-  main {
-    outline: 2px solid blue;
+  /*main {
+    /*outline: 2px solid blue;
     padding: 2em;
   }
   article{
-    outline: 2px solid red;
+    /*outline: 2px solid red;
     padding-top: 1em;
     padding-bottom: 1em;
   }
@@ -97,7 +83,6 @@ body{
         position: relative;
         padding: 15px 20px  ;
     }
-
 .nav li ul {
   display:none;
   position: absolute;
@@ -119,7 +104,6 @@ article ul li:first-child a {
 background: #696969 ;
 width: 280px;
 }
-
 /*.menu {
   color: rgb(250, 250, 250);
   display: inline-block;
@@ -133,8 +117,8 @@ footer{
 }
 main div ul{
   width: 200px;
-}
+}º
 main nav div ul:hover{
   background-color: #434343
-}
- */
+}*/
+
