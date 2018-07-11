@@ -1,83 +1,96 @@
-//Paso uno: Traemos la dirección del servidor propio
-//const host = '../data/laboratoria.json';
-const host = "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
+// Paso uno: Traemos la dirección del servidor o de un link 
+
+// const host = '../data/laboratoria.json';
+const host = 'https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 console.log(host);
-//se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
-window.onload = () => {
-  fetch(host)
-    //obtenemos la traducción del host a .json para que sea leído
-    .then(response => response.json())
-    //haremos una segunda promesa que guarda en data el response.json
-    .then((laboratoria) => {
-      computeStudentsStats(laboratoria);
-      //console.log(laboratoria);
-      computeStudentsStats();
-      computeGenerationsStats(laboratoria);
-      computeGenerationsStats();
-      //createInfo es una función que se declara en el data.js para crear elementos en DOM
-    })
-    .catch((error) => {
-      console.log(error);
-      //.catch buscará errores en el enlace FETCH
-    })
 
-};
+// LOGIN PROVISIONAL
+let enter = document.getElementById('login');
+let userSingin = document.getElementById('buttonLogin');
 
-//window.computeGenerationsStats(laboratoria);
+userSingin.addEventListener('click', event => {
+  let user = document.getElementById('user').value;
+  let password = document.getElementById('password').value;
+  if (user === 'lucile@laboratoria.la' && password === 'Devendra') {
+    enter.style.display = 'none';
+    // document.write('Welcome' + 'Lucile !');
+  } else {
+    alert(
+      `Password or User Name incorrect. 
+            If you forget your password please contact us at email support@Mich&Vania.com
+                
+                  Have a nice day.
+                  Best rewards, Mich&Vania Co. `);
+  }
+});
 
-//manejar DOM para imprimir los datos de estudiantes en lista
-// document.getElementById('btn-students').addEventListener("click", (event) => {
-//   let result = "";
-//   console.log( );
-//   } )
-//VARIABLES DE LA SEGUNDA FUNCIÓN
+    // se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
+    window.onload = () => {
+      fetch(host)
+      // obtenemos la traducción del host a .json para que sea leído
+        .then(response => response.json())
+      // haremos una segunda promesa que guarda en data el response.json
+        .then((laboratoria) => {
+          computeStudentsStats(laboratoria);
+          computeStudentsStats();
+          computeGenerationsStats(laboratoria);
+          computeGenerationsStats();
+          // createInfo es una función que se declara en el data.js para crear elementos en DOM
+        })
+        .catch((error) => {
+          console.log(error);
+          // .catch buscará errores en el enlace FETCH
+        });
+    };
 
-let generations = [];
-//objetos generation
-let campus = "";
-let generation = "";
-let average = "";
-let count = "";
+    // FUNCIONES PARA PINTAR DATOS DE LA SEGUNDA FUNCIÓN:
+    const container = document.getElementById('result');
 
-//usage 
-let eachGenPercent = 0;
-let totalStudentsOfHoleWorld = 0;
+    printerComputeStudentsStats = (studentLab) => {
+      document.getElementById('btn').addEventListener('click', (event) => {
+        // console.log(studentLab);
+        let result = '';
 
+        // console.log(Object.values(studentLab));
+        const totalInfo = Object.values(studentLab);
+        // console.log(totalInfo);
+        for (let i = 0; i < totalInfo.length; i++) {
+          // console.log(totalInfo[i]);
+          result += `<div class='table-responsive'>
+      <table class='table'>
+        <thead>
+          <tr>
+            <th> Photo </th>
+            <th> Full Name </th>
+            <th> Email </th>
+            <th> Generation </th>
+            <th> Turn </th>
+            <th> Campus </th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td> <img src='../images/venussymbol.jpg' id='perfil-image'> </td>
+              <td> ${totalInfo[i].name}</td>
+              <td> ${totalInfo[i].email}</td>
+              <td> ${totalInfo[i].generation}</td>
+              <td> ${totalInfo[i].turn}</td>
+              <td>Lima ${totalInfo[i].campus}</td>
+            </tr>
+          </tbody>
+          </table>
+          </div>`;
+    
+          // console.log(result);
+          console.log(container);
+    
+          container.innerHTML = result;
+        }
+      });
+    };
 
-
-
-
-
-
-
-
-// console.log("main.js conectado");
-// //Asignar variable a laboratoria.json desde el localhost
-// const laboratoria = "../data/laboratoria.json";
-// console.log(laboratoria);
-// dataDashboard.conectado();
-// dataDashboard.getData(laboratoria);
-
-// //Login provisional
-// const usuaria = "Lucile";
-// const password = "Devendra";
-// //se declaran las variables que contendrán la entrada de los inputs
-// let inputUser = document.getElementById("user-name");
-// let passwordUser = document.getElementById("password");
-
-// function login (usuaria, pasword) {
-//     if (inputUser == usuaria && pasword == passwordUser) {
-//         return document.getElementById("welcome").write.usuaria
-//     }
-// }
-//Función para ejecutar la función en los botones del menú sedes
-//const seleccionSedeL = () => {
-//     document.getElementById("Lima").addEventListener("click", sedeLima); 
-// }
-// const seleccionSedeM = () => {
-//     document.getElementById("Mexico").addEventListener("click",sedeMx);
-// }
-// const seleccionSedeS = () => {
-//     document.getElementById("Santiago").addEventListener("click", sedeSantiago);
-// }
-//Función para ejecutar la función en los botones del menú generaciones
+    document.getElementById('delete').addEventListener('click', (event) =>{
+      container.innerHTML = '';
+    });
+ 
+ 

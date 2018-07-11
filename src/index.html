@@ -1,122 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
+<container class='container'>
+
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Meta tags para responsive -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
     <title>Laboratoria LMS Dashboard</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB'
+      crossorigin='anonymous'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+    <link rel='stylesheet' href='style.css'>
   </head>
   <body>
     <section id="pantalla-1">
       <header>
         <h1> Laboratoria LMS Dashboard </h1>
         <img src="../images/Ldelabo.png" id="laboratoria">
-        <ul>
-          <input type="text" value="Usuaria" id="user-name"> <br>
-          <input type="password" value="Contraseña" id="password"><br>
-          <input type="submit" value="Login"> <br>
-          <button onclick="a()">Click me</button>
-        </ul>
-        <h2 id="welcome"> ¡Bienvenida </h2>
+       
+        <div id='login'>
+            <form id='formLg'>
+                <input type='text'  placeholder='write your email' id='user'>
+                <input type='password' placeholder='password' id='password'>
+                <button type='button' id='buttonLogin' > Login </button>
+            </form>
+            
       </header>
-    </section>
-    <main id="main">
-      <nav class="menu">
-        <div id="barra-menu">
-        <div class="row">
-        <div class="col-md">
-          <ul class= "nav">
-            <li><a href="#">Cambiar Sede</a>
-              <ul>
-                <li id="Lima"><a href="#">Lima</a></li>
-                <li id="Mexico"><a href="#">México</a></li>
-                <li id="Santiago"><a href="#">Santiago</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>      
-        <div class="col-md">
-          <ul class= "nav">
-            <li><a href="#">LMS</a>
-              <ul>
-                <li><a href="#">Temas</a></li>
-                <li><a href="#">Rendimiento</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md">
-          <ul class= "nav">
-            <li><a href="#">Estudiantes</a>
-              <ul>
-                <li id="btn-students"><a href="#">Lista General</a></li>
-                <li><a href="#">Mayor % de avance</a></li>
-                <li><a href="#">Menor % de avance</a></li>
-              </ul>
-            </li>
-            </ul>
-          </div>
-          <div class="col-md">
-            <ul class= "nav">
-              <li><a href="#">Buscar...</a>
-                <ul>
-                  <li><a href="#"></a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md">
-            <ul class= "nav">
-              <li><a href="#">Log out</a></li>
-          </div>
-          </ul>
-      </nav>
-<!-- Cierra barra de nav-->
-    <section id="pantalla-2">
+ <!--  Termina pantalla inicial-->   
+
+      <section id="pantalla-2">
+
+          <h2 id="welcome"> ¡Bienvenida! </h2>
       <!-- Apertura de menús de navegación -->
-      <article>
-        <ul id="ul-prueba">
-          <div class="col-lg">
-            <li><a href="#">Cambiar Sede</a></li>
-            <li id="Lima"><a href="#">Lima</a></li>
-            <li><a href="#">México</a></li>
-            <li><a href="#">Santiago</a></li>
+      <div id="sede" class="btn-group">
+          <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Escoge Sede
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Ciudad de México</a>
+            <a class="dropdown-item" href="#">Lima</a>
+            <a class="dropdown-item" href="#">Santiago</a>
           </div>
+        </div> 
+<br>
+<br>
+        <div id="genracion" class="btn-group">
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Escoge Generación
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Tercera </a>
+              <a class="dropdown-item" href="#">Cuarta </a>
+              <a class="dropdown-item" href="#">Quinta</a>
+            </div>
+          </div> 
+
+<!--Comienza barra de navegación-->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    
+  <a id="barra-navegacion" class="navbar-brand" href="#">LABORATORIA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        LMS (Rendimiento)
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">  Rendimiento General </a>
+          <a class="dropdown-item" href="#"> Rendimiento Temas</a>
+        </div>
+      </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Estudiantes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">  Lista General </a>
+            <a class="dropdown-item" href="#"> Arriba del 90 %</a>
+            <a class="dropdown-item" href="#">Abajo del 60 %</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Log Out</a>
+        </li>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</main>
+
+<!--/section>
+<main id="main">
+  <nav class="menu">
+    <div id="barra-menu">
+    <div class="row">
+    <div class="col-md">
+      <ul class= "nav">
+        <li><a href="#">Cambiar Sede</a>
+          <ul>
+            <li id="Lima"><a href="#">Lima</a></li>
+            <li id="Mexico"><a href="#">México</a></li>
+            <li id="Santiago"><a href="#">Santiago</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>      
+    <div class="col-md">
+      <ul class= "nav">
+        <li><a href="#">LMS</a>
+          <ul>
+            <li><a href="#">Temas</a></li>
+            <li><a href="#">Rendimiento</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md">
+      <ul class= "nav">
+        <li><a href="#">Estudiantes</a>
+          <ul>
+            <li id="btn-students"><a href="#">Lista General</a></li>
+            <li><a href="#">Mayor % de avance</a></li>
+            <li><a href="#">Menor % de avance</a></li>
+          </ul>
+        </li>
         </ul>
-      </article>
-      <article>
-        <ul>
-        <div class="col-lg">
-          <li><a href="#">Elige la generación:</a></li>
-          <li id="terceraGen"><a href="#">Tercera</a></li>
-          <li id="cuartaGen"><a href="#">Cuarta</a></li>
-          <li id="quintaGen"><a href="#">Quinta</a></li>
-        </ul>
-      </article>
-    </section>
-    <section id="pantalla-3">
-      <h3>Lista de estudiantes</h3>
-      <img src="">
-      <div id="result-list">
-        <div id="name"> - </div>
-        <div id="email"> - </div>
-        <div id="turno"> - </div>
-        <div id="progress"> - </div>
       </div>
-    </section>
+      <div class="col-md">
+        <ul class= "nav">
+          <li><a href="#">Buscar...</a>
+            <ul>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>ç
+
+        </ul>
+      </div>
+      <div class="col-md">
+        <ul class= "nav">
+          <li><a href="#">Log out</a></li>
+      </div>
+      </ul>
+  </nav-->
+<!-- Cierra barra de nav-->    
+</section>
+<section id='pantalla-3'>
+  <h3>Lista de estudiantes</h3>
+  <button id='btn'>Ver a todas las estudiantes</button>
+  <button id='delete'>Limpiar pantalla</button>
+</section>
+        <div id='result'></div>
+        <!--RECORTE 1-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="main.js"></script>
     <script src="data.js"></script>
-    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!--/body-->
+</html>
+  </main>
   </body>
   <footer>
     <p>Talento que transforma</p>
   </footer>
+</container>
 </html>
