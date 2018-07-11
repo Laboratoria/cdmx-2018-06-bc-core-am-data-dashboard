@@ -80,7 +80,7 @@ Así mismo realizamos un sketch en Figma para tener una mejor perspectiva de nue
 ![Primer sketch en figma](https://raw.githubusercontent.com/DianaCarrillo/cdmx-2018-06-bc-core-am-data-dashboard/ramadiana/ux/Img%20readme/FIGMA1.jpeg)
 
 Después del feedback de nuestra clienta realizamos modificaciones al sketch:
-![Segundo sketch en figma](https://www.figma.com/file/U1pp48mdcx5hiEi3m9QxjWeo/Dashboard )
+![Segundo sketch en figma]()
 
 ### **5. Argumentación de visual design**
 Pensamos el diseño con base en algunas observaciones de nuestra usuaria, para que optimice su experiencia a través de mínimos movimientos. La paleta de colores está pensada totalmente en Laboratoria, sus colores oficiales fueron los seleccionados para lograr una interfaz amigable pero a corde a la identidad de la empresa.
