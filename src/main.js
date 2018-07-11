@@ -108,6 +108,9 @@ const printSort = (sort) => {
                                            <i class="material-icons">send</i>
                                        </a>
                                    </div>
+                                   <div>${sort[i].venue}${'  '}${sort[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
+                                   </a>
+                               </div>
                                    <div class="progress grey">
                                        <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ sort[i].p1}${'%'}" style="width: ${sort[i].p1}${'%'}"></div>
                                        <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ sort[i].p2}${'%'}" style="width: ${sort[i].p2}${'%'}"></div>
@@ -181,6 +184,9 @@ const printFilter = (filter) => {
                                            <i class="material-icons">send</i>
                                        </a>
                                    </div>
+                                   <div>${filter[i].venue}${'  '}${filter[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
+                                   </a>
+                               </div>
                                    <div class="progress grey">
                                        <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ filter[i].p1}${'%'}" style="width: ${filter[i].p1}${'%'}"></div>
                                        <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ filter[i].p2}${'%'}" style="width: ${filter[i].p2}${'%'}"></div>
