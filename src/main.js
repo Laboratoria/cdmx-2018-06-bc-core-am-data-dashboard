@@ -95,6 +95,7 @@ const dentroGen = (laboratoria, selectSede) => {
         average1 = Math.round(average2 / students1.length); // Saca promedio y redondea la cifra.
         let nameStudent = students1[student].nombre;
         let turn = students1[student].turno;
+        // let emailStudent = students1[student].correo;
         let completedPercentage1 = students1[student].progreso.porcentajeCompletado;
         // console.log(completedPercentage1);
       

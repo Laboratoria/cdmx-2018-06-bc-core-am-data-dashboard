@@ -97,10 +97,13 @@ main {
   margin: 0% auto 5% auto;
   display: inline;
   flex-direction: column;
-  padding: 3%;
+  padding: 3% 5%;
   vertical-align: middle;
   text-align: center;
   font-size: 130%;
   color: black;
 
 }
+
+/*#classified-students{
+}*/
