@@ -27,7 +27,6 @@ userSingin.addEventListener('click', event => {
 });
 // LOG OUT
 const logOut = document.getElementById('exit');
-
 logOut.addEventListener('click', event => {
   container.style.display = 'none';
 });
@@ -84,7 +83,7 @@ printerComputeStudentsStats = (studentLab) => {
               <td> ${totalInfo[i].email}</td>
               <td> ${totalInfo[i].generation}</td>
               <td> ${totalInfo[i].turn}</td>
-              <td>Lima ${totalInfo[i].campus}</td>
+              <td> ${totalInfo[i].campus}</td>
             </tr>
           </tbody>
           </table>
@@ -101,26 +100,39 @@ printerComputeStudentsStats = (studentLab) => {
 document.getElementById('delete').addEventListener('click', (event) =>{
   container.innerHTML = '';
 });
-// pendiente
-// printercomputeGenerationsStats = (generations) {
-//   document.getElementById('btnG').addEventListener('click', (event) => {
-//     let result = '';
 
-//     // console.log(Object.values(studentLab));
-//     const totalInfo = Object.values(studentLab);
-//     // console.log(totalInfo);
-//     for (let i = 0; i < totalInfo.length; i++) {
-//       // console.log(totalInfo[i]);
-//       result += ` 
-//       `;
+printercomputeGenerationsStats = (generations) => {
+  document.getElementById('btnG').addEventListener('click', (event) => {
+    let result = '';
+    const totalInfoG = Object.values(generations);
+    for (let i = 0; i < generations.length; i++) {
+      result += `<div class='table-responsive'>
+      <table class='table'>
+        <thead> Progress by Generations
+          <tr>
+            <th> Generation </th>
+            <th> Campus </th>
+            <th> Total Students </th>
+            <th> Average </th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td> ${totalInfoG[i].generation}</td>
+              <td> ${totalInfoG[i].campus}</td>
+              <td> ${totalInfoG[i].count}</td>
+              <td> ${totalInfoG[i].average}</td>
+            </tr>
+          </tbody>
+          </table>
+          </div>`;
+      // console.log(result);
+      console.log(container2);
     
-//       // console.log(result);
-//       console.log(container2);
-    
-//       container2.innerHTML = result;
-//     }
-//   });
-// };
+      container2.innerHTML = result;
+    }
+  });
+};
 
 document.getElementById('delete').addEventListener('click', (event) =>{
   container2.innerHTML = '';
