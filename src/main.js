@@ -6,7 +6,9 @@ window.onload = () => {
       .then(data => {
           console.log(data);
           //esta func aun no existe, aqui van tantas fun necesites con la misma info
-          renderInfo(data);
+          dataLima(data);
+          dataMex(data);
+          dataSantiago(data);
 
       })
       .catch(error => {
