@@ -20,7 +20,7 @@ window.onload = () => {
       //drawStudents(students);
       //drawCampus(generations);
       //sortStudents(data)
-      //filterStudents(data)
+      //filterStudents(data)8888
     })
     .catch((error) => {
       console.log(error);
