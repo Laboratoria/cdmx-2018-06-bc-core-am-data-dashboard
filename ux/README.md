@@ -66,8 +66,6 @@ __3. Insights:__
 
 Después de conocer la necesidad de Lucile e indagar sobre lo que es un data dashboard, encontramos ejemplos que consideramos como punto de partida sobre lo que no nos parecía adecuado para la necesidad del cliente. 
 
-(imagenes 3)
-
 ### **Ideación**
 Nuestro primer acercamiento fue a través del sketching, tratando así, de aterrizar nuestro ideal de manera más tangible.
 
