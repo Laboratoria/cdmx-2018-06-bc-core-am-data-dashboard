@@ -76,7 +76,7 @@ Nuestro primer acercamiento fue a través del sketching, tratando así, de aterr
 De nuestro primer acercamiento a nuestra usuaria, realizamos el primer Sketch que se muestra a continuación:
 ![Primer sketch](https://raw.githubusercontent.com/soberanesmajo/cdmx-2018-06-bc-core-am-data-dashboard/master/ux/Img%20readme/sketch1.jpeg)
 
-Así mismo realizamos un sketch en Figma para tener una mejor perspectiva de nuestra interfaz junto con la clienta:
+Así mismo realizamos un sketch en Figma para tener una mejor perspectiva de nuestra interfaz junto con la usuaria:
 ![Primer sketch en figma](https://raw.githubusercontent.com/DianaCarrillo/cdmx-2018-06-bc-core-am-data-dashboard/ramadiana/ux/Img%20readme/FIGMA1.jpeg)
 
 Después del feedback de nuestra clienta realizamos modificaciones al sketch:
