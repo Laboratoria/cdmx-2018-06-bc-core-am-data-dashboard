@@ -14,9 +14,9 @@ window.realoadJSON = () => {
       studentDraw(infoStudent);
       generationDraw(infoGeneration);
     });
-  // .catch((error) => {
-  //     console.log(error)
-  // });
+   .catch((error) => {
+       console.log(error)
+   });
 };
 
 // pintar tabla de estudiantes
