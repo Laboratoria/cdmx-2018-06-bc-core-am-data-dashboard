@@ -29,11 +29,11 @@ const sedes = (laboratoria) => {
   const containerButtonsCampus = document.getElementById('container-buttons-campus');
   for (key in laboratoria) {
     const seccion = document.createElement('seccion');
-    seccion.classList.add('container');
+    seccion.className = 'container';
     const divRow = document.createElement('div');
-    divRow.classList.add('row');
+    divRow.className = 'row';
     const divCol = document.createElement('div');
-    divCol.classList.add('col-4');
+    divCol.className = 'col-4';
     const aElement = document.createElement('a');
     aElement.id = key;
     aElement.innerHTML = key.toUpperCase();
@@ -57,11 +57,11 @@ const generations = (laboratoria) => {
         generation1 = elements; // generation1 es igual a elements porque son las propiedades específicas (cuarta, quinta, tercera).
 
         const seccion = document.createElement('section');
-        seccion.classList.add('container');
+        seccion.className = 'container';
         const divRow = document.createElement('div');
-        divRow.classList.add('row');
+        divRow.className = 'row';
         const divCol = document.createElement('div');
-        divCol.classList.add('col-4');
+        divCol.className = 'col-4';
         const aElement = document.createElement('a');
         aElement.id = generation1;
         aElement.innerHTML = generation1.toUpperCase();
@@ -75,12 +75,14 @@ const generations = (laboratoria) => {
 };
 const dentroGen = (laboratoria, selectSede) => {
   countAverageContainer.style.display = 'block';
-  // students.style.display = 'block';
   gen.style.display = 'none';
+
   const sedeActual = selectSede;
   const selectGeneration = event.target.id;
   const countAverage = document.getElementById('count-average');
   const containerClassifiedStudents = document.getElementById('container-classified-students');
+  const containerClassifiedStudents1 = document.getElementById('container-classified-students1');
+  const containerClassifiedStudents2 = document.getElementById('container-classified-students2');
   generation1 = Object.keys(laboratoria[sedeActual].generacion); // Indico que quiero entrar a generación. Object.keys convierte a array mi objeto y marco la ruta a generaciones. Siempre indico la ruta antes de iterar.
   generation1.forEach(element => { // generation1 es mi arreglo a iterar. forEach me regresa los elementos de ese array.
     let average2 = 0;
@@ -88,59 +90,66 @@ const dentroGen = (laboratoria, selectSede) => {
     if (generation1 === selectGeneration) {
       const students1 = laboratoria[sedeActual].generacion[selectGeneration].estudiantes;
       count1 = students1.length;
-      console.log(count1);
       for (student in students1) {
         average2 += students1[student].progreso.porcentajeCompletado; // Llegando al porcentajeCompletado (un número) se estará sumando.
         average1 = Math.round(average2 / students1.length); // Saca promedio y redondea la cifra.
         let nameStudent = students1[student].nombre;
         let turn = students1[student].turno;
         let completedPercentage1 = students1[student].progreso.porcentajeCompletado;
-        if (completedPercentage1 < 60) {
-          status = 'Alumna por debajo del 60';
-        } else if (completedPercentage1 >= 90) {
-          status = 'Alumna por arriba o igual a 90';
-        } else {
-          status = 'Alumna dentro de la media';
-        }
-
-        // mainAverage.innerHTML = `Porcentaje de completitud general en la plataforma LMS: ${average1} %`;
-        // mainCount.innerHTML = `Número de alumnas: ${count1}`;
-        
-
-        // CREANDO PARA ESTUDIANTES
-        // const div = document.createElement('div');
-        // const aStudent = document.createElement('a');
-        // div.classList.add('col-4');
-        // div.appendChild(aStudent);
-        // containerClassifiedStudents.appendChild(div);
-
-        // // pintando average, count, estudiantes 
-        // containerClassifiedStudents.innerHTML += ` ESTUDIANTE: ${nameStudent} PORCENTAJE: ${completedPercentage1}% STATUS: ${status} TURNO: ${turn}`;
-        // containerAverage.innerHTML = `Porcentaje de completitud general en la plataforma LMS: ${average1} %`;
-        // containerCount.innerHTML = `Número de alumnas: ${count1}`;
-      }
+        // console.log(completedPercentage1);
       
+        if (completedPercentage1 < 60) {
+          status = completedPercentage1;
+          const div = document.createElement('div');
+          const aStudent = document.createElement('p');
+          aStudent.className = 'parragraph row';
+          // div.className = 'col-sm-12 col-lg-4';
+          div.appendChild(aStudent);
+          containerClassifiedStudents.appendChild(div); 
+          aStudent.innerHTML = `<strong> ${nameStudent} </strong>Porcentaje completado en el LMS: <strong> ${status} %</strong> Turno:<strong>${turn}</strong>`;
+        } else if (completedPercentage1 >= 90) {
+          status = completedPercentage1;
+          const div = document.createElement('div');
+          const aStudent = document.createElement('p');
+          aStudent.className = 'parragraph1 row';
+          // div.className = 'col-sm-12 col-lg-4'
+          div.appendChild(aStudent);
+          containerClassifiedStudents1.appendChild(div);
+          aStudent.innerHTML = ` <strong> ${nameStudent}</strong> Porcentaje completado en el LMS: <strong>${status}%</strong> Turno: <strong>${turn}</strong>`;
+        } else {
+          status = completedPercentage1;
+          const div = document.createElement('div');
+          const aStudent = document.createElement('p');
+          aStudent.className = 'parragraph2 row';
+          // div.className = 'col-sm-12 col-lg-4'
+          div.appendChild(aStudent);
+          containerClassifiedStudents2.appendChild(div);
+          aStudent.innerHTML = `<strong> ${nameStudent}</strong>Porcentaje completado en el LMS: <strong>${status}%</strong> Turno: <strong>${turn}</strong>`;
+        }
+      }
       // PROMEDIO DE LA GENERACIÓN Y NUMERO DE ALUMNAS
       const seccion = document.createElement('section');
-      seccion.classList.add('container');
+      seccion.className = 'container';
       const divRow = document.createElement('div');
-      divRow.classList.add('row');
+      divRow.className = 'row';
       const mainCountContainer = document.createElement('main');
       const divMain = document.createElement('div');
-      divMain.classList.add('col-6');
+      divMain.className = 'col-6';
       mainCountContainer.id = count1;
       mainCountContainer.innerHTML = `Número de alumnas activas: <strong>${count1}<strong>`;
-      // seccion.appendChild(mainCountContainer);
       const mainAverageContainer = document.createElement('main');
       const divMainAv = document.createElement('div');
-      divMainAv.classList.add('col-6');
+      divMainAv.className = 'col-6';
       mainAverageContainer.id = average1;
       mainAverageContainer.innerHTML = `Porcentaje de completitud general del LMS: <strong>${average1}%<strong>`;
+
       seccion.appendChild(mainAverageContainer);
-      divRow.appendChild(mainAverageContainer);
       divRow.appendChild(mainCountContainer);
+      divRow.appendChild(mainAverageContainer);
       seccion.appendChild(divRow);
       countAverage.appendChild(seccion);
+
+      // studentsStatus(laboratoria, completedPercentage1);
     }
   });
 };
