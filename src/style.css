@@ -19,23 +19,26 @@ padding-bottom: 2%;
 background-color: greenyellow;
 margin-left: 5%;
 margin-right: 5%;
-max-width:100%;
+max-width:50%;
+
 
 }
 .parragraph2 {
-  background-color: rgba(255, 255, 0, 0.692);
-  max-width:100%;
+  background-color:#ffcc80;
+  max-width:50%;
   margin-left: 5%;
   margin-right: 5%;
   padding-bottom: 2%;
+ ;
 }
 
 .parragraph {
   padding-bottom: 2%;
-  background-color: red;
-  max-width:100%;
+  background-color:#ff6666;
+  max-width:50%;
   margin-left: 5%;
   margin-right: 5%;
+ 
 }
 
 div a {

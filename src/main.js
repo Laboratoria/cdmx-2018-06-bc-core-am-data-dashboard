@@ -106,7 +106,7 @@ const dentroGen = (laboratoria, selectSede) => {
           // div.className = 'col-sm-12 col-lg-4';
           div.appendChild(aStudent);
           containerClassifiedStudents.appendChild(div); 
-          aStudent.innerHTML = `<strong> ${nameStudent} </strong>Porcentaje completado en el LMS: <strong> ${status} %</strong> Turno:<strong>${turn}</strong>`;
+          aStudent.innerHTML = `${nameStudent} Porcentaje completado en el LMS: ${status} %  Turno: ${turn}`;
         } else if (completedPercentage1 >= 90) {
           status = completedPercentage1;
           const div = document.createElement('div');
@@ -115,7 +115,7 @@ const dentroGen = (laboratoria, selectSede) => {
           // div.className = 'col-sm-12 col-lg-4'
           div.appendChild(aStudent);
           containerClassifiedStudents1.appendChild(div);
-          aStudent.innerHTML = ` <strong> ${nameStudent}</strong> Porcentaje completado en el LMS: <strong>${status}%</strong> Turno: <strong>${turn}</strong>`;
+          aStudent.innerHTML = `${nameStudent} Porcentaje completado en el LMS: ${status} %  Turno: ${turn}`;
         } else {
           status = completedPercentage1;
           const div = document.createElement('div');
@@ -124,7 +124,7 @@ const dentroGen = (laboratoria, selectSede) => {
           // div.className = 'col-sm-12 col-lg-4'
           div.appendChild(aStudent);
           containerClassifiedStudents2.appendChild(div);
-          aStudent.innerHTML = `<strong> ${nameStudent}</strong>Porcentaje completado en el LMS: <strong>${status}%</strong> Turno: <strong>${turn}</strong>`;
+          aStudent.innerHTML = `${nameStudent} Porcentaje completado en el LMS: ${status} %  Turno: ${turn}`;
         }
       }
       // PROMEDIO DE LA GENERACIÓN Y NUMERO DE ALUMNAS
