@@ -26,8 +26,6 @@ for(let i = 0; i<campus.length; i++){
 
      document.getElementById("titulos").innerHTML= '';
       
-
-
     for(let i = 0; i<generaciones.length; i++) {
         let est = data[campus].generacion[generaciones[i]].estudiantes
         document.getElementById('titulos').innerHTML += 
@@ -51,8 +49,6 @@ for(let i = 0; i<campus.length; i++){
             }
           }
 //
-//
-
       })
 
   }
