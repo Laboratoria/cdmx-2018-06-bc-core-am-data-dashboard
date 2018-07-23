@@ -1,4 +1,3 @@
-
 //const host = "../data/laboratoria.json";
 const accessNav = document.getElementById("access-nav");
 accessNav.style.display = "none";
@@ -51,17 +50,17 @@ logOut.addEventListener("click", event => {
 // se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
 window.onload = () => {
   fetch(host)
-  // obtenemos la traducción del host a .json para que sea leído
+    // obtenemos la traducción del host a .json para que sea leído
     .then(response => response.json())
-  // haremos una segunda promesa que guarda en data el response.json
-    .then((laboratoria) => {
+    // haremos una segunda promesa que guarda en data el response.json
+    .then(laboratoria => {
       computeStudentsStats(laboratoria);
       computeStudentsStats();
       computeGenerationsStats(laboratoria);
       computeGenerationsStats();
       // createInfo es una función que se declara en el data.js para crear elementos en DOM
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
       // .catch buscará errores en el enlace FETCH
     });
@@ -75,6 +74,7 @@ printerComputeStudentsStats = studentLab => {
     cleanScreen.style.display = "block";
     // console.log(studentLab);
     let result = "";
+
     // console.log(Object.values(studentLab));
     const totalInfo = Object.values(studentLab);
     // console.log(totalInfo);
@@ -110,6 +110,7 @@ printerComputeStudentsStats = studentLab => {
     }
   });
 };
+
 document.getElementById("delete").addEventListener("click", event => {
   container.innerHTML = "";
   cleanScreen.style.display = "none";
@@ -119,7 +120,6 @@ printercomputeGenerationsStats = generations => {
   document.getElementById("btnG").addEventListener("click", event => {
     cleanScreen.style.display = "block";
     let result = "";
-
     const totalInfoG = Object.values(generations);
     for (let i = 0; i < generations.length; i++) {
       result += `<div class='table-responsive'>
@@ -144,12 +144,13 @@ printercomputeGenerationsStats = generations => {
           </div>`;
       // console.log(result);
       console.log(container2);
+
       container2.innerHTML = result;
     }
   });
 };
+
 document.getElementById("delete").addEventListener("click", event => {
   container2.innerHTML = "";
   cleanScreen.style.display = "none";
 });
-
