@@ -1,62 +1,92 @@
+# Data Dashboard
 
-# Laboratoria LMS Dashboard
 ## Preámbulo
 
-Laboratoria LMS Dashboard surguió a partir de la necesidad de las Trainning Managers de Laboratoria de todas las sedes de consultar fácilmente la data de las estudiantes y sus progresos en Laboratoria Learning Managment System (Laboratoria LMS) para la toma de importantes desiciones basadas en datos y hechos específicos que podrían mejorar notablemente el rendimiento de la LMS y de las estudiantes.
+En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la
+mayor cantidad de datos posibles respecto al progreso de las estudiantes para
+apoyarlas en su aprendizaje.
 
-Para la construcción de este producto se tomaron en cuenta las siguientes consideraciones:
+La principal medida de progreso de una estudiante en Laboratoria es su avance
+completando los proyectos de la [Ruta de Aprendizaje](https://docs.google.com/spreadsheets/d/1AoXQjZnZ5MTPwJPNEGDyvn5vksiOUoPr932TjAldTE4/edit#gid=536983970)
+y su desempeño en función a la [Rúbrica de Niveles Esperados](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkQy1waRpQ-16sn7VogiDTy-Fz5e7OSZSYUCiHC_bkLAKYewr4L8pWJ_BG210PeULe-TjLScNQQT_x/pubhtml).
+Sin embargo, para completar estos proyectos las estudiantes acceden a contenidos
+de aprendizaje (lecturas, videos, ejercicios y quizzes) en un sistema que
+llamamos LMS (Learning Management System). El LMS acumula data sobre quién
+leyó qué, qué ejercicios se han completado, los resultados de los quizzes, etc.
 
-Las usuarias principales del producto son las Trainning Manager de Laboratoria:
+A pesar de que la data de progreso del LMS (ej. lecturas leídas, ejercicios
+  completados, nota en quizzes, etc.) no impacta directamente en la evaluación
+  de una estudiante, sí es una pieza de información relevante que las TMs
+  quisieran visualizar para tener un mejor entendimiento de cómo va cada
+  estudiante en su proceso de aprendizaje.
 
-* Lucile (Sede CDMX)
-* Alejandra (Sede Lima)
-* Valentina (Santiago)
-* Karla (Guadalajara)
-* Vanessa (Brasil)
+Así, el reto de este proyecto es crear una interfaz donde las TMs puedan
+_ver_ y _usar_ la data de progreso del LMS. Para ello, proponemos crear un
+**data dashboard** (_tablero de visualización de datos_).
 
-Por ello, la planeación del proceso de diseño del producto se organizó de la siguiente manera:
+## Introducción
 
-1º entevista con TM Lucile Baratier para obtener una idea general de sus especativas del Producto.
->"El Dashboard me solucionaría la vida"
-[![UX RESEARCH](/ux-research/Interview1.png)](https://youtu.be/SRU37GS8nts "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
+Según un [estudio de IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN),
+el 90% de la data que existe hoy ha sido creada en los últimos dos años.
+Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
 
->"Primero, me gustaría ingresar con un login"
-[![UX RESEARCH](/ux-research/Interview2.png)](https://youtu.be/lQHlnXwTWro "Entrevista a Licile Baratier, Training Manager Campus CDMX, 21 de junio 2018")
+Sin embargo, los datos por sí solos son de poca utilidad. Para transformar datos
+en **información** necesitamos procesarlos y entenderlos. Una manera muy
+sencilla de hacerlo es creando _visualizaciones_. Las
+empresas líderes de hoy generan visualizaciones dinámicas de su data
+que les permiten entender mejor su negocio y tomar decisiones apropiadas.
 
-2º producción del primer Sketch del producto 
-[![UX RESEARCH](/ux-research/GIFsketch1.gif)]
+En este proyecto tendrás tu primer acercamiento a transformar data en
+información creando tu primer **data dashboard**.
 
-3ª Presentación del primer Sketch del producto a usuarios 
+Si pensamos en un _dashboard_ podemos pensar en el tablero de control de un auto
+o el de un avión. Un espacio desde el cual un usuario puede tener acceso a la
+información y controles más relevantes, en este caso, del vehículo que está
+utilizando. El _dashboard_ de un auto le permite a quien conduce saber a qué
+velocidad está yendo, qué cambio/velocidad está utilizando, cuánto combustible
+tiene disponible, cuál es la temperatura del motor, cuántas revoluciones por
+minuto dan las ruedas, cuánta distancia ha recorrido, etc.
 
-4ª Reformulación del Sketch con feedback de usuarias potenciales
-[![UX RESEARCH](/ux-research/GIFsketch2.gif)]
+![car dashboard](https://img.buzzfeed.com/buzzfeed-static/static/2017-02/7/12/enhanced/buzzfeed-prod-fastlane-03/original-17515-1486490056-3.jpg?crop=2041:1068;80,248)
 
-El principal objetivo de las usuarias al interactuar con el producto sería: 
+## Aplicaciones en el mundo real
 
-* Consultar de manera ágil y precisa información general y particular sobre el desempeño de las alumnas y rendimiento de la LMS.
+En el mundo de la web es muy común el uso de _dashboards_. De hecho, [wikipedia](https://goo.gl/P7PF4y)
+nos dice que un _dashboard_ puede ser un resumen gráfico de varias piezas de
+información importante, generalmente utilizadas para dar una visión general de
+una empresa o de un servicio. Así, tenemos dashboards como los de:
 
-El modo de uso de este producto resultó ser también una consideración importante para el diseño de la interfaz:
+* [Google Analytics](https://assets.econsultancy.com/images/resized/0003/3813/mobile_commerce_dashboard-blog-full.png)
+  para visualizar la data de tráfico de sitios web.
 
-* La consulta de esta data es muy frecuente. El producto podría ser utilizado más de 10 veces en un mismo día.
+* [Mailchimp](https://blog.mailchimp.com/wp-content/uploads/2016/11/Dashboard-view-3-Copy-1008x768.jpg)
+  para visualizar el desempeño de campañas de mercadeo digital por correo
+  electrónico.
 
-* Se requiere su visualización móvil porque tiene una importante frecuencia de consulta fuera de oficina.
+* [Quickbooks](https://quickbooks.intuit.com/content/dam/intuit/quickbooks/branding/make-organization-easy-visual.png)
+  para visualizar la información financiera de una empresa.
 
-* Se requiere poder ver datos muy generales y a la vez también poder acceder a datos específicos.
+Seguramente, a lo largo de tu carrera como diseñadora o desarrolladora, te
+tocará crear un _data dashboard_. Quizás sea para visualizar la data de un
+negocio de delivery de comida, o las rutas históricas de un negocio de
+transporte, o simplemente los indicadores clave de tu propio emprendimiento ;)
 
-Derivado de estas consideraciones, la interfaz del producto se desarrolló de la manera más intuituva y limpia posible, tratando de no saturar visualmente ni agobiar con la presentación inmediata de datos duros muy específicos. Por ello, se consideró el siguiente prototipo de alta fidelidad para la Interfaz de Usuario ideal:
+## Objetivos de aprendizaje
 
-Esta interfaz como base fue hecha mediante Figma:
+El objetivo principal de este proyecto es que aprendas a diseñar y construir una
+_interfaz web_ donde podamos visualizar y manipular data.
 
-[![UX RESEARCH](/ux-research/Figma.gif)]
+Esperamos que puedas pensar en el usuario, entender cuál es la mejor manera de visualizar la data según sus necesidades, y plasmar todo eso en tu diseño
+en la web.
 
+Además, este proyecto se debe "resolver" en parejas, por lo que un objetivo
+importante es ganar experiencia en trabajos colaborativos con entrega grupal.
 
-
-
-_____
-Por cubrir:
 ## Tópicos a cubrir
+
 Tendrás que familiarizarte con conceptos como:
 _arrays_,_objects_, _dom_, _xhr_ y _visual design_.
+
 Además, reforzarás lo aprendido en el proyecto anterior: _valores, tipos,
 variables_, _control de flujo_ y _tests unitarios_.
 
@@ -85,7 +115,7 @@ como toda la configuración de dependencias y tests de ejemplo:
 ├── .eslintrc
 ├── .gitignore
 ├── README.md
-├── data
+├── data 
 │   └── laboratoria.json
 ├── package.json
 ├── src
@@ -114,7 +144,7 @@ será parte de tus tareas generar estrategias para encontrar el mejor
 acercamiento y entendimiento del problema.
 
 
-
+    
 La carpeta de `ux/`, incluye un `README` donde vas a encontrar una guía de qué hacer. Te pedimos que ahí mismo documentes ese proceso que realizaste.
 
 ## Entregables
@@ -186,7 +216,7 @@ La interfaz debe permitir al usuario:
     * Poder filtrar estudiantes por estos dos status
     * Filtrar y poder buscar estudiantes por nombre
     * Poder ordenar de manera ascendente y descendente a las estudiantes según
-    porcentaje de completitud
+    porcentaje de completitud 
 * Utiliza la interfaz sin problemas desde distintos tamaños de pantallas:
   móviles, tablets, desktops
 * Realizar pruebas unitarias
@@ -341,7 +371,7 @@ una dirección **relativa**, ejemplo:
 
 ### UX
 
-En esta carpeta vas a encontrar una guía para realizar el proceso de diseño de tu data dashboard, donde se explican las diferentes fases a seguir de manera muy breve, así como los pasos a desarrollar dentro de cada fase. También se deja espacios para que completes este `README` con tu información, pero si deseas agregar más cosas, siéntete en la libertad. Recuerda que este es un proceso creativo que responde a la data recopilada.
+En esta carpeta vas a encontrar una guía para realizar el proceso de diseño de tu data dashboard, donde se explican las diferentes fases a seguir de manera muy breve, así como los pasos a desarrollar dentro de cada fase. También se deja espacios para que completes este `README` con tu información, pero si deseas agregar más cosas, siéntete en la libertad. Recuerda que este es un proceso creativo que responde a la data recopilada. 
 
 ### Tests
 
@@ -409,12 +439,12 @@ Features/características extra sugeridas:
 
 ## Entrega
 
-En este proyecto deberás trabajar colaborativamente. Para ello, una de las integrantes del equipo deberá forkear el repositorio del cohort y la otra integrante **deberá hacer un fork del repositorio de su compañera**. Luego de esto, deberás [configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/) un `remote` hacia el repositorio del cual hiciste el fork.
+En este proyecto deberás trabajar colaborativamente. Para ello, una de las integrantes del equipo deberá forkear el repositorio del cohort y la otra integrante **deberá hacer un fork del repositorio de su compañera**. Luego de esto, deberás [configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/) un `remote` hacia el repositorio del cual hiciste el fork. 
 
-Para mandar cambios desde un repositorio forkeado al original debes crear un [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) y el propietario del repositorio original recibirá una notificación para [revisar el pull request](https://help.github.com/articles/reviewing-proposed-changes-in-a-pull-request/) y [aceptar los cambios](https://help.github.com/articles/merging-a-pull-request/).
+Para mandar cambios desde un repositorio forkeado al original debes crear un [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) y el propietario del repositorio original recibirá una notificación para [revisar el pull request](https://help.github.com/articles/reviewing-proposed-changes-in-a-pull-request/) y [aceptar los cambios](https://help.github.com/articles/merging-a-pull-request/). 
 
 Aquí algunas recomendaciones para que organices mejor el trabajo con tu compañera:
-* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de trabajo con dos ramas principales:
+* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de trabajo con dos ramas principales: 
   * `master`: rama que contiene las funcionalidades terminadas y sin errores.
   * `develop`: rama dónde integrarás las funcionalidades conforme las vayas desarrollando.
 
@@ -427,7 +457,7 @@ Aquí algunas recomendaciones para que organices mejor el trabajo con tu compañ
 
 * Un [fork](https://help.github.com/articles/fork-a-repo/) es una copia de un repositorio en el que puedes experimentar sin afectar al repositorio original. Generalmente se usa para proponer cambios al proyecto de alguien más o para usar el proyecto de otra persona como punto de partida para una idea que quieras realizar.
 
-* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR) te permite solicitar la inclusión de cambios al repositorio original (tu punto de partida) en GitHub. Cuando un PR es abierto, este permite solicitar, discutir y revisar los cambios realizados con todos los colaboradores y agregar otros commits antes de que los cambios sean incluidos al repositorio original.
+* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR) te permite solicitar la inclusión de cambios al repositorio original (tu punto de partida) en GitHub. Cuando un PR es abierto, este permite solicitar, discutir y revisar los cambios realizados con todos los colaboradores y agregar otros commits antes de que los cambios sean incluidos al repositorio original. 
 
 
 
@@ -514,7 +544,7 @@ Esperamos que alcances al menos el nivel 2 en todas tus habilidades blandas.
   también). Si usas Windows puedes usar [Git bash](https://git-scm.com/download/win),
   aunque recomendaría que consideres probar :penguin: GNU/Linux.
 3. Una de las integrantes del equipo debe realizar un :fork_and_knife: [fork](https://help.github.com/articles/fork-a-repo/)
-del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo. La otra integrante del equipo deber hacer un fork **del repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote` hacia el mismo.
+del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo. La otra integrante del equipo deber hacer un fork **del repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote` hacia el mismo. 
 4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
   tu _fork_ a tu computadora (copia local).
 5. 📦 Instala las dependencias del proyecto con el comando `npm
@@ -548,7 +578,3 @@ navegador o visitar un JSON parser online:
 * [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [json.org](https://json.org/json-es.html)
 * [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
-
-Vania mi bolsillo esta cada vez màs vacio. Voy a traer panque de Romero con Miel. Voy aComprar estevia natural en el mercado o en las tiendas naturistas. como te diste cuanta de la alergia del azucar.
-
-Michele, trae muchos panqués de miel con romero y de semillas, de todos. jaja. 
