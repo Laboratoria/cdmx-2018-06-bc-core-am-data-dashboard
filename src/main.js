@@ -94,7 +94,7 @@ printerComputeStudentsStats = studentLab => {
         </thead>
         <tbody class="students-table">
             <tr>
-              <td> <img src='../images/venussymbol.jpg' id='perfil-image'> </td>
+              <td> <img src='images/venussymbol.jpg' id='perfil-image'> </td>
               <td> ${totalInfo[i].name}</td>
               <td> ${totalInfo[i].email}</td>
               <td> ${totalInfo[i].generation}</td>
