@@ -1,62 +1,75 @@
 // const host = '../data/laboratoria.json';
-const host = 'https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
+//const accessNav = document.getElementById("access-nav");
+//accessNav.style.display = "none";
+//Menú lateral desplegable Materialize frame
+$(document).ready(function() {
+  $(".sidenav").sidenav();
+});
+$(".dropdown-trigger").dropdown();
+
+const host =
+  "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
 console.log(host);
 
-// LOGIN PROVISIONAL
-let enter = document.getElementById('login');
-let userSingin = document.getElementById('buttonLogin');
-const welcomeMessage = document.getElementById('welcome1');
+// LOGIN
+let enter = document.getElementById("login");
+let userSingin = document.getElementById("button-login");
+const welcomeMessage = document.getElementById("welcome1");
 
-userSingin.addEventListener('click', event => {
-  let user = document.getElementById('user').value;
-  let password = document.getElementById('password').value;
-  if (user === 'lucile@laboratoria.la' && password === 'Devendra') {
-    enter.style.display = 'none';
-    const welcome = `<h2> 
-    ¡Bienvenida! </h2>`;
-    welcome1.innerHTML = welcome;
+userSingin.addEventListener("click", event => {
+  let userEmail = document.getElementById("user-email").value;
+  let user = document.getElementById("user").value;
+  let password = document.getElementById("password").value;
+  if (userEmail === "lucile@laboratoria.la" && password === "Devendra") {
+    enter.style.display = "none";
+    const welcome = `<h4> ¡Bienvenida </h4>`;
+    welcomeMessage.innerHTML = welcome + user + "!";
+    accessNav.style.display = "block";
   } else {
     alert(
       `Password or User Name incorrect. 
             If you forget your password please contact us at email support@Mich&Vania.com
                 
                   Have a nice day.
-                  Best rewards, Mich&Vania Co. `);
+                  Best rewards, Mich&Vania Co. `
+    );
   }
 });
 // LOG OUT
-const logOut = document.getElementById('exit');
-logOut.addEventListener('click', event => {
-  container.style.display = 'none';
-});
+// const logOut = document.getElementById("exit");
+// logOut.addEventListener("click", event => {
+//   accessNav.style.display = "none";
+//   enter.style.display = "block";
+// });
 
+//dropdown desplegable
 
 // se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
 window.onload = () => {
   fetch(host)
-  // obtenemos la traducción del host a .json para que sea leído
+    // obtenemos la traducción del host a .json para que sea leído
     .then(response => response.json())
-  // haremos una segunda promesa que guarda en data el response.json
-    .then((laboratoria) => {
+    // haremos una segunda promesa que guarda en data el response.json
+    .then(laboratoria => {
       computeStudentsStats(laboratoria);
       computeStudentsStats();
       computeGenerationsStats(laboratoria);
       computeGenerationsStats();
       // createInfo es una función que se declara en el data.js para crear elementos en DOM
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
       // .catch buscará errores en el enlace FETCH
     });
 };
 
 // FUNCIONES PARA PINTAR DATOS DE LA SEGUNDA FUNCIÓN:
-const container = document.getElementById('result');
+const container = document.getElementById("result");
 
-printerComputeStudentsStats = (studentLab) => {
-  document.getElementById('btn').addEventListener('click', (event) => {
+printerComputeStudentsStats = studentLab => {
+  document.getElementById("all-Students").addEventListener("click", event => {
     // console.log(studentLab);
-    let result = '';
+    let result = "";
 
     // console.log(Object.values(studentLab));
     const totalInfo = Object.values(studentLab);
@@ -87,22 +100,22 @@ printerComputeStudentsStats = (studentLab) => {
           </tbody>
           </table>
           </div>`;
-    
+
       // console.log(result);
       console.log(container);
-    
+
       container.innerHTML = result;
     }
   });
 };
 
-document.getElementById('delete').addEventListener('click', (event) =>{
-  container.innerHTML = '';
+document.getElementById("delete").addEventListener("click", event => {
+  container.innerHTML = "";
 });
 
-printercomputeGenerationsStats = (generations) => {
-  document.getElementById('btnG').addEventListener('click', (event) => {
-    let result = '';
+printercomputeGenerationsStats = generations => {
+  document.getElementById("btnG").addEventListener("click", event => {
+    let result = "";
     const totalInfoG = Object.values(generations);
     for (let i = 0; i < generations.length; i++) {
       result += `<div class='table-responsive'>
@@ -127,13 +140,12 @@ printercomputeGenerationsStats = (generations) => {
           </div>`;
       // console.log(result);
       console.log(container2);
-    
+
       container2.innerHTML = result;
     }
   });
 };
 
-document.getElementById('delete').addEventListener('click', (event) =>{
-  container2.innerHTML = '';
+document.getElementById("delete").addEventListener("click", event => {
+  container2.innerHTML = "";
 });
-    
