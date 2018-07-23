@@ -1,4 +1,4 @@
-console.log("conectado");
+console.log();
 const showResult = document.getElementById("result-list");
 
 // Definición de la primera función
