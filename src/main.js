@@ -1,7 +1,8 @@
-// const host = '../data/laboratoria.json';
-//const accessNav = document.getElementById("access-nav");
-//accessNav.style.display = "none";
-
+//const host = "../data/laboratoria.json";
+const accessNav = document.getElementById("access-nav");
+accessNav.style.display = "none";
+const cleanScreen = document.getElementById("delete");
+cleanScreen.style.display = "none";
 //Menú lateral desplegable Materialize frame  with jQuery
 $(document).ready(function() {
   $(".sidenav").sidenav();
@@ -38,11 +39,11 @@ userSingin.addEventListener("click", event => {
   }
 });
 // LOG OUT
-// const logOut = document.getElementById("exit");
-// logOut.addEventListener("click", event => {
-//   accessNav.style.display = "none";
-//   enter.style.display = "block";
-// });
+const logOut = document.getElementById("exit");
+logOut.addEventListener("click", event => {
+  accessNav.style.display = "none";
+  enter.style.display = "block";
+});
 
 //dropdown desplegable
 
@@ -70,6 +71,7 @@ const container = document.getElementById("result");
 
 printerComputeStudentsStats = studentLab => {
   document.getElementById("all-Students").addEventListener("click", event => {
+    cleanScreen.style.display = "block";
     // console.log(studentLab);
     let result = "";
 
@@ -78,8 +80,8 @@ printerComputeStudentsStats = studentLab => {
     // console.log(totalInfo);
     for (let i = 0; i < totalInfo.length; i++) {
       // console.log(totalInfo[i]);
-      result += `<div class='table-responsive'>
-      <table class='table'>
+      result += `<div>
+      <table class="responsive-table">
         <thead>
           <tr>
             <th> Photo </th>
@@ -90,7 +92,7 @@ printerComputeStudentsStats = studentLab => {
             <th> Campus </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="students-table">
             <tr>
               <td> <img src='../images/venussymbol.jpg' id='perfil-image'> </td>
               <td> ${totalInfo[i].name}</td>
@@ -102,10 +104,8 @@ printerComputeStudentsStats = studentLab => {
           </tbody>
           </table>
           </div>`;
-
       // console.log(result);
       console.log(container);
-
       container.innerHTML = result;
     }
   });
@@ -113,10 +113,12 @@ printerComputeStudentsStats = studentLab => {
 
 document.getElementById("delete").addEventListener("click", event => {
   container.innerHTML = "";
+  cleanScreen.style.display = "none";
 });
 
 printercomputeGenerationsStats = generations => {
   document.getElementById("btnG").addEventListener("click", event => {
+    cleanScreen.style.display = "block";
     let result = "";
     const totalInfoG = Object.values(generations);
     for (let i = 0; i < generations.length; i++) {
@@ -150,4 +152,5 @@ printercomputeGenerationsStats = generations => {
 
 document.getElementById("delete").addEventListener("click", event => {
   container2.innerHTML = "";
+  cleanScreen.style.display = "none";
 });
