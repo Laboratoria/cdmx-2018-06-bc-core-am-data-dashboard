@@ -89,6 +89,7 @@ window.computeGenerationsStats = (laboratoria) => {
     for (let numberG of gen) {
       generation = numberG;
       const stud = laboratoria[sedes].generacion[numberG].estudiantes;
+//declarar función dentro del .json
       let totalStud = stud.length;
       count = totalStud;
       for (eachStudent in stud) {
@@ -112,6 +113,7 @@ window.computeGenerationsStats = (laboratoria) => {
     
 // se cierra primer fun in al nivel sedes
 // }
-    
+ 
+
 // }
     

@@ -1,122 +1,19 @@
 
- #perfil-image {
-   width: 25%;
- }
-*{
-  margin:0 ;
+#h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 250%;
+}
+
+#perfil-image {
+  width: 25%;
+  padding: 0%;
+}
+
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*font-family: 'Bitter', serif;*/
+  font-family: "Oswald", sans-serif;
   background-color: rgb(255, 229, 33);
   text-align: center;
 }
-body{
-  background-color: rgb(255, 229, 33);
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  }
-  #user{
-    background: #ff0066;
-    margin:15px;
-    outline: 2px solid black;
-    color: #0d0d0d;
-    }
-    #password{
-     background: #ff0066;
-      outline: 2px solid black;
-      color:#0d0d0d;
-        }
-     #sede{
-      margin: 20px;
-       }
-    #generacion{
-    margin: 20px;
-          }
-    #place-holder{
-      background-color: #333
-    }
-    #buttonLogin{
-      background: #00cc00;
-      outline: 2px solid black;
-      margin: 15px;
-    }
-    #pantalla-3{
-      padding: 0.5em;
-    }
-    #btn{
-     background:  #0000ff;
-     
-      color:#0d0d0d; 
-      margin: 15px;
-    }
-    #delete{
-      background:  #0000ff;
-     
-       color:#0d0d0d;
-       margin: 15px;
-    }
-    #wellcome{
-      padding: 1em;
-    }
-  h1{
-      font-size: 50px;
-      font-family: 'Oswald', sans-serif;
-  }
-  ul, li {
-  list-style: none;
-  padding-bottom: 1em;
-  }
-  header{
-    font-family: 'Open Sans', sans-serif;
-    text-align: center ;
-    list-style: none;
-
-    margin: 0
-  }
-  div{
-    /*outline: 2px solid red;*/
-    background: #1a1a1a;
-    text-align: center;
-    }
-  ul {
-      /*outline: 2px solid blue;*/
-      list-style: none;
-      text-decoration: yellow;
-      margin:0;
-      padding: 0;
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      flex-direction: column;
-      }
-  li {
-        /*outline: 2px solid yellow;*/
-        font-size: 25px;
-        font-family: serif;
-        text-align: center;
-        height: 50px;
-        background: #1a1a1a;
-        flex-direction: column;
-      }
-  a{
-    /*outline: 2px solid green;*/
-    color: #FDF5E6;
-    display: block;
-    text-decoration: none;
-    width: 215px;
-  }
-  a:hover{
-      background: #333;
-      color:#ffe521;
-      text-decoration: none;
-  }
-footer{
-  padding-top: 2em;
-  padding: 2em;
-}
-/*main div ul{
-  width: 200px;
-}*/
-
-
