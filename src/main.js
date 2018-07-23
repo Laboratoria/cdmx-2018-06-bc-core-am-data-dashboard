@@ -1,12 +1,14 @@
 // const host = '../data/laboratoria.json';
 //const accessNav = document.getElementById("access-nav");
 //accessNav.style.display = "none";
-//Menú lateral desplegable Materialize frame
+
+//Menú lateral desplegable Materialize frame  with jQuery
 $(document).ready(function() {
   $(".sidenav").sidenav();
 });
 $(".dropdown-trigger").dropdown();
 
+//git cloud host
 const host =
   "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
 console.log(host);

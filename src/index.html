@@ -12,7 +12,7 @@
   <title>Laboratoria LMS Dashboard</title>
 </head>
 
-<body class="body">
+<body>
   <!-- Welcome Login section-->
   <header class="login">
     <h1 id="h1"> Laboratoria LMS Dashboard </h1>
@@ -40,7 +40,8 @@
     </form>
   </header>
   <!-- End Welcome Login section-->
-  <!-- Apertura de menú de navegación web dropdow-->
+  <!-- Apertura de menú de navegación web dropdown-->
+  <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
     <li>
       <a href="#!">4ta Generación</a>
@@ -52,6 +53,7 @@
       <a href="#!">3ra Generación</a>
     </li>
   </ul>
+  <!--end of dropdown1 content-->
   <ul id="dropdown2" class="dropdown-content">
     <li>
       <a href="#!">4ta Generación</a>
@@ -63,6 +65,7 @@
       <a href="#!">3ra Generación</a>
     </li>
   </ul>
+  <!--end of dropdown2 content-->
   <ul id="dropdown3" class="dropdown-content">
     <li>
       <a href="#!">4ta Generación</a>
@@ -74,10 +77,10 @@
       <a href="#!">3ra Generación</a>
     </li>
   </ul>
-  <!--end of dropdown content-->
+  <!--end of dropdown3 content-->
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="left-align">Logo</a>
+      <a href="#!" class="left-align">LMS</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger">
         <i class="material-icons">menu</i>
       </a>
@@ -85,16 +88,13 @@
         <li>
           <a href="profile.html">Usuari@</a>
         </li>
-        <li class="divider"></li>
         <li>
-          <a href="sa.html">Estudiantes</a>
+          <a id="all-students">Estudiantes</a>
         </li>
         <li>
-          <li>
-            <a class="dropdown-trigger" href="#!" data-target="dropdown1">Sede Lima
-              <i class="material-icons right">arrow_drop_down</i>
-            </a>
-          </li>
+          <a class="dropdown-trigger" href="#!" data-target="dropdown1">Sede Lima
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
         </li>
         <li>
           <a class="dropdown-trigger" href="#!" data-target="dropdown2">Sede México
@@ -105,46 +105,77 @@
           <a class="dropdown-trigger" href="#!" data-target="dropdown3">Sede Santiago
             <i class="material-icons right">arrow_drop_down</i>
           </a>
-
         </li>
         <li>
-          <a href="mobile.html">Log Out</a>
+          <a href="lo.html">Log Out</a>
         </li>
       </ul>
     </div>
   </nav>
+  <!--Side navigation bar dropdown content -->
+  <ul id="dropdownA" class="dropdown-content">
+    <li>
+      <a href="#!">4ta Generación</a>
+    </li>
+    <li>
+      <a href="#!">5ta Generación</a>
+    </li>
+    <li>
+      <a href="#!">3ra Generación</a>
+    </li>
+  </ul>
+  <!--end of dropdown1 content-->
+  <ul id="dropdownB" class="dropdown-content">
+    <li>
+      <a href="#!">4ta Generación</a>
+    </li>
+    <li>
+      <a href="#!">5ta Generación</a>
+    </li>
+    <li>
+      <a href="#!">3ra Generación</a>
+    </li>
+  </ul>
+  <!--end of dropdown2 content-->
+  <ul id="dropdownC" class="dropdown-content">
+    <li>
+      <a href="#!">4ta Generación</a>
+    </li>
+    <li>
+      <a href="#!">5ta Generación</a>
+    </li>
+    <li>
+      <a href="#!">3ra Generación</a>
+    </li>
+  </ul>
+  <!--end of dropdown3 content-->
   <!--side navigation bar for mobile-->
   <ul class="sidenav" id="mobile-demo">
     <li>
       <a href="profile.html">Usuari@</a>
     </li>
-    <li class="divider"></li>
     <li>
-      <a href="sa.html">Estudiantes</a>
+      <a id="all-students">Estudiantes</a>
     </li>
     <li>
-      <li>
-        <a class="dropdown-trigger" href="#!" data-target="dropdown1">Sede Lima
-          <i class="material-icons right">arrow_drop_down</i>
-        </a>
-      </li>
-    </li>
-    <li>
-      <a class="dropdown-trigger" href="#!" data-target="dropdown2">Sede México
+      <a class="dropdown-trigger" href="#!" data-target="dropdownA">Sede Lima
         <i class="material-icons right">arrow_drop_down</i>
       </a>
     </li>
     <li>
-      <a class="dropdown-trigger" href="#!" data-target="dropdown3">Sede Santiago
+      <a class="dropdown-trigger" href="#!" data-target="dropdownB">Sede México
         <i class="material-icons right">arrow_drop_down</i>
       </a>
     </li>
     <li>
-      <a href="mobile.html">Log Out</a>
+      <a class="dropdown-trigger" href="#!" data-target="dropdownC">Sede Santiago
+        <i class="material-icons right">arrow_drop_down</i>
+      </a>
+    </li>
+    <li>
+      <a href="lo.html">Log Out</a>
     </li>
   </ul>
-
-
 
 
 
