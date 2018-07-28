@@ -1,0 +1,36 @@
+body   {
+    background-color: #FFE521;
+    /*background-image: url("../images/fondo1.png");*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    
+    }
+
+image {
+    width: 350px;
+ 
+}
+
+header {
+  color: #fff400
+}
+.card {
+  width: 200px;
+  font-family: 'Open Sans', sans-serif;
+  height: 200px;
+  display: inline-flex;
+  margin: 0.5rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.info {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}

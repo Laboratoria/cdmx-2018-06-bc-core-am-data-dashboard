@@ -1,0 +1,17 @@
+.card {
+  width: 200px;
+  height: 200px;
+  display: inline-flex;
+  margin: 0.5rem;
+  background-color: #FF009A;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.info {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}

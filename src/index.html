@@ -2,10 +2,75 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
   </head>
   <body>
+    <header>
+    <img src="../Images/Imagen2.png" alt="">
+  </header>
+
+ <!-- <select class="form-control form-control-lg" id="sedes">-->
+    <select class="custom-select custom-select-lg mb-3" id="sedes">
+    <option selected value= "0">Elige una generación</option>
+    <optgroup label= "lima">
+      <option value= "1" data-gen="tercera" data-sede="lima" id="limaTercera">tercera generacion</option>
+      <option value="2" data-gen="cuarta" data-sede="lima" id="limaCuarta">cuarta generacion</option>
+      <option value="3" data-gen="quinta" data-sede="lima" id="limaQuinta">quinta generacion</option>
+    </optgroup>
+    <optgroup label="mexico">
+      <option value="4" data-gen="tercera" data-sede="mexico" id="mexicoTercera">tercera generacion</option>
+      <option value="5"data-gen="cuarta" data-sede="mexico" id="mexicoCuarta">cuarta generacion</option>
+      <option value="6"data-gen="quinta" data-sede="mexico" id="mexicoQuinta">quinta generacion</option>
+    </optgroup>
+    <optgroup label="santiago">
+      <option value="7" data-gen="tercera" data-sede="santiago" id="santiagoTercera">tercera generacion</option>
+      <option value="8"data-gen="cuarta" data-sede="santiago" id="santiagoiCuarta">cuarta generacion</option>
+         <option value="9"data-gen="quinta" data-sede="santiago" id="santiagoQuinta">quinta generacion</option>
+       </optgroup>
+  </select>
+  <button id="delete">Borrar</button>
+  <div id="result"></div>
+
+  <div id= "tabla"></div>
+
+
+
+    <!--<select name="" id="sedes">
+      <option id = "sedeLima" value = "lima">lima</option>
+      <option id = "sedeMexico" value ="mexico">mexico</option>
+      <option id = "sedeSantiago" value ="santiago">santiago </option>
+    </select>-->
+       
+
+<!--<div class="alinearSede" id="botonesSede">
+<input type="button"  value="lima" id="lima">
+<div id="result">
+</div>
+
+</div>
+
+<div class="alinearSede1" id="botonesSede1">
+<p><input type="button" value="mexico" id="cdmx"></p>
+
+</div>
+
+<div class="alinearSede2" id="botonesSede2">
+<input type="button" value="santiago" id="santiago">
+
+</div>-->
+
+
     <script src="main.js"></script>
+    <script src="data.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"></script>
   </body>
 </html>
