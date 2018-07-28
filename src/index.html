@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+<body>
+  <!--En este apartado se encuentra la imagen de la cabecera-->
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/202/4237c162847359.Y3JvcCw5ODcsNzcyLDIxLDc.png">
+      </div>
+      <!-- Código esta el codigo del menú  donde se muestran las sedes y generaciones-->
+      <nav class="col-md">
+        <div class="btn-group col-md-2">
+          <button type="button" class="btn">Lima</button>
+          <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu  col-md-1" id="generacionesLima">
+            <a class="dropdown-item" href="#" id="lima-cuarta">Cuarta</a>
+            <a class="dropdown-item" href="#" id="lima-quinta">Quinta</a>
+            <a class="dropdown-item" href="#" id="lima-tercera">Tercera</a>
+          </div>
+        </div>
+        <div class="btn-group col-md-2">
+          <button type="button" class="btn">Santiago</button>
+          <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu  col-md-1" id="generacionesSantiago">
+            <a class="dropdown-item" href="#" id="santiago-cuarta">Cuarta</a>
+            <a class="dropdown-item" href="#" id="santiago-quinta">Quinta</a>
+            <a class="dropdown-item" href="#" id="santiago-tercera">Tercera</a>
+          </div>
+        </div>
+        <div class="btn-group col-md-2">
+          <button type="button" class="btn">México</button>
+          <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu  col-md-1" id="generacionesMexico">
+            <a class="dropdown-item" href="#" id="mexico-cuarta">Cuarta</a>
+            <a class="dropdown-item" href="#" id="mexico-quinta">Quinta</a>
+            <a class="dropdown-item" href="#" id="mexico-tercera">Tercera</a>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+  <!--Tabla donde se muetran los datos de las estudientes-->
+  <div class="container">
+  <div class="row">
+    <table id="tabla" class="table table-bordered col-md-8 offset-md-2">
+      <thead class="thead">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Turno</th>
+          <th scope="col"> % Completado</th>
+        </tr>
+      </thead>
+      <tbody id="pintar"></tbody>
+    </table>
+  </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+
 </html>
