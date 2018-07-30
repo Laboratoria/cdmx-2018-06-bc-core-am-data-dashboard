@@ -1,33 +1,33 @@
 //const host = "../data/laboratoria.json";
-const accessNav = document.getElementById("access-nav");
-accessNav.style.display = "none";
-const cleanScreen = document.getElementById("delete");
-cleanScreen.style.display = "none";
+const accessNav = document.getElementById('access-nav');
+accessNav.style.display = 'none';
+const cleanScreen = document.getElementById('delete');
+cleanScreen.style.display = 'none';
 //Menú lateral desplegable Materialize frame  with jQuery
 $(document).ready(function() {
-  $(".sidenav").sidenav();
+  $('.sidenav').sidenav();
 });
-$(".dropdown-trigger").dropdown();
+$('.dropdown-trigger').dropdown();
 
 //git cloud host
 const host =
-  "https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json";
+  'https://raw.githubusercontent.com/Laboratoria/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 console.log(host);
 
 // LOGIN
-let enter = document.getElementById("login");
-let userSingin = document.getElementById("button-login");
-const welcomeMessage = document.getElementById("welcome1");
+let enter = document.getElementById('login');
+let userSingin = document.getElementById('button-login');
+const welcomeMessage = document.getElementById('welcome1');
 
-userSingin.addEventListener("click", event => {
-  let userEmail = document.getElementById("user-email").value;
-  let user = document.getElementById("user").value;
-  let password = document.getElementById("password").value;
-  if (userEmail === "lucile@laboratoria.la" && password === "Devendra") {
-    enter.style.display = "none";
+userSingin.addEventListener('click', event => {
+  let userEmail = document.getElementById('user-email').value;
+  let user = document.getElementById('user').value;
+  let password = document.getElementById('password').value;
+  if (userEmail === 'lucile@laboratoria.la' && password === 'Devendra') {
+    enter.style.display = 'none';
     const welcome = `<h4> ¡Bienvenida </h4>`;
-    welcomeMessage.innerHTML = welcome + user + "!";
-    accessNav.style.display = "block";
+    welcomeMessage.innerHTML = welcome + user + '!';
+    accessNav.style.display = 'block';
   } else {
     alert(
       `Password or User Name incorrect. 
@@ -39,13 +39,11 @@ userSingin.addEventListener("click", event => {
   }
 });
 // LOG OUT
-const logOut = document.getElementById("exit");
-logOut.addEventListener("click", event => {
-  accessNav.style.display = "none";
-  enter.style.display = "block";
+const logOut = document.getElementById('exit');
+logOut.addEventListener('click', event => {
+  accessNav.style.display = 'none';
+  enter.style.display = 'block';
 });
-
-//dropdown desplegable
 
 // se inserta dentro del objeto window con método onload para que cargue inmediatamente entrando
 window.onload = () => {
@@ -66,14 +64,14 @@ window.onload = () => {
     });
 };
 
-// FUNCIONES PARA PINTAR DATOS DE LA SEGUNDA FUNCIÓN:
-const container = document.getElementById("result");
+// FUNCIONES PARA PINTAR DATOS DE LA PRIMERA FUNCIÓN:
+const container = document.getElementById('result');
 
 printerComputeStudentsStats = studentLab => {
-  document.getElementById("all-Students").addEventListener("click", event => {
-    cleanScreen.style.display = "block";
+  document.getElementById('all-Students').addEventListener('click', event => {
+    cleanScreen.style.display = 'block';
     // console.log(studentLab);
-    let result = "";
+    let result = '';
 
     // console.log(Object.values(studentLab));
     const totalInfo = Object.values(studentLab);
@@ -92,7 +90,7 @@ printerComputeStudentsStats = studentLab => {
             <th> Campus </th>
           </tr>
         </thead>
-        <tbody class="students-table">
+        <tbody>
             <tr>
               <td> <img src='images/venussymbol.jpg' id='perfil-image'> </td>
               <td> ${totalInfo[i].name}</td>
@@ -111,15 +109,15 @@ printerComputeStudentsStats = studentLab => {
   });
 };
 
-document.getElementById("delete").addEventListener("click", event => {
-  container.innerHTML = "";
-  cleanScreen.style.display = "none";
+document.getElementById('delete').addEventListener('click', event => {
+  container.innerHTML = '';
+  cleanScreen.style.display = 'none';
 });
 
 printercomputeGenerationsStats = generations => {
-  document.getElementById("btnG").addEventListener("click", event => {
-    cleanScreen.style.display = "block";
-    let result = "";
+  document.getElementById('btnG').addEventListener('click', event => {
+    cleanScreen.style.display = 'block';
+    let result = '';
     const totalInfoG = Object.values(generations);
     for (let i = 0; i < generations.length; i++) {
       result += `<div class='table-responsive'>
@@ -150,7 +148,7 @@ printercomputeGenerationsStats = generations => {
   });
 };
 
-document.getElementById("delete").addEventListener("click", event => {
-  container2.innerHTML = "";
-  cleanScreen.style.display = "none";
+document.getElementById('delete').addEventListener('click', event => {
+  container2.innerHTML = '';
+  cleanScreen.style.display = 'none';
 });
