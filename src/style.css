@@ -1,0 +1,24 @@
+#h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 250%;
+}
+
+#perfil-image {
+  width: 25%;
+  padding: 0%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  background-color: rgb(255, 229, 33);
+  text-align: center;
+}
+
+.students {
+  text-align: center;
+  background-color: beige;
+}

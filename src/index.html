@@ -1,11 +1,205 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans|Oswald|Sofia" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Laboratoria LMS Dashboard</title>
+</head>
+
+<body>
+  <!-- Welcome Login section-->
+  <header class="login">
+    <h1 id="h1"> Laboratoria LMS Dashboard </h1>
+    <div id="welcome1"></div>
+    <form id="login" class="center-align">
+      <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <input value="Lucile" id="user" type="text" class="validate">
+          <label class="active" for="first_name2">User Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <input value="@laboratoria.la" id="user-email" type="text" class="validate">
+          <label class="active" for="first_name2">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <input id="password" value="password" type="password" class="validate">
+          <label class="active" for="first_name2">Password</label>
+        </div>
+      </div>
+      <button class="waves-effect waves-light btn-large" type="button" id="button-login">Login</button>
+    </form>
+  </header>
+  <!-- End Welcome Login section-->
+  <!-- Apertura de menú de navegación web dropdown-->
+  <!-- Dropdown Structure -->
+  <div id="access-nav">
+    <ul id="dropdown1" class="dropdown-content">
+      <li>
+        <a href="#!">4ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">5ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">3ra Generación</a>
+      </li>
+    </ul>
+    <!--end of dropdown1 content-->
+    <ul id="dropdown2" class="dropdown-content">
+      <li>
+        <a href="#!">4ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">5ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">3ra Generación</a>
+      </li>
+    </ul>
+    <!--end of dropdown2 content-->
+    <ul id="dropdown3" class="dropdown-content">
+      <li>
+        <a href="#!">4ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">5ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">3ra Generación</a>
+      </li>
+    </ul>
+    <!--end of dropdown3 content-->
+    <nav>
+      <div class="nav-wrapper black">
+        <a href="#!" class="left-align">LMS</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="profile.html">Usuari@</a>
+          </li>
+          <li>
+            <a id="all-Students">Estudiantes</a>
+          </li>
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown1">Sede Lima
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown2">Sede México
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown3">Sede Santiago
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+          <li>
+            <a id="exit">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Side navigation bar dropdown content -->
+    <ul id="dropdownA" class="dropdown-content">
+      <li>
+        <a href="#!">4ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">5ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">3ra Generación</a>
+      </li>
+    </ul>
+    <!--end of dropdown1 content-->
+    <ul id="dropdownB" class="dropdown-content">
+      <li>
+        <a href="#!">4ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">5ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">3ra Generación</a>
+      </li>
+    </ul>
+    <!--end of dropdown2 content-->
+    <ul id="dropdownC" class="dropdown-content">
+      <li>
+        <a href="#!">4ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">5ta Generación</a>
+      </li>
+      <li>
+        <a href="#!">3ra Generación</a>
+      </li>
+    </ul>
+    <!--end of dropdown3 content-->
+    <!--side navigation bar for mobile-->
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a href="profile.html">Usuari@</a>
+      </li>
+      <li>
+        <a id="all-Students">Estudiantes</a>
+      </li>
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdownA">Sede Lima
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdownB">Sede México
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdownC">Sede Santiago
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+      <li>
+        <a href="lo.html">Log Out</a>
+      </li>
+    </ul>
+    <!-- clear_all button-->
+    <a class="waves-effect waves-light btn-small" id="delete" class="right-align">
+      Return</a>
+    <a class="waves-effect waves-light btn-small" id=" "> Imprime Generations </a>
+    <section id="container2" class="students">
+      <div id="data-generations"></div>
+      <div id="result"></div>
+    </section>
+    <!--se cierra el acceso primer pantalla de navegación con login exitoso-->
+  </div>
+
+  <!--RECORTE 1-->
+  <!-- Compiled and minified JavaScript for Materialize -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <!-- Scripts for functions-->
+  <script src="main.js"></script>
+  <script src="data.js"></script>
+  </section>
+</body>
+<footer>
+  <img src="images/Labo.png" id="laboratoria">
+  <p>Talento que transforma</p>
+</footer>
+
 </html>
