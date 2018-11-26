@@ -430,12 +430,12 @@ window.sortStudents = (students, orderBy, orderDirection) => {
   } else if (orderBy === 'percentage') {// Ordena por porcentajeCompletado
     if (orderDirection === 'ASC') { // Ordena en forma ascendente
       ordered = students.sort((arrayA, arrayB) => {
-        return (arrayA.average - arrayB.average); // Coloca arrayA primero si el resultado de la resta es >0
+        return (arrayA.stats.completedPercentage - arrayB.stats.completedPercentage); // Coloca arrayA primero si el resultado de la resta es >0
       });
       console.log(ordered);
     } else {
       ordered = students.sort((arrayA, arrayB) =>{
-        return (arrayB.average - arrayA.average);// Coloca arrayB primero si el resultado de la resta es <0
+        return (arrayB.stats.completedPercentage - arrayA.stats.completedPercentage);// Coloca arrayB primero si el resultado de la resta es <0
       });
       console.log(ordered);
     }

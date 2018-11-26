@@ -1,9 +1,9 @@
-//const assert = require("chai").assert;
-//const computeStudentsStats = require("../src/data.js");
+// const assert = require("chai").assert;
+// const computeStudentsStats = require("../src/data.js");
 describe('data', () => {
   it('debería exponer función computeStudentsStats en objeto global', () => {
     assert.isFunction(computeStudentsStats);
-    //assert.equal(typeof computeStudentsStats, '[object Function]');
+    // assert.equal(typeof computeStudentsStats, '[object Function]');
   });
 
   it('debería exponer función computeGenerationsStats en objeto global', () => {
