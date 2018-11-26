@@ -163,7 +163,7 @@ const printSort = (sort) => {
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.tooltipped');
     var instances = M.Tooltip.init(elems, {});
-  });
+  }, {passive: true});
   // Colapso de alumnas
   $(document).ready(function() {
     $('.collapsible').collapsible({
@@ -239,7 +239,7 @@ const printFilter = (filter) => {
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.tooltipped');
     var instances = M.Tooltip.init(elems, {});
-  });
+  }, {passive: true});
   // Colapso de alumnas
   $(document).ready(function() {
     $('.collapsible').collapsible({
@@ -253,18 +253,18 @@ const listeners = (data) => {
   let getVenue = document.getElementById('goVenues');
   getVenue.addEventListener('click', (event) => {
     printSedesAll(data);
-  });
+  }, {passive: true});
   // Evento que manda a ejecutar e imprimir la funcion de generaciones
   let getGeneration = document.getElementById('goGeneretions');
   getGeneration.addEventListener('click', (event) => {
     const generation = computeGenerationsStats(data);
     printGenerations(generation);
-  });
+  }, {passive: true});
   let getStudents = document.getElementById('goStudents');
   getStudents.addEventListener('click', (event) => {
     // const students = studentsModal(data);
     studentsPrint(data);
-  });
+  }, {passive: true});
   // Evento que manda a ejecutar e imprimir la funcion de filtrado
   let getFilter = document.getElementById('goFilter');
   getFilter.addEventListener('click', (event) => {
@@ -272,7 +272,7 @@ const listeners = (data) => {
     const search = 'Melisa Marjorie';
     const filter = filterStudents(students, search);
     const printF = printFilter(filter);
-  });
+  }, {passive: true});
   // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
   let getSort = document.getElementById('goSort');
   getSort.addEventListener('click', (event) => {
@@ -282,7 +282,7 @@ const listeners = (data) => {
     console.log('Este es la funcion sort');
     const sort = sortStudents(students, orderBy, orderDirection);
     const printS = printSort(sort);
-  });
+  }, {passive: true});
 };
 // Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
 window.onload = () => {
