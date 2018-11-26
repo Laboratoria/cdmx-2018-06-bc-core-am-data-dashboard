@@ -430,12 +430,12 @@ window.sortStudents = (students, orderBy, orderDirection) => {
   } else if (orderBy === 'percentage') {// Ordena por porcentajeCompletado
     if (orderDirection === 'ASC') { // Ordena en forma ascendente
       ordered = students.sort((arrayA, arrayB) => {
-        return (arrayA.stats.completedPercentage - arrayB.stats.completedPercentage); // Coloca arrayA primero si el resultado de la resta es >0
+        return (arrayA.average - arrayB.average); // Coloca arrayA primero si el resultado de la resta es >0
       });
       console.log(ordered);
     } else {
       ordered = students.sort((arrayA, arrayB) =>{
-        return (arrayB.stats.completedPercentage - arrayA.stats.completedPercentage);// Coloca arrayB primero si el resultado de la resta es <0
+        return (arrayB.average - arrayA.average);// Coloca arrayB primero si el resultado de la resta es <0
       });
       console.log(ordered);
     }
@@ -787,7 +787,7 @@ window.studentsModal = (laboratoria)=>{
   console.log(list);
   return list;
 };
-// ----- Templete Stringdinamico para impresion de informacion de alumnas
+// ----- Templete String dinamico para impresion de informacion de alumnas
 window.studentsPrint = (laboratoria) => {
   const studentsM = studentsModal(laboratoria);
   const studentsCollap = document.getElementById('cardsSpace');

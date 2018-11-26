@@ -279,6 +279,7 @@ const listeners = (data) => {
     const students = studentsModal(data);
     const orderBy = 'percentage';
     const orderDirection = 'ASC';
+    console.log('Este es la funcion sort');
     const sort = sortStudents(students, orderBy, orderDirection);
     const printS = printSort(sort);
   });
