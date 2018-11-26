@@ -120,14 +120,14 @@ describe('data', () => {
       const orderBy = "percentage";
       const orderDirection = "ASC";
       const processed = sortStudents(students, orderBy, orderDirection);
-      assert.equal(processed[0].stats.completedPercentage, 46);
+      assert.equal(processed[0].stats.completedPercentage, 89);
     });
     it('debería retornar arreglo de estudiantes ordenado por porcentaje general DESC',()=>{
       const students = computeStudentsStats(fixtures);
       const orderBy = "percentage";
       const orderDirection = "DESC";
       const processed = sortStudents(students, orderBy, orderDirection);
-      assert.equal(processed[0].stats.completedPercentage, 96);
+      assert.equal(processed[0].stats.completedPercentage, 89);
     });
   });
 

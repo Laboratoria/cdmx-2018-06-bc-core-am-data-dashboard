@@ -892,7 +892,7 @@ window.printSedesAll = (laboratoria) => {
                            <div class="card-content card-data black-text">
                                <span class="card-title cards">${sedeM[i].venue}</span>
                                <div class="color-activas">
-                                   <span id="numero">${sedeM[i].activeStudents}</span>
+                                   <span class="numero">${sedeM[i].activeStudents}</span>
                                    <span> Alumnas</span>
                                </div>
 
