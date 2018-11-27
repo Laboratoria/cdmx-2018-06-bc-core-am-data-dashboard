@@ -1,9 +1,11 @@
 /* data.js es el archivos JS en el cual se declaran las funciones globales y locales para la extracción y procesamiento de la data del
 proyecto. En algunas funciones se hace uso de Templete String para la creacion de card dinámicas para presentar información en el DOM*/
+
 // FUNCIONES DE LÓGICA DE EXTRACCIÓN Y PROCESAMIENTO DE A DATA
+
 window.computeVenuesStats = (laboratoria) => {
 // Función que extrae infomación sobre cada una de las sedes, genera un arreglo como: [{},{},{}]
-  let venuesArray = [];// Variables locales
+  let venuesArray = []; // Variables locales
   let average = 0;
   let advanceStudents = 0;
   let inLowStudents = 0;
@@ -14,9 +16,10 @@ window.computeVenuesStats = (laboratoria) => {
   let timeU1 = 0; let timeU2 = 0; let timeU3 = 0;
   let advanceU1 = 0; let advanceU2 = 0; let advanceU3 = 0;
   let quizU1 = 0, quizU2 = 0, quizU3 = 0;
-  for (let key in laboratoria) {// Ciclo de evaluacion general
+
+  for (let key in laboratoria) { // Ciclo de evaluacion general
     let myobj = {};
-    average = 0;// Reinicio de variables
+    average = 0; // Reinicio de variables
     advanceStudents = 0;
     inLowStudents = 0;
     mediumStudents = 0;
@@ -25,11 +28,14 @@ window.computeVenuesStats = (laboratoria) => {
     timeAverage = 0;
     advanceU1 = 0; advanceU2 = 0; advanceU3 = 0;
     quizU1 = 0; quizU2 = 0; quizU3 = 0;
-    myobj.venue = key.toUpperCase();// Extraccion y procesamiento de data
+
+    myobj.venue = key.toUpperCase(); // Extraccion y procesamiento de data
     let generations = laboratoria[key].generacion;
+
     for (let generation in generations) {
       const students = laboratoria[key].generacion[generation].estudiantes;
       numStudents += students.length;
+
       for (let student in students) {
         average += students[student].progreso.porcentajeCompletado;
         timeAverage += students[student].progreso.duracionPrograma;
@@ -39,7 +45,7 @@ window.computeVenuesStats = (laboratoria) => {
           advanceStudents++;
         } else {
           mediumStudents++;
-        }// Avance y calificación por unidad
+        } // Avance y calificación por unidad
         advanceU1 += students[student].progreso.temas['01-Introduccion-a-programacion'].porcentajeCompletado;
         advanceU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].porcentajeCompletado;
         advanceU3 += students[student].progreso.temas['03-UX'].porcentajeCompletado;
@@ -47,7 +53,8 @@ window.computeVenuesStats = (laboratoria) => {
         quizU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].subtemas['05-quiz'].puntuacion;
         quizU3 += students[student].progreso.temas['03-UX'].subtemas['03-quiz'].puntuacion;
       }
-    } average = average / numStudents;// Calculo de promedios
+    } 
+    average = average / numStudents; // Calculo de promedios
     timeAverage = timeAverage / numStudents;
     quizAverage = quizAverage / numStudents;
     timeAverage = (timeAverage * average) / 100;
@@ -58,7 +65,7 @@ window.computeVenuesStats = (laboratoria) => {
     quizU2 = quizU2 / numStudents;
     quizU3 = quizU3 / numStudents;
     quizAverage = (quizU1 + quizU2 + quizU3) / 3;
-    myobj.average = Math.round(average);// Generación de propiedades del objeto Sede
+    myobj.average = Math.round(average); // Generación de propiedades del objeto Sede
     myobj.activeStudents = numStudents;
     myobj.advanceStudents = advanceStudents;
     myobj.inLowStudents = inLowStudents;
@@ -68,11 +75,11 @@ window.computeVenuesStats = (laboratoria) => {
     myobj.advanceU2 = Math.round(advanceU2);
     myobj.advanceU3 = Math.round(advanceU3);
     myobj.quizAverage = Math.round(quizAverage);
-    venuesArray.push(myobj);// Ingresa el objeto al arreglo a retornar
+    venuesArray.push(myobj); // Ingresa el objeto al arreglo a retornar
   }
-  console.log(venuesArray);
-  return (venuesArray);// Retorna un objeto sede que se almacena en una localidad del array
+  return (venuesArray); // Retorna un objeto sede que se almacena en una localidad del array
 };
+
 window.computeGenerationsStats = (laboratoria) => {
 // Extrae información sobre las generaciones, da un array: [{},{},{},{},{},{},{},{},{}]
 // Declaración de funciones locales
@@ -89,11 +96,13 @@ window.computeGenerationsStats = (laboratoria) => {
   let advanceU1 = 0, advanceU2 = 0, advanceU3 = 0;
   let quizU1 = 0, quizU2 = 0, quizU3 = 0;
   let i = -1;
+
   // Inicio de iteración de la data
   for (key in laboratoria) {
     let generations = laboratoria[key].generacion;
     let venuesValue = Object.getOwnPropertyNames(laboratoria);
     i++;
+
     for (generation in generations) {
       let myObj = {};
       countsO = 0; averageO = 0; advanceStudentsO = 0; inLowStudentsO = 0; timeAverageO = 0; mediumStudents = 0;
@@ -102,6 +111,7 @@ window.computeGenerationsStats = (laboratoria) => {
       venuesO = venuesValue[i];
       const students = laboratoria[key].generacion[generation].estudiantes;
       countsO += students.length;
+
       for (student in students) {
         averageO += students[student].progreso.porcentajeCompletado;
         timeAverageO += students[student].progreso.duracionPrograma;
@@ -119,7 +129,8 @@ window.computeGenerationsStats = (laboratoria) => {
         quizU1 += students[student].progreso.temas['01-Introduccion-a-programacion'].subtemas['04-quiz'].puntuacion;
         quizU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].subtemas['05-quiz'].puntuacion;
         quizU3 += students[student].progreso.temas['03-UX'].subtemas['03-quiz'].puntuacion;
-      } quizAverageO = (quizU1 + quizU2 + quizU3) / (countsO * 3);
+      } 
+      quizAverageO = (quizU1 + quizU2 + quizU3) / (countsO * 3);
       // Genera propiedades del objeto generaciones
       myObj.generation = generationsO.toUpperCase();
       myObj.venue = venuesO.toUpperCase();
@@ -137,9 +148,9 @@ window.computeGenerationsStats = (laboratoria) => {
       countsO = 0;
     }
   }
-  console.log(generationsArray);
   return (generationsArray);
 };
+
 // Obtiene todos los datos de las alumnas
 window.computeStudentsStats = (laboratoria) => {
   let studentArray = []; // Zona de declaración de cariables locales (para impresión)
@@ -158,14 +169,17 @@ window.computeStudentsStats = (laboratoria) => {
   let percentageDurationS = [];
   let itemS = '';
   let j = 0;
+
   for (key in laboratoria) { // Inicio de extracciónde data
     let venuesL = Object.getOwnPropertyNames(laboratoria);
     let generations = laboratoria[key].generacion;
     i++;
+
     for (generation in generations) {
       generationS = generation;
       venuesS = venuesL[i];
       const students = laboratoria[key].generacion[generation].estudiantes;
+
       for (student in students) {
         let myStudent = {};
         nameS = students[student].nombre;
@@ -190,6 +204,7 @@ window.computeStudentsStats = (laboratoria) => {
         let tps = {};
         let completedPercentageT = 0, percentageDurationT = 0;
         for (let unit in unitiesContent) { // Entrar a data profunda
+
           if (unit === '01-Introduccion-a-programacion') {
             completedPercentageT = (Object.values(unitiesContent))[0].porcentajeCompletado;
             percentageDurationT = (Object.values(unitiesContent))[0].duracionTemaCompletado;
@@ -198,6 +213,7 @@ window.computeStudentsStats = (laboratoria) => {
             deepCont.percentageDuration = percentageDurationT;
             let subtopicsUnits = (Object.values(unitiesContent))[0].subtemas;
             // let subTopics ={};
+
             for (let subtop in subtopicsUnits) {
               // console.log(Object.values(subtopicsUnits));
               if (subtop === '00-bienvenida-orientacion') {
@@ -259,6 +275,7 @@ window.computeStudentsStats = (laboratoria) => {
             deepCont.percentageDuration = percentageDurationT;
             let subtopicsUnits = (Object.values(unitiesContent))[1].subtemas;
             // let subTopics ={};
+
             for (let subtop in subtopicsUnits) {
               // console.log(Object.values(subtopicsUnits));
               if (subtop === '00-Tipos-de-datos-y-operadores') {
@@ -338,6 +355,7 @@ window.computeStudentsStats = (laboratoria) => {
             deepCont.percentageDuration = percentageDurationT;
             let subtopicsUnits = (Object.values(unitiesContent))[2].subtemas;
             // let subTopics ={};
+
             for (let subtop in subtopicsUnits) {
               // console.log(Object.values(subtopicsUnits));
               if (subtop === '00-equipos-de-desarrollo') {
@@ -400,7 +418,6 @@ window.computeStudentsStats = (laboratoria) => {
       }
     }
   }
-  console.log(studentArray);
   return (studentArray);
 };
 // Función que ordena arreglo de estudiantes
@@ -416,7 +433,6 @@ window.sortStudents = (students, orderBy, orderDirection) => {
         if (nameA > nameB) return 1; // Retorna "namaB" primero si es menor que nameA
         return 0;
       });
-      console.log(ordered);
     } else {
       // Ordena por nombre en forma DESC
       ordered = students.sort((arrayA, arrayB) => {
@@ -425,7 +441,6 @@ window.sortStudents = (students, orderBy, orderDirection) => {
         if (nameA < nameB) return 1; // Retorna "namaB"  si este mayor que nameA
         return 0;
       });
-      console.log(ordered);
     }
   } else if (orderBy === 'percentage') {// Ordena por porcentajeCompletado
     if (orderDirection === 'ASC') { // Ordena en forma ascendente
@@ -437,7 +452,6 @@ window.sortStudents = (students, orderBy, orderDirection) => {
       ordered = students.sort((arrayA, arrayB) =>{
         return (arrayB.average - arrayA.average);// Coloca arrayB primero si el resultado de la resta es <0
       });
-      console.log(ordered);
     }
   }
   return (ordered);
@@ -449,7 +463,6 @@ window.filterStudents = (students, search) => {
     var currentS = students[i];
     if (currentS.name === search) filtered.push(currentS);
   }
-  console.log(filtered);
   return (filtered);
 };
 
@@ -457,6 +470,7 @@ window.filterStudents = (students, search) => {
 window.generationsLima = (laboratoria) => {
   const generation = computeGenerationsStats(laboratoria);
   const generationLim = [];
+
   for (let i = 0; i < 3; i++) {
     generationLim[i] = generation[i];
   }
@@ -466,76 +480,74 @@ window.generationsLima = (laboratoria) => {
   let advancePercentage = [];
   let lowPercentage = [];
   let mediumPercentage = [];
+
   for (let i = 0; i < generationLim.length; i++) {
     advancePercentage[i] = Math.round(((generationLim[i].advanceStudents) * 100) / (generationLim[i].count));
     lowPercentage[i] = Math.round(((generationLim[i].inLowStudents) * 100) / (generationLim[i].count));
     mediumPercentage[i] = Math.round(((generationLim[i].mediumStudents) * 100) / (generationLim[i].count));
     genLim += `<div class="row" id = "cardsSpace">
-              <div class="col s12 m12 l12">
-                <div class="card whithe col s12 m12 l12">
-                  <div class="card-content black-text col s12 m12 l12">
-                    <div class="col s6 m5 l5">
-                      <!--generaciones1-->
-                      <span class="card-title cards">${generationLim[i].generation} Generación</span>
-                      <span class="card-title cards">${generationLim[i].venue}</span>
+                <div class="col s12 m12 l12">
+                  <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                      <div class="col s6 m5 l5">
+                        <!--generaciones1-->
+                        <span class="card-title cards">${generationLim[i].generation} Generación</span>
+                        <span class="card-title cards">${generationLim[i].venue}</span>
                         <div class="color-activas">
                           <span class="numero">${generationLim[i].count}</span>
                           <span> Alumnas</span>
-                          </div>
-                          <!--Barra de avance tres colores-->
-                          <span class="center">Progreso alumnas:</span>
-                          <div class="elemento-card">
-                            <span class="letra-progreso izquierda">
-                            <i class="small material-icons">star</i>+90%</span>
-                            <span class="letra-progreso derecha">
-                              -60%
+                        </div>
+                        <!--Barra de avance tres colores-->
+                        <span class="center">Progreso alumnas:</span>
+                        <div class="elemento-card">
+                          <span class="letra-progreso izquierda"><i class="small material-icons">star</i>+90%</span>
+                          <span class="letra-progreso derecha">
+                            -60%
                             <i class="small material-icons">star_half</i>
-                            </span>
-                            <div class="progress grey tamaño-barra">
-                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
-                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"}"></div>
-                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas"></div>
-                            </div>
-                          </div>
-                          <!--Tiempo promedio-->
-                          <p>
-                            <i class="material-icons">schedule</i>
-                            <span>Tiempo promedio invertido: ${generationLim[i].timeAverage}${'hrs'}</span>
-                          </p>
-                        </div>
-                        <div class="col s5 m7 l7">
-                          <!--generaciones2-->
-                          <!--Promedios generales inicio-->
-                          <div class="elemento-card">
-                            <span>Promedio general </span>
-                            <div class="progress tamaño-barra">
-                              <div class="determinate blue" class="color-fondo" style="width:${generationLim[i].average}${'%'}"></div>
-                                <span class="derecha letra-barra">${generationLim[i].average}${'%'}</span>
-                              </div>
-                            </div>
-                            <p>Intoducción a la programación</p>
-                              <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:${generationLim[i].advanceU1}${'%'}">
-                                </div>
-                              </div>
-                            <p>Variables y tipos de datos</p>
-                              <div class="progress grey">
-                                <div class="determinate purple" class="color-fondo" style="width: ${generationLim[i].advanceU2}${'%'}"></div>
-                                </div>
-                            <p>UX</p>
-                              <div class="progress grey">
-                                <div class="determinate orange" class="color-fondo" style="width: ${generationLim[i].advanceU3}${'%'}"></div>
-                                </div>
-                            <p>Quiz´s</p>
-                              <div class="progress grey">
-                                <div class="determinate green" class="color-fondo" style="width: ${generationLim[i].quizAverage}${'%'}"></div>
-                                </div>
-                            <!--Promedios generales y de quiz fin-->
-                            </div>
+                          </span>
+                          <div class="progress grey tamaño-barra">
+                            <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
+                            <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"}"></div>
+                            <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas"></div>
                           </div>
                         </div>
+                        <!--Tiempo promedio-->
+                        <p>
+                          <i class="material-icons">schedule</i><span>Tiempo promedio invertido: ${generationLim[i].timeAverage}${'hrs'}</span>
+                        </p>
                       </div>
-                    </div>`;
+                      <div class="col s5 m7 l7">
+                        <!--generaciones2-->
+                        <!--Promedios generales inicio-->
+                        <div class="elemento-card">
+                          <span>Promedio general </span>
+                          <div class="progress tamaño-barra">
+                            <div class="determinate blue" class="color-fondo" style="width:${generationLim[i].average}${'%'}"></div>
+                              <span class="derecha letra-barra">${generationLim[i].average}${'%'}</span>
+                            </div>
+                          </div>
+                          <p>Intoducción a la programación</p>
+                          <div class="progress grey">
+                            <div class="determinate pink" class="color-fondo" style="width:${generationLim[i].advanceU1}${'%'}"></div>
+                          </div>
+                          <p>Variables y tipos de datos</p>
+                          <div class="progress grey">
+                          <div class="determinate purple" class="color-fondo" style="width: ${generationLim[i].advanceU2}${'%'}"></div>
+                        </div>
+                        <p>UX</p>
+                        <div class="progress grey">
+                          <div class="determinate orange" class="color-fondo" style="width: ${generationLim[i].advanceU3}${'%'}"></div>
+                        </div>
+                        <p>Quiz´s</p>
+                        <div class="progress grey">
+                          <div class="determinate green" class="color-fondo" style="width: ${generationLim[i].quizAverage}${'%'}"></div>
+                        </div>
+                        <!--Promedios generales y de quiz fin-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
   }
   resultGenLim.innerHTML = genLim;
   // ToolTip
@@ -552,9 +564,11 @@ window.generationsLima = (laboratoria) => {
   });
   return generationLim;
 };
+
 window.generationsMexico = (laboratoria) => {
   const generation = computeGenerationsStats(laboratoria);
   const generationMex = [];
+
   for (let i = 3; i <= 5; i++) {
     generationMex[i - 3] = generation[i];
   }
@@ -564,76 +578,77 @@ window.generationsMexico = (laboratoria) => {
   let advancePercentage = [];
   let lowPercentage = [];
   let mediumPercentage = [];
+
   for (let i = 0; i < generationMex.length; i++) {
     advancePercentage[i] = Math.round(((generationMex[i].advanceStudents) * 100) / (generationMex[i].count));
     lowPercentage[i] = Math.round(((generationMex[i].inLowStudents) * 100) / (generationMex[i].count));
     mediumPercentage[i] = Math.round(((generationMex[i].mediumStudents) * 100) / (generationMex[i].count));
+
     genMex += `<div class="row" id = "cardsSpace">
-              <div class="col s12 m12 l12">
-                <div class="card whithe col s12 m12 l12">
-                  <div class="card-content black-text col s12 m12 l12">
-                    <div class="col s6 m5 l5">
-                      <!--generaciones1-->
-                      <span class="card-title cards">${generationMex[i].generation} Generación</span>
-                      <span class="card-title cards">${generationMex[i].venue}</span>
+                <div class="col s12 m12 l12">
+                  <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                      <div class="col s6 m5 l5">
+                        <!--generaciones1-->
+                        <span class="card-title cards">${generationMex[i].generation} Generación</span>
+                        <span class="card-title cards">${generationMex[i].venue}</span>
                         <div class="color-activas">
                           <span class="numero">${generationMex[i].count}</span>
                           <span> Alumnas</span>
-                          </div>
-                          <!--Barra de avance tres colores-->
-                          <span class="center">Progreso alumnas:</span>
-                          <div class="elemento-card">
-                            <span class="letra-progreso izquierda">
-                            <i class="small material-icons">star</i>+90%</span>
-                            <span class="letra-progreso derecha">
-                              -60%
-                            <i class="small material-icons">star_half</i>
-                            </span>
-                            <div class="progress grey tamaño-barra">
-                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
-                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"></div>
-                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas"></div>
-                            </div>
-                          </div>
-                          <!--Tiempo promedio-->
-                          <p>
-                            <i class="material-icons">schedule</i>
-                            <span>Tiempo promedio invertido: ${generationMex[i].timeAverage}${'hrs'}</span>
-                          </p>
                         </div>
-                        <div class="col s5 m7 l7">
-                          <!--generaciones2-->
-                          <!--Promedios generales inicio-->
-                          <div class="elemento-card">
-                            <span>Promedio general </span>
-                            <div class="progress tamaño-barra">
-                              <div class="determinate blue" class="color-fondo" style="width:${generationMex[i].average}${'%'}"></div>
-                                <span class="derecha letra-barra">${generationMex[i].average}${'%'}</span>
+                        <!--Barra de avance tres colores-->
+                        <span class="center">Progreso alumnas:</span>
+                        <div class="elemento-card">
+                          <span class="letra-progreso izquierda"><i class="small material-icons">star</i>+90%</span>
+                          <span class="letra-progreso derecha">
+                            -60%
+                            <i class="small material-icons">star_half</i>
+                          </span>
+                          <div class="progress grey tamaño-barra">
+                            <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
+                            <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"></div>
+                            <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas"></div>
+                          </div>
+                        </div>
+                        <!--Tiempo promedio-->
+                        <p>
+                          <i class="material-icons">schedule</i>
+                          <span>Tiempo promedio invertido: ${generationMex[i].timeAverage}${'hrs'}</span>
+                        </p>
+                      </div>
+                      <div class="col s5 m7 l7">
+                        <!--generaciones2-->
+                        <!--Promedios generales inicio-->
+                        <div class="elemento-card">
+                          <span>Promedio general </span>
+                          <div class="progress tamaño-barra">
+                            <div class="determinate blue" class="color-fondo" style="width:${generationMex[i].average}${'%'}"></div>
+                              <span class="derecha letra-barra">${generationMex[i].average}${'%'}</span>
+                            </div>
+                          </div>
+                          <p>Intoducción a la programación</p>
+                          <div class="progress grey">
+                            <div class="determinate pink" class="color-fondo" style="width:${generationMex[i].advanceU1}${'%'}">
                               </div>
                             </div>
-                            <p>Intoducción a la programación</p>
-                              <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:${generationMex[i].advanceU1}${'%'}">
-                                </div>
-                              </div>
-                            <p>Variables y tipos de datos</p>
-                              <div class="progress grey">
-                                <div class="determinate purple" class="color-fondo" style="width: ${generationMex[i].advanceU2}${'%'}"></div>
-                                </div>
+                          <p>Variables y tipos de datos</p>
+                            <div class="progress grey">
+                              <div class="determinate purple" class="color-fondo" style="width: ${generationMex[i].advanceU2}${'%'}"></div>
+                            </div>
                             <p>UX</p>
-                              <div class="progress grey">
-                                <div class="determinate orange" class="color-fondo" style="width: ${generationMex[i].advanceU3}${'%'}"></div>
-                                </div>
-                            <p>Quiz´s</p>
-                              <div class="progress grey">
-                                <div class="determinate green" class="color-fondo" style="width: ${generationMex[i].quizAverage}${'%'}"></div>
-                                </div>
-                            <!--Promedios generales y de quiz fin-->
+                            <div class="progress grey">
+                              <div class="determinate orange" class="color-fondo" style="width: ${generationMex[i].advanceU3}${'%'}"></div>
                             </div>
+                            <p>Quiz´s</p>
+                            <div class="progress grey">
+                              <div class="determinate green" class="color-fondo" style="width: ${generationMex[i].quizAverage}${'%'}"></div>
+                            </div>
+                            <!--Promedios generales y de quiz fin-->
                           </div>
                         </div>
                       </div>
-                    </div>`;
+                    </div>
+                  </div>`;
   }
   resultGenMex.innerHTML = genMex;
   // ToolTip
@@ -650,88 +665,92 @@ window.generationsMexico = (laboratoria) => {
   });
   return generationMex;
 };
+
 window.generationsSantiago = (laboratoria) => {
   const generation = computeGenerationsStats(laboratoria);
   const generationStg = [];
+
   for (let i = 5; i < 8; i++) {
     generationStg[i - 5] = generation[i];
   }
+
   // ----- Templete String para impresion dinámica de la funcion impresion de Generaciones resultGenStg
   const resultGenStg = document.getElementById('cardsSpace');
   let genStg = '';
   let advancePercentage = [];
   let lowPercentage = [];
   let mediumPercentage = [];
+
   for (let i = 0; i < generationStg.length; i++) {
     advancePercentage[i] = Math.round(((generationStg[i].advanceStudents) * 100) / (generationStg[i].count));
     lowPercentage[i] = Math.round(((generationStg[i].inLowStudents) * 100) / (generationStg[i].count));
     mediumPercentage[i] = Math.round(((generationStg[i].mediumStudents) * 100) / (generationStg[i].count));
+
     genStg += `<div class="row" id = "cardsSpace">
-              <div class="col s12 m12 l12">
-                <div class="card whithe col s12 m12 l12">
-                  <div class="card-content black-text col s12 m12 l12">
-                    <div class="col s6 m5 l5">
+                <div class="col s12 m12 l12">
+                  <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                      <div class="col s6 m5 l5">
                       <!--generaciones1-->
-                      <span class="card-title cards">${generationStg[i].generation} Generación</span>
-                      <span class="card-title cards">${generationStg[i].venue}</span>
+                        <span class="card-title cards">${generationStg[i].generation} Generación</span>
+                        <span class="card-title cards">${generationStg[i].venue}</span>
                         <div class="color-activas">
                           <span class="numero">${generationStg[i].count}</span>
                           <span> Alumnas</span>
-                          </div>
-                          <!--Barra de avance tres colores-->
-                          <span class="center">Progreso alumnas:</span>
-                          <div class="elemento-card">
-                            <span class="letra-progreso izquierda">
-                            <i class="small material-icons">star</i>+90%</span>
-                            <span class="letra-progreso derecha">
-                              -60%
+                        </div>
+                        <!--Barra de avance tres colores-->
+                        <span class="center">Progreso alumnas:</span>
+                        <div class="elemento-card">
+                          <span class="letra-progreso izquierda"><i class="small material-icons">star</i>+90%</span>
+                          <span class="letra-progreso derecha">
+                            -60%
                             <i class="small material-icons">star_half</i>
-                            </span>
-                            <div class="progress grey tamaño-barra">
-                              <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${generationStg[i].mediumStudents}${' Alumnas regulares'}"></div>
-                              <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${generationStg[i].inLowStudents}${' Alumnas atrasadas'}"></div>
-                              <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${generationStg[i].advanceStudents}${' Alumnas avanzadas'}"></div>
-                            </div>
-                          </div>
-                          <!--Tiempo promedio-->
-                          <p>
-                            <i class="material-icons">schedule</i>
-                            <span>Tiempo promedio invertido: ${generationStg[i].timeAverage}${'hrs'}</span>
-                          </p>
-                        </div>
-                        <div class="col s5 m7 l7">
-                          <!--generaciones2-->
-                          <!--Promedios generales inicio-->
-                          <div class="elemento-card">
-                            <span>Promedio general </span>
-                            <div class="progress tamaño-barra">
-                              <div class="determinate blue" class="color-fondo" style="width:${generationStg[i].average}${'%'}"></div>
-                                <span class="derecha letra-barra">${generationStg[i].average}${'%'}</span>
-                              </div>
-                            </div>
-                            <p>Intoducción a la programación</p>
-                              <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:${generationStg[i].advanceU1}${'%'}" data-tooltip ="${generationStg[i].advanceU1}${'%'}">
-                                </div>
-                              </div>
-                            <p>Variables y tipos de datos</p>
-                              <div class="progress grey">
-                                <div class="determinate purple" class="color-fondo" style="width: ${generationStg[i].advanceU2}${'%'}" data-tooltip ="${generationStg[i].advanceU2}${'%'}"></div>
-                                </div>
-                            <p>UX</p>
-                              <div class="progress grey">
-                                <div class="determinate orange" class="color-fondo" style="width: ${generationStg[i].advanceU3}${'%'}" data-tooltip ="${generationStg[i].advanceU3}${'%'}"></div>
-                                </div>
-                            <p>Quiz´s</p>
-                              <div class="progress grey">
-                                <div class="determinate green" class="color-fondo" style="width: ${generationStg[i].quizAverage}${'%'}" data-tooltip ="${generationStg[i].quizAverage}${'ptos'}"></div>
-                                </div>
-                            <!--Promedios generales y de quiz fin-->
-                            </div>
+                          </span>
+                          <div class="progress grey tamaño-barra">
+                            <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${generationStg[i].mediumStudents}${' Alumnas regulares'}"></div>
+                            <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${generationStg[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                            <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${generationStg[i].advanceStudents}${' Alumnas avanzadas'}"></div>
                           </div>
                         </div>
+                        <!--Tiempo promedio-->
+                        <p>
+                          <i class="material-icons">schedule</i>
+                          <span>Tiempo promedio invertido: ${generationStg[i].timeAverage}${'hrs'}</span>
+                        </p>
                       </div>
-                    </div>`;
+                      <div class="col s5 m7 l7">
+                      <!--generaciones2-->
+                      <!--Promedios generales inicio-->
+                      <div class="elemento-card">
+                        <span>Promedio general </span>
+                        <div class="progress tamaño-barra">
+                          <div class="determinate blue" class="color-fondo" style="width:${generationStg[i].average}${'%'}"></div>
+                            <span class="derecha letra-barra">${generationStg[i].average}${'%'}</span>
+                          </div>
+                        </div>
+                        <p>Intoducción a la programación</p>
+                        <div class="progress grey">
+                          <div class="determinate pink" class="color-fondo" style="width:${generationStg[i].advanceU1}${'%'}" data-tooltip ="${generationStg[i].advanceU1}${'%'}">
+                          </div>
+                        </div>
+                        <p>Variables y tipos de datos</p>
+                        <div class="progress grey">
+                          <div class="determinate purple" class="color-fondo" style="width: ${generationStg[i].advanceU2}${'%'}" data-tooltip ="${generationStg[i].advanceU2}${'%'}"></div>
+                        </div>
+                        <p>UX</p>
+                        <div class="progress grey">
+                          <div class="determinate orange" class="color-fondo" style="width: ${generationStg[i].advanceU3}${'%'}" data-tooltip ="${generationStg[i].advanceU3}${'%'}"></div>
+                        </div>
+                        <p>Quiz´s</p>
+                        <div class="progress grey">
+                          <div class="determinate green" class="color-fondo" style="width: ${generationStg[i].quizAverage}${'%'}" data-tooltip ="${generationStg[i].quizAverage}${'ptos'}"></div>
+                        </div>
+                        <!--Promedios generales y de quiz fin-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
   }
   resultGenStg.innerHTML = genStg;
   // ToolTip
@@ -748,12 +767,14 @@ window.generationsSantiago = (laboratoria) => {
   });
   return generationStg;
 };
+
 // ----- Genera info para impresion de informacion de alumnas
 window.studentsModal = (laboratoria)=>{
   const students = computeStudentsStats(laboratoria);
   const list = [];
   let nameO = '', emailO = '', turnoO = '', averageO = 0, timeAverageO = 0, sedeO = '', genO = '';
   let u1O = 0, u2O = 0, u3O = 0, p1O = 0, p2O = 0, p3O = 0;
+
   for (let i = 0; i < students.length; i++) {
     let objStudent = {};
     nameO = students[i].name;
@@ -784,79 +805,76 @@ window.studentsModal = (laboratoria)=>{
     objStudent.p3 = p3O;
     list.push(objStudent);
   }
-  console.log(list);
   return list;
 };
+
 // ----- Templete String dinamico para impresion de informacion de alumnas
 window.studentsPrint = (laboratoria) => {
   const studentsM = studentsModal(laboratoria);
   const studentsCollap = document.getElementById('cardsSpace');
   let studentsPrint = '';
   studentsPrint = `
-                 <nav class="barra-alumnas">
-                   <div class="nav-wrapper col s12 m12 l6 offset-l3">
-                     <span class="alumnas">Alumnas</span>
-                   </div>
-                 </nav>`;
+                <nav class="barra-alumnas">
+                  <div class="nav-wrapper col s12 m12 l6 offset-l3">
+                    <span class="alumnas">Alumnas</span>
+                  </div>
+                </nav>`;
+
   for (let i = 0; i < studentsM.length;i++) {
     studentsPrint += `<div class="container collapsable-color">
-                       <ul class="collapsible">
-                           <li>
-                               <div class="collapsible-header">
-                                   <div>${studentsM[i].name}${'  '}${studentsM[i].average}${'%'}
-                                       <a class="secondary-content waves-effect waves-light">
-                                           <i class="material-icons">send</i>
-                                       </a>
-                                   </div>
-                                   <div>${studentsM[i].venue}${'  '}${studentsM[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
-                                   </a>
-                               </div>
-                                   <div class="progress grey">
-                                      <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ studentsM[i].p1}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3 + studentsM[i].p1 / 3}${'%'}"></div>
-                                      <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ studentsM[i].p2}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3}${'%'}"></div>
-                                      <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${studentsM[i].p3}${'%'}" style="width: ${studentsM[i].p3 / 3}${'%'}"></div>
-                                  </div>
-                               </div>
-                               <div class="collapsible-body">
-                                   <div>
-                                       <span>
-                                           <img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
-                                           <span>
-                                                   ${studentsM[i].name}
-                                           </span>
-                                   </div>
-                                   <p class="collapsable">
-                                       <i class="material-icons">mail_outline</i> Email: ${studentsM[i].email}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">wb_sunny</i> Turno: ${studentsM[i].turno}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${studentsM[i].timeAverage}${' hrs.'}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${studentsM[i].p1}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${studentsM[i].quizU1}${'  ptos.'}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${studentsM[i].p2}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${studentsM[i].quizU2}${'  ptos.'}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 3 UX: ${studentsM[i].p3}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${studentsM[i].quizU3}${'  ptos.'}
-                                   </p>
-                               </div>
-                           </li>
-
-                           </ul>
-                           </div>`;
+                        <ul class="collapsible">
+                          <li>
+                            <div class="collapsible-header">
+                              <div>${studentsM[i].name}${'  '}${studentsM[i].average}${'%'}
+                                <a class="secondary-content waves-effect waves-light">
+                                  <i class="material-icons">send</i>
+                                </a>
+                              </div>
+                              <div>${studentsM[i].venue}${'  '}${studentsM[i].generation}${' Generación'}
+                                <a class="secondary-content waves-effect waves-light"></a>
+                              </div>
+                              <div class="progress grey">
+                                <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ studentsM[i].p1}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3 + studentsM[i].p1 / 3}${'%'}"></div>
+                                <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ studentsM[i].p2}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3}${'%'}"></div>
+                                <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${studentsM[i].p3}${'%'}" style="width: ${studentsM[i].p3 / 3}${'%'}"></div>
+                              </div>
+                            </div>
+                            <div class="collapsible-body">
+                              <div>
+                                <span><img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
+                                <span>${studentsM[i].name}</span>
+                              </div>
+                              <p class="collapsable">
+                                <i class="material-icons">mail_outline</i> Email: ${studentsM[i].email}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">wb_sunny</i> Turno: ${studentsM[i].turno}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">schedule</i> Tiempo promedio invertido: ${studentsM[i].timeAverage}${' hrs.'}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${studentsM[i].p1}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 1: ${studentsM[i].quizU1}${'  ptos.'}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${studentsM[i].p2}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 2: ${studentsM[i].quizU2}${'  ptos.'}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 3 UX: ${studentsM[i].p3}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 3: ${studentsM[i].quizU3}${'  ptos.'}
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>`;
   }
   studentsCollap.innerHTML = studentsPrint;
   // Declara eventos de materialize dentro de cada funcion porque el Templete String es dinámico y crea elementos
@@ -874,6 +892,7 @@ window.studentsPrint = (laboratoria) => {
     });
   });
 };
+
 // Imprime Templete String de cada sede en un card difrente
 window.printSedesAll = (laboratoria) => {
   const sedeM = computeVenuesStats(laboratoria);
@@ -883,71 +902,67 @@ window.printSedesAll = (laboratoria) => {
   let advancePercentage = [];
   let mediumPercentage = [];
   let lowPercentage = [];
+
   for (let i = 0; i < sedeM.length; i++) {
     advancePercentage[i] = Math.round(((sedeM[i].advanceStudents) * 100) / (sedeM[i].activeStudents));
     lowPercentage[i] = Math.round(((sedeM[i].inLowStudents) * 100) / (sedeM[i].activeStudents));
     mediumPercentage[i] = Math.round(((sedeM[i].mediumStudents) * 100) / (sedeM[i].activeStudents));
+
     sedeAll += `<div class="col l4 m6 s12">
-                       <div class="card white darken-1">
-                           <div class="card-content card-data black-text">
-                               <span class="card-title cards">${sedeM[i].venue}</span>
-                               <div class="color-activas">
-                                   <span class="numero">${sedeM[i].activeStudents}</span>
-                                   <span> Alumnas</span>
-                               </div>
-
-                               <!--Promedios generales inicio-->
-                               <div class="elemento-card">
-                                   <span>Promedio general</span>
-                                   <div class="progress tamaño-barra">
-                                       <div class="determinate blue" class="color-fondo" style="width: ${sedeM[i].average}${'%'}"></div>
-                                       <span class="derecha letra-barra">${sedeM[i].average}${'%'}</span>
-                                   </div>
-
-
-                               <p>Intoducción a la programación</p>
-                               <div class="progress grey">
-                                   <div class="determinate pink" class="color-fondo" style="width: ${sedeM[i].advanceU1}${'%'}" data-tooltip ="${sedeM[i].advanceU1}${'%'}">
-                                   </div>
-                               </div>
-
-                               <p>Variables y tipos de datos</p>
-                               <div class="progress grey">
-                                   <div class="determinate purple" class="color-fondo" style="width: ${sedeM[i].advanceU2}${'%'}" data-tooltip ="${sedeM[i].advanceU2}${'%'}"></div>
-                               </div>
-                               <p>UX</p>
-                               <div class="progress grey">
-                                   <div class="determinate orange" class="color-fondo" style="width: ${sedeM[i].advanceU3}${'%'}" data-tooltip ="${sedeM[i].advanceU3}${'%'}"></div>
-                               </div>
-                               <p>Quiz´s</p>
-                               <div class="progress grey">
-                                   <div class="determinate green" class="color-fondo" style="width: ${sedeM[i].quizAverage}${'%'}" data-tooltip ="${sedeM[i].quizAverage}${'ptos'}"></div>
-                               </div>
-                               <!--Promedios generales fin-->
-                               <p>
-                                   <i class="material-icons">schedule</i>
-                                   <span>Tiempo: ${sedeM[i].timeAverage}${'Hrs.'}</span>
-                               </p>
-                               <!--Barra de avance tres colores-->
-                               <span class="center">Progreso alumnas:</span>
-                               <div class="elemento-card">
-                                   <span class="letra-progreso izquierda">
-                                       <i class="small material-icons">star</i>+90%</span>
-                                   <span class="letra-progreso derecha">
-                                       -60%
-                                       <i class="small material-icons">star_half</i>
-                                   </span>
-                                   <div class="progress grey tamaño-barra">
-                                       <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${sedeM[i].mediumStudents}${' Alumnas regulares'}"></div>
-                                       <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${sedeM[i].inLowStudents}${' Alumnas atrasadas'}"></div>
-                                       <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${sedeM[i].advanceStudents}${' Alumnas avanzadas'}"></div>
-
-                                   </div>
-                               </div>
-                               </div>
-                               </div>
-                           </div>
-                       </div>`;
+                  <div class="card white darken-1">
+                    <div class="card-content card-data black-text">
+                      <span class="card-title cards">${sedeM[i].venue}</span>
+                      <div class="color-activas">
+                        <span class="numero">${sedeM[i].activeStudents}</span>
+                        <span> Alumnas</span>
+                      </div>
+                      <!--Promedios generales inicio-->
+                      <div class="elemento-card">
+                        <span>Promedio general</span>
+                        <div class="progress tamaño-barra">
+                          <div class="determinate blue" class="color-fondo" style="width: ${sedeM[i].average}${'%'}"></div>
+                            <span class="derecha letra-barra">${sedeM[i].average}${'%'}</span>
+                          </div>
+                          <p>Intoducción a la programación</p>
+                          <div class="progress grey">
+                            <div class="determinate pink" class="color-fondo" style="width: ${sedeM[i].advanceU1}${'%'}" data-tooltip ="${sedeM[i].advanceU1}${'%'}">
+                            </div>
+                          </div>
+                          <p>Variables y tipos de datos</p>
+                          <div class="progress grey">
+                            <div class="determinate purple" class="color-fondo" style="width: ${sedeM[i].advanceU2}${'%'}" data-tooltip ="${sedeM[i].advanceU2}${'%'}"></div>
+                          </div>
+                          <p>UX</p>
+                            <div class="progress grey">
+                              <div class="determinate orange" class="color-fondo" style="width: ${sedeM[i].advanceU3}${'%'}" data-tooltip ="${sedeM[i].advanceU3}${'%'}"></div>
+                            </div>
+                            <p>Quiz´s</p>
+                            <div class="progress grey">
+                              <div class="determinate green" class="color-fondo" style="width: ${sedeM[i].quizAverage}${'%'}" data-tooltip ="${sedeM[i].quizAverage}${'ptos'}"></div>
+                            </div>
+                            <!--Promedios generales fin-->
+                            <p>
+                              <i class="material-icons">schedule</i>
+                              <span>Tiempo: ${sedeM[i].timeAverage}${'Hrs.'}</span>
+                            </p>
+                            <!--Barra de avance tres colores-->
+                              <span class="center">Progreso alumnas:</span>
+                              <div class="elemento-card">
+                                <span class="letra-progreso izquierda"><i class="small material-icons">star</i>+90%</span>
+                                <span class="letra-progreso derecha">
+                                  -60%
+                                  <i class="small material-icons">star_half</i>
+                                </span>
+                                <div class="progress grey tamaño-barra">
+                                  <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${sedeM[i].mediumStudents}${' Alumnas regulares'}"></div>
+                                  <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${sedeM[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                                  <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${sedeM[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>`;
   }
   resultFilter.innerHTML = sedeAll;
   // ToolTip

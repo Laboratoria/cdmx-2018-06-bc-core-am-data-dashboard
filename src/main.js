@@ -1,8 +1,9 @@
-// barra verde para alumnas
+// Efecto barra verde para alumnas
 $('.dropdown-trigger').dropdown();
 
 // Variables globales
 const laboratoria = 'https://api.myjson.com/bins/1amyo6';// API con DATA a usar (base de datos de alumnas)
+
 // DECLARACION DE FUNCIONES PARA IMPRIMIR EN DOM
 const printGenerations = (generations) => {
   const resultGen = document.getElementById('cardsSpace');
@@ -10,30 +11,33 @@ const printGenerations = (generations) => {
   let advancePercentage = [];
   let lowPercentage = [];
   let mediumPercentage = [];
+
   for (let i = 0; i < generations.length; i++) {
     advancePercentage[i] = Math.round(((generations[i].advanceStudents) * 100) / (generations[i].count));
     lowPercentage[i] = Math.round(((generations[i].inLowStudents) * 100) / (generations[i].count));
     mediumPercentage[i] = Math.round(((generations[i].mediumStudents) * 100) / (generations[i].count));
+    // Templete string
     gen += `<div class="row" id = "cardsSpace">
               <div class="col s12 m12 l12">
                 <div class="card whithe col s12 m12 l12">
                   <div class="card-content black-text col s12 m12 l12">
                     <div class="col s6 m5 l5">
-                      <!--generaciones1-->
+                      <!--generaciones-->
                       <span class="card-title cards">${generations[i].generation} Generación</span>
                       <span class="card-title cards">${generations[i].venue}</span>
                         <div class="color-activas">
                           <span class="numero">${generations[i].count}</span>
                           <span> Alumnas</span>
-                          </div>
+                        </div>
                           <!--Barra de avance tres colores-->
                           <span class="center">Progreso alumnas:</span>
                           <div class="elemento-card">
                             <span class="letra-progreso izquierda">
-                            <i class="small material-icons">star</i>+90%</span>
+                              <i class="small material-icons">star</i>+90%
+                            </span>
                             <span class="letra-progreso derecha">
                               -60%
-                            <i class="small material-icons">star_half</i>
+                              <i class="small material-icons">star_half</i>
                             </span>
                             <div class="progress grey tamaño-barra">
                               <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${generations[i].mediumStudents}${' Alumnas regulares'}"></div>
@@ -58,22 +62,21 @@ const printGenerations = (generations) => {
                               </div>
                             </div>
                             <p>Intoducción a la programación</p>
-                              <div class="progress grey">
-                                <div class="determinate pink" class="color-fondo" style="width:${generations[i].advanceU1}${'%'}" data-tooltip ="${generations[i].advanceU1}${'%'}">
-                                </div>
-                              </div>
+                            <div class="progress grey">
+                              <div class="determinate pink" class="color-fondo" style="width:${generations[i].advanceU1}${'%'}" data-tooltip ="${generations[i].advanceU1}${'%'}"></div>
+                            </div>
                             <p>Variables y tipos de datos</p>
                               <div class="progress grey">
                                 <div class="determinate purple" class="color-fondo" style="width: ${generations[i].advanceU2}${'%'}" data-tooltip ="${generations[i].advanceU2}${'%'}"></div>
-                                </div>
+                              </div>
                             <p>UX</p>
                               <div class="progress grey">
                                 <div class="determinate orange" class="color-fondo" style="width: ${generations[i].advanceU3}${'%'}" data-tooltip ="${generations[i].advanceU3}${'%'}"></div>
-                                </div>
+                              </div>
                             <p>Quiz´s</p>
                               <div class="progress grey">
                                 <div class="determinate green" class="color-fondo" style="width: ${generations[i].quizAverage}${'%'}" data-tooltip ="${generations[i].quizAverage}${'ptos'}"></div>
-                                </div>
+                              </div>
                             <!--Promedios generales y de quiz fin-->
                             </div>
                           </div>
@@ -98,65 +101,62 @@ const printGenerations = (generations) => {
 const printSort = (sort) => {
   const resultSort = document.getElementById('cardsSpace');
   let studentsSort = '';
+
   for (let i = 0; i < sort.length;i++) {
     studentsSort += `<div class="container collapsable-color">
-                       <ul class="collapsible">
-                           <li>
-                               <div class="collapsible-header">
-                                   <div>${sort[i].name}${'  '}${sort[i].average}${'%'}
-                                       <a class="secondary-content waves-effect waves-light">
-                                           <i class="material-icons">send</i>
-                                       </a>
-                                   </div>
-                                   <div>${sort[i].venue}${'  '}${sort[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
-                                   </a>
-                               </div>
-                                   <div class="progress grey">
-                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ sort[i].p1}${'%'}" style="width: ${sort[i].p1}${'%'}"></div>
-                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ sort[i].p2}${'%'}" style="width: ${sort[i].p2}${'%'}"></div>
-                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${sort[i].p3}${'%'}" style="width: ${sort[i].p3}${'%'}"></div>
-                                   </div>
-                               </div>
-                               <div class="collapsible-body">
-                                   <div>
-                                       <span>
-                                           <img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
-                                           <span>
-                                                   ${sort[i].name}
-                                           </span>
-                                   </div>
-                                   <p class="collapsable">
-                                       <i class="material-icons">mail_outline</i> Email: ${sort[i].email}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">wb_sunny</i> Turno: ${sort[i].turno}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${sort[i].timeAverage}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${sort[i].p1}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${sort[i].quizU1}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${sort[i].p2}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${sort[i].quizU2}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 3 UX: ${sort[i].p3}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${sort[i].quizU3}
-                                   </p>
-                               </div>
-                           </li>
-
-                           </ul>
-                           </div>`;
+                      <ul class="collapsible">
+                        <li>
+                          <div class="collapsible-header">
+                            <div>${sort[i].name}${'  '}${sort[i].average}${'%'}
+                              <a class="secondary-content waves-effect waves-light">
+                                <i class="material-icons">send</i>
+                              </a>
+                            </div>
+                            <div>${sort[i].venue}${'  '}${sort[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
+                              </a>
+                            </div>
+                            <div class="progress grey">
+                              <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ sort[i].p1}${'%'}" style="width: ${sort[i].p1}${'%'}"></div>
+                              <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ sort[i].p2}${'%'}" style="width: ${sort[i].p2}${'%'}"></div>
+                              <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${sort[i].p3}${'%'}" style="width: ${sort[i].p3}${'%'}"></div>
+                            </div>
+                          </div>
+                          <div class="collapsible-body">
+                              <div>
+                                <span><img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
+                                <span>${sort[i].name}</span>
+                              </div>
+                              <p class="collapsable">
+                                <i class="material-icons">mail_outline</i> Email: ${sort[i].email}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">wb_sunny</i> Turno: ${sort[i].turno}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">schedule</i> Tiempo promedio invertido: ${sort[i].timeAverage}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${sort[i].p1}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 1: ${sort[i].quizU1}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${sort[i].p2}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 2: ${sort[i].quizU2}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 3 UX: ${sort[i].p3}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 3: ${sort[i].quizU3}
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>`;
   }
   resultSort.innerHTML = studentsSort;
   // ToolTip
@@ -176,63 +176,59 @@ const printFilter = (filter) => {
   let studentsFilter = '';
   for (let i = 0; i < filter.length;i++) {
     studentsFilter += `<div class="container collapsable-color">
-                       <ul class="collapsible">
-                           <li>
-                               <div class="collapsible-header">
-                                   <div>${filter[i].name}${'  '}${filter[i].average}${'%'}
-                                       <a class="secondary-content waves-effect waves-light">
-                                           <i class="material-icons">send</i>
-                                       </a>
-                                   </div>
-                                   <div>${filter[i].venue}${'  '}${filter[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
-                                   </a>
-                               </div>
-                                   <div class="progress grey">
-                                       <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ filter[i].p1}${'%'}" style="width: ${filter[i].p1}${'%'}"></div>
-                                       <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ filter[i].p2}${'%'}" style="width: ${filter[i].p2}${'%'}"></div>
-                                       <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${filter[i].p3}${'%'}" style="width: ${filter[i].p3}${'%'}"></div>
-                                   </div>
-                               </div>
-                               <div class="collapsible-body">
-                                   <div>
-                                       <span>
-                                           <img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
-                                           <span>
-                                                   ${filter[i].name}
-                                           </span>
-                                   </div>
-                                   <p class="collapsable">
-                                       <i class="material-icons">mail_outline</i> Email: ${filter[i].email}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">wb_sunny</i> Turno: ${filter[i].turno}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">schedule</i> Tiempo promedio invertido: ${filter[i].timeAverage}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${filter[i].p1}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 1: ${filter[i].quizU1}${'  ptos.'}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${filter[i].p2}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 2: ${filter[i].quizU2}${'  ptos.'}
-                                   </p>
-                                   <p class="collapsable">
-                                       <i class="material-icons">book</i> Unidad 3 UX: ${filter[i].p3}${'%'}
-                                   </p>
-                                   <p class="collapsable-sub">
-                                       <i class="material-icons">playlist_add_check</i> Score quiz 3: ${filter[i].quizU3}${'  ptos.'}
-                                   </p>
-                               </div>
-                           </li>
-
-                           </ul>
-                           </div>`;
+                        <ul class="collapsible">
+                          <li>
+                            <div class="collapsible-header">
+                              <div>${filter[i].name}${'  '}${filter[i].average}${'%'}
+                                <a class="secondary-content waves-effect waves-light">
+                                  <i class="material-icons">send</i>
+                                </a>
+                              </div>
+                              <div>${filter[i].venue}${'  '}${filter[i].generation}${' Generación'}<a class="secondary-content waves-effect waves-light">
+                                </a>
+                              </div>
+                              <div class="progress grey">
+                                <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ filter[i].p1}${'%'}" style="width: ${filter[i].p1}${'%'}"></div>
+                                  <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ filter[i].p2}${'%'}" style="width: ${filter[i].p2}${'%'}"></div>
+                                  <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${filter[i].p3}${'%'}" style="width: ${filter[i].p3}${'%'}"></div>
+                                </div>
+                              </div>
+                              <div class="collapsible-body">
+                                <div>
+                                  <span><img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
+                                  <span>${filter[i].name}</span>
+                                </div>
+                                <p class="collapsable">
+                                  <i class="material-icons">mail_outline</i> Email: ${filter[i].email}
+                                </p>
+                                <p class="collapsable">
+                                  <i class="material-icons">wb_sunny</i> Turno: ${filter[i].turno}
+                                </p>
+                                <p class="collapsable">
+                                  <i class="material-icons">schedule</i> Tiempo promedio invertido: ${filter[i].timeAverage}
+                                </p>
+                                <p class="collapsable">
+                                  <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${filter[i].p1}${'%'}
+                                </p>
+                                <p class="collapsable-sub">
+                                  <i class="material-icons">playlist_add_check</i> Score quiz 1: ${filter[i].quizU1}${'  ptos.'}
+                                </p>
+                                <p class="collapsable">
+                                  <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${filter[i].p2}${'%'}
+                                </p>
+                                <p class="collapsable-sub">
+                                  <i class="material-icons">playlist_add_check</i> Score quiz 2: ${filter[i].quizU2}${'  ptos.'}
+                                </p>
+                                <p class="collapsable">
+                                  <i class="material-icons">book</i> Unidad 3 UX: ${filter[i].p3}${'%'}
+                                </p>
+                                <p class="collapsable-sub">
+                                  <i class="material-icons">playlist_add_check</i> Score quiz 3: ${filter[i].quizU3}${'  ptos.'}
+                                </p>
+                              </div>
+                          </li>
+                        </ul>
+                      </div>`;
   }
   resultFilter.innerHTML = studentsFilter;
   // ToolTip
@@ -247,43 +243,54 @@ const printFilter = (filter) => {
     });
   });
 };
+
 // DECLARACION DE LA FUNCION QUE SE EJECUTARÁ CON LOS EVENTOS CLIK
 const listeners = (data) => {
   // Evento que manda a ejecutar e imprimir la funcion de sedes
   let getVenue = document.getElementById('goVenues');
+
   getVenue.addEventListener('click', (event) => {
     printSedesAll(data);
   }, {passive: true});
+
   // Evento que manda a ejecutar e imprimir la funcion de generaciones
   let getGeneration = document.getElementById('goGeneretions');
+
   getGeneration.addEventListener('click', (event) => {
     const generation = computeGenerationsStats(data);
     printGenerations(generation);
   }, {passive: true});
+
   let getStudents = document.getElementById('goStudents');
+
   getStudents.addEventListener('click', (event) => {
     // const students = studentsModal(data);
     studentsPrint(data);
   }, {passive: true});
+
   // Evento que manda a ejecutar e imprimir la funcion de filtrado
   let getFilter = document.getElementById('goFilter');
+
   getFilter.addEventListener('click', (event) => {
     const students = studentsModal(data);
     const search = 'Melisa Marjorie';
     const filter = filterStudents(students, search);
-    const printF = printFilter(filter);
+    printFilter(filter);
   }, {passive: true});
+
   // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
   let getSort = document.getElementById('goSort');
+
   getSort.addEventListener('click', (event) => {
     const students = studentsModal(data);
     const orderBy = 'percentage';
     const orderDirection = 'ASC';
-    console.log('Este es la funcion sort');
     const sort = sortStudents(students, orderBy, orderDirection);
-    const printS = printSort(sort);
+    printSort(sort);
   }, {passive: true});
 };
+
+
 // Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
 window.onload = () => {
   fetch(laboratoria)
