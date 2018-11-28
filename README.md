@@ -63,34 +63,46 @@ La nueva vista no genera un documento HTML nuevo, solo oculta la vista anterior 
 > Es necesario presentar bocetos de la estructura de cada plantilla del sitio, realizar el diseño de mediana y alta fidelidad y finalmente presentar el diseño de la plataforma. Es propio presentar y testear las páginas, se sugiere el  uso de *invision* para dar tour por cada pantalla en futuros proyectos.
 
 * Diseño de baja fidelidad
+
 ![GitHub Sketch final de baja fidelidad](/scr/Pictures/SketchFinalBajaF.jpg)
 Format: ![Alt Baja fidelidad]
 
 * Diseño de mediana fidelidad con FeedBack aplicado
-![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/1.png)
-Format: ![Alt LogIn]
-![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/2.png)
+
+![Sketch](/src/Pictures/1.png)
+Format: ![Alt Canva]
+
+![Sketch](/scr/Pictures/2.png)
 Format: ![Alt 1a vista]
-![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/3.png)
+
+![GitHub Sketch](/scr/Pictures/3.png)
 Format: ![Alt Menú sedes]
-![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/4.png)
+
+![GitHub](/scr/Pictures/4.png)
 Format: ![Alt Vista Sedes]
-![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/5.png)
+
+![GitHub](/scr/Pictures/5.png)
 Format: ![Alt Menú generaciones]
-![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/6.png)
+
+![GitHub](/scr/Pictures/6.png)
 Format: ![Alt Alumnas]
 
 * Diseño de alta fidelidad en Canva
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital1.jpg)
 Format: ![Alt LogIn]
+
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital2.jpg)
 Format: ![Alt Vista Generaciones Mex]
+
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital3.jpg)
 Format: ![Alt Vista lista de alumnas]
+
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital4.jpg)
 Format: ![Alt Vista de modales]
+
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital5.jpg)
 Format: ![Alt Vista Generaciones]
+
 ![GitHub Sketch alta fidelidad](/scr/Pictures/digital6.jpg)
 Format: ![Alt Vista Sedes]
 
