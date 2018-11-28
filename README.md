@@ -64,8 +64,8 @@ La nueva vista no genera un documento HTML nuevo, solo oculta la vista anterior 
 
 * Diseño de baja fidelidad
 
-![GitHub Sketch final de baja fidelidad](/scr/Pictures/SketchFinalBajaF.jpg)
-Format: ![Alt Baja fidelidad]
+![Sketch](/scr/Pictures/SketchFinalBajaF.jpg)
+Format: ![Alt Canva]
 
 * Diseño de mediana fidelidad con FeedBack aplicado
 
@@ -75,43 +75,43 @@ Format: ![Alt Canva]
 ![Sketch](/scr/Pictures/2.png)
 Format: ![Alt 1a vista]
 
-![GitHub Sketch](/scr/Pictures/3.png)
+![Sketch](/scr/Pictures/3.png)
 Format: ![Alt Menú sedes]
 
-![GitHub](/scr/Pictures/4.png)
+![Sketch](/scr/Pictures/4.png)
 Format: ![Alt Vista Sedes]
 
-![GitHub](/scr/Pictures/5.png)
+![Sketch](/scr/Pictures/5.png)
 Format: ![Alt Menú generaciones]
 
-![GitHub](/scr/Pictures/6.png)
+![Sketch](/scr/Pictures/6.png)
 Format: ![Alt Alumnas]
 
 * Diseño de alta fidelidad en Canva
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital1.jpg)
+![Sketch](/scr/Pictures/digital1.jpg)
 Format: ![Alt LogIn]
 
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital2.jpg)
+![Sketch](/scr/Pictures/digital2.jpg)
 Format: ![Alt Vista Generaciones Mex]
 
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital3.jpg)
+![Sketch](/scr/Pictures/digital3.jpg)
 Format: ![Alt Vista lista de alumnas]
 
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital4.jpg)
+![Sketch](/scr/Pictures/digital4.jpg)
 Format: ![Alt Vista de modales]
 
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital5.jpg)
+![Sketch](/scr/Pictures/digital5.jpg)
 Format: ![Alt Vista Generaciones]
 
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital6.jpg)
+![Sketch](/scr/Pictures/digital6.jpg)
 Format: ![Alt Vista Sedes]
 
 * Diseño del sitio final
 
-![GitHub Implementación Desktop](/scr/Pictures/ImplementacionDesktop.png)
+![Sketch](/scr/Pictures/ImplementacionDesktop.png)
 Format: ![Alt Implementación Desktop]
 
-![GitHub Implementación responsive](/scr/Pictures/ImplementacionRespinsive.png)
+![Sketch](/scr/Pictures/ImplementacionRespinsive.png)
 Format: ![Alt Implementación Responsive]
 
 ### 4. Desarrollo y maquetación
