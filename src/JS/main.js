@@ -287,7 +287,7 @@ const listeners = (data) => {
     const selectorSpace = `<div class = "container">
                                     <div class = "row">
                                         <div class="input-field col s11 m5 l5">
-                                            <select onChange = 'changeValue()' name = "orderBy" id = "orderBy">
+                                            <select onChange = 'changeValue(${students})' name = "orderBy" id = "orderBy">
                                             <option value="" disabled selected>Ordenar por: </option>
                                             <option value="name">Nombre</option>
                                             <option value="percentage">Completitud</option>

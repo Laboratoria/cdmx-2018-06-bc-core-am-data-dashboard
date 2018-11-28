@@ -63,44 +63,44 @@ La nueva vista no genera un documento HTML nuevo, solo oculta la vista anterior 
 > Es necesario presentar bocetos de la estructura de cada plantilla del sitio, realizar el diseño de mediana y alta fidelidad y finalmente presentar el diseño de la plataforma. Es propio presentar y testear las páginas, se sugiere el  uso de *invision* para dar tour por cada pantalla en futuros proyectos.
 
 * Diseño de baja fidelidad
-![GitHub Sketch final de baja fidelidad](/scr/Pictures/SketchFinalBajaF.jpeg)
-Format: ![Alt Baja fidelidad](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36978819_1712967655439153_8484534733051527168_n.jpg?_nc_cat=0&oh=7930ac6f45770e21492ec5649f85be91&oe=5BCEACC8)
+![GitHub Sketch final de baja fidelidad](/scr/Pictures/SketchFinalBajaF.jpg)
+Format: ![Alt Baja fidelidad]
 
 * Diseño de mediana fidelidad con FeedBack aplicado
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/1.png)
-Format: ![Alt LogIn](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36959183_1712966605439258_6005070325186822144_n.png?_nc_cat=0&oh=8d314b7830493db61557250a49b4d519&oe=5BE0FD1A)
+Format: ![Alt LogIn]
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/2.png)
-Format: ![Alt 1a vista](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36985567_1712966822105903_5704157967171977216_n.png?_nc_cat=0&oh=f14b96bd47bd874cf704edb146f5ccb1&oe=5BE8924E)
+Format: ![Alt 1a vista]
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/3.png)
-Format: ![Alt Menú sedes](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36907298_1712967055439213_6805984212953333760_n.png?_nc_cat=0&oh=95c6993a25cec28b05d6b61af4d590f6&oe=5BCE1B66)
+Format: ![Alt Menú sedes]
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/4.png)
-Format: ![Alt Vista Sedes](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36897148_1712967242105861_5009632575400968192_n.png?_nc_cat=0&oh=23fbfc88284b042853fbf98d80407551&oe=5BE3E0B7)
+Format: ![Alt Vista Sedes]
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/5.png)
-Format: ![Alt Menú generaciones](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36981028_1712966575439261_5001690983302168576_n.png?_nc_cat=0&oh=3415b18f1f7c196f849c9a5ee835660b&oe=5BDF493D)
+Format: ![Alt Menú generaciones]
 ![GitHub Sketch Sprint 2 mediana fidelidad](/scr/Pictures/6.png)
-Format: ![Alt Alumnas](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36889846_1712966325439286_654393432105549824_n.png?_nc_cat=0&oh=addb69c59d4689e5c913d689b2705dab&oe=5BEC2C88)
+Format: ![Alt Alumnas]
 
 * Diseño de alta fidelidad en Canva
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital1.jpeg)
-Format: ![Alt LogIn](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36909163_1712966732105912_7288000957995024384_n.jpg?_nc_cat=0&oh=b14984fd55fc8355e9b936aa2fa13848&oe=5BDB23F5)
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital2.jpeg)
-Format: ![Alt Vista Generaciones Mex](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36968019_1712967492105836_1030552556289392640_n.jpg?_nc_cat=0&oh=a1341611998e60d566c42b899130ae66&oe=5BA50E03)
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital3.jpeg)
-Format: ![Alt Vista lista de alumnas](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36928133_1712967678772484_9076781732140679168_n.jpg?_nc_cat=0&oh=708b5653ef008243a1a7f9fdfbdd0967&oe=5B9E9356)
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital4.jpeg)
-Format: ![Alt Vista de modales](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36983632_1712967355439183_6386776013086392320_n.jpg?_nc_cat=0&oh=8041b2281badfed82824cd7526e5b85b&oe=5BE735E4)
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital5.jpeg)
-Format: ![Alt Vista Generaciones](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36998508_1712967598772492_8780329663302991872_n.jpg?_nc_cat=0&oh=eda62775e933863facc01404af75d45b&oe=5BA1543E)
-![GitHub Sketch alta fidelidad](/scr/Pictures/digital6.jpeg)
-Format: ![Alt Vista Sedes](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36913510_1712967575439161_7639487895950065664_n.jpg?_nc_cat=0&oh=efc89b15ab0abba9db0c002e9f704cee&oe=5BEA93CB)
+![GitHub Sketch alta fidelidad](/scr/Pictures/digital1.jpg)
+Format: ![Alt LogIn]
+![GitHub Sketch alta fidelidad](/scr/Pictures/digital2.jpg)
+Format: ![Alt Vista Generaciones Mex]
+![GitHub Sketch alta fidelidad](/scr/Pictures/digital3.jpg)
+Format: ![Alt Vista lista de alumnas]
+![GitHub Sketch alta fidelidad](/scr/Pictures/digital4.jpg)
+Format: ![Alt Vista de modales]
+![GitHub Sketch alta fidelidad](/scr/Pictures/digital5.jpg)
+Format: ![Alt Vista Generaciones]
+![GitHub Sketch alta fidelidad](/scr/Pictures/digital6.jpg)
+Format: ![Alt Vista Sedes]
 
 * Diseño del sitio final
 
 ![GitHub Implementación Desktop](/scr/Pictures/ImplementacionDesktop.png)
-Format: ![Alt Implementación Desktop](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36916355_1712966978772554_1750215979327029248_n.png?_nc_cat=0&oh=39b2883c4d178aae0204ea8c8d56d793&oe=5BD4D934)
+Format: ![Alt Implementación Desktop]
 
 ![GitHub Implementación responsive](/scr/Pictures/ImplementacionRespinsive.png)
-Format: ![Alt Implementación Responsive](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/36990055_1712967525439166_6920390515242303488_n.png?_nc_cat=0&oh=8b434f4da9f044b3a02cd93a67fac9f8&oe=5BD3F057)
+Format: ![Alt Implementación Responsive]
 
 ### 4. Desarrollo y maquetación
 
@@ -377,3 +377,95 @@ Contacto:
 
 -	FaceBook: @Yocelin Garcia Romero
 -	Correo: garcia_romero.y@hotmail.com
+
+### 11. Investigación UX
+
+# **Data Dashboard**
+
+## **Proceso de UX**
+
+Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
+
+### **1. Descubrimiento e investigación**
+
+Laboratoria es una Asociación comprometida con la educación e inclusión al mundo Tech de mujeres en América Latina, en cada uno de sus bootcamp hay lugar hasta para 100 alumnas, siendo cada uno de ellos un tanto diferente y revolucionado comparado con su ultima edición, es así como la necesidad de una base de datos surge, pues para lograr mejores resultados se deben analizar cada uno de los avances de las alumnas.
+Es así como surge este Data Dashboard, una interfaz diseñada para las Training Manager de Laboratoria, con el objetivo de mostrar los avances de cada alumna en la plataforma LMS, busca mostrar en números y graficas el avance de cada una de ellas y las alumnas activas.
+
+__Usuarixs:__ 
+Comencemos con las TM de todas las sedes, pues su opinión es la más importante ya que son las usuarias principales. Los usuarios secundarios son los coachs y el personal de alummni manager. 
+Es necesario decir que los usuarios  cuentan con un conocimiento amplio en el mundo tecnologico y estan familiarizados con las plataformas que usaremos como referencia para la creacion de este Data Dashboard, las entrevistas arrojaron que el uso de la plataforma seria principlamente por Laptop o computadora de escritorio, dejando en segundo plano el movil, pero no por eso es menos importante ya que es una manera rapida de acceder al Data Dashboard.
+
+
+__Necesidades de las usuarias:__ 
+La necesidad principal de las TM Laboratoria es la visualizacion de datos, dejando como referencia las alumnas activas y el porcentaje de completitud en general en la plataforma LMS.
+Una vez analizados estos datos poder cuestionar, implementar, repetir o mejorar las actividades.
+
+__Objetivos de las usuarias:__ 
+El objetivo principal de las TM Laboratoria es toma de decisiones de una forma rapida, correcta y con bases solidas, ya que su función es la gestión de estrategias a través de la información adquirida, siempre buscando la mejora de la educación en el bootcamp.
+
+__Pain points:__ 
+El principal obstaculo de las TM Laboratoria es el acceso a los datos, pues en este momento se encuentran trabajando con datos que se encuentran en la nube en carpetas distintas y algunas de estas sin un enlace alguno aun cuando su contenido sea prioritario, esto significa perdida de tiempo y un poco de frustración para las TM.
+
+__Sentimientos:__
+En una entrevista realizada por Mariana Flores, Lucile menciona que la única manera en la que puede acceder a los datos es a traves de Excel en google drive, y le es muy complicado manipular los datos. Ese es su principal obstáculo, pues es muy tedioso.
+Es por eso que ella cree que un Data Dashboard sería la solucion a todos sus problemas y sería muy feliz, pues la manipulación de datos sería muy rápida, eficaz y actualizada.
+
+__Técnicas usadas en esta fase:__ 
+- Una encuesta vía Google Docs.
+- Dos entrevistas personales.
+Cabe mencionar que antes de llevar a cabo las entrevistas teníamos un boceto preparado, recibimos feedback y lo mejoramos para poder ofrecer lo que la TM de CDMX requería, es decir alumnas activas, selección de sedes, generaciones y visualización de cada alumna.
+
+__5. Objetivos del negocio:__ 
+1.- Capacitacion y colocacion laboral de mujeres en el mundo Tech.
+2.- Proporcionar talento tech femenino de calidad a las empresas.
+
+__6. Motivaciones del negocio para el data dashboard:__
+1.- Toma de decisiones para la mejora del bootcamp.
+2.- Conocimiento del desarrollo de sus estudiantes.
+3.- Saber que enfatizar para lograr un talento que agregue valor en cada proyecto.
+
+### **2. Síntesis y definición**
+
+__1. Cuáles crees que son los datos más importantes a tener en cuenta para el Data Dashboard:__
+Teniendo como base las entrevistas y feedback de la TM de CDMX y un par de coachs, los datos mas importantes a mostrar son el numero de alumnas activas y el porcentaje de completitud en general en la plataforma LMS.
+
+__2. Lo que los usuarios esperan obtener:__
+Una plataforma actualizada, amigable, intuitiva y eficaz para poder realizar la consulta de los datos.
+
+__3. Insights:__
+Mostrar cada uno de los datos prioritarios, en cards y el perfil de las estudiantes en un modal o collasible.
+
+__4. Data proporcionada:__ 
+Nuestra data arroja 3 sedes con sus respectivas 3 generaciones, en cada una de ellas podemos encontrar a 15 alumnas que desglozan sus datos personales y su avance en 3 unidades de aprendizaje con su respectivo quiz.
+
+### **3. Ideación**
+Una vez concluida la busqueda tenemos como conclusión que un data dashboard muestra una barra lateral como menú, muestra la mayor información posible en un sola vista, es asi como surge el primer prototipo para la primer semana de avance.
+
+![Sketch](/src/Pictures/1.png)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/2.png)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/3.png)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/4.png)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/5.png)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/6.png)
+Format: ![Alt Canva]
+
+### **4. Prototipado**
+De acuerdo a la primer ideación más el feedback recibido por Lucile TM y Jhon coach de CDMX, se creo el siguiente prototipo, basado en el estudio de mercado de Data Dashboards que se encuentran actualmente en el mercado.
+
+![Sketch](/src/Pictures/digital1.jpg)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/digital2.jpg)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/digital3.jpg)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/digital4.jpg)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/digital5.jpg)
+Format: ![Alt Canva]
+![Sketch](/src/Pictures/digital6.jpg)
+Format: ![Alt Canva]
