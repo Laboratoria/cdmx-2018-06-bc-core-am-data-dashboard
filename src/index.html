@@ -69,6 +69,8 @@
             </ul>
         </header>
         <section>
+            <div class="row" id="searchingCard">
+            </div>
             <div class="row" id="cardsSpace">
             </div>
             <!--fin modal-->
@@ -87,6 +89,12 @@
                 // console.log(collapsibleElem);
                 var collapsibleElem = document.querySelectorAll('.collapsible');
                 var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+
+                var hour = document.getElementById('searchingCard');
+                var actualDate = new Date();
+                var hourSpace = `<p>Hoy es: ${actualDate.getDate()}-${actualDate.getMonth()}-${actualDate.getFullYear()}</p>`;
+                hour.innerHTML = hourSpace;
             </script>
     </body>
 </html>
+

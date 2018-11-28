@@ -191,3 +191,15 @@ div.color-activas{
     text-align: center;
     border-radius: 15px;
 }
+#searchingCard {
+    width: 80%;
+    height: 10vh;
+    background-color: gray;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 8px;
+}
+
+#cardsSpace {
+    width: 90%;
+}
