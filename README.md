@@ -62,11 +62,6 @@ La nueva vista no genera un documento HTML nuevo, solo oculta la vista anterior 
 
 > Es necesario presentar bocetos de la estructura de cada plantilla del sitio, realizar el diseño de mediana y alta fidelidad y finalmente presentar el diseño de la plataforma. Es propio presentar y testear las páginas, se sugiere el  uso de *invision* para dar tour por cada pantalla en futuros proyectos.
 
-* Diseño de baja fidelidad
-
-![Sketch](/scr/Pictures/bajaf.jpg)
-Format: ![Alt Canva]
-
 ### 4. Desarrollo y maquetación
 
 > El desarrollo y maquetación del proyecto se realizó utilizando pequeños detalles de Bootstrap en su versión 4.0, la mayor  parte del diseño se maqueto y desarrollo en Materialize versión 1.0.0-rc.2 por medio de su CDN, además se hace uso de estilos sencillos en CSS y se usan propiedades de la funcionalidad display (none y visibility) para cambiar de una vista a la otra.
