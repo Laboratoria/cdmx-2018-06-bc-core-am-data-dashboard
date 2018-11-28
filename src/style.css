@@ -204,3 +204,40 @@ div.color-activas{
 #cardsSpace {
     width: 90%;
 }
+
+@media only screen and (max-width: 425px) {
+    .header-logo {
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .card-content span {
+        font-size: 1em;
+    }
+    span.card-title.cards {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-content span {
+        font-size: 0.8em;
+        text-align: center;
+    }
+    .card-content p {
+        font-size: 0.8em;
+        text-align: center;
+    }
+    span.card-title.cards {
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    .color-activas span {
+        font-size: 0.6em;
+    }
+    .letra-barra {
+        position: relative;
+    }
+}

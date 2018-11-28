@@ -287,7 +287,7 @@ const listeners = (data) => {
     const selectorSpace = `<div class = "container">
                                     <div class = "row">
                                         <div class="input-field col s5 m5">
-                                            <select ${ onChange = 'changeValue(students)'} name = "orderBy" id = "orderBy">
+                                            <select onChange = 'changeValue()' name = "orderBy" id = "orderBy">
                                             <option value="" disabled selected>Ordenar por: </option>
                                             <option value="name">Nombre</option>
                                             <option value="percentage">Completitud</option>
@@ -295,7 +295,7 @@ const listeners = (data) => {
                                             <label>Categoría para ordenar</label>
                                         </div>
                                         <div class="input-field col s5 m5">
-                                            <select onChange="changeValue2(${students})" name = "orderIn" id = "orderIn">
+                                            <select onChange="changeValue2()" name = "orderIn" id = "orderIn">
                                             <option value="" disabled selected>Ordenar de forma:</option>
                                             <option value="ASC">Ascendente</option>
                                             <option value="DESC">Descendente</option>
