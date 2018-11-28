@@ -193,13 +193,14 @@ div.color-activas{
 }
 #searchingCard {
     width: 80%;
-    height: 10vh;
+    height: 15vh;
     background-color: gray;
     text-align: center;
     color: #ffffff;
     padding-top: 8px;
+    align-items: center;
+    justify-content: center;
 }
-
 #cardsSpace {
     width: 90%;
 }

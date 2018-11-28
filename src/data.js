@@ -447,7 +447,6 @@ window.sortStudents = (students, orderBy, orderDirection) => {
       ordered = students.sort((arrayA, arrayB) => {
         return (arrayA.average - arrayB.average); // Coloca arrayA primero si el resultado de la resta es >0
       });
-      console.log(ordered);
     } else {
       ordered = students.sort((arrayA, arrayB) =>{
         return (arrayB.average - arrayA.average);// Coloca arrayB primero si el resultado de la resta es <0
@@ -896,7 +895,6 @@ window.studentsPrint = (laboratoria) => {
 // Imprime Templete String de cada sede en un card difrente
 window.printSedesAll = (laboratoria) => {
   const sedeM = computeVenuesStats(laboratoria);
-  console.log(sedeM);
   const resultFilter = document.getElementById('cardsSpace');
   let sedeAll = '';
   let advancePercentage = [];

@@ -283,6 +283,33 @@ const listeners = (data) => {
 
   getSort.addEventListener('click', (event) => {
     const students = studentsModal(data);
+    const indicatorsSpace = document.getElementById('searchingCard');
+    const selectorSpace = `<div class = "container">
+                                    <div class = "row">
+                                        <div class="input-field col s5 m5">
+                                            <select ${ onChange = 'changeValue(students)'} name = "orderBy" id = "orderBy">
+                                            <option value="" disabled selected>Ordenar por: </option>
+                                            <option value="name">Nombre</option>
+                                            <option value="percentage">Completitud</option>
+                                            </select>
+                                            <label>Categoría para ordenar</label>
+                                        </div>
+                                        <div class="input-field col s5 m5">
+                                            <select onChange="changeValue2(${students})" name = "orderIn" id = "orderIn">
+                                            <option value="" disabled selected>Ordenar de forma:</option>
+                                            <option value="ASC">Ascendente</option>
+                                            <option value="DESC">Descendente</option>
+                                            </select>
+                                            <label>Tipo de ordenamiento</label>
+                                        </div>
+                                    </div>
+                                </div>`;
+    indicatorsSpace.innerHTML = selectorSpace;
+
+    // Select 
+    $(document).ready(function() {
+      $('select').formSelect();
+    });
     const orderBy = 'percentage';
     const orderDirection = 'ASC';
     const sort = sortStudents(students, orderBy, orderDirection);
@@ -290,6 +317,26 @@ const listeners = (data) => {
   }, {passive: true});
 };
 
+const changeValue = (students) => {
+  const orderByDetected = document.getElementById('orderBy');
+  const orderByTag = document.getElementsByTagName('option');
+  const ordering = orderByDetected.value;
+  console.log(ordering);
+  console.log(students);
+  const orderDirection = 'ASC';
+  const sort = sortStudents(students, ordering, orderDirection);
+  printSort(sort);
+};
+
+const changeValue2 = (students) => {
+  const orderByDetected = document.getElementById('orderIn');
+  const orderByTag = document.getElementsByTagName('option');
+  const ordering = orderByDetected.value;
+  console.log(ordering);
+  const orderBy = 'percentage';
+  const sort = sortStudents(students, orderBy, ordering);
+  printSort(sort);
+};
 
 // Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
 window.onload = () => {

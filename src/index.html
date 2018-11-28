@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <title>LabShboard</title>
+        <title>LabBoard</title>
     </head>
 
     <body>
@@ -89,6 +89,11 @@
                 // console.log(collapsibleElem);
                 var collapsibleElem = document.querySelectorAll('.collapsible');
                 var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+
+                // Select 
+                $(document).ready(function(){
+                    $('select').formSelect();
+                });
 
                 var hour = document.getElementById('searchingCard');
                 var actualDate = new Date();
