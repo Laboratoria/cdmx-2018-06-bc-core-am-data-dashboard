@@ -64,55 +64,8 @@ La nueva vista no genera un documento HTML nuevo, solo oculta la vista anterior 
 
 * Diseño de baja fidelidad
 
-![Sketch](/scr/Pictures/SketchFinalBajaF.jpg)
+![Sketch](/scr/Pictures/bajaf.jpg)
 Format: ![Alt Canva]
-
-* Diseño de mediana fidelidad con FeedBack aplicado
-
-![Sketch](/src/Pictures/1.png)
-Format: ![Alt Canva]
-
-![Sketch](/scr/Pictures/2.png)
-Format: ![Alt 1a vista]
-
-![Sketch](/scr/Pictures/3.png)
-Format: ![Alt Menú sedes]
-
-![Sketch](/scr/Pictures/4.png)
-Format: ![Alt Vista Sedes]
-
-![Sketch](/scr/Pictures/5.png)
-Format: ![Alt Menú generaciones]
-
-![Sketch](/scr/Pictures/6.png)
-Format: ![Alt Alumnas]
-
-* Diseño de alta fidelidad en Canva
-![Sketch](/scr/Pictures/digital1.jpg)
-Format: ![Alt LogIn]
-
-![Sketch](/scr/Pictures/digital2.jpg)
-Format: ![Alt Vista Generaciones Mex]
-
-![Sketch](/scr/Pictures/digital3.jpg)
-Format: ![Alt Vista lista de alumnas]
-
-![Sketch](/scr/Pictures/digital4.jpg)
-Format: ![Alt Vista de modales]
-
-![Sketch](/scr/Pictures/digital5.jpg)
-Format: ![Alt Vista Generaciones]
-
-![Sketch](/scr/Pictures/digital6.jpg)
-Format: ![Alt Vista Sedes]
-
-* Diseño del sitio final
-
-![Sketch](/scr/Pictures/ImplementacionDesktop.png)
-Format: ![Alt Implementación Desktop]
-
-![Sketch](/scr/Pictures/ImplementacionRespinsive.png)
-Format: ![Alt Implementación Responsive]
 
 ### 4. Desarrollo y maquetación
 
