@@ -286,7 +286,7 @@ const listeners = (data) => {
     const indicatorsSpace = document.getElementById('searchingCard');
     const selectorSpace = `<div class = "container">
                                     <div class = "row">
-                                        <div class="input-field col s5 m5">
+                                        <div class="input-field col s11 m5 l5">
                                             <select onChange = 'changeValue()' name = "orderBy" id = "orderBy">
                                             <option value="" disabled selected>Ordenar por: </option>
                                             <option value="name">Nombre</option>
@@ -294,7 +294,7 @@ const listeners = (data) => {
                                             </select>
                                             <label>Categoría para ordenar</label>
                                         </div>
-                                        <div class="input-field col s5 m5">
+                                        <div class="input-field col s11 m5 l5">
                                             <select onChange="changeValue2()" name = "orderIn" id = "orderIn">
                                             <option value="" disabled selected>Ordenar de forma:</option>
                                             <option value="ASC">Ascendente</option>
