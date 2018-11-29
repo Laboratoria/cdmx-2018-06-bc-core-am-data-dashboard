@@ -283,12 +283,11 @@ const listeners = (data) => {
 
   getSort.addEventListener('click', (event) => {
     const students = studentsModal(data);
-    console.log(students);
     const indicatorsSpace = document.getElementById('searchingCard');
     const selectorSpace = `<div class = "container">
                                     <div class = "row">
                                         <div class="input-field col s11 m5 l5">
-                                            <select onChange = 'changeValue(${students[0].name})' name = "orderBy" id = "orderBy">
+                                            <select onChange = "changeValue()" name = "orderBy" id = "orderBy">
                                             <option value="" disabled selected>Ordenar por: </option>
                                             <option value="name">Nombre</option>
                                             <option value="percentage">Completitud</option>
@@ -296,7 +295,7 @@ const listeners = (data) => {
                                             <label>Categoría para ordenar</label>
                                         </div>
                                         <div class="input-field col s11 m5 l5">
-                                            <select onChange='changeValue2()' name = "orderIn" id = "orderIn">
+                                            <select onChange = "changeValue2()" name = "orderIn" id = "orderIn">
                                             <option value="" disabled selected>Ordenar de forma:</option>
                                             <option value="ASC">Ascendente</option>
                                             <option value="DESC">Descendente</option>
@@ -311,31 +310,23 @@ const listeners = (data) => {
     $(document).ready(function() {
       $('select').formSelect();
     });
-    const orderBy = 'percentage';
-    const orderDirection = 'ASC';
+
+    const orderBy = "name"; 
+    const orderDirection = "ASC";
     const sort = sortStudents(students, orderBy, orderDirection);
     printSort(sort);
   }, {passive: true});
 };
 
-const changeValue = (students) => {
-  const orderByDetected = document.getElementById('orderBy');
-  const orderByTag = document.getElementsByTagName('option');
-  const ordering = orderByDetected.value;
-  console.log(ordering);
-  const orderDirection = 'ASC';
-  const sort = sortStudents(students, ordering, orderDirection);
-  printSort(sort);
+const changeValue = () => {
+  const orderByDetected = document.getElementById('orderBy').value;
+  console.log(orderByDetected);
 };
 
-const changeValue2 = (students) => {
-  const orderByDetected = document.getElementById('orderIn');
-  const orderByTag = document.getElementsByTagName('option');
-  const ordering = orderByDetected.value;
-  console.log(ordering);
-  const orderBy = 'percentage';
-  const sort = sortStudents(students, orderBy, ordering);
-  printSort(sort);
+const changeValue2 = () => {
+  const orderInDetected = document.getElementById('orderIn').value;
+  console.log(orderInDetected);
+  //return orderInDetected;
 };
 
 // Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
