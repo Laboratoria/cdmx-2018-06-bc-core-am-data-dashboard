@@ -283,11 +283,12 @@ const listeners = (data) => {
 
   getSort.addEventListener('click', (event) => {
     const students = studentsModal(data);
+    console.log(students);
     const indicatorsSpace = document.getElementById('searchingCard');
     const selectorSpace = `<div class = "container">
                                     <div class = "row">
                                         <div class="input-field col s11 m5 l5">
-                                            <select onChange = 'changeValue()' name = "orderBy" id = "orderBy">
+                                            <select onChange = 'changeValue(${students[0].name})' name = "orderBy" id = "orderBy">
                                             <option value="" disabled selected>Ordenar por: </option>
                                             <option value="name">Nombre</option>
                                             <option value="percentage">Completitud</option>

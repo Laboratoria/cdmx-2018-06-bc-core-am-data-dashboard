@@ -1,4 +1,11 @@
 # **Data Dashboard**
+
+Data Dashboard es una plataforma que permite la visualización del desempeño de las alumnas de Laboratoria mostrado en métricas.
+
+![data-dashboard](https://github.com/YocelinGR/YocelinGR.github.io/blob/master/assets/sedes-dash.png?raw=true)
+
+###  Desarrollado para [Laboratoria](http://laboratoria.la)
+
 ## *Documentación y desarrollo*
 
 ----
