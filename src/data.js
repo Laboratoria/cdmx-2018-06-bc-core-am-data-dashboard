@@ -2,7 +2,7 @@
 window.computeStudentsStats = (laboratoria) => {
   //ARREGLO QUE CONTIENE LOS OBJETOS ESTUDIANTES
   let student = [];
-// VARIABLES QUE SERAN PROPIEDADES DE CADA OBJETO
+  // VARIABLES QUE SERAN PROPIEDADES DE CADA OBJETO
   let campus = '';
   let name = '';
   let mail = '';
@@ -12,9 +12,9 @@ window.computeStudentsStats = (laboratoria) => {
   let percentageDuration = 0;
   let subtopics = {};
 
-   //FOR PARA OBTENER EL NOMBRE DE CADA SEDE
+  //FOR PARA OBTENER EL NOMBRE DE CADA SEDE
   for (key in laboratoria) {
-    campus = key;  // GUARDANDO SEDES EN VARIABLE CAMPUS
+    campus = key; // GUARDANDO SEDES EN VARIABLE CAMPUS
     // OBTENIENDO GENERACION
     const generations = Object.keys(laboratoria[key].generacion);
     generations.forEach((generation) => {
@@ -42,7 +42,7 @@ window.computeStudentsStats = (laboratoria) => {
         // ITERANDO EN TEMAS PARA OBTENER DATOS DE OBJETO TOPICS
         let topicsS = statS.temas;
         for (key1 in topicsS) {
-          let tema = key1;  // OBTENIENDO EL NOMBRE DE CADA TEMA
+          let tema = key1; // OBTENIENDO EL NOMBRE DE CADA TEMA
           const completedPercentageT = topicsS[key1].porcentajeCompletado; // OBTENIENDO EL PORCENTAJE COMPLETADO
           percentageDuration = topicsS[key1].duracionTemaCompletado;
         }
@@ -81,7 +81,7 @@ window.computeGenerationsStats = (laboratoria) => {
   let campus = '';
   let average = 0;
   let count = 0;
-// FOR QUE OBTIENE LAS KEYS
+  // FOR QUE OBTIENE LAS KEYS
   for (key in laboratoria) {
     // RELLENANDO PROPIEDAD 'CAMPUS' CON LA KEY LABORATORIA
     campus = key;
@@ -92,15 +92,15 @@ window.computeGenerationsStats = (laboratoria) => {
       generation = generation;
       // ENTRANDO A LA DATA PARA OBTENER LAS ESTUDIANTES
       const students = laboratoria[key].generacion[generation].estudiantes;
-        average = 0;
+      average = 0;
       //  FOR QUE PERMITE OBETENER EL PORCENTAJE COMPLETADO
       for (let i = 0; i < students.length; i++) {
         let progress = students[i].progreso.porcentajeCompletado;
         // EN LA VARIABLE AVERAGE SE VAN SUMANDO LOS PORCENTAJES COMPLETADOS
-        average += progress;  // SE VA SUMANDO EL PORCENTAJE COMPLETADO POR CADA CICLO QUE REALIZA EL FOR
-        count = students.length;  // VARIABLE QUE INDICA EL NUMERO DE ALUMNAS
+        average += progress; // SE VA SUMANDO EL PORCENTAJE COMPLETADO POR CADA CICLO QUE REALIZA EL FOR
+        count = students.length; // VARIABLE QUE INDICA EL NUMERO DE ALUMNAS
       }
-      average = Math.round(average / count);  //AVERAGE OBTENDA EL PORCENTAJE DE COMPLETITUD POR ALUMNA
+      average = Math.round(average / count); //AVERAGE OBTENDA EL PORCENTAJE DE COMPLETITUD POR ALUMNA
       generacion.push({ // PUSH VA AGREGANDO LOS DATOS OBTENIDOS Y LOS GUARDA EN OBJETOS DE UN ARREGLO NUEVO LLAMADO GENERACION
         campus,
         generation,
@@ -113,11 +113,85 @@ window.computeGenerationsStats = (laboratoria) => {
 };
 
 
-window.sortStudents = () => {
-  return;
-},
-window.filterStudents = (infoStudent, search) => {
-//   console.log(infoStudent);
-  const busquedaResultado = infoStudent.filter(name => (infoStudent.name === search));
-  return busquedaResultado;
+window.sortStudents = (students, orderBy, orderDirection) => {
+
+  // ASCENDENTE - Menor a Mayor -  (A a Z)
+  // DESCENDENTE - Mayor a Menor - (Z a A)
+
+  if (orderBy == "name" && orderDirection == "ASC") {
+    let newstudents = students.sort(function (a, b) {
+      let nombreActual = a.name.toUpperCase();
+      let nombreSiguiente = b.name.toUpperCase();
+      if (nombreActual < nombreSiguiente) {
+        return -1;
+      } else if (nombreActual > nombreSiguiente) {
+        return 1
+      } else {
+        return 0
+      };
+    });
+    return newstudents;
+  }
+
+  if (orderBy == "name" && orderDirection == "DESC") {
+    let newstudents = students.sort(function (a, b) {
+      let nombreActual = a.name.toUpperCase();
+      let nombreSiguiente = b.name.toUpperCase();
+      if (nombreActual < nombreSiguiente) {
+        return 1;
+      } else if (nombreActual > nombreSiguiente) {
+        return -1
+      } else {
+        return 0
+      };
+    });
+    return newstudents;
+  }
+
+
+  if (orderBy == "completedPercentage" && orderDirection == "ASC") {
+    let newstudents = students.sort(function (a, b) {
+      let porcentajeActual = a.stats.completedPercentage;
+      let porcentajeSiguiente = b.stats.completedPercentage;
+      if (porcentajeActual < porcentajeSiguiente) {
+        return -1;
+      } else if (porcentajeActual > porcentajeSiguiente) {
+        return 1
+      } else {
+        return 0
+      };
+    });
+    return newstudents;
+  }
+
+  if (orderBy == "completedPercentage" && orderDirection == "DESC") {
+    let newstudents = students.sort(function (a, b) {
+      let porcentajeActual = a.stats.completedPercentage;
+      let porcentajeSiguiente = b.stats.completedPercentage;
+      if (porcentajeActual < porcentajeSiguiente) {
+        return 1;
+      } else if (porcentajeActual > porcentajeSiguiente) {
+        return -1
+      } else {
+        return 0
+      };
+    });
+    return newstudents;
+  };
 };
+
+
+
+
+// window.filterStudents = (infoStudent, search) => {
+//   //   console.log(infoStudent);
+//   const busquedaResultado = infoStudent.filter(name => (infoStudent.name === search));
+//   return busquedaResultado;
+// };
+
+window.filterStudents = (students, search) => {
+  let newStudents = students.filter((i) => {
+    return i.name == search;
+  })
+  return newStudents;
+}
