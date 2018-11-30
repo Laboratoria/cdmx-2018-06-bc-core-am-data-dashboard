@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', ()=> {// DOMContentLoaded es un evento
+document.addEventListener('DOMContentLoaded', () => { // DOMContentLoaded es un evento
   realoadJSON();
 }, false);
 
@@ -10,11 +10,20 @@ window.realoadJSON = () => {
     .then((res) => {
       const infoStudent = computeStudentsStats(res);
       const infoGeneration = computeGenerationsStats(res);
-      filterStudents(infoStudent);
+      // filterStudents(infoStudent);
       studentDraw(infoStudent);
       generationDraw(infoGeneration);
+      return infoStudent;
     })
-    .catch(error => {console.log(error)});
+    .then((infoS) => {
+      // console.log(infoS);
+      const resultSearch = filterStudents(infoS, 'Sherrie Jeana');
+      const resultOrder = sortStudents(infoS, 'name', 'ASC');
+      console.log(resultSearch, resultOrder);
+    })
+    .catch(error => {
+      console.log(error)
+    });
 };
 
 // pintar tabla de estudiantes
@@ -46,7 +55,7 @@ window.studentDraw = (infoStudent) => {
                 <th scope="col"> ${infoStudent[i].stats.completedPercentage}</th>
                 <th scope="col"> ${infoStudent[i].stats.status}</th>
             </tr>
-            ` ;
+            `;
   }
 };
 
