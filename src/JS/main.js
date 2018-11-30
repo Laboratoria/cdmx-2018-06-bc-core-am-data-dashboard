@@ -283,52 +283,34 @@ const listeners = (data) => {
 
   getSort.addEventListener('click', (event) => {
     const students = studentsModal(data);
-    const indicatorsSpace = document.getElementById('searchingCard');
-    const selectorSpace = `<div class = "container">
-                                    <div class = "row">
-                                        <div class="input-field col s11 m5 l5">
-                                            <select onChange = "changeValue()" name = "orderBy" id = "orderBy">
-                                            <option value="" disabled selected>Ordenar por: </option>
-                                            <option value="name">Nombre</option>
-                                            <option value="percentage">Completitud</option>
-                                            </select>
-                                            <label>Categoría para ordenar</label>
-                                        </div>
-                                        <div class="input-field col s11 m5 l5">
-                                            <select onChange = "changeValue2()" name = "orderIn" id = "orderIn">
-                                            <option value="" disabled selected>Ordenar de forma:</option>
-                                            <option value="ASC">Ascendente</option>
-                                            <option value="DESC">Descendente</option>
-                                            </select>
-                                            <label>Tipo de ordenamiento</label>
-                                        </div>
-                                    </div>
-                                </div>`;
-    indicatorsSpace.innerHTML = selectorSpace;
-
-    // Select 
-    $(document).ready(function() {
-      $('select').formSelect();
-    });
-
-    const orderBy = "name"; 
-    const orderDirection = "ASC";
+    document.getElementById('searchingCard').style.display = 'block';
+    const orderBy = 'name'; 
+    const orderDirection = 'ASC';
     const sort = sortStudents(students, orderBy, orderDirection);
     printSort(sort);
-  }, {passive: true});
-};
+  });
 
-const changeValue = () => {
-  const orderByDetected = document.getElementById('orderBy').value;
-  console.log(orderByDetected);
-};
+  let orderByListener = document.getElementById('orderBy');
 
-const changeValue2 = () => {
-  const orderInDetected = document.getElementById('orderIn').value;
-  console.log(orderInDetected);
-  //return orderInDetected;
-};
+  orderByListener.addEventListener('change', function(event) {
 
+    document.getElementById('searchingCard').style.display = 'block';
+    const studenty = studentsModal(data);
+    const orderBySelected = this.options[orderByListener.selectedIndex];
+    const orderByValue = orderBySelected.value;
+    // ----
+    
+    let orderInListener = document.getElementById('orderIn');
+
+    orderInListener.addEventListener('change', function(event) {
+      
+      const orderInSelected = this.options[orderInListener.selectedIndex];
+      const orderInValue = orderInSelected.value;
+      const sortBy = sortStudents(studenty, orderByValue, orderInValue);
+      printSort(sortBy);
+    });
+  });
+};
 // Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
 window.onload = () => {
   fetch(laboratoria)

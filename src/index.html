@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="./CSS/style.css">
         <title>LabBoard</title>
+        <link rel="shortcut icon" href="./Pictures/l_rgb_-01_360.png" />
     </head>
 
     <body>
@@ -69,7 +70,27 @@
             </ul>
         </header>
         <section>
-            <div class="row" id="searchingCard">
+            <div class="row" id="searchingCard" style='display:none;'>
+                    <div class = "container">
+                            <div class = "row">
+                                <div class="input-field col s11 m5 l5">
+                                    <select name = "orderBy" id = "orderBy">
+                                    <option value="" disabled selected>Ordenar por: </option>
+                                    <option value="name">Nombre</option>
+                                    <option value="percentage">Completitud</option>
+                                    </select>
+                                    <label>Categoría para ordenar</label>
+                                </div>
+                                <div class="input-field col s11 m5 l5">
+                                    <select name = "orderIn" id = "orderIn">
+                                    <option value="" disabled selected>Ordenar de forma:</option>
+                                    <option value="ASC">Ascendente</option>
+                                    <option value="DESC">Descendente</option>
+                                    </select>
+                                    <label>Tipo de ordenamiento</label>
+                                </div>
+                            </div>
+                        </div>
             </div>
             <div class="row" id="cardsSpace">
             </div>
@@ -94,11 +115,6 @@
                 $(document).ready(function(){
                     $('select').formSelect();
                 });
-
-                var hour = document.getElementById('searchingCard');
-                var actualDate = new Date();
-                var hourSpace = `<p>Hoy es: ${actualDate.getDate()}-${actualDate.getMonth()}-${actualDate.getFullYear()}</p>`;
-                hour.innerHTML = hourSpace;
             </script>
     </body>
 </html>

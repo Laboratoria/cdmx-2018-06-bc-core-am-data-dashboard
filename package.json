@@ -26,5 +26,24 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.0",
     "eslint-plugin-react": "^7.10.0"
-  }
+  },
+  "description": "Data Dashboard es una plataforma que permite la visualización del desempeño de las alumnas de Laboratoria mostrado en métricas.",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YocelinGR/cdmx-2018-06-bc-core-am-data-dashboard.git"
+  },
+  "keywords": [
+    "dashboard",
+    "laboratoria",
+    "students",
+    "analitics\u001b[D\u001b[D\u001b[D\u001b[y\u001b[C\u001b[C\u001b[C\u001b[C"
+  ],
+  "author": "Yocelin GR Estefaniamolinaa",
+  "bugs": {
+    "url": "https://github.com/YocelinGR/cdmx-2018-06-bc-core-am-data-dashboard/issues"
+  },
+  "homepage": "https://github.com/YocelinGR/cdmx-2018-06-bc-core-am-data-dashboard#readme"
 }
