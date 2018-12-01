@@ -202,7 +202,13 @@ div.color-activas{
     justify-content: center;
 }
 #cardsSpace {
-    width: 90%;
+    width: 85%;
+}
+#findingCard {
+    width: 85%;
+}
+#csearchingCard {
+    width: 85%;
 }
 
 @media only screen and (max-width: 425px) {

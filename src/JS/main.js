@@ -279,16 +279,23 @@ const listeners = (data) => {
   getFilter.addEventListener('click', (event) => {
     document.getElementById('searchingCard').style.display = 'none';
     document.getElementById('findingCard').style.display = 'block';
-    const nameIn = document.getElementById('findName');
-    
-    nameIn.addEventListener('change', function(event) {
-      const students = studentsModal(data);
-      const nameSerched = nameIn.value;
-      console.log(nameSerched);
-      const filter = filterStudents(students, nameSerched);
-      printFilter(filter);
+    const students = studentsModal(data);
+    const filter = filterStudents(students, 'Iseult Ysolt');
+    printFilter(filter);
+    autocomplete({
+      input: document.getElementById('findName'),
+      fetch: function(text, update) {
+        text = text.toLowerCase();
+        // you can also use AJAX requests instead of preloaded data
+        var suggestions = students.filter(std => std.name.toLowerCase().startsWith(text));
+        update(suggestions);
+      },
+      onSelect: function(item) {
+        console.log(item.name); 
+        const filter = filterStudents(students, item.name);
+        printFilter(filter);
+      }
     });
-    
   }, {passive: true});
 
   // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
