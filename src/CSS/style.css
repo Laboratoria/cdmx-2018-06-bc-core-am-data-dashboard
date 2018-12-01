@@ -229,16 +229,16 @@ div.color-activas{
 
 @media only screen and (max-width: 480px) {
     .card-content span {
-        font-size: 0.8em;
+        font-size: 0.9em;
         text-align: center;
     }
     .card-content p {
-        font-size: 0.8em;
+        font-size: 0.9em;
         text-align: center;
     }
     span.card-title.cards {
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     .color-activas span {
         font-size: 0.6em;
