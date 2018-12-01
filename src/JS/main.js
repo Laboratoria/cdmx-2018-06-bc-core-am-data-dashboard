@@ -309,7 +309,7 @@ const listeners = (data) => {
     const orderDirection = 'DESC';
     const sort = sortStudents(students, orderBy, orderDirection);
     printSort(sort);
-  });
+  },{passive: true});
 
   let orderByListener = document.getElementById('orderBy');
 
@@ -327,8 +327,8 @@ const listeners = (data) => {
       const orderInValue = orderInSelected.value;
       const sortBy = sortStudents(studenty, orderByValue, orderInValue);
       printSort(sortBy);
-    });
-  });
+    },{passive: true});
+  },{passive: true});
 };
 // Función global window onload para cargar y ejecutar el Fetch a refrescar la pagina
 window.onload = () => {
