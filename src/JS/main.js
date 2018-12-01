@@ -250,6 +250,8 @@ const listeners = (data) => {
   let getVenue = document.getElementById('goVenues');
 
   getVenue.addEventListener('click', (event) => {
+    document.getElementById('searchingCard').style.display = 'none';
+    document.getElementById('findingCard').style.display = 'none';
     printSedesAll(data);
   }, {passive: true});
 
@@ -257,6 +259,8 @@ const listeners = (data) => {
   let getGeneration = document.getElementById('goGeneretions');
 
   getGeneration.addEventListener('click', (event) => {
+    document.getElementById('searchingCard').style.display = 'none';
+    document.getElementById('findingCard').style.display = 'none';
     const generation = computeGenerationsStats(data);
     printGenerations(generation);
   }, {passive: true});
@@ -264,7 +268,8 @@ const listeners = (data) => {
   let getStudents = document.getElementById('goStudents');
 
   getStudents.addEventListener('click', (event) => {
-    // const students = studentsModal(data);
+    document.getElementById('searchingCard').style.display = 'none';
+    document.getElementById('findingCard').style.display = 'none';
     studentsPrint(data);
   }, {passive: true});
 
@@ -272,10 +277,18 @@ const listeners = (data) => {
   let getFilter = document.getElementById('goFilter');
 
   getFilter.addEventListener('click', (event) => {
-    const students = studentsModal(data);
-    const search = 'Melisa Marjorie';
-    const filter = filterStudents(students, search);
-    printFilter(filter);
+    document.getElementById('searchingCard').style.display = 'none';
+    document.getElementById('findingCard').style.display = 'block';
+    const nameIn = document.getElementById('findName');
+    
+    nameIn.addEventListener('change', function(event) {
+      const students = studentsModal(data);
+      const nameSerched = nameIn.value;
+      console.log(nameSerched);
+      const filter = filterStudents(students, nameSerched);
+      printFilter(filter);
+    });
+    
   }, {passive: true});
 
   // Evento que manda a ejecutar e imprimir la funcion de ordenamiento
@@ -284,8 +297,9 @@ const listeners = (data) => {
   getSort.addEventListener('click', (event) => {
     const students = studentsModal(data);
     document.getElementById('searchingCard').style.display = 'block';
-    const orderBy = 'name'; 
-    const orderDirection = 'ASC';
+    document.getElementById('findingCard').style.display = 'none';
+    const orderBy = 'percentage'; 
+    const orderDirection = 'DESC';
     const sort = sortStudents(students, orderBy, orderDirection);
     printSort(sort);
   });
@@ -293,7 +307,6 @@ const listeners = (data) => {
   let orderByListener = document.getElementById('orderBy');
 
   orderByListener.addEventListener('change', function(event) {
-
     document.getElementById('searchingCard').style.display = 'block';
     const studenty = studentsModal(data);
     const orderBySelected = this.options[orderByListener.selectedIndex];
@@ -303,7 +316,6 @@ const listeners = (data) => {
     let orderInListener = document.getElementById('orderIn');
 
     orderInListener.addEventListener('change', function(event) {
-      
       const orderInSelected = this.options[orderInListener.selectedIndex];
       const orderInValue = orderInSelected.value;
       const sortBy = sortStudents(studenty, orderByValue, orderInValue);
