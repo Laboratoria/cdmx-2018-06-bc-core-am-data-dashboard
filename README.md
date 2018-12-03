@@ -26,37 +26,3 @@ Este ultimo se utilizo para estilos, especificamente el navbar.
 En caunto a los estilos se emplearon parte de la libreria y nativo, lo mismo aplica para la estructura de HTML.
 
 
-### Boiler Templete 
-./
-├── .editorconfig
-├── .eslintrc
-├── .gitignore
-├── README.md
-├── data 
-│   └── laboratoria.json
-├── package.json
-├── src
-│   ├── Image
-├── ├── paginas
-│	    └─login.js
-│	      password.html
-├── ├── data.js
-│   ├── index.html
-│   ├── main.js
-│   └── style.css
-└── test
-|   ├── data.spec.js
-|   ├── fixtures.js
-|   ├── headless.js
-|   └── index.html
-└── ux
-    └── README.md
-
-
-![Lógica]( https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110630_1024.jpg "Diagrama uno")
-<<<<<<< HEAD
-![Lógica](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110648_1024.jpg"Diagrama dos")
-=======
-![Lógica](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110648_1024.jpg "Diagrama dos")
->>>>>>> upstream/master
-![Lógica](https://github.com/MiriamGaGu/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/src/Images/img_20180624_110711.jpg "Diagrama tres")
