@@ -1,7 +1,6 @@
 
 
-const url = 'https://api.myjson.com/bins/1efx86';
-
+const url = 'https://github.com/emeraldng/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/data/laboratoria.json';
 window.onload = () => {
   fetch(url)
     .then(response => response.json())
@@ -39,7 +38,6 @@ const dataLima = (data) => {
         //console.log(info.lima.generacion)
 
         let arrLaboratoriaEstudiantesLima = data.lima.generacion[info[generacion]].estudiantes;
-
         for (i = 0; i < arrLaboratoriaEstudiantesLima.length; i++) {
           result += `
           <div class='col xl4'>
@@ -83,7 +81,6 @@ const dataMex = (data) => {
         //console.log(info.lima.generacion)
 
         let arrLaboratoriaEstudiantesMex = data.mexico.generacion[info[generacion]].estudiantes;
-
         for (i = 0; i < arrLaboratoriaEstudiantesMex.length; i++) {
           result += `
                     <div class='col xl4'>
@@ -128,7 +125,6 @@ const dataSantiago = (data) => {
         //console.log(info.lima.generacion)
 
         let arrLaboratoriaEstudiantesSan = data.santiago.generacion[info[generacion]].estudiantes;
-
         for (i = 0; i < arrLaboratoriaEstudiantesSan.length; i++) {
           result += `
                     <div class='col xl4'>
