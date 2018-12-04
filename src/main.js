@@ -1,42 +1,36 @@
-
-
-const url = 'https://github.com/emeraldng/cdmx-2018-06-bc-core-am-data-dashboard/blob/master/data/laboratoria.json';
+const url = 'https://raw.githubusercontent.com/emeraldng/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 window.onload = () => {
-  fetch(url)
-    .then(response => response.json())
-    .then((data) => {
-      //aquí van toda las funciones que ultilizaran la data (las de window y las de dibujar)
-      console.log(data)
-      const students = computeStudentsStats(data);
-      const generations = computeGenerationsStats(data);
-      dataMex(data);
-      dataSantiago(data);
-      dataLima(data);
-      renderInfo(data);
-      //drawStudents(students);
-      //drawCampus(generations);
-      //sortStudents(data)
-      //filterStudents(data)8888
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
+  fetch(url).
+  then((response) => response.json()).
+  then((data) => {
+    // aquí van toda las funciones que ultilizaran la data (las de window y las de dibujar)
+    console.log(data);
+    dataMex(data);
+    dataSantiago(data);
+    dataLima(data);
+    renderInfo(data);
+    // drawStudents(students);
+    // drawCampus(generations);
+    // sortStudents(data)
+    // filterStudents(data)8888
+  }).
+  catch((error) => {
+    console.log(error);
+  });
+};
 
 const container = document.getElementById('result');
 
 const dataLima = (data) => {
-  document.getElementById('lima3').addEventListener('click', (event) => {
+  document.getElementById('lima3').addEventListener('click', () => {
     let result = '';
-    console.log(Object.keys(data.lima.generacion))
+    console.log(Object.keys(data.lima.generacion));
     const info = Object.keys(data.lima.generacion);
     console.log(Object.keys(info));
-
-    for (var generacion in info) {
+    for (let generacion in info) {
       if (info.hasOwnProperty(generacion)) {
-        console.log("la clave es " + generacion + " y el valor es " + info[generacion])
-        //console.log(info.lima.generacion)
-
+        console.log('la clave es ' + generacion + ' y el valor es ' + info[generacion]);
+        // console.log(info.lima.generacion)
         let arrLaboratoriaEstudiantesLima = data.lima.generacion[info[generacion]].estudiantes;
         for (i = 0; i < arrLaboratoriaEstudiantesLima.length; i++) {
           result += `
@@ -54,32 +48,27 @@ const dataLima = (data) => {
                               </div>
                      
                   </div>
-              </div>`
-
-
+              </div>`;
         }
       }
       container.innerHTML = result;
-
     }
   });
 
 
-}
+};
 
 
 const dataMex = (data) => {
-  document.getElementById('mex3').addEventListener('click', (event) => {
+  document.getElementById('mex3').addEventListener('click', () => {
     let result = '';
-    console.log(Object.keys(data.mexico.generacion))
+    console.log(Object.keys(data.mexico.generacion));
     const info = Object.keys(data.mexico.generacion);
     console.log(Object.keys(info));
-
-    for (var generacion in info) {
+    for (let generacion in info) {
       if (info.hasOwnProperty(generacion)) {
-        console.log("la clave es " + generacion + " y el valor es " + info[generacion])
-        //console.log(info.lima.generacion)
-
+        console.log('la clave es ' + generacion + ' y el valor es ' + info[generacion]);
+        // console.log(info.lima.generacion)
         let arrLaboratoriaEstudiantesMex = data.mexico.generacion[info[generacion]].estudiantes;
         for (i = 0; i < arrLaboratoriaEstudiantesMex.length; i++) {
           result += `
@@ -97,33 +86,27 @@ const dataMex = (data) => {
                                         </div>
                                
                             </div>
-                        </div>`
-
-
+                        </div>`;
         }
       }
       container.innerHTML = result;
-
     }
   });
 
 
-}
-
+};
 
 
 const dataSantiago = (data) => {
-  document.getElementById('san3').addEventListener('click', (event) => {
+  document.getElementById('san3').addEventListener('click', () => {
     let result = '';
-    console.log(Object.keys(data.santiago.generacion))
+    console.log(Object.keys(data.santiago.generacion));
     const info = Object.keys(data.santiago.generacion);
     console.log(Object.keys(info));
-
-    for (var generacion in info) {
+    for (let generacion in info) {
       if (info.hasOwnProperty(generacion)) {
-        console.log("la clave es " + generacion + " y el valor es " + info[generacion])
-        //console.log(info.lima.generacion)
-
+        console.log('la clave es ' + generacion + ' y el valor es ' + info[generacion]);
+        // console.log(info.lima.generacion)
         let arrLaboratoriaEstudiantesSan = data.santiago.generacion[info[generacion]].estudiantes;
         for (i = 0; i < arrLaboratoriaEstudiantesSan.length; i++) {
           result += `
@@ -141,15 +124,12 @@ const dataSantiago = (data) => {
                                         </div>
                                
                             </div>
-                        </div>`
-
-
+                        </div>`;
         }
       }
       container.innerHTML = result;
-
     }
   });
 
 
-}
+};
