@@ -4,12 +4,12 @@ const password = function password() {
 };
 
 
-let emailAdmin = document.getElementById('email-admin');
-let passwordAdmin = document.getElementById('password-admin');
+let emailAdmin = document.getElementById('email-admin').value;
+let passwordAdmin = document.getElementById('password-admin').value;
 let logInBtnAdmin = document.getElementById('login');
 
 const registroAdmin = () => {
-  if (emailAdmin.value === 'staff' && passwordAdmin.value === 'web123') {
+  if (emailAdmin === 'staff' && passwordAdmin === 'web123') {
     location.href = '../index.html';
   } else {
     alert('El usuario y/o la contraseña son incorrectos');
