@@ -1,8 +1,9 @@
 function usrpas() {
   if (document.form1.txt.value == 'staff' && document.form1.num.value == 123) {
-    window.location = '../index.html';
-  } else {
     alert('Error en Usuario o Contraseña. Intenta de nuevo.');
+  } else {
+    
+    window.location = '../index.html';
   }
 }
 
