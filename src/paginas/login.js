@@ -12,7 +12,7 @@ const registroAdmin = () => {
   if (emailAdmin == 'staff' && passwordAdmin == 'web123') {
     location.href = './index.html';
   } else {
-    location.href = './index.html';
+    location.href = '../index.html';
     // alert('El usuario y/o la contraseña son incorrectos');
   }
 };
