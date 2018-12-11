@@ -5,7 +5,6 @@ function usrpas() {
     alert('Error en Usuario o Contraseña. Intenta de nuevo.');
   }
 }
-document.oncontextmenu = new Function('return false');
 
 
 function password() {
