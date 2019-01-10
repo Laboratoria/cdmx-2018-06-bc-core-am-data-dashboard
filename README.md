@@ -7,7 +7,7 @@
 ![alt text](https://emeraldng.github.io/Diana-Esmeralda-Nava/img/proyecto-2.png)
 
 
-====================================================================================
+
 Las TMs de Laboratoria necesitan usar la data de las estudiantes lo más eficientemente posible, pues de ello depende
 su progreso en el bootcamp. Los recursos que se les han compartido son una parte importante para que puedan desarrollar
 los sprints, este recurso lo conocen como LMS (Learning Management System).
