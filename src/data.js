@@ -115,9 +115,6 @@ window.computeGenerationsStats = (laboratoria) => {
 
 window.sortStudents = (students, orderBy, orderDirection) => {
 
-  // ASCENDENTE - Menor a Mayor -  (A a Z)
-  // DESCENDENTE - Mayor a Menor - (Z a A)
-
   if (orderBy == "name" && orderDirection == "ASC") {
     let newstudents = students.sort(function (a, b) {
       let nombreActual = a.name.toUpperCase();
@@ -180,14 +177,6 @@ window.sortStudents = (students, orderBy, orderDirection) => {
   };
 };
 
-
-
-
-// window.filterStudents = (infoStudent, search) => {
-//   //   console.log(infoStudent);
-//   const busquedaResultado = infoStudent.filter(name => (infoStudent.name === search));
-//   return busquedaResultado;
-// };
 
 window.filterStudents = (students, search) => {
   let newStudents = students.filter((i) => {
