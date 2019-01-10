@@ -22,15 +22,6 @@ La empleación de un datadashboard es de gran importancia para un el mejoramient
 
 Los datos actuales son de mayor importancia, pues son con estos que se tomaran acciones presentes, aunque una comparación también es necesrai para ver si las áreas de problema tienen un patron.
 
-### Tecnologías
 
-Para el HTML, CSS y solo estilos de JS se utilizaron frameworks:
-
-[Libreria de Materialize](https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css)
-[JQuery](https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=)
-[Libreria de Materialize](https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js)
-Este ultimo se utilizo para estilos, especificamente el navbar.
-
-En caunto a los estilos se emplearon parte de la libreria y nativo, lo mismo aplica para la estructura de HTML.
 
 
