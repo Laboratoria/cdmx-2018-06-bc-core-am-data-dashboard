@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-la">
+
 <head>
   <meta charset="utf-8">
   <!-- ETIQUETA PARA CONTROLAR LA COMPOCISION DE LOS NAVEGADORES MOVILES -->
@@ -9,7 +10,8 @@
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- LINK PARA TEMPLATE DE ESTILOS CSS DE BOOTSTRAP -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
   <!-- LINK DE TIPOGRAFIA DE GOOGLE -->
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:500" rel="stylesheet">
 </head>
@@ -19,9 +21,10 @@
   <header class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- LOGO CON FUNCIONALIDAD DE ACTUALIZAR LA PAGINA -->
-      <a class="navbar-brand"><img class="logo" src="imagenes/logo.gif" alt="LABORATORIA" onclick = "history.go(0)"></a>
+      <a class="navbar-brand"><img class="logo" src="imagenes/logo.gif" alt="LABORATORIA" onclick="history.go(0)"></a>
       <!-- BOTON QUE CONTIENE EL MENU EN RESPONSIVE DESING -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- MENUS DESPLEGABLES -->
@@ -42,9 +45,16 @@
             </a>
 
             <div class="dropdown-menu">
-              <a class="dropdown-item" id="estudiantes" >ESTUDIANTES</a>
+              <a class="dropdown-item" id="estudiantes">ESTUDIANTES</a>
             </div>
           </li>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="nombre del alumno" aria-label="nombre del alumno"
+              aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            </div>
+          </div>
         </ul>
       </div>
     </nav>
@@ -53,7 +63,7 @@
 
   <section>
     <!-- DIV DE BIENVENIDA -->
-    <div class="bienvenido container" >B I E N V E N I D @
+    <div class="bienvenido container">B I E N V E N I D @
     </div>
 
     <!--SOCIAL BAR-->
@@ -64,8 +74,8 @@
     </div>
   </section>
 
-      <!-- INICIO CARRUSEL -->
-  <div class="container carrusel" id="carrusel" >
+  <!-- INICIO CARRUSEL -->
+  <div class="container carrusel" id="carrusel">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -125,8 +135,12 @@
   <script src="data.js"></script>
 
   <!-- VINCULOS DE BOOTSTRAP -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

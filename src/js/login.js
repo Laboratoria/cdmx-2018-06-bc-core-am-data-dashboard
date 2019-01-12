@@ -6,7 +6,7 @@ window.abrirPagina = () => {
 
 
   if (user === 'admin' && loginUser === '123admin') {
-    window.open('index_1.html');
+    window.open('principal.html');
     window.close('index.html');
   } else {
     alert('Revisa bien tus datos');
