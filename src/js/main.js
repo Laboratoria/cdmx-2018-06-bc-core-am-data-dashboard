@@ -62,7 +62,7 @@ window.studentDraw = (infoStudent) => {
 window.generationDraw = (infoGeneration) => {
   for (let i = 0; i < infoGeneration.length; i++) {
     containerG.innerHTML += `
-        <div id="cardColor" class="card">
+        <div id="cardColor" class="card col-sm-8 col-lg-4 offset-lg-1">
             <div class="info">
                 <p>Sede: ${infoGeneration[i].campus}</p>
                 <p>Generación: ${infoGeneration[i].generation}</p>

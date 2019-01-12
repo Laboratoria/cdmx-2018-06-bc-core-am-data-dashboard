@@ -3,19 +3,13 @@
 .logo{
   height: 90px; /*alto*/
   width:250px; /*ancho*/
-  /* height: 90px;
-  width: 250px; */
-}
-
-.container{
-  background: #D5D8DC;
-  display:flow-root;
 }
 
 
-* {
-  margin:0%; /*Quita los margenes predeterminados*/
-  padding: 0%;
+
+.padding, header, nav {
+  margin:0%; 
+  padding: 1% !important;
   font-family: 'Encode Sans Condensed', sans-sans-serif;
 }
 
@@ -35,7 +29,8 @@
 }
 
 .info { /*esta clase proviene del archivo main.js */
-  margin: 0 auto; /*quita el margen que viene por defecto*/
+  margin: 0 auto; 
+  /*quita el margen que viene por defecto*/
 }
 
 #cardColor{
@@ -50,12 +45,13 @@ p {  /*esta parrafo proviene de el archivo main.js especificamente de la tabla i
 }
 
 .bienvenido {
-  background:  #D5D8DC;
+  background:  #FDE421;
   font-size: 150%; /*tamaño del texto*/
   text-align: center;
   display: block;
   color: #808B96;
-  text-shadow: 2px 2px 5px rgba(241, 196, 15); /*efecto de sombra en el texto bienvenido*/
+  /* text-shadow: 2px 2px 5px rgba(241, 196, 15);  */
+  /*efecto de sombra en el texto bienvenido*/
 }
 
 /* Inicio de propiedades para las redes sociales*/
@@ -68,7 +64,7 @@ p {  /*esta parrafo proviene de el archivo main.js especificamente de la tabla i
   display: flex;
   flex-direction:column;  /* se cambia la direccion que viene por defecto*/
   align-items: flex-end; /* se alinea a la parte inferior*/
-  z-index: 100; /*permite que la barra social se alinie encima de los elementos de l pagina*/
+  z-index: 80; /*permite que la barra social se alinie encima de los elementos de l pagina*/
 }
 
 .icon {
@@ -106,5 +102,5 @@ p {  /*esta parrafo proviene de el archivo main.js especificamente de la tabla i
 }
 
 .header {
-    margin-top: -50px;
+    /* margin-top: -50px; */
 }
