@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laboratoria Data Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+        <header class="row">
+            <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+          </div>
+                <nav class="row">
+                        <div class="col-2" id="nav-wrapper">
+                         <img  src="Images/1528575847-27360187-268x40x268x88x0x24-Laboratoria-Logo-RGB.png" alt="">
+                          <ul class="right hide-on-med-and-down">
+                            
+                            <!-- Dropdown Trigger menú going dowhhhn =] -->
+                            
+                            
+                          </ul>
+                        </div>
+                      </nav>
+
+          
+        </header>
+        <div class="row">
+          <div class="col xl12">
+              <h2 class="white-text">Estudiantes</h2>
+              <a class="waves-effect amber btn" id='lima3'>Estadisticas Lima</a>
+              <a class="waves-effect amber btn" id='mex3'>Estadisticas México</a>
+              <a class="waves-effect amber btn" id='san3'>Estadisticas Santiago</a>
+          </div>
+        </div>
+      
+      <div class="row center">
+        <div class="col xl12">
+          <div id='result'>
+            <div class='table'>
+              <div class='info'>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script><!--Se ponen primero estos scripst por la forma de lectura-->
+  <script src="main.js"></script>
+</body>
 </html>
