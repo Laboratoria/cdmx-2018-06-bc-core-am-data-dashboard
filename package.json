@@ -12,11 +12,40 @@
     "test": "npm run test-node && npm run test-browser"
   },
   "dependencies": {
+    "autocompleter": "^4.0.2",
     "chai": "^4.1.2",
-    "eslint": "^4.19.1",
-    "htmlhint": "^0.9.13",
+    "eslint": "^5.0.1",
+    "firebase": "^5.5.9",
+    "htmlhint": "^0.10.1",
+    "jquery-autocomplete": "^1.2.8",
     "mocha": "^5.1.1",
     "nyc": "^11.7.1",
     "opener": "^1.4.3"
-  }
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-react": "^7.10.0"
+  },
+  "description": "Data Dashboard es una plataforma que permite la visualización del desempeño de las alumnas de Laboratoria mostrado en métricas.",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YocelinGR/cdmx-2018-06-bc-core-am-data-dashboard.git"
+  },
+  "keywords": [
+    "dashboard",
+    "laboratoria",
+    "students",
+    "analitics\u001b[D\u001b[D\u001b[D\u001b[y\u001b[C\u001b[C\u001b[C\u001b[C"
+  ],
+  "author": "Yocelin GR Estefaniamolinaa",
+  "bugs": {
+    "url": "https://github.com/YocelinGR/cdmx-2018-06-bc-core-am-data-dashboard/issues"
+  },
+  "homepage": "https://github.com/YocelinGR/cdmx-2018-06-bc-core-am-data-dashboard#readme"
 }

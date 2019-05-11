@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js"></script>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Esta es una plataforma de la Asociación sin fines de lucros: Laboratoria, para la visualización de estadísticas de rendimiento de sus estudiantes.">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="https://kraaden.github.io/autocomplete/autocomplete.css">
+        <title>LabBoard</title>
+        <link rel="shortcut icon" href="./Pictures/l_rgb_-01_360.png" />
+        <link rel="preconnect" href="https://yocelingr.github.io/cdmx-2018-06-bc-core-am-data-dashboard/src/index.html">
+    </head>
+
+    <body>
+        <header>
+            <!--Barra superior-->
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">
+                        <img class="header-logo" src="Pictures/black-logo.png" alt="Logotipo Cabecera">
+                    </a>
+                    <a href="#" data-target="my-side-bar" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a>Hola Lucile!!!</a>
+                        </li>
+                        <li>
+                            <a href="iniciosesion.html">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Menu lateral-->
+            <ul id="my-side-bar" class="sidenav sidenav-fixed">
+                <li class="bar-element">
+                    <div>
+                        <a href="#">
+                            <img class="bar-logo" src="Pictures/l_rgb_-01_360.png" alt="Logotipo barra-menú">
+                        </a>
+                    </div>
+                </li>
+                <li class="bar-element" id="goVenues">
+                    <a href="#!">
+                        <i class="material-icons">public</i>Sedes
+                    </a>
+                </li>
+                <li class="bar-element">
+                    <a href="#!" id="goGeneretions">
+                        <i class="material-icons">school</i>Generaciones
+                    </a>
+                </li>
+                <li class="bar-element">
+                    <a href="#!" id="goStudents">
+                        <i class="material-icons">group</i>Alumnas
+                    </a>
+                </li>
+                <li class="bar-element">
+                    <a href="#!" id="goFilter">
+                        <i class="material-icons">filter_list</i>Filtrar
+                    </a>
+                </li>
+                <li class="bar-element">
+                    <a href="#!" id="goSort">
+                        <i class="material-icons">find_replace</i>Ordenar
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <section>
+            <div class="row" id="searchingCard" style='display:none;'>
+                    <div class = "container">
+                            <div class = "row">
+                                <div class="input-field col s11 m5 l5">
+                                    <select name = "orderBy" id = "orderBy">
+                                    <option value="" disabled selected>Ordenar por: </option>
+                                    <option value="name">Nombre</option>
+                                    <option value="percentage">Completitud</option>
+                                    </select>
+                                    <label>Categoría para ordenar</label>
+                                </div>
+                                <div class="input-field col s11 m5 l5">
+                                    <select name = "orderIn" id = "orderIn">
+                                    <option value="" disabled selected>Ordenar de forma:</option>
+                                    <option value="ASC">Ascendente</option>
+                                    <option value="DESC">Descendente</option>
+                                    </select>
+                                    <label>Tipo de ordenamiento</label>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="row" id = "findingCard" style='display:none;'>
+                <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s10 m10 l10">
+                      <input placeholder="Escribe un nombre" id="findName" type="text" class="validate">
+                      <label for="findName">Buscar</label>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="row" id="cardsSpace">
+            </div>
+            <!--fin modal-->
+        </section>
+            <script src="https://kraaden.github.io/autocomplete/autocomplete.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+            <script src="./JS/data.js"></script>
+            <script src="./JS/main.js"></script>
+            <script>
+                // Barra Menu lateral colapsable
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('.sidenav');
+                    var instances = M.Sidenav.init(elems, {});
+                });
+                // console.log(collapsibleElem);
+                var collapsibleElem = document.querySelectorAll('.collapsible');
+                var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+
+                // Select 
+                $(document).ready(function(){
+                    $('select').formSelect();
+                });
+            </script>
+    </body>
 </html>
+

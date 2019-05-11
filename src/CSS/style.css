@@ -1,0 +1,262 @@
+header,
+main,
+footer {
+ padding-left: 70px;
+ margin-bottom: 5px;
+}
+
+
+nav{
+   background-color: white;
+   color: black;
+}
+nav ul a, nav a {
+   color:black;
+   font-weight: bold;
+}
+
+
+
+.header-logo{
+   height: 60px;
+}
+
+#my-side-bar {
+ width: 70px;
+
+ -o-transition:.5s;
+ -ms-transition:.5s;
+ -moz-transition:.5s;
+ -webkit-transition:.5s;
+ /* ...and now for the proper property */
+ transition:.5s;
+}
+
+#my-side-bar:hover {
+ width: 300px;
+}
+
+.bar-element{
+   width: 300px;
+}
+.bar-logo{
+   width: 70px;
+   margin-top: 13px;
+   margin-left: 2px;
+}
+
+.sidenav li>a{
+   padding-left: 25px;
+}
+
+@media only screen and (max-width: 993px) {
+ header,
+ main,
+ footer {
+   padding-left: 0px;
+ }
+
+ #my-side-bar {
+   width: 300px;
+ }
+}
+
+.barra-alumnas{
+    width: 70%;
+    margin:0 auto;
+}
+body{
+   background-color: rgb(241, 235, 238);
+   color: rgb(0, 0, 0);
+}
+span{
+   font-size: 1.5em;
+}
+.cards{
+    font-weight: bold;
+    text-align: center;
+}
+#responsive-img logo{
+   height: 50px;
+   width: 50px;
+}
+
+.tamaño-barra{
+   border-radius: 5px;
+   height: 20px;
+   background-color: gainsboro;
+}
+.numero{
+    font-size: 3em;
+    text-align: center
+}
+.color-activas{
+    background-color: #ffe521;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1.5em;
+}
+.color-fondo{
+   background-color:pink;
+}
+.letra-progreso{
+   font-size: 1.5em;
+
+}
+
+.color-progreso2{
+   background-color: #dc3545;
+}
+.color-progreso1{
+   background-color: rgb(131, 204, 21) !important;
+}
+.izquierda{
+   float: left;
+}
+.derecha{
+   float: right;
+}
+.letra-barra{
+   font-size: 1em;
+}
+.elemento-card{
+   margin-top: 15px;
+}
+#map{
+   width: 100%;
+}
+.lista-alumnas{
+   background-color: bisque;
+}
+.collapsible-header{
+   display: block;
+}
+.fondo-blanco{
+   background-color: white;
+}
+.center{
+   font-size: 2em;
+   text-align: center;
+
+}
+.color-alumnas{
+    background-color: pink darken-2;
+    text-align: center;
+    border-radius: 20px;
+    padding: 15px;
+}
+.btn-alumnas{
+   color: white;
+   background-attachment:
+   font-size: .8em;
+}
+.collapsible-header{
+    background-color: white;
+}
+.collapsable-color{
+    background-color: #fffde7;
+}
+.collapsable{
+    font-size: 1.4em;
+}
+.collapsable-sub{
+    font-size: 1.2em;
+}
+img1{
+    width:50px;
+    height:50px;
+   }
+i.material-icons{
+    color: #424242;
+}
+.barra-alumnas{
+    background-color: #69f0ae;
+    color:#212121;
+    font-weight: bolder;
+}
+.alumnas{
+    margin-left: 36%;
+    font-size: 2em;
+}
+.card-title{
+    font-weight: bold;
+    text-align: center;
+}
+span.card-title.cards{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+div.color-activas{
+    background-color: #ffe521;
+    text-align: center;
+    border-radius: 15px;
+}
+#searchingCard {
+    width: 80%;
+    height: 15vh;
+    background-color: gray;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 8px;
+    align-items: center;
+    justify-content: center;
+}
+#cardsSpace {
+    width: 85%;
+}
+#findingCard {
+    width: 85%;
+}
+#csearchingCard {
+    width: 85%;
+}
+
+@media only screen and (max-width: 425px) {
+    .header-logo {
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .card-content span {
+        font-size: 1em;
+    }
+    span.card-title.cards {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-content span {
+        font-size: 0.9em;
+        text-align: center;
+    }
+    .card-content p {
+        font-size: 0.9em;
+        text-align: center;
+    }
+    span.card-title.cards {
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+    .color-activas span {
+        font-size: 0.6em;
+    }
+    .letra-barra {
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #searchingCard {
+        width: 80%;
+        height: 30vh;
+        background-color: gray;
+        text-align: center;
+        color: #ffffff;
+        padding-top: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+}

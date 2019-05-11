@@ -1,0 +1,978 @@
+/* data.js es el archivos JS en el cual se declaran las funciones globales y locales para la extracción y procesamiento de la data del
+proyecto. En algunas funciones se hace uso de Templete String para la creacion de card dinámicas para presentar información en el DOM*/
+
+// FUNCIONES DE LÓGICA DE EXTRACCIÓN Y PROCESAMIENTO DE A DATA
+
+window.computeVenuesStats = (laboratoria) => {
+// Función que extrae infomación sobre cada una de las sedes, genera un arreglo como: [{},{},{}]
+  let venuesArray = []; // Variables locales
+  let average = 0;
+  let advanceStudents = 0;
+  let inLowStudents = 0;
+  let mediumStudents = 0;
+  let numStudents = 0;
+  let quizAverage = 0;
+  let timeAverage = 0;
+  let timeU1 = 0; let timeU2 = 0; let timeU3 = 0;
+  let advanceU1 = 0; let advanceU2 = 0; let advanceU3 = 0;
+  let quizU1 = 0, quizU2 = 0, quizU3 = 0;
+
+  for (let key in laboratoria) { // Ciclo de evaluacion general
+    let myobj = {};
+    average = 0; // Reinicio de variables
+    advanceStudents = 0;
+    inLowStudents = 0;
+    mediumStudents = 0;
+    numStudents = 0;
+    quizAverage = 0;
+    timeAverage = 0;
+    advanceU1 = 0; advanceU2 = 0; advanceU3 = 0;
+    quizU1 = 0; quizU2 = 0; quizU3 = 0;
+
+    myobj.venue = key.toUpperCase(); // Extraccion y procesamiento de data
+    let generations = laboratoria[key].generacion;
+
+    for (let generation in generations) {
+      const students = laboratoria[key].generacion[generation].estudiantes;
+      numStudents += students.length;
+
+      for (let student in students) {
+        average += students[student].progreso.porcentajeCompletado;
+        timeAverage += students[student].progreso.duracionPrograma;
+        if (students[student].progreso.porcentajeCompletado <= 60) {
+          inLowStudents++;
+        } else if (students[student].progreso.porcentajeCompletado >= 90) {
+          advanceStudents++;
+        } else {
+          mediumStudents++;
+        } // Avance y calificación por unidad
+        advanceU1 += students[student].progreso.temas['01-Introduccion-a-programacion'].porcentajeCompletado;
+        advanceU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].porcentajeCompletado;
+        advanceU3 += students[student].progreso.temas['03-UX'].porcentajeCompletado;
+        quizU1 += students[student].progreso.temas['01-Introduccion-a-programacion'].subtemas['04-quiz'].puntuacion;
+        quizU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].subtemas['05-quiz'].puntuacion;
+        quizU3 += students[student].progreso.temas['03-UX'].subtemas['03-quiz'].puntuacion;
+      }
+    } 
+    average = average / numStudents; // Calculo de promedios
+    timeAverage = timeAverage / numStudents;
+    quizAverage = quizAverage / numStudents;
+    timeAverage = (timeAverage * average) / 100;
+    advanceU1 = advanceU1 / numStudents;
+    advanceU2 = advanceU2 / numStudents;
+    advanceU3 = advanceU3 / numStudents;
+    quizU1 = quizU1 / numStudents;
+    quizU2 = quizU2 / numStudents;
+    quizU3 = quizU3 / numStudents;
+    quizAverage = (quizU1 + quizU2 + quizU3) / 3;
+    myobj.average = Math.round(average); // Generación de propiedades del objeto Sede
+    myobj.activeStudents = numStudents;
+    myobj.advanceStudents = advanceStudents;
+    myobj.inLowStudents = inLowStudents;
+    myobj.mediumStudents = mediumStudents;
+    myobj.timeAverage = Math.round(timeAverage);
+    myobj.advanceU1 = Math.round(advanceU1);
+    myobj.advanceU2 = Math.round(advanceU2);
+    myobj.advanceU3 = Math.round(advanceU3);
+    myobj.quizAverage = Math.round(quizAverage);
+    venuesArray.push(myobj); // Ingresa el objeto al arreglo a retornar
+  }
+  return (venuesArray); // Retorna un objeto sede que se almacena en una localidad del array
+};
+
+window.computeGenerationsStats = (laboratoria) => {
+// Extrae información sobre las generaciones, da un array: [{},{},{},{},{},{},{},{},{}]
+// Declaración de funciones locales
+  let generationsArray = [];
+  let averageO = 0;
+  let advanceStudentsO = 0;
+  let inLowStudentsO = 0;
+  let countsO = 0;
+  let quizAverageO = 0;
+  let timeAverageO = 0;
+  let venuesO = '';
+  let generationsO = '';
+  let mediumStudents = 0;
+  let advanceU1 = 0, advanceU2 = 0, advanceU3 = 0;
+  let quizU1 = 0, quizU2 = 0, quizU3 = 0;
+  let i = -1;
+
+  // Inicio de iteración de la data
+  for (key in laboratoria) {
+    let generations = laboratoria[key].generacion;
+    let venuesValue = Object.getOwnPropertyNames(laboratoria);
+    i++;
+
+    for (generation in generations) {
+      let myObj = {};
+      countsO = 0; averageO = 0; advanceStudentsO = 0; inLowStudentsO = 0; timeAverageO = 0; mediumStudents = 0;
+      advanceU1 = 0; advanceU2 = 0; advanceU3 = 0; quizU1 = 0; quizU2 = 0; quizU3 = 0;
+      generationsO = generation;
+      venuesO = venuesValue[i];
+      const students = laboratoria[key].generacion[generation].estudiantes;
+      countsO += students.length;
+
+      for (student in students) {
+        averageO += students[student].progreso.porcentajeCompletado;
+        timeAverageO += students[student].progreso.duracionPrograma;
+        if (students[student].progreso.porcentajeCompletado <= 60) { // Evalua average para indicar status
+          inLowStudentsO++;
+        } else if (students[student].progreso.porcentajeCompletado >= 90) {
+          advanceStudentsO++;
+        } else {
+          mediumStudents++;
+        }
+        // Avance por unidad y evaluación de los quiz´s
+        advanceU1 += students[student].progreso.temas['01-Introduccion-a-programacion'].porcentajeCompletado;
+        advanceU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].porcentajeCompletado;
+        advanceU3 += students[student].progreso.temas['03-UX'].porcentajeCompletado;
+        quizU1 += students[student].progreso.temas['01-Introduccion-a-programacion'].subtemas['04-quiz'].puntuacion;
+        quizU2 += students[student].progreso.temas['02-Variables-y-tipo-de-datos'].subtemas['05-quiz'].puntuacion;
+        quizU3 += students[student].progreso.temas['03-UX'].subtemas['03-quiz'].puntuacion;
+      } 
+      quizAverageO = (quizU1 + quizU2 + quizU3) / (countsO * 3);
+      // Genera propiedades del objeto generaciones
+      myObj.generation = generationsO.toUpperCase();
+      myObj.venue = venuesO.toUpperCase();
+      myObj.count = countsO;
+      myObj.average = Math.round(averageO / countsO);
+      myObj.timeAverage = Math.round(((timeAverageO / countsO) * (averageO / countsO)) / 100);
+      myObj.inLowStudents = inLowStudentsO;
+      myObj.advanceStudents = advanceStudentsO;
+      myObj.mediumStudents = mediumStudents;
+      myObj.advanceU1 = Math.round(advanceU1 / countsO);
+      myObj.advanceU2 = Math.round(advanceU2 / countsO);
+      myObj.advanceU3 = Math.round(advanceU3 / countsO);
+      myObj.quizAverage = Math.round(quizAverageO);
+      generationsArray.push(myObj); // Genera arreglo de objetos generaciones
+      countsO = 0;
+    }
+  }
+  return (generationsArray);
+};
+
+// Obtiene todos los datos de las alumnas
+window.computeStudentsStats = (laboratoria) => {
+  let studentArray = []; // Zona de declaración de cariables locales (para impresión)
+  let averageS = 0;
+  let generationS = '';
+  let venuesS = [];
+  let statsS = [];
+  let totalTimeS = 0;
+  let timeProm = 0;
+  let statusS = '';
+  let nameS = '';
+  let emailS = '';
+  let scorePercentage = 0;
+  let i = -1;
+  let completedPercentageS = [];
+  let percentageDurationS = [];
+  let itemS = '';
+  let j = 0;
+
+  for (key in laboratoria) { // Inicio de extracciónde data
+    let venuesL = Object.getOwnPropertyNames(laboratoria);
+    let generations = laboratoria[key].generacion;
+    i++;
+
+    for (generation in generations) {
+      generationS = generation;
+      venuesS = venuesL[i];
+      const students = laboratoria[key].generacion[generation].estudiantes;
+
+      for (student in students) {
+        let myStudent = {};
+        nameS = students[student].nombre;
+        emailS = students[student].correo;
+        turnoS = students[student].turno;
+        const Stats = laboratoria[key].generacion[generation].estudiantes[student].progreso;
+        const arrayStats = Array.from(Object.values(Stats));
+        averageS = 0; totalTimeS = 0; timeProm = 0; statusS = ''; j = 0; scorePercentage = 0;
+        let sts = {};
+        totalTimeS = arrayStats[j];
+        j++;
+        averageS = arrayStats[j];
+        if (averageS <= 60) { // Evalua estatus
+          statusS = 'Bajo avance';
+        } else if (averageS >= 90) {
+          statusS = 'Alto avance';
+        } else statusS = 'Medio avance';
+        sts.completedPercentage = averageS;
+        sts.status = statusS;
+        j++;
+        let unitiesContent = arrayStats[j];
+        let tps = {};
+        let completedPercentageT = 0, percentageDurationT = 0;
+        for (let unit in unitiesContent) { // Entrar a data profunda
+
+          if (unit === '01-Introduccion-a-programacion') {
+            completedPercentageT = (Object.values(unitiesContent))[0].porcentajeCompletado;
+            percentageDurationT = (Object.values(unitiesContent))[0].duracionTemaCompletado;
+            let deepCont = {};
+            deepCont.completedPercentage = completedPercentageT;
+            deepCont.percentageDuration = percentageDurationT;
+            let subtopicsUnits = (Object.values(unitiesContent))[0].subtemas;
+            // let subTopics ={};
+
+            for (let subtop in subtopicsUnits) {
+              // console.log(Object.values(subtopicsUnits));
+              if (subtop === '00-bienvenida-orientacion') {
+                let completedSub = (Object.values(subtopicsUnits))[0].completado;
+                let timeSub = (Object.values(subtopicsUnits))[0].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[0].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['00-bienvenida-orientacion'] = deepSubCont;
+              } else if (subtop === '01-desarrollo-profesional') {
+                let completedSub = (Object.values(subtopicsUnits))[1].completado;
+                let timeSub = (Object.values(subtopicsUnits))[1].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[1].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['01-desarrollo-profesional'] = deepSubCont;
+              } else if (subtop === '02-por-que-aprender-a-programar') {
+                let completedSub = (Object.values(subtopicsUnits))[2].completado;
+                let timeSub = (Object.values(subtopicsUnits))[2].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[2].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['02-por-que-aprender-a-programar'] = deepSubCont;
+              } else if (subtop === '03-tu-primer-sitio') {
+                let completedSub = (Object.values(subtopicsUnits))[3].completado;
+                let timeSub = (Object.values(subtopicsUnits))[3].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[3].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['03-tu-primer-sitio'] = deepSubCont;
+              } else if (subtop === '04-quiz') {
+                let completedSub = (Object.values(subtopicsUnits))[4].completado;
+                let timeSub = (Object.values(subtopicsUnits))[4].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[4].tipo;
+                let scoreSub = (Object.values(subtopicsUnits))[4].puntuacion;
+                scorePercentage += scoreSub;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepSubCont.score = scoreSub;
+                deepCont['04-quiz'] = deepSubCont;
+              }
+            }
+            tps['01-Introduccion-a-programacion'] = deepCont;
+          } else if (unit === '02-Variables-y-tipo-de-datos') {
+            completedPercentageT = (Object.values(unitiesContent))[1].porcentajeCompletado;
+            percentageDurationT = (Object.values(unitiesContent))[1].duracionTemaCompletado;
+            let deepCont = {};
+            deepCont.completedPercentage = completedPercentageT;
+            deepCont.percentageDuration = percentageDurationT;
+            let subtopicsUnits = (Object.values(unitiesContent))[1].subtemas;
+            // let subTopics ={};
+
+            for (let subtop in subtopicsUnits) {
+              // console.log(Object.values(subtopicsUnits));
+              if (subtop === '00-Tipos-de-datos-y-operadores') {
+                let completedSub = (Object.values(subtopicsUnits))[0].completado;
+                let timeSub = (Object.values(subtopicsUnits))[0].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[0].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['00-Tipos-de-datos-y-operadores'] = deepSubCont;
+              } else if (subtop === '01-variables') {
+                let completedSub = (Object.values(subtopicsUnits))[1].completado;
+                let timeSub = (Object.values(subtopicsUnits))[1].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[1].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['01-variables'] = deepSubCont;
+              } else if (subtop === '02-por-que-aprender-a-programar02-auto-aprendizaje-MDN') {
+                let completedSub = (Object.values(subtopicsUnits))[2].completado;
+                let timeSub = (Object.values(subtopicsUnits))[2].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[2].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['02-auto-aprendizaje-MDN'] = deepSubCont;
+              } else if (subtop === '03-comments') {
+                let completedSub = (Object.values(subtopicsUnits))[3].completado;
+                let timeSub = (Object.values(subtopicsUnits))[3].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[3].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['03-comments'] = deepSubCont;
+              } else if (subtop === '04-ejercicios-guiados') {
+                let completedSub = (Object.values(subtopicsUnits))[4].completado;
+                let timeSub = (Object.values(subtopicsUnits))[4].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[4].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['04-ejercicios-guiados'] = deepSubCont;
+              } else if (subtop === '05-quiz') {
+                let completedSub = (Object.values(subtopicsUnits))[5].completado;
+                let timeSub = (Object.values(subtopicsUnits))[5].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[5].tipo;
+                let scoreSub = (Object.values(subtopicsUnits))[5].puntuacion;
+                scorePercentage += scoreSub;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepSubCont.score = scoreSub;
+                deepCont['05-quiz'] = deepSubCont;
+              } else if (subtop === '06-ejercicios') {
+                let completedSub = (Object.values(subtopicsUnits))[6].completado;
+                let timeSub = (Object.values(subtopicsUnits))[6].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[6].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['06-ejercicios'] = deepSubCont;
+              }
+            }
+            tps['02-Variables-y-tipo-de-datos'] = deepCont;
+          } else if (unit === '03-UX') {
+            completedPercentageT = (Object.values(unitiesContent))[2].porcentajeCompletado;
+            percentageDurationT = (Object.values(unitiesContent))[2].duracionTemaCompletado;
+            let deepCont = {};
+            deepCont.completedPercentage = completedPercentageT;
+            deepCont.percentageDuration = percentageDurationT;
+            let subtopicsUnits = (Object.values(unitiesContent))[2].subtemas;
+            // let subTopics ={};
+
+            for (let subtop in subtopicsUnits) {
+              // console.log(Object.values(subtopicsUnits));
+              if (subtop === '00-equipos-de-desarrollo') {
+                let completedSub = (Object.values(subtopicsUnits))[0].completado;
+                let timeSub = (Object.values(subtopicsUnits))[0].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[0].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['00-equipos-de-desarrollo'] = deepSubCont;
+              } else if (subtop === '01-ux-diseno') {
+                let completedSub = (Object.values(subtopicsUnits))[1].completado;
+                let timeSub = (Object.values(subtopicsUnits))[1].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[1].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['01-ux-diseno'] = deepSubCont;
+              } else if (subtop === '02-ux-vs-ui') {
+                let completedSub = (Object.values(subtopicsUnits))[2].completado;
+                let timeSub = (Object.values(subtopicsUnits))[2].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[2].tipo;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepCont['02-ux-vs-ui'] = deepSubCont;
+              } else if (subtop === '03-quiz') {
+                let completedSub = (Object.values(subtopicsUnits))[3].completado;
+                let timeSub = (Object.values(subtopicsUnits))[3].duracionSubtema;
+                let typeSub = (Object.values(subtopicsUnits))[3].tipo;
+                let scoreSub = (Object.values(subtopicsUnits))[3].puntuacion;
+                scorePercentage += scoreSub;
+                let deepSubCont = {};
+                deepSubCont.completedPercentage = completedSub;
+                deepSubCont.duration = timeSub;
+                deepSubCont.type = typeSub;
+                deepSubCont.score = scoreSub;
+                deepCont['03-quiz'] = deepSubCont;
+              }
+            }
+            tps['03-UX'] = deepCont;
+          }
+          sts.topics = tps;
+        }
+        // Genera objeto con rpopiedades extrahidas
+        scorePercentage = scorePercentage / 3;
+        myStudent.name = nameS;
+        myStudent.email = emailS;
+        myStudent.turno = turnoS;
+        myStudent.campus = venuesS.toUpperCase();
+        myStudent.generation = generationS.toUpperCase();
+        myStudent.timeProm = Math.round((totalTimeS * averageS) / 100);
+        myStudent.totalTime = totalTimeS;
+        myStudent.stats = sts;
+        myStudent.scorePercentage = Math.round(scorePercentage);
+        studentArray.push(myStudent);
+      }
+    }
+  }
+  return (studentArray);
+};
+// Función que ordena arreglo de estudiantes
+window.sortStudents = (students, orderBy, orderDirection) => {
+  let ordered;
+  // Ordena por nombre
+  if (orderBy === 'name') {
+    // Ordena por nombre en forma ASC
+    if (orderDirection === 'ASC') {
+      ordered = students.sort((arrayA, arrayB) => {
+        var nameA = arrayA.name.toLowerCase(), nameB = arrayB.name.toLowerCase();
+        if (nameA < nameB) return -1; // Retorna "namaA" primero si es menor que nameB
+        if (nameA > nameB) return 1; // Retorna "namaB" primero si es menor que nameA
+        return 0;
+      });
+    } else {
+      // Ordena por nombre en forma DESC
+      ordered = students.sort((arrayA, arrayB) => {
+        var nameA = arrayA.name.toLowerCase(), nameB = arrayB.name.toLowerCase();
+        if (nameA > nameB) return -1; // Retorna "namaA"  si este mayor que nameB
+        if (nameA < nameB) return 1; // Retorna "namaB"  si este mayor que nameA
+        return 0;
+      });
+    }
+  } else if (orderBy === 'percentage') {// Ordena por porcentajeCompletado
+    if (orderDirection === 'ASC') { // Ordena en forma ascendente
+      ordered = students.sort((arrayA, arrayB) => {
+        return (arrayA.average - arrayB.average); // Coloca arrayA primero si el resultado de la resta es >0
+      });
+    } else {
+      ordered = students.sort((arrayA, arrayB) =>{
+        return (arrayB.average - arrayA.average);// Coloca arrayB primero si el resultado de la resta es <0
+      });
+    }
+  }
+  return (ordered);
+};
+// Filtra un arreglo devolviendo solo aquellos en los que coincida el nombre
+window.filterStudents = (students, search) => {
+  let filtered = [];
+  for (let i = 0; i < students.length; i++) {
+    var currentS = students[i];
+    if (currentS.name === search) filtered.push(currentS);
+  }
+  return (filtered);
+};
+
+// FUNCIONES DE IMPRESION BASADAS EN TEMPLETE STRING: IMPRIMIR DE FORMA DINÁMICA
+window.generationsLima = (laboratoria) => {
+  const generation = computeGenerationsStats(laboratoria);
+  const generationLim = [];
+
+  for (let i = 0; i < 3; i++) {
+    generationLim[i] = generation[i];
+  }
+  // ----- Templete String para impresion dinámica de la funcion impresion de Generaciones resultGenLim
+  const resultGenLim = document.getElementById('cardsSpace');
+  let genLim = '';
+  let advancePercentage = [];
+  let lowPercentage = [];
+  let mediumPercentage = [];
+
+  for (let i = 0; i < generationLim.length; i++) {
+    advancePercentage[i] = Math.round(((generationLim[i].advanceStudents) * 100) / (generationLim[i].count));
+    lowPercentage[i] = Math.round(((generationLim[i].inLowStudents) * 100) / (generationLim[i].count));
+    mediumPercentage[i] = Math.round(((generationLim[i].mediumStudents) * 100) / (generationLim[i].count));
+    genLim += `<div class="row" id = "cardsSpace">
+                <div class="col s12 m12 l12">
+                  <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                      <div class="col s6 m5 l5">
+                        <!--generaciones1-->
+                        <span class="card-title cards">${generationLim[i].generation} Generación</span>
+                        <span class="card-title cards">${generationLim[i].venue}</span>
+                        <div class="color-activas">
+                          <span class="numero">${generationLim[i].count}</span>
+                          <span> Alumnas</span>
+                        </div>
+                        <!--Barra de avance tres colores-->
+                        <span class="center">Progreso alumnas:</span>
+                        <div class="elemento-card">
+                          <span class="letra-progreso izquierda"><i class="small material-icons">star</i>+90%</span>
+                          <span class="letra-progreso derecha">
+                            -60%
+                            <i class="small material-icons">star_half</i>
+                          </span>
+                          <div class="progress grey tamaño-barra">
+                            <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
+                            <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"}"></div>
+                            <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas"></div>
+                          </div>
+                        </div>
+                        <!--Tiempo promedio-->
+                        <p>
+                          <i class="material-icons">schedule</i><span>Tiempo promedio invertido: ${generationLim[i].timeAverage}${'hrs'}</span>
+                        </p>
+                      </div>
+                      <div class="col s5 m7 l7">
+                        <!--generaciones2-->
+                        <!--Promedios generales inicio-->
+                        <div class="elemento-card">
+                          <span>Promedio general </span>
+                          <div class="progress tamaño-barra">
+                            <div class="determinate blue" class="color-fondo" style="width:${generationLim[i].average}${'%'}"></div>
+                              <span class="derecha letra-barra">${generationLim[i].average}${'%'}</span>
+                            </div>
+                          </div>
+                          <p>Intoducción a la programación</p>
+                          <div class="progress grey">
+                            <div class="determinate pink" class="color-fondo" style="width:${generationLim[i].advanceU1}${'%'}"></div>
+                          </div>
+                          <p>Variables y tipos de datos</p>
+                          <div class="progress grey">
+                          <div class="determinate purple" class="color-fondo" style="width: ${generationLim[i].advanceU2}${'%'}"></div>
+                        </div>
+                        <p>UX</p>
+                        <div class="progress grey">
+                          <div class="determinate orange" class="color-fondo" style="width: ${generationLim[i].advanceU3}${'%'}"></div>
+                        </div>
+                        <p>Quiz´s</p>
+                        <div class="progress grey">
+                          <div class="determinate green" class="color-fondo" style="width: ${generationLim[i].quizAverage}${'%'}"></div>
+                        </div>
+                        <!--Promedios generales y de quiz fin-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
+  }
+  resultGenLim.innerHTML = genLim;
+  // ToolTip
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
+  return generationLim;
+};
+
+window.generationsMexico = (laboratoria) => {
+  const generation = computeGenerationsStats(laboratoria);
+  const generationMex = [];
+
+  for (let i = 3; i <= 5; i++) {
+    generationMex[i - 3] = generation[i];
+  }
+  // ----- Templete String para impresion dinámica de la funcion impresion de Generaciones resultGenMex
+  const resultGenMex = document.getElementById('cardsSpace');
+  let genMex = '';
+  let advancePercentage = [];
+  let lowPercentage = [];
+  let mediumPercentage = [];
+
+  for (let i = 0; i < generationMex.length; i++) {
+    advancePercentage[i] = Math.round(((generationMex[i].advanceStudents) * 100) / (generationMex[i].count));
+    lowPercentage[i] = Math.round(((generationMex[i].inLowStudents) * 100) / (generationMex[i].count));
+    mediumPercentage[i] = Math.round(((generationMex[i].mediumStudents) * 100) / (generationMex[i].count));
+
+    genMex += `<div class="row" id = "cardsSpace">
+                <div class="col s12 m12 l12">
+                  <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                      <div class="col s6 m5 l5">
+                        <!--generaciones1-->
+                        <span class="card-title cards">${generationMex[i].generation} Generación</span>
+                        <span class="card-title cards">${generationMex[i].venue}</span>
+                        <div class="color-activas">
+                          <span class="numero">${generationMex[i].count}</span>
+                          <span> Alumnas</span>
+                        </div>
+                        <!--Barra de avance tres colores-->
+                        <span class="center">Progreso alumnas:</span>
+                        <div class="elemento-card">
+                          <span class="letra-progreso izquierda"><i class="small material-icons">star</i>+90%</span>
+                          <span class="letra-progreso derecha">
+                            -60%
+                            <i class="small material-icons">star_half</i>
+                          </span>
+                          <div class="progress grey tamaño-barra">
+                            <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="Alumnas regulares"></div>
+                            <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="Alumnas atrasadas"></div>
+                            <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="Alumnas avanzadas"></div>
+                          </div>
+                        </div>
+                        <!--Tiempo promedio-->
+                        <p>
+                          <i class="material-icons">schedule</i>
+                          <span>Tiempo promedio invertido: ${generationMex[i].timeAverage}${'hrs'}</span>
+                        </p>
+                      </div>
+                      <div class="col s5 m7 l7">
+                        <!--generaciones2-->
+                        <!--Promedios generales inicio-->
+                        <div class="elemento-card">
+                          <span>Promedio general </span>
+                          <div class="progress tamaño-barra">
+                            <div class="determinate blue" class="color-fondo" style="width:${generationMex[i].average}${'%'}"></div>
+                              <span class="derecha letra-barra">${generationMex[i].average}${'%'}</span>
+                            </div>
+                          </div>
+                          <p>Intoducción a la programación</p>
+                          <div class="progress grey">
+                            <div class="determinate pink" class="color-fondo" style="width:${generationMex[i].advanceU1}${'%'}">
+                              </div>
+                            </div>
+                          <p>Variables y tipos de datos</p>
+                            <div class="progress grey">
+                              <div class="determinate purple" class="color-fondo" style="width: ${generationMex[i].advanceU2}${'%'}"></div>
+                            </div>
+                            <p>UX</p>
+                            <div class="progress grey">
+                              <div class="determinate orange" class="color-fondo" style="width: ${generationMex[i].advanceU3}${'%'}"></div>
+                            </div>
+                            <p>Quiz´s</p>
+                            <div class="progress grey">
+                              <div class="determinate green" class="color-fondo" style="width: ${generationMex[i].quizAverage}${'%'}"></div>
+                            </div>
+                            <!--Promedios generales y de quiz fin-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>`;
+  }
+  resultGenMex.innerHTML = genMex;
+  // ToolTip
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
+  return generationMex;
+};
+
+window.generationsSantiago = (laboratoria) => {
+  const generation = computeGenerationsStats(laboratoria);
+  const generationStg = [];
+
+  for (let i = 5; i < 8; i++) {
+    generationStg[i - 5] = generation[i];
+  }
+
+  // ----- Templete String para impresion dinámica de la funcion impresion de Generaciones resultGenStg
+  const resultGenStg = document.getElementById('cardsSpace');
+  let genStg = '';
+  let advancePercentage = [];
+  let lowPercentage = [];
+  let mediumPercentage = [];
+
+  for (let i = 0; i < generationStg.length; i++) {
+    advancePercentage[i] = Math.round(((generationStg[i].advanceStudents) * 100) / (generationStg[i].count));
+    lowPercentage[i] = Math.round(((generationStg[i].inLowStudents) * 100) / (generationStg[i].count));
+    mediumPercentage[i] = Math.round(((generationStg[i].mediumStudents) * 100) / (generationStg[i].count));
+
+    genStg += `<div class="row" id = "cardsSpace">
+                <div class="col s12 m12 l12">
+                  <div class="card whithe col s12 m12 l12">
+                    <div class="card-content black-text col s12 m12 l12">
+                      <div class="col s6 m5 l5">
+                      <!--generaciones1-->
+                        <span class="card-title cards">${generationStg[i].generation} Generación</span>
+                        <span class="card-title cards">${generationStg[i].venue}</span>
+                        <div class="color-activas">
+                          <span class="numero">${generationStg[i].count}</span>
+                          <span> Alumnas</span>
+                        </div>
+                        <!--Barra de avance tres colores-->
+                        <span class="center">Progreso alumnas:</span>
+                        <div class="elemento-card">
+                          <span class="letra-progreso izquierda"><i class="small material-icons">star</i>+90%</span>
+                          <span class="letra-progreso derecha">
+                            -60%
+                            <i class="small material-icons">star_half</i>
+                          </span>
+                          <div class="progress grey tamaño-barra">
+                            <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${generationStg[i].mediumStudents}${' Alumnas regulares'}"></div>
+                            <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${generationStg[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                            <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${generationStg[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                          </div>
+                        </div>
+                        <!--Tiempo promedio-->
+                        <p>
+                          <i class="material-icons">schedule</i>
+                          <span>Tiempo promedio invertido: ${generationStg[i].timeAverage}${'hrs'}</span>
+                        </p>
+                      </div>
+                      <div class="col s5 m7 l7">
+                      <!--generaciones2-->
+                      <!--Promedios generales inicio-->
+                      <div class="elemento-card">
+                        <span>Promedio general </span>
+                        <div class="progress tamaño-barra">
+                          <div class="determinate blue" class="color-fondo" style="width:${generationStg[i].average}${'%'}"></div>
+                            <span class="derecha letra-barra">${generationStg[i].average}${'%'}</span>
+                          </div>
+                        </div>
+                        <p>Intoducción a la programación</p>
+                        <div class="progress grey">
+                          <div class="determinate pink" class="color-fondo" style="width:${generationStg[i].advanceU1}${'%'}" data-tooltip ="${generationStg[i].advanceU1}${'%'}">
+                          </div>
+                        </div>
+                        <p>Variables y tipos de datos</p>
+                        <div class="progress grey">
+                          <div class="determinate purple" class="color-fondo" style="width: ${generationStg[i].advanceU2}${'%'}" data-tooltip ="${generationStg[i].advanceU2}${'%'}"></div>
+                        </div>
+                        <p>UX</p>
+                        <div class="progress grey">
+                          <div class="determinate orange" class="color-fondo" style="width: ${generationStg[i].advanceU3}${'%'}" data-tooltip ="${generationStg[i].advanceU3}${'%'}"></div>
+                        </div>
+                        <p>Quiz´s</p>
+                        <div class="progress grey">
+                          <div class="determinate green" class="color-fondo" style="width: ${generationStg[i].quizAverage}${'%'}" data-tooltip ="${generationStg[i].quizAverage}${'ptos'}"></div>
+                        </div>
+                        <!--Promedios generales y de quiz fin-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
+  }
+  resultGenStg.innerHTML = genStg;
+  // ToolTip
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
+  return generationStg;
+};
+
+// ----- Genera info para impresion de informacion de alumnas
+window.studentsModal = (laboratoria)=>{
+  const students = computeStudentsStats(laboratoria);
+  const list = [];
+  let nameO = '', emailO = '', turnoO = '', averageO = 0, timeAverageO = 0, sedeO = '', genO = '';
+  let u1O = 0, u2O = 0, u3O = 0, p1O = 0, p2O = 0, p3O = 0;
+
+  for (let i = 0; i < students.length; i++) {
+    let objStudent = {};
+    nameO = students[i].name;
+    emailO = students[i].email;
+    turnoO = students[i].turno;
+    sedeO = students[i].campus;
+    genO = students[i].generation;
+    timeAverageO = students[i].timeProm;
+    averageO = students[i].stats.completedPercentage;
+    u1O = students[i].stats.topics['01-Introduccion-a-programacion']['04-quiz'].score;
+    u2O = students[i].stats.topics['02-Variables-y-tipo-de-datos']['05-quiz'].score;
+    u3O = students[i].stats.topics['03-UX']['03-quiz'].score;
+    p1O = students[i].stats.topics['01-Introduccion-a-programacion'].completedPercentage;
+    p2O = students[i].stats.topics['02-Variables-y-tipo-de-datos'].completedPercentage;
+    p3O = students[i].stats.topics['03-UX'].completedPercentage;
+    objStudent.name = nameO;
+    objStudent.email = emailO;
+    objStudent.turno = turnoO;
+    objStudent.venue = sedeO;
+    objStudent.generation = genO;
+    objStudent.average = averageO;
+    objStudent.timeAverage = timeAverageO;
+    objStudent.quizU1 = u1O;
+    objStudent.quizU2 = u2O;
+    objStudent.quizU3 = u3O;
+    objStudent.p1 = p1O;
+    objStudent.p2 = p2O;
+    objStudent.p3 = p3O;
+    list.push(objStudent);
+  }
+  return list;
+};
+
+// ----- Templete String dinamico para impresion de informacion de alumnas
+window.studentsPrint = (laboratoria) => {
+  const studentsM = studentsModal(laboratoria);
+  const studentsCollap = document.getElementById('cardsSpace');
+  let studentsPrint = '';
+  studentsPrint = `
+                <nav class="barra-alumnas">
+                  <div class="nav-wrapper col s12 m12 l6 offset-l3">
+                    <span class="alumnas">Alumnas</span>
+                  </div>
+                </nav>`;
+
+  for (let i = 0; i < studentsM.length;i++) {
+    studentsPrint += `<div class="container collapsable-color">
+                        <ul class="collapsible">
+                          <li>
+                            <div class="collapsible-header">
+                              <div>${studentsM[i].name}${'  '}${studentsM[i].average}${'%'}
+                                <a class="secondary-content waves-effect waves-light">
+                                  <i class="material-icons">send</i>
+                                </a>
+                              </div>
+                              <div>${studentsM[i].venue}${'  '}${studentsM[i].generation}${' Generación'}
+                                <a class="secondary-content waves-effect waves-light"></a>
+                              </div>
+                              <div class="progress grey">
+                                <div class="determinate orange tooltipped" data-position="right" data-tooltip="UX: ${ studentsM[i].p1}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3 + studentsM[i].p1 / 3}${'%'}"></div>
+                                <div class="determinate purple tooltipped" data-position="bottom" data-tooltip="Variables y tipos de datos: ${ studentsM[i].p2}${'%'}" style="width: ${studentsM[i].p3 / 3 + studentsM[i].p2 / 3}${'%'}"></div>
+                                <div class="determinate pink tooltipped" data-position="left" data-tooltip="Introduccion a la programacion ${studentsM[i].p3}${'%'}" style="width: ${studentsM[i].p3 / 3}${'%'}"></div>
+                              </div>
+                            </div>
+                            <div class="collapsible-body">
+                              <div>
+                                <span><img style="width:150px; height:150px;" src="Pictures/perfil.png"></span>
+                                <span>${studentsM[i].name}</span>
+                              </div>
+                              <p class="collapsable">
+                                <i class="material-icons">mail_outline</i> Email: ${studentsM[i].email}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">wb_sunny</i> Turno: ${studentsM[i].turno}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">schedule</i> Tiempo promedio invertido: ${studentsM[i].timeAverage}${' hrs.'}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 1 Introducción a la programación: ${studentsM[i].p1}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 1: ${studentsM[i].quizU1}${'  ptos.'}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 2 Variables y tipos de datos: ${studentsM[i].p2}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 2: ${studentsM[i].quizU2}${'  ptos.'}
+                              </p>
+                              <p class="collapsable">
+                                <i class="material-icons">book</i> Unidad 3 UX: ${studentsM[i].p3}${'%'}
+                              </p>
+                              <p class="collapsable-sub">
+                                <i class="material-icons">playlist_add_check</i> Score quiz 3: ${studentsM[i].quizU3}${'  ptos.'}
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>`;
+  }
+  studentsCollap.innerHTML = studentsPrint;
+  // Declara eventos de materialize dentro de cada funcion porque el Templete String es dinámico y crea elementos
+  // solo en momentos especificos, por eso no reconoce estos eventos de forma global
+  // ToolTip
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
+};
+
+// Imprime Templete String de cada sede en un card difrente
+window.printSedesAll = (laboratoria) => {
+  const sedeM = computeVenuesStats(laboratoria);
+  const resultFilter = document.getElementById('cardsSpace');
+  let sedeAll = '';
+  let advancePercentage = [];
+  let mediumPercentage = [];
+  let lowPercentage = [];
+
+  for (let i = 0; i < sedeM.length; i++) {
+    advancePercentage[i] = Math.round(((sedeM[i].advanceStudents) * 100) / (sedeM[i].activeStudents));
+    lowPercentage[i] = Math.round(((sedeM[i].inLowStudents) * 100) / (sedeM[i].activeStudents));
+    mediumPercentage[i] = Math.round(((sedeM[i].mediumStudents) * 100) / (sedeM[i].activeStudents));
+
+    sedeAll += `<div class="col l4 m6 s12">
+                  <div class="card white darken-1">
+                    <div class="card-content card-data black-text">
+                      <span class="card-title cards">${sedeM[i].venue}</span>
+                      <div class="color-activas">
+                        <span class="numero">${sedeM[i].activeStudents}</span>
+                        <span> Alumnas</span>
+                      </div>
+                      <!--Promedios generales inicio-->
+                      <div class="elemento-card">
+                        <span>Promedio general</span>
+                        <div class="progress tamaño-barra">
+                          <div class="determinate blue" class="color-fondo" style="width: ${sedeM[i].average}${'%'}"></div>
+                            <span class="derecha letra-barra">${sedeM[i].average}${'%'}</span>
+                          </div>
+                          <p>Intoducción a la programación</p>
+                          <div class="progress grey">
+                            <div class="determinate pink" class="color-fondo" style="width: ${sedeM[i].advanceU1}${'%'}" data-tooltip ="${sedeM[i].advanceU1}${'%'}">
+                            </div>
+                          </div>
+                          <p>Variables y tipos de datos</p>
+                          <div class="progress grey">
+                            <div class="determinate purple" class="color-fondo" style="width: ${sedeM[i].advanceU2}${'%'}" data-tooltip ="${sedeM[i].advanceU2}${'%'}"></div>
+                          </div>
+                          <p>UX</p>
+                            <div class="progress grey">
+                              <div class="determinate orange" class="color-fondo" style="width: ${sedeM[i].advanceU3}${'%'}" data-tooltip ="${sedeM[i].advanceU3}${'%'}"></div>
+                            </div>
+                            <p>Quiz´s</p>
+                            <div class="progress grey">
+                              <div class="determinate green" class="color-fondo" style="width: ${sedeM[i].quizAverage}${'%'}" data-tooltip ="${sedeM[i].quizAverage}${'ptos'}"></div>
+                            </div>
+                            <!--Promedios generales fin-->
+                            <p>
+                              <i class="material-icons">schedule</i>
+                              <span>Tiempo: ${sedeM[i].timeAverage}${'Hrs.'}</span>
+                            </p>
+                            <!--Barra de avance tres colores-->
+                              <span class="center">Progreso alumnas:</span>
+                              <div class="elemento-card">
+                                <span class="letra-progreso izquierda"><i class="small material-icons">star</i>+90%</span>
+                                <span class="letra-progreso derecha">
+                                  -60%
+                                  <i class="small material-icons">star_half</i>
+                                </span>
+                                <div class="progress grey tamaño-barra">
+                                  <div class="determinate amber darken-4 tooltipped" style="width: ${mediumPercentage[i]}${'%'}" data-position="right" data-tooltip="${sedeM[i].mediumStudents}${' Alumnas regulares'}"></div>
+                                  <div class="determinate red accent-4 tooltipped" style="width: ${lowPercentage[i]}${'%'}" data-position="bottom" data-tooltip="${sedeM[i].inLowStudents}${' Alumnas atrasadas'}"></div>
+                                  <div class="determinate light-green accent-4 tooltipped" style="width: ${advancePercentage[i]}${'%'}" data-position="left" data-tooltip="${sedeM[i].advanceStudents}${' Alumnas avanzadas'}"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>`;
+  }
+  resultFilter.innerHTML = sedeAll;
+  // ToolTip
+  $(document).ready(function() {
+    $('.tooltipped').tooltip({
+      accordion: true
+    });
+  });
+  // Colapso de alumnas
+  $(document).ready(function() {
+    $('.collapsible').collapsible({
+      accordion: true
+    });
+  });
+};

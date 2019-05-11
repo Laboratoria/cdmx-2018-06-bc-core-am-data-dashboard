@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Esta es una plataforma de la Asociación sin fines de lucros: Laboratoria, para la visualización de estadísticas de rendimiento de sus estudiantes.">
+			<link rel="stylesheet" type="text/css" media="screen" href="./CSS/style.css" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"/>
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+			<title>Inicio de sesión</title>
+			<link rel="shortcut icon" href="./Pictures/l_rgb_-01_360.png" />
+			<link rel="preconnect" href="https://yocelingr.github.io/cdmx-2018-06-bc-core-am-data-dashboard/src/index.html">
+	</head>
+	<body>
+		<section class="container-fluid foundFont">
+			<header class="row">
+				<img class="col s6 offset-s3 responsive-img logo" src="Pictures/laboratoria_logo_rgb_01_480.png" alt="Logotipo Lab">
+			</header>
+			<section class="row">
+				<form name = "form" class="col s4 offset-s4" action="log">
+					<input type = "text" placeholder = "Usuario" name = "login" />
+					<br>
+					<input type = "password" placeholder = "Contraseña" name = "password" />
+					<br>
+					<a href="index.html">
+						<input id = "go" type = "button" class = "btn disabled" value = "Acceder" />
+					</a>
+				</form>
+			</section>
+			<footer class="row">
+				<img class="col s2 responsive-img logo footer" src="Pictures/laboratoria_corchetes-m-30_960.png" alt="Logo responsive">
+			</footer>
+		</section>
+		
+		<script src="./JS/main.js"></script>
+		<script src="./JS/data.js"></script>
+	</body>
+</html>
