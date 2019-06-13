@@ -1,0 +1,362 @@
+body{
+	font-family: 'Bitter', serif;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*HEADER*/
+header{
+    background-color: #ffe521;
+    height: 80px;
+    font-size: 18px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+
+.usuario{
+    float: right;
+    margin-right: 100px;
+    margin-top: 8px;
+}
+.logo{
+	width: 230px;
+}
+.palabrita{
+	display: inline-block;
+    color: black;
+    font-size: 14px;
+}
+.palabrita:hover{
+	color: white;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+/*BODY*/
+.body-first{
+    background-color: #eaeae359;
+    width: 95%;
+    height: 200em;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    border: transparent;
+
+}
+
+
+
+
+/*  MENU   */
+.hambur{
+	margin: -65px 0 0 23px;
+    cursor: pointer;
+    position: fixed;
+}
+
+#icono{
+	display: none;
+}
+
+#icono:checked ~ .menu-all{
+	max-height: 1200px;
+	transform: all;}
+
+.menu-all{
+	width: 190px;
+	max-height: 0;
+	list-style: none;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .4s linear;
+	overflow: hidden;
+	position: fixed;
+}
+nav{
+	width: 190px;
+	height: auto;
+    margin: 10px;
+	font-family: 'Oswald', sans-serif;
+    	
+}
+.menu label{
+	display: block;
+	padding: 10px;
+    background-color: #f7a630;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    border-bottom: solid 1px #FFF;
+
+}
+.menu label:hover{
+	background-color: gray;
+}
+.menu ul{
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .4s linear;
+}
+.menu input{
+	display: none;
+}
+.menu ul li a{
+	width: 100%;
+	height: 20%;
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	background-color: #fff;
+    color: orange;
+    border-bottom: solid #000 1px;
+}
+
+.menu ul li a:hover{
+	background-color: gray;
+}
+
+.menu input:checked ~ ul{
+	height: auto;
+	max-height: 1200px;
+	transform: all;
+
+}
+.icono{}
+
+.titu{
+ text-align: center;
+ font-size: 14px;
+ 
+}
+
+
+/*LOGIN*/
+.login{
+/*border:solid;*/
+}
+.izq{
+	border-radius: 10px 0 0 10px;
+	background-color:#ffffffe3;
+	display: block;
+    text-align: center;	
+
+}
+.der{
+	background-color: #ffe521e6;
+	height: 374px;
+	border-radius: 0 10px 10px 0;
+}
+.container{
+	margin-top: 140px;
+
+}
+.input{
+	display: block;
+
+}
+.cajita{
+    background: none;
+    border-width: 0;
+    width: 240px;
+    border-bottom: white solid 1px;
+   
+}
+.img{
+
+}
+
+.titulo{
+	text-align: center;
+    display: block;
+    margin: 35px 0;
+    font-size: 22px;
+}
+.check{
+	font-size: 13px;
+}
+.boton{
+	border-radius: 7px;
+    width: 135px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    font-size: 14px;
+
+}
+.log{
+    margin-top: 120px;
+}
+
+article{
+    border: solid;
+    width: 100%;
+    display: block;
+    
+}
+/*VIEW GENERAL*/
+.box-generales{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+
+}
+
+.box1{
+	display: inline-block;
+    width: 32%;
+    margin: 0 2px 0;
+    margin-top: 40px;
+    border-radius: 4px;
+}
+.titular{
+    background: #f8069df2;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    padding: 8px 0 0px;
+
+
+}
+.cuerpo{
+    text-align: center;
+    font-size: 20px;
+    margin: 39px 0px;
+}
+
+.generaciones, .promgene{
+	margin: 15px 0;
+}
+.card{
+	background-color: gray;
+	height: 80px;
+}
+.info{
+	overflow: scroll;
+}
+
+
+.lista{
+    list-style: none;
+    font-size: 16px;
+}
+
+
+/*TABLAS*/
+.tablas-alum{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 102px;
+    border: 2px solid;
+    border-radius: 5px;
+
+}
+
+tr{
+    background-color: rgba(255, 229, 31, 0.05)}
+
+
+
+.nav-link{
+    color: #f8069df2;
+}
+
+.adios{display: none;}
+
+.sede{
+    text-align: left;
+    padding: 20px;
+    font-size: 24px;
+
+}
+
+.subtitulos{
+    text-align: right;
+    margin: 5px;
+    font-size: 20px;
+    display: block;
+    padding-right: 10px;
+
+}
+.iconito{
+        margin-bottom: 10px;
+}
+
+.lista a{
+    color: black;
+}
+
+.lista a:hover{
+    color: #f8069df2;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/***************************************************************/
+
+
+
+
+
+@media (min-width: 500px) and (max-width:800px) { 
+    header {
+    height: 135px;
+    margin-top: 17px;
+}
+.body-first {
+    height: 95em;
+}
+.box-generales {
+    width: 100%;
+}
+
+.usuario {
+    float: right;
+    margin-right: 100px;
+    margin-top: 8px;
+    font-size: 30px;
+}
+.logo{
+    width: 390px;
+}
+.palabrita {
+    font-size: 34px;
+}
+.subtitulos {
+    font-size: 27px;
+}
+
+.nav-link {
+    font-size: 30px;
+}
+.sede {
+    font-size: 34px;
+}
+
+
+.table td, .table th {
+    font-size: 26px;
+}
+
+.body-first {
+    height: 125em;
+}
+
+
+}
+
+
+
