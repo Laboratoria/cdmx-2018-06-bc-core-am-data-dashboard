@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sedes</title>
+  <link rel="icon" href="../img/laboratoria-logo.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <header class="sedes row">
+    <div class="logo col-md-2">
+      <img src="../img/laboratoria-logo.png" alt="">
+    </div>
+    <!-- <div class="input-search col-md-8">
+      <input type="text" class="form-control" placeholder="Nombre de la Alumna" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn-search btn-outline-secondary" type="button">Buscar</button>
+      </div> -->
+
+    <!-- <div class="search col-md-8"> -->
+    <!-- <input type="text" class="input-search" id="input-search"> -->
+    <!-- <input type="text" class="form-control" placeholder="Nombre de la Alumna" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <button class="btn-search btn-outline-secondary" type="button">Buscar</button>
+    </div> -->
+
+    <!-- <div class="input-search mb-3 col-md-8">
+      <input type="text" class="form-control" placeholder="Nombre de la Alumna..." aria-label="Nombre de la Alumna" aria-describedby="basic-addon2">
+      <button class="btn btn-outline-secondary" type="button">Buscar</button>
+    </div> -->
+
+    <div class="input-group mb-3 col-md-8">
+      <input type="text" class="form-control" placeholder="Nombre de la alumna..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">Button</button>
+      </div>
+    </div>
+
+    <div class="user col-md-2">
+      <span class="user-logo">
+        <img src="../img/icon-user.jpg" alt="">
+      </span>
+      <span class="sesion-stats">Cerrar Sesion</span>
+    </div>
+  </header>
+
+  <!-- <div id="alumnas-container" class="row"> -->
+  <table class="table">
+    <thead>
+      <tr>
+
+        <th class="menu" scope="col">NOMBRE</th>
+        <th class="menu" scope="col">CORREO</th>
+        <th class="menu" scope="col">PROGRESO</th>
+        <th class="menu" scope="col">CLASIFICACIÓN</th>
+      </tr>
+    </thead>
+    <tbody id="alumnas-container"></tbody>
+  </table>
+  <!-- </div> -->
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
